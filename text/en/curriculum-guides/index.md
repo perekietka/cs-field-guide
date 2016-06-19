@@ -1,6 +1,6 @@
 # Curriculum Guides
 
-We currently provide guides for using the Computer Science Field Guide in the following curriculums:
+We currently provide guides for using the Computer Science Field Guide in the following curricula:
 
 {table-of-contents depth="1"}
 
