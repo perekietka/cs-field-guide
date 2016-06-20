@@ -81,6 +81,10 @@ class Section:
             self.current_heading = self.heading
             self.title = heading_text
             page_heading = True
+            if self.file_node.filename == 'index':
+                print("Before:", self.file_node.parent.title)
+                self.file_node.parent.title = self.title
+                print("After:", self.file_node.parent.title)
         else:
             page_heading = False
             if heading_level <= self.current_heading.level:
