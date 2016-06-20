@@ -16,6 +16,7 @@ This documentation page provides information about the text, image, and file con
         - [Appendix links](#appendices)
       - [External links](#external-links)
       - [Image links](#image-links)
+      - [Button links](#button-links)
     - [Code](#code)
     - [Tables](#tables)
     - [Blockquotes](#blockquotes)
