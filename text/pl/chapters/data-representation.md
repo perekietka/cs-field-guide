@@ -4,76 +4,28 @@
 A lot of the exercises in this chapter involve simple arithmetic. If students struggle to do this by hand, a lot can be done using spreadsheets.
 {panel end}
 
-## What's the big picture?
+## O co w tym wszystkim chodzi?
 
-Computers are machines that do stuff with information. They let you view, listen, create, and edit information in documents, images, videos, sound, spreadsheets and databases. They let you play games in simulated worlds that don’t really exist except as information inside the computer’s memory and displayed on the screen. They let you compute and calculate with numerical information; they let you send and receive information over networks.  Fundamental to all of this is that the computer has to represent that information in some way inside the computer’s memory, as well as storing it on disk or sending it over a network.  
+Komputery to narzędzia do przetwarzania informacji. Użytkownik komputera może tworzyć, modyfikować, czy po prostu przeglądać (oglądać, słuchać itd.) informacje, zapisane w dokumentach tekstowych, plikach graficznych czy wideo, skoroszytach arkusza kalkulacyjnego czy zbiorach baz danych. Gry komputerowe i inne programy-symulacje to przykłady tzw. wirtualnej rzeczywistości, która istnieje tylko w postaci informacji zapisanej pamięci komputera i wyświetlonej (po jej interpretacji) na ekranie monitora. Komputery pozwalają na wykonywanie obliczeń liczbowych, jak i na przesyłanie informacji przez sieć komputerową. To wszystko byłoby niemożliwe, gdyby nie wymyślono jakiegoś sposobu na zapis (reprezentację) różnego rodzaju informacji w pamięci operacyjnej komputera, na dysku twardym i ich przesyłania przez sieć komputerową.  
 
-To make computers easier to build and keep them reliable, everything is represented using just two values. You may have seen these two values represented as 0 and 1, but on a computer they are represented by anything that can be in two states. For example, in memory a low or high voltage is used to store each 0 or 1. On a magnetic disk it's stored with magnetism (whether a tiny spot on the disk is magnetised north or south).
-
-The idea that *everything* stored and transmitted in our digital world is stored using just two values might seem somewhat fantastic, but here's an exercise that will give you a little experience using just black and white cards to represent numbers.
-In the following interactive, click on the last card (on the right) to reveal that it has one dot on it.
-Now click on the previous card, which should have two dots on it.
-Before clicking on the next one, how many dots do you predict it will have?
-Carry on clicking on each card moving left, trying to guess how many dots each has.
-
-{interactive name="binary-cards" type="whole-page" text="Binary Cards" parameters="digits=5&start=BBBBB"}
-
-The challenge for you now is to find a way to have exactly 22 dots showing
-(the answer is in the spoiler below).
-Now try making up other numbers of dots, such as 11, 29 and 19.
-Is there any number that can't be represented? To test this, try counting up from 0.
-
-{panel type="teacher-note" summary="Patterns in the cards"}
-
-This exercise comes up again below as an introduction to representing numbers.
-The card interactive can also be done with physical cards as a change from doing things on a computer.
-
-If students have trouble solving the puzzles, start at the left and ask "Can you use the 16 dots? 8 dots?" and so on.
-Each one will either be obviously too big, or otherwise it should be used.
-
-With some guidance students should notice patterns, for example,
-that the one-dot card is coming up every second time (the odd numbers).
-
-{panel end}
-
-{panel type="spoiler" summary="Solution to card puzzles"}
-
-You may have noticed that each card shows twice as many dots as the one to its right.
-This is an important pattern in data representation on computers.
-
-The number 22 requires the cards to be "white, black, white, white, black",
-11 is "black, white, black, white, white",
-29 is "white, white, white, black, white", and
-19 is "white, black, black, black, white".
-
-{panel end}
-
-
-
-
-You should have found that any number from 0 to 31 can be represented with 5 cards.
-Each of the numbers could be communicated using just two words: black and white.
-For example, 22 dots is "white, black, white, white, black".
-Or you could decode "black, black, white, white, white" to the number 7.
-This is the basis of data representation - anything that can have two different states can represent anything on a digital device.
-
-When we write what is stored in a computer on paper, we normally use “0” for one of the states, and “1” for the other state. For example, a piece of computer memory could have the following voltages:
+Kluczową koncepcją, która pozwoliła uprościć problemy związane z projektowaniem i produkcją komputerów, ale również wpłynęła na niezawodność ich działania, jest koncepcja dwuwartościowego (binarnego) zapisu wszelkiego rodzaju informacji. Czasami mówi się o reprezentacji zerojedynkowej (0-1), choć w praktyce (w realizacji fizycznej) możemy mieć do czynienia z czymkolwiek, co może przyjmować dwa stany. Na przykład dla pamięci elektronicznej będzie to oznaczać wysoką lub niską wartość napięcia prądu elektrycznego, a dla tradycyjnego dysku twardego – namagnesowanie małych fragmentów warstw magnetycznych (północ – południe). 
+W tym podręczniku (jak i w innych miejscach) będziemy posługiwać się „0” dla ilustracji jednego ze stanów i „1” – dla drugiego z nich. Oznacza to np., że fragment pamięci elektronicznej komputera, dla którego wartości napięcia elektrycznego to:
 
 ```
-low low high low high high high high low high low low
+niska, niska, wysoka, niska, wysoka, wysoka, wysoka, wysoka, niska, wysoka, niska, niska
 ```
 
-We could allocate **“0”** to **“low”**, and **“1”** to **“high”** and write this sequence down as:
+będziemy przedstawiać jako ciąg cyfr:
 
 ```
 0 0 1 0 1 1 1 1 0 1 0 0
 ```
 
-While this notation is used extensively, and you may often hear the data being referred to as being “0’s and 1’s”, it is important to remember that a computer does *not* store 0’s and 1’s; it has no way of doing this. They are just using physical mechanisms such as high and low voltage, north or south polarity, and light or dark materials.
+Taka notacja jest powszechnie używana. Należy jednak pamiętać, że sformułowanie typu „komputer zapisuje informacje w postaci ciągu 0 i 1” jest skrótem myślowym. Nie ma sposobu, żeby zrobić to bezpośrednio – komputery posługują się mechanizmami fizycznymi takimi jak wysokie i niskie napięcie, namagnesowanie północ/południe, czy ciemne i jasne materiały.
 
 {panel type="jargon-buster" summary="Bits"}
 
-The use of the two digits 0 and 1 is so common that some of the best known computer jargon is used for them. Since there are only two digits, the system is called binary. The short word for a "binary digit" is made by taking the first two letters and the last letter --- a *bit* is just a digit that can have two values.
+Ponieważ używa się tylko dwóch cyfr: 0 i 1, więc mówi się też o systemie dwójkowym, zerojedynkowym lub binarnym (ang. binary system) i cyfrach dwójkowych (binarnych), zwanych bitami (ang. bit to skrót od słów „binary digit”). Pojęcie bitu jest jednym z najbardziej znanych pojęć w żargonie informatycznym. 
 
 {panel end}
 
@@ -81,11 +33,9 @@ Every file you save, every picture you make, every download, every digital recor
 These binary digits are what make digital technology *digital*!
 And the nature of these digits unlock a powerful world of storing and sharing a wealth of information and entertainment.
 
-Computer scientists don't spend a lot of time reading bits themselves, but knowing how they are stored is really important because it affects the amount of space that data will use, the amount of time it takes to send the data to a friend (as data that takes more space takes longer to send!) and the quality of what is being stored.
-You may have come across things like "24-bit colour", "128-bit encryption", "32-bit IPv4 addresses" or "8-bit ASCII".
-Understanding what the bits are doing enables you to work out how much space will be required to get high-quality colour, hard-to-crack secret codes, a unique ID for every device in the world, or text that uses more characters than the usual English alphabet.
+Każdy utworzony przez Ciebie plik, każde zdjęcie zapisane na dysku komputera, każdy dokument pobrany z Internetu to po prostu krótszy lub dłuższy ciąg bitów. Choć informatycy na co dzień nie zajmują się bezpośrednio analizowaniem tych ciągów bitów, to wiedza na temat zasad binarnego zapisu informacji jest naprawdę istotna, gdyż pozwala np. na oszacowanie przestrzeni na dysku, potrzebnej do zapisu danych z odpowiednią jakością. Podczas lektury tekstów z różnych dziedzin informatyki możesz napotkać określenia typu „24-bitowy kolor”, „128-bitowe szyfrowanie”, „32-bitowy adres IP” czy „8-bitowy kod ASCII”. Wiedza na temat zapisu binarnego jest niezbędna informatykowi do oszacowania ilości miejsca na dysku potrzebnego do zapisania wysokiej jakości informacji o kolorze, określenia bezpieczeństwa wybranej metody szyfrowania, do wyboru odpowiedniej długości klucza podczas projektowania bazy danych, czy zastosowania kodowania odpowiedniego dla teksów języka, w których występują znaki spoza alfabetu języka angielskiego.
 
-This chapter is about some of the different methods that computers use to code different kinds of information in patterns of these bits, and how this affects the cost and quality of what we do on the computer, or even if something is feasible at all.
+Ten rozdział przedstawia różne metody, jakie są używane w systemach komputerowych do zapisania różnego rodzaju informacji za pomocą ciągów bitów oraz to, jak wybór metody wpływa na koszt i jakość tego, co robimy na komputerze i czy w ogóle da się to zrobić. 
 
 ## Getting Started
 
