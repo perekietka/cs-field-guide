@@ -3,9 +3,9 @@
 {panel type="teacher-note" summary="Wprowadzenie dla nauczycieli"}
 
 Celem tego przewodnika (interaktywnego podręcznika) jest wsparcie procesu nauczania informatyki w szkołach średnich.
-Pierwotnie został stworzony w związku z wprowadzeniem zajęć informatyki do szkół średnich w Nowej Zelandii w latach 2011-2013.
+Pierwotnie podręcznik został tworzony w związku z wprowadzeniem zajęć informatyki do szkół średnich w Nowej Zelandii w latach 2011-2013.
 
-W wersji dla nauczyciela tekst w specjalnych ramkach dodano informacje dla nauczyciela oraz odpowiedzi i wskazówki do zadań.
+W wersji dla nauczyciela w specjalnych ramkach dodano informacje dla nauczyciela oraz odpowiedzi i wskazówki do zadań.
 
 {panel end}
 
@@ -20,7 +20,12 @@ I'm glad you asked! Put simply, computer science is about tools and techniques f
 A lot of people confuse computer science with programming. It has been said that "computer science is no more about programming than astronomy is about telescopes" ([Mike Fellows](http://en.wikiquote.org/wiki/Computer_science)).
 Programming is the tool that computer scientists use to bring great ideas to life, but just knowing how to give programmed instructions to a computer isn't enough to create software that delights and empowers people.
 
-For example, computers can perform billions of operations every second, and yet people often complain that they are too slow. Humans can perceive delays of about one tenth of a second, and if your program takes longer than that to respond it will be regarded as sluggish, jerky or frustrating. You've got well under a second to delight the user! If you are searching millions of items of data, or displaying millions of pixels (megapixels), you can't afford to do things the wrong way, and you can't just tell your users that they should buy a faster computer ... they'll probably just buy someone else's faster software instead!
+Dobrze, że zadajesz takie pytania!
+
+Wielu ludzi myli informatykę z programowaniem. Ktoś kiedyś powiedział „Informatyka ma tyle samo wspólnego z programowaniem, co astronomia z teleskopami” ([Mike Fellows](http://en.wikiquote.org/wiki/Computer_science)). 
+Programowanie to narzędzie, którym informatycy posługują się, aby urzeczywistnić różne wspaniałe pomysły, które mogą zmienić życie ludzi na lepsze. Jednak wyłącznie znajomość składni języka programowania nie wystarczy, by tworzyć oprogramowanie szybkie, przyjazne w użyciu, niezawodne, bezpieczne, użyteczne i do tego zabawne! 
+
+Oto przykład: Komputery potrafią wykonywać miliardy operacji w ciągu sekundy, a ciągle możemy usłyszeć narzekania, że są zbyt powolne. Człowiek jest w stanie dostrzec ułamek czasu rzędu 1/10 sekundy. Jeśli na odpowiedź programu komputerowego ktoś czeka dłużej, to może uznać program za powolny, działający mało płynnie i frustrujący. Aby zadowolić użytkownika, reakcja programu na polecenie użytkownika powinna pojawić się o wiele szybciej niż w ciągu sekundy! Jeśli stworzony przez Ciebie program przeszukuje miliony pozycji w danych lub wyświetla miliony pikseli (megapiksele), to nie możesz pozwolić sobie na to, aby działał w sposób nieefektywny. Nie możesz po prostu powiedzieć użytkownikowi, by kupił szybszy komputer ...skończy się prawdopodobnie tym, że użytkownik podziękuje Ci za współpracę i pójdzie kupić u konkursencji szybsze oprogramowanie!
 
 Here's some advice from Fred Wilson, who has invested in many high profile tech companies:
 
