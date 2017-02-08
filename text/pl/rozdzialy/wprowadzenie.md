@@ -2,23 +2,18 @@
 
 {panel type="teacher-note" summary="Wprowadzenie dla nauczycieli"}
 
-This guide is an online interactive textbook to support teaching computer science in high schools.
-Ten przewodnik (interaktywny podręcznik) został stworzony celem wsparcia nauczania informatyki w szkołach średnich.
-It was initially developed to support the new achievement standards in Computer Science that are being rolled out in New Zealand from 2011 to 2013,
-but eventually will be expanded to support other curricula.
+Celem tego przewodnika (interaktywnego podręcznika) jest wsparcie procesu nauczania informatyki w szkołach średnich.
+Pierwotnie został stworzony w związku z wprowadzeniem zajęć informatyki do szkół średnich w Nowej Zelandii w latach 2011-2013.
 
-The version that you are reading now is the teachers' version, in which chapters are interspersed with information for teachers, like this box. It will include answers and hints, so this version shouldn't be released to students (although because the material is open-source, a resourceful student may well find the teachers' version).
-
-Because the guide is constantly under revision, we welcome feedback so that we can improve, clarify, and correct the material.
-The best way to provide feedback is through the "Give us feedback" link (this can range from a typo to a broad suggestion). You can also contact us about more general matters by emailing jack.morgan@canterbury.ac.nz, or tim.bell@canterbury.ac.nz .
+W wersji dla nauczyciela tekst w specjalnych ramkach dodano informacje dla nauczyciela oraz odpowiedzi i wskazówki do zadań.
 
 {panel end}
 
-{video url="https://www.youtube.com/embed/v5yeq5u2RMI?rel=0"}
+{video url="https://wwww.youtube.com/embed/v5yeq5u2RMI?rel=0"}
 
-## What's the big picture?
+## Z lotu ptaka
 
-Why is it that people have a love-hate relationship with computers? Why are some people so fanatical about particular types of computers, while others have been so angry at digital devices that they have been physically violent with them? And what does this have to do with computer science? And what is computer science anyway?
+Dlaczego jest tak, że ludzie albo kochają komputery albo ich nienawidzą? Dlaczego niektórzy nie wyobrażają sobie życia bez różnego rodzaju urządzeń komputerowych, a  inni na samą myśl o takich urządzeniach są poirytowani i są nawet gotowi zniszczyć sprzęt komputerowy? I co to ma wspólnego z informatyką? I co to jest w ogóle informatyka?
 
 I'm glad you asked! Put simply, computer science is about tools and techniques for designing and building applications that are very fast, have great interfaces, are reliable, secure, helpful --- even fun.
 
