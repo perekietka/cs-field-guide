@@ -1,8 +1,9 @@
-# Introduction
+# Wprowadzenie
 
-{panel type="teacher-note" summary="Introduction for teachers"}
+{panel type="teacher-note" summary="Wprowadzenie dla nauczycieli"}
 
 This guide is an online interactive textbook to support teaching computer science in high schools.
+Ten przewodnik (interaktywny podręcznik) został stworzony celem wsparcia nauczania informatyki w szkołach średnich.
 It was initially developed to support the new achievement standards in Computer Science that are being rolled out in New Zealand from 2011 to 2013,
 but eventually will be expanded to support other curricula.
 
