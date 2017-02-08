@@ -15,11 +15,6 @@ W wersji dla nauczyciela w specjalnych ramkach dodano informacje dla nauczyciela
 
 Dlaczego jest tak, że ludzie albo kochają komputery albo ich nienawidzą? Dlaczego niektórzy nie wyobrażają sobie życia bez różnego rodzaju urządzeń komputerowych, a  inni na samą myśl o takich urządzeniach są poirytowani i są nawet gotowi zniszczyć sprzęt komputerowy? I co to ma wspólnego z informatyką? I co to jest w ogóle informatyka?
 
-I'm glad you asked! Put simply, computer science is about tools and techniques for designing and building applications that are very fast, have great interfaces, are reliable, secure, helpful --- even fun.
-
-A lot of people confuse computer science with programming. It has been said that "computer science is no more about programming than astronomy is about telescopes" ([Mike Fellows](http://en.wikiquote.org/wiki/Computer_science)).
-Programming is the tool that computer scientists use to bring great ideas to life, but just knowing how to give programmed instructions to a computer isn't enough to create software that delights and empowers people.
-
 Dobrze, że zadajesz takie pytania!
 
 Wielu ludzi myli informatykę z programowaniem. Ktoś kiedyś powiedział „Informatyka ma tyle samo wspólnego z programowaniem, co astronomia z teleskopami” ([Mike Fellows](http://en.wikiquote.org/wiki/Computer_science)). 
