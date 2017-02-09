@@ -22,22 +22,21 @@ Programowanie to narzędzie, którym informatycy posługują się, aby urzeczywi
 
 Oto przykład: Komputery potrafią wykonywać miliardy operacji w ciągu sekundy, a ciągle możemy usłyszeć narzekania, że są zbyt powolne. Człowiek jest w stanie dostrzec ułamek czasu rzędu 1/10 sekundy. Jeśli na odpowiedź programu komputerowego ktoś czeka dłużej, to może uznać program za powolny, działający mało płynnie i frustrujący. Aby zadowolić użytkownika, reakcja programu na polecenie użytkownika powinna pojawić się o wiele szybciej niż w ciągu sekundy! Jeśli stworzony przez Ciebie program przeszukuje miliony pozycji w danych lub wyświetla miliony pikseli (megapiksele), to nie możesz pozwolić sobie na to, aby działał w sposób nieefektywny. Nie możesz po prostu powiedzieć użytkownikowi, by kupił szybszy komputer ...skończy się prawdopodobnie tym, że użytkownik podziękuje Ci za współpracę i pójdzie kupić u konkursencji szybsze oprogramowanie!
 
-Here's some advice from Fred Wilson, who has invested in many high profile tech companies:
+Oto rada pochodząca od Freda Wilsona, który zainwestował wiele w firmy z branży komputerowej:
 
-> First and foremost, we believe that speed is more than a feature. Speed is the most important feature. If your application is slow, people won't use it. I see this more with mainstream users than I do with power users. I think that power users sometimes have a bit of sympathetic eye to the challenges of building really fast web apps, and maybe they're willing to live with it, but when I look at my wife and kids, they're my mainstream view of the world. If something is slow, they're just gone. ... speed is more than a feature. It's a requirement.
+> Po pierwsze i najważniejsze, wierzymy, że szybkość to coś więcej niż cecha (właściwość). Szybkość jest najważniejszą cechą. Jeśli twoje oprogramowanie działa powoli, ludzie nie będą go używać. Dotyczy to zwłaszcza zwykłych użytkowników. Myślę, że użytkownicy, którzy korzystają z zaawansowanych funkcji danego oprogramowania, są czasami bardziej wyrozumiali, ale kiedy patrzę na moją żonę i moje dzieci, to oni są dla mnie jak zwykli, typowi używkownicy. Jeśli coś działa powoli, to oni po prostu odchodzą. ...Szybkość to coś więcej niż cecha. To jest niezbędne wymaganie.
 
 > -- [Fred Wilson](https://en.wikipedia.org/wiki/Fred_Wilson_(financier\)) ([Source](http://triple-networks.com/2011/12/06/10-golden-principles-of-successful-web-apps/))
 
-A key theme in computer science is working out how to make things run fast, especially if you want to be able to sell your software to the large market of people using old-generation smartphones, or run it in a data centre where you pay by the minute for computing time.
-You can't just tell your customers to buy a faster device --- you need to deliver efficient software.
+Kluczowym wyzwaniem w informatyce jest stworzyć oprogramowanie działające szybko! Zwłaszcza jeśli ma działać na urządzeniach (np. smarfonach) starszej generacji lub ma być uruchamiane je w jakimś centrum obliczeniowym (superkomputerowym), gdzie użytkownik ma płacić za każdą minutę czasu dostępu do komputerów. 
+Nie można powiedzieć klientom, by kupili szybsze urządzenia --- trzeba dostarczyć efektywne oprogramowanie.
 
 ## Beyond speed
 
-Computer science isn't just about speed.
-Try using the following two calculators to make a simple calculation.
-They both have the same functionality (they can do the same calculations), but which is nicer to use? Why?
+W informatyce nie chodzi jedynie o szybkość.
+Spróbuj wykonać jakieś proste obliczenia, posługując się dwoma kalkulatorami, udostępnionymi poniżej. Oba mają tę samą funkcjonalność (można na nich wykonać te same obliczenia), ale jeden z nich jest bardziej przyjazny w obsłudze. Dlaczego?
 
-(This book has many interactives like this. If the calculators don't work properly, you may need to use a more recent browser. The interactive material in this book works in most recent browsers; Google Chrome is a particularly safe bet.)
+(W podręczniku jest wiele podobnych interaktywnych narzędzi. Aby ich używać, będziesz potrzebować aktualnych wersji przeglądarek internetowych.)
 
 {interactive name="awful-calculator" type="in-page"}
 
