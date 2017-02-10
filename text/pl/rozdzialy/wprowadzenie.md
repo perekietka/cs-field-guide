@@ -31,7 +31,7 @@ Oto rada pochodząca od Freda Wilsona, który zainwestował wiele w firmy z bran
 Kluczowym wyzwaniem w informatyce jest stworzyć oprogramowanie działające szybko! Zwłaszcza jeśli ma działać na urządzeniach (np. smarfonach) starszej generacji lub ma być uruchamiane je w jakimś centrum obliczeniowym (superkomputerowym), gdzie użytkownik ma płacić za każdą minutę czasu dostępu do komputerów. 
 Nie można powiedzieć klientom, by kupili szybsze urządzenia --- trzeba dostarczyć efektywne oprogramowanie.
 
-## Beyond speed
+## Szybkość to nie wszystko
 
 W informatyce nie chodzi jedynie o szybkość.
 Spróbuj wykonać jakieś proste obliczenia, posługując się dwoma kalkulatorami, udostępnionymi poniżej. Oba mają tę samą funkcjonalność (można na nich wykonać te same obliczenia), ale jeden z nich jest bardziej przyjazny w obsłudze. Dlaczego?
