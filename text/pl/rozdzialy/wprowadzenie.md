@@ -59,77 +59,44 @@ Podzieliliśmy całość na wiele zagadnień, które razem tworzą całość cur
 
 Przewodnik ma taki poziom szczegółowości, że pozwoli ci uzyskać niezłe pojęcie o tym, czym jest informatyka. Przewodnik ma  dobrze przygotowywać do późniejszych pogłębionych studiów na lekcjach w szkole średniej, czy szkole wyższej. W tekście znajduje się wiele odnośników do stron internetowych i podane są informacje o książkach, w których możesz znaleźć bardziej szczegółowe informacje.
 
-## Programming
+## Programowanie
 
-And what about programming? You can get through this whole guide without doing any programming, although we'll suggest exercises. Ultimately, however, all the concepts here are reflected in programs that people write. If you want to learn programming there are many excellent courses available. It takes time and practice, and is well worth doing in parallel with working through the topics in this guide. There are a number of free online systems and books that you can use to teach yourself programming.
-A list of options for learning to program is being compiled by [code.org](http://www.code.org/), where there is also a popular video of some well-known high-fliers in computing that is good to show classes. Here are some other sources that might suit you:
+Co z programowaniem? Nie wymagamy umiejętności programowania od korzystających z przewodnika? W niektórych miejscach będziemy zachęcać jednak potrafiących programować do wykonania pewnych zadań programistycznych. Nie można zapominać, że wszystkie koncepcje przedstawione w przewodniku mają zastosowanie praktyczne i zostały kiedyś zastosowane w takim, czy innym oprogramowaniu. Dlatego zachęcamy, aby równolegle z poszerzaniem wiedzy na temat różnych zagadnień informatycznych, uczyć się programowania. W Internecie jest wiele kursów programowania, również darmowych. Jest też wiele książek na ten temat. Warto zacząć od strony [code.org](http://www.code.org/) lub działu informatycznego projektu [Khan Academy](http://www.khanacademy.org/cs/)
 
--  [The NCEA year 12 workbook](http://www.cs.otago.ac.nz/year12dt/) is a book (two actually) on programming in Java and Python, written for the NZ achievement standards. The authors are developing a second book for the year 13 programming standard.
-- [CodeAvengers](http://www.codeavengers.com)  is an online system where you can work through challenges that will introduce you to programming in Javascript. This system matches the NZ programming achievement standards from level 1 to 3.
-- [Interactive Python](http://interactivepython.org/) has a free online "book" called "How to Think Like a Computer Scientist: Interactive Edition" (also referred to as "Think Python") which teaches the Python language, and enables students to edit and run Python examples within the web browser. The original book is open source and is also available in various non-interactive versions.
-- [Codecademy](http://www.codecademy.com) is an online system where you can learn languages including Python and Javascript
-- [Coder Dojo](http://coderdojo.com) is a "movement orientated around running free not-for-profit coding clubs and regular sessions for young people".
-- [Python tutor](http://pythontutor.com/) allows you to run Python in your web browser --- no installation needed.
-- [CodingBat](http://codingbat.com) has hundreds of programming challenges that you can try to check on how you are progressing with learning to program.
-- [Greenfoot](http://greenfoot.org/) is a visual, interactive system that teaches object orientation with Java. You create 'actors' that live in 'worlds' to build games, simulations, and other graphical programs.
-- [Khan Academy](http://www.khanacademy.org/cs/) has a "Computer Science" section; most of the material here is about programming rather than computer science in general.
-- [Grok Learning](https://groklearning.com/) is a new site for learning to code
-- [Learn Python the Hard Way](http://learnpythonthehardway.org/) is a rigorous (but fun) introduction to Python for beginners who are prepared to work hard. It's available for free online, or you can buy a book. It comes with the warning that it may cause students to think!
+Umiejętność programowania to tylko jedna z umiejętności wymaganych od informatyka. Ten przewodnik da Ci wyobrażenie na temat innych kompetencji ważnych w informatyce, np. matematycznych czy tych z zakresu psychologii i komunikacji interpersonalnej.
 
-The following programming teaching systems are aimed more at younger students, or are based around a "drag and drop" language which is only intended as a teaching tool:
+## Zasady korzystania
 
-- [ScratchEd](http://scratched.media.mit.edu) provides extensive educational material for Scratch, which is a drag-and-drop programming language centred around creating 2D animations. Scratch has many of the features of more conventional languages. The [Snap! (BYOB)](http://byob.berkeley.edu/) system is based on Scratch, and has some more advanced features.
-- [Computer Science Concepts in Scratch](http://stwww.weizmann.ac.il/g-cs/scratch/scratch_en.html) is a book on programming in Scratch.
-- [Alice](http://alice.org/) is an educational programming language based around creating 3D animations.
-- [Kodu](http://www.kodugamelab.com/) is a visual programming tool that is also available of Xbox.
-- [Snake wrangling for kids](http://briggs.net.nz/snake-wrangling-for-kids.html) is a free downloadable book that introduces younger students to Python programming.
+Rozdziały przewodnika zostały tak zaprojektowane, że można je było czytać w dowolnej kolejności. We wstępie do niektórych rozdziałów zaznaczono, że wskazane jest zapoznanie się najpierw z innym rozdziałem. Warto rozpocząć naukę od rozdziału na temat binarnego zapisu informacji, gdyż system dwójkowy (binarny) ma zasadnicze znaczenie w wielu obszarach informatyki.
 
-And there are [dozens of other websites and systems](https://en.wikipedia.org/wiki/List_of_educational_programming_languages) for learning about programming.
+Każdy z rozdziałów rozpoczyna się sekcją „Z lotu ptaka”. W nich przedstawione są informacje, które mają ukazać znaczenie danego zagadnienia i jego praktyczne zastosowania oraz zmotywować do dalszej lektury. Kluczowe pojęcia i koncepcje są wyjaśnione na przykładach, często uproszczonych wersjach rzeczywistych problemów, którymi zajmują się informatycy. Jeśli to tylko możliwe, tekstowi towarzyszą interaktywne narzędzia, które powalają na eksperymentowanie, by sprawdzić zrozumienie tekstu. Zachęcamy do tego, by robić z nich dobry użytek!
 
-Programming is just one of the skills you'll need to be a computer scientist. In this book you'll be exercising many other skills --- maths, psychology, and communication are important ones.
+Na końcu każdego rozdziału znajduje się sekcja „Podsumowanie”, która zawiera wzmianki na temat wątków pominiętych w tekście głównym. Czasami są to zagadnienia, których zrozumienie będzie wymagać znajomości matematyki na trochę wyższym poziomie czy umiejętności programowania. 
 
-## How to use this guide
+W tekście przewodnika zaproponowano pomymysły projektów, których wykonanie może być np. podstawą do otrzymania ocen szkolnych.
 
-This guide is intended to support a variety of curricula, and teacher guides will become available for using it in different contexts. For students, we've designed most chapters so that they can stand alone; the few that build on previous chapters explain at the outset what preparation you need (the most useful general preparation is the chapter on data representation, because everything on a computer is stored using binary numbers and so they have an important role in many areas of computer science.)
+## O przewodniku
 
-Each chapter begins with a section about the "big picture" --- why the topic is useful for understanding and designing computer systems, and what can be achieved using the main ideas in the chapter. You'll then be introduced to key ideas and applications of the topic through examples, and wherever possible we'll have interactive activities that enable you to work with the ideas first hand. Sometimes these will be simplified versions of the full sized problems that computer scientists need to deal with -- our intention is for you to actually interact with the ideas, not just read about them. Make sure you give them a go!
+Przewodnik jest udostępniany za darmo. Dostęp do wersji źródłowej materiałów jest możliwy poprzez GitHub.
 
-We finish each chapter by talking about the "whole story," giving hints about parts of the topic that we omitted because we didn't want to make the chapter too overwhelming. There will be pointers for further reading, but be warned that some of it might be quite deep, and require advanced math or programming skills.
+Zasady licencji Creative Commons Attribution-NonCommercial-ShareAlike licence pozwalają na wprowadzanie zmian i udoskonaleń. W takim przypadku prosimy o zachowanie informacji o lokalizacji oryginalnej wersji przewodnika. Zmodyfikowana wersja musi pozostać dostępna za darmo.
 
-If you are doing this for formal study, you'll end up having to do some sort of assessment. The chapters provide ideas for projects and activities that could be used for this, and the appendix has more detailed guidance for assessment (currently designed for the New Zealand NCEA requirements).
+Powstanie przewodnika było możliwe dzięki wsparciu Google Inc. oraz University of Canterbury.
 
-## About this guide
+## Dalsze lektury
+Każdy rozdział kończy się propozycjami lektur, które pozwolą na pogłębienie wiedzy. Jest wiele książek o szerokiej tematyce informatycznej, które zostały napisane z myślą o ukazaniu w miarę pełnego obrazu tej dziedziny. Autorzy przewodnika polecają szczególnie:
 
-This guide is free for you to copy, share and even modify. It is currently available online, and we plan to have versions available for ebooks, and as a downloadable PDF file (although it's much better viewed in the other formats because you can watch the videos and use the interactive activities).
-The source material (all raw text, images, videos and interactive programs) is available through the "Contribute on GitHub" link.
+- Algorithmics, by David Harel (tłumaczenie polskie: Algorytmika. Rzecz o istocie informatyki).
+- [Computational fairy tales](http://computationaltales.blogspot.co.nz), autor: Jeremy Kubica
+- Algorithmic adventures: from knowledge to magic, autor: Jurag Hromkovic
+- The Turing Omnibus, autor: A.K. Dewdney
 
-This guide is licenced under a [Creative Commons Attribution-NonCommercial-ShareAlike licence](http://creativecommons.org/licenses/by-nc-sa/4.0/), which means that you are welcome to take copies and modify them. If you do make improvements, we ask that you share those, and acknowledge this guide by linking back to our web site. You can give away the guide (or any derivatives), and you can use it for teaching, but you’re not allowed to sell it directly for profit.
+Godne uwagi są też artykuły Wikipedii oraz wiele innych stron internetowych. Wśród tych w języku angielsku polecamy szczególnie:
 
-Production of the guide was partially funded by a generous grant from Google Inc., and supported by the University of Canterbury. Of course, we welcome donations to support further work on the guide.
-
-## Further reading
-Each chapter gives suggestions for further reading for that particular topic. There are also plenty of general books and websites about computer science that you might want to read to keep your view of the topic broad.
-
-Books that we particularly recommend include:
-
-- Algorithmics, by David Harel
-- [Computational fairy tales](http://computationaltales.blogspot.co.nz), by Jeremy Kubica
-- Algorithmic adventures: from knowledge to magic, by Jurag Hromkovic
-- The Turing Omnibus, by A.K. Dewdney
-
-Wikipedia has a fairly extensive [entry on computer science](https://en.wikipedia.org/wiki/Computer_science).
-
-The  AQA Computing A2 book(s), by Sylvia Langfield and Kevin Bond, give a more detailed account of many of these topics.
-
-The ["Nested" Youtube channel](https://www.youtube.com/channel/UCp-hlYynzR5VW18ITtrcMtQ) has some videos that introduce different computer science topics (for example: binary search) and closely match the topics in this Field Guide.
-
-There are also some excellent general web sites about Computer Science, many of which we've referenced in other chapters:
-
-- [Computer Science For Fun](http://www.cs4fn.org) --- a very readable collection of short articles about practical applications of topics in computer science
-- [Babbage's bag](http://www.i-programmer.info/babbages-bag/) is an excellent collection of technical articles on many topics in computing.
-- [CS Bytes](http://www.nsf.gov/cise/csbytes/) has up-to-date articles about applications of computer science.
-- [Thriving in our digital world](http://www.cs.utexas.edu/~engage/) has some excellent information and  interactive material on topics from computer science.
-- [The Virginia tech online interactive modules for teaching computer science](http://courses.cs.vt.edu/csonline/) cover a range of relevant topics.
-- [CS animated](http://www.csanimated.com/) has interactive activities on computer science.
+- [Computer Science For Fun](http://www.cs4fn.org) 
+- [Babbage's bag](http://www.i-programmer.info/babbages-bag/) 
+- [CS Bytes](http://www.nsf.gov/cise/csbytes/) 
+- [Thriving in our digital world](http://www.cs.utexas.edu/~engage/) 
+- [CS animated](http://www.csanimated.com/) 
 - [CS for All](http://www.cs.hmc.edu/csforall/)
 
