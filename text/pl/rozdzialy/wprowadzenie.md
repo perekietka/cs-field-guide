@@ -50,8 +50,7 @@ Niektóre z problemów można rozwiązań przez zakup większej ilości sprzętu
 
 Załóżmy optymistycznie, że Twój serwis internetowy nigdy nie jest przeciążony i znakomicie sobie radzi z obsługą milionów użytkowników. Pojawia się kolejne pytanie: czy Twoja witryna jest bezpieczna? Czy zostały zastosowane odpowiednie zabezpieczenia, aby nikt nie mógł się włamać do serwisu i wykraść dane użytkowników? W jaki sposób należy projektować systemy, aby zapewnić poufność informacji o klientach i ich transakcjach?
 
-All these questions and more are addressed by the field of computer science. The purpose of this guide is to introduce you to those ideas so that you have a better idea of whether this field is for you. It is aimed at high-school level, and is intended to bring you to the point where you have a good overview of the field, and are well prepared for further in-depth study to become an expert.
-Informatyka zajmuje się szukaniem odpowiedzi na te wszystkie pytania. I nie tylko te!
+Informatyka zajmuje się szukaniem odpowiedzi na takie i inne pytania.
 Celem tego przewodnika jest przedstawienie w sposób przystępny różnych pojęć i koncepcji informatycznych, aby poszerzyć twoją wiedzę na temat informatyki i dać ci lepsze wyobrażenie temat różnych zagadnień informatycznych.  Ten podręcznik ma pomóc ci w rozeznaniu, czy informatyka to jest dziedzina dla ciebie na tyle interesująca, by wiązać z nią swoją przyszłość zawodową.
 Przewodnik jest skierowany do uczniów szkół ponadpodstawowych. 
 
