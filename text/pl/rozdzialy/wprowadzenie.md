@@ -20,15 +20,15 @@ Dobrze, że zadajesz takie pytania!
 Wielu ludzi myli informatykę z programowaniem. Ktoś kiedyś powiedział „Informatyka ma tyle samo wspólnego z programowaniem, co astronomia z teleskopami” ([Mike Fellows](http://en.wikiquote.org/wiki/Computer_science)). 
 Programowanie to narzędzie, którym informatycy posługują się, aby urzeczywistnić różne wspaniałe pomysły, które mogą zmienić życie ludzi na lepsze. Jednak wyłącznie znajomość składni języka programowania nie wystarczy, by tworzyć oprogramowanie szybkie, przyjazne w użyciu, niezawodne, bezpieczne, użyteczne i do tego zabawne! 
 
-Oto przykład: Komputery potrafią wykonywać miliardy operacji w ciągu sekundy, a ciągle możemy usłyszeć narzekania, że są zbyt powolne. Człowiek jest w stanie dostrzec ułamek czasu rzędu 1/10 sekundy. Jeśli na odpowiedź programu komputerowego ktoś czeka dłużej, to może uznać program za powolny, działający mało płynnie i frustrujący. Aby zadowolić użytkownika, reakcja programu na polecenie użytkownika powinna pojawić się o wiele szybciej niż w ciągu sekundy! Jeśli stworzony przez Ciebie program przeszukuje miliony pozycji w danych lub wyświetla miliony pikseli (megapiksele), to nie możesz pozwolić sobie na to, aby działał w sposób nieefektywny. Nie możesz po prostu powiedzieć użytkownikowi, by kupił szybszy komputer ...skończy się prawdopodobnie tym, że użytkownik podziękuje Ci za współpracę i pójdzie kupić u konkursencji szybsze oprogramowanie!
+Oto przykład: Komputery potrafią wykonywać miliardy operacji w ciągu sekundy, a ciągle możemy usłyszeć narzekania, że są zbyt powolne. Człowiek jest w stanie dostrzec ułamek czasu rzędu 1/10 sekundy. Jeśli na odpowiedź programu komputerowego ktoś czeka dłużej, to może uznać program za powolny, działający mało płynnie i frustrujący. Aby zadowolić użytkownika, reakcja programu na polecenie użytkownika powinna pojawić się o wiele szybciej niż w ciągu sekundy! Jeśli stworzony przez Ciebie program przeszukuje miliony pozycji w danych lub wyświetla miliony pikseli (megapiksele), to nie możesz pozwolić sobie na to, aby działał w sposób nieefektywny. Nie możesz po prostu powiedzieć użytkownikowi, by kupił szybszy komputer ...skończy się prawdopodobnie tym, że użytkownik podziękuje Ci za współpracę i pójdzie kupić u konkurencji szybsze oprogramowanie!
 
 Oto rada pochodząca od Freda Wilsona, który zainwestował wiele w firmy z branży komputerowej:
 
-> Po pierwsze i najważniejsze, wierzymy, że szybkość to coś więcej niż cecha (właściwość). Szybkość jest najważniejszą cechą. Jeśli twoje oprogramowanie działa powoli, ludzie nie będą go używać. Dotyczy to zwłaszcza zwykłych użytkowników. Myślę, że użytkownicy, którzy korzystają z zaawansowanych funkcji danego oprogramowania, są czasami bardziej wyrozumiali, ale kiedy patrzę na moją żonę i moje dzieci, to oni są dla mnie jak zwykli, typowi używkownicy. Jeśli coś działa powoli, to oni po prostu odchodzą. ...Szybkość to coś więcej niż cecha. To jest niezbędne wymaganie.
+> Po pierwsze i najważniejsze, wierzymy, że szybkość to coś więcej niż cecha (właściwość). Szybkość jest najważniejszą cechą. Jeśli twoje oprogramowanie działa powoli, ludzie nie będą go używać. Dotyczy to zwłaszcza zwykłych użytkowników. Myślę, że użytkownicy, którzy korzystają z zaawansowanych funkcji danego oprogramowania, są czasami bardziej wyrozumiali, ale kiedy patrzę na moją żonę i moje dzieci, to oni są dla mnie jak zwykli, typowi użytkownicy. Jeśli coś działa powoli, to oni po prostu odchodzą. ...Szybkość to coś więcej niż cecha. To jest niezbędne wymaganie.
 
 > -- [Fred Wilson](https://en.wikipedia.org/wiki/Fred_Wilson_(financier\)) ([Source](http://triple-networks.com/2011/12/06/10-golden-principles-of-successful-web-apps/))
 
-Kluczowym wyzwaniem w informatyce jest stworzyć oprogramowanie działające szybko! Zwłaszcza jeśli ma działać na urządzeniach (np. smarfonach) starszej generacji lub ma być uruchamiane je w jakimś centrum obliczeniowym (superkomputerowym), gdzie użytkownik ma płacić za każdą minutę czasu dostępu do komputerów. 
+Kluczowym wyzwaniem w informatyce jest stworzyć oprogramowanie działające szybko! Zwłaszcza jeśli ma działać na urządzeniach (np. smartfonach) starszej generacji lub ma być uruchamiane je w jakimś centrum obliczeniowym (superkomputerowym), gdzie użytkownik ma płacić za każdą minutę czasu dostępu do komputerów. 
 Nie można powiedzieć klientom, by kupili szybsze urządzenia --- trzeba dostarczyć efektywne oprogramowanie.
 
 ## Szybkość to nie wszystko
@@ -72,7 +72,7 @@ Każdy z rozdziałów rozpoczyna się sekcją „Z lotu ptaka”. W nich przedst
 
 Na końcu każdego rozdziału znajduje się sekcja „Podsumowanie”, która zawiera wzmianki na temat wątków pominiętych w tekście głównym. Czasami są to zagadnienia, których zrozumienie będzie wymagać znajomości matematyki na trochę wyższym poziomie czy umiejętności programowania. 
 
-W tekście przewodnika zaproponowano pomymysły projektów, których wykonanie może być np. podstawą do otrzymania ocen szkolnych.
+W tekście przewodnika zaproponowano pomysły projektów, których wykonanie może być np. podstawą do otrzymania ocen szkolnych.
 
 ## O przewodniku
 
