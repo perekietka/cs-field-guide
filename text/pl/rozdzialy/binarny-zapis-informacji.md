@@ -1,7 +1,8 @@
-# Data Representation
+# Binarny zapis informacji
 
 {panel type="teacher-note" summary="Math in Data Representation"}
 A lot of the exercises in this chapter involve simple arithmetic. If students struggle to do this by hand, a lot can be done using spreadsheets.
+Ćwiczenia w tym rozdziale wymagają wykonywania prostych obliczeń. Można je wykonać ręcznie lub w arkuszu kalkulacyjnym.
 {panel end}
 
 ## What's the big picture?
