@@ -16,21 +16,17 @@ Następnie wskaż na sąsiednią kartę, by na odwrocie zobaczyć dwie czarne kr
 
 {interactive name="binary-cards" type="whole-page" text="Binary Cards" parameters="digits=5&start=BBBBB"}
 
-The challenge for you now is to find a way to have exactly 22 dots showing
-(the answer is in the spoiler below).
-Now try making up other numbers of dots, such as 11, 29 and 19.
-Is there any number that can't be represented? To test this, try counting up from 0.
+Kolejne wyzwanie brzmi: Które karty należy odwrócić, aby łączna liczba kropek była równa 22? Jaka będzie odpowiedź dla liczby kropek równej: 11, 29 lub 19? Czy jakiejś liczby kropek nie sa się uzyskać? Możesz zacząć zliczanie od 0, jeśli chcesz.
 
-{panel type="teacher-note" summary="Patterns in the cards"}
+{panel type="teacher-note" summary="Wskazówki dla nauczyciela"}
 
-This exercise comes up again below as an introduction to representing numbers.
-The card interactive can also be done with physical cards as a change from doing things on a computer.
+W czasie zajęć szkolnych zamiast interaktywnego apletu, można użyć kart z tektury.
 
-If students have trouble solving the puzzles, start at the left and ask "Can you use the 16 dots? 8 dots?" and so on.
-Each one will either be obviously too big, or otherwise it should be used.
+Jeśli uczniowie napotykają trudności w znalezieniu odpowiedzi na powyższe pytania, nauczyciel powinien wskazywać kolejne karty z lewej i stawiać pytania: "Czy karta z 16 kropkami jest porzebna? A karta z 8 kropkami?" itd.
+Uczniowie szybko przekonają się, że skuteczna jest metoda zachłanna: albo liczba kropek na karcie jest za duża, albo karty należy użyć.
 
-With some guidance students should notice patterns, for example,
-that the one-dot card is coming up every second time (the odd numbers).
+Podczas pracy z ćwiczeniem uczniowie powinni dostrzeć pewne prawidłowości.  
+Na przykład: Karta z jedną kropką jest odwracana, gdy pytanie dotyczy liczby nieparzystej.
 
 {panel end}
 
