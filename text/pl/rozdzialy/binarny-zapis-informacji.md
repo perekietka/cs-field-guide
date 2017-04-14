@@ -30,16 +30,19 @@ Na przykład: Karta z jedną kropką jest odwracana, gdy pytanie dotyczy liczby 
 
 {panel end}
 
-{panel type="spoiler" summary="Solution to card puzzles"}
+{panel type="spoiler" summary="Rozwiązanie"}
 
-You may have noticed that each card shows twice as many dots as the one to its right.
-This is an important pattern in data representation on computers.
+Można zauważyć, że liczba kropek na kolejnej karcie jest dwa razy większa niż na sąsiedniej (po prawej).
+Dostrzeżenie tej prawidłowości jest istotne dla zrozumienia cyfrowego zapisu danych w komputerze.
 
 The number 22 requires the cards to be "white, black, white, white, black",
 11 is "black, white, black, white, white",
 29 is "white, white, white, black, white", and
 19 is "white, black, black, black, white".
-
+Aby usyskać liczbę kropek równą 22 potrzebujemy układu kart: "biała, czarna, biała, biała, czarna".
+Liczbę 11 przedstawimy jako: "czarny, biały, czarny, biały, biały".
+Liczbę 29 jako: "biały, biały, biały, czarny, biały".
+Liczbę 19 jako: "biały, czarny, czarny, czarny, biały".
 {panel end}
 
 
