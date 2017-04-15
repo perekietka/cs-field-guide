@@ -35,32 +35,26 @@ Na przykład: Karta z jedną kropką jest odwracana, gdy pytanie dotyczy liczby 
 Można zauważyć, że liczba kropek na kolejnej karcie jest dwa razy większa niż na sąsiedniej (po prawej).
 Dostrzeżenie tej prawidłowości jest istotne dla zrozumienia cyfrowego zapisu danych w komputerze.
 
-The number 22 requires the cards to be "white, black, white, white, black",
-11 is "black, white, black, white, white",
-29 is "white, white, white, black, white", and
-19 is "white, black, black, black, white".
-Aby usyskać liczbę kropek równą 22 potrzebujemy układu kart: "biała, czarna, biała, biała, czarna".
+Aby usyskać liczbę kropek równą 22 potrzebujemy układu kart: "białe, czarne, białe, białe, czarne".
 Liczbę 11 przedstawimy jako: "czarny, biały, czarny, biały, biały".
 Liczbę 29 jako: "biały, biały, biały, czarny, biały".
 Liczbę 19 jako: "biały, czarny, czarny, czarny, biały".
 {panel end}
 
+Nietrudno odkryć, że dowolną liczbę z zakresu od 0 do 31 można przedstawić z użyciem 5 kart.
+Informację o liczbie, przedstawioną na karcie, można odczytać używając tylko dwóch słów: czarne lub białe.
+Na przykład informacja o liczbie 22 to ciąg słów: "biała, czarna, biała, biała, czarna"
+Każdy ciąg złożony ze ciągu słów czarne lub białe można zaś jednoznacznie przypisać pewnej liczbie.
+Np. "czarne, czarne, białe, białe, białe" odpowiada liczbie 7.
+Idea dwustanowego (binanrego) zapisu informacji stanowi podstawę zapisu danych w jakimkolwiek użądzeniu cyfrowym.
 
-
-
-You should have found that any number from 0 to 31 can be represented with 5 cards.
-Each of the numbers could be communicated using just two words: black and white.
-For example, 22 dots is "white, black, white, white, black".
-Or you could decode "black, black, white, white, white" to the number 7.
-This is the basis of data representation - anything that can have two different states can represent anything on a digital device.
-
-When we write what is stored in a computer on paper, we normally use “0” for one of the states, and “1” for the other state. For example, a piece of computer memory could have the following voltages:
+Gdy chcemy przedstawić na papierze to, co zapisano w komputerze, to zazwyczaj uzywamy „0” dla ilustracji jednego ze stanów i „1” – dla drugiego z nich. Oznacza to np., że fragment pamięci elektronicznej komputera, dla którego wartości napięcia elektrycznego to:   
 
 ```
-low low high low high high high high low high low low
+„niska”, „niska”, „wysoka”, „niska”, „wysoka”, „wysoka”, „wysoka”, „wysoka”, „niska”, „wysoka”, „niska”, „niska”
 ```
 
-We could allocate **“0”** to **“low”**, and **“1”** to **“high”** and write this sequence down as:
+będziemy przedstawiać jako ciąg cyfr
 
 ```
 0 0 1 0 1 1 1 1 0 1 0 0
