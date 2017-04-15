@@ -60,25 +60,22 @@ będziemy przedstawiać jako ciąg cyfr
 0 0 1 0 1 1 1 1 0 1 0 0
 ```
 
-While this notation is used extensively, and you may often hear the data being referred to as being “0’s and 1’s”, it is important to remember that a computer does *not* store 0’s and 1’s; it has no way of doing this. They are just using physical mechanisms such as high and low voltage, north or south polarity, and light or dark materials.
+Taka notacja jest powszechnie używana. Należy jednak pamiętać, że sformułowanie typu „komputer zapisuje informacje w postaci ciągu 0 i 1” jest skrótem myślowym. Nie ma sposobu, żeby zrobić to bezpośrednio – komputery posługują się własnościami fizycznymi takimi jak wysokie i niskie napięcie, namagnesowanie północ/południe, czy ciemne i jasne materiały.
 
-{panel type="jargon-buster" summary="Bits"}
+{panel type="jargon-buster" summary="bity"}
 
 The use of the two digits 0 and 1 is so common that some of the best known computer jargon is used for them. Since there are only two digits, the system is called binary. The short word for a "binary digit" is made by taking the first two letters and the last letter --- a *bit* is just a digit that can have two values.
+Ponieważ używa się tylko dwóch cyfr: 0 i 1, więc mówi się też o systemie dwójkowym lub binarnym (ang. binary system) i cyfrach dwójkowych (binarnych), zwanych bitami (ang. bit to skrót od słów „binary digit”). Pojęcie bitu jest jednym z najbardziej podstawowych w języku informatyków. 
 
 {panel end}
 
-Every file you save, every picture you make, every download, every digital recording, every web page is just a whole lot of bits.
-These binary digits are what make digital technology *digital*!
-And the nature of these digits unlock a powerful world of storing and sharing a wealth of information and entertainment.
+Każdy utworzony przez Ciebie pjlik, każde zdjęcie zapisane na dysku komputera, każdy dokument pobrany z Internetu to po prostu krótszy lub dłuższy ciąg bitów, czyli cyfr dwókowych. Dlatego mówi się o technologiach *cyfrowych*!
 
-Computer scientists don't spend a lot of time reading bits themselves, but knowing how they are stored is really important because it affects the amount of space that data will use, the amount of time it takes to send the data to a friend (as data that takes more space takes longer to send!) and the quality of what is being stored.
-You may have come across things like "24-bit colour", "128-bit encryption", "32-bit IPv4 addresses" or "8-bit ASCII".
-Understanding what the bits are doing enables you to work out how much space will be required to get high-quality colour, hard-to-crack secret codes, a unique ID for every device in the world, or text that uses more characters than the usual English alphabet.
+Choć informatycy na co dzień nie zajmują się bezpośrednio analizowaniem tych ciągów bitów, to wiedza na temat zasad binarnego zapisu informacji jest naprawdę istotna, gdyż pozwala np. na oszacowanie przestrzeni na dysku, potrzebnej do zapisu danych z odpowiednią jakością. Podczas lektury tekstów z różnych dziedzin informatyki możesz napotkać określenia typu „24-bitowy kolor”, „128-bitowe szyfrowanie”, „32-bitowy adres IP” czy „8-bitowy kod ASCII”. Wiedza na temat zapisu binarnego jest niezbędna informatykowi do oszacowania ilości miejsca na dysku potrzebnego do zapisania wysokiej jakości informacji o kolorze, określenia bezpieczeństwa wybranej metody szyfrowania, do wyboru odpowiedniej długości klucza podczas projektowania bazy danych, czy zastosowania kodowania odpowiedniego dla teksów języka, w których występują znaki spoza alfabetu języka angielskiego.
 
-This chapter is about some of the different methods that computers use to code different kinds of information in patterns of these bits, and how this affects the cost and quality of what we do on the computer, or even if something is feasible at all.
+Ten rozdział przedstawia różne metody, jakie są używane w systemach komputerowych do zapisania różnego rodzaju informacji za pomocą ciągów bitów oraz to, jak wybór metody wpływa na koszt i jakość tego, co robimy na komputerze i czy w ogóle da się to zrobić. 
 
-## Getting Started
+## Zaczynamy
 
 To begin with, we'll look at Braille. Braille is not actually a way that computers represent data, but is a great introduction to the topic.
 
