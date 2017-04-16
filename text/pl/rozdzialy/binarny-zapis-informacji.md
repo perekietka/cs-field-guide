@@ -112,7 +112,7 @@ Ta koncepcja (podwajanie się liczby wzorców) ma zasadnicze znaczenie dla zrozu
 
 W obrębie sześciopunktu można uzyskać 64 wzorce (znaki). To wystarcza na oznaczenie liter alfabetu i innych znaków, takich jak np. cyfry czy znaki interpunkcyjne.
 
-### So how does Braille relate to data representaton?
+### Jaki związek ma system Braille'a z tematem zapisu informacji w komputrze?
 
 The reason we're looking at Braille in this chapter is because it is a representation using bits.
 That is, it contains 2 different values (raised and not raised) and contains sequences of these to represent different patterns.
