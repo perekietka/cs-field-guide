@@ -64,12 +64,11 @@ Taka notacja jest powszechnie używana. Należy jednak pamiętać, że sformuło
 
 {panel type="jargon-buster" summary="bity"}
 
-The use of the two digits 0 and 1 is so common that some of the best known computer jargon is used for them. Since there are only two digits, the system is called binary. The short word for a "binary digit" is made by taking the first two letters and the last letter --- a *bit* is just a digit that can have two values.
 Ponieważ używa się tylko dwóch cyfr: 0 i 1, więc mówi się też o systemie dwójkowym lub binarnym (ang. binary system) i cyfrach dwójkowych (binarnych), zwanych bitami (ang. bit to skrót od słów „binary digit”). Pojęcie bitu jest jednym z najbardziej podstawowych w języku informatyków. 
 
 {panel end}
 
-Każdy utworzony przez Ciebie pjlik, każde zdjęcie zapisane na dysku komputera, każdy dokument pobrany z Internetu to po prostu krótszy lub dłuższy ciąg bitów, czyli cyfr dwókowych. Dlatego mówi się o technologiach *cyfrowych*!
+Każdy utworzony przez Ciebie plik, każde zdjęcie zapisane na dysku komputera, każdy dokument pobrany z Internetu to po prostu krótszy lub dłuższy ciąg bitów, czyli cyfr dwókowych. Dlatego mówi się o technologiach *cyfrowych*!
 
 Choć informatycy na co dzień nie zajmują się bezpośrednio analizowaniem tych ciągów bitów, to wiedza na temat zasad binarnego zapisu informacji jest naprawdę istotna, gdyż pozwala np. na oszacowanie przestrzeni na dysku, potrzebnej do zapisu danych z odpowiednią jakością. Podczas lektury tekstów z różnych dziedzin informatyki możesz napotkać określenia typu „24-bitowy kolor”, „128-bitowe szyfrowanie”, „32-bitowy adres IP” czy „8-bitowy kod ASCII”. Wiedza na temat zapisu binarnego jest niezbędna informatykowi do oszacowania ilości miejsca na dysku potrzebnego do zapisania wysokiej jakości informacji o kolorze, określenia bezpieczeństwa wybranej metody szyfrowania, do wyboru odpowiedniej długości klucza podczas projektowania bazy danych, czy zastosowania kodowania odpowiedniego dla teksów języka, w których występują znaki spoza alfabetu języka angielskiego.
 
@@ -78,41 +77,40 @@ Ten rozdział przedstawia różne metody, jakie są używane w systemach kompute
 ## Zaczynamy
 
 To begin with, we'll look at Braille. Braille is not actually a way that computers represent data, but is a great introduction to the topic.
+Na początek przyjrzymy się alfabetowi Braille'a, który umożliwia zapisywanie i odczytywanie tekstów osobom niewidomym i niedowidzącym. Mimo, że system brajlowski nie ma nic wspólnego z komputerami, to stanowi znakomite wprowadzenie do tematu tego rozdziału przewodnika po informatyce.
 
-{panel type="additional-information" summary="Representing Braille without making holes in paper"}
-When working through the material in this section, a good way to draw braille on paper without having to actually make raised dots is to draw a rectangle with 6 small circles in it, and to colour in the circles that are raised, and not colour in the ones that aren’t raised.
+{panel type="additional-information" summary="Zapis znaków Braille'a"}
+Dla uproszczenia ideę tzw. sześciopunku można zilustrować używając sześciu małych kół ułożonych w dwóch kolumnach po trzy punkty w każdej.
+Koła z zamalowanym wnętrzem będą ilustracją punktów wypukłych. 
 {panel end}
 
-### What is Braille?
+### Czym jest alfabet Braille'a?
 
-More than 200 years ago a 15-year-old French boy invented a system for representing text using combinations of flat and raised dots on paper so that they could be read by touch.
-The system became very popular with people who had visual impairment as it provided a relatively fast and reliable way to "read" text without seeing it.
-Louis Braille's system is an early example of a "binary" representation of data --- there are only two symbols (raised and flat), and yet combinations of them can be used to represent reference books and works of literature.
-Each character in braille is represented with a cell of 6 dots. Each dot can either be raised or not raised. Different numbers and letters can be made by using different patterns of raised and not raised dots.
+Ponad 200 lat temu 15-letni Francuz wymyślił system zapisu tekstu (liter, cyfr, znaków przestankowych itd.) z użyciem tzw. sześciopunktów jako kombinację sześciu wypukłych punktów ułożonych w dwóch kolumnach po trzy punkty w każdej. System stał się bardzo popularny wśród osób niewidomych, gdyż umożliwił względnie szybki i niezawodny sposób „czytania” tekstu. 
+Alfabet Louisa Braille'a można uznać za jeden z pierwszych przykładów „binarnego” zapisu informacji – używa się w nim bowiem tylko dwóch znaków (wypukły punkt lub jego brak), a mimo to odpowiednie ich kombinacje pozwalają na wydawanie całych książek, zarówno fachowych, jak i literatury pięknej. 
 
-{image filename="braille-alphabet-diagram.jpg" alt="The braille alphabet"}
+{image filename="braille-alphabet-diagram.jpg" alt="Alfabet Braille'a"}
 
-Let's work out how many different patterns can be made using the 6 dots in a Braille character.
-If braille used only 2 dots, there would be 4 patterns.
-And with 3 dots there would be 8 patterns
+Sprawdźmy, ile różnych wzorców (znaków) w alfabecie Braille's można uzyskać, używając sześciopunktu. 
+Gdyby system Braille'a używał kombinacji tylko dwóch (pary) punktów, to wzorców (znaków) byłyby cztery. 
+Gdyby używał kombinacji trzech punktów, to byłoby ich osiem.
 
 {image filename="two-and-three-dot-combinations-diagram.png" alt="Combinations of both two and three dots"}
 
-You may have noticed that there are twice as many patterns with 3 dots as there are with 2 dots. It turns out that every time you add an extra dot, that gives twice as many patterns, so with 4 dots there are 16 patterns, 5 dots has 32 patterns, and 6 dots has 64 patterns. Can you come up with an explanation as to why this doubling of the number of patterns occurs?
+Można było zauważyć, że w przypadku użycia trzech punktów liczba wzorców jest dwa razy większa niż dla przypadku dwóch punktów. Okazuje się, że dodanie każdego kolejnego punktu skutkuje podwojeniem liczby wzorców . To znaczy, że dla czterech punktów liczba wzorców będzie równa 16, dla pięciu – 32, a dla sześciu – 64. Dlaczego? Potrafisz to wyjaśnić?
 
-{panel type="spoiler" summary="Why does adding one more dot double the number of possible patterns?"}
-The reason that the number of patterns doubles with each extra dot is that with, say, 3 dots you have 8 patterns, so with 4 dots you can use all the 3-dot patterns with the 4th dot flat, and all of them with it raised.
-This gives 16 4-dot patterns.
-And then, you can do the same with one more dot to bring it up to 5 dots.
-This process can be repeated infinitely.
+{panel type="spoiler" summary="Wyjaśnienie"}
+Po dodaniu czwartego punktu liczba wzorców podawaja się, bo nowy punkt można dołączyć do każdego wzorca 3-punktowego na dwa sposoby: jako punkt wypukły lub niewypukły.
+Podobnie można objaśnić przyczynę podwojenia się liczby wzorców po dodaniu czwartego punktu.
+To rozumowanie można uogólnić dla dowlnej liczby punktów.
 {panel end}
 
-{panel type="teacher-note" summary="Importance of students understanding why the number of patters double with every dot"}
+{panel type="teacher-note" summary="O znaczeniu zrozumienia idei podawajania")}
 This concept is a fundamental one for students to grasp with binary representation: each extra bit doubles the number of values that can be stored. This becomes very important in choosing the right number of bits for a value. For example, a 101-bit encryption key is *twice* as hard to crack as a 100-bit key, even though it's only 1% larger!
+Ta koncepcja (podwajanie się liczby wzorców) ma zasadnicze znaczenie dla zrozumienia istoty zapisu binarnego: każdy dodatkowy bit pozwala dwukrotnie zwiększyć liczbę wartości, które da się zapisać. Wybór odpowiedniej liczby bitów dla zapisu danych w konkretnej sytuacji jest bardzo ważny. Na przykład: 101-bitowy klucz szyfrowania jest dwa razy trudniej złamać, choć liczba użytych bitów jest większa tylko o 1%! 
 {panel end}
 
-So, Braille, with its 6 dots, can make 64 patterns.
-That's enough for all the letters of the alphabet, and other symbols too, such as digits and punctuation.
+W obrębie sześciopunktu można uzyskać 64 wzorce (znaki). To wystarcza na oznaczenie liter alfabetu i innych znaków, takich jak np. cyfry czy znaki interpunkcyjne.
 
 ### So how does Braille relate to data representaton?
 
