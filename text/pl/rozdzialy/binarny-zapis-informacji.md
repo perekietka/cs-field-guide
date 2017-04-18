@@ -76,7 +76,6 @@ Ten rozdział przedstawia różne metody, jakie są używane w systemach kompute
 
 ## Zaczynamy
 
-To begin with, we'll look at Braille. Braille is not actually a way that computers represent data, but is a great introduction to the topic.
 Na początek przyjrzymy się alfabetowi Braille'a, który umożliwia zapisywanie i odczytywanie tekstów osobom niewidomym i niedowidzącym. Mimo, że system brajlowski nie ma nic wspólnego z komputerami, to stanowi znakomite wprowadzenie do tematu tego rozdziału przewodnika po informatyce.
 
 {panel type="additional-information" summary="Zapis znaków Braille'a"}
@@ -106,7 +105,6 @@ To rozumowanie można uogólnić dla dowlnej liczby punktów.
 {panel end}
 
 {panel type="teacher-note" summary="O znaczeniu zrozumienia idei podawajania")}
-This concept is a fundamental one for students to grasp with binary representation: each extra bit doubles the number of values that can be stored. This becomes very important in choosing the right number of bits for a value. For example, a 101-bit encryption key is *twice* as hard to crack as a 100-bit key, even though it's only 1% larger!
 Ta koncepcja (podwajanie się liczby wzorców) ma zasadnicze znaczenie dla zrozumienia istoty zapisu binarnego: każdy dodatkowy bit pozwala dwukrotnie zwiększyć liczbę wartości, które da się zapisać. Wybór odpowiedniej liczby bitów dla zapisu danych w konkretnej sytuacji jest bardzo ważny. Na przykład: 101-bitowy klucz szyfrowania jest dwa razy trudniej złamać, choć liczba użytych bitów jest większa tylko o 1%! 
 {panel end}
 
@@ -114,21 +112,19 @@ W obrębie sześciopunktu można uzyskać 64 wzorce (znaki). To wystarcza na ozn
 
 ### Jaki związek ma system Braille'a z tematem zapisu informacji w komputrze?
 
-The reason we're looking at Braille in this chapter is because it is a representation using bits.
-That is, it contains 2 different values (raised and not raised) and contains sequences of these to represent different patterns.
-The letter m, for example, could be written as 110010, where "1" means raised dot, and "0" means not raised dot (assuming we're reading from left to right and then down).
-This is the same as how we sometimes use 1's and 0's to show how a computer is representing data.
+Alfabet Braille'a jest ilustracją zapisu z użyciem bitów. Istotnie, rozróżnia się dwa stany punktu (wypukły lub niewypukły), a każdy z wzorców tzw. sześciopunktu odpowiada innemu znakowi alfabetu.
+Na przykład litera m może być zapisana jako 110010, gdzie "1" oznacza punkt wypukły, a "0" niewypukły (przy założeniu, że czytamy od lewej do prawej i z góry na dół). 
+W informatyce takich ciągów "1" i "0" używa się w analogiczny sposób do ukazania sposobu zapisu informacji w komputerze.
 
-Braille also illustrates why binary representation is so popular. It would be possible to have three kinds of dot: flat, half raised, and raised.
-A skilled braille reader could distinguish them, and with three values per dot, you would only need 4 dots to represent 64 patterns.
-The trouble is that you would need more accurate devices to create the dots, and people would need to be more accurate at sensing them.
-If a page was squashed, even very slightly, it could leave the information unreadable.
+Alfabet Braille'a jest dobrą ilustracją przyczyn użyteczności zapisu binarnego. Można sobie wyobrazić system używający trzech rodzajów kropek: niewypukłych, półwypukłych i wypukłych. Z pewnością wprawny czytelnik potrafiłby je rozróżnić, a wtedy do uzyskania 64 znaków wystarczyłaby kombinacja czterech kropek. Kłopot w tym, że potrzebne byłyby bardziej dokładne (precyzyjne) urządzenia do tworzenia kropek, a ludzie musieliby więcej uwagi poświęcać rozróżnianiu kropek podczas „czytania”. Wystarczyłoby wtedy, że kartka zostałaby przygnieciona, nawet bardzo nieznacznie, a informacja stałby się nieczytelna.
 
-Digital devices almost always use two values (binary) for similar reasons: computer disks and memory can be made cheaper and smaller if they only need to be able to distinguish between two extreme values (such as a high and low voltage), rather than fine-grained distinctions between very subtle differences in voltages.
-Using ten digits (like we do in our every day decimal counting system) would obviously be too challenging.
+Współczesne urządzenia cyfrowe prawie zawsze używają systemu dwustanowego (binarnego) do zapisu informacji. Przyczyny są podobne: dyski komputerowe i pamięć elektroniczna jest po prostu tańsza i mniejszych rozmiarów, jeśli wystarczy rozróżnić między dwoma skrajnymi wartościami (jak np. wysokie i niskie napięcie), a nie trzeba mierzyć subtelnych różnic w wartościach (np. między wartościami napięcia). 
+Stosowanie systemu dziesiętnego byłoby niezwykle kosztowne.
 
-{panel type="curiosity" summary="Decimal-based computers"}
+{panel type="curiosity" summary="Komputery oparte o system dziesiętny"}
 Why are digital systems so hung up on only using two digits? After all, you could do all the same things with a 10 digit system?
+W przeszłości próbowano budować komputery oparte o system dziesiętny, ale okazało się to zbyt trudne.
+Roz
 
 As it happens, people have tried to build decimal-based computers, but it's just too hard.
 Recording a digit between 0 and 9 involves having accurate equipment for reading voltage levels, magnetisation or reflections, and it's a lot easier just to check if it's mainly one way or the other.
