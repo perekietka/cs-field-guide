@@ -123,21 +123,17 @@ Stosowanie systemu dziesiętnego byłoby niezwykle kosztowne.
 
 {panel type="curiosity" summary="Komputery oparte o system dziesiętny"}
 Why are digital systems so hung up on only using two digits? After all, you could do all the same things with a 10 digit system?
-W przeszłości próbowano budować komputery oparte o system dziesiętny, ale okazało się to zbyt trudne.
-Roz
+W przeszłości próbowano budować komputery oparte o system dziesiętny. Rozwiązania takie były wyjątkowo skomplikowane i kosztowne. Wymaganie, by rozróżniać 10 różnych stanów (wartości) oznacza większy stopień skomplikowania sprzętu do zapisu i odczytu (np. napięcia elektrycznego). O wiele łatwiej w praktyce realizować wymaganie, by rozróżniać dwa stany.
 
-As it happens, people have tried to build decimal-based computers, but it's just too hard.
-Recording a digit between 0 and 9 involves having accurate equipment for reading voltage levels, magnetisation or reflections, and it's a lot easier just to check if it's mainly one way or the other.
-
-There's a more in-depth discussion on why we use binary here:
+Bardziej pogłębione objaśnienie zalet praktycznych systemu binarnego znajduje się tutaj:
 
 {video url="https://www.youtube.com/watch?v=thrx3SBEpL8"}
 {panel end}
 
 
-## Numbers
+## Liczby
 
-{panel type="teacher-note" summary="CS Unplugged activity"}
+{panel type="teacher-note" summary="Ćwiczenie bez komputera (CS Unplugged)"}
 If you are doing a warm up exercise with the class, the CS Unplugged binary activity [http://csunplugged.org/binary-numbers](http://csunplugged.org/binary-numbers) provides scaffolding and can be used to teach concepts around binary numbers using only counting or simple addition.
 We also have an interactive which emulates the physical binary cards here:
 
