@@ -122,7 +122,7 @@ Współczesne urządzenia cyfrowe prawie zawsze używają systemu dwustanowego (
 Stosowanie systemu dziesiętnego byłoby niezwykle kosztowne.
 
 {panel type="curiosity" summary="Komputery oparte o system dziesiętny"}
-Why are digital systems so hung up on only using two digits? After all, you could do all the same things with a 10 digit system?
+Dlaczego w technice komputerowej używa się systemu dwójkowego? Czy nie można by używać systemu dziesiętnego?
 W przeszłości próbowano budować komputery oparte o system dziesiętny. Rozwiązania takie były wyjątkowo skomplikowane i kosztowne. Wymaganie, by rozróżniać 10 różnych stanów (wartości) oznacza większy stopień skomplikowania sprzętu do zapisu i odczytu (np. napięcia elektrycznego). O wiele łatwiej w praktyce realizować wymaganie, by rozróżniać dwa stany.
 
 Bardziej pogłębione objaśnienie zalet praktycznych systemu binarnego znajduje się tutaj:
