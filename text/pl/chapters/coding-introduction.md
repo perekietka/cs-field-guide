@@ -35,7 +35,7 @@ oraz [z gry polegającej na zgadywaniu zdań online](http://www.math.ucsd.edu/~c
 
 ## Further reading
 
-Ksiażka James'a Gleick'a [The Information: A History, a Theory, a Flood](http://www.amazon.com/The-Information-History-Theory-Flood/dp/1400096235) pokazuje ciekwe spojrzenie na historię kilku dziedzin kodowania.
+Ksiażka James'a Gleick'a [The Information: A History, a Theory, a Flood](http://www.amazon.com/The-Information-History-Theory-Flood/dp/1400096235) pokazuje ciekawe spojrzenie na historię kilku dziedzin kodowania.
 
 ### Useful Links
 
