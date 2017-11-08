@@ -70,13 +70,12 @@ Interactive to make
 low priority; interactive for images. If we were going to put in the interactive that takes the 1’s and 0’s and converts it into an image for the students, I’d want to put that in here. This would mostly be a convenience thing that allows students to easily see what an image looks like. We would also provide an interactive that can take a number representation and show the image for that. We do NOT want to provide a tool that converts between the 2; we want students to do the converting by hand. The tool will allow them to see if the images they got are the same though.
 {comment end}
 
-{panel type="curiosity" summary="The PBM file format"}
-There is an image format that uses the simple one-symbol-per-pixel representation we have just described. The format is called "portable bitmap format" (PBM).
-PBM files are saved with the file extension “.pbm”, and contain a simple header, followed by the image data.
-The data in the file can be viewed by opening it in a text editor, much like opening a .txt file,
-and the image itself can be viewed by opening it in a drawing or image viewing program that supports PBM files
-(the format isn't very well supported, but a number of image viewing and editing programs can display them).
-A pbm file for the diamond image used earlier would be as follows:
+{panel type="curiosity" summary="Format pliku PBM"}
+Istnieje format obrazu, który wykorzystuje prostą jeden-symbol-na-piksel reprezentację opisaną powyżej. Ten format nazywa się “przenośny format mapy bitowej” PBM (ang. portable bitmap format).
+Pliki PBM są zapisywane z rozszerzeniem “.pbm”, i zawierają prosty nagłówek, za którym zapisane są dane obrazu.
+Dane w tym pliku można obejrzeć otwierając go w edytorze tekstowym, podobnie jak plik .txt., a sam obrazek możemy zobaczyć otwierając w programie graficznym, który wspiera format PBM
+(format ten nie jest szeroko wspierany, ale istnieje kilka programów go obsługujących)
+Plik pbm dla obrazu zawierającego wcześniej przywołany kształt diamentu wygląda następująco:
 
 ```
 P1
@@ -98,10 +97,10 @@ P1
 011000010000110
 ```
 
-The first two lines are the header.  The first line specifies the format of the file (P1 means that the file contains ASCII zeroes and ones). The second line specifies the width and then the height of the image in pixels. This allows the computer to know the size and dimensions of the image, even if the newline characters separating the rows in the file were missing.
-The rest of the data is the image, just like above.
-If you wanted to, you could copy and paste this representation (including the header) into a text file, and save it with the file extension .pbm.
-If you have a program on your computer able to open PBM files, you could then view the image with it. You could even write a program to output these files, and then display them as images.
+Pierwsze dwie linie stanowią nagłówek. Pierwsza linia określa format danych w pliku (P1 oznacza, że plik zawiera znaki zer i jedynek w formacie ASCII). Druga linia wyznacza szerokość i wysokość obrazu w pikselach. Dzięki temu komputer zna wymiary obrazu nawet wtedy gdyby brakowało znaków nowej linii.
+Resztę danych stanowi po prostu obraz (patrz powyżej).
+Można po prostu skopiować i wkleić tą reprezentację (wraz z nagłówkiem) do pliku tekstowego, a następnie zapisać z rozszerzeniem .pbm.
+Jeśli posiadasz program, który obsługuje pliki PBM, może zobaczyć obraz. Mógłbyś również napisać program, który będzie pozwalał tworzyć tego typu pliki oraz wyświetlać je jako obrazy.
 
 Because the digits are represented using ASCII in this format, it isn't very efficient, but it is useful if you want to read what's inside the file.
 There are variations of this format that pack the pixels into bits instead of characters, and variations that can be used for grey scale and colour images. More [information about this format is available on Wikipedia](https://en.wikipedia.org/wiki/Netpbm_format).
