@@ -167,7 +167,7 @@ Bardziej formalnie można napisać tak:
 
 The key ideas to notice from this are:
 
-- Decimal has 10 **digits** -- 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.
+- System dzięsiętny używa 10 **cyfr** (ang. digits) -- 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.
 - A **place** is the place in the number that a digit is, i.e. ones, tens, hundreds, thousands, and so on. For example, in the number 90328, 3 is in the "hundreds" place, 2 is in the "tens" place, and 9 is in the "ten thousands" place.
 - Numbers are made with a sequence of digits.
 - The right-most digit is the one that's worth the least (in the "ones" place).
@@ -176,7 +176,7 @@ The key ideas to notice from this are:
 
 All this probably sounds really obvious, but it is worth thinking about consciously, because binary numbers have the same properties.
 
-### Representing whole numbers in Binary
+### Zapis liczb całkowitych w systemie binarnym
 
 {panel type="teacher-note" summary="Teaching binary numbers"
 This subsection is a prerequisite for the colours section, as colour representations are built on simple binary numbers.
