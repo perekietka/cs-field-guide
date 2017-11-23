@@ -122,7 +122,7 @@ Może być przedstawione w następujący sposób.
 1, 2, 4, 1, 4, 2, 1
 ```
 
-For the second row, because we need to say what the number of white pixels is before we say the number of black, we need to explicitly say there are zero at the start of the row.
+Dla drugiego wiersza, który zaczyna się pikselem czarnym, musimy otwarcie powiedzieć, że jest zero białych na początku.
 
 ```
 100000111000001
@@ -132,21 +132,21 @@ For the second row, because we need to say what the number of white pixels is be
 0, 1, 5, 3, 5, 1
 ```
 
-You might ask why we need to say the number of white pixels first, which in this case was zero. The reason is that if we didn't have a clear rule about which to start with, the computer would have no way of knowing which colour was which when it displays the image represented in this form!
+Może to wydawać się dziwne, że musimy podać zawsze ilość białych na początku, która w tym wypadku wynosi zero. Powodem tego jest fakt, iż komputer potrzebuje ścisłych reguł odnośnie tego, od którego koloru pikseli zaczynać.
 
-The third row contains five whites, five blacks, five whites.
+Trzeci wiersz zawiera pięć białych, pięć czarnych, oraz pięć białych.
 
 ```
 000001111100000
 ```
 
-This is coded as:
+To jest kodowane jako:
 
 ```
 5, 5, 5
 ```
 
-That means we get the following representation for the first three rows.
+Zatem mamy następującą reprezentacją dla pierwszych trzech wierszy pikseli obrazu.
 
 ```
 1, 2, 4, 1, 4, 2, 1
@@ -154,10 +154,10 @@ That means we get the following representation for the first three rows.
 5, 5, 5
 ```
 
-You can work out what the other rows would be following this same system.
+Łatwo mona się domyśleć jak będą wyglądać kolejne wiersze w tym systemie reprezentacji.
 
-{panel type="spoiler" summary="Representation for the remaining rows"}
-The remaining rows are
+{panel type="spoiler" summary="Reprezentacja pozostałych wierszy"}
+Pozostałe wiersze to
 
 ```
 4, 7, 4
@@ -176,14 +176,14 @@ The remaining rows are
 {panel end}
 
 {panel type="curiosity" summary="Run Length Encoding in the CS Unplugged show"}
-In this video from a Computer Science Unplugged show, a Run length encoded image is decoded using very large pixels (the printer is a spray can!).
+W poniższym materiale wideo z ??Computer Science Unplugged show?? zakodowany przy pomocy długości serii obraz jest odkodowany i zaprezentowany przez bardzo duże piksele (drukarką jest farba w sprayu!).
 
 {video url="https://www.youtube.com/watch?v=VsjpPs146d8"}
 {panel end}
 
-### Converting Run Length Encoding back to the original representation
+### Konwertowanie Kodu Długości Serii do oryginalnej reprezentacji
 
-Just to ensure that we can reverse the compression process, have a go at finding the original representation (zeroes and ones) of this (compressed) image.
+Aby upewnić się, że możemy odwrócić proces kompresji, spróbuj znaleźć oryginalną reprezentację (zera i jedynki) skompresowanego obrazu.
 
 ```
 4, 11, 3
@@ -197,10 +197,10 @@ Just to ensure that we can reverse the compression process, have a go at finding
 1, 15, 2
 ```
 
-What is the image of? How many pixels were there in the original image? How many numbers were used to represent those pixels?
+Co zawiera obraz? Z jak wielu pikseli się składa? Ile liczb użyto do reprezentacji tego obrazu?
 
-{panel type="spoiler" summary="Answer for the above image"}
-This image is from the [CS Unplugged image representation activity](http://csunplugged.org/image-representation), and the solution is available in the activity (it is a cup and saucer).
+{panel type="spoiler" summary="Odpowiedź dla powyższego obrazu"}
+Przykładowy obrazek pochodzi z [??CS Unplugged image representation activity??](http://csunplugged.org/image-representation), a rozwiązanie jest dostępne w treści zadanie (jest nim filiżanka i tależ).
 {panel end}
 
 The following interactive allows you to experiment further with Run Length Encoding.
