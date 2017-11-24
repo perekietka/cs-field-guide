@@ -1939,24 +1939,23 @@ Here is a table that shows the patterns of bits that ASCII uses for each of the 
 | 0111110 | >     | 1011110 | ^    | 1111110 | ~     |
 | 0111111 | ?     | 1011111 | _    | 1111111 | Delete   |
 
-For example, the letter c (lower-case) in the table has the pattern “01100011” (the 0 at the front is just extra padding to make it up to 8 bits). The letter o has the pattern “01101111”. You could write a word out using this code, and if you give it to someone else, they should be able to decode it exactly.
+Przykład: Litera c (mała litera) ma w tabeli przypisany wzorzec: „01100011” (0 na początku jest dopełnieniem kodu do 8 bitów). Litera o ma wzorzec „01101111”.
+Warto w ramach ćwiczenia zapisać jakieś angielskie słowo, używając kodu ASCII i dać komuś innemu, kto również zapoznaje się z tym tematem, do odkodowania. 
 
 {panel type="teacher-note" summary="Using the table"}
 Exchanging short messages in code will force students to use the table, and they should start to pick up some of the patterns (e.g. capital letters have a different code to lower case letters, but they only have one bit different.)
 {panel end}
 
-Computers can represent pieces of text with sequences of these patterns, much like Braille does. For example, the word “computers” (all lower-case) would be 01100011 01101111 01101101 01110000 01110101 01110100 01100101 01110010 01110011. This is because "c" is "01100011", "o" is "01101111", and so on.
+W komputerach teksty w języku angielskim są zapisywane w postaci ciągów (sekwencji) wzorców 8-bitowych, o których była mowa wyżej. Dla przykładu słowo „computers” będzie zapisane jako: 01100011 01101111 01101101 01110000 01110101 01110100 01100101 01110010 01110011. This is because "c" is "01100011", "o" is "01101111", and so on.
 Have a look at the ASCII table above to check that we are right!
 
 {panel type="curiosity" summary="What does ASCII stand for?"}
-The name "ASCII" stands for "American Standard Code for Information Interchange", which was a particular way of assigning bit patterns to the characters on a keyboard.
-The ASCII system even includes "characters" for ringing a bell (useful for getting attention on old telegraph systems),
-deleting the previous character (kind of an early "undo"),
-and "end of transmission" (to let the receiver know that the message was finished).
-These days those characters are rarely used, but the codes for them still exist (they are the missing patterns in the table above).
-Nowadays ASCII has been supplanted by a code called "UTF-8",
-which happens to be the same as ASCII if the extra left-hand bit is a 0,
-but opens up a huge range of characters if the left-hand bit is a 1.
+Nazwa „ASCII” jest skrótem od „American Standard Code for Information Interchange”. Była to standaryzacja sposobu kodowania znaków w maszynie dalekopisowej (zautomatyzowanym systemie telegraficznym). Dlatego system ASCII zawiera takie „znaki” dla sygnału dzwonka, dla informacji o potrzebie usunięcia poprzedniego znaku (jakby przodek polecenia „cofnij”), czy dla potwierdzenia zakończenia transmisji (END).
+We fragmencie tabeli ASCII, zamieszczonym powyżej, znajdziesz tylko jeden z nich (DEL). Resztę pominięto.  
+Dzisiaj system ASCII został wyparty przez kodowanie UTF-8. Należy podkreślić, że teksty angielskie zakodowane w UTF-8 mają identyczną reprezentację binarną, co teksty w ASCII, gdyż pierwszy bit każdego 8-bitowego wzorca jest wówczas równy 0. Inaczej mówiąc plik tekstowy zawierający wzorce 1xxxxxxx z całą pewnością nie jest zapisany w kodzie ASCII i zawiera informacje o znakach spoza alfabetu angielskiego.
+
+Warto wspomnieć, że zanim pojawił się standard ASCII w usługach telegraficznych stosowano inne standardy: kod Baudota i EBCDIC.
+
 {panel end}
 
 
