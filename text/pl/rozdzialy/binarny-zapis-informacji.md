@@ -334,15 +334,14 @@ Przykład: Największą liczbą 8-bitową jest 11111111. Można ją zapisać jak
 
 To, jakiego zapisu (reprezentacji) liczby należy użyć, zależy od konkretnej sytuacji. Reprezentacja binarna jest reprezentacją maszynową, ale jest nieodpowiednia dla człowieka. Zapis szesnastkowy to dobry sposób na skrócenie zapisu binarnego. Zapis dziesiętny jest używany wtedy, gdy człowiek musi odczytać wartość jakiejś liczby. Wszystkie trzy notacje są używane w informatyce.
 
-It is important to remember though, that computers **only** represent numbers using binary. They **cannot** represent numbers directly in decimal or hexadecimal.
+Należy pamiętać, że w praktyce w komputerach stosuje się **wyłącznie** binarny zapis liczb. Jest **niemożliwym** zapisanie liczby bezpośrednio w systemie dziesiętnym lub szesnastkowym. 
 
-### Computers representing numbers in practice
+### Zapis binarny liczb w komputerze
 
-A common place that numbers are stored on computers is in spreadsheets or databases. These can be entered either through a spreadsheet program or database program, through a program you or somebody else wrote, or through additional hardware such as sensors, collecting data such as temperatures, air pressure, or ground shaking.
+Liczbami posługujemy się zwykle pracując z arkuszem kalkulacyjnym lub bazą danych. Dane wprowadzać może użytkownik programu bezpośrednio z klawiatury, z pliku lub za pośrednictwem różnych czujników, np. temperatury, ciśnienia powietrza, czy drgań mechanicznych.
 
-Some of the things that we might think of as numbers, such as the telephone number (03) 555-1234, aren't actually stored as numbers, as they contain important characters (like dashes and spaces) as well as the leading 0 which would be lost if it was stored as a number (the above number would come out as 35551234, which isn't quite right). These are stored as **text**, which is discussed in the next section.
-
-On the other hand, things that don't look like a number (such as "30 January 2014") are often stored using a value that is converted to a format that is meaningful to the reader (try typing two dates into Excel, and then subtract one from the other --- the result is a useful number). In the underlying representation, a number is used. Program code is used to translate the underlying representation into a meaningful date on the user interface.
+Trzeba zaznaczyć, że nie wszystkie informacje liczbowe, są zapisywane w komputerze jako liczby, a jako ciągi znaków, np. numer telefonu zapisany jako (03) 555-1234, a więc zawierający nawiasy i łącznik. 
+Z drugiej strony informacje, które na pierwszy rzut oka nie są liczbami (np. „30 stycznia 2014”), mogą być ku naszemu zaskoczeniu zapisywane przez oprogramowanie jako liczby (co pozwala np. w programie Excel na odejmowanie jednej daty od drugiej, w celu wyznaczenia liczby dni pomiędzy dwoma wydarzeniami). Rolą oprogramowania jest wyświetlenie liczby w odpowiedni sposób dla użytkownika, w zalezności od jej interpretacji w konkretnej sytuacji.
 
 {panel type="curiosity" summary="More on date representation"}
 The difference between two dates in Excel is the number of days between them; the date itself (as in many systems) is stored as the amount of time elapsed since a fixed date (such as 1 January 1900). You can test this by typing a date like "1 January 1850" --- chances are that it won't be formatted as a normal date. Likewise, a date sufficiently in the future may behave strangely due to the limited number of bits available to store the date.
@@ -366,7 +365,8 @@ In some systems (like the Java and C programming languages and databases) it's p
 
 Some are able to work with arbitrarily large numbers by increasing the space used to store them as necessary (e.g. integers in the Python programming language). However, it is likely that these are still working with a multiple of 32 bits (e.g. 64 bits, 96 bits, 128 bits, 160 bits, etc). Once the number is too big to fit in 32 bits, the computer would reallocate it to have up to 64 bits.
 
-In some programming languages there isn't a check for when a number gets too big (overflows). For example, if you have an 8-bit number using two's complement, then 01111111 is the largest number (127), and if you add one without checking, it will change to 10000000, which happens to be the number -128. This can cause serious problems if not checked for, and is behind a variant of the Y2K problem, called the [Year 2038 problem](https://en.wikipedia.org/wiki/Year_2038_problem), involving a 32-bit number overflowing for dates on Tuesday, 19 January 2038.
+W niektórych językach programowania nie ma automatycznej kontroli, która pozwoliłaby stwierdzić, że nastąpiła próba zapisu zbyt dużej liczby (przepełnienie). Przykład: Dodanie 1 do liczby 127 w przypadku zapisu 8-bitowego zakończy się uzyskaniem liczby -128.
+Innym przykładem jest tzw. problem roku 2038. Okazuje się, że 19 stycznia 2038 roku nastąpi błąd przepełnienia i błędnie będzie interpretowana data w oprogramowaniu, które do zapisu daty używa pewnego tradycyjnego jej zapisu jako liczby 32-bitowej. Z dość podobnym problemem mieliśmy do czynienia w roku 2000.
 
 {image filename="xkcd-cant-sleep-comic.png" alt="A xkcd comic on number overflow" source="https://xkcd.com/571/"}
 
@@ -725,14 +725,13 @@ This is exactly what the **ASCII** representation for text does.
 In the previous section, we explained what happens when the number of dots was increased by 1 (remember that a dot in Braille is effectively a bit). Can you explain how we knew that if 6 bits is enough to represent 64 characters, then 7 bits must be enough to represent 128 characters?
 {panel end}
 
+Koncepcją zastosowaną w ASCII było przypisanie różnych wzorców bitowych każdemu ze znaków stosowanych w tekstach angielskich (oraz pewnej liczbie tzw. znaków sterujących, używanych dawniej w aparatach dalekopisowych – dziś tylko niektóre z nich mają zastosowanie w technice komputerowej, ale ten wątek pominiemy). W dzisiejszej postaci kodu ASCII dla języka angielskiego stosuje się wzorce 8-bitowe (oktety bitów, czy bajty), w których pierwszy bit ma zawsze wartość 0, co znaczy, że kod pozwala na zapis 128 znaków. 
 
-Each pattern in ASCII is usually stored in 8 bits, with one wasted bit, rather than 7 bits. However, the left-most bit in each 8-bit pattern is a 0, meaning there are still only 128 possible patterns. Where possible, we prefer to deal with  full bytes (8 bits) on a computer, this is why ASCII has an extra wasted bit.
+W tabeli przedstawiono zestawienie znaków i odpowiadajacych im wzorców 7-bitowych:
 
-Here is a table that shows the patterns of bits that ASCII uses for each of the characters.
-
-| Binary  | Char  | Binary  | Char | Binary  | Char  |
+| Postać binarna  | Znak  | Postać binarna  | Znak | Postać binarna  | Znak  |
 |---------|-------|---------|------|---------|-------|
-| 0100000 | Space | 1000000 | @    | 1100000 | `     |
+| 0100000 | spacja (odstęp) | 1000000 | @    | 1100000 | `     |
 | 0100001 | !     | 1000001 | A    | 1100001 | a     |
 | 0100010 | "     | 1000010 | B    | 1100010 | b     |
 | 0100011 | #     | 1000011 | C    | 1100011 | c     |
@@ -765,7 +764,8 @@ Here is a table that shows the patterns of bits that ASCII uses for each of the 
 | 0111110 | >     | 1011110 | ^    | 1111110 | ~     |
 | 0111111 | ?     | 1011111 | _    | 1111111 | Delete   |
 
-For example, the letter c (lower-case) in the table has the pattern “01100011” (the 0 at the front is just extra padding to make it up to 8 bits). The letter o has the pattern “01101111”. You could write a word out using this code, and if you give it to someone else, they should be able to decode it exactly.
+Przykład: Litera c (mała litera) ma w tabeli przypisany wzorzec: „01100011” (0 na początku jest dopełnieniem kodu do 8 bitów). Litera o ma wzorzec „01101111”.
+Warto w ramach ćwiczenia zapisać jakieś angielskie słowo, używając kodu ASCII i dać komuś innemu, kto również zapoznaje się z tym tematem, do odkodowania. 
 
 {panel type="teacher-note" summary="Using the table"}
 Exchanging short messages in code will force students to use the table, and they should start to pick up some of the patterns (e.g. capital letters have a different code to lower case letters, but they only have one bit different.)
