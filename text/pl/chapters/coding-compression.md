@@ -200,94 +200,96 @@ Aby upewnić się, że możemy odwrócić proces kompresji, spróbuj znaleźć o
 Co zawiera obraz? Z jak wielu pikseli się składa? Ile liczb użyto do reprezentacji tego obrazu?
 
 {panel type="spoiler" summary="Odpowiedź dla powyższego obrazu"}
-Przykładowy obrazek pochodzi z [??CS Unplugged image representation activity??](http://csunplugged.org/image-representation), a rozwiązanie jest dostępne w treści zadanie (jest nim filiżanka i tależ).
+Przykładowy obrazek pochodzi z [??CS Unplugged image representation activity??](http://csunplugged.org/image-representation), a rozwiązanie jest dostępne w treści zadanie (jest nim filiżanka i tależyk).
 {panel end}
 
-The following interactive allows you to experiment further with Run Length Encoding.
+Poniższy ??interactive?? pozwala na dalsze eksperymentowanie z Kodowaniem Długości Serii.
 
-{interactive name="run-length-encoding" type="whole-page" text="Run Length Encoding interactive"}
+{interactive name="run-length-encoding" type="whole-page" text="??Run Length Encoding interactive??s"}
 
-### Analysing Run Length Encoding
+### Analiza Kodowanie długości serii
 
-How much space have we saved using this alternate representation, and how can we measure it? One simple way to consider this is to imagine you were typing these representations, so you could think of each of the original bits being stored as one character, and each of the RLE codes using a character for each digit and comma (this is a bit crude, but it's a starting point).
+Ile przestrzeni zaoszczędziliśmy wykorzystując alternatywną reprezentację, i jak możemy to zmierzyć? Możemy w prosty sposób policzyć ile razy musieliśmy nacisnąć przycisk na klawiaturze zapisując każdą z reprezentacji, możemy więc sobie wyobrazić, że każdy bit jest reprezentowany przez literę oraz, że każda cyfra kodu RLE oraz każdy przecinek wymaga również znaku przy zapisie (jest oszacowanie “z grubsza” przestrzeni, ale wystarczy na początek).
 
-In the original representation, 225 digits (ones and zeroes) were required to represent the image. Count up the number of commas and digits (but not spaces or newlines, ignore those) in the new representation. This is the number of characters required to represent the image with the new representation (to ensure you are on the right track, the first 3 rows that were given to you contain 29 characters).
+Aby opisać obraz w postaci nieskompresowanej potrzebnych jest 225 cyfr (zer i jedynek). Policz ile potrzeba przecinków i cyfr (pomiń spacje i znaki nowej linii) w nowej reprezentacji. Sumą jest liczba znaków potrzebnych do zapisania skompresowanej reprezentacji (dla ułatwienia liczba znaków w trzech pierwszych wierszach wynosi 29).
 
-Assuming you got the new image representation correct, and counted correctly, you should have found there are 119 characters in the new image (double check if your number differs). This means that the new representation only requires around 53% as many characters to represent (calculated using 119/225). This is a significant reduction in the amount of space required to store the image --- it's about half the size. The new representation is a *compressed* form of the old one.
+Przy założeniu, że nowa reprezentacja jest prawidłowa oraz, że obliczenia odbyły się prawidłowo, powinieneś otrzymać wynik 119 znaków (sprawdź, czy wszystko się zgadza). Oznacza to, że skompresowana postać wymaga jedynie 53% znaków reprezentacji oryginalnej (wynika to z proporcji 119/225). To znacząca redukcja w ilości przestrzeni potrzebnej do zapisania obrazu --- to prawie połowa rozmiaru. Nowa reprezentacja jest skompresowaną postacią poprzedniej.
 
-{panel type="curiosity" summary="Run length coding representation in practice"}
-In practice this method (with some extra tricks) can be used to compress images to about 15% of their original size. In real systems, the original image only uses one bit for every pixel to store the black and white values (not one character, which we used for our calculations).
-However, the run length numbers are also stored much more efficiently, again using bit patterns that take very little space to represent the numbers.
-The bit patterns used are usually based on a technique called Huffman coding, but that is beyond what we want to get into here.
-{panel end}
-
-### Where is Run Length Encoding used in practice?
-
-The main place that black and white scanned images are used now is on fax machines, which use this approach to compression. One reason that it works so well with scanned pages the number of consecutive white pixels is huge. In fact, there will be entire scanned lines that are nothing but white pixels. A typical fax page is 200 pixels across or more, so replacing 200 bits with one number is a big saving. The number itself can take a few bits to represent, and in some places on the scanned page only a few consecutive pixels are replaced with a number, but overall the saving is significant. In fact, fax machines would take 7 times longer to send pages if they didn't use compression.
-
-{panel type="project" summary="Using Run Length Encoding for yourself"}
-Now that you know how run length encoding works, you can come up with and compress your own black and white image, as well as uncompress an image that somebody else has given you.
-
-Start by making your own picture with ones and zeroes. (Make sure it is rectangular – all the rows should have the same length.)  You can either draw this on paper or prepare it on a computer (using a fixed width font, otherwise it can become really frustrating and confusing!) In order to make it easier, you could start by working out what you want your image to be on grid paper (such as that from a math exercise book) by shading in squares to represent the black ones, and leaving them blank to represent the white ones. Once you have done that, you could then write out the zeroes and ones for the image.
-
-Work out the compressed representation of your image using run length coding, i.e. the run lengths separated by commas form that was explained above.
-
-Now give a copy of the *compressed representation* (the run length codes, not the original uncompressed representation) to a friend or classmate, along with an explanation of how it is compressed. Ask them to try and draw the image on some grid paper. Once they are done, check their conversion against your original.
-
-Imagining that you and your friend are both computers, by doing this you have shown that images using these systems of representations can be compressed on one computer, and decompressed on another, as long as you have standards that you've agreed on (e.g. that every line begins with a white pixel).
-It is very important for compression algorithms to follow standards so that a file compressed on one computer can be decompressed on another;
-for example, songs often follow the "mp3" standard so that when they are downloaded they can be played on a variety of devices.
+{panel type="curiosity" summary="Kodowanie długości serii w praktyce"}
+W praktyce metoda ta (z pewnymi modyfikacjami) może być użyta do osiągnięcia kompresji na poziomie 15% oryginalnego rozmiaru. W prawdziwych systemach tylko jeden bit jest wykorzystywany do przechowywania wartości czarne-białe (w przeciwieństwie do jednego znaku z naszych obliczeń).
+Jednakże, długości kodowanych serii są również przechowywane bardziej efektywnie, również przy pomocy bitów, których stosunkowo krótkie ciągi mogą reprezentować liczby.
+Wykorzystywane ciągi bitów są tworzone przy pomocy techniki zwanej kodowaniem Huffmana, lecz zagadnienie to wykracza poza zakres tego materiału.
 {panel end}
 
 
-### Lossy vs Lossless compression
+### Jakie jest praktyczne zastosowanie Kodowania Długości Serii
 
-As the compressed representation of the image can be converted back to the original representation, and both the original representation and the compressed representation would give the same image when read by a computer, this compression algorithm is called *lossless*, i.e. none of the data was lost from compressing the image, and as a result the compression could be undone exactly.
+Współcześnie głównym zastosowaniem dla skanowanych czarno-białych obrazów są faksy, które wykorzystują to podejście do kompresji. Jednym z powodów, dla których działa to tak skutecznie dla skanowanych stron dokumentów jest fakt, iż w tym przypadku liczba kolejnych białych pikseli jest olbrzymia. Typowa strona przesyłana faksem ma 200 pikseli szerokości, więc zastąpienie tych 200 bitów liczbą jest znaczącą oszczędnością. Liczbę możemy wyrazić przy pomocy zaledwie kilku bitów. Choć może się zdarzyć na stronie, że liczą zastępujemy niewiele kolejnych pikseli, to i tak w ostatecznym rozrachunku oszczędności są znaczące. W praktyce faksy które nie korzystają z kompresji przesyłają dokumenty 7 razy wolniej.
 
-Not all compression algorithms are lossless though. In some types of files, in particular photos, sound, and videos, we are willing to sacrifice a little bit of the quality (i.e. lose a little of the data representing the image) if it allows us to make the file size a lot smaller. For downloading very large files such as movies, this can be essential to ensure the file size is not so big that it is infeasible to download! These compression methods are called *lossy*. If some of the data is lost, it is impossible to convert the file back to exactly the original form when lossy compression was used, but the person viewing the movie or listening to the music may not mind the lower quality if the files are smaller. Later in this chapter, we will investigate the effects some lossy compression algorithms have on images and sound.
+{panel type="project" summary="Zastosuj Kodowanie Długości Serii"}
+Teraz, gdy już znasz kodowanie długości serii możesz sam stworzyć obraz czarno-biały, a następnie go skompresować, oraz zdekompresować obraz otrzymany od kogoś innego.
 
-Interestingly, it turns out that any *lossless* compression algorithm will have cases where the compressed version of the file is larger than the uncompressed version! Computer scientists have even proven this to be the case, meaning it is impossible for anybody to ever come up with a lossless compression algorithm that makes *all* possible files smaller. In most cases this isn’t an issue though, as a good lossless compression algorithm will tend to give the best compression on common patterns of data, and the worst compression on ones that are highly unlikely to occur.
+Zacznij od narysowania obrazku przy pomocy zer i jedynek. (Upewnij się, że jest prostokątny, tzn. wszystkie wiersze mają tą samą długość.) Możesz go narysować na papierze lub przygotować go na komputerze (korzystaj z czcionki o stałej szerokości, w przeciwnym wypadku może to okazać się frustrujące i kłopotliwe!) Ułatwieniem może być skorzystanie z kartki w kratkę (takiej jak w zeszycie do matematyki) i zakreślenie kratek mających być czarnymi pikselami, i pozostawienie pustych kratek jako pikseli białych. Po zakończeniu tej czynności możesz spisać zera i jedynki reprezentujące obraz.
 
-{panel type="challenge" summary="Best and worst cases of run length encoding"}
-What is the image with the best compression (i.e. an image that has a size that is a very small percentage of the original) that you can come up with? This is the best case performance for this compression algorithm.
+Stwórz skompresowaną reprezentację twojego obrazu stosując metodę kodowania długości serii, tzn. długości serii oddzielone przecinkami jak zostało przestawione powyżej.
 
-What about the worst compression? Can you find an image that actually has a *larger* compressed representation? (Don’t forget the commas in the version we used!) This is the worst case performance for this compression algorithm.
+Przekaż kopię *skompresowanej reprezentacji* (długości serii, nie oryginalną reprezentację zerojedynkową) koledze oraz wytłumacz na czym polegała kompresja. Poproś ich o narysowanie obrazu na kartce w kratkę. Następnie porównaj otrzymany obrazek z twoim oryginałem.
+
+Wyobraź sobie, że ty i twój kolega oboje jesteście komputerami. Wykonując powyższe zadanie pokazałeś, że obrazy przy wykorzystaniu tej kompresji mogą zostać skompresowane na jednym komputerze i zdekompresowane na innym, tak długo jak istnieje uzgodniony standard (np. to, że każda linia zaczyna się od liczby białych pikseli).
+W przypadku algorytmów kompresji bardzo istotne jest trzymanie się standardów tak, aby po skompresowaniu na jednym komputerze możliwa była dekompresja na innym;
+przykładowo, utwory muzyczne zapisywane są w formacie “mp3”, aby po pobraniu z sieci mogły być odtworzone przez szeroką gamę urządzeń.
 {panel end}
 
-{panel type="spoiler" summary="Answer for above challenge"}
-The best case above is when the image is entirely white (only one number is used per line).
-The worst case is when every pixel is alternating black and white, so there's one number for every pixel.
-In fact, in this case the size of the compressed file is likely to be a little larger than the original one because the numbers are likely to take more than one bit to store.
-Real systems don't represent the data exactly as we've discussed here, but the issues are the same.
+
+### Stratna vs bezstratna kompresja
+
+O *kompresji bezstratnej* mówimy jeżeli skompresowana reprezentacja może zostać przekonwertowana podczas dekompresji do dokładnie takiej samej postaci jak reprezentacja oryginalna, innymi słowy żadna informacja nie została stracona podczas kompresji, i proces ten może być w pełni odwrócony.
+
+Nie wszystkie algorytmy kompresji są jednak bezstratne. Dla niektórych typów plików takich jak zdjęcia, utwory muzyczne i materiały wideo, możemy poświęcić nieco jakości (ilości informacji o zdjęciu) jeśli pozwoli to zmniejszyć znacząco rozmiar pliku. Zmniejszenie rozmiaru plików może mieć olbrzymie znaczenie przy pobieraniu plików tak dużych jak pliki wideo, które mogą zbyt duże, aby dało się je ściągnąć! Te metody kompresji nazywa się *stratnymi*. Jeśli tracimy informacje w procesie kompresji, to niemożliwe jest odtworzenie dokładnie takiej samej postaci, jaką miał plik przed kompresją. Jednocześnie osoba, która ogląda plik wideo lub słucha muzyki może zaakceptować nieco pogorszoną jakość jeśli pliki są względnie małe. W dalszej części tego rozdziału zbadamy jakie efekty na obraz i dźwięk może mieć stratna kompresja.
+
+Co ciekawe może się wyjątkowo zdarzyć, że skompresowany *stratnie* plik będzie miał większy rozmiar niż nieskompresowany! Co więcej naukowcy zajmujący się kompresją udowodnili, iż niemożliwe jest stworzenie kompresji stratnej, która zmniejsza każdy plik. W zdecydowanej większości przypadków nie jest problemem, gdyż stratne metody kompresji dostosowane są do pewnych rodzajów danych, posiadających pewną charakterystykę, dla których nieskuteczne kompresja jest wysoce nieprawdopodobna.
+
+{panel type="challenge" summary="Najlepsze i najgorsze przypadki kodowanie długości serii"}
+Jaki obraz będzie miał największy stopień kompresji przy kodowaniu długości serii (chodzi o obraz, którego rozmiar po skompresowaniu będzie najmniejszy w stosunku do rozmiaru początkowego)? Jest to przypadek, w którym wydajność algorytmu jest najwyższa.
+
+Kiedy kompresja jest najgorsza? Czy potrafisz znaleźć obraz, który ma *większą* reprezentację skompresowaną? (Pamiętaj o przecinkach, którymi oddzielamy długości serii!) Jest to przypadek, w którym wydajność algorytmu jest najgorsza.
 {panel end}
 
-{panel type="curiosity" summary="Compression methods can expand files"}
-In the worst case (with alternating black and white pixels) the run length encoding method will result in a file that's larger than the original!
-As noted above, *every* lossless compression method that makes at least one file smaller must also have some files that it makes larger --- it's not
-mathematically possible to have a method that always makes files smaller unless the method is lossy.
-As a trivial example, suppose someone claims to have a compression method that will convert any 3-bit file into a 2-bit file.
-How many different 3-bit files are there? (There are 8.) How many different 2-bit files are there? (There are 4.) Can you see the problem? We've got 8 possible files that we might want to compress, but only 4 ways to represent them. So some of them will have identical representations, and can't be decoded exactly.
-
-Over the years there have been several frauds based on claims of a lossless compression method that will compress every file that it is given.
-This can only be true if the method is lossy (loses information); all lossless methods must expand some files.
-It would be nice if all files could be compressed without loss; you could compress a huge file, then apply compression to the compressed file, and make it smaller again, repeating this until it was only one byte --- or one bit!
-Unfortunately, this isn't possible.
+{panel type="spoiler" summary="Rozwiązanie zadania”}
+Najlepszy przypadek jest wtedy, gdy obraz jest całkowicie biały (wystarczy jedna liczba na wiersz).
+Najgorszy przypadek ma miejsce gdy na zmianę występują piksele białe i czarne, i potrzebujemy jednej liczby dla każdego piksela.
+?? Tu jest chyba błąd bo plik będzie 2x większy dzięki przecinkom. In fact, in this case the size of the compressed file is likely to be a little larger than the original one because the numbers are likely to take more than one bit to store.??
+W rzeczywistości dane są reprezentowane nieco inaczej, lecz problemy są bardzo podobne.
 {panel end}
 
-## Image compression using JPEG
+{panel type="curiosity" summary="Kompresja może powiększać pliki"}
+W najgorszym przypadku (na zmianę piksele białe i czarne) kodowanie długości serii da nam plik skompresowany o rozmiarze większym niż plik oryginalny!
+Jak został wspomniane wcześniej, *każdy* bezstratny algorytm kompresji, który przynajmniej jeden plik zmniejsza musi mieć kilka plików, które powiększ --- nie jest
+matematycznie możliwe, aby stworzyć algorytm kompresji, który zmniejsza każdy plik. Stwierdzenie to nie dotyczy metod stratnych.
+Jako trywialny przykład posłuży nam pewna kompresja plików z 3-bitowych do 2-bitowych.
+Ile jest plików 3-bitowych? (Jest 8.) Ile jest plików 2-bitowych (Jest 4.) Czy widzisz problem? Mamy 8 plików, które możemy chcieć skompresować, ale jednocześnie tylko 4 sposoby na ich reprezentację. Zatem, niektóre z nich będą miały taką samą reprezentacji, a przez to nie mogą zostać odkodowane dokładnie.
 
-Images can take up a lot of space, and most of the time that pictures are stored on a computer they are compressed to avoid wasting too much space.
-With a lot of images (especially photographs), there's no need to store the image exactly as it was originally, because it contains way more detail than anyone can see.
-This can lead to considerable savings in space, especially if the details that are missing are the kind that people have trouble perceiving.
-This kind of compression is called lossy compression.
-There are other situations where images need to be stored exactly as they were in the original, such as for medical scans or very high quality photograph processing, and in these cases lossless methods are used, or the images aren't compressed at all (e.g. using RAW format on cameras).
+Na przestrzeni lat było kilka oszustw opartych na twierdzeniach o bezstratnej metodzie kompresji, która kompresuje każdy plik.
+Może to być prawdą tylko wtedy, gdy metoda jest stratna (traci informacje); wszystkie metody bezstratne muszą powiększać niektóre pliki.
+Dobrze byłoby mieć metodę, która kompresuje wszystkie pliki bez strat; można by wtedy skompresować duży plik, a następnie zastosować kompresję do skompresowanego pliku i zmniejszyć go ponownie, powtarzając aż do uzyskanie jednego bajtu --- lub jednego bitu!
+It would be nice if all files could be compressed without loss; you could compress a huge file, 
+Niestety nie jest to możliwe.
+{panel end}
 
-In the data representation section we looked at how the size of an image file can be reduced by using fewer bits to describe the colour of each pixel.
-However, image compression methods such as JPEG take advantage of patterns in the image to reduce the space needed to represent it, without impacting the image unnecessarily.
+## Kompresja obrazu metodą JPEG
 
-The following three images show the difference between reducing bit depth and using a specialised image compression system. The left hand image is the original, which was 24 bits per pixel. The middle image has been compressed to one third of the original size using JPEG; while it is a "lossy" version of the original, the difference is unlikely to be perceptible. The right hand one has had the number of colours reduced to 256, so there are 8 bits per pixel instead of 24, which means it is also stored in a third of the original size. Even though it has lost just as many bits, the information removed has had much more impact on how it looks. This is the advantage of JPEG: it removes information in the image that doesn't have so much impact on the perceived quality. Furthermore, with JPEG, you can choose the tradeoff between quality and file size.
+Obrazy mogą zajmować dużo miejsca, i najczęściej obrazy są  przechowywane na komputerze w postaci skompresowanej. Pozwala to zaoszczędzić miejsce na dysku.
+Z tego względu, iż przechowujemy dużo obrazków (zwłaszcza zdjęć), nie ma potrzeby przechowywania obrazu dokładnie tak, jak wyglądał on pierwotnie. Wynika to z faktu, iż zawiera on więcej szczegółów niż ktokolwiek może zobaczyć.
+W rezultacie możemy zaoszczędzić na wykorzystanej przestrzeni dyskowej, zwłaszcza jeśli utracone szczegółu są trudno dostrzegalne dla ludzkiego oka.
+Ten rodzaj kompresji nazywa się kompresją stratną.
+Istnieją inne sytuacje, w których obrazy muszą być przechowywane dokładnie takiej samej postaci jak oryginał, na przykład w przypadku skanów medycznych lub przetwarzania zdjęć o bardzo wysokiej jakości. W takich przypadkach stosuje się metody bezstratne lub obrazy nie są w ogóle kompresowane (np. w formacie RAW na aparatach).
 
-Reducing the number of bits (the colour depth) is sufficiently crude that we don't really regard it as a compression method, but just a low quality representation. Image compression methods like JPEG, GIF and PNG are designed to take advantage of the patterns in an image to get a good reduction in file size without losing more quality than necessary.
+W podrozdziale o reprezentacji danych sprawdziliśmy, jak można zmniejszyć rozmiar pliku obrazu, używając mniejszej liczby bitów do opisania koloru każdego piksela.
+Jednak metody kompresji obrazu, takie jak JPEG, wykorzystują wzorce w obrazie, aby zmniejszyć przestrzeń potrzebną do jego przedstawienia, bez niekorzystnego wpływu na obraz.
+
+Poniższe trzy obrazy pokazują różnicę między zmniejszeniem głębi bitowej a użyciem wyspecjalizowanego systemu kompresji obrazu. Obraz po lewej stronie jest oryginałem, który używa 24 bity na piksel. Środkowy obraz został skompresowany do jednej trzeciej oryginalnego rozmiaru za pomocą JPEG; pomimo, iż jest to "stratna" wersja oryginału, różnica jest widoczna. Obraz po prawej stronie ma liczbę kolorów zmniejszoną do 256, a więc jest używa 8 bitów na piksel zamiast 24, co oznacza, że ​​zajmuje jedną trzecią pierwotnego rozmiaru. Mimo że stracił tyle samo bitów, usunięte informacje miały znacznie większy wpływ na to, jak wygląda. Na tym polega zaleta formatu JPEG: usuwa informacje z obrazu, które nie mają dużego wpływu na postrzeganą jakość. Ponadto w przypadku formatu JPEG można ustalić kompromis między jakością a rozmiarem pliku.
+
+Zmniejszenie liczby bitów (głębia kolorów) jest na tyle istotną zmiana, że nie uważamy tego za metodę kompresji, lecz po prostu za reprezentację niskiej jakości. Metody kompresji obrazu, takie jak JPEG, GIF i PNG, zostały zaprojektowane tak, aby wykorzystać wzorce w obrazie, w celu uzyskania znacznej redukcji rozmiaru pliku bez znaczącej utraty jakości.
 
 {image filename="compression-comparison.png"}
 
