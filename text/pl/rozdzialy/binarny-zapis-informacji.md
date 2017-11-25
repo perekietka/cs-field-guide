@@ -8,10 +8,10 @@
 
 Komputery to narzędzia do przetwarzania informacji. Użytkownik komputera może tworzyć, modyfikować, czy po prostu przeglądać (oglądać, słuchać itd.) informacje, zapisane w dokumentach tekstowych, plikach graficznych czy wideo, skoroszytach arkusza kalkulacyjnego czy zbiorach baz danych. Gry komputerowe i inne programy-symulacje to przykłady tzw. wirtualnej rzeczywistości, która istnieje tylko w postaci informacji zapisanej pamięci komputera i wyświetlonej (po jej interpretacji) na ekranie monitora. Komputery pozwalają na wykonywanie obliczeń liczbowych, jak i na przesyłanie informacji przez sieć komputerową. To wszystko byłoby niemożliwe, gdyby nie wymyślono jakiegoś sposobu na zapis (reprezentację) różnego rodzaju informacji w pamięci operacyjnej komputera, na dysku twardym i ich przesyłania przez sieć komputerową.   
 
-Kluczową koncepcją, która pozwoliła uprościć trudności związane z projektowaniem i produkcją komputerów, ale również wpłynęła na niezawodność ich działania, jest koncepcja dwuwartościowego (binarnego) zapisu wszelkiego rodzaju informacji. Czasami mówi się o reprezentacji zerojedynkowej (0-1), choć w praktyce (w realizacji fizycznej) możemy mieć do czynienia z czymkolwiek, co może przyjmować dwa stany. Na przykład dla pamięci elektronicznej będzie to oznaczać wysoką lub niską wartość napięcia prądu elektrycznego, a dla tradycyjnego dysku twardego – namagnesowanie małych fragmentów warstw magnetycznych (północ – południe).
+Kluczową koncepcją, która pozwoliła uprościć trudności związane z projektowaniem i produkcją komputerów, ale również wpłynęła na niezawodność ich działania, jest koncepcja dwuwartościowego (dwustanowego) zapisu wszelkiego rodzaju informacji. Czasami mówi się o reprezentacji zerojedynkowej (0-1), choć w praktyce (w realizacji fizycznej) możemy mieć do czynienia z czymkolwiek, co może przyjmować dwa stany. Na przykład dla pamięci elektronicznej będzie to oznaczać wysoką lub niską wartość napięcia prądu elektrycznego, a dla tradycyjnego dysku twardego – namagnesowanie małych fragmentów warstw magnetycznych (północ – południe).
 
-Pomysł, by *wszystko* w naszym cyfrowym świecie zapisywać z użyciem tylko dwóch wartości może wydawać się nieco fantastyczn. Oto ćwiczenie, które ukaże, jak zapisywać liczby, używając zestawu kart, które z jednej strony mają białe tło, a z drugiej strony -- czarne.  
-Zacznij od wskazania ostatniej karty (po prawej). Wtedy zobaczysz, że na stroynie z białym tłem znajduje się pojedyncza czarna kropka.
+Pomysł, by *wszystko* w naszym cyfrowym świecie zapisywać z użyciem tylko dwóch wartości może wydawać się nieco fantastyczny. Oto ćwiczenie, które ukaże, jak zapisywać liczby, używając zestawu kart, które z jednej strony mają białe tło, a z drugiej strony -- czarne.  
+Zacznij od wskazania ostatniej karty (po prawej). Wtedy zobaczysz, że na stronie z białym tłem znajduje się pojedyncza czarna kropka.
 Następnie wskaż na sąsiednią kartę, by na odwrocie zobaczyć dwie czarne kropki. Ile kropek kropek zobaczysz po odwróceniu kolejnej karty? Sprawdź! Staraj się odgadnąć liczbę kropek znajdujących się na kolejnych kartach.
 
 {interactive name="binary-cards" type="whole-page" text="Binary Cards" parameters="digits=5&start=BBBBB"}
@@ -20,7 +20,7 @@ Kolejne wyzwanie brzmi: Które karty należy odwrócić, aby łączna liczba kro
 
 {panel type="teacher-note" summary="Wskazówki dla nauczyciela"}
 
-W czasie zajęć szkolnych zamiast interaktywnego apletu, można użyć kart z tektury.
+W czasie zajęć szkolnych zamiast interaktywnego apletu, można użyć papierowych kart.
 
 Jeśli uczniowie napotykają trudności w znalezieniu odpowiedzi na powyższe pytania, nauczyciel powinien wskazywać kolejne karty z lewej i stawiać pytania: "Czy karta z 16 kropkami jest porzebna? A karta z 8 kropkami?" itd.
 Uczniowie szybko przekonają się, że skuteczna jest metoda zachłanna: albo liczba kropek na karcie jest za duża, albo karty należy użyć.
@@ -76,14 +76,14 @@ Ten rozdział przedstawia różne metody, jakie są używane w systemach kompute
 
 ## Zaczynamy
 
-Na początek przyjrzymy się alfabetowi Braille'a, który umożliwia zapisywanie i odczytywanie tekstów osobom niewidomym i niedowidzącym. Mimo, że system brajlowski nie ma nic wspólnego z komputerami, to stanowi znakomite wprowadzenie do tematu tego rozdziału przewodnika po informatyce.
+Na początek przyjrzymy się kodowi (alfabetowi) Braille'a, który umożliwia zapisywanie i odczytywanie tekstów osobom niewidomym i niedowidzącym. Mimo, że system brajlowski nie ma nic wspólnego z komputerami, to stanowi znakomite wprowadzenie do tematu tego rozdziału przewodnika po informatyce.
 
 {panel type="additional-information" summary="Zapis znaków Braille'a"}
 Dla uproszczenia ideę tzw. sześciopunku można zilustrować używając sześciu małych kół ułożonych w dwóch kolumnach po trzy punkty w każdej.
 Koła z zamalowanym wnętrzem będą ilustracją punktów wypukłych. 
 {panel end}
 
-### Czym jest alfabet Braille'a?
+### Czym jest kod Braille'a?
 
 Ponad 200 lat temu 15-letni Francuz wymyślił system zapisu tekstu (liter, cyfr, znaków przestankowych itd.) z użyciem tzw. sześciopunktów jako kombinację sześciu wypukłych punktów ułożonych w dwóch kolumnach po trzy punkty w każdej. System stał się bardzo popularny wśród osób niewidomych, gdyż umożliwił względnie szybki i niezawodny sposób „czytania” tekstu. 
 Alfabet Louisa Braille'a można uznać za jeden z pierwszych przykładów „binarnego” zapisu informacji – używa się w nim bowiem tylko dwóch znaków (wypukły punkt lub jego brak), a mimo to odpowiednie ich kombinacje pozwalają na wydawanie całych książek, zarówno fachowych, jak i literatury pięknej. 
@@ -110,9 +110,9 @@ Ta koncepcja (podwajanie się liczby wzorców) ma zasadnicze znaczenie dla zrozu
 
 W obrębie sześciopunktu można uzyskać 64 wzorce (znaki). To wystarcza na oznaczenie liter alfabetu i innych znaków, takich jak np. cyfry czy znaki interpunkcyjne.
 
-### Związek alfabetu Braille'a ze sposobem zapisu informacji w komputerze
+### Kod Braille'a a binarny zapis informacji
 
-Alfabet Braille'a jest ilustracją zapisu z użyciem bitów. Istotnie, rozróżnia się dwa stany punktu (wypukły lub niewypukły), a każdy z wzorców tzw. sześciopunktu odpowiada innemu znakowi alfabetu.
+Kod Braille'a jest ilustracją zapisu z użyciem bitów. Istotnie, rozróżnia się dwa stany punktu (wypukły lub niewypukły), a każdy z wzorców tzw. sześciopunktu odpowiada innemu znakowi alfabetu.
 Na przykład litera m może być zapisana jako 110010, gdzie "1" oznacza punkt wypukły, a "0" niewypukły (przy założeniu, że czytamy od lewej do prawej i z góry na dół). 
 W informatyce takich ciągów "1" i "0" używa się w analogiczny sposób do ukazania sposobu zapisu informacji w komputerze.
 
@@ -168,30 +168,30 @@ Bardziej formalnie można napisać tak:
 The key ideas to notice from this are:
 
 - System dzięsiętny używa 10 **cyfr** (ang. digits) -- 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.
-- A **place** is the place in the number that a digit is, i.e. ones, tens, hundreds, thousands, and so on. For example, in the number 90328, 3 is in the "hundreds" place, 2 is in the "tens" place, and 9 is in the "ten thousands" place.
-- Numbers are made with a sequence of digits.
-- The right-most digit is the one that's worth the least (in the "ones" place).
-- The left-most digit is the one that's worth the most.
-- Because we have 10 digits, the digit at each place is worth 10 times as much as the one immediately to the right of it.
+- Liczby to ciągi cyfr.
+- O cyfrach tworzących zapis liczby mówimy, że znajdują się na odpowiednich **pozycjach** odpowiednio: jedności, dziesiątek, setek, tysięcy itd. Na przykład w liczbie 90 328 cyfra 3 jest na pozycji setek, a cyfra 2 na pozycji dziesiątek.
+- Cyfra pierwsza po prawej (na pozycji jedności) ma najmniejszą wartość, jest najmniej znacząca.
+- Cyfra pierwsza po lewej ma największą wartość, jest najbardziej znacząca.
+- Gdy stosujemy 10 cyfr, to wartość cyfry na danej pozycji w liczbie jest 10 razy większa od wartości cyfry na pozycji po jej prawej stronie.
 
 All this probably sounds really obvious, but it is worth thinking about consciously, because binary numbers have the same properties.
+To, co zapisano powyżej, może brzmieć jako coś oczywistego. Warto to jednak przeanalizować dokładniej, gdyż pełną analogię dostrzeżemy w własnościach zapisu binarnego.
 
 ### Zapis liczb całkowitych w systemie binarnym
 
-{panel type="teacher-note" summary="Teaching binary numbers"
-This subsection is a prerequisite for the colours section, as colour representations are built on simple binary numbers.
+{panel type="teacher-note" summary="Jak uczyć o liczbach binarnych?"}
+Ten podrozdział jest niezbędny do zrozumiwania rozdziału o cyfrowym zapisie informacji o kolorach.
 
-It's very common for computer science courses and books (like this one) to teach students how to convert between binary representation and decimal numbers. In practice, computer scientists hardly ever do this, but the important thing is to understand the patterns and constraints around binary numbers. A key pattern that students should pick up is that adding just one bit to a binary number *doubles* the range it can represent. The patterns around binary numbers come up in many areas of computer science, so it is well worth getting familiar with them.
+Zaskakująco częstwo w podręcznikach informatyki poświęca się wiele miejsca ilorazowej metodzie konwersji między systemami liczbowymi: binanrym i dziesiętnym. W praktyce informatycy prawie nigdy się nią nie posługują. Wydaje się, że ważniejsze jest rozumienie istoty zapisu binarnego i jego własności. Dla uczącego się kluczowe jest spostrzeżenie, że dodanie do binarnego zapisu liczby kolejnej cyfry oznacza *podwojenie* zakresu liczb, które da się zapisać z użyciem tylu cyfr. Poznanie pewnych prawidłowości właściwych zapisowi binarnemu i sprawne korzystanie z tej wiedzy przydaje się w wielu dziedzinach informatyki.
 {panel end}
 
-{panel type="teacher-note" summary="Binary pianos"}
+{panel type="teacher-note" summary="Binarne pianino"}
 The "binary piano" is a simple binary conversion device that can be printed on paper, and enables students to experiment with these concepts physically.
-It can be [downloaded here](files/binary-piano-UC.pdf)
-or as a [4-up version here](files/binary-piano-UC-4up.pdf).
-These versions have 9 bits; if you want to emphasise that bytes use 8 bits,
-you can have students ignore the 9th bit (perhaps by sticking it on 0),
-but it is useful when they want to remember the largest 8-bit value,
-since they can get it by subtracting one from the value of the 9th bit.
+Binarne pianino to prosty środek dydaktyczny do nauki pewnej metody konwersji między systemami liczbowymi. Po wydrukowaniu uczniowie mogą wykonać samodzielne eksperymenty, które pozwolą zrozumieć istotę konwersji.
+Można je [pobrać stąd](files/binary-piano-UC.pdf)
+Wersja szablonu z czterema kopiami pianina [jest tutaj](files/binary-piano-UC-4up.pdf).
+Stosuje się zapis 9-bitowy. W sytuacji, gdy wprowadzamy pojęcie bajta, uczniowie mogą 9. bit ustawić na 0 (zignortować).
+Obecność 9. bitu na wydruku ma następujące uzasadnienie dydaktyczne: łatwo znaleźć największą liczbę 8-bitową: od wartości dziesiętnej 9. bitu wystarczy odjąć 1.
 {panel end}
 
 Jak wspomniano wcześniej, komputery zapisują informacje używając bitów, czyli rozróżniając tylko dwa możliwe stany (dwustanowo). To oznacza, że w komputerze nie jest możliwe zapisanie liczby w systemie dziesiętnym, używając cyfr od 0 do 9, jak to czyni człowiek. Używany jest system o podstawie 2, zwany dwójkowym (binarnym).
@@ -199,8 +199,7 @@ Jak wspomniano wcześniej, komputery zapisują informacje używając bitów, czy
 W systemie binarnym (systemie o podstawie 2), można stosować wyłącznie dwie cyfry (0 i 1). W zapisie pozycyjnym mnożnik (wartość) każdej z cyfr jest więc dwa razy większy niż mnożnik cyfry po prawej stronie (inaczej niż w systemie dziesiętnym, gdzie tym czynnikiem jest 10).
 
 {panel type="curiosity" summary="The Denary number system"}
-The base 10 (decimal) system is sometimes called denary, which is more consistent with the the name binary for the base 2 system. The word "denary" also refers to the Roman denarius coin, which was worth ten asses (an "as" was a copper or bronze coin).
-The term "denary" seems to be used mainly in the UK; in the US, Australia and NZ the term "decimal" is more common.
+System liczbowy o podstawie 10 (dziesiętny) w języku angielskim określa się słowami decimal lub denary. To drugie określenie, używane najczęściej w Wielkiej Brytanii, ma formę gramatyczną analogiczną do angielskiego binary (dwójkowy, binarny). Słowo "denary" ma ścisły związek z nazwą rzymskiej monety (denarius, po polsku: denar), która miała wartość 10 asów (wybijanych z miedzi lub brązu). 
 {panel end}
 
 Interaktywne narzędzie poniżej ma pomóc w zrozumieniu zasady zapisu binarnego. Warto wykonać kilka prób (ćwiczeń). Wartość dziesiętna liczby jest wyświetlana na końcu po prawej stronie.
@@ -210,14 +209,20 @@ Interaktywne narzędzie poniżej ma pomóc w zrozumieniu zasady zapisu binarnego
 **Aby upewnić się, że właściwe posługujesz się narzędziem, sprawdź, czy po wpisaniu 101101 widzisz odpowiedź 45, po wpisaniu 100000 – 32, a po wpisaniu 001010 – 10 (dziesięć).**
 
 {panel type="teacher-note" summary="Using the binary number interactive"}
-With the interactive, students should discover that they can convert a number by working from left to right through the digits, setting the digit to 1, and resetting it to zero if the total is higher than the number being sought. After converting a few numbers they will start to anticipate what to do. This algorithm is fairly intuitive, and discoverable by quite young students. Discovering it for themselves will give a lot of confidence in their ability to convert numbers. If they need some help, get them to set the *left-most* bit to one, and ask if the total is too high. If it is, set the bit back to zero, otherwise leave it as one. Then repeat this for each bit from left to right. For example, for the number 37, the first bit gives a total of 32, which isn't too high; setting the second bit brings the total to 48, which is too high, so it stays at zero; the third bit gives a total of 32+8 = 40, which is too high; the fourth bit gives 32+4 = 36, which is ok, so that bit is a 1. The fifth bit would give 38 (too high), and the sixth bit gives the required 37, giving the binary number 100101. This approach is explained for students later in the text, but it's better if they can discover it for themselves.
+Uczniowie powinni odkryć, że zapis binarny liczby zapisanej w systemie dziesiętnym mogą uzyskać cyfra po cyfrze (od lewej do prawej) postepując zachłannie w następujący sposób: cyfrę binarną ustawia się na 0 tylko i wyłącznie wówczas, gdy wartość dziesiętna odpowiednich pozycji w zapisie binarnym jest większa niż wartość dziesiętna, którą chcemy w tym momencie poddać konwersji.
+Po wykonaniu kilku prób stanie się dla uczących oczywiste, co należy robić. Z pewnością nawet młdosi uczniowie mogą istotę algorytmu odkryć samodzielnie. W konsekwencji pozwoli im to zdobyć pewność siebie i sprawność w zadaniach konwersji. 
+Jeśli pomoc nauczyciela okaże się konieczna, to warto posłużyć się konkretnym przykładem. Np. dla liczby 37 nauczyciel zaczyna od ustawienia wszystkich bitów na 0 za wyjątkiem liczby na pozycji 32 (która jest pierwszą nie przekraczającą 37) i nakierowuje ucznia na szukanie odpowiedzi o wartość bitu na pozycji odpowiadającej liczbie 16: ustawienie bitu na 1 oznaczałoby, że liczba jest niemniejsza niż 48, więc bit trzeba ustawić na 0. Podobnie jest dla bitu na pozycji o wartości 8. Kolejny bit (odpowiadający składnikowi 4) należy ustawić na 1 (dostajemy sumę: 36), następny na 0, a ostatni na 1 (suma: 37). Uzyskujemy zapis binarny: 100101.
+Opis metody jest w podręczniku podany uczącym się. Lepiej jednak, jeśli wcześniej samodzielnie odkryją metodę drogą eksperymentów z binanrym pianinem.
 
-There are a lot of interactive games for exploring binary numbers. The following one works in a web browser: [Cisco Binary game](http://forums.cisco.com/CertCom/game/binary_game_page.htm). While there's a limit to the value of being able to make binary conversions, doing a number of them helps student to discover the kinds of patterns that occur in the binary number system.
+W internecie można znaleźć wiele gier, które mogą pomóć zgłębić temat liczb binarnych. Jedna z nich to [Cisco Binary game](http://forums.cisco.com/CertCom/game/binary_game_page.htm).
+Motywująco dla poznających prawidłowości właściwe zapisowi binarnemu może działać fakt ograniczenia liczby prób konwersji w grze.
 
-There is another algorithm for conversion that is often found in textbooks, and it is easier to write a program for, but a little harder for learners. It isn't necessary to explore the concepts of this chapter, but in case a student wants to implement it, the algorithm is to work from right to left; set the right-most bit to one if the decimal number is odd, otherwise set it to zero, then divide the decimal number by 2 (rounding down), and repeat the procedure for the next digit to the left (set it to one if the number is odd, otherwise zero, then divide by 2).  This is repeated until the decimal number has been reduced to zero.
+Istnieje inny algorytm konwersji, zwany metodą ilorazową, który często pojawia się w podręcznikach, zwłaszcza w podręcznikach programowania. Ma tę własność, że dość łatwo można go zapisać w języku programowania, ale trudniej zrozumieć jego poprawność. 
+Prezentacja tego algorytmu nie jest niezbędna do zrozumienia dalszej części rozdziału.
+Cyfry binartne uzyskane w czasie działania algorytmu zapisuje się od prawej do lewej. Działa w następujący sposób: najmniej znaczący (skrajny prawy bit) ustawia się na 1, jeśli liczba zapisane dziesiętnie jest nieparzysta; w przeciwnym przypadku wartośc bitu jest równa 0. Następnie dzieli się liczbę przez 2 (w razie potrzeby zaokrąglając w dół do części całkowitej). Opisaną wyżej procedurę powtarza się dla kolejnych liczb uzyskanych w wyniku połowienia. Aż do momentu uzyskania 0 jako wyniku dzielenia przez 2.
 {panel end}
 
-Find the representations of 4, 7, 12, and 57 using the interactive.
+Znajdź zapis biarny liczb 4, 7, 12 i 57.
 
 Jaka jest największa liczba, jaką można uzyskać, posługując się tym narzędziem? Jaka jest najmniejsza? Czy jest jakaś liczba pomiędzy nimi, której nie jesteś w stanie uzyskać? Czy są liczby, które można zapisać w systemie binarnym na dwa różne sposoby? Odpowiedzi uzasadnij.
 
