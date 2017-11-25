@@ -226,21 +226,21 @@ Znajdź zapis biarny liczb 4, 7, 12 i 57.
 
 Jaka jest największa liczba, jaką można uzyskać, posługując się tym narzędziem? Jaka jest najmniejsza? Czy jest jakaś liczba pomiędzy nimi, której nie jesteś w stanie uzyskać? Czy są liczby, które można zapisać w systemie binarnym na dwa różne sposoby? Odpowiedzi uzasadnij.
 
-{panel type="spoiler" summary="Largest and smallest numbers"}
--  000000 in binary, 0 in decimal is the smallest number.
-- 111111 in binary, 63 in decimal is the largest number
-- All the integer values (0, 1, 2... 63) in the range can be represented (and there is a unique representation for each one). This is exactly the same as decimal!
+{panel type="spoiler" summary="Największe i najmniejsze liczby"}
+- 000000, czyl 0 (dziesiętnie) to najmniejsza liczba.
+- 111111, czyli 63 (dziesiętnie) to największa liczba.
+- Wszystkie liczby całkowite z zakresu (0, 1, 2... 63) da się zapisać binarnie (każdą wyłącznie w jeden sposób). Dokładnie tak samo, jak w systemie dziesiętnym.
 {panel end}
 
-{panel type="teacher-note" summary="Understanding unique representations"}
-The question of uniqueness will be challenging for some students. It addresses the idea that every number has a unique binary representation; students who struggle with the reasoning may be prepared to just accept that this is the case. However, the following reasoning introduces the idea: have a student work out a 5-bit binary representation for, say, 12 (which is 01100). The left-most 0 represents the 16; ask if it would be possible to represent 12 if that bit is a 1 (it's not possible because you'd already have 16, which is more than 12). Now consider the next bit (the 1 represents 8). Is it possible to represent 12 without the 8? (No, because the remaining bits only add up to 7). Following on with this reasoning, the student will establish that 12 *has to* be represented as 01100.
+{panel type="teacher-note" summary="Zrozumienie jednoznaczności zapisu binarnego"}
+Pytanie o jednoznaczność może być ciekawym wyzwaniem dla niektórych uczniów. Chodzi o to, że każdą liczbę można zapisać binarnym wyłącznie w jeden sposób; gdyby uczniowie mieli trudność w zrozumieniu uzasadnienia, to powinni przyjąć, że jednoznaczność zapisu istotnie ma miejsce. Proces formułowania przekonującego rozumowania może wyglądać tak: Uczeń otrzymuje zadanie zapisania pewnej liczby, np. 12, w systemie binarnym z użyciem 5 bitów. Skrajny lewy bit odpowiada wartości 16 (>12), więc należy ustawić go na 0 (ustawienie bitu na 1 na pewno nie pozwoli rozwiązać zadania). Dalej mamy bit o wartości 8. Nie jest możliwe zapisanie liczby 12 bez ustawienia tego bitu na 1 (suma wartości pozostałych bitów to 7). To oznacza, że 12 *musi* być zapisane jako 01100.
 
-Another way of showing the uniqueness is to work out how many bit combinations there are. For 5 bits, there are two choices for each bit, so 2x2x2x2x2 (i.e. 32) distinct 5-bit binary numbers. Since the 5-bit binary numbers cover the range from 0 to 31, there are 32 numbers, so there's a one-to-one relationship between all possible bit patterns and all numbers they can represent i.e. each number has a unique representation.
+Innym sposobem na wykazanie jednoznczaności zapisu binarnego jest wyznaczenie liczby wszystkich ciągów 0 lub 1. Dla przypadku 5 bitów mamy 2x2x2x2x2 (tj. 32) różnych ciągów odpowiadających 32 liczbom z zakresu od 0 do 31 (przyporządkowanie jeden-do-jednego).
 {panel end}
 
 Prawdopodobnie jest już dla Ciebie jasne, że gdy lewy skrajny („najbardziej znaczący”) bit ustawiasz na 1, to wartość dziesiętną powiększasz o 32. Podobnie ustawiając bity położone dalej na prawo dodajesz odpowiednio 16, 8, 4, 2 i 1. Gdy bit ustawiasz na 0, wartość dziesiętna nie zwiększa się. Szukanie zapisu binarnego liczby jest więc związane z przedstawieniem liczby jako sumy niektórych lub wszystkich liczb ze zbioru: 32, 16, 8, 4, 2, 1, przy czym każda z liczb może wystąpić tylko raz.
 
-{image filename="xkcd-1-to-10.png" alt="If you get an 11/100 on a CS test, but you claim it should be counted as a &#39;C&#39;, they&#39;ll probably decide you deserve the upgrade." source="https://xkcd.com/953/"}
+{image filename="xkcd-1-to-10.png" alt="Gdy otrzymasz 11/100 punktów ze sprawdzianu z informatyki i będziesz twierdzić, że należy ci się dostateczny, to prawdopodobnie wymagać będziesz aktualizacji. " source="https://xkcd.com/953/"}
 
 Wybierz liczbę mniejszą niż 61 (np. numer Twojego domu przy ulicy, wiek kolegi czy koleżanki, dzień miesiąca Twojego urodzenia).  Ustaw wszystkie cyfry binarne na 0, a następnie zacznij wybierać właściwe cyfry zaczynając od skrajnej lewej cyfry (32). Za każdym razem zdecyduj, czy wybrać 0 czy 1.
 Czy stosujesz metodę prób i błędów? Na czym polega Twoja metoda zamiany (konwersji) liczb?
@@ -254,52 +254,51 @@ Zacznij od odliczenia od 0 do 16 i spróbuj dostrzec jakąś zasadę. Wskazówka
 Pomyśl o tym, jak zastosować wiedzę o systemie dwójkowym (binarnym) do liczenia na palcach powyżej liczby 10. Jaką największą liczbę można „zapisać” używając dziesięciu palców? Wyobraź sobie, że będziesz używać też palców u nóg. Jaka wówczas będzie odpowiedź?
 {panel end}
 
-{panel type="spoiler" summary="Counting in binary"}
-A binary number can be incremented by starting at the right and flipping all consecutive bits until a 1 comes up (which will be on the very first bit half of the time).
-
-Counting on fingers in binary means that you can count to 31 on 5 fingers, and 1023 on 10 fingers. There are a number of videos on YouTube of people counting in binary on their fingers. One twist is to wear white gloves with the numbers 16, 8, 4, 2, 1 on the 5 fingers respectively, which makes it easy to work out the value of having certain fingers raised.
+{panel type="spoiler" summary="Zliczanie binarne"}
+Aby liczbę zapisaną binarnie powiększyć o 1 wystarczy w jej zapisie biarnym odnaleźć pierwszy od prawej bit ustawiony na 0, następnie ustawić go na 1, a wszytkie bity po jego prawej stronie ustawić na 0. (W połowie przypadków tym poszukiwanym bitem 0 będzie skrajny lewy bit.)
+Używając pięciu palców można policzyć do 31. W przypadku 10 palców najwięszka liczba to 1023.
+Na YouTube zobaczyć wiele przykładów wideo, na których ktoś liczby na palcach. Podczas prezentacji niektórzy posługują się rękawiczkami, na których odpowiednie palce są opisane liczbami: 16, 8, 4, 2, 1.
 {panel end}
 
-Co stałoby się, gdybyśmy mieli mniej niż sześć bitów? Przykład: Dla pięciu bitów, wartości na kolejnych pozycjach byłyby równe odpowiednio: 16, 8, 4, 2 i 1. Więc największą liczbą byłaby 11111, czyli 31 (dziesiętnie). Representing 14 with 5 bits would give 01110.
+Co stałoby się, gdybyśmy mieli mniej niż sześć bitów? Przykład: Dla pięciu bitów, wartości na kolejnych pozycjach byłyby równe odpowiednio: 16, 8, 4, 2 i 1. Więc największą liczbą byłaby 11111, czyli 31 (dziesiętnie). Liczba 14 zapisana na pięciu bitach to 01110.
 
-{panel type="Challenge" summary="Representing numbers with bits"}
-Write representations for the following. If it is not possible to do the representation, put "Impossible".
-
-- Represent **101** with **7 bits**
-- Represent **28** with **10 bits**
-- Represent **7** with **3 bits**
-- Represent **18** with **4 bits**
-- Represent **28232** with **16 bits**
+{panel type="Challenge" summary="Binarny zapis liczb"}
+Zapisz podane liczby z użyciem odpowiedniej liczby bitów (o ile to możliwe).
+- **101** na **7 bitach**
+- **28** na **10 bitach**
+- **7** na **3 bitach**
+- **18** na **4 bitach**
+- **28 232** na **16 bitach**
 {panel end}
 
 {panel type="spoiler" summary="Answers for above challenge"}
-The answers are (spaces are added to make the answers easier to read, but are not required)
-- 101 with 7 bits is: **110 0101**
-- 28 with 10 bits is: **00 0001 1100**
-- 7 with 3 bits is: **111**
-- 18 with 4 bits is: **Impossible to represent** (not enough bits)
-- 28232 with 16 bits is: 0110 1110 0100 1000
+Odpowiedzi (dla zwiększenia czytelności cyfry pogrupowano po cztery od prawej)
+- 101: **110 0101**
+- 28: **00 0001 1100**
+- 7: **111**
+- 18: niemożliwe na 4 bitach
+- 28 232: 0110 1110 0100 1000
 {panel end}
 
 Ważnym pojęciem związanym z liczbami binarnymi jest zakres wartości, którą można zapisać przy użyciu danej liczby bitów (cyfr). Pojedynczy bit wydaje się mało użyteczny, ale wystarczy do zapisania informacji np. o stanie pola wyboru tak/nie. Grupa ośmiu bitów jest już bardziej użyteczna – pozwala na zapis wartości od 0 do 255, a więc wystarczy do przechowania informacji o czyimś wieku, dniu miesiąca itd.
 
-{panel type="jargon-buster" summary="What is a byte?"}
+{panel type="jargon-buster" summary="Co to jest bajt?"}
 Grupa ośmiu bitów (oktet) jest tak użyteczna, że ma swoją nazwę: **bajt** (ang. byte). Pamięć elektroniczna i przestrzeń dyskowa jest zwykle podzielona na bajty. Większe liczby są zapisywane z użyciem większej liczby bajtów. Przykład: Dwa bajty (16 bitów) pozwalają na przechowywanie liczb z zakresu od 0 do 65 535. Cztery bajty (32 bity) umożliwiają na zapis liczb aż do 4 294 967 295. Możesz sprawdzić, czy te liczby są poprawne, badając mnożniki odpowiadające bitom. Każdy kolejny bit oznacza podwojenie zakresu liczb.
 {panel end}
 
-In practice, computers store numbers with either 16, 32, or 64 bits. This is because these are full numbers of bytes (a byte is 8 bits), and makes it easier for computers to know where each number starts and stops.
+W praktyce, architektura dzisiejszych komputerów wymusza zapis liczb z użyciem 16, 32 lub 64 bitów. To wielokrotności bajtów (oktetów bitów).
 
 {panel type="curiosity" summary="Binary cakes -- preventing fires"}
 Świeczki na torcie urodzinowym to przykład zastosowania systemu jedynkowego (unarnego).  Kolejne liczby tworzy się przez powtarzanie  znaku 1 tyle razy, ile wynika to z wartości danej liczby (można więc powiedzieć, że mnożnik dla każdej pozycji jest równy 1). Przykład: 3 to 111, a 10 to 1111111111. 
 Wraz z wiekiem pojawi się problem – stulatek powinien uważać, aby nie wywołać pożaru, gdy będzie zdmuchiwać zapalone świeczki. 
 
-{image filename="binary-cakes.png" alt="The image shows two people with birthday cakes, however a cake with 100 candles on it turns into a big fireball!"}
+{image filename="binary-cakes.png" alt="Tort ze 100 świeczkami kula ognia!"}
 
 Na szczęście dla świeczek na torcie urodzinowym zamiast systemu jedynkowego, można użyć dwójkowego: świeczka świeci się lub nie. Przykład: Na przyjęcie z okazji osiemnastych urodzin wystarczy pięć świeczek (i tylko dwie będą się świecić!), gdyż zapis binarny tej liczby to 10010.
 
 Tutaj możesz zobaczyć [wideo, na którym ktoś liczby na palcach do 1023, a ktoś innym otrzymuje „binarny” tort urodzinowy. ](https://www.youtube.com/watch?v=GUqle9RE3Y8)
 
-{image filename="binary-cake.png" alt="It's a lot smarter to use binary notation on candles for birthdays as you get older, as you don't need as many candles." caption="It's a lot smarter to use binary notation on candles for birthdays as you get older, as you don't need as many candles."}
+{image filename="binary-cake.png" alt="Im ktoś jest starszy, tym chętniej powinien używać zapisu binarnego dla świeczek na torcie urodzinowym. Liczba potrzebnych świeczek nie będzie wcale duża." caption="Im ktoś jest starszy, tym chętniej powinien używać zapisu binarnego dla świeczek na torcie urodzinowym. Liczba potrzebnych świeczek nie będzie wcale duża."}
 {panel end}
 
 ### Kod szesnastkowy jako skrót dla zapisu binarnego
@@ -310,7 +309,7 @@ Wyobraź sobie, że masz przepisać na kartce 16-bitową liczbę:  0101001110010
 Można zastosować wówczas zapis skrócony: grupujemy cyfry po cztery (w tym przypadku:  0101 0011 1001 0001), i zastępujemy każdą czwórkę zapisem dziesiętnym, co daje 5391. Pojawia się jednak mały problem: co z grupą bitów postaci 1111 (czyli 15)? Przecież mamy tylko cyfry od 0 do 9.
  
 Rozwiązanie jest proste: wprowadzimy specjalne symbole dla cyfr od 1010 (10) do 1111(15), tj. posłużymy się literami od A do F.
-So, for example, the 16-bit binary number 1011 1000 1110 0001 can be written more concisely as B8E1. The "B" represents the binary 1011, which is the decimal number 11, and the E represents binary 1110, which is decimal 14.
+Na przykład liczbę 1011 1000 1110 0001 można w zwięzły sposób zapis tak: B8 E1. Litera "B" jest kodem dla 1011 (=11 w systemie dziesiętnym), a litera E jest kodem dla 1110 (=14).
 
 W tym momencie mamy już 16 cyfr. Taki system liczbowy nazywamy szesnastkowym (heksadecymalnym) lub w skrócie hex. Zamiana (konwersja) reprezentacji między systemem binarnym a szesnastkowym jest bardzo prosta. To wyjaśnia, dlaczego system szesnastkowy jest bardzo powszechnie stosowany wtedy, gdy chcemy zapisać poza komputerem dużą liczbę binarną. 
 
@@ -348,19 +347,18 @@ Liczbami posługujemy się zwykle pracując z arkuszem kalkulacyjnym lub bazą d
 Trzeba zaznaczyć, że nie wszystkie informacje liczbowe, są zapisywane w komputerze jako liczby, a jako ciągi znaków, np. numer telefonu zapisany jako (03) 555-1234, a więc zawierający nawiasy i łącznik. 
 Z drugiej strony informacje, które na pierwszy rzut oka nie są liczbami (np. „30 stycznia 2014”), mogą być ku naszemu zaskoczeniu zapisywane przez oprogramowanie jako liczby (co pozwala np. w programie Excel na odejmowanie jednej daty od drugiej, w celu wyznaczenia liczby dni pomiędzy dwoma wydarzeniami). Rolą oprogramowania jest wyświetlenie liczby w odpowiedni sposób dla użytkownika, w zalezności od jej interpretacji w konkretnej sytuacji.
 
-{panel type="curiosity" summary="More on date representation"}
-The difference between two dates in Excel is the number of days between them; the date itself (as in many systems) is stored as the amount of time elapsed since a fixed date (such as 1 January 1900). You can test this by typing a date like "1 January 1850" --- chances are that it won't be formatted as a normal date. Likewise, a date sufficiently in the future may behave strangely due to the limited number of bits available to store the date.
+{panel type="curiosity" summary="Więcej na temat zapisu danych"}
+W arkuszu kalkulacyjnym Excel próba wykonania odejmowania jednej daty od drugiej skończy się wyznaczeniem liczby dni dzielących te dwie daty. Pojedyncza data natomiast jest w istocie zapisywana w pamięci jako liczba dni, które minęły od 1 stycznia 1900 roku. 
 {panel end}
 
-Numbers are used to store things as diverse as dates, student marks, prices, statistics, scientific readings, sizes and dimensions of graphics.
+Wszelkie typy danych zapisuje się dziś  komputerach cyfrowo, tzn. jako liczby zakodowane binarnie.
 
-The following issues need to be considered when storing numbers on a computer
+Z tematem zapisu liczb w komputerze wiążą się pytania: 
+- Jaki zakres liczb można zapisać w praktyce?
+- Jak zapisywać liczby ujemne?
+- Jak zapisywać liczby niecałkowite?
 
-- What range of numbers should be able to be represented?
-- How do we handle negative numbers?
-- How do we handle decimal points or fractions?
-
-### How many bits are used in practice?
+### Liczba bitów używana w prkatyce
 
 In practice, we need to allocate a fixed number of bits to a number, before we know how big the number is. This is often 32 bits or 64 bits, although can be set to 16 bits, or even 128 bits, if needed. This is because a computer has no way of knowing where a number starts and ends, otherwise.
 
