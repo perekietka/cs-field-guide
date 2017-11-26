@@ -297,78 +297,77 @@ Zmniejszenie liczby bitów (głębia kolorów) jest na tyle istotną zmiana, że
 .. ajb these images seem to appear in the wrong order to what is described for me… The middle one and left one should be swapped around?
 {comment end}
 
-For example, the following image shows a zoomed in view of the pixels that are part of the detail around an eye from the above (high quality) image.
+Na przykład poniższy obraz pokazuje powiększone pikseli, które są fragmentem oka z powyższego obrazu (wysokiej jakości).
 
 {image filename="zoomed-eye.png"}
 
-Notice that the colours in adjacent pixels are often very similar, even in this part of the picture that has a lot of detail. For example, the pixels shown in the red box below just change gradually from very dark to very light.
+Zauważmy, że kolory sąsiednich pikseli są często bardzo podobne, nawet w tej części obrazu, która ma dużo szczegółów. Na przykład piksele pokazane w czerwonym polu poniżej zmieniają się stopniowo z bardzo ciemnego na bardzo jasny.
 
 {image filename="zoomed-eye-highlighted.png"}
 
-Run-length encoding wouldn't work in this situation. You could use a variation that specifies a pixel's colour, and then says how many of the following pixels are the same colour, but although most adjacent pixels are nearly the same, the chances of them being identical are very low, and there would be almost no runs of identical colours.
+Kodowanie długości serii nie działa w tym przypadku. Można by skorzystać z wariantu, który określa kolor piksela, a następnie mówi, ile kolejnych pikseli ma ten sam kolor. Chociaż większość sąsiednich pikseli jest prawie taka sama, to szanse na to, że są identyczne są bardzo niskie, a serie identycznych kolorów prawie nie występują.
 
-But there is a way to take advantage of the gradually changing colours. For the pixels in the red box above, you could generate an approximate version of those colours by specifying just the first and last one, and getting the computer to calculate the ones in between assuming that the colour changes gradually between them. Instead of storing 5 pixel values, only 2 are needed, yet someone viewing it probably might not notice any difference. This would be *lossy* because you can't reproduce the original exactly, but it would be good enough for a lot of purposes, and save a lot of space.
+Istnieje jednak sposób, aby wykorzystać stopniowo zmieniające się kolory. W przypadku pikseli w czerwonym polu powyżej, możesz wygenerować przybliżoną wersję tych kolorów, określając tylko pierwszy i ostatni w serii. Na tej podstawie komputer będzie obliczać pośrednie, zakładając, że kolor zmienia się stopniowo. Zamiast zapisywania 5-pikselowych wartości potrzebne są tylko 2, aby oglądający nie zauważył żadnej różnicy. Byłoby to *stratne*, ponieważ nie można dokładnie odtworzyć oryginału, ale wystarczająco dobre dla wielu zastosowań i pozwalające zaoszczędzić dużo miejsca.
 
-{panel type="jargon-buster" summary="Interpolation"}
-{glossary-definition term="Interpolation" definition="Working out values between some given values;
-for example, if a sequence of 5 numbers starts with 3 and finishes with 11, we might interpolate the values 5, 7, 9 in between."}
+{panel type="jargon-buster" summary="Interpolacja"}
+{glossary-definition term="Interpolacja" definition="Wyliczenie wartości pośrednich pomiędzy pewnymi wartościami brzegowymi;
+na przykład, jeśli sekwencja 5 liczb zaczyna się 3 i kończy 11, możemy wyznaczyć interpolację trzech pośrednich wartości jako: 5, 7, 9."}
 
-The process of guessing the colours of pixels between two that are known is an example of
-{glossary-link term="interpolation" reference-text="compressing images"}interpolation{glossary-link end}.
-A *linear* interpolation assumes that the values increase at a constant rate between the two given values; for example, for the five pixels above, suppose the first pixel has a blue colour value of 124, and the last one has a blue value of 136,
-then a linear interpolation would guess that the blue values for the ones in between are 127, 130 and 133, and this would save storing them.
-In practice, a more complex approach is used to guess what the pixels are, but linear interpolation gives the idea of what's going on.
+Proces zgadywania kolorów pikseli między dwoma, które są znane, jest przykładem
+{glossary-link term="interpolation" reference-text="kompresowanie obrazów"}interpolacja{glossary-link end}.
+Interpolacja *liniowa* zakłada, że wartości rosną o stałą wielkość pomiędzy dwiema podanymi wartościami. Na przykład, dla pięciu powyższych pikseli załóżmy, że pierwszy piksel ma wartość koloru niebieskiego równą 124, a ostatni ma niebieską wartość 136. W takim przypadku  interpolacja liniowa domyślałaby się, że niebieskie wartości dla tych pośrednich wynoszą 127, 130 i 133, a dzięki temu nie trzeba ich zapisywać i można zaoszczędzić miejsce.
+W praktyce stosuje się bardziej złożone podejście do odgadywania pikseli, ale interpolacja liniowa daje dobre wyobrażenie o tym, jak to działa.
 {panel end}
 
-The JPEG system, which is widely used for photos, uses a more sophisticated version of this idea. Instead of taking a 5 by 1 run of pixels as we did above, it works with 8 by 8 blocks of pixels. And instead of estimating the values with a linear function, it uses combinations of cosine waves.
+System JPEG, który jest szeroko stosowany do zdjęć, wykorzystuje bardziej wyrafinowaną wersję tego pomysłu. Zamiast działać na pięci kolejnych pikselach, tak jak to zrobiliśmy powyżej, działa na bloku o rozmiarze 8 na 8 pikseli. Zamiast szacować wartości za pomocą funkcji liniowej, wykorzystuje kombinacje funkcji cosinus.
 
 {comment}
 It would be good have a figure that shows a line of pixels, and the corresponding waveform.
 {comment end}
 
-{panel type="curiosity" summary="What are cosine waves"}
-A cosine wave form is from the trig function that is often used for calculating the sides of a triangle. If you plot the cosine value from 0 to 180 degrees, you get a smooth curve going from 1 to -1. Variations of this plot can be used to approximate the value of pixels, going from one colour to another. If you add in a higher frequency cosine wave, you can produce interesting shapes. In theory, any pattern of pixels can be created by adding together different cosine waves!
+{panel type="curiosity" summary="Czym jest funkcja consinus"}
+Funkcja cosinus jest jedną z funkcji trygonometrycznych , która jest często używana do obliczania długości boków trójkąta. Wykres wartość cosinusa od 0 do 180 stopni jest gładką krzywą w przedziale 1 do -1 przypominającą falę. Wariacje tego wykresu można wykorzystać do przybliżenia wartości pikseli przechodzących z jednego koloru do drugiego. Jeśli dodasz falę cosinusową o wyższej częstotliwości z inną, to możesz uzyskać interesujące kształty. Teoretycznie każdy piksel może zostać utworzony przez dodanie różnych fal cosinusowych!
 
-The following graph shows the values of {math}\sin(x){math end} and {math}\cos(x){math end} for {math}x{math end} ranging from 0 to 180 degrees.
+Poniższy wykres pokazuje wartości funkcji {math}\sin(x){math end} oraz {math}\cos(x){math end} dla {math}x{math end} zakresu od 0 do 180 stopni.
 
-{image filename="cosine-graph.png" alt="A graph showing cos(x) and sin(x) curves"}
+{image filename="cosine-graph.png" alt="Wykres krzywych cos(x) i sin(x)"}
 {panel end}
 
-{panel type="curiosity" summary="Adding sine or cosine waves to create any waveform"}
-JPEGs (and MP3) are based on the idea that you can add together lots of sine or cosine waves to create any waveform that you want.
-Converting a waveform for a block of pixels or sample of music into a sum of simple waves can be done using a technique called a [Fourier transform](https://en.wikipedia.org/wiki/Fourier_transform), and is a widely used idea in signal processing.
+{panel type="curiosity" summary="Dodawanie sinusa i cosinusa w celu uzyskania dowolnego kształtu fali"}
+Metody JPEGs (i MP3) bazują się na technice, pozwalającej falę dowolnego kształtu przedstawić jako sumę wielu fal sinusoidalnych lub cosinusowych. ??nie wiem jak fachowo nazywać te fale??
+Przekształcenie kształtu fali dla bloku pikseli lub próbki muzyki w sumę prostych fal można wykonać za pomocą techniki zwanej [??Fourier transform??](https://en.wikipedia.org/wiki/Fourier_transform), która jest powszechnie wykorzystywana przy przetwarzaniu obrazu.
 
-You can experiment with adding sine waves together to generate other shapes using the
-[spreadsheet provided](files/Adding-Sine-Waves.xls).
-In this spreadsheet, the yellow region on the first sheet allows you to choose which sine waves to add.
-Try setting the 4 sine waves to frequencies that are 3, 9, 15, and 21 times the fundamental frequency respectively (the "fundamental" is the lowest frequency.)
-Now set the "amplitude" (equivalent to volume level) of the four to 0.5, 0.25, 0.125 and 0.0625 respectively (each is half of the previous one).
-This should produce the following four sine waves:
+Możesz poeksperymentować z dodawaniem sinusoid, aby uzyskać inne kształty za pomocą
+[udostępniony arkusz kalkulacyjny](files/Adding-Sine-Waves.xls).
+W tym arkuszu kalkulacyjnym żółty obszar na pierwszym arkuszu pozwala wybrać, które fale sinusoidalne dodać.
+Spróbuj ustawić 4 fale sinusoidalne na częstotliwości, które wynoszą odpowiednio 3, 9, 15 i 21 razy częstotliwości podstawowej ("podstawowa" to najniższa częstotliwość.)
+Następnie ustaw "amplitudę" (odpowiednik poziomu głośności) tej czwórki na 0,5, 0,25, 0,125 i 0,0625 (każdy z nich jest równy połowie poprzedniego).
+W rezultacie powinieneś uzyskać poniższe cztery sinusoidy:
 
-{image filename="sine-waves.png" alt="Four sine waves"}
+{image filename="sine-waves.png" alt="Cztery sinusoidy"}
 
-When the above four waves are added together, they interfere with each other, and produce a shape that has sharper transitions:
+Kiedy powyższe cztery fale są ze sobą dodane, interferują i tworzą kształt, który ma ostrzejsze przejścia:
 
-{image filename="sine-waves-sum.png" alt="The four sine waves added together"}
+{image filename="sine-waves-sum.png" alt="Suma czterech sinusoid"}
 
-In fact, if you were to continue the pattern with more than four sine waves, this shape would become a "square wave", which is one that suddenly goes to the maximum value, and then suddenly to the minimum.
-The one shown above is bumpy because we've only used 4 sine waves to describe it.
+Okazuje się, że gdyby kontynuować ten wzorzec z większą ilością sinusoid, kształt wynikowy stałby się "falą prostokątną", która nagle przechodzi od wartości maksymalnej do minimum.
+Ta pokazana powyżej jest wyboista, gdyż wykorzystaliśmy tylko 4 fale sinusoidalne, aby ją opisać.
 
-This is exactly what is going on in JPEG if you compress a black and white image.
-The "colour" of pixels as you go across the image will either be 0 (black) or full intensity (white), but JPEG will approximate it with a small number of cosine waves (which have basically the same properties as sine waves.)
-This gives the "overshoot" that you see in the image above; in a JPEG image, this comes out as bright and dark patches surrounding the sudden change of colour, like here:
+To właśnie dzieje się w algorytmie JPEG, jeśli kompresujesz czarno-biały obraz.
+"Kolor" pikseli w miarę przesuwania się po obrazie będzie wynosił 0 (czarny) lub pełny poziom intensywności (biały), lecz JPEG będzie przybliżał go za pomocą sumy niewielkiej liczby fal cosinusów (które mają zasadniczo takie same własności jak fale sinusoidalne)
+Daje to "przedobrzenia" widoczne na powyższym obrazku; w obrazie JPEG pojawia się jako jasne i ciemne plamy otaczające nagłą zmianę koloru:
 
 {image filename="jpeg-word-zoomed.jpg"}
 
-You can experiment with different combinations of sine waves to get different shapes.
-You may need to have more than four to get good approximations to a shape that you want; that's exactly the tradeoff that JPEG is making.
-There are some suggestions for parameters on the second sheet of the spreadsheet.
+Możesz eksperymentować z różnymi kombinacjami fal sinusoidalnych uzyskując różne kształty.
+Być może trzeba mieć więcej niż cztery, aby uzyskać dobre przybliżenia kształtu, który chcesz osiągnąć; to jest właśnie kompromis, z którym stara sobie radzić algorytm JPEG.
+Na drugim arkuszu arkusza kalkulacyjnego zamieszczone zostały pewne sugestie dotyczące parametrów.
 
-You can also learn about Fourier transforms using the Wolfram Alpha software; this will require you to install a browser plugin.
-The Wolfram demonstrations include:
-[an interactive demonstration of JPEG](http://demonstrations.wolfram.com/JPEGCompressionAlgorithm/),
-[showing the relationship between sine saves and creating other waveforms](http://demonstrations.wolfram.com/RecoveringTheFourierCoefficients/), and
-[showing how sine waves can be summed to produce other shapes](http://demonstrations.wolfram.com/SumsOfSineWavesWithSeveralStepSizesSawtoothOrSquareApproxima/).
+Więcej na temat przekształceniach Fouriera możesz się dowiedzieć za pomocą oprogramowania Wolfram Alpha; będzie to wymagało instalacji wtyczki w przeglądarce.
+Demonstracje Wolfram obejmują:
+[interaktywna demonstracja JPEG](http://demonstrations.wolfram.com/JPEGCompressionAlgorithm/),
+[prezentacja związków między sinusoidami a innymi formami falowymi](http://demonstrations.wolfram.com/RecoveringTheFourierCoefficients/), and
+[prezentacja tego jak sinusoidy można zsumować, aby otrzymać inne kształty](http://demonstrations.wolfram.com/SumsOfSineWavesWithSeveralStepSizesSawtoothOrSquareApproxima/).
 
 {panel end}
 
@@ -376,19 +375,19 @@ The Wolfram demonstrations include:
 .. html5 low priority interactive to add cosine waves to try to match a given waveform e.g. square wave, triangle, random. Select amplitude for various frequencies. I have a spreadsheet that basically does this, could put it in for the meantime - tim
 {comment end}
 
-You can see the 8 by 8 blocks of pixels if you zoom in on a heavily compressed JPEG image. For example, the following image has been very heavily compressed using JPEG (it is just 1.5% of its original size).
+Warto przyjrzeć się z bliska mocno skompresowanemu obrazowi JPEG. Na przykład następujący obraz został bardzo mocno skompresowany przy użyciu JPEG (zajmuje jedynie 1,5% pierwotnego rozmiaru).
 
 {image filename="compressed-jpeg.png"}
 
-If we zoom in on the eye area, you can see the 8 x 8 blocks of pixels:
+Jeśli powiększymy obszar oka, wyraźnie widać bloki 8 x 8 pikseli:
 
 {image filename="compressed-jpeg-zoomed.png"}
 
-Notice that there is very little variation across each block. In the following image the block in the red box only changes from top to bottom, and could probably be specified by giving just two values, and having the ones in between calculated by the decoder as for the line example before. The green square only varies from left to right, and again might only need 2 values stored instead of 64. The blue block has only one colour in it! The yellow block is more complicated because there is more activity in that part of the image, which is where the cosine waves come in. A "wave" value varies up and down, so this one can be represented by a left-to-right variation from dark to light to dark, and a top-to-bottom variation mainly from dark to light. Thus still only a few values need to be stored instead of the full 64.
+Zauważ, iż w każdym bloku występuje bardzo niewielka różnorodność. Na poniższym obrazie blok w czerwonej ramce zmienia się tylko w kierunku pionowym. Prawdopodobnie można go określić podając tylko dwie wartości brzegowe, pozostałe mogę być wyliczone przez dekoder podobnie jak w przykładzie interpolacyjnym. Zielony kwadrat zmienia się tylko w poziomie i podobnie można go wyrazić przy pomocy dwóch wartości brzegowych zamiast 64 wartości. Niebieski blok ma tylko jeden kolor! Żółty blok jest bardziej skomplikowany, ponieważ w tej części obrazu więcej się dzieje. Pojawiają się tu fale cosinusowe. Wartość "fali" zmienia się pionowo, więc można ją przedstawić od lewej do prawej wariacją od ciemnej do jasnej do ciemnej oraz od góry do dołu, głównie od ciemności do jasności. (??tu coś jest zamotane w opisie??) Dzięki temu możemy nadal przechowywać tylko kilka wartości zamiast pełnych 64.
 
 {image filename="compressed-jpeg-zoomed-highlighted.png"}
 
-The quality is quite low, but the saving in space is huge – it's more than 60 times smaller (for example, it would download 60 times faster). Higher quality JPEG images store more detail for each 8 by 8 block, which makes it closer to the original image, but makes bigger files because more details are being stored. You can experiment with these tradeoffs by saving JPEGs with differing choices of the quality, and see how the file size changes. Most image processing software offers this option when you save an image as a JPEG.
+Pomimo tego, że jakość jest dość niska, to oszczędność w przestrzeni dyskowej jest ogromna - plik JPEG jest 60 razy mniejszy (mógłby zostać pobrany 60 razy szybciej). Obrazy JPEG o wyższej jakości przechowują więcej szczegółów dla każdego bloku 8 na 8, co sprawia, że odwzorowują wierniej oryginalny obraz. Zajmują też więcej miejsca, ponieważ zawierają informację o większej liczbie szczegółów. Możesz samemu przetestować jego działanie i kompromis pomiędzy jakością a stopniem kompresji. Większość edytorów graficznych pozwala wybrać jakość (stopień kompresji) podczas zapisuwania obrazu jako JPEG.
 
 {comment}
 low priority : interactive that could load a photo, zoom in on pixels, and change it to different qualities of jpg coding
