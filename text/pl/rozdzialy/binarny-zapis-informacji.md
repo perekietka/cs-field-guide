@@ -1092,25 +1092,25 @@ Poniżej znajduje się narzędzie, które pozwala na eksperymentowanie z szesnas
 {panel end}
 
 
-### Representing colours with fewer bits
+### Zapis informacji o kolorze z użyciem mniejszej liczby bitów 
 
-What if we were to use fewer than 24 bits to represent each colour? How much space will be saved, compared to the impact on the image?
+Wyobraźmy sobie sytuację, w której do zapisu informacji o kolorze mamy używać mniej niż 24 bitów. Ile zyskamy? Jaki będzie mieć wpływ na jakość obrazu?
 
-#### The range of colours with fewer bits
+#### Zakres kolorów
 
-The following interactive gets you to try and match a specific colour using 24 bits, and then 8 bits.
+Wykonując eksperyment z użyciem narzędzia poniżej można się przekonać jaki będzie efekt zmniejszenia głębi koloru. Określ kolor klikając na obrazku po lewej stronie, a następnie spróbuj uzyskać odpowiednie dla wybranego koloru ustawienie suwaków 24-bitowych (po kilku próbach wyświetlony zostanie komunikat-wskazówka; zamiast myszy możesz używać strzałek na klawiaturze, aby precyzyjnie ustawić suwaki). Przekonasz się, że określony wcześniej kolor można precyzyjnie opisać, używając reprezentacji 24-bitowej.
 
-It should be possible to get a perfect match using 24 bit colour. But what about 8 bits?
+Następnie spróbuj to powtórzyć dla suwaków w wersji 8-bitowej. W tym przypadku na opis składowych czerwonej i zielonej przypadać będzie jedna z ośmiu możliwych wartości, a dla niebieskiej — jedna z czterech wartości!
 
 {interactive name="colour-matcher" type="whole-page" text="Colour Matcher interactive"}
 
-The above system used 3 bits to specify the amount of red (8 possible values), 3 bits to specify the amount of green (again 8 possible values), and 2 bits to specify the amount of blue (4 possible values). This gives a total of 8 bits (hence the name), which can be used to make 256 different bit patterns, and thus can represent 256 different colours.
+W przypadku drugiego zestawu suwaków (w wersji 8-bitowej), na zapis informacji o składowej czerwowej przeznaczone były trzy bity. Na zapis składowej zielonej również trzy bity, a dla składowej niebieskiej tylko dwa. Oznacza to, że wzorzec bitowy koloru może być jednym z 256 możliwych.
 
-You may be wondering why blue is represented with fewer bits than red and green. This is because the human eye is the least sensitive to blue, and therefore it is the least important colour in the representation. The representation uses 8 bits rather than 9 bits because it's easiest for computers to work with full bytes.
+Inaczej mówiąc: trzykrotne zmniejszenie liczby bitów z 24 do 8 ma taki skutek, że nie jesteśmy w stanie odziwerciedlić wielkiej liczby odcieni koloru, a więc i przedstawić łagodnego przejścia (gradientu) między ocieniami koloru na obrazie. To jest dobra ilustracja problemu, przed jakim stoi projektant oprogramowania: użyć mniej pamięci (mniejszej liczby bitów), czy uzyskać lepszą jakość zapisu (reprezentacji) informacji?
 
-Using this scheme to represent all the pixels of an image takes one third of the number of bits required for 24-bit colour, but it is not as good at showing smooth changes of colours or subtle shades, because there are only 256 possible colors for each pixel. This is one of the big tradeoffs in data representation: do you allocate less space (fewer bits), or do you want higher quality?
+Dlaczego najmniejszą liczbę bitów przeznaczyliśmy na składową niebieską? Okazuje się, że ludzkie oko jest najmniej wrażliwe na kolor niebieski i dlatego tak można było postąpić. W komputerze łatwiej przetwarzać grupy składające się z 8 bitów niż z 9 bitów.
 
-{panel type="jargon-buster" summary="Colour depth"}
+{panel type="jargon-buster" summary="Głębia koloru"}
 The number of bits used to represent the colours of pixels in a particular image is sometimes referred to as its "colour depth" or "bit depth". For example, an image or display with a colour depth of 8-bits has a choice of 256 colours for each pixel. There is [more information about this in Wikipedia](https://en.wikipedia.org/wiki/Color_depth). Drastically reducing the bit depth of an image can make it look very strange; sometimes this is used as a special effect called "posterisation" (ie. making it look like a poster that has been printed with just a few colours).
 {panel end}
 
