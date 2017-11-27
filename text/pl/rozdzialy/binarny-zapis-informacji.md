@@ -651,7 +651,6 @@ Pomysł wykonywania dodawania na tzw. dopełnieniu liczby zamast odejmowania lic
 
 Odejmowanie 2 od 6 jest tożsame z dodawaniem 8 do 6 (6 + 8 = 14) i ignorowaniem 1 z przeniesienia (po lewej).
 
-Check that adding 872 to 255 produces (almost) the same result as subtracting 128.
 Dla większych liczb (np. trzycyfrowych) dopełnieniem liczby jest liczba, która stanowi różnicę brakującą do kolejnej potęgi 10, tj. 1000-128 = 872.
 
 W przypadku zapisu binarnego sytuacja jest prostsza, bo używa się tylko dwóch różnych cyfr. Porównanie z systemem dziesiętnym może być jednak pomocne dla zrozumienia tematu.
@@ -660,37 +659,12 @@ W przypadku zapisu binarnego sytuacja jest prostsza, bo używa się tylko dwóch
 
 
 
-#### Using sign bits vs using Two's Complement
+#### Porównanie kodów bit-znak i U2
 
-We have now looked at two different ways of representing negative numbers on a computer. In practice, a simple sign bit is rarely used, because of having two different representations of zero, and requiring a different computer circuit to handle negative and positive numbers, and to do addition and subtraction.
+Przedstawiliśmy dwa różne sposoby zapisu liczb ujemnych na komputerze. W praktyce, pierwszy sposób (bit-znak) jest rzadko używany.
+Drugi sposób (uzupełnienie do 2) jest powszechnie w użyciu, gdyż pozbawiony jest wad pierwszego rozwiązania, tj. liczba 0 ma jedną reprezentację, a odejmowanie można w prosty sposób zastąpić dodawaniem.
 
-Two's Complement is widely used, because it only has one representation for zero, and it allows positive numbers and negative numbers to be treated in the same way, and addition and subtraction to be treated as one operation.
-
-There are other systems such as "One's Complement" and "Excess-k", but Two's Complement is by far the most widely used in practice.
-
-
-{comment}
-
-TODO: Write this section
-
-### Representing decimal points and fractions in practice
-
-Another type of number used in computer systems is the "floating point" value. While we won't look at it in detail, to get a taste of what's involved, consider the bit values in a 4-bit number, which are 8, 4, 2 and 1. What would the value of a bit *to the right* of the one bit be? And to the right of that one?
-
-The following version of the base conversion interactive has bits that are smaller than the 1-bit. Try representing the decimal number 3.5 using this system. How about 2.8125? What about 2.8?
-
-This system is a fixed-point number system; floating point numbers are based on this idea, but allow for the number of digits to be fixed, but the position of the point to change (by giving an exponent value).
-{panel end}
-
-{panel type="teacher-note" summary="Solution for extra for experts"}
-
-The values to the right of the 1-bit continue to be a half of the value to their left, so they are 0.5, 0.25, 0.125 and so on. The decimal number 3.5 can be represented as 11.1, and 2.8125 is 10.1101. The number 2.8 can't be represented accurately in binary! The closest value with the 10 bits in the interactive is 10.11001100. In fact, the number never finishes in binary; it contains "1100" repeating forever! This rounding error can be seen in some spreadsheets: try adding 110 + 2.8 - 2.8 - 100. With enough places of accuracy, you can see that the sum doesn't (quite) come to zero.
-
-**Note:** The interactive here has not been updated to the new system. Please [view the interactives on the Data Representation page](http://www.csfieldguide.org.nz/releases/1.9.9/DataRepresentation.html) on the older version of the CSFG. We are currently in the process of updating these interactives for release.
-
-{panel end}
-
-{comment end}
+Istnieją jeszcze inne sposoby kodowania liczb ujemnych (np. uzupłenienie do 1, kodowanie z przesunięciem), ale metoda U2 jest najbardziej powszechna.
 
 ## Text
 
