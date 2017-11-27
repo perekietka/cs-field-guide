@@ -411,38 +411,39 @@ Czymś bardzo użytecznym jest oszacowanie liczby bitów niezbędnych do zapami�
 4. d (64 bity do za mało, a 128 bitów to o wiele za dużo! Trzeba pamiętać, że 128 bitów to nie dwa razy więcej niż 64 bity.)
 {panel end}
 
-### Representing negative numbers in practice
+### Zapis binarny liczb ujemnych
 
-The binary number representation we have looked at so far allows us to represent positive numbers only. In practice, we will want to be able to represent negative numbers as well, such as when the balance of an account goes to a negative amount, or the temperature falls below zero. In our normal representation of base 10 numbers, we represent negative numbers by putting a minus sign in front of the number.  But in binary, is it this simple?
+Sposób zapisu liczb przedstawiony do tej pory pozwalał na zapis tylko liczb nieujemnych. W praktyce często potrzebujemy również zapisywać informacje o wartościach ujemnych (np. o obciążeniu rachunku bankowego, czy temperaturze powietrza zimą!). Kiedy posługujemy się zapisem dziesiętnym, to liczbę ujemną uzyskujemy poprzez dopisanie znaku minus przed liczbą. W komputerze nie ma takiej możliwości.
 
 We will look at two possible approaches: Adding a simple sign bit, much like we do for decimal, and then a more useful system called Two's Complement.
+Przyjrzymy się dwum możliwym rozwiązaniom: dodanie bitu znaku (metoda podobna do używanej przez człowieka w zapisie dziesiętnym) i tzw. uzupełnienie do 2 (metoda o wiele bardziej użyteczna w przypadku komputerów).
 
-#### Using a simple sign bit
+#### Stosowanie bitu znaku
 
-On a computer we don’t have minus signs for numbers (it doesn't work very well to use the text based one when representing a number because you can't do arithmetic on characters), but we can do it by allocating one extra bit, called a *sign* bit, to represent the minus sign. Just like with decimal numbers, we put the negative indicator on the left of the number --- when the sign bit is set to “0”, that means the number is positive and when the sign bit is set to “1”, the number is negative (just as if there were a minus sign in front of it).
+W komputerze nie ma możliwości dopisania znaku - (minus) przed liczbą, ale możemy przydzielić jeden dodatkowy bit, zwany bitem *znaku*. To może być skrajny lewy bit bajtu – gdy ustawimy go na „0”, to uznamy liczbę za dodatnią, a w przypadku „1” liczba będzie ujemna (analogia do znaku minus). 
 
-For example, if we wanted to represent the number **41** using 7 bits along with an additional bit that is the sign bit (to give a total of 8 bits), we would represent it by **00101001**. The first bit is a 0, meaning the number is positive, then the remaining 7 bits give **41**, meaning the number is **+41**. If we wanted to make **-59**, this would be **10111011**. The first bit is a 1, meaning the number is negative, and then the remaining 7 bits represent **59**, meaning the number is **-59**.
 
-{panel type="challenge" summary="Representing negative numbers with sign bit"}
-Using 8 bits as described above (one for the sign, and 7 for the actual number), what would be the binary representations for 1, -1, -8, 34, -37, -88, and 102?
+Przykład: W reprezentacji 8-bitowej ze znakiem liczba **41** będzie zapisana jako **00101001**, gdzie pierwszy bit (0) to bit znaku, a kolejne bity to zapis binarny liczby **41** na 7 bitach. Podobnie liczba **-59** będzie mieć reprezentację **01111011**, gdzie pierwszy bit (1) jest bitem znaku, a kolejne bity to liczba **59** zapisana binarnie.
+
+{panel type="challenge" summary="Zapis liczb ujemnych (metoda bit-znak)"}
+Znajdź 8-bitową reprezentację binarną liczb:  1, -1, -8, 34, -37, -88 i 102.
+Jakie liczby będą reprezentowane jako 10000110, 01111111i  10000000 w przypadku systemu 8-bitowego?
 {panel end}
 
-{panel type="spoiler" summary="Representing negative numbers with sign bit"}
-The spaces are not necessary, but are added to make reading the binary numbers easier
-
--   1  is 0000 0001
--  -1  is 1000 0001
--  -8  is 1000 1000
--  34  is 0010 0010
--  -37 is 1010 0101
--  -88 is 1101 1000
--  102 is 0110 0110
+{panel type="spoiler" summary="Odpowiedzi"}
+-   1  to 0000 0001
+-  -1  to 1000 0001
+-  -8  to 1000 1000
+-  34  to 0010 0010
+-  -37 to 1010 0101
+-  -88 to 1101 1000
+-  102 to 0110 0110
 {panel end}
 
-Going the other way is just as easy. If we have the binary number **10010111**, we know it is negative because the first digit is a 1. The number part is the next 7 bits **0010111**, which is **23**. This means the number is **-23**.
+Dekodowanie, czyli określenie wartości dziesiętnej na podstawie zapisu binarnego jest proste. Liczba zapisana jako **1001 0111** to na pewno liczba ujemna. Po bicie znaku (1) mamy 7 bitów **001 0111** reprezentujących **23**. Stąd wartość szukana to **-23**.
 
 {panel type="challenge" summary="Converting binary with sign bit to decimal"}
-What would the decimal values be for the following, assuming that the first bit is a sign bit?
+Jakie liczby będą reprezentowane jako 0001 0011, 1000 0110, 10100011, 0111 1111 i 11111111 w przypadku systemu 8-bitowego?
 - 00010011
 - 10000110
 - 10100011
@@ -450,69 +451,64 @@ What would the decimal values be for the following, assuming that the first bit 
 - 11111111
 {panel end}
 
-{panel type="spoiler" summary="Converting binary with sign bit to decimal"}
-- 00010011 is 19
-- 10000110 is -6
-- 10100011 is -35
-- 01111111 is 127
-- 11111111 is -127
+{panel type="spoiler" summary="Odpowiedzi"}
+- 0001 0011 to 19
+- 1000 0110 to -6
+- 1010 0011 to -35
+- 0111 1111 to 127
+- 1111 1111 to -127
 {panel end}
 
-But what about **10000000?** That converts to **-0**. And **00000000** is **+0**.
-Since -0 and +0 are both just 0, it is very strange to have two different representations for the same number.
+Jakiej liczbie dziesiętnej odpowiada **1000 0000?** Odpowiedź to: **-0**. A **0000 0000**? To jest **+0**.
+Przykład  1000 0000 jest dobrą ilustracją jednej z wad, jaką ma wyżej opisany sposób zapisu. Liczba 0 ma dwie reprezentacje: -0 i +0. To nie tylko rozrzutność, ale przede wszytkim źródło potencjalnego zamieszania. W praktyce tej metody nie używa się. Komputery używają bardziej wyrafinowanej metody opisanej poniżej.
 
-This is one of the reasons that we don't use a simple sign bit in practice.
-Instead, computers usually use a more sophisticated representation for negative binary numbers called *Two's Complement*.
+#### Kod U2 (uzupełniania do 2)
 
-#### Two's Complement
+Istnieje inny sposób zapisu liczb ujemnych zwany *kodem uzupełnienia do 2*, która nie tylko pozbawiona jest wyżej opisanej wady, ale znacznie ułatwia operacje arytmetyczne na liczbach ujemnych. Jedną z jego zalet jest ujednolicenie arytmetyki (działania wykonywane z liczbą ujemną nie muszą być traktowane jako odrębny przypadek), co daje zysk szybkości oraz upraszcza projekt cyfrowych obwodów elektronicznych. 
 
-There's an alternative representation called *Two's Complement*, which avoids having two representations for 0, and more importantly, makes it easier to do arithmetic with negative numbers.
+***Zapis liczb dodatnich w kodzie U2***
 
-***Representing positive numbers with Two's Complement***
+Liczby dodatnie zapisuje się dokładnie w ten sam sposób, jak to było przedstawione w poprzednich rozdziałach. W przypadku zapisu 8-bitowego lewy skrajny bit jest ustawiony na 0, a pozostałe 7 bitów przeznacza się na zapis wartości liczby; na przykład **1** zapiszmy jako **00000001**, a 65 jako **00110010**.
 
-Representing positive numbers is the same as the method you have already learnt. Using **8 bits**,
-the leftmost bit is a zero and the other 7 bits are the usual binary representation of the number;
-for example, **1** would be **00000001**, and 65 would be **00110010**.
+***Zapis liczb ujemnych w kodzie U2***
 
-***Representing negative numbers with Two's Complement***
+Ten przypadek jest trudniejszy. Proces konwersji (zamiany z systemu dziesiętnego na binarny) można opisać listą kroków:
+1. Znajdź zapis binarny wartości bezwzględnej liczby (czyli bez znaku minus).
+2. Zmień wartości wszystkich bitów na przeciwne (tj. zmień 0 na 1, a 1 na to 0).
+3. Powiększ liczbę o 1 (dodanie 1 w arytmetyce binarnej jest dość proste; poniżej znajdzisz pewne wskazówki).
 
-This is where things get more interesting. In order to convert a negative number to its two's complement representation, use the following process.
-1. Convert the number to binary (don't use a sign bit, and pretend it is a positive number).
-2. Invert all the digits (i.e. change 0's to 1's and 1's to 0's).
-3. Add 1 to the result (Adding 1 is easy in binary; you could do it by converting to decimal first, but think carefully about what happens when a binary number is incremented by 1 by trying a few;
-  there are more hints in the panel below).
+Na przykład dla **-118** kolejne kroki będą wyglądać tak:
+1. Zapis binarny liczby **118** to **01110110**
+2. **01110110** po zamianie wartości bitów to **10001001**
+3. **10001001 + 1** jest równe **10001010**
 
-For example, assume we want to convert **-118** to its Two's Complement representation. We would use the process as follows.
-1. The binary number for **118** is **01110110**
-2. **01110110** with the digits inverted is **10001001**
-3. **10001001 + 1** is **10001010**
+Stąd zapis liczby **-118** w kodzie uzupełnieniowym (U2) to: **10001010**.
 
-Therefore, the Two's Complement representation for **-118** is **10001010**.
+{panel type="challenge" summary="Dodanie 1 w arytmetyce binarnej"}
+Reguła rządząca dodaniem 1 w arytmetyce binarnej jest bardzo prosta, więc warto ją odkryć samodzielnie.
+Po pierwsze: Jeśli zapis binarny kiczby kończy się 0 (np. 1101010), to jaki będzie efekt zamiany ostatniego 0 na 1?
+Rozpatrz inne przypadki: Jeśli zapis kończy się bitami 01, to o ile większa będzie liczba jeśli w tych miejscach wpiszemy 10?
+Co w przypadku zapisów kończących się 011 czy 011111?
 
-{panel type="challenge" summary="Adding one to a binary number"}
-The rule for adding one to a binary number is pretty simple, so we'll let you figure it out for yourself.
-First, if a binary number ends with a 0 (e.g. 1101010), how would the number change if you replace the last 0 with a 1?
-Now, if it ends with 01, how much would it increase if you change the 01 to 10?
-What about ending with 011? 011111?
-
-The method for adding is so simple that it's easy to build computer hardware to do it very quickly.
+Te proste reguły oznaczają w prkatyce, że upraszcza się projektowanie sumatorów (cyfrowych układów elektronicznych). 
 {panel end}
 
-{panel type="teacher-note" summary="Method for adding one to a binary number"}
-Students should be able to work out the rule for adding 1 to a binary number by trying it out with a few numbers.
+{panel type="teacher-note" summary="Dodanie 1 w arytmetyce binarnej"}
+Uczniowie powinno samodzielnie, przez wykonanie kilku przykładów, odkryć regułę dodawania 1 do liczby zapisanej binarnie. 
 
 There are different ways to express the process.
 In the "Unplugged" exercise at the start of this chapter one of the challenges was to count up through the numbers, which is adding one repeatedly, and it's not unusual for students to see the pattern when they do that.
 In that situation the rule could be expressed as "start at the right hand end, and flip bits from right to left until you change a 0 to a 1."
 (If the number ends in zero then that would be immediately.)
 
-Another way to express the rule is to find the right most zero in the number, change it to a 1, and change all 1's to its right to zero.
-For example, consider adding 1 to 1001**0**111.
-The right-most 0 is shown in bold; it changes to 1, and the three 1's to its right change to 0, giving 10011000.
+Istnieją różne sposoby mówienia o tym procesie.
+Regułę można wyrazić takimi słowami: Zacznij od skrajnej prawy cyfry. Zmień wartości kolejnych bitów na przeciwne tak długo aż pierwszy raz nie zmienisz 0 na 1.
 
-If you get a number with no zeroes in it (e.g. 1111111), you can put one on the left (01111111), then apply the rule, which in this case gives 10000000.
+Reguła może być sformułowana inaczej: Znajdź cyfrę 0 położoną najbardziej na prawo, zmień ją na 1, a wszystkie jedynki po prawej zmień na 0. Jak to będzie działać dla przykładu 1001**0**111? Otrzymamy 10011000.
 
-It may help some students to consider what the equivalent rule is in decimal for adding 1 -- how do you add one to 284394? To 38999? 9999799?
+W szczególnym przypadku (np. 1111111), można dopisać 0 na początku (01111111). Zastosowanie reguły da odpowiedź: 10000000.
+
+Być może warto, aby uczniowie poszukali analogicznej reguły dotyczącej zapisu dziesiętnego: jak dodać 1 to 284394? To 38999? 9999799?
 {panel end}
 
 
