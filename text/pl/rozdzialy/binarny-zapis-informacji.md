@@ -802,6 +802,11 @@ Znak **$** w schemacie UTF-32 to:
 00000000 00000000 00000000 00100100
 ```
 
+Polski znak **ł** w schemacie UTF-32 to:
+```
+00000000 00000000 00000001 01000010
+```
+
 A znak **犬** w schemacie UTF-32 to:
 ```
 00000000 00000000 01110010 10101100
@@ -811,57 +816,56 @@ Poniżej znajduje się interaktywne narzędzie, które pozwala wyznaczyć kod Un
 
 {interactive name="unicode-binary" type="iframe" parameters="mode=utf32"}
 
-{panel type="project" summary="Represent your name with UTF-32"}
-1. Represent each character in your name using UTF-32.
-2. Check how many bits your representation required, and explain why it had this many (remember that each character should have required 32 bits)
-3. Explain how you knew how to represent each character. Even if you used the interactive, you should still be able to explain it in terms of binary numbers.
+{panel type="project" summary="Imię w kodzie UTF-32"}
+1. Znajdź kody liter Twojego imienia dla schematu UTF-32.
+2. Sprawdź, ile bitów zajmuje właściwy kod litery, a ile bitów to 0 uzupełniające zapis binanrny do 32 bitów.
+3. Wyjaśnij, na czym polega binarny zapis danego znaku tekstu (według numeru Unicode).
 {panel end}
 
-ASCII actually took the same approach. Each ASCII character has a number between 0 and 255, and the representation for the character the number converted to an 8 bit binary number. ASCII is also a fixed length encoding scheme -- every character in ASCII is represented using 8 bits.
+W kodzie ASCII stosuje się właściwie identyczne podejście. Każdy znak ma kod binarny, który zapisany dziesiętnie jest liczbą z zakresu 0-255. ASCII jest także schematem o ustalonej długości -- każdy znak w ASCII jest kodowany z użyciem 8 bitów.
 
-In practice, UTF-32 is rarely used -- you can see that it's pretty wasteful of space.
-UTF-8 and UTF-16 are both variable length encoding schemes, and very widely used. We will look at them next.
+W praktyce schemat UTF-32 jest rzadko używany -- własnie dlatego, że wiąże się z marnotrawieniem zasobów.
+Schematy UTF-8 i UTF-16 są zmiennej długości, są powszechnie używane. Teraz się nimi zajmiemy.
 
-{panel type="challenge" summary="How big is 32 bits?"}
-1. What is the largest number that can be represented with 32 bits? (In both decimal and binary).
+{panel type="challenge" summary="Ile to jest 32 bity?"}
+1. Jaka jest największa liczba, którą można zapisać na 32 bitach? (Odpowiedź zapisz zarówno dziesiętnie, jak i binarnie.)
 
-2. The largest number in Unicode that has a character assigned to it is not actually the largest possible 32 bit number -- it is 00000000 00010000 11111111 11111111. What is this number in decimal?
+2. Największa liczba Unicode jest daleko mniejsza od największej liczby, którą da się zapisać na 32 bitach -- ma postać 00000000 00010000 11111111 11111111. Jaką wartość dziesiętną ma ta liczba?
 
-3. Most numbers that can be made using 32 bits do not have a Unicode character attached to them -- there is a lot of wasted space. There are good reasons for this, but if you had a shorter number that could represent any character, what is the minimum number of bits you would need, given that there are currently around 120,000 Unicode characters?
-{panel end}
+3. Jaka jest najmniejsza liczba bitów, która wystarczyłaby do zapisania każdego z ok. 120 000 znaków Unicode?
+{panel end} 
 
 {panel type="spoiler" summary="Answers to above challenge"}
-1. The largest number that can be represented using 32 bits is 4,294,967,295 (around 4.3 billion). You might have seen this number before -- it is the largest unsigned integer that a 32 bit computer can easily represent in programming languages such as C.
+1. 4 294 967 295 (ok. 4,3 miliarda). 
 
-2. The decimal number for the largest character is 1,114,111.
+2. 1 114 111.
 
-3. You can represent all current characters with 17 bits. The largest number you can represent with 16 bits is 65,536, which is not enough.
-If we go up to 17 bits, that gives 131,072, which is larger than 120,000. Therefore, we need 17 bits.
+3. 17 bitów. 16 nie wystarczy, bo 2^16 = 65 536.
 {panel end}
 
 ### UTF-8
 
-UTF-8 is a **variable length** encoding scheme for Unicode. Characters with a lower Unicode number require fewer bits for their representation than those with a higher Unicode number. UTF-8 representations contain either 8, 16, 24, or 32 bits. Remembering that a **byte** is 8 bits, these are 1, 2, 3, and 4 bytes.
+Kody binarne znaków w schemacie UTF-8 są zapisywane z użyciem 8, 16, 24, lub 32 bitów, czyli 1, 2,3 lub 4 **bajtów**.
 
-For example, the character **H** in UTF-8 would be:
+Na przykład znak **H** w kodzie UTF-8 to:
 ```
 01001000
 ```
-The character **ǿ** in UTF-8 would be:
+znak **ǿ** w kodzie UTF-8 to:
 ```
 11000111 10111111
 ```
 
-And the character **犬** in UTF-8 would be:
+A znak **犬** w kodzie UTF-8 to:
 ```
 11100111 10001010 10101100
 ```
 
-The following interactive will allow you to convert a Unicode character to its UTF-8 representation. The Unicode character's number is also displayed.
+Poniżej znajduje się interaktywne narzędzie, które pozwola na wyznaczenie kodu znaku według schematu UTF-8. Wyświetlany jest również numer znaku tablicy Unicode.
 
 {interactive name="unicode-binary" type="iframe" parameters="mode=utf8"}
 
-#### How does UTF-8 work?
+#### Jak działa UTF-8
 
 So how does UTF-8 actually work? Use the following process to do what the interactive is doing and convert characters to UTF-8 yourself.
 
