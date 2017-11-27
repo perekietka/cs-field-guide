@@ -525,49 +525,49 @@ Zapisz poniższe liczby w kodzie U2, używając 8 bitów.
 
 ***Konwersja liczby binarnej z kodu U2 na zapis dziesiętny***
 
-In order to reverse the process, we need to know whether the number we are looking at is positive or negative. For positive numbers, we can simply convert the binary number back to decimal. But for negative numbers, we first need to convert it back to a normal binary number.
 Aby dokonać konwersji w odwrotną stronę (z reprezentacji binarnej na dziesiętną) trzeba najpierw określić, czy liczba jest dodatnia (lub równa 0), czy ujemna. Jeśli liczba jest nieujemna, to jej wartości dziesiętnej szukamy w znany już sposób. W przeciwnym wypadku zaczynamy od konwersji liczby z kodu U2 do naturalnej postaci binarnej wartości bezwględnej liczby (bez znaku).
 
-So how do we know if the number is positive or negative? It turns out (for reasons you will understand later in this section) that Two's Complement numbers that are negative always start in a 1, and positive numbers always start in a 0. Have a look back at the previous examples to double check this.
+Skąd wiadomo, czy liczba jest ujemna czy nie? Wystarczy sprawdzić, czy skrajny lewy bit jest ustawiony na 1, czy 0. W pierwszym przypadku liczba jest ujemna. To wynika z opisu kodu U2 zawartego w poprzednim podrozdziale.
 
-So, if the number starts with a 1, use the following process to convert the number back to a negative decimal number.
+Jeśli zapis binarny liczby zaczyna się od 1, to proces konwersji na postać dziesiętną można przedstawić jako listę kroków:
 
-1. Subtract 1 from the number
-2. Invert all the digits
-3. Convert the resulting binary number to decimal
-4. Add a minus sign in front of it.
+1. Odejmij 1 (w arytmetyce binarnej).
+2. Zmień wartości wszystkich bitów na przeciwne.
+3. Znajdź wartość dziesiętną liczby uzyskanej w kroku 3.
+4. Dopisz znak - (minus) przed wartością wyznaczoną w kroku 4.
 
-So if we needed to convert 11100010 back to decimal, we would do the following.
+Na przykład dla liczby 11100010 kolejne kroki dają takie efekty:
 
-1. Subtract **1** from **11100010**, giving **11100001**.
-2. Invert all the digits, giving **00011110**.
-3. Convert **00011110** to a binary number, giving **30**.
-4. Add a negative sign, giving **-30**.
+1. **11100001**
+2. **00011110**.
+3. **30**.
+4. **-30**.
 
-{panel type="challenge" summary="Reversing Two's Complement"}
-Convert the following Two's Complement numbers to decimal.
+{panel type="challenge" summary="Ćwiczenie"}
+Wyznacz wartości dziesiętne liczb zapisanych w kodzie U2:
 1. 00001100
 2. 10001100
 3. 10111111
 {panel end}
 
-{panel type="spoiler" summary="Reversing Two's Complement"}
+{panel type="spoiler" summary="Odpowiedzi"}
 1. **12**
-2. 10001100 -> (-1) 10001011 -> (inverted) 01110100 -> (to decimal) 116 -> (negative sign added) **-116**
-3. 10111111 -> (-1) 10111110 -> (inverted) 01000001 -> (to decimal) 65 -> (negative sign added) **-65**
+2. 10001100 -> 10001011 -> 01110100 -> 116 -> **-116**
+3. 10111111 -> 10111110 -> 01000001 -> 65 -> **-65**
 {panel end}
 
 
-***How many numbers can be represented using Two's Complement?***
+***Ile liczb można zapisać w kodzie U2?***
 
-While it might initially seem that there is no bit allocated as the sign bit, the left-most bit behaves like one.
-With 8 bits, you can still only make 256 possible patterns of 0's and 1's. If you attempted to use 8 bits to represent positive numbers up to 255, and negative numbers down to -255, you would quickly realise that some numbers were mapped onto the same pattern of bits. Obviously, this will make it impossible to know what number is actually being represented!
+Wiadomo już, że na 8 bitach można zapisać 256 różnych liczb. W przypadku kodu U2 największą możliwą liczbą nie będzie 255.
+Trzeba pamiętać, że skrajny lewy bit to bit znaku!
 
-In practice, numbers within the following ranges can be represented. **Unsigned Range** is how many numbers you can represent if you only allow positive numbers (no sign is needed), and **Two's Complement Range** is how many numbers you can represent if you require both positive and negative numbers.
-You can work these out because the range of unsigned values (for 8 bits) will be from 00000000 to 11111111,
-while the unsigned range is from 10000000 (the lowest number) to 01111111 (the highest).
+W praktyce można zapisać liczby z zakresów podanych w tabeli. 
 
-|      Number     |        Unsigned Range           |                Two's Complement Range                    |
+Wynika to wprost z faktu, że dla 8 bitów w kodzie naturalnym najmniejsza liczba ma kod 00000000, a największa -- 11111111.
+W kodzie uzupełnienowym (U2) wygląda to inaczej: 10000000 (kod najmniejszej liczby) i 01111111 (kod największej liczby).
+
+|      liczba bitów     |        zakres liczb w kodzie naturalnym           |               zakres liczb w kodzie U2                    |
 |-----------------|---------------------------------|----------------------------------------------------------|
 | 8 bit		  | 0 to 255                        | -128 to 127                                              |
 | 16 bit	  | 0 to 65,535                     | -32,768 to 32,767                                        |
