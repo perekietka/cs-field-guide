@@ -666,9 +666,9 @@ Drugi sposób (uzupełnienie do 2) jest powszechnie w użyciu, gdyż pozbawiony 
 
 Istnieją jeszcze inne sposoby kodowania liczb ujemnych (np. uzupłenienie do 1, kodowanie z przesunięciem), ale metoda U2 jest najbardziej powszechna.
 
-## Text
+## Tekst
 
-There are several different ways in which computers use bits to store text. In this section, we will look at some common ones and then look at the pros and cons of each representation.
+Istnieje kilka różnych sposobów używanych przez komputery do zapisywania znaków i tekstów. W tym rozdziale przyjrzymy się najczęściej stosowanym. Opiszemy zalety i wady każdej z metod.
 
 ### ASCII
 
@@ -676,25 +676,22 @@ W poprzednim podrozdziale stwierdziliśmy, że sześć punktów systemu Braille'
 
 Spróbuj policzyć, ile różnych dużych liter, małych liter, liczb i innych znaków możesz wprowadzić do edytora tekstu, używając klawiatury komputerowej. (Nie zapomnij o znakach, które współdzielą klawisze z liczbami i o znakach interpunkcyjnych!) 
 
-{panel type="jargon-buster" summary="Characters"}
-The collective name for upper-case letters, lower-case letters, numbers, and symbols is *characters* e.g. a, D, 1, h, 6, \*, ], and ~ are all characters.
-Importantly, a space is also a character.
+{panel type="jargon-buster" summary="Znaki"}
+Wspólną nazwą dla dużych i małych liter, liczb i symboli jest *znak* (ang. character). Na przykład a, D, 1, h, 6, \*, ], jak również ~ (tylda) są wszystkie znakami.
+Należy podkreślić, że spacja (odstęp) jest również znakiem.
 {panel end}
 
-If you counted correctly, you should find that there were more than 64 characters, and you might have found up to around 95.
-Because 6 bits can only represent 64 characters, we will need more than 6 bits;
-it turns out that we need at least 7 bits to represent all of these characters as this gives 128 possible patterns.
-This is exactly what the **ASCII** representation for text does.
+Jeśli ktoś dokładnie policzył, to wie, że znaków jest więcej niż 64, bo ponad 90! Użycie 6 bitów nie wystarczy, by zapisać wszystkie znaki. Okazuje się, że potrzeba przynajmniej 7 bitów. Dokładnie tyle zastosowano w oryginalnej wersji kodowania **ASCII**.
 
-{panel type="challenge" summary="Why 7 bits?"}
-In the previous section, we explained what happens when the number of dots was increased by 1 (remember that a dot in Braille is effectively a bit). Can you explain how we knew that if 6 bits is enough to represent 64 characters, then 7 bits must be enough to represent 128 characters?
+{panel type="challenge" summary="Dlaczego 7 bitów?"}
+W poprzednim rozdziale wyjaśniliśmy, co dzieje się po zwiększeniu liczby punktów o 1 (pamiętaj, że kod Braille'a jest kodem binarnym). Możesz wyjaśnić, skąd wiadomo, że 6 bitów wystarczy do zapisu 64 znaków, a 7 bitów pozwala na zapis nawet 128 znaków?
 {panel end}
 
 Koncepcją zastosowaną w ASCII było przypisanie różnych wzorców bitowych każdemu ze znaków stosowanych w tekstach angielskich (oraz pewnej liczbie tzw. znaków sterujących, używanych dawniej w aparatach dalekopisowych – dziś tylko niektóre z nich mają zastosowanie w technice komputerowej, ale ten wątek pominiemy). W dzisiejszej postaci kodu ASCII dla języka angielskiego stosuje się wzorce 8-bitowe (oktety bitów, czy bajty), w których pierwszy bit ma zawsze wartość 0, co znaczy, że kod pozwala na zapis 128 znaków. 
 
 W tabeli przedstawiono zestawienie znaków i odpowiadajacych im wzorców 7-bitowych:
 
-| Postać binarna  | Znak  | Postać binarna  | Znak | Postać binarna  | Znak  |
+| postać binarna  | znak  | postać binarna  | znak | postać binarna  | znak  |
 |---------|-------|---------|------|---------|-------|
 | 0100000 | spacja (odstęp) | 1000000 | @    | 1100000 | `     |
 | 0100001 | !     | 1000001 | A    | 1100001 | a     |
@@ -732,8 +729,8 @@ W tabeli przedstawiono zestawienie znaków i odpowiadajacych im wzorców 7-bitow
 Przykład: Litera c (mała litera) ma w tabeli przypisany wzorzec: „01100011” (0 na początku jest dopełnieniem kodu do 8 bitów). Litera o ma wzorzec „01101111”.
 Warto w ramach ćwiczenia zapisać jakieś angielskie słowo, używając kodu ASCII i dać komuś innemu, kto również zapoznaje się z tym tematem, do odkodowania. 
 
-{panel type="teacher-note" summary="Using the table"}
-Exchanging short messages in code will force students to use the table, and they should start to pick up some of the patterns (e.g. capital letters have a different code to lower case letters, but they only have one bit different.)
+{panel type="teacher-note" summary="Jak stosować tablicę?"}
+Należy polecić uczniom wymianę krótkich wiadomości zapisanych w kodzie ASCII. Wtedy będą mieli okazję dostrzec pewne prawidłowości, wzorce (np. duże litery różnią się od odpowiadających im małych liter tylko na jednym bicie).
 {panel end}
 
 Computers can represent pieces of text with sequences of these patterns, much like Braille does. For example, the word “computers” (all lower-case) would be 01100011 01101111 01101101 01110000 01110101 01110100 01100101 01110010 01110011. This is because "c" is "01100011", "o" is "01101111", and so on.
