@@ -1098,6 +1098,10 @@ Wyobraźmy sobie sytuację, w której do zapisu informacji o kolorze mamy używa
 
 #### Zakres kolorów
 
+Kolejne narzędzie (poniżej) pozwala zobaczyć, jaki będzie efekt stosowania coraz mniejszej palety (głębi) kolorów, łącznie z sytuacją pominięcia informacji o kolorze (0 bitów!). Możesz wybrać obraz z menu. W którym przypadku zmiana jakości jest najbadziej dostrzegalna? W którym mniej? Kiedy należy troszczyć się o w miarę pełne zachowanie informacji o kolorach? Kiedy nie ma to większego znaczenia (tj. wystarczy nam obraz dwukolorowy)?
+
+Można zapytać, czy zyskalibyśmy coś zapisując informację o kolorze z użyciem liczby bitów większej niż 24? Okazuje się, że ludzkie oko potrafi rozróżniać ok. 10 milionów kolorów, więc liczba kolorów dla głębi 24-bitowej (ponad 16 milionów) jest większa. Czasami jednak stosuje się więcej bitów, np. w przypadku, gdy chcemy na obrazie odzwierciedlić kontrast.
+
 Wykonując eksperyment z użyciem narzędzia poniżej można się przekonać jaki będzie efekt zmniejszenia głębi koloru. Określ kolor klikając na obrazku po lewej stronie, a następnie spróbuj uzyskać odpowiednie dla wybranego koloru ustawienie suwaków 24-bitowych (po kilku próbach wyświetlony zostanie komunikat-wskazówka; zamiast myszy możesz używać strzałek na klawiaturze, aby precyzyjnie ustawić suwaki). Przekonasz się, że określony wcześniej kolor można precyzyjnie opisać, używając reprezentacji 24-bitowej.
 
 Następnie spróbuj to powtórzyć dla suwaków w wersji 8-bitowej. W tym przypadku na opis składowych czerwonej i zielonej przypadać będzie jedna z ośmiu możliwych wartości, a dla niebieskiej — jedna z czterech wartości!
@@ -1111,42 +1115,40 @@ Inaczej mówiąc: trzykrotne zmniejszenie liczby bitów z 24 do 8 ma taki skutek
 Dlaczego najmniejszą liczbę bitów przeznaczyliśmy na składową niebieską? Okazuje się, że ludzkie oko jest najmniej wrażliwe na kolor niebieski i dlatego tak można było postąpić. W komputerze łatwiej przetwarzać grupy składające się z 8 bitów niż z 9 bitów.
 
 {panel type="jargon-buster" summary="Głębia koloru"}
-The number of bits used to represent the colours of pixels in a particular image is sometimes referred to as its "colour depth" or "bit depth". For example, an image or display with a colour depth of 8-bits has a choice of 256 colours for each pixel. There is [more information about this in Wikipedia](https://en.wikipedia.org/wiki/Color_depth). Drastically reducing the bit depth of an image can make it look very strange; sometimes this is used as a special effect called "posterisation" (ie. making it look like a poster that has been printed with just a few colours).
+Z informacją o liczbie bitów zastosowanych do zapisu informacji o kolorach pikseli wiąże się ściśle określenie „głębia koloru” (lub „głębia bitowa”). Przykład: obraz o 8-bitowej głębi koloru to taki, w którym każdy z pikseli ma przyspisany jeden z 256 kolorów palety barw. Trzeba podkreślić, że drastyczne zmniejszenie głębi koloru może dać taki efekt, że obraz będzie wyglądał bardzo dziwnie (utrata kolorów prowadzi do powstania fałszywych konturów). Czasami taki efekt jest stosowany w programach graficznych specjalnie. Mówi się wtedy o efekcie posteryzcji (tj. upodobnieniu obrazu do plakatów, które drukuje się z użyciem tylko kilku kolorów).
 {panel end}
 
-{panel type="curiosity" summary="Colour depth and compression"}
-There's a subtle boundary between low quality data representations (such as 8-bit colour) and compression methods. In principle, reducing an image to 8-bit colour is a way to compress it, but it's a very poor approach, and a proper compression method like JPEG will do a much better job.
+{panel type="curiosity" summary="Głębia koloru a kompresja"}
+Jest subtelna różnica między zapisem informacji o obrazie z użyciem mniejszej liczby bitów (np. 8-bitowy kolor) a metodami kompresji. Choć redukacja liczby bitów do 8 skutkuje zmniejszeniem rozmiaru danych, to jednak takie podejście trudno nazwać skuteczną kompresją danych. 
+W sytuacji, kiedy chcemy uzyskać mniejszy rozmiar pliku z informacją graficzną, stosuje stosuje się powszechnie kompresję (np. dla formatów plików JPEG, GIF i PNG). Takie zapis wymaga jednak pewnego czasu przetwarzania obrazu przy zapisie oraz odczycie, a więc wydłuża się czas potrzebny np. na wyświetlenie obrazu. 
 {panel end}
 
-#### What impact does fewer bits have on the overall image?
+#### Jaki wpływ na jakość obrazu ma zmniejszenie głębi koloru?
 
-The following interactive shows what happens to images when you use a smaller range of colours (including right down to zero bits!) You can choose an image using the menu or upload your own one. In which cases is the change in quality most noticeable? In which is it not? In which would you actually care about the colours in the image? In which situations is colour actually not necessary (i.e. when are we fine with two colours)?
+Kolejne narzędzie (poniżej) pozwala na pracę z dowolnym obrazem (np. z Twojego komputera) i eksperymentowanie z przydzielaniem różnej liczby bitów do zapisu informacji o kolorze. Warto sprawdzić efekty na kilku przykładach, aby lepiej zrozumieć temat. Wybrany obraz z Twojego dysku przeciągnij myszką w miejsce obrazu w tej chwili wyświetlanego.
 
 {interactive name="image-bit-comparer" type="whole-page" text="Image Bit Comparer"}
 
-{panel type="additional-information" summary="Software for exploring colour depth"}
-Although we provide a simple interactive for reducing the number of bits in an image, you could also use software like Gimp or Photoshop to save files with different colour depths.
-{panel end}
+Okazuje się, że głębia 8-bitowa, a nawet 16-bitowa, nie wystarcza do dobrego odzwierciedlenia subtelnych przejść tonalnych na skórze twarzy. 
 
-You probably noticed that 8-bit colour looks particularly bad for faces, where we are used to seeing subtle skin tones. Even the 16-bit colour is noticably worse for faces.
+W niektórych przypadkach obrazy 16-bitowe mogą być prawie tak samo dobre, jak 24-bitowe. 
 
-In other cases, the 16-bit images are almost as good as 24-bit images unless you look really carefully. They also use two-thirds (16/24) of the space that they would with 24-bit colour. For images that will need to be downloaded on 3G devices where internet is expensive, this is worth thinking about carefully.
-
-Have an experiement with the following interactive, to see what impact different numbers of bits for each colour has. Do you think 8 bit colour was right in having 2 bits for blue, or should it have been green or red that got only 2 bits?
+Poniżej znajduje się narzędzie, które pozwala dostrzec efekt różnego przydziału bitów dla trzech składowych RGB.
 
 {interactive name="image-bit-comparer" type="whole-page" text="Image Bit Comparer - Change Bits mode" parameters="change-bits=true"}
 
-{panel type="curiosity" summary="Do we ever need more than 24 bit colour?"}
-One other interesting thing to think about is whether or not we’d want more than 24 bit colour. It turns out that the human eye can only differentiate around 10 million colours, so the ~ 16 million provided by 24 bit colour is already beyond what our eyes can distinguish. However, if the image were to be processed by some software that enhances the contrast, it may turn out that 24-bit colour isn't sufficient. Choosing the representation isn't simple!
+{panel type="curiosity" summary="Czy kiedykolowiek potrzeba więcej niż 24 bity?"}
+Można zapytać, czy zyskalibyśmy coś zapisując informację o kolorze z użyciem liczby bitów większej niż 24? Okazuje się, że ludzkie oko potrafi rozróżniać ok. 10 milionów kolorów, więc liczba kolorów dla głębi 24-bitowej (ponad 16 milionów) jest większa. Czasami jednak stosuje się więcej bitów, np. w przypadku, gdy chcemy na obrazie odzwierciedlić kontrast.
+
 {panel end}
 
-#### How much space will low quality images save?
+#### Ile zaoszczędzimy zapisując obrazy o niskiej jakości?
 
-An image represented using 24 bit colour would have 24 bits per pixel. In 600 x 800 pixel image (which is a reasonable size for a photo), this would contain {math}600 \times 800 = 480,000 {math end} pixels, and thus would use {math}480,000 \times 24 bits = 11,520,000 {math end} bits. This works out to around 1.44 megabytes. If we use 8-bit colour instead, it will use a third of the memory, so it would save nearly a megabyte of storage. Or if the image is downloaded then a megabyte of bandwidth will be saved.
+Rodzi się pytanie: Czy warto zaoszczędzić na pamięci, tracąc na jakości obrazu? W przypadku obrazu zapisanego z użyciem 24 bitów na piksel o rozmiarach 800 x 600 pikseli liczba bitów informacji o obrazie będzie równa  600 x 800 x 24 bity = 11 520 000 bitów, czyli ok. 1,44 megabajta. Jeśli zastosujemy 8 bitów na piksel, zaoszczędzimy 2/3 tej pamięci, czyli prawie 1MB. 
 
-8 bit colour is not used much anymore, although it can still be helpful in situations such as accessing a computer desktop remotely on a slow internet connection, as the image of the desktop can instead be sent using 8 bit colour instead of 24 bit colour. Even though this may cause the desktop to appear a bit strange, it doesn’t stop you from getting whatever it was you needed to get done, done. Seeing your desktop in 24 bit colour would not be very helpful if you couldn't get your work done!
+Współcześnie rzadko używa się już systemu 8-bitowego. Choć zdarza się, że stosuje się takie rozwiązanie np. w sytuacji zdalnej pracy na innym komputerze, z użyciem graficznego interfejsu użytkownika, kiedy nie ma szeropasmowego dostępu do sieci. Obraz pulpitu wygląda wtedy dziwnie, ale to nie ma wtedy większego znaczenia, bo ciągle jesteśmy w stanie wykonać pracę, którą zamierzaliśmy łącząc się z tym komputerem. Podobnie w przypadku tworzenia niektórych typów grafik, takich jak diagramy, czy rysunki czarno-białe (line art), stosuje się zmniejszoną liczbę bitów przy zapisie. Warto wspomnieć, że wiele ikon (pulpitu) jest 8-bitowych.
 
-In some countries, mobile internet data is very expensive. Every megabyte that is saved will be a cost saving. There are also some situations where colour doesn’t matter at all, for example diagrams, and black and white printed images.
+
 
 #### What about in practice?
 
