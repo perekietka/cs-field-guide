@@ -569,39 +569,40 @@ W kodzie uzupełnienowym (U2) wygląda to inaczej: 10000000 (kod najmniejszej li
 
 |      liczba bitów     |        zakres liczb w kodzie naturalnym           |               zakres liczb w kodzie U2                    |
 |-----------------|---------------------------------|----------------------------------------------------------|
-| 8 bit		  | 0 to 255                        | -128 to 127                                              |
-| 16 bit	  | 0 to 65,535                     | -32,768 to 32,767                                        |
-| 32 bit	  | 0 to 4,294,967,295              | −2,147,483,648 to 2,147,483,647                          |
-| 64 bit	  | 0 to 18,446,744,073,709,551,615 | −9,223,372,036,854,775,808 to 9,223,372,036,854,775,807  |
+| 8 bit		  | 0 to 255                        | od -128 do 127                                              |
+| 16 bit	  | 0 to 65 535                     | od -32 768 do 32 767                                        |
+| 32 bit	  | 0 to 4 294 967 295              | od −2 147 483 648 do 2 147 483 647                          |
+| 64 bit	  | 0 to 18 446 744 073 709 551 615 | od −9 223 372 036 854 775 808 do 9,223,372,036,854,775,807  |
 
 
-#### Adding negative binary numbers
+#### Ddodawanie liczb ujemnych
 
-Before adding negative binary numbers, we'll look at adding positive numbers.
-It's basically the same as the addition methods used on decimal numbers, except the rules are way simpler because there are only two different digits that you might add!
+Spójrzmy najpierw na dodawanie liczb dodatnich.
+Reguły są analogiczne do tych znanych z pisemnego sposobu dodowania liczb w systemie dziesiętnym. Jest przy tym prościej: są tylko dwa rodziaje cyfr, więc upraszcza się tabliczna dodawania!
 
-You've probably learnt about column addition. For example, the following column addition would be used to do **128 + 255**.
+Sposób pisemnego dodawania przypomniemy na przykładzie **128 + 255**.
 
 ```
-  1   (carries)
+  1   (przeniesienie)
  128
 +255
 ----
  383
 ```
 When you go to add 5 + 8, the result is higher than 9, so you put the 3 in the one's column, and carry the 1 to the 10's column. Binary addition works in exactly the same way.
+Zauważmy, że wynik dodawania 5 + 8 jest liczbą większą od 9. Dlatego na pozycji jedności w wyniku zapisujemy 3, a 10 (=13-3) stanowi jedną dziesiątkę, więc mówimy o przeniesieniu (dodatkowy składnik w kolumnie dziesiątek). 
+Dodawanie w systemie binarnym realizuje się w analogiczny sposób.
 
-***Adding positive binary numbers***
+***Dodawanie liczb dodatnich***
 
-If you wanted to add two positive binary numbers, such as **00001111** and **11001110**, you would follow a similar process to the column addition.
-You only need to know 0+0, 0+1, 1+0, and 1+1, and 1+1+1.
-The first three are just what you might expect.
-Adding 1+1  causes a carry digit, since in binary 1+1 = 10, which translates to "0, carry 1" when doing column addition.
-The last one, 1+1+1 adds up to 11 in binary, which we can express as "1, carry 1".
-For our two example numbers, the addition works like this:
+Chcąc wykonać dodawanie dwóch liczb, np. **00001111** i **11001110**, należy się posłużyć sposobem pisemnym dodawania (w kolumnach).
+W przypadku systemu binarnego wszystkie reguły, jaki trzeba znać dotyczą działań: 0+0, 0+1, 1+0, 1+1 oraz 1+1+1.
+Wyniki pierwszych trzech dodawań są oczywiste. Dodawanie 1+1 kończy się przeniesieniem, gdyż 1+1=10 (binarnie). W zapisie sposobem pisemnym oznacza to zapisanie 0 jako wyniku częściowego i przeniesienie 1 do kolumny z lewej (o ile istnieje). 
+Ostatnie dodawanie, 1+1+1 daje sumę 11 (binarnie), co oznacza zapisanie 1 jako wyniku częściowego i przeniesienie 1 do kolumny z lewej (o ile istnieje).
+Oto przykład:
 
 ```
-    111   (carries)
+    111   (przeniesienie)
  11001110
 +00001111
 ---------
@@ -609,8 +610,9 @@ For our two example numbers, the addition works like this:
 ```
 
 Remember that the digits can be only 1 or 0. So you will need to carry a 1 to the next column if the total you get for a column is (decimal) 2 or 3.
+Trzeba pamiętać, że w zapisie binarnym używa się wyłącznie cyfr 1 i 0. To oznacza konieczność przeniesienia 1 do kolumny na wyższej pozycji (z lewej), gdy suma częściowa jest równa 2 lub 3 (dziesiętnie).
 
-***Adding negative numbers with a simple sign bit***
+***Dodawanie liczb ujemnych w kodzie bit-znak***
 
 With negative numbers using sign bits like we did before, this does not work. If you wanted to add **+11 (01011)** and **-7 (10111)**, you would expect to get an answer of **+4 (00100)**.
 
