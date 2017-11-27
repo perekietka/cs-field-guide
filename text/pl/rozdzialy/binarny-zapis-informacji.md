@@ -936,20 +936,20 @@ What is interesting to notice is that a single emoji will look very different ac
 Co ciekawe, pojedyncze znaki emoji mogą mieć różny wygląd w zależności od platformy, tj.  &#128518 (czyli uśmiechnięta twarz z otwartymi ustami i przymkniętymi oczami) zapisana jako element tweeta będzie wyglądać inaczej niż na IPhone'ie. 
 {panel end}
 
-### Project: Messages hidden in music
+### Projekt: Wiadomość ukryta w muzyce
 
-There are messages hidden in this video using a 5-bit representation. See if you can find them! Start by reading the explanation below to ensure you understand what we mean by a 5-bit representation.
+W nagraniu wideo udostępnionym poniżej ukryte są wiadomości zapisane z użyciem 5 bitów. Sprawdź, czy je znajdziesz! 
 
 {video url="https://www.youtube.com/watch?v=L-v4Awj_p7g"}
 
-If you *only* wanted to represent the 26 letters of the alphabet, and weren’t worried about upper-case or lower-case, you could get away with using just 5 bits, which allows for up to 32 different patterns.
+Jeśli założyć, że chcemy zapisywać 26 liter angielskiego alfabetu (bez rozróżniania małych i dużych liter), to okazuje się, że 5 bitów wystarczy. 
 
 You might have exchanged notes which used 1 for "a", 2 for "b", 3 for "c", all the way up to 26 for "z". We can convert those numbers into 5 digit binary numbers.
-In fact, you will also get the same 5 bits for each letter by looking at the last 5 bits for it in the ASCII table (and it doesn't matter whether you look at the upper case or the lower case letter).
+Niech 1 odpowiada literze "a", 2 -- literze "b", 3 --"c", a 26 -- "z". (Istotnie jeśli kody ASCII liter "obciąć" do 5 bitów mniej znaczących, to otrzymamy kody odpowiadające 1, 2, ..., 26.)
 
-Represent the word "water" with bits using this system. Check the below panel once you think you have it.
+Zapisz słowo "water" używając opisanego wyżej schematu 5-bitowego kodowania.
 
-{panel type="spoiler" summary="Representation for water}
+{panel type="spoiler" summary="Odpowiedzi"}
 ```
 w: 10111
 a: 00001
@@ -959,19 +959,18 @@ r: 10010
 ```
 {panel end}
 
-**Now, have a go at decoding the music video!**
+**Teraz czas na zdekodowanie wiadomości ukrytej w utworze muzycznym!**
 
-{panel type="teacher-note" summary="More information about the video"}
-The video actually contains over 20 hidden messages, all using the 5-bit system.
-An easy one to start with is the drum solo at the beginning.
-The first 5 sounds are "kick kick snare kick kick".
-Students need to decide which is 0 and which is 1; this number could either be 00100
-(letter number 4, which is "d") or 11011 (letter number 27, which doesn't exist!)
-Carrying on with the first option, the first few letters will spell "drum".
+{panel type="teacher-note" summary="Więcej informacji o nagraniu wideo"}
 
-The challenges get harder (there are messages in most instrument parts and singing, as well as the dancing and background colours).
-The song itself talks about how it is a form of "steganography", a term that students might like to research.
+W nagraniu wideo odnaleźć można ponad 20 ukrytych wiadomości, zawsze zapisanych z użyciem 5 bitów.
+Na początku mamy solo na bębnie. Pierwsze pięć dźwięków to: "kick kick snare kick kick".
+Uczniowie powinni zdecydować, który odpowiada cyfrze 0, a który cyfrze 1. Liczba zakodowana to: 00100
+("d") lub 11011 (dziesiętnie to 27, co nie jest kodem żadnej litery!) 
+Pierwsza wiadomość to "drum" (pol. bęben).
 
+Kolejne wyzwania stają się trudniejsze (wiadomości zakodowane są również w śpiewie, ale i w tańcu oraz kolorach tła).
+Piosenka opowiada o steganografii. Warto, by uczniowie poszukali wyjaśnienia tego terminu.
 {panel end}
 
 
