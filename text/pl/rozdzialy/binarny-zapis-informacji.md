@@ -733,55 +733,46 @@ Warto w ramach ćwiczenia zapisać jakieś angielskie słowo, używając kodu AS
 Należy polecić uczniom wymianę krótkich wiadomości zapisanych w kodzie ASCII. Wtedy będą mieli okazję dostrzec pewne prawidłowości, wzorce (np. duże litery różnią się od odpowiadających im małych liter tylko na jednym bicie).
 {panel end}
 
-Computers can represent pieces of text with sequences of these patterns, much like Braille does. For example, the word “computers” (all lower-case) would be 01100011 01101111 01101101 01110000 01110101 01110100 01100101 01110010 01110011. This is because "c" is "01100011", "o" is "01101111", and so on.
-Have a look at the ASCII table above to check that we are right!
+W komputerach teksty w języku angielskim są zapisywane w postaci ciągów (sekwencji) wzorców 8-bitowych, bardzo podobnie jak to było z zapisem w Braille'u. Dla przykładu słowo „computers” będzie zapisane jako: 01100011 01101111 01101101 01110000 01110101 01110100 01100101 01110010 01110011.
+Litera "c" ma kod 01100011, litera "o" ma kod 01101111 itd. Spójrz do tablicy ASCII, aby to sprawdzić! 
 
-{panel type="curiosity" summary="What does ASCII stand for?"}
-The name "ASCII" stands for "American Standard Code for Information Interchange", which was a particular way of assigning bit patterns to the characters on a keyboard.
-The ASCII system even includes "characters" for ringing a bell (useful for getting attention on old telegraph systems),
-deleting the previous character (kind of an early "undo"),
-and "end of transmission" (to let the receiver know that the message was finished).
-These days those characters are rarely used, but the codes for them still exist (they are the missing patterns in the table above).
-Nowadays ASCII has been supplanted by a code called "UTF-8",
-which happens to be the same as ASCII if the extra left-hand bit is a 0,
-but opens up a huge range of characters if the left-hand bit is a 1.
+{panel type="curiosity" summary="Co oznacza skrót ASCII?"}
+Nazwa „ASCII” jest skrótem od „American Standard Code for Information Interchange”. Była to standaryzacja sposobu kodowania znaków w maszynie dalekopisowej (zautomatyzowanym systemie telegraficznym). Dlatego system ASCII zawiera takie „znaki” dla sygnału dzwonka, dla informacji o potrzebie usunięcia poprzedniego znaku (jakby przodek polecenia „cofnij”), czy dla potwierdzenia zakończenia transmisji (END). We fragmencie tabeli ASCII, zamieszczonym powyżej, znajdziesz tylko jeden z nich (DEL). Resztę pominięto.  
+Dzisiaj system ASCII został wyparty przez kodowanie UTF-8. Należy podkreślić, że teksty angielskie zakodowane w UTF-8 mają identyczną reprezentację binarną, co teksty w ASCII, gdyż pierwszy bit każdego 8-bitowego wzorca jest wówczas równy 0. Inaczej mówiąc plik tekstowy zawierający wzorce 1xxxxxxx z całą pewnością nie jest zapisany w kodzie ASCII i zawiera informacje o znakach spoza alfabetu angielskiego.
+
 {panel end}
 
 
-{panel type="challenge" summary="More practice at ASCII"}
-Have a go at the following ASCII exercises
+{panel type="challenge" summary="Więcej o ASCII"}
+Odpowiedz na następujące pytania:
 
-- How would you represent “science” in ASCII?
-- How would you represent "Wellington" in ASCII? (note that it starts with an upper-case “W”)
-- How would you represent “358” in ASCII (it is three characters, even though it looks like a number)
-- How would you represent "Hello, how are you?" (look for the comma, question mark, and space characters in ASCII table)
+Jak zapisać słowo „science”, używając kodu ASCII? A słowo „Wellington” (zauważ, że słowo rozpoczyna się dużą literą „W”)? Jak zapisać „358” (czyli ciąg trzech cyfr)? Zapisz całe zdanie: „Hello, how are you?” (odszukaj w tabeli kodów ASCII wzorca dla przecinka, znaku zapytania i spacji).
 
-Be sure to have a go at all of them before checking the answer!
 {panel end}
 
-{panel type="spoiler" summary="Answers to questions above"}
+{panel type="spoiler" summary="Odpowiedzi"}
 
-These are the answers.
+Oto odpowiedzi:
 
 - "science" = 01110011 01100011 01101001 01100101 01101110 01100011 01100101
 - "Wellington" = 01010111 01100101 01101100 01101100 01101001 01101110 01100111 01110100 01101111 01101110
 - "358" = 00110011 00110101 00111000
 
-Note that the text "358" is treated as 3 characters in ASCII, which may be confusing, as the text "358" is different to the number 358! You may have encountered this distinction in a spreadsheet e.g. if a cell starts with an inverted comma in Excel, it is treated as text rather than a number. One place this comes up is with phone numbers; if you type 027555555 into a spreadsheet as a number, it will come up as 27555555, but as text the 0 can be displayed.
-In fact, phone numbers aren't really just numbers because a leading zero can be important, as they can contain other characters -- for example, +64 3 555 1234 extn. 1234.
+Zauważ, że ciąg znaków "358" (w kodzie ASCII) można pomyliźć z liczbą 358! Z taką sytuacją możesz spotkać się np. w arkuszu kalkulacyjnym. Warto wiedzieć, że poprzedzenie pierwszej cyfry znakiem ' niejako wymusza, by arkusz traktował cyfry jako znaki tekstu, a nie liczby. To jest istotne np. gdy chcemy zapisać numer telefonu. Domyślnie 027555555 przez artkusz będzie potraktowane jako 27555555 (pominięte będzie 0).
 {panel end}
 
-#### ASCII usage in practice
+#### ASCII w praktyce
 
-ASCII was first used commercially in 1963, and despite the big changes in computers since then, it is still the basis of how English text is stored on computers. ASCII assigned a different pattern of bits to each of the characters, along with a few other “control” characters, such as delete or backspace.
+Kod ASCII jest stosowany w technice komputerowej i telekomunikacji już od roku 1963. Pomimo wielkich zmian w konstrukcji komputerów i systemów operacyjnych, kodowanie ASCII jest ciągle podstawą komputerowych systemów zapisu tekstu w języku angielskim.
 
-English text can easily be represented using ASCII, but what about languages such as Chinese where there are thousands of different characters? Unsurprisingly, the 128 patterns aren’t nearly enough to represent such languages. Because of this, ASCII is not so useful in practice, and is no longer used widely. In the next sections, we will look at Unicode and its representations. These solve the problem of being unable to represent non-English characters.
+Dla tekstów w języku angielskim kod ASCII jest wystarczającym rozwiązaniem. Co jednak zrobić w przypadku języków takich, jak chiński, w których stosuje się tysiące różnych znaków? 128 kombinacji zerojedynkowych to za mało! ASCII dzisiaj nie jest już powszechnie stosowany. Używa się rozwiązania zwanego Unicode.
 
-{panel type="curiosity" summary="What came before ASCII?"}
-There are several other codes that were popular before ASCII, including the [Baudot code](https://en.wikipedia.org/wiki/Baudot_code) and [EBCDIC](https://en.wikipedia.org/wiki/EBCDIC). A widely used variant of the Baudot code was the "Murray code", named after New Zealand born inventor [Donald Murray](https://en.wikipedia.org/wiki/Donald_Murray_(inventor\)). One of Murray's significant improvements was to introduce the idea of "control characters", such as the carriage return (new line). The "control" key still exists on modern keyboards.
+{panel type="curiosity" summary="Co było przed ASCII?"}
+Warto wspomnieć, że zanim pojawił się standard ASCII w usługach telegraficznych stosowano inne standardy: kod Baudota i EBCDIC. 
+Powszechnie stosowana była odmiana kodu o nazwie "Baudot-Murray code". Jej autorem był Donald Murray, urodzony w Nowej Zelandii. Jednym z elementów kodu było wprowadzenie "kodów kontrolnych", takich jak kod powrotu karerki i nowej linii. Zauważ, że przycisk "control" nadal jest elementem klawiatury.
 {panel end}
 
-### Introduction to Unicode
+### Wprowadzenie do Unicode
 
 In practice, we need to be able to represent more than just English characters. To solve this problem, we use a standard called **Unicode**. Unicode is a **character set** with around 120,000 different characters, in many different languages, current and historic. Each character has a unique number assigned to it, making it easy to identify.
 
