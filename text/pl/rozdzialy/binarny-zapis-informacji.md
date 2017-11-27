@@ -782,39 +782,32 @@ Poniżej dostępne jest interaktywne narzędzie, które pozwola na zaznajomienie
 
 {interactive name="unicode-chars" type="in-page"}
 
-The most widely used Unicode encoding schemes are called UTF-8, UTF-16, and UTF-32;
-you may have seen these names in email headers or describing a text file.
-Some of the Unicode encoding schemes are **fixed length**, and some are **variable length**.
-**Fixed length** means that each character is represented using the same number of bits.
-**Variable length** means that some characters are represented with fewer bits than others.
-It's better to be **variable length**, as this will ensure that the most commonly used characters are represented with fewer bits than the uncommonly used characters.
-Of course, what might be the most commonly used character in English is not necessarily the most commonly used character in Japanese.
-You may be wondering why we need so many encoding schemes for Unicode.
-It turns out that some are better for English language text, and some are better for Asian language text.
+Najbardziej popularne schematy kodowania Unicode to UTF-8, UTF-16, and UTF-32; takie skróty można czasem zobaczyć w nagłówkach e-maili lub opisach właściwości plików tekstowych. Część schematów to schematy o stałej długości (liczbie bitów np. 32), a inne są zmiennej długości.
+W tym drugim przypadku znaki powszechnie używane zapisuje się z użyciem mniejszej liczby bitów (np. 1 bajta), co daje oszczędność.
+Istnienie wielości schematów kodowania wynika z tego, że różne są lepsze dla różnych języków.
 
-The remainder of the text representation section will look at some of these Unicode encoding schemes so that you understand how to use them, and why some of them are better than others in certain situations.
 
 ### UTF-32
 
-UTF-32 is a **fixed length** Unicode encoding scheme. The representation for each character is simply its number converted to a 32 bit binary number. Leading zeroes are used if there are not enough bits (just like how you can represent 254 as a 4 digit decimal number -- 0254).
-32 bits is a nice round number on a computer, often referred to as a word (which is a bit confusing, since we can use UTF-32 characters to represent English words!)
+UTF-32 jest schematem kodowania Unicode o stałej długości. Kod każdego znaku to liczba 32-bitowa. W praktyce oznacza to, że właściwy kod znaku poprzedza odpowiednia liczba 0 (dopełniająca liczbę bitów do 32). To tak, jak czterocyfrowy zapis liczby 254  -- 0254.
+32 bity określa się czasem jako słowo maszynowe (w architekturze komputera), więc można powiedzieć, że to tzw. okrągła liczba.
 
-For example, the character **H** in UTF-32 would be:
+Na przykład znak **H** w schemacie UTF-32 to:
 ```
 00000000 00000000 00000000 01001000
 ```
 
-The character **$** in UTF-32 would be:
+Znak **$** w schemacie UTF-32 to:
 ```
 00000000 00000000 00000000 00100100
 ```
 
-And the character **犬** in UTF-32 would be:
+A znak **犬** w schemacie UTF-32 to:
 ```
 00000000 00000000 01110010 10101100
 ```
 
-The following interactive will allow you to convert a Unicode character to its UTF-32 representation. The Unicode character's number is also displayed. The bits are simply the binary number form of the character number.
+Poniżej znajduje się interaktywne narzędzie, które pozwala wyznaczyć kod Unicode znaku w schemacie UTF-32.
 
 {interactive name="unicode-binary" type="iframe" parameters="mode=utf32"}
 
