@@ -865,40 +865,40 @@ Poniżej znajduje się interaktywne narzędzie, które pozwola na wyznaczenie ko
 
 {interactive name="unicode-binary" type="iframe" parameters="mode=utf8"}
 
-#### Jak działa UTF-8
+#### Jak działa UTF-8?
 
-So how does UTF-8 actually work? Use the following process to do what the interactive is doing and convert characters to UTF-8 yourself.
+Jak działa kodowanie według schematu UTF-8? Oto instrukcja, która pozwola na znalezienie kodu krok po kroku.
 
-1. Lookup the Unicode number of your character.
+1. Znajdź numer (pozycji) Unicode dla znaku.
 
-2. Convert the Unicode number to a binary number, using as **few** bits as necessary.
-Look back to the section on binary numbers if you cannot remember how to convert a number to binary.
+2. Zapisz numer Unicode w systemie binarnym, używając jak **najmniejszej** liczby bitów.
 
-3. Count how many bits are in the binary number, and choose the correct pattern to use, based on how many bits there were. Step 4 will explain how to use the pattern.
+3. Dopasuj odpowiedni wzorzec (spośród poniższych), na podstawie liczby użytych bitów w kroku 2.
 
   ```
-  7  or fewer bits: 0xxxxxxx
-  11 or fewer bits: 110xxxxx 10xxxxxx
-  16 or fewer bits: 1110xxxx 10xxxxxx 10xxxxxx
-  21 or fewer bits: 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
+  7  lub mniej bitów: 0xxxxxxx
+  11 lub mniej bitów: 110xxxxx 10xxxxxx
+  16 lub mniej bitów: 1110xxxx 10xxxxxx 10xxxxxx
+  21 lub mniej bitów: 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
   ```
 
-4. Replace the x's in the pattern with the bits of the binary number you converted in 2. If there are more x's than bits, replace extra left-most x's with 0's.
+4. Zastąp ciąg x bitami z zapisu binarnego uzyskanego w kroku 2. Jeśli liczba x jest większa od liczby bitów, to zastąp x cyframi 0.
 
-For example, if you wanted to find out the representation for **貓** (cat in Chinese), the steps you would take would be as follows.
+Na przykład dla znalu **貓** (czyli kot w języku chińskim) proces wyznaczania kodu wygląda tak:
 
-1. Determine that the Unicode number for **貓** is **35987**.
-2. Convert **35987** to binary -- giving **10001100 10010011**.
-3. Count that there are **16** bits, and therefore the third pattern **1110xxxx 10xxxxxx 10xxxxx** should be used.
-4. Substitute the bits into the pattern to replace the x's -- **11101000 10110010 10010011**.
+1.  **35987**.
+2.  **10001100 10010011**.
+3. **16** bitów, więc używamy wzorca **1110xxxx 10xxxxxx 10xxxxx**.
+4. **11101000 10110010 10010011**.
 
-Therefore, the representation for **貓** is **11101000 10110010 10010011** using UTF-8.
+Kod znaku **貓** w UTF-8 to: **11101000 10110010 10010011**.
 
 ### UTF-16
 
 Just like UTF-8, UTF-16 is a **variable length** encoding scheme for Unicode. Because it is far more complex than UTF-8, we won't explain how it works here.
+Podobnie jak UTF-8, również UTF-16 jest schematem kodowania zmiennej długości. Jego budowa jest bardziej skomplikowana niż UTF-8. Nie będziemy jej tutaj objaśniać.
 
-However, the following interactive will allow you to represent text with UTF-16. Try putting some text that is in English and some text that is in Japanese into it. Compare the representations to what you get with UTF-8.
+Poniżej znajduje się interaktywne narzędzie, które pozwala zapisać tekst w kodzieUTF-16. Możesz porównać efekty dla różnych języków (np. angielski i japoński) w przypadku stosowania schematów UTF-16 i UTF-8.
 
 {interactive name="unicode-binary" type="iframe" parameters="mode=utf16"}
 
