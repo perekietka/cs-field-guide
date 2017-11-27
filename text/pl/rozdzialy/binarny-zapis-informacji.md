@@ -902,39 +902,38 @@ Poniżej znajduje się interaktywne narzędzie, które pozwala zapisać tekst w 
 
 {interactive name="unicode-binary" type="iframe" parameters="mode=utf16"}
 
-### Comparison of text representations
+### Porównanie metod zapisu znaków i tekstu
 
-We have looked at ASCII, UTF-32, UTF-8, and UTF-16.
+Przedstawiliśmy różne metody kodowania znaków tekstu: ASCII, UTF-32, UTF-8, and UTF-16.
 
-The following table summarises what we have said so far about each representation.
+Poniższa tabela zbiera różne informacje na ich temat.
 
-Representation | Variable or Fixed | Bits per Character | Real world Usage
+kod | typ schematu | liczba bitów na znak | powszechność użycia
 --- | --- | --- | ---
-*ASCII* | Fixed Length | 8 bits | No longer widely used
-*UTF-8* | Variable Length | 8, 16, 24, or 32 bits | Very widely used
-*UTF-16* | Variable Length | 16 or 32 bits | Widely used
-*UTF-32* | Fixed Length | 32 bits | Rarely used
+*ASCII* | stałej długości | 8 bits | obecnie rzadko używany
+*UTF-8* | zmiennej długości | 8, 16, 24, or 32 bits | powszechnie używany
+*UTF-16* | zmiennej długości | 16 or 32 bits | często używany
+*UTF-32* |stałej długości | 32 bits | rzadko używany
 
-In order to compare and evaluate them, we need to decide what it means for a representation to be "good". Two useful criteria are:
+Celem porównania metod kodowania, trzeba określić kryteria uznania kodowania za "dobre". Oto dwa kryteria:
 
-1. Can represent all characters, regardless of language.
-2. Represents a piece of text using as few bits as possible.
+1. Pozwala na zapis wszystkich znajów, niezależnie od języka.
+2. Do zapisu używa możliwie jak najmniejszej liczby bitów.
 
-We know that UTF-8, UTF-16, and UTF-32 can represent all characters, but ASCII can only represent English. Therefore, ASCII fails the first criterion.
-But for the second criteria, it isn't so simple.
+Kodowanie ASCII nie spełnia pierwszego kryterium.
+Z drugim kryterium sprawa nie jest taka prosta.
 
-The following interactive will allow you to find out the length of pieces of text using UTF-8, UTF-16, or UTF-32. Find some samples of English text and Asian text (forums or a translation site are a good place to look), and see how long your various samples are when encoded with each of the three representations. Copy paste or type text into the box.
+The following interactive will allow you to find out the length of pieces of text using UTF-8, UTF-16, or UTF-32. 
+Poniżej znajduje się interaktywne narzędzie, które pozwala na określenie liczby bitów użytych do zapisu krótkiego tekstu z użyciem schematów: UTF-8, UTF-16 i UTF-32. 
 
 {interactive name="unicode-length" type="in-page"}
 
-As a general rule, UTF-8 is better for English text, and UTF-16 is better for Asian text. UTF-32 always requires 32 bits for each character, so is unpopular in practice.
+Można powiedzieć, że UTF-8 jest lepsze dla tekstów w języku angielskim, UTF-16 dla tekstów w językach azjatyckich. 
 
-{panel type="curiosity" summary="Emoji and Unicode"}
-Those cute little characters that you might use in your Facebook statuses, tweets, texts, and so on, are called "emojis", and each one of them has their own Unicode value.
-Japanese mobile operators were the first to use emojis, but their recent popularity has resulted in many becoming part of the Unicode Standard and today there are well over 1000 different emojis included.
-A current list of these can be seen [here](http://unicode.org/emoji/charts/full-emoji-list.html).
+{panel type="curiosity" summary="Emoji i Unicode"}
+Różne urocze małe znaki, które można używać w portalach społecznościowych itp. nazywa się "emojis". Każdy z nich ma numer pozycji w tablicy Unicode. Najpierw eojis pojawiły się Japonii w wiadomościach wysyłanych z telefów komórkowych. Dziś jest ponad 1000 różnych znaków emoji. Ich listę można zobaczyć [tutaj](http://unicode.org/emoji/charts/full-emoji-list.html).
 What is interesting to notice is that a single emoji will look very different across different platforms, i.e. &#128518 ("smiling face with open mouth and tightly-closed eyes") in my tweet will look very different to what it does on your iPhone.
-This is because the Unicode Consortium only provides the character codes for each emoji and the end vendors determine what that emoji will look like, e.g. for Apple devices the "Apple Color Emoji" typeface is used (there are rules around this to make sure there is consistency across each system).
+Co ciekawe, pojedyncze znaki emoji mogą mieć różny wygląd w zależności od platformy, tj.  &#128518 (czyli uśmiechnięta twarz z otwartymi ustami i przymkniętymi oczami) zapisana jako element tweeta będzie wyglądać inaczej niż na IPhone'ie. 
 {panel end}
 
 ### Project: Messages hidden in music
