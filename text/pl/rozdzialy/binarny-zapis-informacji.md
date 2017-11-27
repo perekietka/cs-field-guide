@@ -1164,19 +1164,21 @@ Lekturę tego podrozdziału warto poprzedzić zapoznaniem się opisem języków 
 {panel end}
 
 W pamięci komputera zapsuje się binarnie również ciąg instrukcji tworzących program komputerowy.
+
 Zwykle instrukcje składają się z dwóch części kodu: kodu operacji i operandów.
 
 ```
-li $t0, 10 #Ładuje wartość 10 do rejestru $t0
-li $t1, 20 #Ładuje wartość 20 do rejestru $t1
-#Add the values in $t0 and $t1, put the result in register $a0
+li $t0, 10 #Umieść wartość 10 do rejestru $t0
+li $t1, 20 #Umieść wartość 20 do rejestru $t1
+#Dodaj wartości rejestrów $t0 i $t1, wynik dodawania umieść w rejestrze $a0
 add $a0, $t0, $t1
 ```
 
-In the above machine code program li and add are considered to be operations to "load an integer" and "add two integers" respectively.
-$t0, $t1, and $a0 are register operands and represent a place to store values inside of the machine.
-10 and 20 are literal operands and allow instructions to represent the exact integer values 10 and 20.
-If we were using a 32-bit operating system we might encode the above instructions with each instruction broken into 4 8-bit pieces as follows:
+W powyższym kodzie języka programowania niskiego poziomu programu skróty li i add oznaczają odpowiednio operacje "umieść wartość całkowitą" i "dodaj dwie wartości całkowite". 
+$t0, $t1 i $a0 są operandami (argumentami) i wskazują na miejsca (w rejestrach procesora), gdzie przechowuje się dane.
+10 i 20 są argumentami dla instrukcji, które wymagają argumentów liczbowych.
+
+W przypadku 32-bitowego systemu operacyjnego powyższe instrukcje można by przedstawić jako cztery 8-bitowe oktety:
 
 | Operation |    Op1   |    Op2   |   Op3    |
 |-----------|----------|----------|----------|
@@ -1184,14 +1186,15 @@ If we were using a 32-bit operating system we might encode the above instruction
 | 00001000  | 00000001 | 00000000 | 00010100 |
 | 00001010  | 10000000 | 00000000 | 00000001 |
 
-Our operation will always be determined by the bits in the first 8-bits of the 32-bit instruction.
-In this example machine code, 00001000 means li and 00001010 means add.
-For the li operation, the bits in Op1 are interpreted to be a storage place, allowing 00000000 to represent $t0.
-Similarly the bits in Op1 for the add instruction represent $a0.
 Can you figure out what the bits in Op3 for each instruction represent?
 
-Using bits to represent both the program instructions and data forms such as text, numbers, and images allows entire computer programs to be represented in the same binary format.
-This allows programs to be stored on disks, in memory, and transferred over the internet as easily as data.
+Pierwsze 8 bitów 32-bitowej instrukcji określa jednoznacznie operację do wykonania. 
+W powyższym przykładzie: 00001000 jest kodem operacji li a 00001010 jest kodem operacji add.
+Dla operacji li bity z kolumny Op1 określają miejsce, tj. 00000000 wskazuje na rejestr $t0.
+Podobnie dla operacji add bity z kolumny Op1 wskazują na rejestr $a0.
+Co oznaczają bity z kolumny Op3 dla każdej z instrukcji?
+
+Koncepcja przechowywania w pamięci komputera zarówno instrukcji programu, jak i danych takich jak tekst, obrazy itp. wymaga, aby również programy komputerowe były zapisane w kodzie binanrym. 
 
 ## Podsumowanie
 
