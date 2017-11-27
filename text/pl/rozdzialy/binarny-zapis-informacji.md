@@ -974,45 +974,51 @@ Piosenka opowiada o steganografii. Warto, by uczniowie poszukali wyjaśnienia te
 {panel end}
 
 
-## Images and Colours
+## Obrazy i kolory
 
-### How do computers display colours?
+### Jak komputery wyświetlają kolory?
 
-In school or art class you may have mixed different colours of paint or dye together in order to make new colours.
-In painting it's common to use red, yellow and blue as three "primary" colours that can be mixed to produce lots more colours.
-Mixing red and blue give purple, red and yellow give orange, and so on. By mixing red, yellow, and blue, you can make many new colours.
+Pewnie przypominasz sobie lekcje plastyki, na których mieszaliście farby różnych kolorów, chcąc drogą prób i błędów uzyskać inną barwę. Ile było z tym zabawy! Po wymieszaniu kolorów czerwonego,  i niebieskiego można było uzyskać purpurowy. Po zmieszaniu żółtłego i niebieskiego — zielony. Czerwony w połączeniu z żółtym dawał pomarańczowy. Pewnie próbowaliście również uzyskać czarny przez zmieszanie niebieskiego, czerwonego i żółtego w równych ilościach. Zwykle efekt przypominał bardziej ciemny brąz. Mieszając farby trzech podstawowych kolorów w różnych ilościach, razem z farbą białą lub czarną, uzyskiwaliście wiele różnych, nowych kolorów.
 
-For printing, printers commonly use three slightly different primary colours: cyan, magenta, and yellow (CMY). All the colours on a printed document were made by mixing these primary colours.
+Być może już wiesz, że w atramentowych drukarkach komputerowych też stosuje się tylko trzy podstawowe kolory. To zestaw lepszy od tego z zajęć plastycznych: turkusowy (niebieskozielony, ang. cyan), purpurowy (ang. magneta) oraz żółty (ang. yellow), określany skrótem CMY. Ten sposób mieszania barw nazywa się subtraktywnym, ponieważ można mówić o odejmowaniu (pochłanianiu niektórych długości fal przez powierzchnię). Na początku płótno, czy kartka, jest białe (czyli od powierzchni kartki odbijają się wszystkie składowe), a nałożenie farb działa jak filtr i od koloru białego odejmowane są różne składowe.
 
-Both these kinds of mixing are called "subtractive mixing", because they start with a white canvas or paper, and "subtract" colour from it. The interactive below allows you to experiment with CMY incase you are not familiar with it, or if you just like mixing colours.
+Poniżej znajduje się interaktywne narzędzie, które pozwala na lepsze zrozumienie modelu kolorów CMY.
+
 
 {interactive name="cmy-mixer" type="in-page"}
 
-Computer screens and related devices also rely on mixing three colours, except they need a different set of primary colours because they are *additive*, starting with a black screen and adding colour to it.
-For additive colour on computers, the colours red, green and blue (RGB) are used.
-Each pixel on a screen is typically made up of three tiny "lights"; one red, one green, and one blue. By increasing and decreasing the amount of light coming out of each of these three, all the different colours can be made. The following interactive allows you to play around with RGB.
+Ekran monitora komputerowego (czy wydruk) nie zawiera informacji tylko o jednym kolorze. Obraz składa się z milionów pikseli, a a kolor każdego z nich może inny niż kolory sąsiadujących z nim pikseli. 
+
+Kolory wyświetlane na ekranach telewizorów też uzyskuje się przez zmieszanie kolorów podstawowych: czerwonego (ang. red), zielonego (ang. green) i niebieskiego (ang. blue). Mamy tu jednak do czynienia z modelem addytywnym RGB : ekran na początku jest czarny, a inne kolory uzyskuje się jakby przez dodawanie kolorów (odcieni) trzech składowych subpikseli, świecących z różną intensywnością odpowiednio: na czerwono, na zielono i na niebiesko.
+
+Poniżej znajduje się interaktywne narzędzie, które pozwala na lepsze zrozumienie modelu kolorów RGB.
 
 {interactive name="rgb-mixer" type="in-page"}
 
-See what colours you can make with the **RGB** interactive. Can you make black, white, shades of grey, yellow, orange, and purple?
+Możesz sprawdzić, jak to działa, używając małej aplikacji, zamieszczonej poniżej.
+•    Zmieniaj ustawienia każdego z suwaków.
+•    Jak uzyskać kolor żółty?
+•    Jaki będzie efekt, gdy wszystkie suwaki ustawisz na 0? Jaki, jeśli wszystkie będą mieć wartość 255?
+•    Co zobaczysz, gdy suwaki ustawisz w połowie?
+•    Co się stanie, gdy jeden z suwaków będzie ustawiony do prawej, a dwa inne w połowie?
+•    Jak uzyskać kolory: purpurowy, pomarańczowy i różowy?
+•    Co się stanie, gdy wszystkie suwaki będą ustawione na tę samą wartość?
+•    Jak uzyskać kolor czarny? A biały?
 
-{panel type="spoiler" summary="Hints for above"}
+{panel type="spoiler" summary="Wskazówki"}
 Having all the sliders at the extremes will produce black and white, and if they are all the same value but in between, it will be grey (i.e. between black and white).
 
 Yellow is not what you might expect - it's made from red and green, with no blue.
 {panel end}
 
-{panel type="curiosity" summary="Primary colours and the human eye"}
-There's a very good reason that we mix three primary colours to specify the colour of a pixel.
-The human eye has millions of light sensors in it, and the ones that detect colour are called "cones". There are three different kinds of cones, which detect red, blue, and green light respectively. Colours are perceived by the amount of red, blue, and green light in them. Computer screen pixels take advantage of this by releasing the amounts of red, blue, and green light that will be perceived as the desired colour by your eyes. So when you see "purple", it's really the red and blue cones in your eyes being stimulated, and your brain converts that to a perceived colour.
-Scientists are still working out exactly how we perceive colour, but the representations used on computers seem to be good enough give the impression of looking at real images.
+{panel type="curiosity" summary="Kolory podstawowe a ludzkie oko"}
+Ludzkie oko zawiera miliony światłoczułych receptorów, zwanych czopkami. Istnieją trzy rodzaje czopków: wywołujące odpowiednio wrażenie czerwieni, wrażenie zieleni i wrażenie barwy niebieskiej. Dla przykładu: jeśli na światło reagują z podobną czułością czopki z pierwszej i trzeciej z wyżej wymienionych grup, a czopki z drugiej grupy nie reagują, to mózg postrzega tę barwę jako purpurową (ang. magenta).
 
-{image filename="pixels-on-screens.jpg" alt="This image shows the small red, green, and blue pixels that are used on screens to display colour."}
+{image filename="pixels-on-screens.jpg" alt="Na zdjęciu można zobaczyć trzy rodzaje subpikseli."}
 
-For more information about RGB displays, see [RGB on Wikipedia](https://en.wikipedia.org/wiki/Rgb); for more information about the eye sensing the three colours, see [Cone cell](https://en.wikipedia.org/wiki/Cone_cell) and [trichromacy ](https://en.wikipedia.org/wiki/Trichromacy) on Wikipedia.
 {panel end}
 
-### Describing a colour with numbers
+### Cyfrowy zapis informacji o kolorze
 
 Because a colour is simply made up of amounts of the primary colours -- red, green and blue -- three numbers can be used to specify how much of each of these primary colours is needed to make the overall colour.
 
