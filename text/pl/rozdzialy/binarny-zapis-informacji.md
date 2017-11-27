@@ -1120,7 +1120,6 @@ Z informacją o liczbie bitów zastosowanych do zapisu informacji o kolorach pik
 
 {panel type="curiosity" summary="Głębia koloru a kompresja"}
 Jest subtelna różnica między zapisem informacji o obrazie z użyciem mniejszej liczby bitów (np. 8-bitowy kolor) a metodami kompresji. Choć redukacja liczby bitów do 8 skutkuje zmniejszeniem rozmiaru danych, to jednak takie podejście trudno nazwać skuteczną kompresją danych. 
-W sytuacji, kiedy chcemy uzyskać mniejszy rozmiar pliku z informacją graficzną, stosuje stosuje się powszechnie kompresję (np. dla formatów plików JPEG, GIF i PNG). Takie zapis wymaga jednak pewnego czasu przetwarzania obrazu przy zapisie oraz odczycie, a więc wydłuża się czas potrzebny np. na wyświetlenie obrazu. 
 {panel end}
 
 #### Jaki wpływ na jakość obrazu ma zmniejszenie głębi koloru?
@@ -1152,28 +1151,24 @@ Współcześnie rzadko używa się już systemu 8-bitowego. Choć zdarza się, �
 
 #### What about in practice?
 
+W sytuacji, kiedy chcemy uzyskać mniejszy rozmiar pliku z informacją graficzną, stosuje stosuje się powszechnie kompresję (np. dla formatów plików JPEG, GIF i PNG). Takie zapis wymaga jednak pewnego czasu przetwarzania obrazu przy zapisie oraz odczycie, a więc wydłuża się czas potrzebny np. na wyświetlenie obrazu. 
+
 If space really is an issue, then this crude method of reducing the range of colours isn't usually used; instead, compression methods such as JPEG, GIF and PNG are used.
 
-These make much more clever compromises to reduce the space that an image takes, without making it look so bad, including choosing a better palette of colours to use rather than just using the simple representation discussed above.
-However, compression methods require a lot more processing, and images need to be decoded to the representations discussed in this chapter before they can be displayed.
+Więcej informacji znajdziesz w rozdziale poświęconym kompresji danych!
 
-The ideas in this present chapter more commonly come up when designing systems (such as graphics interfaces) and working with high-quality images (such as RAW photographs), and typically the goal is to choose the best representation possible without wasting too much space.
-
-Have a look at the Compression Chapter to find out more!
-
-## Program Instructions
+## Zapis binarny instrukcji w komputrze
 
 {panel type="caution" expanded="True"}
-Before reading this section, you should have an understanding of low level languages (see the section on [Machine Code in the Programming Languages](chapters/programming-languages.html#machine-code-low-level-languages) chapter).
+Lekturę tego podrozdziału warto poprzedzić zapoznaniem się opisem języków programowania niskiego poziomu w rozdziale. (chapters/programming-languages.html#machine-code-low-level-languages).
 {panel end}
 
-In a similar fashion to representing text or numbers using binary, we can represent an entire actual program using binary.
-Since a program is just a sequence of instructions, we need to decide how many bits will be used to represent a single instruction and then how we are going to interpret those bits.
-Machine code instructions typically have a combination of two pieces: operation and operand.
+W pamięci komputera zapsuje się binarnie również ciąg instrukcji tworzących program komputerowy.
+Zwykle instrukcje składają się z dwóch części kodu: kodu operacji i operandów.
 
 ```
-li $t0, 10 #Load the value 10 into register $t0
-li $t1, 20 #Load the value 20 into register $t1
+li $t0, 10 #Ładuje wartość 10 do rejestru $t0
+li $t1, 20 #Ładuje wartość 20 do rejestru $t1
 #Add the values in $t0 and $t1, put the result in register $a0
 add $a0, $t0, $t1
 ```
@@ -1198,35 +1193,38 @@ Can you figure out what the bits in Op3 for each instruction represent?
 Using bits to represent both the program instructions and data forms such as text, numbers, and images allows entire computer programs to be represented in the same binary format.
 This allows programs to be stored on disks, in memory, and transferred over the internet as easily as data.
 
-## The whole story!
+## Podsumowanie
 
-The kind of image representations covered here are the basic ones used in most digital systems, and the main point of this chapter is to understand how digital representations work, and the compromises needed between the number of bits, storage used, and quality.
+Informacje na temat binarnego zapisu grafiki zawarte w tym rozdziale to informacje podstawowe. Celem rozdziału było ukazać zasadę cyfrowego (binarnego) zapisu informacji oraz zwrócić uwagę na problem kompromisu między rozmiarem danych a jakością.
 
-The colour representation discussed is what is often referred to as "raw" or "bitmap" (bmp) representation.
-For large images, real systems use compression methods such as JPEG, GIF or PNG to reduce the space needed to store an image, but at the point where an image is being captured or displayed it is inevitably represented using the raw bits as described in this chapter, and the basic choices for capturing and displaying images will affect the quality and cost of a device.
-Compression is regarded as a form of encoding, and is covered in a later chapter.
+W podrozdziale dotyczącym kolorów poprzestano na opisie binarnego zapisu nieskompresowanych obrazów w postaci „surowej” czy bitmapy (format BMP). W praktyce dla obrazów dużych rozmiarów używa się metod kompresji takich, jak JPEG, GIF lub PNG. Należy podkreślić, że w momencie utworzenia obrazu (zdjęcia), czy wyświetlania na ekranie w sposób nieunikniony obraz ma reprezentację „surową”, o jakiej była mowa w tym rozdziale, a wybór reprezentacji zawartej w niej danych będzie miał wpływ na jej jakość i na koszt urządzenia wyświetlającego. 
 
-The representation of numbers is a whole area of study in itself.
-The choice of representation affects how quickly arithmetic can be done on the numbers, how accurate the results are, and how much memory or disk space is used up storing the data.
-Even integers have issues like the order in which a large number is broken up across multiple bytes.
-Floating point numbers generally follow common standards (the IEEE 754 standard is the most common one) to make it easy to design compatible hardware to process them.
-Spreadsheets usually store numbers using a floating point format, which limits the precision of calculations (typically about 64 bits are used for each number).
-There are many experiments that can be done (such as calculating 1/3, or adding a very large number to a very small one) that demonstrate the limitations of floating point representations.
+Binarna reprezentacja liczb jest obszernym tematem, któremu poświęca się odrębne badania naukowe. Wybór komputerowej reprezentacji ma ogromny wpływ np. na szybkość operacji arytmetycznych, dokładność wyniku oraz zapotrzebowanie na pamięć czy miejsce na dysku. Dla reprezentacji zmiennoprzecinkowych określono standardy (najbardziej znany to  IEEE 754), aby ułatwić projektowanie sprzętu komputerowego, który będzie zajmować się przetwarzaniem takich liczb.
+Arkusz kalkulacyjne zwykle używają reprezentacji zmiennoprzecinkowej do zapisywania wartości liczbowych, co wpływa na dokładność wykonywanych obliczeń (zwykle 64 bity na  każdą liczbę). Możesz sprawdzić, jakie są ograniczenia skończonej komputerowej reprezentacji liczb rzeczywistych np. wykonując w arkuszu kalkulacyjnym dodawanie bardzo dużej liczby i bardzo małej liczby.
+
+Wiedza na temat ograniczeń komputerowej reprezentacji liczb jest istotna dla osoby zajmującej się programowaniem (np. w języku Python, Java, C, C++, C#), ponieważ programista musi dokonać wyboru typu danych. Jeśli źle wybierze, może nastąpić przepełnienie. Przykład: Jeśli programista zadeklaruje zmienną 16-bitową bez znaku, a następnie będzie w niej przechowywać informację o liczbie znaków w pliku tekstowym, to pojawi się błąd już w przypadku pliku o wielkości 65 kilobajtów.
+
+Jeśli wielkość pamięci urządzenia komputerowego jest bardzo ograniczona (np. w małym przenośnym urządzeniu), programista nie będzie chciał rezerwować 32 bitów dla przechowywania informacji o liczbie, która nigdy nie przekroczy 100.
+Zresztą, nawet jeśli w urządzeniu rozmiar pamięci jest bardzo duży, to świadomy programista, wiedząc że program będzie przechowywał w pamięci miliony danych liczbowych, do zapisu których wystarczą reprezentacje 8-bitowe, nie będzie marnował milionów bajtów pamięci i używał reprezentacji 16-bitowych.
+
+Nie zawsze jest to takie oczywiste, jakie długości  mają reprezentacje różnych typów danych w językach programowania (nie wynika to z nazwy typu). Zwykle deklaruje się je używając nazw typu „int” lub „long”, z których wprost nie wynika rozmiar rezerwowanej pamięci. Przykład: W języku Java są następujące typy całkowitoliczbowe: 8-bitowy typ „byte”, 16-bitowy typ „short”, 32-bitowy „int” i 64-bitowy „long”. W niektórych przypadkach (jak np. typ „int” w języku C) rozmiar rezerwowanej pamięci zależy od wersji języka i typu (architektury) komputera. W innych przypadkach (jak np. w języku Python) reprezentacja liczby jest automatycznie dostosowywana, jeśli liczba jest zbyt duża!
+
+Ten rozdział nie zwierał informacji na temat zapisu binarnego innego typu danych takich, jak np. pliki dźwiękowe i pliki wideo.
 
 
 ## Further reading
 
-This puzzle can be solved using the pattern in binary numbers: [http://www.cs4fn.org/binary/lock/](http://www.cs4fn.org/binary/lock/)
+Warto zapoznać się łamigłówkami na temat wzorców binarnych: [http://www.cs4fn.org/binary/lock/](http://www.cs4fn.org/binary/lock/)
 
-[This site](http://courses.cs.vt.edu/~csonline/NumberSystems/Lessons/index.html) has more complex activities with binary numbers, including fractions, multiplication and division.
+[Ta strona](http://courses.cs.vt.edu/~csonline/NumberSystems/Lessons/index.html) zawiera wiele informacji i ćwiczeń na temat arytmetyki komputerowej.
 
 
-### Useful Links
+### Użyteczne linki
 
-- [Basics of binary numbers](http://csunplugged.org/binary-numbers)
-- [Representing bits using sound](http://csunplugged.org/modem)
-- [Hex game](http://www.purposegames.com/game/049fc90a)
-- [Thriving in our digital world](http://www.cs.utexas.edu/~engage/) has good illustrations of data representation
-- [How a hard disk works](http://ed.ted.com/lessons/how-do-hard-drives-work-kanawat-senanan)
-u **pozycyjnego**, gdyż system dwójkowy (binarny) jest również systemem pozycyjnym, choć używa się w nim mniejszej liczby cyfr! r dates on Tuesday, 19 January 2038.
+- [Podstawy zapisu binarnego](http://csunplugged.org/binary-numbers)
+- [Zapis bitów z użyciem dźwieku](http://csunplugged.org/modem)
+- [Gra Hex](http://www.purposegames.com/game/049fc90a)
+- [Thriving w naszym cyfrowym świecie](http://www.cs.utexas.edu/~engage/) has good illustrations of data representation
+- [O zasadach działania dysku twardego](http://ed.ted.com/lessons/how-do-hard-drives-work-kanawat-senanan)
+
 
