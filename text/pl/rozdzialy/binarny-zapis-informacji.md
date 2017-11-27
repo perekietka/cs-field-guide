@@ -1067,45 +1067,25 @@ Każdą z tych trzech liczb należy napisać binarnie, używając 8 bitów. Moż
 Zauważ, że nie zapisujemy odstępów między 8. i 9. bitem, ani między 16. i 17. bitem, by podkreślić, że w komputerze oczywiście nie ma miejsca na inny znak niż reprezentacja fizyczna 0 i 1 (np. niższe lub wyższe napięcie prądu). Dla wygody odczytu możesz jednak zapisywać odstępy (spacje), kiedy zapisujesz taką informację w edytorze tekstu, czy na długopisem na kartce. Zwróć uwagę na to, że każda składowa opisana jest z użyciem ośmiu bitów, nawet jeśli te najbardziej znaczące ustawione są na 0. W celu lepszego zrozumienia tego zagadnienia warto zapisać kilka innych przykładów.
 
 {panel type="curiosity" summary="Obrazy monochromatyczne"}
-"Black and white" images usually have more than two colours in them; typically 256 shades of grey, represented with 8 bits.
+Obrazy czarno-białe zwykle składają się z większej liczby kolorów niż dwa. Zwykle to 256 odcieni szarości, zapisane z użyciem 8 bitów.
 
-Remember that shades of grey can be made by having an equal amount of each of the 3 primary colours, for example red = 105, green = 105, and blue = 105.
+Zapamiętaj, że odcienie szarości można uzyskać przez ustawienie tej samej wartości liczbowej dla wszystkich składowych RGB, np. 105, 105, 105. To oznacza, że wystarczy tę liczbę zapisać raz w pojedynczym bajcie.
 
-So for a monochromatic image, we can simply use a representation which is a single binary number between 0 and 255, which tells us the value that all 3 primary colours should be set to.
 {panel end}
 
-The computer won’t ever convert the number into decimal, as it works with the binary directly --- most of the process that takes the bits and makes the right pixels appear is typically done by a graphics card or a printer. We just started with decimal, because it is easier for humans to understand.
+Należy podkreślić, że komputery przetwarzają informacje zapisane binarnie, bez ich konwersji do liczb dziesiętnych. Tym przetwarzaniem zajmują się nierzaqdko bezpośrednio karty graficzne i drukarki. Wszystkie przykłady, w których pojawiają się wartości dziesiętne są wyłącznie po to, aby dany wątek lepiej zrozumieć.
+
 The main point about knowing this representation is to understand the trade-off that is being made between the accuracy of colour (which should ideally be beyond human perception) and the amount of storage (bits) needed (which should be as little as possible).
 
-{panel type="curiosity" summary="Hexadecimal colour codes"}
-If you haven't already, read the section on [Hexadecimal](chapters/data-representation.html#shorthand-for-binary-numbers---hexadecimal), otherwise this section might not make sense!
+{panel type="curiosity" summary="Szesnastkowe kody kolorów"}
+Podczas tworzenia kodu HTML strony internetowej często trzeba określać kolor tekstu, tła itd. Można wtedy podać wprost angielską nazwę koloru, np. "red", "blue", "purple" lub "gold". W ten sposób nie da się jednak opisać różnych odcieni koloru czerwonego, niebieskiego i innych. Jedynym rozwiązaniem jest wskazanie odpowiedniego kodu koloru. W praktyce nie stosuje się w tym miejscu zapisu binarnego (24 bitów), ale kody szestnastkowe, które są znacznie bardziej czytelne dla człowieka, więc pisze się np. #00FF9E. Znak # (ang. hash) to informacja dla przeglądarki internetowej, która kolejne sześć znaków zinterpretuje jako 24-bitową informację o kolorze. Takie "trójki szesnastkowe" stosuje się nie tylko w kodzie HTML, ale również np. w przypadku określania atrybutu koloru dla stylów w plikach CSS i SVG.
+W przykładzie używanym we wcześniejszej części tekstu pojawił się następujący wzorzec bitowy: 100100010011001001111011. Ten 24-bitowy ciąg można rozdzielić na grupy półbajtów: 1001 0001 0011 0010 0111 1011. Jeśli zastapimy każdy z nich cyfrą szesnastkową, to otrzymamy 91327B. Taki kod nazwiemy kodem szesnastkowym (heksadecymalnym) koloru!
 
-When writing HTML code, you often need to specify colours for text, backgrounds, and so on. One way of doing this is to specify the colour name, for example “red”, “blue”, “purple”, or “gold”. For some purposes, this is okay.
+Dla przykładu: tworząc stronę internetową możemy w pliku HTML określić kolor tła strony, pisząc  <body bgcolor="#00FF9E">
 
-However, the use of names limits the number of colours you can represent and the shade might not be exactly the one you wanted. A better way is to specify the 24 bit colour directly. Because 24 binary digits are hard to read, colours in HTML use **hexadecimal codes** as a quick way to write the 24 bits, for example #00FF9E. The hash sign means that it should be interpreted as a hexadecimal representation, and since each hexadecimal digit corresponds to 4 bits, the 6 digits represent 24 bits of colour information.
+Osoba, która rozumie, na czym polega tworzenie kodów szesnastkowych, potrafi z łatowścią dostosować kod koloru tak, aby uzyskać oczekiwany odcień koloru. Wiadomo, że w przypadku 24-bitowej głębi koloru, pierwsze osiem bitów (w konsekwencji pierwsze dwie cyfry szesnastkowe) określa wartość składowej czerwonej, kolejne osiem — zielonej, a ostatnie osiem — niebieskiej. Aby zwiększyć udział odpowiedniej składowej, wystarczy zmienić odpowiednio jej kod szesnastkowy. Na przykład zmiana kodu #000000 (kolor czarny) na #002300) da w efekcie odcień koloru zielonego. Jakie kolory uzyskamy, używając kodów: #FF0000, #FF00FF, #FFFFFF?
 
-This "hex triplet" format is used in HTML pages to specify colours for things like the background of the page, the text, and the colour of links. It is also used in CSS, SVG, and other applications.
-
-In the 24 bit colour example earlier, the 24 bit pattern was 100100010011001001111011.
-
-This can be broken up into groups of 4 bits:  1001   0001   0011   0010   0111   1011.
-
-And now, each of these groups of 4 bits will need to be represented with a **hexadecimal** digit.
-
-- 1001 -> 5
-- 0001 -> 1
-- 0011 -> 3
-- 0010 -> 2
-- 0111 -> 7
-- 1011 -> B
-
-Which gives #51327B.
-
-Understanding how these hexadecimal colour codes are derived also allows you to change them slightly without having to refer back the colour table, when the colour isn’t exactly the one you want. Remember that in the 24 bit color code, the first 8 bits specify the amount of red (so this is the first 2 digits of the hexadecimal code), the next 8 bits specify the amount of green (the next 2 digits of the hexadecimal code), and the last 8 bits specify the amount of blue (the last 2 digits of the hexadecimal code). To increase the amount of any one of these colours, you can change the appropriate hexadecimal letters.
-
-For example, #000000 has zero for red, green and blue, so setting a higher value to the middle two digits (such as  #004300) will add some green to the colour.
-
-You can use this HTML page to experiment with hexadecimal colours. Just enter a colour in the space below:
+Poniżej znajduje się narzędzie, które pozwala na eksperymentowanie z szesnastkowymi kodwami koloru.
 
 {interactive name="hex-background-colour" type="in-page"}
 
