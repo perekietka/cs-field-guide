@@ -575,7 +575,7 @@ W kodzie uzupełnienowym (U2) wygląda to inaczej: 10000000 (kod najmniejszej li
 | 64 bit	  | 0 to 18 446 744 073 709 551 615 | od −9 223 372 036 854 775 808 do 9,223,372,036,854,775,807  |
 
 
-#### Ddodawanie liczb ujemnych
+#### Dodawanie liczb ujemnych
 
 Spójrzmy najpierw na dodawanie liczb dodatnich.
 Reguły są analogiczne do tych znanych z pisemnego sposobu dodowania liczb w systemie dziesiętnym. Jest przy tym prościej: są tylko dwa rodziaje cyfr, więc upraszcza się tabliczna dodawania!
@@ -646,17 +646,16 @@ Własności kodowania U2 są bardzo użyteczne. Dlatego, że zarówno liczby uje
 
 {panel type="curiosity" summary="What's going on with Two's complement?"}
 
-The idea of using a "complementary" number to change subtraction to addition can be seen by doing the same in decimal.
-The complement of a decimal digit is the digit that adds up to 10; for example, the complement of 4 is 6, and the complement of 8 is 2.
-(The word "complement" comes from the root "complete" - it completes it to a nice round number.)
+Pomysł wykonywania dodawania na tzw. dopełnieniu liczby zamast odejmowania liczby można zastosować w obliczeniach na liczbach dziesiętnych. Dopełnieniem dziesiętnym x jest 10-x, np. dla 4 to 6, a dla 8 to 2. 
+(Słowo "dopełnić" ma ten sam rdzeń, co słowo pełnia. Liczba 10 jest w tym przypadku taką pełną, ,,okrągłą'' liczbą.)
 
-Subtracting 2 from 6 is the same as adding the complement, and ignoring the extra 1 digit on the left.
-The complement of 2 is 8, so we add 8 to 6, giving (1)4.
+Odejmowanie 2 od 6 jest tożsame z dodawaniem 8 do 6 (6 + 8 = 14) i ignorowaniem 1 z przeniesienia (po lewej).
 
-For larger numbers (such as subtracting the two 3-digit numbers 255 - 128), the complement is the number that adds up to the next power of 10 i.e. 1000-128 = 872.
 Check that adding 872 to 255 produces (almost) the same result as subtracting 128.
+Dla większych liczb (np. trzycyfrowych) dopełnieniem liczby jest liczba, która stanowi różnicę brakującą do kolejnej potęgi 10, tj. 1000-128 = 872.
 
-Working out complements in binary is way easier because there are only two digits to work with, but working them out in decimal may help you to understand what is going on.
+W przypadku zapisu binarnego sytuacja jest prostsza, bo używa się tylko dwóch różnych cyfr. Porównanie z systemem dziesiętnym może być jednak pomocne dla zrozumienia tematu.
+
 {panel end}
 
 
