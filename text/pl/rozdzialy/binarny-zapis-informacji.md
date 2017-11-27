@@ -609,24 +609,24 @@ Oto przykład:
  11011101
 ```
 
-Remember that the digits can be only 1 or 0. So you will need to carry a 1 to the next column if the total you get for a column is (decimal) 2 or 3.
 Trzeba pamiętać, że w zapisie binarnym używa się wyłącznie cyfr 1 i 0. To oznacza konieczność przeniesienia 1 do kolumny na wyższej pozycji (z lewej), gdy suma częściowa jest równa 2 lub 3 (dziesiętnie).
 
 ***Dodawanie liczb ujemnych w kodzie bit-znak***
 
 With negative numbers using sign bits like we did before, this does not work. If you wanted to add **+11 (01011)** and **-7 (10111)**, you would expect to get an answer of **+4 (00100)**.
+W przypadku liczb ujemnych zapisanych w kodzie bit-znak (czyli z lewym skrajnym bitem jako bitem znaku), metoda opisana wyżej nie zadziała. Dla przykładu dodanie **+11 (01011)** do **-7 (10111)** powinno zakończyć się wynikiem **+4 (00100)**.
 
 ```
-11111 (carries)
+11111 (przeniesienie)
  01011
 +10111
 100010
 ```
 
-Which is **-2**.
+Wynikiem jest jednak liczba **-2**.
 
-One way we could solve the problem is to use column subtraction instead. But this would require giving the computer a hardware circuit which could do this.
-Luckily this is unnecessary, because addition with negative numbers works automatically using Two's Complement!
+Jak można ten problem rozwiązać? Okazuje się, że zamiast dodawnia kolumn można by użyć odejmowania kolumn. To w konkretnej realizacji sprzętowej wymagałoby użycia specjalnego układu elektronicznego.
+Na szczęście jest inne rozwiązanie: z pomocą przychodzi kod uzupełnieniowy (U2)!
 
 ***Adding negative numbers with Two's Complement***
 
