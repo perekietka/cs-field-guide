@@ -589,7 +589,6 @@ Sposób pisemnego dodawania przypomniemy na przykładzie **128 + 255**.
 ----
  383
 ```
-When you go to add 5 + 8, the result is higher than 9, so you put the 3 in the one's column, and carry the 1 to the 10's column. Binary addition works in exactly the same way.
 Zauważmy, że wynik dodawania 5 + 8 jest liczbą większą od 9. Dlatego na pozycji jedności w wyniku zapisujemy 3, a 10 (=13-3) stanowi jedną dziesiątkę, więc mówimy o przeniesieniu (dodatkowy składnik w kolumnie dziesiątek). 
 Dodawanie w systemie binarnym realizuje się w analogiczny sposób.
 
@@ -613,7 +612,6 @@ Trzeba pamiętać, że w zapisie binarnym używa się wyłącznie cyfr 1 i 0. To
 
 ***Dodawanie liczb ujemnych w kodzie bit-znak***
 
-With negative numbers using sign bits like we did before, this does not work. If you wanted to add **+11 (01011)** and **-7 (10111)**, you would expect to get an answer of **+4 (00100)**.
 W przypadku liczb ujemnych zapisanych w kodzie bit-znak (czyli z lewym skrajnym bitem jako bitem znaku), metoda opisana wyżej nie zadziała. Dla przykładu dodanie **+11 (01011)** do **-7 (10111)** powinno zakończyć się wynikiem **+4 (00100)**.
 
 ```
@@ -628,11 +626,11 @@ Wynikiem jest jednak liczba **-2**.
 Jak można ten problem rozwiązać? Okazuje się, że zamiast dodawnia kolumn można by użyć odejmowania kolumn. To w konkretnej realizacji sprzętowej wymagałoby użycia specjalnego układu elektronicznego.
 Na szczęście jest inne rozwiązanie: z pomocą przychodzi kod uzupełnieniowy (U2)!
 
-***Adding negative numbers with Two's Complement***
+***Dodawanie liczb ujemnych w kodzie U2***
 
-For the above addition (+11 + -7), we can start by converting the numbers to their 5-bit Two's Complement form. Because **01011 (+11)** is a positive number, it does not need to be changed. But for the negative number, **00111 (-7)** (sign bit from before removed as we don't use it for Two's Complement), we need to invert the digits and then add 1, giving **11001**.
+Dla przykładu (+11 + -7) należy rozpocząć od zapisania składników w kodzie U2 na 5 bitach. Otrzymujemy: **01011 (+11)** i **11001 (-7)**.
 
-Adding these two numbers works like this:
+Dodawanie w kolumnach zapiszemy tak:
 
 ```
  01011
@@ -640,12 +638,11 @@ Adding these two numbers works like this:
 100100
 ```
 
-Any extra bits to the left (beyond what we are using, in this case 5 bits) have been truncated.
-This leaves **00100**, which is **4**, like we were expecting.
+Dodatkowy szósty bit (po lewej) powstały z przeniesienia należy zignorować. Pozostałe 5 bitów to **00100**, czyli **4**. Takiego wyniku oczekiwaliśmy.
 
-We can also use this for subtraction. If we are subtracting a positive number from a positive number, we would need to convert the number we are subtracting to a negative number. Then we should add the two numbers. This is the same as for decimal numbers, for example 5 - 2 = 3 is the same as 5 + (-2) = 3.
+Opisaną wyżej metodę można zaadaptować do odejmowania: zaimast działania 5 - 2, należy wykonać wykonać działanie 5 + (-2) = 3.
 
-This property of Two's Complement is very useful. It means that positive numbers and negative numbers can be handled by the same computer circuit, and addition and subtraction can be treated as the same operation.
+Własności kodowania U2 są bardzo użyteczne. Dlatego, że zarówno liczby ujemne, jak i nieujemne można działają z tymi samymi elektornicznymi układami arytmetycznymi, a dodawanie i odejmowanie można potraktować jako ten sam typ operacji arytmetycznej.
 
 {panel type="curiosity" summary="What's going on with Two's complement?"}
 
