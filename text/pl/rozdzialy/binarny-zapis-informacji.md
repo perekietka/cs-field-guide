@@ -774,11 +774,11 @@ Powszechnie stosowana była odmiana kodu o nazwie "Baudot-Murray code". Jej auto
 
 ### Wprowadzenie do Unicode
 
-In practice, we need to be able to represent more than just English characters. To solve this problem, we use a standard called **Unicode**. Unicode is a **character set** with around 120,000 different characters, in many different languages, current and historic. Each character has a unique number assigned to it, making it easy to identify.
+Dzisiaj standardem, który pozwala na zapis liter spoza alfabetu angielskiego, jest **Unicode**. To jakby tablica kodowa, w której znajdziemy ok. 120 000 różnych znaków, właściwych dla różnych języków, współczesnych i martywch. 
 
-Unicode itself is not a representation -- it is a character set. In order to represent Unicode characters as bits, a Unicode **encoding scheme** is used. The Unicode encoding scheme tells us how each number (which corresponds to a Unicode character) should be represented with a pattern of bits.
+Uzyskanie konkretnego binarnego kodu znaku w Unicode wymaga użycia schematu kodowania (ang. encoding scheme). 
 
-The following interactive will allow you to explore the Unicode character set. Enter a number in the box on the left to see what Unicode character corresponds to it, or enter a character on the right to see what its Unicode number is (you could paste one in from a foreign language web page to see what happens with non-English characters).
+Poniżej dostępne jest interaktywne narzędzie, które pozwola na zaznajomienie się ze szczegółami. Po wpisaniu liczby w oknie po lewej zobaczysz odpowiadający mu znak. Po wpisaniu znaku po prawej zobaczysz liczbę Unicode (warto sprawdzić znak spoza angielskiego alfabetu, np. wkleić ze strony zapisanej w innym języku).
 
 {interactive name="unicode-chars" type="in-page"}
 
