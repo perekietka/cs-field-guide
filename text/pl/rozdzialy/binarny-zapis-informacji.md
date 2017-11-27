@@ -360,55 +360,55 @@ Z tematem zapisu liczb w komputerze wiążą się pytania:
 
 ### Liczba bitów używana w prkatyce
 
-In practice, we need to allocate a fixed number of bits to a number, before we know how big the number is. This is often 32 bits or 64 bits, although can be set to 16 bits, or even 128 bits, if needed. This is because a computer has no way of knowing where a number starts and ends, otherwise.
+W praktyce wygląda to tak, że w pamięci komputera trzeba zarezerwować konkretną liczbę bitów jeszcze zanim będzie znana dokładna wartość liczby, którą chcemy w pamięci zapisać. Dzisiaj często rezerwuje się 32 bity lub 64 bity, choć czasem, w uzasadnionych przypadkach, może to być 16 bitów lub nawet 128 bitów. 
 
-Any system that stores numbers needs to make a compromise between the number of bits allocated to store the number, and the range of values that can be stored.
+W każdym systemie komputerowym trzeba przyjąć pewne kompromisowe rozwiązanie pomiędzy liczbą bitów rezerwowanych w pamięci a zakresem liczb, które w taki sposób można zapisać.
 
-In some systems (like the Java and C programming languages and databases) it's possible to specify how accurately numbers should be stored; in others it is fixed in advance (such as in spreadsheets).
+Niektóre narzędzia pozwalają na wybór ilości przydzielanej pamięci spośród pewnej liczby możliwości (języki programowania czy systemy baz danych); inne w sposób arbitralny mają to ustalone z góry (np. arkusze kalkulacyjne).
 
-Some are able to work with arbitrarily large numbers by increasing the space used to store them as necessary (e.g. integers in the Python programming language). However, it is likely that these are still working with a multiple of 32 bits (e.g. 64 bits, 96 bits, 128 bits, 160 bits, etc). Once the number is too big to fit in 32 bits, the computer would reallocate it to have up to 64 bits.
+Istnieją też narzędzia, które potrafią samodzielnie w razie potrzeby zwiększyć obszar rezerwowanej pamięci (np. dla liczby całkowitej czyni tak interpretator języka programowania Python). Należy podkreślić, że to zawsze będzie wielokrotność 32 bitów  (odpowiednio 32, 64, 96, 128, 160 itd.). Działa to tak, że w momencie, gdy 32 bity to zbyt mało do zapisania dokładnej wartości liczby, to następuje rezerwacja innego fragmentu pamięci o wielkości 64 bitów itp.
 
 W niektórych językach programowania nie ma automatycznej kontroli, która pozwoliłaby stwierdzić, że nastąpiła próba zapisu zbyt dużej liczby (przepełnienie). Przykład: Dodanie 1 do liczby 127 w przypadku zapisu 8-bitowego zakończy się uzyskaniem liczby -128.
 Innym przykładem jest tzw. problem roku 2038. Okazuje się, że 19 stycznia 2038 roku nastąpi błąd przepełnienia i błędnie będzie interpretowana data w oprogramowaniu, które do zapisu daty używa pewnego tradycyjnego jej zapisu jako liczby 32-bitowej. Z dość podobnym problemem mieliśmy do czynienia w roku 2000.
 
 {image filename="xkcd-cant-sleep-comic.png" alt="A xkcd comic on number overflow" source="https://xkcd.com/571/"}
 
-On tiny computers, such as those embedded inside your car, washing machine, or a tiny sensor that is barely larger than a grain of sand, we might need to specify more precisely how big a number needs to be. While computers prefer to work with chunks of 32 bits, we could write a program (as an example for an earthquake sensor) that knows the first 7 bits are the lattitude, the next 7 bits are the longitude, the next 10 bits are the depth, and the last 8 bits are the amount of force.
+W komputerach małych rozmiarów, takich jak np. te wbudowane wewnątrz samochodu, zmywarki, czy w czujnikach o rozmiarach wielkości ziarnka piasku, może być konieczne bardziej precyzyjne określenie zakresu przewarzanych liczb. W przypadku standardowych komputerów standardem jest przetwarzanie bloków 32 bitowych jako niepodzielnej liczby bitów. Jednak czasami (np. w oprogramowaniu czujnika wstrząsów sejsmicznych) może być konieczne zastosowanie podziału: 7 bitów do zapisu szerokości geograficznej, następne 7 bitów do zapisu długości geograficznej, kolejne 10 bitów do zapisania informacji o głębokości pod powierznią ziemi, a 8 bitów dla informacji o sile wstrząsu.
 
-Even on standard computers, it is important to think carefully about the number of bits you will need. For example, if you have a field in your database that could be either "0", "1", "2", or "3" (perhaps representing the four bases that can occur in a DNA sequence), and you used a 64 bit number for every one, that will add up as your database grows. If you have 10,000,000 items in your database, you will have wasted 62 bits for each one (only 2 bits is needed to represent the 4 numbers in the example), a total of 620,000,000 bits, which is around 74 MB. If you are doing this a lot in your database, that will really add up -- human DNA has about 3 billion base pairs in it, so it's incredibly wasteful to use more than 2 bits for each one.
+Nawet podczas pracy ze standardowym komputerem jest ważne, aby starannie określić liczbę potrzebnych bitów. Na przykład, jeśli w bazie danych wartość konkretnego pola ma przyjmować jedną z czterech wartości (np. 0, 1, 2, 3 lub wartości składowych sekwencji DNA), to rezerwowanie 64 bitów do zapisania takiej wartości niepotrzebnie powiększa rozmiar bazy danych (zapisanej na dysku). Gdyby liczba rekordów bazy danych była równa 10 000 000, to w konsekwencji zmarnowanych będzie 620 000 000 bitów, czyli ok. 74 MB, gdyż do zapisu czterech różnych wartości wystarczą 2 bity. Jeśli podobnych pól w bazie danych jest więcej, to efekt marnowania pamięci komputera kumuluje się do ogromnych rozmiarów.
 
-And for applications such as Google Maps, which are storing an astronomical amount of data, wasting space is not an option at all!
+Narzędzia takie jak Google Maps przetwarzają astronomiczne ilości danych. Marnowanie pamięci w ich przypadkach wcale nie wchodzi w grę!
 
-{panel type="challenge" summary="How many bits will you need?"}
-It is really useful to know roughly how many bits you will need to represent a certain value. Have a think about the following scenarios, and choose the best number of bits out of the options given. You want to ensure that the largest possible number will fit within the number of bits, but you also want to ensure that you are not wasting space.
+{panel type="challenge" summary="Ile bitów jest niezbędne?"}
+Czymś bardzo użytecznym jest oszacowanie liczby bitów niezbędnych do zapamiętania pewnych wartości. Zastanów się, jaka byłaby odpowiedź dla sytuacji przedstawionych poniżej. Pamiętaj, że chcesz mieć możliwość zapamiętania największej z potencjalnych wartości, ale nie chcesz marnować pamięci komputera.
 
-1. Storing the day of the week
+1. Informacja o dniu tygodnia
   - a) 1 bit
-  - b) 4 bits
-  - c) 8 bits
-  - d) 32 bits
-2. Storing the number of people in the world
-  - a) 16 bits
-  - b) 32 bits
-  - c) 64 bits
-  - d) 128 bits
-3. Storing the number of roads in New Zealand
-  - a) 16 bits
-  - b) 32 bits
-  - c) 64 bits
-  - d) 128 bits
-4. Storing the number of stars in the universe
-  - a) 16 bits
-  - b) 32 bits
-  - c) 64 bits
-  - d) 128 bits
+  - b) 4 bity
+  - c) 8 bitów
+  - d) 32 bity
+2. Informacja o liczbie ludzi na świecie
+  - a) 16 bitów
+  - b) 32 bity
+  - c) 64 bity
+  - d) 128 bitów
+3. Informacja o liczbie dróg w Nowej Zelandii
+  - a) 16 bitów
+  - b) 32 bity
+  - c) 64 bity
+  - d) 128 bitów
+4. Informacja o liczbie gwiazd we wszechświecie
+  - a) 16 bitów
+  - b) 32 bity
+  - c) 64 bity
+  - d) 128 bitów
 {panel end}
 
-{panel type="spoiler" summary="Answers for above challenge"}
-1. b (actually, 3 bits is enough as it gives 8 values, but amounts that fit evenly into 8-bit bytes are easier to work with)
-2. c (32 bits is slightly too small, so you will need 64 bits)
-3. c (This is a challenging question, but one a database designer would have to think about. There's about 94,000 km of roads in NZ, so if the average length of a road was 1km, there would be too many roads for 16 bits. Either way, 32 bits would be a safe bet.)
-4. d (Even 64 bits is not enough, but 128 bits is plenty! Remember that 128 bits isn't twice the range of 64 bits.)
+{panel type="spoiler" summary="Odpowiedzi"}
+1. b (właściwie to już 3 bity pozwolą na zapis 8 różnych wartości; ale technicznie lepszym rozwiązaniem są 4 bity ze względu na to, że na 8 bitach można by łatwo zapisać informacje o dwóch dniach tygodnia)
+2. c (32 bity to za mało)
+3. c (ciekawe wyzwanie dla projektującego bazę danych: w Nowej Zelandii jest łącznie ok. 94 000 km dróg i założenie, że średnia długość drogi to 1 km prowadzi do wniosku, że 16 bitów to za mało)
+4. d (64 bity do za mało, a 128 bitów to o wiele za dużo! Trzeba pamiętać, że 128 bitów to nie dwa razy więcej niż 64 bity.)
 {panel end}
 
 ### Representing negative numbers in practice
