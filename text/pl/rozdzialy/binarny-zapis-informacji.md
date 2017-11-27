@@ -1020,84 +1020,53 @@ Ludzkie oko zawiera miliony światłoczułych receptorów, zwanych czopkami. Ist
 
 ### Cyfrowy zapis informacji o kolorze
 
-Because a colour is simply made up of amounts of the primary colours -- red, green and blue -- three numbers can be used to specify how much of each of these primary colours is needed to make the overall colour.
+Kolory wyświetlane na ekranach telewizorów też uzyskuje się przez zmieszanie kolorów podstawowych: czerwonego (ang. red), zielonego (ang. green) i niebieskiego (ang. blue). 
 
 {panel type="jargon-buster" summary="Pixel"}
-The word **pixel** is short for "picture element". On computer screens and printers an image is almost always displayed using a grid of pixels, each one set to the required colour. A pixel is typically a fraction of a millimeter across, and images can be made up of millions of pixels (one megapixel is a million pixels), so you can't usually see the individual pixels. Photographs commonly have several megapixels in them.
+Słowo piksel (ang. pixel) to skrót powstały z angielskiego zwrotu picture element, czyli element obrazu. Na ekranie monitora komputerowego obraz (grafika), to siatka pikseli  o różnych kolorach. Piksel ma wielkość ułamka milimetra, a więc obraz składa się zwykle z milionów pikseli (stąd mówi się megapiksel na oznaczenie zbioru miliona pikseli)
 
-It's not unusual for computer screens to have millions of *pixels* on them, and the computer needs to represent a colour for each one of those pixels.
 {panel end}
 
-A commonly used scheme is to use numbers in the range 0 to 255. Those numbers tell the computer how fully to turn on each of the primary colour "lights" in an individual pixel. If red was set to 0, that means the red "light" is completely off. If the red "light" was set to 255, that
-would mean the "light" was fully on.
+Kluczową koncepcją zapisu informacji graficznej jest to, że kolor piksela opisuje się, używając trzech liczb (składowych). W powyższym przykładzie były to liczby od 0 do 255. Dla każdej składowej mamy wtedy 256 możliwości, co umożliwia zapis informacji o 256 x 256 x 256 = 16 777 216 różnych kolorach. To więcej, niż ludzkie oko jest w stanie rozróżnić. 
 
-With 256 possible values for each of the three primary colours (don't forget to count 0!), that gives 256 x 256 x 256 = 16,777,216 possible colours -- more than the human eye can detect!
+Oczywiście, zazwyczaj na ekranie wyświetlany jest więcej niż jeden kolor. Dzisiaj nawet ekrany komputerowe najmniejszych rozmiarów zawierają miliony pikseli i w komputerze musi być zapisana informacja o kolorze każdego z nich. Współcześnie rozmiary zdjęć mierzy się używając jednostki zwanej MP, czyli megapikselem (=milion pikseli). W systemie komputerowym informacja o kolorze każdego z pikseli zapisywana jest w postaci trzech liczb (o tym była mowa wyżej). Oznacza to, że do zapisania pełnej informacji o zdjęciu rozmiaru 2MP potrzeba sześciu milionów liczb! Mamy tu na myśli oczywiście taki sposób zapisu, w którym nie stosuje się kompresji. 
 
-{panel type="challenge" summary="What is special about 255?"}
-Think back to the binary numbers section. What is special about the number 255,
-which is the maximum colour value?
-
-We'll cover the answer later in this section if you are still not sure!
-{panel end}
-
-The following interactive allows you to zoom in on an image to see the pixels that are used to represent it. Each pixel is a solid colour square, and the computer needs to store the colour for each pixel.
-If you zoom in far enough, the interactive will show you the red-green-blue values for each pixel. You can pick a pixel and put the values on the slider above - it should come out as the same colour as the pixel.
+Poniżej znajduje się interaktywne narzędzie, które pozwala na powiększenie obrazu tak, aby dostrzec piksele tworzące obraz. Każdy z elementów obrazu to kwadrat o jednolitym kolorze. Po odpowiednim powiększeniu wyświetlone zostaną wartości skłądowych RGB.
 
 {interactive name="pixel-viewer" type="whole-page" text="Pixel Viewer interactive"}
 
 {panel type="curiosity" summary="Alternative material on bits and colour"}
-Another exercise to see the relationship between bit patterns and colour images is [provided here](https://sites.google.com/a/bxs.org.uk/mrkershaw/ict/bitmapgraphics).
+Inne ćwiczenie, które ukazuje związek między wartościami składowych RGB a wyświetlanym kolorem jest [tutaj](https://sites.google.com/a/bxs.org.uk/mrkershaw/ict/bitmapgraphics).
 {panel end}
 
-### Representing a colour with bits
+### Binarny zapis informacji kolorze
 
-The next thing we need to look at is how bits are used to represent each colour in a high quality image. Firstly, how many bits do we need? Secondly, how should we decide the values of each of those bits? This section will work through those problems.
+W jaki sposób binarnie, czyli w systemie dwójkowym, zapisać informację o kolorze, tak obraz był wysokiej jakości. Ilu bitów potrzeba do zapisania informacji o kolorze pojedynczego piksela?
 
-#### How many bits will we need for each colour in the image?
+#### Ile bitów potrzeba do zapisania iformacji o kolorze?
 
-With 256 different possible values for the amount of each primary colour, this means 8 bits would be needed to represent the number.
+Wykonując ćwiczenie dotyczące składowych koloru (z suwakami), można było zauważyć, że suwak dla każdej składowej (czerwona, zielona, niebieska) był ustawiany w jednej z 256 pozycji (od 0 do 255). Do zapisania informacji składowej potrzeba zatem 8 bitów (ponieważ 28 = 2 x 2 x 2 x 2 x 2 x 2 x 2 x 2 = 256).
 
-{math}2^8 = 2 \times 2 \times 2 \times 2 \times 2 \times 2 \times 2 \times 2 = 256{math end}
+Najmniejszą liczbą, którą można zapisać na 8 bitach jest 00000000 -- czyli 0. Największa liczba to 11111111 -- czyli 255.
 
-The smallest number that can be represented using 8 bits is 00000000 -- which is 0. And the largest number that can be represented using 8 bits is 11111111 -- which is 255.
+Są trzy składowe, więc potrzebujemy 24 (3 x 8 = 24) bity do zapisania informacji o kolorze piksela.
 
-Because there are three primary colours, each of which will need 8 bits to represent each of its 256 different possible values, we need **24 bits in total** to represent a colour.
+Liczbę 2^24 (czyli liczbę wszystkich liczb, które można zapisać używając 24 bitów) można wyznaczyć wykonując mnożenie: 256 x 256 x 256. Otrzymujemy 16 777 216. To oznacza, że zapis 24-bitowy pozwala zachować informację o ponad 16 milionach różnych kolorów. To nam wystarczy, aby mówić o zapisie wysokiej jakości (wierności). Czasami mówi się o pełnym kolorze (ang. true color).
 
-{math}3 \times 8 = 24{math end}
+#### Jak zapisać informację o kolorze z użyciem bitów?
 
-So, how many colours are there in total with 24 bits? We know that there is 256 possible values each colour can take, so the easiest way of calculating it is:
+Jak to w praktyce wygląda? Wydaje się, że najrozsądniej jest użyć równej liczby bitów dla każdej składowej koloru. W ćwiczeniu powyżej składowe kolorów były wyświetlane jako liczby dziesiętne. Aby uzyskać binarny zapis informacji o składowych, należy zapisać te liczby w systemie dwójkowym i ustawić te 8-bitowe ciągi zer i 1jedynek obok siebie w odpowiedniej kolejności w jeden ciąg 24-bitowy (zgodnie z tradycyjną kolejnością: najpierw wzorzec bitowy dla składowej czerwonej, później dla zielonej, a na końcu dla niebieskiej).
 
-{math}256 \times 256 \times 256 = 16,777,216 {math end}
+Przykład: Wyobraź sobie, że składowe koloru to: czerwona = 145, zielona = 50 i niebieska = 123 (jeśli nie wierzysz, że to odcień purpurowego, możesz sam sprawdzić). 
 
-This is the same as {math}2^{24}{math end}.
 
-Because 24 bits are required, this representation is called **24 bit colour**. 24 bit colour is sometimes referred to in settings as "True Color" (because it is more accurate than the human eye can see). On Apple systems, it is called "Millions of colours".
+{image filename="colour-purple.png" alt="Kolor purpurowy."}
 
-#### How do we use bits to represent the colour?
+Każdą z tych trzech liczb należy napisać binarnie, używając 8 bitów. Możesz to zrobić samodzielnie (np. posługując się tzw. pianinem binarnym). Otrzymasz: czerwona = 10010001, zielona = 00110010 i niebieska = 01111011. Informacja o kolorze (odcień purpury) będzie mieć zatem następujący wzorzec bitowy: 100100010011001001111011.
 
-A logical way is to use 3 binary numbers that represent the amount of each of red, green, and blue in the pixel. In order to do this, convert the amount of each primary colour needed to an 8 bit binary number, and then put the 3 binary numbers side by side to give 24 bits.
+Zauważ, że nie zapisujemy odstępów między 8. i 9. bitem, ani między 16. i 17. bitem, by podkreślić, że w komputerze oczywiście nie ma miejsca na inny znak niż reprezentacja fizyczna 0 i 1 (np. niższe lub wyższe napięcie prądu). Dla wygody odczytu możesz jednak zapisywać odstępy (spacje), kiedy zapisujesz taką informację w edytorze tekstu, czy na długopisem na kartce. Zwróć uwagę na to, że każda składowa opisana jest z użyciem ośmiu bitów, nawet jeśli te najbardziej znaczące ustawione są na 0. W celu lepszego zrozumienia tego zagadnienia warto zapisać kilka innych przykładów.
 
-Because consistency is important in order for a computer to make sense of the bit pattern, we normally adopt the convention that the binary number for red should be put first, followed by green, and then finally blue. The only reason we put red first is because that is the convention that most systems assume is being used.
-If everybody had agreed that green should be first, then it would have been green first.
-
-For example, suppose you have the colour that has red = 145, green = 50, and blue = 123 that you would like to represent with bits. If you put these values into the interactive, you will get the colour below.
-
-{image filename="colour-purple.png" alt="The colour purple."}
-
-Start by converting each of the three numbers into binary, using 8 bits for each.
-
-You should get:
-- red = 10010001,
-- green = 00110010,
-- blue = 01111011.
-
-Putting these values together gives 100100010011001001111011, which is the bit representation for the colour above.
-
-There are **no spaces** between the three numbers, as this is a pattern of bits rather than actually being three binary numbers, and computers don’t have any such concept of a space between bit patterns anyway --- everything must be a 0 or a 1. You could write it with spaces to make it easier to read, and to represent the idea that they are likely to be stored in 3 8-bit bytes, but inside the computer memory there is just a sequence of high and low voltages, so even writing 0 and 1 is an arbitrary notation.
-
-Also, all leading and trailing 0’s on each part are kept --- without them, it would be representing a shorter number. If there were 256 different possible values for each primary colour, then the final representation **must** be 24 bits long.
-
-{panel type="curiosity" summary="Monochromatic images"}
+{panel type="curiosity" summary="Obrazy monochromatyczne"}
 "Black and white" images usually have more than two colours in them; typically 256 shades of grey, represented with 8 bits.
 
 Remember that shades of grey can be made by having an equal amount of each of the 3 primary colours, for example red = 105, green = 105, and blue = 105.
