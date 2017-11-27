@@ -496,11 +496,6 @@ Te proste reguły oznaczają w prkatyce, że upraszcza się projektowanie sumato
 {panel type="teacher-note" summary="Dodanie 1 w arytmetyce binarnej"}
 Uczniowie powinno samodzielnie, przez wykonanie kilku przykładów, odkryć regułę dodawania 1 do liczby zapisanej binarnie. 
 
-There are different ways to express the process.
-In the "Unplugged" exercise at the start of this chapter one of the challenges was to count up through the numbers, which is adding one repeatedly, and it's not unusual for students to see the pattern when they do that.
-In that situation the rule could be expressed as "start at the right hand end, and flip bits from right to left until you change a 0 to a 1."
-(If the number ends in zero then that would be immediately.)
-
 Istnieją różne sposoby mówienia o tym procesie.
 Regułę można wyrazić takimi słowami: Zacznij od skrajnej prawy cyfry. Zmień wartości kolejnych bitów na przeciwne tak długo aż pierwszy raz nie zmienisz 0 na 1.
 
@@ -511,10 +506,8 @@ W szczególnym przypadku (np. 1111111), można dopisać 0 na początku (01111111
 Być może warto, aby uczniowie poszukali analogicznej reguły dotyczącej zapisu dziesiętnego: jak dodać 1 to 284394? To 38999? 9999799?
 {panel end}
 
-
-
 {panel type="challenge" summary="Determining the Two's Complement"}
-What would be the two's complement representation for the following numbers, **using 8 bits**? Follow the process given in this section, and remember that you do not need to do anything special for positive numbers.
+Zapisz poniższe liczby w kodzie U2, używając 8 bitów.
 1. 19
 2. -19
 3. 107
@@ -522,17 +515,18 @@ What would be the two's complement representation for the following numbers, **u
 5. -92
 {panel end}
 
-{panel type="spoiler" summary="Determining the Two's Complement"}
-1. 19 in binary is **0001 0011**, which is the two's complement for a positive number.
-2. For -19, we take the binary of the positive, which is 0001 0011 (above), invert it to 1110 1100, and add 1, giving a representation of **1110 1101**.
-3. 107 in binary is **0110 1011**, which is the two's complement for a positive number.
-4. For -107, we take the binary of the positive, which is 0110 1011 (above), invert it to 1001 0100, and add 1, giving a representation of **1001 0101**.
-5. For -92, we take the binary of the positive, which is 0101 1100, invert it to 1010 0011, and add 1, giving a representation of **1010 0100**. (If you have this incorrect, double check that you incremented by 1 correctly).
+{panel type="spoiler" summary="Odpowiedzi"}
+1. 19 ma kod **0001 0011**.
+2. Dla -19, zaczynamy od zapisania kodu dla 19 = 0001 0011, po zamianie bitów mamy 1110 1100, a po dodaniu 1 otrzymujemy poszukiwany kod: **1110 1101**.
+3. 107 ma kod **0110 1011**.
+4. Dla -107 mamy kolejno (jako etapy pośrednie): 0110 1011 i 1001 0100, a ostatecznie: **1001 0101**.
+5. Dla -92 mamy: 0101 1100, 1010 0011 i w końcu **1010 0100**. 
 {panel end}
 
-***Converting a Two's Complement number back to decimal***
+***Konwersja liczby binarnej z kodu U2 na zapis dziesiętny***
 
 In order to reverse the process, we need to know whether the number we are looking at is positive or negative. For positive numbers, we can simply convert the binary number back to decimal. But for negative numbers, we first need to convert it back to a normal binary number.
+Aby dokonać konwersji w odwrotną stronę (z reprezentacji binarnej na dziesiętną) trzeba najpierw określić, czy liczba jest dodatnia (lub równa 0), czy ujemna. Jeśli liczba jest nieujemna, to jej wartości dziesiętnej szukamy w znany już sposób. W przeciwnym wypadku zaczynamy od konwersji liczby z kodu U2 do naturalnej postaci binarnej wartości bezwględnej liczby (bez znaku).
 
 So how do we know if the number is positive or negative? It turns out (for reasons you will understand later in this section) that Two's Complement numbers that are negative always start in a 1, and positive numbers always start in a 0. Have a look back at the previous examples to double check this.
 
