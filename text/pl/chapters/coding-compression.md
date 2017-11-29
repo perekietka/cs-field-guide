@@ -486,7 +486,7 @@ Oto niektóre fragmenty z wcześniejszego przykładu; możesz wkleić je do powy
 111110000011111
 ```
 
-In fact, this is essentially what happens with GIF and PNG images; the pixel values are compressed using the Ziv-Lempel algorithm, which works well if you have lots of consecutive pixels the same colour. But it works very poorly with photographs, where pixel patterns are very unlikely to be repeated.
+Powyższy przykład jest dobrą deomnstracją tego, co dzieje się z obrazami podczas zapisu do formatu GIF lub PNG; wartości pikseli są kompresowane za pomocą algorytmu Ziv-Lempel, który działa dobrze, jeśli wiele kolejnych pikseli ma ten sam kolor. Ale działa bardzo słabo w przypadku zdjęć, w których mało prawdopodobne jest powtórzenie wzorców pikseli.
 
 {comment}
 .. xtcb extra for experts: compress "aaaaaaaaaa". how can it decode?
@@ -502,40 +502,40 @@ and the ["Computing Science Inside" site also has an activity based on this meth
 The CS4FN site discusses [a related approach which is a little simpler, but not so useful in practice](http://www.cs4fn.org/internet/crushed.php).
 {panel end}
 
-{panel type="curiosity" summary="ZL or LZ compression?"}
-The method we have described here is named “Ziv-Lempel” compression after Jacob Ziv and Abraham Lempel, the two computer scientists who invented it in the 1970s. Unfortunately someone mixed up the order of their names when they wrote an article about it, and called it “LZ” compression instead of “ZL” compression. So many people copied the mistake that Ziv and Lempel’s method is now usually called “LZ compression”!
+{panel type="curiosity" summary="Kompresja ZL lub LZ?"}
+Opisany powyżej algorytm został nazwany kompresją "Ziv-Lempel" od nazwisk dwóch informatyków Jacoba Ziva i Abrahama Lempela, którzy wymyślili go w latach 70-tych. Niestety, ktoś pomieszał kolejność ich nazwisk, kiedy opisywał ten pomysł i nazwał go kompresją "LZ" zamiast kompresji "ZL". Wielu naukowców skopiowało błąd, przez co metoda Ziva i Lempela jest obecnie zwana "kompresją LZ"!
 {panel end}
 
-## Audio compression
+## Kompresja audio
 
-One of the most widely used methods for compressing music is MP3, which is actually from a video compression standard called MPEG (Moving Picture Experts Group).
+Jedną z najczęściej stosowanych metod kompresji muzyki jest MP3, który jest częścią standardu kompresji wideo o nazwie MPEG (Moving Picture Experts Group).
 
 
-{panel type="curiosity" summary="The naming of mp3"}
-The name "mp3" isn't very self explanatory because the "mp" stands for "moving picture", and the 3 is from version 1, but mp3 files are used for music!
+{panel type="curiosity" summary="Nazwa mp3"}
+Nazwa "mp3" nie jest zbyt oczywista. Pomimo tego, że "mp" oznacza "ruchomy obraz" (ang. "moving picture"), a 3 numer wersji standardu, to pliki mp3 są używane do zapisu muzyki!
 
-The full name of the standard that it comes from is MPEG, and the missing "EG" stands for "experts group", which was a consortium of companies and researchers that got together to agree on a standard so that people could easily play the same videos on different brands of equipment (so, for example, you could play the same DVD on any brand of DVD player).
-The very first version of their standards (called MPEG-1) had three methods of storing the sound track (layer 1, 2 and 3).
-One of those methods (MPEG-1 layer 3) became very popular for compressing music, and was abbreviated to MP3.
+Pełna nazwa standardu, z którego pochodzi MP3, to MPEG, a brakujące "EG" oznacza "grupę ekspertów" (and. "expert group"). Grupę tą stanowiło konsorcjum firm i naukowców, którego celem było ustalenie standardu pozwalającego odtwarzanie materiałów wideo na urządzeniach różnych marek (na przykład to samo DVD działało na dowolnym odtwarzaczu DVD).
+Pierwsza wersja wypracowanych przez konsorcjum standardów (zwana MPEG-1) miała trzy metody przechowywania ścieżki dźwiękowej (warstwy 1, 2 i 3).
+Jedna z tych metod (warstwa 3 MPEG-1) stała się bardzo popularna w kompresowaniu muzyki i jej nazwa została skrócona do formatu MP3.
 
-The MPEG-1 standard isn't used much for video now (for example, DVDs and TV mainly use MPEG-2), but it remains very important for audio coding.
+Standard MPEG-1 nie jest już obecnie używany w przypadku wideo (płyty DVD i telewizja używają głównie MPEG-2), ale jest bardzo ważny w przypadku kodowania audio.
 
-The next MPEG version is MPEG-4 (MPEG-3 was redundant before it became a standard).
-MPEG-4 offers higher quality video, and is commonly used for digital video files, streaming media, Blu-Ray discs and some broadcast TV.
-The AAC audio compression method, used by Apple among others, is also from the MPEG-4 standard.
-On computers, MPEG-4 Part 14 is commonly used for video, and it's often abbreviated as "MP4."
+Współczesną wersją MPEG jest MPEG-4 (MPEG-3 przedawnił się zanim został uznany za standard).
+MPEG-4 oferuje wideo wyższej jakości i jest powszechnie stosowany do kodowania plików wideo, transmisji strumieniowych, dysków Blu-Ray i w przypadku niektórych programów telewizyjnych.
+Metoda kompresji audio AAC, używana między innymi przez Apple, również pochodzi ze standardu MPEG-4.
+Na komputerach, MPEG-4 część 14 jest powszechnie używany do wideo, a jego skrócona nazwa to "MP4".
 
-So there you have it: MP3 stands for "MPEG-1 layer 3", and MP4 stands for "MPEG-4 part 14".
+Podsumowując: MP3 oznacza "MPEG-1 layer 3", natomiast MP4 jest skrótem od "MPEG-4 część 14".
 {panel end}
 
-Most other audio compression methods use a similar approach to the MP3 method, although some offer better quality for the same amount of storage (or less storage for the same quality).
-We won't go into exactly how this works, but the general idea is to break the sound down into bands of different frequencies, and then represent each of those bands by adding together the values of a simple formula (the sum of cosine waves, to be precise).
+Pozostałe metody kompresji dźwięku wykorzystują podobne rozwiązania co algorytm MP3, i niektóre z nich oferują lepszą jakość przy podobnym rozmiarze pliku (lub mniejszy rozmiar przy tej samej jakości).
+Nie będziemy dokładnie prezentować zasad działania tych algorytmów, ale ogólna idea sprowadza się do rozłożenia dźwięku na pasma o różnych częstotliwościach, a następnie przedstawienie każdego z tych pasm poprzez dodanie wartości prostego wzoru (jako suma fal cosinusowych).
 
 {comment}
 .. xtcb sometime could put in an expert section on this, perhaps with recordings or a filter showing the waveforms and adding them. Here are some links in the meantime:
 {comment end}
 
-There is some [more detail about how MP3 coding works on the cs4fn site](http://www.cs4fn.org/mathemagic/sonic.html), and also in [an article on the I Programmer site](http://www.i-programmer.info/babbages-bag/1222-mp3.html).
+Na stronie [cs4fn znajdziesz więcej informacji na temat mp3](http://www.cs4fn.org/mathemagic/sonic.html), oraz [w artykule na stronie I Programmer](http://www.i-programmer.info/babbages-bag/1222-mp3.html).
 
 Other audio compression systems that you might come across include AAC, ALAC, Ogg Vorbis, and WMA. Each of these has various advantages over others, and some are more compatible or open than others.
 
