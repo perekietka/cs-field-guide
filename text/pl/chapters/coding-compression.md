@@ -393,25 +393,27 @@ Pomimo tego, że jakość jest dość niska, to oszczędność w przestrzeni dys
 low priority : interactive that could load a photo, zoom in on pixels, and change it to different qualities of jpg coding
 {comment end}
 
-{panel type="jargon-buster" summary="Where does the term JPEG come from?"}
-The name "JPEG" is short for "Joint Photographic Experts Group", a committee that was formed in the 1980s to create standards so that digital photographs could be captured and displayed on different brands of devices. Because some file extensions are limited to three characters, it is often seen as the ".jpg" extension.
+{panel type="jargon-buster" summary="Skąd pochodzi nazwa JPEG?"}
+Nazwa "JPEG" jest skrótem od "Joint Photographic Experts Group", komitetu utworzonego w latach 80. w celu wypracowania standardów umożliwiających przechwytywanie fotografii cyfrowych i wyświetlanie ich na różnych urządzeniach. Ponieważ niektóre systemy operacyjne ograniczają rozszerzenia plików do trzech znaków, pliki skompresowane JPEG mają rozszerzenie ".jpg".
 {panel end}
 
-{panel type="curiosity" summary="More about cosine waves"}
-The cosine waves used for JPEG images are based on a "Discrete Cosine Transform". The "Discrete" means that the waveform is digital – it is the opposite of continuous, where any value can occur. In a JPEG wave, there are only 8 x 8 values (for the block being coded), and each of those values can have a limited range of numbers (binary integers), rather than any value at all.
+{panel type="curiosity" summary="Więcej na temat fal cosinusowych"}
+Fale cosinusowe wykorzystywane w metodzie JPEG oparte są na "Dyskretnej Transformacji Cosinusowej". "Dyskretna" oznacza, że wartości są ze skończonego zbioru - nie jest ciągłą, dla którym może wystąpić dowolna wartość. Fale w JPEG są reprezentowane jako wartości dla 8 x 8  punktów (dla kodowanego bloku), a każda z tych wartości pochodzi z ograniczonego przedziału (binarne liczby całkowite), nie mogą przyjąć dowolnej wartości.
 {panel end}
 
-An important issue arises because JPEG represents images as smoothly varying colours: what happens if the colours change suddenly?
-In that case, lots of values need to be stored so that lots of cosine waves can be added together to make the sudden change in colour, or else the edge of the image become fuzzy.
-You can think of it as the cosine waves overshooting on the sudden changes, producing artifacts like the ones in the following image where the edges are messy.
+Ważna kwestią jest to jak metoda JPEG, zaprojektowana do przedstawiania obrazów o płynnie zmieniających się kolorach, radzą sobie, gdy kolory zmieniają się nagle?
+W takim przypadku należy zapisać wiele wartości, aby można było dodać wiele fal i uzyskać nagłą zmianę koloru, a tym samym ostrą krawędź.
+Można to sobie wyobrazić jako fale cosinusowe powodujące przesadzone zmiany, wytwarzające artefakty, takie jak te na obrazie poniżej, gdzie krawędzie są zabrudzone.
 
 {image filename="jpeg-word.jpg"}
 
-The original had sharp edges, but this zoomed in view of the JPEG version of it show that not only are the edges gradual, but some darker pixels occur further into the white space, looking a bit like shadows or echoes.
+Oryginał posiadał ostre krawędzie, ale na powiększeniu obrazu JPEG widać, że nie tylko krawędzie są stopniowe, ale niektóre ciemniejsze piksele pojawiają się dalej również na białym tle, wyglądając trochę jak cienie lub echa.
 
 {image filename="jpeg-word-zoomed.jpg"}
 
-For this reason, JPEG is used for photos and natural images, but other techniques (such as GIF and PNG, which we will look at in another section) work better for artificial images like this one.
+Z tego względu JPEG jest używany do zdjęć i naturalnych obrazów, natomiast inne metody kompresji  (takie jak
+GIF i PNG, które poznamy w dalszej części) będą działać lepiej w przypadku sztucznych obrazów, takich jak
+ten.
 
 {comment}
 .. xjrm low priority create an image like the one in this link, with one, two three waveforms added http://mathworld.wolfram.com/images/eps-gif/FourierSeriesSquareWave_800.gif (then Tim to add some text)
@@ -439,18 +441,17 @@ appearing soon!
 {comment end}
 
 
-## General purpose compression
+## Kompresja ogólnego przeznaczenia
 
-General purpose compression methods need to be lossless because you can't assume that the user won't mind if the data is changed. The most widely used general purpose compression algorithms (such as ZIP, gzip, and rar) are based on a method called "Ziv-Lempel coding", invented by Jacob Ziv and Abraham Lempel in the 1970s.
+Metody kompresji ogólnego przeznaczenia muszą być bezstratne, ponieważ nie można założyć, że użytkownik nie będzie akceptował zmiany danych. Najbardziej popularne algorytmy tego typu (takie jak ZIP, gzip i rar) oparte są na metodzie zwanej "kodowaniem Ziv-Lempel", wymyślonej przez Jacoba Ziva i Abrahama Lempela w latach siedemdziesiątych.
 
-We'll look at this with a text file as an example.
-The main idea of Ziv-Lempel coding is that sequences of characters are often repeated in files (for example, the sequence of characters "image " appears often in this chapter), and so instead of storing the repeated occurrence, you just replace it with a reference to where it last occurred. As long as the reference is smaller than the phrase being replaced, you'll save space. Typically this systems based on this approach can be used to reduce text files to as little as a quarter of their original size, which is almost as good as any method known for compressing text.
+Przyjrzymy się temu zagadnieniu na przykładzie pliku tekstowego.
+Główną ideą kodowania Ziv-Lempel zastępowanie sekwencji znaków często występujących w plikach (na przykład sekwencja znaków "obraz" pojawia się często w tym rozdziale) odnośnikami do miejsca, w którym ostatnio się pojawił. Pod warunkiem, że odniesienie jest mniejsze niż zastępowana fraza, oszczędzamy miejsce. Zwykle systemy oparte na tym podejściu można wykorzystać do zredukowania plików tekstowych do zaledwie jednej czwartej ich oryginalnego rozmiaru, co jest prawie tak dobre, jak każda znana metoda kompresowania tekstu.
 
-The following interactive allows you to explore this idea.
-The empty boxes have been replaced with a reference to the text occurring earlier.
-You can click on a box to see where the reference is, and you can type the referenced characters in to decode the text.
-What happens if a reference is pointing to another reference?
-As long as you decode them from first to last, the information will be available before you need it.
+Poniższy ??interactive?? pozwala się zapoznać z tą ideą.
+Możesz kliknąć pole, aby zobaczyć dokąd prowadzi odnośnik, a następnie wpisać odpowiednie znaki i w rezultacie odkodować tekst.
+Co się stanie, jeśli odniesienie wskazuje na inne odniesienie?
+Dopóki dekodujesz je od początku, informacje będą dostępne, zanim będziesz ich potrzebować.
 
 {comment}
 .. xhtml5 Eventually this could use a parameter so there's one version with no tabs, and a later one with them.
@@ -462,17 +463,17 @@ As long as you decode them from first to last, the information will be available
 .. xjrm (or Rhem): pasting text in that is too big causes it to be rejected. It would be nicer if the pasted text is truncated to the maximum length.
 {comment end}
 
-You can also enter your own text by clicking on the "Text" tab.
-You could paste in some text of your own to see how many characters can be replaced with references.
+Możesz wprowadzić własny tekst, klikając zakładkę "Tekst".
+Możesz również wkleić jakiś własny tekst, aby sprawdzić ile znaków można zastąpić odniesieniami.
 
-The references are actually two numbers: the first says how many characters to count back to where the previous phrase starts, and the second says how long the referenced phrase is.
-Each reference typically takes about the space of one or two characters, so the system makes a saving as long as two characters are replaced.
-The options in the interactive above allow you to require the replaced length to be at least two, to avoid replacing a single character with a reference.
-Of course, all characters count, not just letters of the alphabet, so the system can also refer back to the white spaces between words.
-In fact, some of the most common sequences are things like a full stop followed by a space.
+Odnośniki są w rzeczywistości dwiema liczbami: pierwsza określa, ile znaków wcześniej zaczyna się sekwencja, a druga jaka jest jej długość.
+Każde takie odwołanie zwykle zajmuje około jednego lub dwóch znaków, więc oszczędzamy miejsce jeżeli zastępowane są co najmniej dwa znaki.
+Opcje w powyższej ??interactive?? pozwalają wymusić, aby zastępowane sekwencje miały długość większą lub równą 2.
+Oczywiście bierzemy pod uwagę wszystkie znaki, a nie tylko litery alfabetu, więc system kompresji może również odnosić się do spacji między wyrazami.
+W praktyce jedną z najczęściej występujących sekwencji jest kropka, po której następuje spacja.
 
-This approach also works very well for black and white images, since sequences like "10 white pixels" are likely to have occurred before.
-Here are some of the bits from the example earlier in this chapter; you can paste them into the interactive above to see how many pointers are needed to represent it.
+To podejście sprawdzi się również w przypadku obrazów czarno-białych, ponieważ sekwencje takie jak "10 białych pikseli" prawdopodobnie pojawiły się wcześniej.
+Oto niektóre fragmenty z wcześniejszego przykładu; możesz wkleić je do powyższego ??interactive??, aby zobaczyć, jak działa kompresja.
 
 ```
 011000010000110
