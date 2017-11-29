@@ -537,11 +537,11 @@ Nie będziemy dokładnie prezentować zasad działania tych algorytmów, ale og�
 
 Na stronie [cs4fn znajdziesz więcej informacji na temat mp3](http://www.cs4fn.org/mathemagic/sonic.html), oraz [w artykule na stronie I Programmer](http://www.i-programmer.info/babbages-bag/1222-mp3.html).
 
-Other audio compression systems that you might come across include AAC, ALAC, Ogg Vorbis, and WMA. Each of these has various advantages over others, and some are more compatible or open than others.
+Inne dostępne systemy kompresji dźwięku to AAC, ALAC, Ogg Vorbis i WMA. Każda z tych metod ma pewne zalety w stosunku do innych, niektóre są bardziej kompatybilne lub otwarte niż inne.
 
-The main questions with compressed audio are how small the file can be made, and how good the quality is of the human ear. (There is also the question of how long it takes to encode the file, which might affect how useful the system is.)
-The tradeoff between quality and size of audio files can depend on the situation you're in: if you are jogging and listening to music then the quality may not matter so much, but it's good to reduce the space available to store it.
-On the other hand, someone listening to a recording at home on a good sound system might not mind about having a large device to store the music, as long as the quality is high.
+Głównym pytaniem dotyczącym skompresowanego dźwięku jest jak mały może być plik i jak czułe jest ludzkie uchao. (Dodatkowo pojawia się pytanie, ile czasu zajmuje kodowanie pliku, co może być istotne dla praktyczności systemu).
+Kompromis między jakością a wielkością plików audio może zależeć od sytuacji, w której muzyka jest odtwarzana. Jeśli biegasz i słuchasz muzyki, jakość może nie mieć większego znaczenia, dzięki czemu można ograniczyć przestrzeń potrzebną do jej przechowywania.
+Z drugiej strony, jeśli słuchamy nagrań w domu na dobrym sprzęcie jakość może odgrywać o wiele większą rolę od rozmiaru plików.
 
 To evaluate an audio compression you should choose a variety of recordings that you have high quality originals for, typically on CD (or using uncompressed WAV or AIFF files). Choose different styles of music, and other kinds of audio such as speech, and perhaps even create a recording that is totally silent. Now convert these recordings to different audio formats. One system for doing this that is free to download is Apple's iTunes, which can be used to rip CDs to a variety of formats, and gives a choice of settings for the quality and size.
 A lot of other audio systems are able to convert files, or have plugins that can do the conversion.
