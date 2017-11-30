@@ -541,24 +541,24 @@ Inne dostępne systemy kompresji dźwięku to AAC, ALAC, Ogg Vorbis i WMA. Każd
 
 Głównym pytaniem dotyczącym skompresowanego dźwięku jest jak mały może być plik i jak czułe jest ludzkie uchao. (Dodatkowo pojawia się pytanie, ile czasu zajmuje kodowanie pliku, co może być istotne dla praktyczności systemu).
 Kompromis między jakością a wielkością plików audio może zależeć od sytuacji, w której muzyka jest odtwarzana. Jeśli biegasz i słuchasz muzyki, jakość może nie mieć większego znaczenia, dzięki czemu można ograniczyć przestrzeń potrzebną do jej przechowywania.
-Z drugiej strony, jeśli słuchamy nagrań w domu na dobrym sprzęcie jakość może odgrywać o wiele większą rolę od rozmiaru plików.
+Z drugiej strony, jeśli słuchamy nagrań w domu na dobrym sprzęcie jakość może odgrywać o wiele większą rolę niż rozmiaru plików.
 
-To evaluate an audio compression you should choose a variety of recordings that you have high quality originals for, typically on CD (or using uncompressed WAV or AIFF files). Choose different styles of music, and other kinds of audio such as speech, and perhaps even create a recording that is totally silent. Now convert these recordings to different audio formats. One system for doing this that is free to download is Apple's iTunes, which can be used to rip CDs to a variety of formats, and gives a choice of settings for the quality and size.
-A lot of other audio systems are able to convert files, or have plugins that can do the conversion.
+Aby ocenić stopień kompresji pliku audio, należy przyjrzeć oryginalnym nagraniom wysokiej jakości, takim jak płyta CD (lub nieskompresowane pliki WAV lub AIFF). Następnie przygotuj pliki audio z różnymi stylami muzycznymi oraz innymi rodzajami dźwięku, takimi jak mowa lub nawet cisza. W dalszej kolejności przekowertuj te nagrania do różnych formatów audio. Jednym narzędzi, które to umożliwia jest iTunes firmy Apple. Można go użyć do zgrywania płyt CD i zapisu w różnych formatach, po uprzednim ustaleniu jakości i wielkości.
+Wiele innych programów audio oferuje podobne możliwości.
 
-Compress each of your recordings using a variety of methods, making sure that each compressed file is created from a high quality original. Make a table showing how long it took to process each recording, the size of the compressed file, and some evaluation of the quality of the sound compared with the original. Discuss the tradeoffs involved – do you need much bigger files to store good quality sound? Is there a limit to how small you can make a file and still have it sounding ok? Do some methods work better for speech than others? Does a 2 minute recording of silence take more space than a 1 minute recording of silence? Does a 1 minute recording of music use more space than a minute of silence?
+Skompresuj każde z przygotowanych nagrań przy użyciu różnych metod, po upewnieniu się, że każdy skompresowany plik jest tworzony z oryginału wysokiej jakości. Stwórz tabelę pokazującą, ile czasu zajęło przetwarzanie każdego nagrania, rozmiar skompresowanego pliku oraz ocenę jakości dźwięku w porównaniu z oryginałem. Prześledź związki pomiędzy jakością a rozmiarem - czy potrzebujesz dużo większych plików do przechowywania dobrej jakości dźwięku? Czy istnieje minimum dla rozmiaru pliku, który zachowuje akceptowalną jakość? Czy niektóre metody działają lepiej dla mowę niż inne? Czy 2-minutowe nagranie ciszy zajmuje więcej miejsca niż 1 minuta nagrania ciszy? Czy 1 minuta nagrywania muzyki zajmuje więcej miejsca niż minuta ciszy?
 
 {comment}
 .. xtcb could have a section on Huffman coding sometime (remove from "the whole story")
 {comment end}
 
-## The whole story!
+## Cała opowieść!
 
-The details of how compression systems work have been glossed over in this chapter, as we have been more concerned about the file sizes and speed of the methods than how they work.
-Most compression systems are variations of the ideas that have been covered here, although one fundamental method that we haven't mentioned is Huffman coding, which turns out to be useful as the final stage of *all* of the above methods, and is often one of the first topics mentioned in textbooks discussing compression (there's a brief [explanation of it here](http://www.cimt.plymouth.ac.uk/resources/codes/codes_u17_text.pdf)).
-A closely related system is Arithmetic coding (there's an [explanation of it here](http://www.cimt.plymouth.ac.uk/resources/codes/codes_u18_text.pdf)).
-Also, video compression has been omitted, even though compressing videos saves more space than most kinds of compression.
-Most video compression is based on the "MPEG" standard (Moving Pictures Experts Group). There is some information about how this works in the [CS4FN article on "Movie Magic"](http://www.cs4fn.org/films/mpegit.php).
+W rozdziale tym przedstawione zostały podstawowe informacje dotyczące kompresji, wiele szczegółów zostało tego zagadnienia zostało jedynie wspomnianych. Sporo miejsca zostało poświęcone rozmiarom plików i szybkości algorytmów kompresji.
+Większość systemów kompresji to warianty pomysłów, które zostały tutaj omówione. Poza jednym wyjątkiem, o którym nie wspomnieliśmy, chociaż jest jednym z najważniejszych algorytmów. Chodzi o kodowanie Huffmana, które okazuje się przydatne jako ostatni etap *wszystkich* powyższych metod i często jest jednym z pierwszych tematów wymienionych w podręcznikach omawiających kompresję (krótkie [wyjaśnienie tutaj](http://www.cimt.plymouth.ac.uk/resources/codes/codes_u17_text.pdf)).
+Blisko związanie kodowanie artymetyczne (krótkie [wyjaśnienie tutaj](http://www.cimt.plymouth.ac.uk/resources/codes/codes_u18_text.pdf)).
+Kompresja wideo została również pominięta, mimo iż to właśnie ten typ kompresji daje największe oszczędności przestrzeni dyskowej.
+Większość metod kompresji wideo jest oparta na standardzie "MPEG" (ang. Moving Pictures Experts Group). Nieco więcej informacji na ten tamat zawiera [artykuł CS4FN o "Movie Magic"](http://www.cs4fn.org/films/mpegit.php).
 
 {panel type="teacher-note" summary="Teacher guides for Plymouth resources"}
 Access to teacher guides for the Plymouth resources (linked in the previous paragraph) above are [available here](http://www.cimt.plymouth.ac.uk/resources/codes/).
