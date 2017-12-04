@@ -2,7 +2,7 @@
 
 ## ??What's the big picture?
 
-Kompresja danych pozwala zredukować ilość miejsc potrzebną do zapisu plików. Jeżeli możesz zmniejszyć o połowę rozmiar pliku, to oznacza, że możesz przechowywać dwa razy więcej plików przy tych samych kosztach, lub możesz ściągać pliki dwa razy szybciej (płacąc dwa razy mniej za transfer).
+Kompresja danych pozwala zredukować ilość miejsca potrzebną do zapisu plików. Jeżeli możesz zmniejszyć o połowę rozmiar pliku, to oznacza, że możesz przechowywać dwa razy więcej plików przy tych samych kosztach, lub możesz ściągać pliki dwa razy szybciej (płacąc dwa razy mniej za transfer).
 Pomimo tego, iż dyski twarde zwiększają objętość oraz wysoka przepustowość łącz staje się powszechna, to nadal dobrze jest osiągnąć tą samą wartość pracując na mniejszym, skompresowanym pliku.
 Dla dużych magazynów danych, takich jakie posiadają Google lub Facebook, zmniejszenie o połowę przestrzeni potrzebnej do zapisu oznacza olbrzymie oszczędności w przestrzeni dyskowej, mocy obliczeniowej, a w konsekwencji  oszczędności w zużyciu energii, chłodzeniu oraz niepożądanym wpływie na środowisko.
 
@@ -17,7 +17,7 @@ W tym rozdziale przyjrzymy się temu jak można uzyskać kompresje, jakie są ko
 
 Zaczniemy od prostego przykłady – kodowania długości serii (RLE od ang. Run Length Encoding) – które daje pewien wgląd w zalety i wady kompresji.
 
-{panel type="teacher-note" summary="Locked in activity"}
+{panel type="teacher-note" summary="??Locked in activity"}
 Przykładem intrygującego zadania związanego z kompresją jest ["locked-in" activity](http://www.cs4fn.org/lockedin.html) z CS4FN.
 W tym zadaniu uczniowie symulują pisanie tekstu metodą używaną przez Jean’a-Dominique’a Bauby, który był całkowicie sparaliżowany i mógł poruszać jedynie powieką. Przy pomocy prostego binarnego interfejsu (miga lub nie miga) był w stanie podyktować całą książkę. Warto dobrać uczniów w pary i kazać im spróbować porozumiewać się jedynie mrugając. Zadanie to spowoduje wiele pytań o to jak robić to w najkrótszym czasie i przy najmniejszym wysiłku. Oczywiście, w pierwszym kroku będą musieli ustalić jak przekazać jakąkolwiek treść w ten sposób.
 {panel end}
@@ -43,7 +43,7 @@ Wprowadziliśmy RLE gdyż jest praktycznym podejściem do kompresji, i co ważni
 
 Wyobraźmy sobie, że mamy do czynienia z zamieszczonym poniżej prostym obrazkiem.
 
-{image filename="pixel-diamond.png" alt="Kształt diamentu stworzony z pikseli"}
+{image filename="pixel-diamond.png" alt="Kształt diamentu (rombu) stworzony z pikseli"}
 
 Komputer może w prosty sposób zapisać taki obrazek stosując format, w którym ‘0’ oznacza piksel w kolorze białym, a ‘1’ piksel w kolorze czarnym (jest to “mapa bitowa”, gdyż przypisaliśmy piksele wartościom bitów). Używając tej metody powyższy obrazek będzie reprezentowany w następujący sposób:
 
