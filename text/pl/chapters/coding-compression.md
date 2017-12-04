@@ -1,6 +1,6 @@
-# Kdowanie - Kompresja
+# Kodowanie - Kompresja
 
-## What's the big picture?
+## ??What's the big picture?
 
 Kompresja danych pozwala zredukować ilość miejsc potrzebną do zapisu plików. Jeżeli możesz zmniejszyć o połowę rozmiar pliku, to oznacza, że możesz przechowywać dwa razy więcej plików przy tych samych kosztach, lub możesz ściągać pliki dwa razy szybciej (płacąc dwa razy mniej za transfer).
 Pomimo tego, iż dyski twarde zwiększają objętość oraz wysoka przepustowość łącz staje się powszechna, to nadal dobrze jest osiągnąć tą samą wartość pracując na mniejszym, skompresowanym pliku.
@@ -29,7 +29,7 @@ W tym zadaniu uczniowie symulują pisanie tekstu metodą używaną przez Jean’
 
 Kodowanie długości serii (RLE od ang. Run Length Encoding) nie jest techniką często używaną współcześnie, ale jest nadaje się świetnie jako wprowadzenie do problemów związanych z kompresją.
 
-{panel type="teacher-note" summary="Who uses run length encoding?"}
+{panel type="teacher-note" summary="Kto korzysta z kodowania długości serii?"}
 [Kodowanie długości serii](https://en.wikipedia.org/wiki/Run-length_encoding) było w powszechnym użyciu kiedy normą były czarno-białe obrazy.
 To właśnie ten typ kompresji umożliwił realizację urządzenia jakim był Fax, również dzięki unstandardowieniu 1980 roku.
 Piksele w przesyłanym faksem obrazie był jedynie czarne lub białe, charakteryzowały się przeważnie długimi ciągami białych pikseli na marginesach, co sprawiało, że RLE było wyjątkowo skuteczne.
@@ -41,11 +41,11 @@ Wprowadziliśmy RLE gdyż jest praktycznym podejściem do kompresji, i co ważni
 {panel end}
 
 
-Imagine we have the following simple black and white image.
+Wyobraźmy sobie, że mamy do czynienia z zamieszczonym poniżej prostym obrazkiem.
 
-{image filename="pixel-diamond.png" alt="A diamond shape made out of pixels"}
+{image filename="pixel-diamond.png" alt="Kształt diamentu stworzony z pikseli"}
 
-One very simple way a computer can store this image in binary is by using a format where '0' means white and '1' means black (this is a "bit map", because we've mapped the pixels onto the values of bits). Using this method, the above image would be represented in the following way:
+Komputer może w prosty sposób zapisać taki obrazek stosując format, w którym ‘0’ oznacza piksel w kolorze białym, a ‘1’ piksel w kolorze czarnym (jest to “mapa bitowa”, gdyż przypisaliśmy piksele wartościom bitów). Używając tej metody powyższy obrazek będzie reprezentowany w następujący sposób:
 
 ```
 011000010000110
