@@ -146,7 +146,7 @@ To jest kodowane jako:
 5, 5, 5
 ```
 
-Zatem mamy następującą reprezentacją dla pierwszych trzech wierszy pikseli obrazu.
+Zatem mamy następującą reprezentacją dla pierwszych trzech wierszy pikseli obrazu.
 
 ```
 1, 2, 4, 1, 4, 2, 1
@@ -154,7 +154,7 @@ Zatem mamy następującą reprezentacją dla pierwszych trzech wierszy pikseli 
 5, 5, 5
 ```
 
-Łatwo mona się domyśleć jak będą wyglądać kolejne wiersze w tym systemie reprezentacji.
+Łatwo mona się domyśleć jak będą wyglądać kolejne wiersze w tym systemie reprezentacji.
 
 {panel type="spoiler" summary="Reprezentacja pozostałych wierszy"}
 Pozostałe wiersze to
@@ -183,7 +183,7 @@ W poniższym materiale wideo z ??Computer Science Unplugged show?? zakodowany pr
 
 ### Konwertowanie Kodu Długości Serii do oryginalnej reprezentacji
 
-Aby upewnić się, że możemy odwrócić proces kompresji, spróbuj znaleźć oryginalną reprezentację (zera i jedynki) skompresowanego obrazu.
+Aby upewnić się, że możemy odwrócić proces kompresji, spróbuj znaleźć oryginalną reprezentację (zera i jedynki) skompresowanego obrazu.
 
 ```
 4, 11, 3
@@ -326,7 +326,7 @@ It would be good have a figure that shows a line of pixels, and the correspondin
 {comment end}
 
 {panel type="curiosity" summary="Czym jest funkcja consinus"}
-Funkcja cosinus jest jedną z funkcji trygonometrycznych , która jest często używana do obliczania długości boków trójkąta. Wykres wartość cosinusa od 0 do 180 stopni jest gładką krzywą w przedziale 1 do -1 przypominającą falę. Wariacje tego wykresu można wykorzystać do przybliżenia wartości pikseli przechodzących z jednego koloru do drugiego. Jeśli dodasz falę cosinusową o wyższej częstotliwości z inną, to możesz uzyskać interesujące kształty. Teoretycznie każdy piksel może zostać utworzony przez dodanie różnych fal cosinusowych!
+Funkcja cosinus jest jedną z funkcji trygonometrycznych , która jest często używana do obliczania długości boków trójkąta. Wykres wartość cosinusa od 0 do 180 stopni jest gładką krzywą w przedziale 1 do -1 przypominającą falę. Wariacje tego wykresu można wykorzystać do przybliżenia wartości pikseli przechodzących z jednego koloru do drugiego. Jeśli dodasz falę cosinusową o wyższej częstotliwości z inną, to możesz uzyskać interesujące kształty. Teoretycznie każdy piksel może zostać utworzony przez dodanie różnych fal cosinusowych!
 
 Poniższy wykres pokazuje wartości funkcji {math}\sin(x){math end} oraz {math}\cos(x){math end} dla {math}x{math end} zakresu od 0 do 180 stopni.
 
@@ -394,7 +394,7 @@ low priority : interactive that could load a photo, zoom in on pixels, and chang
 {comment end}
 
 {panel type="jargon-buster" summary="Skąd pochodzi nazwa JPEG?"}
-Nazwa "JPEG" jest skrótem od "Joint Photographic Experts Group", komitetu utworzonego w latach 80. w celu wypracowania standardów umożliwiających przechwytywanie fotografii cyfrowych i wyświetlanie ich na różnych urządzeniach. Ponieważ niektóre systemy operacyjne ograniczają rozszerzenia plików do trzech znaków, pliki skompresowane JPEG mają rozszerzenie ".jpg".
+Nazwa "JPEG" jest skrótem od "Joint Photographic Experts Group", komitetu utworzonego w latach 80. w celu wypracowania standardów umożliwiających przechwytywanie fotografii cyfrowych i wyświetlanie ich na różnych urządzeniach. Ponieważ niektóre systemy operacyjne ograniczają rozszerzenia plików do trzech znaków, pliki skompresowane JPEG mają rozszerzenie ".jpg".
 {panel end}
 
 {panel type="curiosity" summary="Więcej na temat fal cosinusowych"}
@@ -464,7 +464,7 @@ Dopóki dekodujesz je od początku, informacje będą dostępne, zanim będziesz
 {comment end}
 
 Możesz wprowadzić własny tekst, klikając zakładkę "Tekst".
-Możesz również wkleić jakiś własny tekst, aby sprawdzić ile znaków można zastąpić odniesieniami.
+Możesz również wkleić jakiś własny tekst, aby sprawdzić ile znaków można zastąpić odniesieniami.
 
 Odnośniki są w rzeczywistości dwiema liczbami: pierwsza określa, ile znaków wcześniej zaczyna się sekwencja, a druga jaka jest jej długość.
 Każde takie odwołanie zwykle zajmuje około jednego lub dwóch znaków, więc oszczędzamy miejsce jeżeli zastępowane są co najmniej dwa znaki.
@@ -529,7 +529,7 @@ Podsumowując: MP3 oznacza "MPEG-1 layer 3", natomiast MP4 jest skrótem od "MPE
 {panel end}
 
 Pozostałe metody kompresji dźwięku wykorzystują podobne rozwiązania co algorytm MP3, i niektóre z nich oferują lepszą jakość przy podobnym rozmiarze pliku (lub mniejszy rozmiar przy tej samej jakości).
-Nie będziemy dokładnie prezentować zasad działania tych algorytmów, ale ogólna idea sprowadza się do rozłożenia dźwięku na pasma o różnych częstotliwościach, a następnie przedstawienie każdego z tych pasm poprzez dodanie wartości prostego wzoru (jako suma fal cosinusowych).
+Nie będziemy dokładnie prezentować zasad działania tych algorytmów, ale ogólna idea sprowadza się do rozłożenia dźwięku na pasma o różnych częstotliwościach, a następnie przedstawienie każdego z tych pasm poprzez dodanie wartości prostego wzoru (jako suma fal cosinusowych).
 
 {comment}
 .. xtcb sometime could put in an expert section on this, perhaps with recordings or a filter showing the waveforms and adding them. Here are some links in the meantime:
@@ -546,7 +546,7 @@ Z drugiej strony, jeśli słuchamy nagrań w domu na dobrym sprzęcie jakość m
 Aby ocenić stopień kompresji pliku audio, należy przyjrzeć oryginalnym nagraniom wysokiej jakości, takim jak płyta CD (lub nieskompresowane pliki WAV lub AIFF). Następnie przygotuj pliki audio z różnymi stylami muzycznymi oraz innymi rodzajami dźwięku, takimi jak mowa lub nawet cisza. W dalszej kolejności przekowertuj te nagrania do różnych formatów audio. Jednym narzędzi, które to umożliwia jest iTunes firmy Apple. Można go użyć do zgrywania płyt CD i zapisu w różnych formatach, po uprzednim ustaleniu jakości i wielkości.
 Wiele innych programów audio oferuje podobne możliwości.
 
-Skompresuj każde z przygotowanych nagrań przy użyciu różnych metod, po upewnieniu się, że każdy skompresowany plik jest tworzony z oryginału wysokiej jakości. Stwórz tabelę pokazującą, ile czasu zajęło przetwarzanie każdego nagrania, rozmiar skompresowanego pliku oraz ocenę jakości dźwięku w porównaniu z oryginałem. Prześledź związki pomiędzy jakością a rozmiarem - czy potrzebujesz dużo większych plików do przechowywania dobrej jakości dźwięku? Czy istnieje minimum dla rozmiaru pliku, który zachowuje akceptowalną jakość? Czy niektóre metody działają lepiej dla mowę niż inne? Czy 2-minutowe nagranie ciszy zajmuje więcej miejsca niż 1 minuta nagrania ciszy? Czy 1 minuta nagrywania muzyki zajmuje więcej miejsca niż minuta ciszy?
+Skompresuj każde z przygotowanych nagrań przy użyciu różnych metod, po upewnieniu się, że każdy skompresowany plik jest tworzony z oryginału wysokiej jakości. Stwórz tabelę pokazującą, ile czasu zajęło przetwarzanie każdego nagrania, rozmiar skompresowanego pliku oraz ocenę jakości dźwięku w porównaniu z oryginałem. Prześledź związki pomiędzy jakością a rozmiarem - czy potrzebujesz dużo większych plików do przechowywania dobrej jakości dźwięku? Czy istnieje minimum dla rozmiaru pliku, który zachowuje akceptowalną jakość? Czy niektóre metody działają lepiej dla mowę niż inne? Czy 2-minutowe nagranie ciszy zajmuje więcej miejsca niż 1 minuta nagrania ciszy? Czy 1 minuta nagrywania muzyki zajmuje więcej miejsca niż minuta ciszy?
 
 {comment}
 .. xtcb could have a section on Huffman coding sometime (remove from "the whole story")
