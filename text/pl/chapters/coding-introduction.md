@@ -1,71 +1,41 @@
-# Coding - Introduction
-
+# Kodowanie - wprowadzenie
 
 ## What's the big picture?
 
-The word "code" has lots of meanings in computer science. It's often used to talk about programming, and a program can be referred to as "source code".
-Even binary representation of information is sometimes referred to as a code.
-However, in this chapter (and the next three chapters),
-the sense of coding that will be used is about clever representations of information that address a practical issue,
-such as encrypting the data to keep it secret.
+Słowo “kod” ma wiele znaczeń w informatyce. Często używa się go mówiąc o programowaniu (jako o kodowaniu), a treść programu nazywa się “kodem źródłowym”. Nawet reprezentację binarną informacji określa się mianem kodu. Jednakże w tym rozdziale (oraz w kolejnych trzech rozdziałach) sens tego słowa będzie wyrażony jako sprytny sposób reprezentacji informacji, który przy okazji pozwala na rozwiązanie jednego z praktycznych problemów, takich jak szyfrowanie danych w celu zachowania ich w tajemnicy.
 
-In the previous chapter we looked at using binary representations to store all kinds of data --- numbers, text, images and more.
-But often simple binary representations don't work so well.
-Sometimes they take up too much space,
-sometimes small errors in the data can cause big problems,
-and sometimes we worry that someone else could easily read our messages.
-Most of the the time all three of these things are a problem!
-The codes that we will look at here overcome all of these problems, and are widely used for storing and transmitting important information.
+W poprzednim rozdziale zajmowaliśmy się binarną reprezentacją pozwalającą zapisywać różne rodzaje danych --- liczby, tekst, obrazy itp. Jednakże w wielu sytuacjach prosta reprezentacja binarna nie sprawdza się. Czasami zajmuje za dużo miejsca, innym razem mały błąd w zapisie może spowodować olbrzymi problem, a w innym przypadku naszym zmartwieniem może być fakt, że ktoś przeczyta naszą wiadomość. Bardzo często wszystkie trzy wspomniane problemy są istotne. Kody, którymi się zajmiemy radzą sobie właśnie z tymi problemami, i są powszechnie wykorzystywane w zapisywaniu i przesyłaniu informacji.
 
-The three main reasons that we use more complex representations of binary data are:
-- **Compression:** this reduces the amount of space the data needs (for example, coding an audio file using MP3 compression can reduce the size of an audio file to well under 10% of its original size).
-- **Encryption:** this changes the representation of data so that you need to have a "key" to unlock the message (for example, whenever your browser uses "https" instead of "http" to communicate with a website, encryption is being used to make sure that anyone eavesdropping on the connection can't make any sense of the information).
-- **Error Control:** this adds extra information to your data so that if there are minor failures in the storage device or transmission, it is possible to detect that the data has been corrupted, and even reconstruct the information
-(for example, bar codes on products have an extra digit added to them so that if the bar code is scanned incorrectly in a checkout,
-it makes a warning sound instead of charging you for the wrong product).
+Trzy główne powody, dla których stosujemy skomplikowane reprezentacje danych to:
+- **Kompresja:** pozwala zredukować przestrzeń jaką potrzebują dane (np. zakodowanie pliku audio do formatu MP3 pozwala zmniejszyć rozmiar do 10% rozmiaru początkowego).
+- **Szyfrowanie:** zmienia reprezentację danych w ten sposób, iż potrzebny jest “klucz” aby odczytać wiadomość (np. jeżeli przeglądarka internetowa korzysta z “https” zamiast “http”, to cała komunikacja ze stroną internetową jest zaszyfrowana, tak aby nikt kto podsłuchuje nie mógł poznać przesyłanych informacji)
+- **Korekcja błędów:** dodaje pewne informacje do danych, tak aby w przypadku małych błędów w zapisie lub transmisji można było ten fakt wyryć, a nawet odtworzyć poprawne dane (np. kody kreskowe na produktach posiadają dodatkową cyfrę, która pozwala określić czy kod został prawidłowo zeskanowany w kasie, w przypadku nieprawidłowego skanowania emitowany jest dźwięk ostrzegawczy)
 
-Often all three of these are applied to the same data;
-for example, if you take a photo on a smartphone it is usually compressed using JPEG,
-stored in the phone's memory with error correction,
-and uploaded to the web through a wireless connection using an encryption protocol to prevent other people nearby getting a copy of the photo.
+Często wszystkie trzy techniki są używane na tych samych danych, np. jeżeli robimy zdjęcie smartfonem to jest ono zwykle kompresowane kodowaniem JPEG, zapisywane w pamięci telefonu z kodem korekcji błędów, a następnie wysyłane do sieci przez bezprzewodowe połączenie, które jest szyfrowane, tak aby nikt w pobliżu nie mógł sobie skopiować tego zdjęcia.
 
-Without these forms of coding, digital devices would be very slow, have limited capacity, be unreliable, and be unable to keep your information private.
+Bez tych form kodowania współczesne urządzenia elektroniczne byłyby bardzo wolne, posiadały mocno ograniczoną pojemność, byłyby zawodne oraz niezdolne do zachowania prywatności danych.
 
-## The story of coding
+## Historia kodowania
 
 {image filename="shannon-juggling.png" alt="Cartoon of Claude Shannon juggling and riding a unicycle."}
 {comment image from http://csunplugged.org/information-theory/}
 
-The idea of encoding data to make the representation more compact, robust or secure is centuries old,
-but the solid theory needed to support codes in the information age was developed in the 1940s --- not surprisingly considering that technology played such an important role in World War II, where efficiency, reliability and secrecy were all very important.
-One of the most celebrated researchers in this area was Claude Shannon,
-who developed the field of "information theory", which is all about how data can be represented effectively
-(Shannon was also a juggler, unicyclist, and inventor of fanciful machines).
+Idea kodowania danych w celu skrócenia zapisu, uodpownienia na błędy lub zabezpiecznia prywatności jest znana od wieków, jednakże twarda teoria potrzebna do stworzenia kodów dla ery informacyjnej została rozwinięta dopiero w latach 40-tych --- nie powinno to być zaskoczeniem biorąc pod uwagę rolę jaką odegrała technologia w II wojnie światowej, podczas której wydajność, niezawodność i tajność byłby bardzo ważne. Jednym z najbardziej uznanych naukowców w tej dziedzinie był Claude Shannon, który rozwinął dyscyplinę “teorii informacji” zajmującą się efektywną reprezentacją danych (Shannon był również żąglerem, unicyklistą oraz wynalazcą pomysłowych maszyn).
+
 
 {panel type="curiosity" summary="Entropy"}
 
-A key concept in Shannon's work is a measure of information called "entropy",
-which established mathematical limits like how small files could be compressed,
-and how many extra bits must be added to a message to achieve a given level of reliability.
-While the idea of entropy is beyond what we need to cover here,
-there are some fun games that provide a taste of how you could measure information content by guessing what letter comes next.
-For example, think of a sentence, and see if a friend can guess the first letter.
-If it's an English sentence, chances are they'll guess that the first letter is "T", "A" or "I", rather than "X" or "Z".
-If, after a while, you had guessed that the beginning letters in a sentence are "There is no revers",
-you'd probably guess that the next letter is an "e".
-Entropy is about how easy it is to guess the next letter;
-this is useful in compression (we give short codes to letters that are likely to occur next),
-encryption (a good code makes it hard to guess the letters),
-and error control (if an error occurs, it needs to be easy to "guess" what the original text was).
+Kluczowym pojęciem w pracach Shannona jest miara informacji zwana “entropią”, która wyznacza matematyczne ograniczenia tego jak małe mogą być skompresowane pliki, oraz ile dodatkowych bitów trzeba poświęcić na kody korekcji błędów, aby osiągnąć zamierzony poziom niezawodności. Pomimo tego, iż szczegółowe wytłumaczenie entropii wykracza poza zakres tego podręcznika, zawarte są w nim pewne gry, które dostarczają intuicji jak można mierzyć zawartości informacji poprzez zgadywanie kolejnych liter. Dla przykładu, wymyśl zdanie i zapytaj kolegi czy potrafi odgadnąć pierwszą literę. W języku angielskim istnieje duże prawdopodobieństwo, że będą to litery “T”, “A” lub “I”, a nie “X” lub “Z”. ??If, after a while, you had guessed that the beginning letters in a sentence are "There is no revers", you'd probably guess that the next letter is an "e". ?? Entropia mówi nam jak łatwo jest odgadnąć następną literę; to z kolei przydaje się w kompresji (dajemy krótkie kody literom, które mają duże prawdopodobieństwo wystąpienia), oraz w korekcji błędów (jeśli pojawi się błąd to powinno być łatwo “odgadnąć” jaki był oryginalny tekst).
 
 You can explore the idea of entropy further using an
-[Unplugged activity called Twenty Guesses](http://csunplugged.org/information-theory),
-and an [online game for guessing sentences](http://www.math.ucsd.edu/~crypto/java/ENTROPY).
+Więcej o entropi można się dowiedzieć z 
+[Zadnie Dwadzieścia odgadnięć](http://csunplugged.org/information-theory),
+oraz [z gry polegającej na zgadywaniu zdań online](http://www.math.ucsd.edu/~crypto/java/ENTROPY).
 {panel end}
 
 ## Further reading
 
-James Gleick's book [The Information: A History, a Theory, a Flood](http://www.amazon.com/The-Information-History-Theory-Flood/dp/1400096235) provides an interesting view of the history of several areas relating to coding.
+Ksiażka James'a Gleick'a [The Information: A History, a Theory, a Flood](http://www.amazon.com/The-Information-History-Theory-Flood/dp/1400096235) pokazuje ciekawe spojrzenie na historię kilku dziedzin kodowania.
 
 ### Useful Links
 

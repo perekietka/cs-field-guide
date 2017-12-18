@@ -1,51 +1,51 @@
-# Coding - Compression
+# Kodowanie - Kompresja
 
-## What's the big picture?
+## ??What's the big picture?
 
-Data compression reduces the amount of space needed to store files. If you can halve the size of a file, you can store twice as many files for the same cost, or you can download the files twice as fast (and at half the cost if you're paying for the download).
-Even though disks are getting bigger and high bandwidth is becoming common, it's nice to get even more value by working with smaller, compressed files.
-For large data warehouses, like those kept by Google and Facebook, halving the amount of space taken can represent a massive reduction in the space and computing required, and consequently big savings in power consumption and cooling, and a huge reduction in the impact on the environment.
+Kompresja danych pozwala zredukować ilość miejsca potrzebną do zapisu plików. Jeżeli możesz zmniejszyć o połowę rozmiar pliku, to oznacza, że możesz przechowywać dwa razy więcej plików przy tych samych kosztach, lub możesz ściągać pliki dwa razy szybciej (płacąc dwa razy mniej za transfer).
+Pomimo tego, iż dyski twarde zwiększają objętość oraz wysoka przepustowość łącz staje się powszechna, to nadal dobrze jest osiągnąć tą samą wartość pracując na mniejszym, skompresowanym pliku.
+Dla dużych magazynów danych, takich jakie posiadają Google lub Facebook, zmniejszenie o połowę przestrzeni potrzebnej do zapisu oznacza olbrzymie oszczędności w przestrzeni dyskowej, mocy obliczeniowej, a w konsekwencji  oszczędności w zużyciu energii, chłodzeniu oraz niepożądanym wpływie na środowisko.
 
-Common forms of compression that are currently in use include JPEG (used for photos), MP3 (used for audio), MPEG (used for videos including DVDs), and ZIP (for many kinds of data).
-For example, the JPEG method reduces photos to a tenth or smaller of their original size, which means that a camera can store 10 times as many photos, and images on the web can be downloaded 10 times faster.
+Częste formy kompresji będące aktualnie w użyciu to JPEG (dla zdjęć), MP3 (dla plików audio), MPEG (dla wideo w tym DVD), oraz ZIP (dla dowolnych typów danych).
+Przykładowo, metoda kompresji JPEG redukuje rozmiar zdjęcia do jednej dziesiątej lub mniejszej części początkowego rozmiaru, co oznacza, iż aparat może przechowywać 10 razy więcej zdjęć, a obrazki w sieci mogą być ściągane 10 razy szybciej.
 
-So what's the catch? Well, there can be an issue with the quality of the data – for example, a highly compressed JPEG image doesn't look as sharp as an image that hasn't been compressed. Also, it takes processing time to compress and decompress the data. In most cases, the tradeoff is worth it, but not always.
+Na czym polega haczyk? Okazuje się, że może być problem z jakością danych - np. mocno skompresowany JPEG może nie być tak ostry jak nieskompresowany oryginał. Poza tym, kompresowanie i dekompresowanie wymaga mocy obliczeniowej procesora. W większości przypadków ten narzut się jednak opłaca.
 
 {interactive name="compression-comparer" type="in-page"}
 
-In this chapter we'll look at how compression might be done, what the benefits are, and the costs associated with using compressed data that need to be considered when deciding whether or not to compress data.
+W tym rozdziale przyjrzymy się temu jak można uzyskać kompresje, jakie są korzyści i jakie koszty związane z używaniem skompresowanych danych. Będzie to przydatne podczas podejmowania decyzji, o tym czy opłaca się kompresować dane.
 
-We'll start with a simple example – Run Length Encoding – which gives some insight into the benefits and the issues around compression.
+Zaczniemy od prostego przykłady – kodowania długości serii (RLE od ang. Run Length Encoding) – które daje pewien wgląd w zalety i wady kompresji.
 
-{panel type="teacher-note" summary="Locked in activity"}
-An intriguing activity that relates to compression is the ["locked-in" activity](http://www.cs4fn.org/lockedin.html) from CS4FN.
-In this activity, students simulate writing some text using a method used by Jean-Dominique Bauby, who was completely unable to move except for blinking one eye. With a simple binary interface (blinking or not blinking) he was able to author an entire book. It is well worth getting students to work in pairs, and have one try to communicate a word or short phrase strictly by blinking only. It raises many questions, including how it could be done in the shortest time and with the minimum effort. Of course, the first step is to work out how to convey any text at all!
+{panel type="teacher-note" summary="??Locked in activity"}
+Przykładem intrygującego zadania związanego z kompresją jest ["locked-in" activity](http://www.cs4fn.org/lockedin.html) z CS4FN.
+W tym zadaniu uczniowie symulują pisanie tekstu metodą używaną przez Jean’a-Dominique’a Bauby, który był całkowicie sparaliżowany i mógł poruszać jedynie powieką. Przy pomocy prostego binarnego interfejsu (miga lub nie miga) był w stanie podyktować całą książkę. Warto dobrać uczniów w pary i kazać im spróbować porozumiewać się jedynie mrugając. Zadanie to spowoduje wiele pytań o to jak robić to w najkrótszym czasie i przy najmniejszym wysiłku. Oczywiście, w pierwszym kroku będą musieli ustalić jak przekazać jakąkolwiek treść w ten sposób.
 {panel end}
 
 
-## Run Length Encoding
+## Kodowanie Długości Serii
 
 {video url="https://www.youtube.com/embed/uaV2RuAJTjQ?rel=0"}
 
-Run length encoding (RLE) is a technique that isn't so widely used these days, but it's a great way to get a feel for some of the issues around using compression.
+Kodowanie długości serii (RLE od ang. Run Length Encoding) nie jest techniką często używaną współcześnie, ale jest nadaje się świetnie jako wprowadzenie do problemów związanych z kompresją.
 
-{panel type="teacher-note" summary="Who uses run length encoding?"}
-[Run-length_encoding](https://en.wikipedia.org/wiki/Run-length_encoding) was widely used when black and white images were the norm.
-One of its key roles was as the compression method that made Fax (facsimile) machines possible in a standard that was adopted in 1980.
-The pixels in a fax image are only black or white, and typically there are long runs of white pixels in the margins, so RLE is particularly effective.
-Also, the method is very simple, and in the 1980s this was important since it reduced the cost of the electronics inside the machine.
+{panel type="teacher-note" summary="Kto korzysta z kodowania długości serii?"}
+[Kodowanie długości serii](https://en.wikipedia.org/wiki/Run-length_encoding) było w powszechnym użyciu kiedy normą były czarno-białe obrazy.
+To właśnie ten typ kompresji umożliwił realizację urządzenia jakim był Fax, również dzięki unstandardowieniu 1980 roku.
+Piksele w przesyłanym faksem obrazie był jedynie czarne lub białe, charakteryzowały się przeważnie długimi ciągami białych pikseli na marginesach, co sprawiało, że RLE było wyjątkowo skuteczne.
+Poza tym metoda ta była bardzo prosta, co było ważne w roku 1980, gdyż pozwoliło znacznie obniżyć koszt elektroniki w urządzeniu.
 
-Run length encoding is still used as part of JPEG compression, although not to code runs of pixels (in a photo it's unusual to have runs of exactly the same colour).
+Kodowanie długości serii jest nadal używane jako część kompresji JPEG, jednakże nie do kodowanie ciągu pikseli (w fotografii rzadko występują ciągi pikseli o dokładnie takim samym kolorze).
 
-We have introduced RLE here because it is a practical approach to compression, and most importantly it shows the key benefits and problems that arise in compression.
+Wprowadziliśmy RLE gdyż jest praktycznym podejściem do kompresji, i co ważniejsze pokazuje kluczowe zalety i problemy związane z kompresją.
 {panel end}
 
 
-Imagine we have the following simple black and white image.
+Wyobraźmy sobie, że mamy do czynienia z zamieszczonym poniżej prostym obrazkiem.
 
-{image filename="pixel-diamond.png" alt="A diamond shape made out of pixels"}
+{image filename="pixel-diamond.png" alt="Kształt diamentu (rombu) stworzony z pikseli"}
 
-One very simple way a computer can store this image in binary is by using a format where '0' means white and '1' means black (this is a "bit map", because we've mapped the pixels onto the values of bits). Using this method, the above image would be represented in the following way:
+Komputer może w prosty sposób zapisać taki obrazek stosując format, w którym ‘0’ oznacza piksel w kolorze białym, a ‘1’ piksel w kolorze czarnym (jest to “mapa bitowa”, gdyż przypisaliśmy piksele wartościom bitów). Używając tej metody powyższy obrazek będzie reprezentowany w następujący sposób:
 
 ```
 011000010000110
@@ -70,13 +70,12 @@ Interactive to make
 low priority; interactive for images. If we were going to put in the interactive that takes the 1’s and 0’s and converts it into an image for the students, I’d want to put that in here. This would mostly be a convenience thing that allows students to easily see what an image looks like. We would also provide an interactive that can take a number representation and show the image for that. We do NOT want to provide a tool that converts between the 2; we want students to do the converting by hand. The tool will allow them to see if the images they got are the same though.
 {comment end}
 
-{panel type="curiosity" summary="The PBM file format"}
-There is an image format that uses the simple one-symbol-per-pixel representation we have just described. The format is called "portable bitmap format" (PBM).
-PBM files are saved with the file extension “.pbm”, and contain a simple header, followed by the image data.
-The data in the file can be viewed by opening it in a text editor, much like opening a .txt file,
-and the image itself can be viewed by opening it in a drawing or image viewing program that supports PBM files
-(the format isn't very well supported, but a number of image viewing and editing programs can display them).
-A pbm file for the diamond image used earlier would be as follows:
+{panel type="curiosity" summary="Format pliku PBM"}
+Istnieje format obrazu, który wykorzystuje prostą jeden-symbol-na-piksel reprezentację opisaną powyżej. Ten format nazywa się “przenośny format mapy bitowej” PBM (ang. portable bitmap format).
+Pliki PBM są zapisywane z rozszerzeniem “.pbm”, i zawierają prosty nagłówek, za którym zapisane są dane obrazu.
+Dane w tym pliku można obejrzeć otwierając go w edytorze tekstowym, podobnie jak plik .txt., a sam obrazek możemy zobaczyć otwierając w programie graficznym, który wspiera format PBM
+(format ten nie jest szeroko wspierany, ale istnieje kilka programów go obsługujących)
+Plik pbm dla obrazu zawierającego wcześniej przywołany kształt diamentu wygląda następująco:
 
 ```
 P1
@@ -98,33 +97,32 @@ P1
 011000010000110
 ```
 
-The first two lines are the header.  The first line specifies the format of the file (P1 means that the file contains ASCII zeroes and ones). The second line specifies the width and then the height of the image in pixels. This allows the computer to know the size and dimensions of the image, even if the newline characters separating the rows in the file were missing.
-The rest of the data is the image, just like above.
-If you wanted to, you could copy and paste this representation (including the header) into a text file, and save it with the file extension .pbm.
-If you have a program on your computer able to open PBM files, you could then view the image with it. You could even write a program to output these files, and then display them as images.
+Pierwsze dwie linie stanowią nagłówek. Pierwsza linia określa format danych w pliku (P1 oznacza, że plik zawiera znaki zer i jedynek w formacie ASCII). Druga linia wyznacza szerokość i wysokość obrazu w pikselach. Dzięki temu komputer zna wymiary obrazu nawet wtedy gdyby brakowało znaków nowej linii.
+Resztę danych stanowi po prostu obraz (patrz powyżej).
+Można po prostu skopiować i wkleić tą reprezentację (wraz z nagłówkiem) do pliku tekstowego, a następnie zapisać z rozszerzeniem .pbm.
+Jeśli posiadasz program, który obsługuje pliki PBM, może zobaczyć obraz. Mógłbyś również napisać program, który będzie pozwalał tworzyć tego typu pliki oraz wyświetlać je jako obrazy.
 
-Because the digits are represented using ASCII in this format, it isn't very efficient, but it is useful if you want to read what's inside the file.
-There are variations of this format that pack the pixels into bits instead of characters, and variations that can be used for grey scale and colour images. More [information about this format is available on Wikipedia](https://en.wikipedia.org/wiki/Netpbm_format).
+Z tego względu, iż cyfry są reprezentowane przez znaki ASCII, nie jest to najbardziej efektywny sposób zapisu. Jednakże pozwala nam przeczytać zawartość pliku.
+Istnieją inne warianty tego formatu, które zapisują kolory w pojedynczych bitach zamiast w znakach ASCII, oraz takie, które pozwalają zapisywać odcienie szarości lub prawdziwe kolory. Więcej [informacji na temat tego formatu dostępnych jest na Wikipedii](https://en.wikipedia.org/wiki/Netpbm_format).
 {panel end}
 
-The key question in compression is whether or not we can represent the same image using fewer bits, but still be able to reconstruct the original image.
+Kluczowym pytaniem w przypadku kompresji jest czy możemy zapisać ten sam obraz przy pomocy mniejszej ilości bitów i nadal być w stanie odtworzyć oryginalny obraz.
 
-It turns out we can. There are many ways of going about it, but in this section we are focussing on a method called *run length encoding*.
+Okazuje się, że możemy, Jest wiele sposobów na osiągnięcie tego celu w tym podrozdziale ?? skupimy się na metodzie zwanej *kodowaniem długości serii*.
 
-Imagine that you had to read the bits above out to someone who was copying them down... after a while you might say things like "five zeroes" instead of "zero zero zero zero zero". Is the basic idea behind run length encoding (RLE), which is used to save space for storing digital images.
-In run length encoding, we replace each row with numbers that say how many consecutive pixels are the same colour, *always starting with the number of white pixels*. For example, the first row in the image above contains one white, two black, four white, one black, four white, two black, and one white pixel.
+Wyobraź sobie, że masz za zadanie przeczytać powyższe bity komuś, kto z kolei ma jest zapisać… po pewnej chwili będziesz mówił “pięć zer” zamiast “zero zero zero zero zero”. To usprawnienie jest podstawą kodowania długości serii (RLE), które pozwala zaoszczędzić przestrzeń potrzebną do przechowywania cyfrowych obrazów. W kodowaniu długości serii zastępujemy każdy wiersz liczbą kolejnych pikseli tego samego koloru, *zawsze zaczynając od liczby pikseli białych*. Na przykład, pierwszy wiersz zawiera jeden biały, dwa czarne, cztery białe, jedne czarny, cztery białe, dwa czarne i jeden biały.
 
 ```
 011000010000110
 ```
 
-This could be represented as follows.
+Może być przedstawione w następujący sposób.
 
 ```
 1, 2, 4, 1, 4, 2, 1
 ```
 
-For the second row, because we need to say what the number of white pixels is before we say the number of black, we need to explicitly say there are zero at the start of the row.
+Dla drugiego wiersza, który zaczyna się pikselem czarnym, musimy otwarcie powiedzieć, że jest zero białych na początku.
 
 ```
 100000111000001
@@ -134,21 +132,21 @@ For the second row, because we need to say what the number of white pixels is be
 0, 1, 5, 3, 5, 1
 ```
 
-You might ask why we need to say the number of white pixels first, which in this case was zero. The reason is that if we didn't have a clear rule about which to start with, the computer would have no way of knowing which colour was which when it displays the image represented in this form!
+Może to wydawać się dziwne, że musimy podać zawsze ilość białych na początku, która w tym wypadku wynosi zero. Powodem tego jest fakt, iż komputer potrzebuje ścisłych reguł odnośnie tego, od którego koloru pikseli zaczynać.
 
-The third row contains five whites, five blacks, five whites.
+Trzeci wiersz zawiera pięć białych, pięć czarnych, oraz pięć białych.
 
 ```
 000001111100000
 ```
 
-This is coded as:
+To jest kodowane jako:
 
 ```
 5, 5, 5
 ```
 
-That means we get the following representation for the first three rows.
+Zatem mamy następującą reprezentacją dla pierwszych trzech wierszy pikseli obrazu.
 
 ```
 1, 2, 4, 1, 4, 2, 1
@@ -156,10 +154,10 @@ That means we get the following representation for the first three rows.
 5, 5, 5
 ```
 
-You can work out what the other rows would be following this same system.
+Łatwo mona się domyśleć jak będą wyglądać kolejne wiersze w tym systemie reprezentacji.
 
-{panel type="spoiler" summary="Representation for the remaining rows"}
-The remaining rows are
+{panel type="spoiler" summary="Reprezentacja pozostałych wierszy"}
+Pozostałe wiersze to
 
 ```
 4, 7, 4
@@ -178,14 +176,14 @@ The remaining rows are
 {panel end}
 
 {panel type="curiosity" summary="Run Length Encoding in the CS Unplugged show"}
-In this video from a Computer Science Unplugged show, a Run length encoded image is decoded using very large pixels (the printer is a spray can!).
+W poniższym materiale wideo z ??Computer Science Unplugged show?? zakodowany przy pomocy długości serii obraz jest odkodowany i zaprezentowany przez bardzo duże piksele (drukarką jest farba w sprayu!).
 
 {video url="https://www.youtube.com/watch?v=VsjpPs146d8"}
 {panel end}
 
-### Converting Run Length Encoding back to the original representation
+### Konwertowanie Kodu Długości Serii do oryginalnej reprezentacji
 
-Just to ensure that we can reverse the compression process, have a go at finding the original representation (zeroes and ones) of this (compressed) image.
+Aby upewnić się, że możemy odwrócić proces kompresji, spróbuj znaleźć oryginalną reprezentację (zera i jedynki) skompresowanego obrazu.
 
 ```
 4, 11, 3
@@ -199,97 +197,98 @@ Just to ensure that we can reverse the compression process, have a go at finding
 1, 15, 2
 ```
 
-What is the image of? How many pixels were there in the original image? How many numbers were used to represent those pixels?
+Co zawiera obraz? Z jak wielu pikseli się składa? Ile liczb użyto do reprezentacji tego obrazu?
 
-{panel type="spoiler" summary="Answer for the above image"}
-This image is from the [CS Unplugged image representation activity](http://csunplugged.org/image-representation), and the solution is available in the activity (it is a cup and saucer).
+{panel type="spoiler" summary="Odpowiedź dla powyższego obrazu"}
+Przykładowy obrazek pochodzi z [??CS Unplugged image representation activity??](http://csunplugged.org/image-representation), a rozwiązanie jest dostępne w treści zadanie (jest nim filiżanka i tależyk).
 {panel end}
 
-The following interactive allows you to experiment further with Run Length Encoding.
+Poniższy ??interactive?? pozwala na dalsze eksperymentowanie z Kodowaniem Długości Serii.
 
-{interactive name="run-length-encoding" type="whole-page" text="Run Length Encoding interactive"}
+{interactive name="run-length-encoding" type="whole-page" text="??Run Length Encoding interactive??s"}
 
-### Analysing Run Length Encoding
+### Analiza Kodowanie długości serii
 
-How much space have we saved using this alternate representation, and how can we measure it? One simple way to consider this is to imagine you were typing these representations, so you could think of each of the original bits being stored as one character, and each of the RLE codes using a character for each digit and comma (this is a bit crude, but it's a starting point).
+Ile przestrzeni zaoszczędziliśmy wykorzystując alternatywną reprezentację, i jak możemy to zmierzyć? Możemy w prosty sposób policzyć ile razy musieliśmy nacisnąć przycisk na klawiaturze zapisując każdą z reprezentacji, możemy więc sobie wyobrazić, że każdy bit jest reprezentowany przez literę oraz, że każda cyfra kodu RLE oraz każdy przecinek wymaga również znaku przy zapisie (jest oszacowanie “z grubsza” przestrzeni, ale wystarczy na początek).
 
-In the original representation, 225 digits (ones and zeroes) were required to represent the image. Count up the number of commas and digits (but not spaces or newlines, ignore those) in the new representation. This is the number of characters required to represent the image with the new representation (to ensure you are on the right track, the first 3 rows that were given to you contain 29 characters).
+Aby opisać obraz w postaci nieskompresowanej potrzebnych jest 225 cyfr (zer i jedynek). Policz ile potrzeba przecinków i cyfr (pomiń spacje i znaki nowej linii) w nowej reprezentacji. Sumą jest liczba znaków potrzebnych do zapisania skompresowanej reprezentacji (dla ułatwienia liczba znaków w trzech pierwszych wierszach wynosi 29).
 
-Assuming you got the new image representation correct, and counted correctly, you should have found there are 119 characters in the new image (double check if your number differs). This means that the new representation only requires around 53% as many characters to represent (calculated using 119/225). This is a significant reduction in the amount of space required to store the image --- it's about half the size. The new representation is a *compressed* form of the old one.
+Przy założeniu, że nowa reprezentacja jest prawidłowa oraz, że obliczenia odbyły się prawidłowo, powinieneś otrzymać wynik 119 znaków (sprawdź, czy wszystko się zgadza). Oznacza to, że skompresowana postać wymaga jedynie 53% znaków reprezentacji oryginalnej (wynika to z proporcji 119/225). To znacząca redukcja w ilości przestrzeni potrzebnej do zapisania obrazu --- to prawie połowa rozmiaru. Nowa reprezentacja jest skompresowaną postacią poprzedniej.
 
-{panel type="curiosity" summary="Run length coding representation in practice"}
-In practice this method (with some extra tricks) can be used to compress images to about 15% of their original size. In real systems, the original image only uses one bit for every pixel to store the black and white values (not one character, which we used for our calculations).
-However, the run length numbers are also stored much more efficiently, again using bit patterns that take very little space to represent the numbers.
-The bit patterns used are usually based on a technique called Huffman coding, but that is beyond what we want to get into here.
-{panel end}
-
-### Where is Run Length Encoding used in practice?
-
-The main place that black and white scanned images are used now is on fax machines, which use this approach to compression. One reason that it works so well with scanned pages the number of consecutive white pixels is huge. In fact, there will be entire scanned lines that are nothing but white pixels. A typical fax page is 200 pixels across or more, so replacing 200 bits with one number is a big saving. The number itself can take a few bits to represent, and in some places on the scanned page only a few consecutive pixels are replaced with a number, but overall the saving is significant. In fact, fax machines would take 7 times longer to send pages if they didn't use compression.
-
-{panel type="project" summary="Using Run Length Encoding for yourself"}
-Now that you know how run length encoding works, you can come up with and compress your own black and white image, as well as uncompress an image that somebody else has given you.
-
-Start by making your own picture with ones and zeroes. (Make sure it is rectangular – all the rows should have the same length.)  You can either draw this on paper or prepare it on a computer (using a fixed width font, otherwise it can become really frustrating and confusing!) In order to make it easier, you could start by working out what you want your image to be on grid paper (such as that from a math exercise book) by shading in squares to represent the black ones, and leaving them blank to represent the white ones. Once you have done that, you could then write out the zeroes and ones for the image.
-
-Work out the compressed representation of your image using run length coding, i.e. the run lengths separated by commas form that was explained above.
-
-Now give a copy of the *compressed representation* (the run length codes, not the original uncompressed representation) to a friend or classmate, along with an explanation of how it is compressed. Ask them to try and draw the image on some grid paper. Once they are done, check their conversion against your original.
-
-Imagining that you and your friend are both computers, by doing this you have shown that images using these systems of representations can be compressed on one computer, and decompressed on another, as long as you have standards that you've agreed on (e.g. that every line begins with a white pixel).
-It is very important for compression algorithms to follow standards so that a file compressed on one computer can be decompressed on another;
-for example, songs often follow the "mp3" standard so that when they are downloaded they can be played on a variety of devices.
+{panel type="curiosity" summary="Kodowanie długości serii w praktyce"}
+W praktyce metoda ta (z pewnymi modyfikacjami) może być użyta do osiągnięcia kompresji na poziomie 15% oryginalnego rozmiaru. W prawdziwych systemach tylko jeden bit jest wykorzystywany do przechowywania wartości czarne-białe (w przeciwieństwie do jednego znaku z naszych obliczeń).
+Jednakże, długości kodowanych serii są również przechowywane bardziej efektywnie, również przy pomocy bitów, których stosunkowo krótkie ciągi mogą reprezentować liczby.
+Wykorzystywane ciągi bitów są tworzone przy pomocy techniki zwanej kodowaniem Huffmana, lecz zagadnienie to wykracza poza zakres tego materiału.
 {panel end}
 
 
-### Lossy vs Lossless compression
+### Jakie jest praktyczne zastosowanie Kodowania Długości Serii
 
-As the compressed representation of the image can be converted back to the original representation, and both the original representation and the compressed representation would give the same image when read by a computer, this compression algorithm is called *lossless*, i.e. none of the data was lost from compressing the image, and as a result the compression could be undone exactly.
+Współcześnie głównym zastosowaniem dla skanowanych czarno-białych obrazów są faksy, które wykorzystują to podejście do kompresji. Jednym z powodów, dla których działa to tak skutecznie dla skanowanych stron dokumentów jest fakt, iż w tym przypadku liczba kolejnych białych pikseli jest olbrzymia. Typowa strona przesyłana faksem ma 200 pikseli szerokości, więc zastąpienie tych 200 bitów liczbą jest znaczącą oszczędnością. Liczbę możemy wyrazić przy pomocy zaledwie kilku bitów. Choć może się zdarzyć na stronie, że liczą zastępujemy niewiele kolejnych pikseli, to i tak w ostatecznym rozrachunku oszczędności są znaczące. W praktyce faksy które nie korzystają z kompresji przesyłają dokumenty 7 razy wolniej.
 
-Not all compression algorithms are lossless though. In some types of files, in particular photos, sound, and videos, we are willing to sacrifice a little bit of the quality (i.e. lose a little of the data representing the image) if it allows us to make the file size a lot smaller. For downloading very large files such as movies, this can be essential to ensure the file size is not so big that it is infeasible to download! These compression methods are called *lossy*. If some of the data is lost, it is impossible to convert the file back to exactly the original form when lossy compression was used, but the person viewing the movie or listening to the music may not mind the lower quality if the files are smaller. Later in this chapter, we will investigate the effects some lossy compression algorithms have on images and sound.
+{panel type="project" summary="Zastosuj Kodowanie Długości Serii"}
+Teraz, gdy już znasz kodowanie długości serii możesz sam stworzyć obraz czarno-biały, a następnie go skompresować, oraz zdekompresować obraz otrzymany od kogoś innego.
 
-Interestingly, it turns out that any *lossless* compression algorithm will have cases where the compressed version of the file is larger than the uncompressed version! Computer scientists have even proven this to be the case, meaning it is impossible for anybody to ever come up with a lossless compression algorithm that makes *all* possible files smaller. In most cases this isn’t an issue though, as a good lossless compression algorithm will tend to give the best compression on common patterns of data, and the worst compression on ones that are highly unlikely to occur.
+Zacznij od narysowania obrazku przy pomocy zer i jedynek. (Upewnij się, że jest prostokątny, tzn. wszystkie wiersze mają tą samą długość.) Możesz go narysować na papierze lub przygotować go na komputerze (korzystaj z czcionki o stałej szerokości, w przeciwnym wypadku może to okazać się frustrujące i kłopotliwe!) Ułatwieniem może być skorzystanie z kartki w kratkę (takiej jak w zeszycie do matematyki) i zakreślenie kratek mających być czarnymi pikselami, i pozostawienie pustych kratek jako pikseli białych. Po zakończeniu tej czynności możesz spisać zera i jedynki reprezentujące obraz.
 
-{panel type="challenge" summary="Best and worst cases of run length encoding"}
-What is the image with the best compression (i.e. an image that has a size that is a very small percentage of the original) that you can come up with? This is the best case performance for this compression algorithm.
+Stwórz skompresowaną reprezentację twojego obrazu stosując metodę kodowania długości serii, tzn. długości serii oddzielone przecinkami jak zostało przestawione powyżej.
 
-What about the worst compression? Can you find an image that actually has a *larger* compressed representation? (Don’t forget the commas in the version we used!) This is the worst case performance for this compression algorithm.
+Przekaż kopię *skompresowanej reprezentacji* (długości serii, nie oryginalną reprezentację zerojedynkową) koledze oraz wytłumacz na czym polegała kompresja. Poproś ich o narysowanie obrazu na kartce w kratkę. Następnie porównaj otrzymany obrazek z twoim oryginałem.
+
+Wyobraź sobie, że ty i twój kolega oboje jesteście komputerami. Wykonując powyższe zadanie pokazałeś, że obrazy przy wykorzystaniu tej kompresji mogą zostać skompresowane na jednym komputerze i zdekompresowane na innym, tak długo jak istnieje uzgodniony standard (np. to, że każda linia zaczyna się od liczby białych pikseli).
+W przypadku algorytmów kompresji bardzo istotne jest trzymanie się standardów tak, aby po skompresowaniu na jednym komputerze możliwa była dekompresja na innym;
+przykładowo, utwory muzyczne zapisywane są w formacie “mp3”, aby po pobraniu z sieci mogły być odtworzone przez szeroką gamę urządzeń.
 {panel end}
 
-{panel type="spoiler" summary="Answer for above challenge"}
-The best case above is when the image is entirely white (only one number is used per line).
-The worst case is when every pixel is alternating black and white, so there's one number for every pixel.
-In fact, in this case the size of the compressed file is likely to be a little larger than the original one because the numbers are likely to take more than one bit to store.
-Real systems don't represent the data exactly as we've discussed here, but the issues are the same.
+
+### Stratna vs bezstratna kompresja
+
+O *kompresji bezstratnej* mówimy jeżeli skompresowana reprezentacja może zostać przekonwertowana podczas dekompresji do dokładnie takiej samej postaci jak reprezentacja oryginalna, innymi słowy żadna informacja nie została stracona podczas kompresji, i proces ten może być w pełni odwrócony.
+
+Nie wszystkie algorytmy kompresji są jednak bezstratne. Dla niektórych typów plików takich jak zdjęcia, utwory muzyczne i materiały wideo, możemy poświęcić nieco jakości (ilości informacji o zdjęciu) jeśli pozwoli to zmniejszyć znacząco rozmiar pliku. Zmniejszenie rozmiaru plików może mieć olbrzymie znaczenie przy pobieraniu plików tak dużych jak pliki wideo, które mogą zbyt duże, aby dało się je ściągnąć! Te metody kompresji nazywa się *stratnymi*. Jeśli tracimy informacje w procesie kompresji, to niemożliwe jest odtworzenie dokładnie takiej samej postaci, jaką miał plik przed kompresją. Jednocześnie osoba, która ogląda plik wideo lub słucha muzyki może zaakceptować nieco pogorszoną jakość jeśli pliki są względnie małe. W dalszej części tego rozdziału zbadamy jakie efekty na obraz i dźwięk może mieć stratna kompresja.
+
+Co ciekawe może się wyjątkowo zdarzyć, że skompresowany *stratnie* plik będzie miał większy rozmiar niż nieskompresowany! Co więcej naukowcy zajmujący się kompresją udowodnili, iż niemożliwe jest stworzenie kompresji stratnej, która zmniejsza każdy plik. W zdecydowanej większości przypadków nie jest problemem, gdyż stratne metody kompresji dostosowane są do pewnych rodzajów danych, posiadających pewną charakterystykę, dla których nieskuteczne kompresja jest wysoce nieprawdopodobna.
+
+{panel type="challenge" summary="Najlepsze i najgorsze przypadki kodowanie długości serii"}
+Jaki obraz będzie miał największy stopień kompresji przy kodowaniu długości serii (chodzi o obraz, którego rozmiar po skompresowaniu będzie najmniejszy w stosunku do rozmiaru początkowego)? Jest to przypadek, w którym wydajność algorytmu jest najwyższa.
+
+Kiedy kompresja jest najgorsza? Czy potrafisz znaleźć obraz, który ma *większą* reprezentację skompresowaną? (Pamiętaj o przecinkach, którymi oddzielamy długości serii!) Jest to przypadek, w którym wydajność algorytmu jest najgorsza.
 {panel end}
 
-{panel type="curiosity" summary="Compression methods can expand files"}
-In the worst case (with alternating black and white pixels) the run length encoding method will result in a file that's larger than the original!
-As noted above, *every* lossless compression method that makes at least one file smaller must also have some files that it makes larger --- it's not
-mathematically possible to have a method that always makes files smaller unless the method is lossy.
-As a trivial example, suppose someone claims to have a compression method that will convert any 3-bit file into a 2-bit file.
-How many different 3-bit files are there? (There are 8.) How many different 2-bit files are there? (There are 4.) Can you see the problem? We've got 8 possible files that we might want to compress, but only 4 ways to represent them. So some of them will have identical representations, and can't be decoded exactly.
-
-Over the years there have been several frauds based on claims of a lossless compression method that will compress every file that it is given.
-This can only be true if the method is lossy (loses information); all lossless methods must expand some files.
-It would be nice if all files could be compressed without loss; you could compress a huge file, then apply compression to the compressed file, and make it smaller again, repeating this until it was only one byte --- or one bit!
-Unfortunately, this isn't possible.
+{panel type="spoiler" summary="Rozwiązanie zadania”}
+Najlepszy przypadek jest wtedy, gdy obraz jest całkowicie biały (wystarczy jedna liczba na wiersz).
+Najgorszy przypadek ma miejsce gdy na zmianę występują piksele białe i czarne, i potrzebujemy jednej liczby dla każdego piksela.
+?? Tu jest chyba błąd bo plik będzie 2x większy dzięki przecinkom. In fact, in this case the size of the compressed file is likely to be a little larger than the original one because the numbers are likely to take more than one bit to store.??
+W rzeczywistości dane są reprezentowane nieco inaczej, lecz problemy są bardzo podobne.
 {panel end}
 
-## Image compression using JPEG
+{panel type="curiosity" summary="Kompresja może powiększać pliki"}
+W najgorszym przypadku (na zmianę piksele białe i czarne) kodowanie długości serii da nam plik skompresowany o rozmiarze większym niż plik oryginalny!
+Jak został wspomniane wcześniej, *każdy* bezstratny algorytm kompresji, który przynajmniej jeden plik zmniejsza musi mieć kilka plików, które powiększ --- nie jest
+matematycznie możliwe, aby stworzyć algorytm kompresji, który zmniejsza każdy plik. Stwierdzenie to nie dotyczy metod stratnych.
+Jako trywialny przykład posłuży nam pewna kompresja plików z 3-bitowych do 2-bitowych.
+Ile jest plików 3-bitowych? (Jest 8.) Ile jest plików 2-bitowych (Jest 4.) Czy widzisz problem? Mamy 8 plików, które możemy chcieć skompresować, ale jednocześnie tylko 4 sposoby na ich reprezentację. Zatem, niektóre z nich będą miały taką samą reprezentacji, a przez to nie mogą zostać odkodowane dokładnie.
 
-Images can take up a lot of space, and most of the time that pictures are stored on a computer they are compressed to avoid wasting too much space.
-With a lot of images (especially photographs), there's no need to store the image exactly as it was originally, because it contains way more detail than anyone can see.
-This can lead to considerable savings in space, especially if the details that are missing are the kind that people have trouble perceiving.
-This kind of compression is called lossy compression.
-There are other situations where images need to be stored exactly as they were in the original, such as for medical scans or very high quality photograph processing, and in these cases lossless methods are used, or the images aren't compressed at all (e.g. using RAW format on cameras).
+Na przestrzeni lat było kilka oszustw opartych na twierdzeniach o bezstratnej metodzie kompresji, która kompresuje każdy plik.
+Może to być prawdą tylko wtedy, gdy metoda jest stratna (traci informacje); wszystkie metody bezstratne muszą powiększać niektóre pliki.
+Dobrze byłoby mieć metodę, która kompresuje wszystkie pliki bez strat; można by wtedy skompresować duży plik, a następnie zastosować kompresję do skompresowanego pliku i zmniejszyć go ponownie, powtarzając aż do uzyskanie jednego bajtu --- lub jednego bitu!
+Niestety nie jest to możliwe.
+{panel end}
 
-In the data representation section we looked at how the size of an image file can be reduced by using fewer bits to describe the colour of each pixel.
-However, image compression methods such as JPEG take advantage of patterns in the image to reduce the space needed to represent it, without impacting the image unnecessarily.
+## Kompresja obrazu metodą JPEG
 
-The following three images show the difference between reducing bit depth and using a specialised image compression system. The left hand image is the original, which was 24 bits per pixel. The middle image has been compressed to one third of the original size using JPEG; while it is a "lossy" version of the original, the difference is unlikely to be perceptible. The right hand one has had the number of colours reduced to 256, so there are 8 bits per pixel instead of 24, which means it is also stored in a third of the original size. Even though it has lost just as many bits, the information removed has had much more impact on how it looks. This is the advantage of JPEG: it removes information in the image that doesn't have so much impact on the perceived quality. Furthermore, with JPEG, you can choose the tradeoff between quality and file size.
+Obrazy mogą zajmować dużo miejsca, i najczęściej obrazy są  przechowywane na komputerze w postaci skompresowanej. Pozwala to zaoszczędzić miejsce na dysku.
+Z tego względu, iż przechowujemy dużo obrazków (zwłaszcza zdjęć), nie ma potrzeby przechowywania obrazu dokładnie tak, jak wyglądał on pierwotnie. Wynika to z faktu, iż zawiera on więcej szczegółów niż ktokolwiek może zobaczyć.
+W rezultacie możemy zaoszczędzić na wykorzystanej przestrzeni dyskowej, zwłaszcza jeśli utracone szczegółu są trudno dostrzegalne dla ludzkiego oka.
+Ten rodzaj kompresji nazywa się kompresją stratną.
+Istnieją inne sytuacje, w których obrazy muszą być przechowywane dokładnie takiej samej postaci jak oryginał, na przykład w przypadku skanów medycznych lub przetwarzania zdjęć o bardzo wysokiej jakości. W takich przypadkach stosuje się metody bezstratne lub obrazy nie są w ogóle kompresowane (np. w formacie RAW na aparatach).
 
-Reducing the number of bits (the colour depth) is sufficiently crude that we don't really regard it as a compression method, but just a low quality representation. Image compression methods like JPEG, GIF and PNG are designed to take advantage of the patterns in an image to get a good reduction in file size without losing more quality than necessary.
+W podrozdziale o reprezentacji danych sprawdziliśmy, jak można zmniejszyć rozmiar pliku obrazu, używając mniejszej liczby bitów do opisania koloru każdego piksela.
+Jednak metody kompresji obrazu, takie jak JPEG, wykorzystują wzorce w obrazie, aby zmniejszyć przestrzeń potrzebną do jego przedstawienia, bez niekorzystnego wpływu na obraz.
+
+Poniższe trzy obrazy pokazują różnicę między zmniejszeniem głębi bitowej a użyciem wyspecjalizowanego systemu kompresji obrazu. Obraz po lewej stronie jest oryginałem, który używa 24 bity na piksel. Środkowy obraz został skompresowany do jednej trzeciej oryginalnego rozmiaru za pomocą JPEG; pomimo, iż jest to "stratna" wersja oryginału, różnica jest widoczna. Obraz po prawej stronie ma liczbę kolorów zmniejszoną do 256, a więc jest używa 8 bitów na piksel zamiast 24, co oznacza, że ​​zajmuje jedną trzecią pierwotnego rozmiaru. Mimo że stracił tyle samo bitów, usunięte informacje miały znacznie większy wpływ na to, jak wygląda. Na tym polega zaleta formatu JPEG: usuwa informacje z obrazu, które nie mają dużego wpływu na postrzeganą jakość. Ponadto w przypadku formatu JPEG można ustalić kompromis między jakością a rozmiarem pliku.
+
+Zmniejszenie liczby bitów (głębia kolorów) jest na tyle istotną zmiana, że nie uważamy tego za metodę kompresji, lecz po prostu za reprezentację niskiej jakości. Metody kompresji obrazu, takie jak JPEG, GIF i PNG, zostały zaprojektowane tak, aby wykorzystać wzorce w obrazie, w celu uzyskania znacznej redukcji rozmiaru pliku bez znaczącej utraty jakości.
 
 {image filename="compression-comparison.png"}
 
@@ -298,78 +297,77 @@ Reducing the number of bits (the colour depth) is sufficiently crude that we don
 .. ajb these images seem to appear in the wrong order to what is described for me… The middle one and left one should be swapped around?
 {comment end}
 
-For example, the following image shows a zoomed in view of the pixels that are part of the detail around an eye from the above (high quality) image.
+Na przykład poniższy obraz pokazuje powiększone pikseli, które są fragmentem oka z powyższego obrazu (wysokiej jakości).
 
 {image filename="zoomed-eye.png"}
 
-Notice that the colours in adjacent pixels are often very similar, even in this part of the picture that has a lot of detail. For example, the pixels shown in the red box below just change gradually from very dark to very light.
+Zauważmy, że kolory sąsiednich pikseli są często bardzo podobne, nawet w tej części obrazu, która ma dużo szczegółów. Na przykład piksele pokazane w czerwonym polu poniżej zmieniają się stopniowo z bardzo ciemnego na bardzo jasny.
 
 {image filename="zoomed-eye-highlighted.png"}
 
-Run-length encoding wouldn't work in this situation. You could use a variation that specifies a pixel's colour, and then says how many of the following pixels are the same colour, but although most adjacent pixels are nearly the same, the chances of them being identical are very low, and there would be almost no runs of identical colours.
+Kodowanie długości serii nie działa w tym przypadku. Można by skorzystać z wariantu, który określa kolor piksela, a następnie mówi, ile kolejnych pikseli ma ten sam kolor. Chociaż większość sąsiednich pikseli jest prawie taka sama, to szanse na to, że są identyczne są bardzo niskie, a serie identycznych kolorów prawie nie występują.
 
-But there is a way to take advantage of the gradually changing colours. For the pixels in the red box above, you could generate an approximate version of those colours by specifying just the first and last one, and getting the computer to calculate the ones in between assuming that the colour changes gradually between them. Instead of storing 5 pixel values, only 2 are needed, yet someone viewing it probably might not notice any difference. This would be *lossy* because you can't reproduce the original exactly, but it would be good enough for a lot of purposes, and save a lot of space.
+Istnieje jednak sposób, aby wykorzystać stopniowo zmieniające się kolory. W przypadku pikseli w czerwonym polu powyżej, możesz wygenerować przybliżoną wersję tych kolorów, określając tylko pierwszy i ostatni w serii. Na tej podstawie komputer będzie obliczać pośrednie, zakładając, że kolor zmienia się stopniowo. Zamiast zapisywania 5-pikselowych wartości potrzebne są tylko 2, aby oglądający nie zauważył żadnej różnicy. Byłoby to *stratne*, ponieważ nie można dokładnie odtworzyć oryginału, ale wystarczająco dobre dla wielu zastosowań i pozwalające zaoszczędzić dużo miejsca.
 
-{panel type="jargon-buster" summary="Interpolation"}
-{glossary-definition term="Interpolation" definition="Working out values between some given values;
-for example, if a sequence of 5 numbers starts with 3 and finishes with 11, we might interpolate the values 5, 7, 9 in between."}
+{panel type="jargon-buster" summary="Interpolacja"}
+{glossary-definition term="Interpolacja" definition="Wyliczenie wartości pośrednich pomiędzy pewnymi wartościami brzegowymi;
+na przykład, jeśli sekwencja 5 liczb zaczyna się 3 i kończy 11, możemy wyznaczyć interpolację trzech pośrednich wartości jako: 5, 7, 9."}
 
-The process of guessing the colours of pixels between two that are known is an example of
-{glossary-link term="interpolation" reference-text="compressing images"}interpolation{glossary-link end}.
-A *linear* interpolation assumes that the values increase at a constant rate between the two given values; for example, for the five pixels above, suppose the first pixel has a blue colour value of 124, and the last one has a blue value of 136,
-then a linear interpolation would guess that the blue values for the ones in between are 127, 130 and 133, and this would save storing them.
-In practice, a more complex approach is used to guess what the pixels are, but linear interpolation gives the idea of what's going on.
+Proces zgadywania kolorów pikseli między dwoma, które są znane, jest przykładem
+{glossary-link term="interpolation" reference-text="kompresowanie obrazów"}interpolacja{glossary-link end}.
+Interpolacja *liniowa* zakłada, że wartości rosną o stałą wielkość pomiędzy dwiema podanymi wartościami. Na przykład, dla pięciu powyższych pikseli załóżmy, że pierwszy piksel ma wartość koloru niebieskiego równą 124, a ostatni ma niebieską wartość 136. W takim przypadku  interpolacja liniowa domyślałaby się, że niebieskie wartości dla tych pośrednich wynoszą 127, 130 i 133, a dzięki temu nie trzeba ich zapisywać i można zaoszczędzić miejsce.
+W praktyce stosuje się bardziej złożone podejście do odgadywania pikseli, ale interpolacja liniowa daje dobre wyobrażenie o tym, jak to działa.
 {panel end}
 
-The JPEG system, which is widely used for photos, uses a more sophisticated version of this idea. Instead of taking a 5 by 1 run of pixels as we did above, it works with 8 by 8 blocks of pixels. And instead of estimating the values with a linear function, it uses combinations of cosine waves.
+System JPEG, który jest szeroko stosowany do zdjęć, wykorzystuje bardziej wyrafinowaną wersję tego pomysłu. Zamiast działać na pięci kolejnych pikselach, tak jak to zrobiliśmy powyżej, działa na bloku o rozmiarze 8 na 8 pikseli. Zamiast szacować wartości za pomocą funkcji liniowej, wykorzystuje kombinacje funkcji cosinus.
 
 {comment}
 It would be good have a figure that shows a line of pixels, and the corresponding waveform.
 {comment end}
 
-{panel type="curiosity" summary="What are cosine waves"}
-A cosine wave form is from the trig function that is often used for calculating the sides of a triangle. If you plot the cosine value from 0 to 180 degrees, you get a smooth curve going from 1 to -1. Variations of this plot can be used to approximate the value of pixels, going from one colour to another. If you add in a higher frequency cosine wave, you can produce interesting shapes. In theory, any pattern of pixels can be created by adding together different cosine waves!
+{panel type="curiosity" summary="Czym jest funkcja consinus"}
+Funkcja cosinus jest jedną z funkcji trygonometrycznych , która jest często używana do obliczania długości boków trójkąta. Wykres wartość cosinusa od 0 do 180 stopni jest gładką krzywą w przedziale 1 do -1 przypominającą falę. Wariacje tego wykresu można wykorzystać do przybliżenia wartości pikseli przechodzących z jednego koloru do drugiego. Jeśli dodasz falę cosinusową o wyższej częstotliwości z inną, to możesz uzyskać interesujące kształty. Teoretycznie każdy piksel może zostać utworzony przez dodanie różnych fal cosinusowych!
 
-The following graph shows the values of {math}\sin(x){math end} and {math}\cos(x){math end} for {math}x{math end} ranging from 0 to 180 degrees.
+Poniższy wykres pokazuje wartości funkcji {math}\sin(x){math end} oraz {math}\cos(x){math end} dla {math}x{math end} zakresu od 0 do 180 stopni.
 
-{image filename="cosine-graph.png" alt="A graph showing cos(x) and sin(x) curves"}
+{image filename="cosine-graph.png" alt="Wykres krzywych cos(x) i sin(x)"}
 {panel end}
 
-{panel type="curiosity" summary="Adding sine or cosine waves to create any waveform"}
-JPEGs (and MP3) are based on the idea that you can add together lots of sine or cosine waves to create any waveform that you want.
-Converting a waveform for a block of pixels or sample of music into a sum of simple waves can be done using a technique called a [Fourier transform](https://en.wikipedia.org/wiki/Fourier_transform), and is a widely used idea in signal processing.
+{panel type="curiosity" summary="Dodawanie sinusa i cosinusa w celu uzyskania dowolnego kształtu fali"}
+Metody JPEGs (i MP3) bazują się na technice, pozwalającej falę dowolnego kształtu przedstawić jako sumę wielu fal sinusoidalnych lub cosinusowych. ??nie wiem jak fachowo nazywać te fale??
+Przekształcenie kształtu fali dla bloku pikseli lub próbki muzyki w sumę prostych fal można wykonać za pomocą techniki zwanej [??Fourier transform??](https://en.wikipedia.org/wiki/Fourier_transform), która jest powszechnie wykorzystywana przy przetwarzaniu obrazu.
 
-You can experiment with adding sine waves together to generate other shapes using the
-[spreadsheet provided](files/Adding-Sine-Waves.xls).
-In this spreadsheet, the yellow region on the first sheet allows you to choose which sine waves to add.
-Try setting the 4 sine waves to frequencies that are 3, 9, 15, and 21 times the fundamental frequency respectively (the "fundamental" is the lowest frequency.)
-Now set the "amplitude" (equivalent to volume level) of the four to 0.5, 0.25, 0.125 and 0.0625 respectively (each is half of the previous one).
-This should produce the following four sine waves:
+Możesz poeksperymentować z dodawaniem sinusoid, aby uzyskać inne kształty za pomocą
+[udostępniony arkusz kalkulacyjny](files/Adding-Sine-Waves.xls).
+W tym arkuszu kalkulacyjnym żółty obszar na pierwszym arkuszu pozwala wybrać, które fale sinusoidalne dodać.
+Spróbuj ustawić 4 fale sinusoidalne na częstotliwości, które wynoszą odpowiednio 3, 9, 15 i 21 razy częstotliwości podstawowej ("podstawowa" to najniższa częstotliwość.)
+Następnie ustaw "amplitudę" (odpowiednik poziomu głośności) tej czwórki na 0,5, 0,25, 0,125 i 0,0625 (każdy z nich jest równy połowie poprzedniego).
+W rezultacie powinieneś uzyskać poniższe cztery sinusoidy:
 
-{image filename="sine-waves.png" alt="Four sine waves"}
+{image filename="sine-waves.png" alt="Cztery sinusoidy"}
 
-When the above four waves are added together, they interfere with each other, and produce a shape that has sharper transitions:
+Kiedy powyższe cztery fale są ze sobą dodane, interferują i tworzą kształt, który ma ostrzejsze przejścia:
 
-{image filename="sine-waves-sum.png" alt="The four sine waves added together"}
+{image filename="sine-waves-sum.png" alt="Suma czterech sinusoid"}
 
-In fact, if you were to continue the pattern with more than four sine waves, this shape would become a "square wave", which is one that suddenly goes to the maximum value, and then suddenly to the minimum.
-The one shown above is bumpy because we've only used 4 sine waves to describe it.
+Okazuje się, że gdyby kontynuować ten wzorzec z większą ilością sinusoid, kształt wynikowy stałby się "falą prostokątną", która nagle przechodzi od wartości maksymalnej do minimum.
+Ta pokazana powyżej jest wyboista, gdyż wykorzystaliśmy tylko 4 fale sinusoidalne, aby ją opisać.
 
-This is exactly what is going on in JPEG if you compress a black and white image.
-The "colour" of pixels as you go across the image will either be 0 (black) or full intensity (white), but JPEG will approximate it with a small number of cosine waves (which have basically the same properties as sine waves.)
-This gives the "overshoot" that you see in the image above; in a JPEG image, this comes out as bright and dark patches surrounding the sudden change of colour, like here:
+To właśnie dzieje się w algorytmie JPEG, jeśli kompresujesz czarno-biały obraz.
+"Kolor" pikseli w miarę przesuwania się po obrazie będzie wynosił 0 (czarny) lub pełny poziom intensywności (biały), lecz JPEG będzie przybliżał go za pomocą sumy niewielkiej liczby fal cosinusów (które mają zasadniczo takie same własności jak fale sinusoidalne)
+Daje to "przedobrzenia" widoczne na powyższym obrazku; w obrazie JPEG pojawia się jako jasne i ciemne plamy otaczające nagłą zmianę koloru:
 
 {image filename="jpeg-word-zoomed.jpg"}
 
-You can experiment with different combinations of sine waves to get different shapes.
-You may need to have more than four to get good approximations to a shape that you want; that's exactly the tradeoff that JPEG is making.
-There are some suggestions for parameters on the second sheet of the spreadsheet.
+Możesz eksperymentować z różnymi kombinacjami fal sinusoidalnych uzyskując różne kształty.
+Być może trzeba mieć więcej niż cztery, aby uzyskać dobre przybliżenia kształtu, który chcesz osiągnąć; to jest właśnie kompromis, z którym stara sobie radzić algorytm JPEG.
+Na drugim arkuszu arkusza kalkulacyjnego zamieszczone zostały pewne sugestie dotyczące parametrów.
 
-You can also learn about Fourier transforms using the Wolfram Alpha software; this will require you to install a browser plugin.
-The Wolfram demonstrations include:
-[an interactive demonstration of JPEG](http://demonstrations.wolfram.com/JPEGCompressionAlgorithm/),
-[showing the relationship between sine saves and creating other waveforms](http://demonstrations.wolfram.com/RecoveringTheFourierCoefficients/), and
-[showing how sine waves can be summed to produce other shapes](http://demonstrations.wolfram.com/SumsOfSineWavesWithSeveralStepSizesSawtoothOrSquareApproxima/).
+Więcej na temat przekształceniach Fouriera możesz się dowiedzieć za pomocą oprogramowania Wolfram Alpha; będzie to wymagało instalacji wtyczki w przeglądarce.
+Demonstracje Wolfram obejmują:
+[interaktywna demonstracja JPEG](http://demonstrations.wolfram.com/JPEGCompressionAlgorithm/),
+[prezentacja związków między sinusoidami a innymi formami falowymi](http://demonstrations.wolfram.com/RecoveringTheFourierCoefficients/), and
+[prezentacja tego jak sinusoidy można zsumować, aby otrzymać inne kształty](http://demonstrations.wolfram.com/SumsOfSineWavesWithSeveralStepSizesSawtoothOrSquareApproxima/).
 
 {panel end}
 
@@ -377,43 +375,45 @@ The Wolfram demonstrations include:
 .. html5 low priority interactive to add cosine waves to try to match a given waveform e.g. square wave, triangle, random. Select amplitude for various frequencies. I have a spreadsheet that basically does this, could put it in for the meantime - tim
 {comment end}
 
-You can see the 8 by 8 blocks of pixels if you zoom in on a heavily compressed JPEG image. For example, the following image has been very heavily compressed using JPEG (it is just 1.5% of its original size).
+Warto przyjrzeć się z bliska mocno skompresowanemu obrazowi JPEG. Na przykład następujący obraz został bardzo mocno skompresowany przy użyciu JPEG (zajmuje jedynie 1,5% pierwotnego rozmiaru).
 
 {image filename="compressed-jpeg.png"}
 
-If we zoom in on the eye area, you can see the 8 x 8 blocks of pixels:
+Jeśli powiększymy obszar oka, wyraźnie widać bloki 8 x 8 pikseli:
 
 {image filename="compressed-jpeg-zoomed.png"}
 
-Notice that there is very little variation across each block. In the following image the block in the red box only changes from top to bottom, and could probably be specified by giving just two values, and having the ones in between calculated by the decoder as for the line example before. The green square only varies from left to right, and again might only need 2 values stored instead of 64. The blue block has only one colour in it! The yellow block is more complicated because there is more activity in that part of the image, which is where the cosine waves come in. A "wave" value varies up and down, so this one can be represented by a left-to-right variation from dark to light to dark, and a top-to-bottom variation mainly from dark to light. Thus still only a few values need to be stored instead of the full 64.
+Zauważ, iż w każdym bloku występuje bardzo niewielka różnorodność. Na poniższym obrazie blok w czerwonej ramce zmienia się tylko w kierunku pionowym. Prawdopodobnie można go określić podając tylko dwie wartości brzegowe, pozostałe mogę być wyliczone przez dekoder podobnie jak w przykładzie interpolacyjnym. Zielony kwadrat zmienia się tylko w poziomie i podobnie można go wyrazić przy pomocy dwóch wartości brzegowych zamiast 64 wartości. Niebieski blok ma tylko jeden kolor! Żółty blok jest bardziej skomplikowany, ponieważ w tej części obrazu więcej się dzieje. Pojawiają się tu fale cosinusowe. Wartość "fali" zmienia się pionowo, więc można ją przedstawić od lewej do prawej wariacją od ciemnej do jasnej do ciemnej oraz od góry do dołu, głównie od ciemności do jasności. (??tu coś jest zamotane w opisie??) Dzięki temu możemy nadal przechowywać tylko kilka wartości zamiast pełnych 64.
 
 {image filename="compressed-jpeg-zoomed-highlighted.png"}
 
-The quality is quite low, but the saving in space is huge – it's more than 60 times smaller (for example, it would download 60 times faster). Higher quality JPEG images store more detail for each 8 by 8 block, which makes it closer to the original image, but makes bigger files because more details are being stored. You can experiment with these tradeoffs by saving JPEGs with differing choices of the quality, and see how the file size changes. Most image processing software offers this option when you save an image as a JPEG.
+Pomimo tego, że jakość jest dość niska, to oszczędność w przestrzeni dyskowej jest ogromna - plik JPEG jest 60 razy mniejszy (mógłby zostać pobrany 60 razy szybciej). Obrazy JPEG o wyższej jakości przechowują więcej szczegółów dla każdego bloku 8 na 8, co sprawia, że odwzorowują wierniej oryginalny obraz. Zajmują też więcej miejsca, ponieważ zawierają informację o większej liczbie szczegółów. Możesz samemu przetestować jego działanie i kompromis pomiędzy jakością a stopniem kompresji. Większość edytorów graficznych pozwala wybrać jakość (stopień kompresji) podczas zapisuwania obrazu jako JPEG.
 
 {comment}
 low priority : interactive that could load a photo, zoom in on pixels, and change it to different qualities of jpg coding
 {comment end}
 
-{panel type="jargon-buster" summary="Where does the term JPEG come from?"}
-The name "JPEG" is short for "Joint Photographic Experts Group", a committee that was formed in the 1980s to create standards so that digital photographs could be captured and displayed on different brands of devices. Because some file extensions are limited to three characters, it is often seen as the ".jpg" extension.
+{panel type="jargon-buster" summary="Skąd pochodzi nazwa JPEG?"}
+Nazwa "JPEG" jest skrótem od "Joint Photographic Experts Group", komitetu utworzonego w latach 80. w celu wypracowania standardów umożliwiających przechwytywanie fotografii cyfrowych i wyświetlanie ich na różnych urządzeniach. Ponieważ niektóre systemy operacyjne ograniczają rozszerzenia plików do trzech znaków, pliki skompresowane JPEG mają rozszerzenie ".jpg".
 {panel end}
 
-{panel type="curiosity" summary="More about cosine waves"}
-The cosine waves used for JPEG images are based on a "Discrete Cosine Transform". The "Discrete" means that the waveform is digital – it is the opposite of continuous, where any value can occur. In a JPEG wave, there are only 8 x 8 values (for the block being coded), and each of those values can have a limited range of numbers (binary integers), rather than any value at all.
+{panel type="curiosity" summary="Więcej na temat fal cosinusowych"}
+Fale cosinusowe wykorzystywane w metodzie JPEG oparte są na "Dyskretnej Transformacji Cosinusowej". "Dyskretna" oznacza, że wartości są ze skończonego zbioru - nie jest ciągłą, dla którym może wystąpić dowolna wartość. Fale w JPEG są reprezentowane jako wartości dla 8 x 8  punktów (dla kodowanego bloku), a każda z tych wartości pochodzi z ograniczonego przedziału (binarne liczby całkowite), nie mogą przyjąć dowolnej wartości.
 {panel end}
 
-An important issue arises because JPEG represents images as smoothly varying colours: what happens if the colours change suddenly?
-In that case, lots of values need to be stored so that lots of cosine waves can be added together to make the sudden change in colour, or else the edge of the image become fuzzy.
-You can think of it as the cosine waves overshooting on the sudden changes, producing artifacts like the ones in the following image where the edges are messy.
+Ważna kwestią jest to jak metoda JPEG, zaprojektowana do przedstawiania obrazów o płynnie zmieniających się kolorach, radzą sobie, gdy kolory zmieniają się nagle?
+W takim przypadku należy zapisać wiele wartości, aby można było dodać wiele fal i uzyskać nagłą zmianę koloru, a tym samym ostrą krawędź.
+Można to sobie wyobrazić jako fale cosinusowe powodujące przesadzone zmiany, wytwarzające artefakty, takie jak te na obrazie poniżej, gdzie krawędzie są zabrudzone.
 
 {image filename="jpeg-word.jpg"}
 
-The original had sharp edges, but this zoomed in view of the JPEG version of it show that not only are the edges gradual, but some darker pixels occur further into the white space, looking a bit like shadows or echoes.
+Oryginał posiadał ostre krawędzie, ale na powiększeniu obrazu JPEG widać, że nie tylko krawędzie są stopniowe, ale niektóre ciemniejsze piksele pojawiają się dalej również na białym tle, wyglądając trochę jak cienie lub echa.
 
 {image filename="jpeg-word-zoomed.jpg"}
 
-For this reason, JPEG is used for photos and natural images, but other techniques (such as GIF and PNG, which we will look at in another section) work better for artificial images like this one.
+Z tego względu JPEG jest używany do zdjęć i naturalnych obrazów, natomiast inne metody kompresji  (takie jak
+GIF i PNG, które poznamy w dalszej części) będą działać lepiej w przypadku sztucznych obrazów, takich jak
+ten.
 
 {comment}
 .. xjrm low priority create an image like the one in this link, with one, two three waveforms added http://mathworld.wolfram.com/images/eps-gif/FourierSeriesSquareWave_800.gif (then Tim to add some text)
@@ -441,18 +441,17 @@ appearing soon!
 {comment end}
 
 
-## General purpose compression
+## Kompresja ogólnego przeznaczenia
 
-General purpose compression methods need to be lossless because you can't assume that the user won't mind if the data is changed. The most widely used general purpose compression algorithms (such as ZIP, gzip, and rar) are based on a method called "Ziv-Lempel coding", invented by Jacob Ziv and Abraham Lempel in the 1970s.
+Metody kompresji ogólnego przeznaczenia muszą być bezstratne, ponieważ nie można założyć, że użytkownik nie będzie akceptował zmiany danych. Najbardziej popularne algorytmy tego typu (takie jak ZIP, gzip i rar) oparte są na metodzie zwanej "kodowaniem Ziv-Lempel", wymyślonej przez Jacoba Ziva i Abrahama Lempela w latach siedemdziesiątych.
 
-We'll look at this with a text file as an example.
-The main idea of Ziv-Lempel coding is that sequences of characters are often repeated in files (for example, the sequence of characters "image " appears often in this chapter), and so instead of storing the repeated occurrence, you just replace it with a reference to where it last occurred. As long as the reference is smaller than the phrase being replaced, you'll save space. Typically this systems based on this approach can be used to reduce text files to as little as a quarter of their original size, which is almost as good as any method known for compressing text.
+Przyjrzymy się temu zagadnieniu na przykładzie pliku tekstowego.
+Główną ideą kodowania Ziv-Lempel zastępowanie sekwencji znaków często występujących w plikach (na przykład sekwencja znaków "obraz" pojawia się często w tym rozdziale) odnośnikami do miejsca, w którym ostatnio się pojawił. Pod warunkiem, że odniesienie jest mniejsze niż zastępowana fraza, oszczędzamy miejsce. Zwykle systemy oparte na tym podejściu można wykorzystać do zredukowania plików tekstowych do zaledwie jednej czwartej ich oryginalnego rozmiaru, co jest prawie tak dobre, jak każda znana metoda kompresowania tekstu.
 
-The following interactive allows you to explore this idea.
-The empty boxes have been replaced with a reference to the text occurring earlier.
-You can click on a box to see where the reference is, and you can type the referenced characters in to decode the text.
-What happens if a reference is pointing to another reference?
-As long as you decode them from first to last, the information will be available before you need it.
+Poniższy ??interactive?? pozwala się zapoznać z tą ideą.
+Możesz kliknąć pole, aby zobaczyć dokąd prowadzi odnośnik, a następnie wpisać odpowiednie znaki i w rezultacie odkodować tekst.
+Co się stanie, jeśli odniesienie wskazuje na inne odniesienie?
+Dopóki dekodujesz je od początku, informacje będą dostępne, zanim będziesz ich potrzebować.
 
 {comment}
 .. xhtml5 Eventually this could use a parameter so there's one version with no tabs, and a later one with them.
@@ -464,17 +463,17 @@ As long as you decode them from first to last, the information will be available
 .. xjrm (or Rhem): pasting text in that is too big causes it to be rejected. It would be nicer if the pasted text is truncated to the maximum length.
 {comment end}
 
-You can also enter your own text by clicking on the "Text" tab.
-You could paste in some text of your own to see how many characters can be replaced with references.
+Możesz wprowadzić własny tekst, klikając zakładkę "Tekst".
+Możesz również wkleić jakiś własny tekst, aby sprawdzić ile znaków można zastąpić odniesieniami.
 
-The references are actually two numbers: the first says how many characters to count back to where the previous phrase starts, and the second says how long the referenced phrase is.
-Each reference typically takes about the space of one or two characters, so the system makes a saving as long as two characters are replaced.
-The options in the interactive above allow you to require the replaced length to be at least two, to avoid replacing a single character with a reference.
-Of course, all characters count, not just letters of the alphabet, so the system can also refer back to the white spaces between words.
-In fact, some of the most common sequences are things like a full stop followed by a space.
+Odnośniki są w rzeczywistości dwiema liczbami: pierwsza określa, ile znaków wcześniej zaczyna się sekwencja, a druga jaka jest jej długość.
+Każde takie odwołanie zwykle zajmuje około jednego lub dwóch znaków, więc oszczędzamy miejsce jeżeli zastępowane są co najmniej dwa znaki.
+Opcje w powyższej ??interactive?? pozwalają wymusić, aby zastępowane sekwencje miały długość większą lub równą 2.
+Oczywiście bierzemy pod uwagę wszystkie znaki, a nie tylko litery alfabetu, więc system kompresji może również odnosić się do spacji między wyrazami.
+W praktyce jedną z najczęściej występujących sekwencji jest kropka, po której następuje spacja.
 
-This approach also works very well for black and white images, since sequences like "10 white pixels" are likely to have occurred before.
-Here are some of the bits from the example earlier in this chapter; you can paste them into the interactive above to see how many pointers are needed to represent it.
+To podejście sprawdzi się również w przypadku obrazów czarno-białych, ponieważ sekwencje takie jak "10 białych pikseli" prawdopodobnie pojawiły się wcześniej.
+Oto niektóre fragmenty z wcześniejszego przykładu; możesz wkleić je do powyższego ??interactive??, aby zobaczyć, jak działa kompresja.
 
 ```
 011000010000110
@@ -487,7 +486,7 @@ Here are some of the bits from the example earlier in this chapter; you can past
 111110000011111
 ```
 
-In fact, this is essentially what happens with GIF and PNG images; the pixel values are compressed using the Ziv-Lempel algorithm, which works well if you have lots of consecutive pixels the same colour. But it works very poorly with photographs, where pixel patterns are very unlikely to be repeated.
+Powyższy przykład jest dobrą deomnstracją tego, co dzieje się z obrazami podczas zapisu do formatu GIF lub PNG; wartości pikseli są kompresowane za pomocą algorytmu Ziv-Lempel, który działa dobrze, jeśli wiele kolejnych pikseli ma ten sam kolor. Ale działa bardzo słabo w przypadku zdjęć, w których mało prawdopodobne jest powtórzenie wzorców pikseli.
 
 {comment}
 .. xtcb extra for experts: compress "aaaaaaaaaa". how can it decode?
@@ -503,71 +502,71 @@ and the ["Computing Science Inside" site also has an activity based on this meth
 The CS4FN site discusses [a related approach which is a little simpler, but not so useful in practice](http://www.cs4fn.org/internet/crushed.php).
 {panel end}
 
-{panel type="curiosity" summary="ZL or LZ compression?"}
-The method we have described here is named “Ziv-Lempel” compression after Jacob Ziv and Abraham Lempel, the two computer scientists who invented it in the 1970s. Unfortunately someone mixed up the order of their names when they wrote an article about it, and called it “LZ” compression instead of “ZL” compression. So many people copied the mistake that Ziv and Lempel’s method is now usually called “LZ compression”!
+{panel type="curiosity" summary="Kompresja ZL lub LZ?"}
+Opisany powyżej algorytm został nazwany kompresją "Ziv-Lempel" od nazwisk dwóch informatyków Jacoba Ziva i Abrahama Lempela, którzy wymyślili go w latach 70-tych. Niestety, ktoś pomieszał kolejność ich nazwisk, kiedy opisywał ten pomysł i nazwał go kompresją "LZ" zamiast kompresji "ZL". Wielu naukowców skopiowało błąd, przez co metoda Ziva i Lempela jest obecnie zwana "kompresją LZ"!
 {panel end}
 
-## Audio compression
+## Kompresja audio
 
-One of the most widely used methods for compressing music is MP3, which is actually from a video compression standard called MPEG (Moving Picture Experts Group).
+Jedną z najczęściej stosowanych metod kompresji muzyki jest MP3, który jest częścią standardu kompresji wideo o nazwie MPEG (Moving Picture Experts Group).
 
 
-{panel type="curiosity" summary="The naming of mp3"}
-The name "mp3" isn't very self explanatory because the "mp" stands for "moving picture", and the 3 is from version 1, but mp3 files are used for music!
+{panel type="curiosity" summary="Nazwa mp3"}
+Nazwa "mp3" nie jest zbyt oczywista. Pomimo tego, że "mp" oznacza "ruchomy obraz" (ang. "moving picture"), a 3 numer wersji standardu, to pliki mp3 są używane do zapisu muzyki!
 
-The full name of the standard that it comes from is MPEG, and the missing "EG" stands for "experts group", which was a consortium of companies and researchers that got together to agree on a standard so that people could easily play the same videos on different brands of equipment (so, for example, you could play the same DVD on any brand of DVD player).
-The very first version of their standards (called MPEG-1) had three methods of storing the sound track (layer 1, 2 and 3).
-One of those methods (MPEG-1 layer 3) became very popular for compressing music, and was abbreviated to MP3.
+Pełna nazwa standardu, z którego pochodzi MP3, to MPEG, a brakujące "EG" oznacza "grupę ekspertów" (and. "expert group"). Grupę tą stanowiło konsorcjum firm i naukowców, którego celem było ustalenie standardu pozwalającego odtwarzanie materiałów wideo na urządzeniach różnych marek (na przykład to samo DVD działało na dowolnym odtwarzaczu DVD).
+Pierwsza wersja wypracowanych przez konsorcjum standardów (zwana MPEG-1) miała trzy metody przechowywania ścieżki dźwiękowej (warstwy 1, 2 i 3).
+Jedna z tych metod (warstwa 3 MPEG-1) stała się bardzo popularna w kompresowaniu muzyki i jej nazwa została skrócona do formatu MP3.
 
-The MPEG-1 standard isn't used much for video now (for example, DVDs and TV mainly use MPEG-2), but it remains very important for audio coding.
+Standard MPEG-1 nie jest już obecnie używany w przypadku wideo (płyty DVD i telewizja używają głównie MPEG-2), ale jest bardzo ważny w przypadku kodowania audio.
 
-The next MPEG version is MPEG-4 (MPEG-3 was redundant before it became a standard).
-MPEG-4 offers higher quality video, and is commonly used for digital video files, streaming media, Blu-Ray discs and some broadcast TV.
-The AAC audio compression method, used by Apple among others, is also from the MPEG-4 standard.
-On computers, MPEG-4 Part 14 is commonly used for video, and it's often abbreviated as "MP4."
+Współczesną wersją MPEG jest MPEG-4 (MPEG-3 przedawnił się zanim został uznany za standard).
+MPEG-4 oferuje wideo wyższej jakości i jest powszechnie stosowany do kodowania plików wideo, transmisji strumieniowych, dysków Blu-Ray i w przypadku niektórych programów telewizyjnych.
+Metoda kompresji audio AAC, używana między innymi przez Apple, również pochodzi ze standardu MPEG-4.
+Na komputerach, MPEG-4 część 14 jest powszechnie używany do wideo, a jego skrócona nazwa to "MP4".
 
-So there you have it: MP3 stands for "MPEG-1 layer 3", and MP4 stands for "MPEG-4 part 14".
+Podsumowując: MP3 oznacza "MPEG-1 layer 3", natomiast MP4 jest skrótem od "MPEG-4 część 14".
 {panel end}
 
-Most other audio compression methods use a similar approach to the MP3 method, although some offer better quality for the same amount of storage (or less storage for the same quality).
-We won't go into exactly how this works, but the general idea is to break the sound down into bands of different frequencies, and then represent each of those bands by adding together the values of a simple formula (the sum of cosine waves, to be precise).
+Pozostałe metody kompresji dźwięku wykorzystują podobne rozwiązania co algorytm MP3, i niektóre z nich oferują lepszą jakość przy podobnym rozmiarze pliku (lub mniejszy rozmiar przy tej samej jakości).
+Nie będziemy dokładnie prezentować zasad działania tych algorytmów, ale ogólna idea sprowadza się do rozłożenia dźwięku na pasma o różnych częstotliwościach, a następnie przedstawienie każdego z tych pasm poprzez dodanie wartości prostego wzoru (jako suma fal cosinusowych).
 
 {comment}
 .. xtcb sometime could put in an expert section on this, perhaps with recordings or a filter showing the waveforms and adding them. Here are some links in the meantime:
 {comment end}
 
-There is some [more detail about how MP3 coding works on the cs4fn site](http://www.cs4fn.org/mathemagic/sonic.html), and also in [an article on the I Programmer site](http://www.i-programmer.info/babbages-bag/1222-mp3.html).
+Na stronie [cs4fn znajdziesz więcej informacji na temat mp3](http://www.cs4fn.org/mathemagic/sonic.html), oraz [w artykule na stronie I Programmer](http://www.i-programmer.info/babbages-bag/1222-mp3.html).
 
-Other audio compression systems that you might come across include AAC, ALAC, Ogg Vorbis, and WMA. Each of these has various advantages over others, and some are more compatible or open than others.
+Inne dostępne systemy kompresji dźwięku to AAC, ALAC, Ogg Vorbis i WMA. Każda z tych metod ma pewne zalety w stosunku do innych, niektóre są bardziej kompatybilne lub otwarte niż inne.
 
-The main questions with compressed audio are how small the file can be made, and how good the quality is of the human ear. (There is also the question of how long it takes to encode the file, which might affect how useful the system is.)
-The tradeoff between quality and size of audio files can depend on the situation you're in: if you are jogging and listening to music then the quality may not matter so much, but it's good to reduce the space available to store it.
-On the other hand, someone listening to a recording at home on a good sound system might not mind about having a large device to store the music, as long as the quality is high.
+Głównym pytaniem dotyczącym skompresowanego dźwięku jest jak mały może być plik i jak czułe jest ludzkie uchao. (Dodatkowo pojawia się pytanie, ile czasu zajmuje kodowanie pliku, co może być istotne dla praktyczności systemu).
+Kompromis między jakością a wielkością plików audio może zależeć od sytuacji, w której muzyka jest odtwarzana. Jeśli biegasz i słuchasz muzyki, jakość może nie mieć większego znaczenia, dzięki czemu można ograniczyć przestrzeń potrzebną do jej przechowywania.
+Z drugiej strony, jeśli słuchamy nagrań w domu na dobrym sprzęcie jakość może odgrywać o wiele większą rolę niż rozmiaru plików.
 
-To evaluate an audio compression you should choose a variety of recordings that you have high quality originals for, typically on CD (or using uncompressed WAV or AIFF files). Choose different styles of music, and other kinds of audio such as speech, and perhaps even create a recording that is totally silent. Now convert these recordings to different audio formats. One system for doing this that is free to download is Apple's iTunes, which can be used to rip CDs to a variety of formats, and gives a choice of settings for the quality and size.
-A lot of other audio systems are able to convert files, or have plugins that can do the conversion.
+Aby ocenić stopień kompresji pliku audio, należy przyjrzeć oryginalnym nagraniom wysokiej jakości, takim jak płyta CD (lub nieskompresowane pliki WAV lub AIFF). Następnie przygotuj pliki audio z różnymi stylami muzycznymi oraz innymi rodzajami dźwięku, takimi jak mowa lub nawet cisza. W dalszej kolejności przekowertuj te nagrania do różnych formatów audio. Jednym narzędzi, które to umożliwia jest iTunes firmy Apple. Można go użyć do zgrywania płyt CD i zapisu w różnych formatach, po uprzednim ustaleniu jakości i wielkości.
+Wiele innych programów audio oferuje podobne możliwości.
 
-Compress each of your recordings using a variety of methods, making sure that each compressed file is created from a high quality original. Make a table showing how long it took to process each recording, the size of the compressed file, and some evaluation of the quality of the sound compared with the original. Discuss the tradeoffs involved – do you need much bigger files to store good quality sound? Is there a limit to how small you can make a file and still have it sounding ok? Do some methods work better for speech than others? Does a 2 minute recording of silence take more space than a 1 minute recording of silence? Does a 1 minute recording of music use more space than a minute of silence?
+Skompresuj każde z przygotowanych nagrań przy użyciu różnych metod, po upewnieniu się, że każdy skompresowany plik jest tworzony z oryginału wysokiej jakości. Stwórz tabelę pokazującą, ile czasu zajęło przetwarzanie każdego nagrania, rozmiar skompresowanego pliku oraz ocenę jakości dźwięku w porównaniu z oryginałem. Prześledź związki pomiędzy jakością a rozmiarem - czy potrzebujesz dużo większych plików do przechowywania dobrej jakości dźwięku? Czy istnieje minimum dla rozmiaru pliku, który zachowuje akceptowalną jakość? Czy niektóre metody działają lepiej dla mowę niż inne? Czy 2-minutowe nagranie ciszy zajmuje więcej miejsca niż 1 minuta nagrania ciszy? Czy 1 minuta nagrywania muzyki zajmuje więcej miejsca niż minuta ciszy?
 
 {comment}
 .. xtcb could have a section on Huffman coding sometime (remove from "the whole story")
 {comment end}
 
-## The whole story!
+## Cała opowieść!
 
-The details of how compression systems work have been glossed over in this chapter, as we have been more concerned about the file sizes and speed of the methods than how they work.
-Most compression systems are variations of the ideas that have been covered here, although one fundamental method that we haven't mentioned is Huffman coding, which turns out to be useful as the final stage of *all* of the above methods, and is often one of the first topics mentioned in textbooks discussing compression (there's a brief [explanation of it here](http://www.cimt.plymouth.ac.uk/resources/codes/codes_u17_text.pdf)).
-A closely related system is Arithmetic coding (there's an [explanation of it here](http://www.cimt.plymouth.ac.uk/resources/codes/codes_u18_text.pdf)).
-Also, video compression has been omitted, even though compressing videos saves more space than most kinds of compression.
-Most video compression is based on the "MPEG" standard (Moving Pictures Experts Group). There is some information about how this works in the [CS4FN article on "Movie Magic"](http://www.cs4fn.org/films/mpegit.php).
+W rozdziale tym przedstawione zostały podstawowe informacje dotyczące kompresji, wiele szczegółów zostało tego zagadnienia zostało jedynie wspomnianych. Sporo miejsca zostało poświęcone rozmiarom plików i szybkości algorytmów kompresji.
+Większość systemów kompresji to warianty pomysłów, które zostały tutaj omówione. Poza jednym wyjątkiem, o którym nie wspomnieliśmy, chociaż jest jednym z najważniejszych algorytmów. Chodzi o kodowanie Huffmana, które okazuje się przydatne jako ostatni etap *wszystkich* powyższych metod i często jest jednym z pierwszych tematów wymienionych w podręcznikach omawiających kompresję (krótkie [wyjaśnienie tutaj](http://www.cimt.plymouth.ac.uk/resources/codes/codes_u17_text.pdf)).
+Blisko związanie kodowanie artymetyczne (krótkie [wyjaśnienie tutaj](http://www.cimt.plymouth.ac.uk/resources/codes/codes_u18_text.pdf)).
+Kompresja wideo została również pominięta, mimo iż to właśnie ten typ kompresji daje największe oszczędności przestrzeni dyskowej.
+Większość metod kompresji wideo jest oparta na standardzie "MPEG" (ang. Moving Pictures Experts Group). Nieco więcej informacji na ten tamat zawiera [artykuł CS4FN o "Movie Magic"](http://www.cs4fn.org/films/mpegit.php).
 
 {panel type="teacher-note" summary="Teacher guides for Plymouth resources"}
 Access to teacher guides for the Plymouth resources (linked in the previous paragraph) above are [available here](http://www.cimt.plymouth.ac.uk/resources/codes/).
 {panel end}
 
-The Ziv-Lempel method shown is a variation of the so-called "LZ77" method. Many of the more popular lossless compression methods are based on this, although there are many variations, and one called "LZW" has also been used a lot. Another high-compression general-purpose compression method is bzip, based on a very clever method called the Burrows-Wheeler Transform.
+Zaprezentowana metoda Ziv-Lempel jest odmianą metody zwanej "LZ77". Wiele algorytmów kompresji bezstratnej bazuje na tych metodach. Innym popularnym algorytmem o podobnym działaniu jest "LZW". Inną efektywną metodą kompresji ogólnego przeznaczenia jest bzip, oparty na bardzo sprytnej metodzie zwanej transformacją Burrows-Wheeler.
 
-Questions like "what is the most compression that can be achieved" are addressed by the field of [information theory](https://en.wikipedia.org/wiki/Information_theory). There is an [activity on information theory on the CS Unplugged site](http://csunplugged.org/information-theory), and there is a [fun activity that illustrates information theory](http://www.math.ucsd.edu/~crypto/java/ENTROPY/). Based on this theory, it seems that English text can't be compressed to less than about 12% of its original size at the very best. Images, sound and video can get much better compression because they can use lossy compression, and don't have to reproduce the original data exactly.
+Pytania typu "jaki jest najwyższy możliwy stopień kompresji" są przedmiotem działu zwanego [teorią informacji](https://en.wikipedia.org/wiki/Information_theory). ??There is an [activity on information theory on the CS Unplugged site](http://csunplugged.org/information-theory), and there is a [fun activity that illustrates information theory](http://www.math.ucsd.edu/~crypto/java/ENTROPY/)??. Z tej teorii wynika, że tekst w języku angielskim nie może być skompresowany do mniej niż 12% oryginalnego rozmiaru. Zdjęcia, dźwięki i materiały wideo mogę być kompresowane z większą skutecznością, gdyż możemy stosować kompresję stratną.
 
 {comment}
 .. xtcb jargon uncompressed are typically BMP or RAW. TIFF files Tagged Image File Format can contain many formats, including uncompressed, runlength and JPEG.
