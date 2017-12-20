@@ -39,7 +39,6 @@ Przedstawiony na zdjęciu smartfon znalazł tłumaczenie dla znaków o znaczeniu
 
 {panel type="teacher-note" summary="The importance of image segmentation"}
 
-The last character is more difficult to recognise because the picture of the stick figure on a steep slope is too close to the character. The app can’t tell where the character ends and the picture begins. This is a problem of *image segmentation*, which we will look at later.
 Ostatni znak trudniej było rozpoznać, gdyż rysunek postaci człowieka jest zbyt blisko znaku. Oprogramowanie smarfona nie potrafiło określić, gdzie kończy się znak pisma, a gdzie rozpoczyna się rysunek. Ten problem jest znany pod nazwą *segmentacji obrazu*. Wrócimy do niego później.
 
 {panel end}
@@ -57,7 +56,7 @@ Celem tego rodziału jest zaznajomienie czytelnika nie tylko z tematem rozpoznaw
 
 {comment end}
 
-## Lights, Camera, Action!
+## Światła, kamera, akcja!
 
 {comment}
 
@@ -67,7 +66,7 @@ Celem tego rodziału jest zaznajomienie czytelnika nie tylko z tematem rozpoznaw
 
 {comment end}
 
-Digital cameras and human eyes fulfill largely the same function: images come in through a lens and are focused onto a light sensitive surface, which converts them into electrical impulses that can be processed by the brain or a computer respectively. There are some differences, however.
+Kamery cyfrowe i ludzkie oczy pełnią podobne funkcje: promienie światła przechodzą odpowiednio przez obiektyw kamery lub przez soczewkę oka, tam ulegają załamaniu i w końcu padają na powierzchnię (w oku to siatkówka) pokrytą fotoreceptorami, gdzie są przetwarzane na sygnały elektryczne, które później są przetwarzane przez komputer czy mózg. Oczywiście to tylko uproszczony schemat.
 
 {comment}
 
@@ -75,9 +74,9 @@ Digital cameras and human eyes fulfill largely the same function: images come in
 
 {comment end}
 
-{panel type="teacher-note" summary="Digital camera sensors"}
+{panel type="teacher-note" summary="Receptory cyfrowego aparatu fotograficznego"}
 
-There are a number of different types of digital camera sensor, but for the purposes of this chapter we will be focusing on the [CMOS](https://en.wikipedia.org/wiki/CMOS_sensor”) sensors which are in most consumer electronics. An alternative kind of sensor is the [Charge-Coupled Device (CCD)](https://en.wikipedia.org/wiki/Charge-coupled_device), which is more commonly used for specialist applications such as astronomy.
+Jest kilka różnych typów sensorów cyfrowego aparatu fotogrficznego. W tym rozdziale ograniczymy się do sensorów [CMOS](https://en.wikipedia.org/wiki/CMOS_sensor”), najbardziej popularnych. Inny typ to [Charge-Coupled Device (CCD)](https://en.wikipedia.org/wiki/Charge-coupled_device), znany bardziej wśród fachowców zajmujących się astronomią.
 
 {panel end}
 
