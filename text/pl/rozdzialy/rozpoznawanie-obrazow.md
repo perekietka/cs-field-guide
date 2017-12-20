@@ -14,21 +14,22 @@ This chapter is currently only a sketch of topics; it should be enough for stude
 
 {video url="https://www.youtube.com/embed/bE2u5trQAHM?rel=0"}
 
-## Szersza perspektywa
+## Z perspektywy
 
 W początkach ery komputerów komunikacja komputera ze światem zewnętrznym odbywała się poprzez bezpośrednie zestawianie połączeń kablowych lub poprzez klawiaturę. Współczesne urządzenia cyfrowe wyposażone są w aparaty fotograficzne, kamery, mikrofony i inne urządzenia wejściowe, używane przez oprogramowanie do automatycznego pobierania informacji ze świata, w którym żyjemy. Przetwarzanie obrazów z kamery w celu znalezenia poszukiwanych informacji (wzorców) nazywa się w informatyce * rozpoznawaniem obrazów * lub komputerowym widzeniem (ang. computer vision).
 
-With increases in computer power, the decrease in the size of computers and progressively more advanced algorithms, computer vision has a growing range of applications. While it is commonly used in fields like healthcare, security and manufacturing, we are finding more and more uses for them in our everyday life, too.
+Wraz ze wzrostem mocy obliczeniowej komputerów, ich miniaturyzacją oraz stopniowym rozwojem algorytmicznych metod przetwarzania danych, komputerowe rozpoznawanie obrazów znajdowało coraz więcej zastosowań. Najpierw w dziedzinach takich, jak medycyna, bezpieczeństwo i przemysł, a później coraz częściej w codziennym życiu ludzi.
 
-For example, here is a sign written in Chinese:
+Oto przykład napisu w języku chińskim.
 
-{image filename="no-smoking-sign.jpg" alt="Visual computing: translating a sign"}
+{image filename="no-smoking-sign.jpg" alt="Rozpoznawanie obrazu: celem jest przetłumaczenie."}
 
-If you can’t read the Chinese characters, there are apps available for smartphones that can help:
+Jeśli ktoś nie zna pisma chińskiego, to może wspomóc się programem zaintalowanym w smartfonie:
 
-{image filename="no-smoking-sign-translated.png" alt="Visual computing: translating a sign"}
+{image filename="no-smoking-sign-translated.png" alt="Rozpoznawanie obraz: celem jest przetłumaczenie."}
 
-Having a small portable device that can "see" and translate characters makes a big difference for travellers. Note that the translation given is only for the second part of the phrase (the last two characters). The first part says “please don’t”, so it could be misleading if you think it’s translating the whole phrase!
+Dla podróżujących takie przenośne małe urządzenie, które ,,patrzy'' i wyświetla tłumaczenie (,,palić'') jest wielkim udogodnieniem. 
+Zauważyć należy, że tłumaczenie nie obejmuje pierwszej części (,,prosimy nie''). Trzeba zachować ostrożność!
 
 Recognising of Chinese characters may not work every time perfectly, though. Here is a warning sign:
 
