@@ -44,6 +44,7 @@ Ostatni znak trudniej było rozpoznać, gdyż rysunek postaci człowieka jest zb
 {panel end}
 
 Celem tego rodziału jest zaznajomienie czytelnika nie tylko z tematem rozpoznawania obrazów. Proces automatycznego rozpoznawania informacji (przechwytywania danych) ze świata realnego może być użyteczny na różne sposoby. Na przykład znajduje zastosowanie w samochodach, pomagając w unikaniu kolizji na drodze, poprzez ostrzeganie o zbyt małej odległości między samochodami i o innych zagrożeniach. W połączeniu z systemami map (nawigacji) system rozpoznawania obrazów pozwala na budowę samochodów, które będą się poruszać bez kierowcy. Inny przykład zastosowania to komputerowe systemy ostrzegania wbudowane w wózki inwalidzkie. 
+
 {comment}
 
 .. https://en.wikipedia.org/wiki/Google_driverless_car
@@ -80,7 +81,9 @@ Jest kilka różnych typów sensorów cyfrowego aparatu fotogrficznego. W tym ro
 
 {panel end}
 
-**Human eyes** have a very sensitive area in the centre of their field of vision called the fovea. Objects that we are looking at directly are in sharp detail, while our peripheral vision is quite poor. We have separate sets of cone cells in the retina for sensing red, green and blue (RGB) light, but we also have special rod cells that are sensitive to light levels, allowing us to perceive a wide dynamic range of bright and dark colours. The retina has a blind spot (a place where all the nerves bundle together to send signals to the brain through the optic nerve), but most of the time we don’t notice it because we have two eyes with overlapping fields of view, and we can move them around very quickly.
+W środku plamki żółtej, czyli części siatkówki **ludzkiego oka** o największym zagęszczeniu fotoreceptorów, zwanych czopkami, znajduje się zagłębienie dołeczkiem (łac. fovea). To miejsce o największej rozdzielczości widzenia, to znaczy, że odpowiada za postrzeganie szczegółów obiektu, na który patrzymy wprost. Mamy trzy zbiory czopków, wrażliwych na różne barwy (kolory), odpowiednio na światło czerwone, zielone i niebieskie. 
+Inne receptory siatkówki oka to pręciki, które są bardzo wrażliwe na światło, odpowiadają za postrzeganie kształtów i postrzeganie czarno-białe widzenie nawet przy słabym oświetleniu. 
+Obszar siatkówki oka, w którym nerw wzrokowy opuszcza gałkę oczną i biegnie w stronę mózgu to plamka ślepa. Jest on całkowicie pozbawiony fotoreceptorów. Jednak luki w polu widzenia obu oczu nie pokrywają się, z więc to, czego nie widzi jedno oko, widzi drugie i powstaje wrażenie, że pole widzenia jest pełne.
 
 **Digital cameras** have uniform sensitivity to light across their whole field of vision. Light intensity and colour are picked up by RGB sensor elements on a silicon chip, but they aren’t as good at capturing a wide range of light levels as our eyes are. Typically, a modern digital camera can automatically tune its exposure to either bright or dark scenes, but it might lose some detail (e.g. when it is tuned for dark exposure, any bright objects might just look like white blobs).
 
