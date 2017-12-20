@@ -31,20 +31,20 @@ Jeśli ktoś nie zna pisma chińskiego, to może wspomóc się programem zaintal
 Dla podróżujących takie przenośne małe urządzenie, które ,,patrzy'' i wyświetla tłumaczenie (,,palić'') jest wielkim udogodnieniem. 
 Zauważyć należy, że tłumaczenie nie obejmuje pierwszej części (,,prosimy nie''). Trzeba zachować ostrożność!
 
-Recognising of Chinese characters may not work every time perfectly, though. Here is a warning sign:
+Rozpoznawanie pisma chińskiego może być czasem niedoskonałe. Oto drogowy znak ostrzegawczy:
 
-{image filename="steep-sign-translated.jpg" alt="Visual computing: translating a sign"}
+{image filename="steep-sign-translated.jpg" alt="Rozpoznawanie obrazu: celem jest przetłumaczenie."}
 
-My phone has been able to translate the “careful” and “steep” characters, but it hasn’t recognised the last character in the line. Why do you think that might be?
+Przedstawiony na zdjęciu smartfon znalazł tłumaczenie dla znaków o znaczeniu ,,stromy'' i ,,ostrożnie'', ale nie rozpoznał ostatniego znaku w linii. Dlaczego?
 
 {panel type="teacher-note" summary="The importance of image segmentation"}
 
 The last character is more difficult to recognise because the picture of the stick figure on a steep slope is too close to the character. The app can’t tell where the character ends and the picture begins. This is a problem of *image segmentation*, which we will look at later.
+Ostatni znak trudniej było rozpoznać, gdyż rysunek postaci człowieka jest zbyt blisko znaku. Oprogramowanie smarfona nie potrafiło określić, gdzie kończy się znak pisma, a gdzie rozpoczyna się rysunek. Ten problem jest znany pod nazwą *segmentacji obrazu*. Wrócimy do niego później.
 
 {panel end}
 
-Giving users more information through computer vision is only one part of the story. Capturing information from the real world allows computers to assist us in other ways too. In some places, computer vision is already being used to help car drivers to avoid collisions on the road, warning them when other cars are too close or there are other hazards on the road ahead. Combining computer vision with map software, people have now built cars that can drive to a destination without needing a human driver to steer them. A wheelchair guidance system can take advantage of vision to avoid bumping into doors, making it much easier to operate for someone with limited mobility.
-
+Celem tego rodziału jest zaznajomienie czytelnika nie tylko z tematem rozpoznawania obrazów. Proces automatycznego rozpoznawania informacji (przechwytywania danych) ze świata realnego może być użyteczny na różne sposoby. Na przykład znajduje zastosowanie w samochodach, pomagając w unikaniu kolizji na drodze, poprzez ostrzeganie o zbyt małej odległości między samochodami i o innych zagrożeniach. W połączeniu z systemami map (nawigacji) system rozpoznawania obrazów pozwala na budowę samochodów, które będą się poruszać bez kierowcy. Inny przykład zastosowania to komputerowe systemy ostrzegania wbudowane w wózki inwalidzkie. 
 {comment}
 
 .. https://en.wikipedia.org/wiki/Google_driverless_car
