@@ -121,32 +121,32 @@ Więcej informacji na ten temat można znaleźć (w języku angielskim) tutaj:  
 
 Artykuły edukacyjne dotyczące tego zagadnienia znajdują się również na stronie [articles on the cs4fn website](http://www.cs4fn.org/vision/)
 
-### Project: Recognising faces
+### Projekt: Rozpoznwanie twarzy
 
 {panel type="teacher-note" summary="NCEA"}
 
-The following activity can be used as part of a project for the 3.44 standard. This project covers material for an example for the 3.44 standard through the following components:
-
-- Key problem: face recognition in digital images
-- Practical application: security, photo album tagging
-- Algorithm/technique: Haar face detector
-- Evaluation: ability to recognise faces, false positives and negatives, processing speed
-- Personalised student examples: applying the processing to the student's own images
+Poniższe zadanie może być ciekawą propozycją na projekt szkolny.
+Dotyczy zagadnień:
+- Temat: Rozpoznwanie twarzy zdjęciu cyfrowym
+- zastosowania praktyczne: bezpieczeństwo, znakowanie treści albumów zdjęć
+- algorytm: detektor twarzy Haar'a
+- kryteria oceny: dokładność rozpoznawania twarzy, fałszywe alarmy, szybkość działania
+- autorskie przykłady: zastosowanie metody do własnych zdjęć
 
 {panel end}
 
-First let's manually try some methods for recognising whether two photographs show the same person.
+Zacznijmy od ręcznych prób zastosowania kilku metod dla rozpoznania, czy dwa zdjęcia ukazują tę samą osobę.
 
-- Get about 3 photos each of 3 people
-- Measure features on the faces such as distance between eyes, width of mouth, height of head etc. Calculate the ratios of some of these.
-- Do photos of the same person show the same ratios? Do photos of different people show different ratios? Would these features be a reliable way to recognise two images as being the same person?
-- Are there other features you could measure that might improve the accuracy?
+- Zgromadź co najmniej trzy zdjęcia przedstawijące trzy osoby.
+- Zmierz cechy twarzy takie, jak odległość między oczami, szerokość ust, wysokość głowy itp. Porównaj wyniki uzyskane na różnych zdjęciach, wyznaczając odpowiednie ilorazy (proporcje).
+- Sprawdź, czy na każdym ze zdjęć odpowiednie ilorazy dla konkretnej osoby są takie same. Czy te wartości różnią się w istotny sposób dla różnych osób? Czy te informacje pozwolą na bezbłędne rozpoznanie danej osoby na dwóch zdjęciach?
+- Jakie inne cechy osób można by zmierzyć, aby zwiększyć skuteczność rozpoznawania twarzy na zdjęciu?
 
 You can evaluate the effectiveness of facial recognition in free software such as Google’s Picasa or the Facebook photo tagging system, but uploading photos of a variety of people and seeing if it recognises photos of the same person. Are there any false negatives or positives? How much can you change your face when the photo is being taken to not have it match your face in the system? Does it recognise a person as being the same in photos taken several years apart? Does a baby photo match of a person get matched with them when they are five years old? When they are an adult? Why or why not does this work?
 
-Try using [face recognition on this website](https://inspirit.github.com/jsfeat/sample_haar_face.html) to see how well the Haar face recognition system can track a face in the image. What prevents it from tracking a face? Is it affected if you cover one eye or wear a hat? How much can the image change before it isn't recognised as a face? Is it possible to get it to incorrectly recognise something that isn't a face?
+Wypróbuj interaktywne narzędzie [do rozpoznawania twarzy](https://inspirit.github.com/jsfeat/sample_haar_face.html), używające obrazu z kamery (np. wbudowanej w laptop). Sprawdź, jak dobrze działa śledzenie ruchu twarzy w tym systemie. Kiedy system zaczyna źle działać? Wystarczy zasłonić jedno oko? Wystarczy założyć kapelusz? Jaką część twarzy trzeba zakryć, aby rozpoznawanie twrzy przestało dobrze działąć? Co zrobić, aby system opacznie rozpoznał twarz w miejscu, gdzie jej nie ma?
 
-## Edge detection
+## Wykrywanie krawędzi
 
 A useful technique in computer vision is *edge detection*, where the boundaries between objects are automatically identified.
 Having these boundaries makes it easy to *segment* the image (break it up into separate objects or areas), which can then be recognised separately.
