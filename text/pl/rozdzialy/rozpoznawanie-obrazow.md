@@ -121,13 +121,13 @@ Więcej informacji na ten temat można znaleźć (w języku angielskim) tutaj:  
 
 Artykuły edukacyjne dotyczące tego zagadnienia znajdują się również na stronie [articles on the cs4fn website](http://www.cs4fn.org/vision/)
 
-### Projekt: Rozpoznwanie twarzy
+### Projekt: Rozpoznawanie twarzy
 
 {panel type="teacher-note" summary="NCEA"}
 
 Poniższe zadanie może być ciekawą propozycją na projekt szkolny.
 Dotyczy zagadnień:
-- Temat: Rozpoznwanie twarzy zdjęciu cyfrowym
+- Temat: Rozpoznwanie twarzy na zdjęciu cyfrowym
 - zastosowania praktyczne: bezpieczeństwo, znakowanie treści albumów zdjęć
 - algorytm: detektor twarzy Haar'a
 - kryteria oceny: dokładność rozpoznawania twarzy, fałszywe alarmy, szybkość działania
@@ -142,51 +142,51 @@ Zacznijmy od ręcznych prób zastosowania kilku metod dla rozpoznania, czy dwa z
 - Sprawdź, czy na każdym ze zdjęć odpowiednie ilorazy dla konkretnej osoby są takie same. Czy te wartości różnią się w istotny sposób dla różnych osób? Czy te informacje pozwolą na bezbłędne rozpoznanie danej osoby na dwóch zdjęciach?
 - Jakie inne cechy osób można by zmierzyć, aby zwiększyć skuteczność rozpoznawania twarzy na zdjęciu?
 
-You can evaluate the effectiveness of facial recognition in free software such as Google’s Picasa or the Facebook photo tagging system, but uploading photos of a variety of people and seeing if it recognises photos of the same person. Are there any false negatives or positives? How much can you change your face when the photo is being taken to not have it match your face in the system? Does it recognise a person as being the same in photos taken several years apart? Does a baby photo match of a person get matched with them when they are five years old? When they are an adult? Why or why not does this work?
-
 Wypróbuj interaktywne narzędzie [do rozpoznawania twarzy](https://inspirit.github.com/jsfeat/sample_haar_face.html), używające obrazu z kamery (np. wbudowanej w laptop). Sprawdź, jak dobrze działa śledzenie ruchu twarzy w tym systemie. Kiedy system zaczyna źle działać? Wystarczy zasłonić jedno oko? Wystarczy założyć kapelusz? Jaką część twarzy trzeba zakryć, aby rozpoznawanie twrzy przestało dobrze działąć? Co zrobić, aby system opacznie rozpoznał twarz w miejscu, gdzie jej nie ma?
 
 ## Wykrywanie krawędzi
 
-A useful technique in computer vision is *edge detection*, where the boundaries between objects are automatically identified.
-Having these boundaries makes it easy to *segment* the image (break it up into separate objects or areas), which can then be recognised separately.
+Użyteczną techniką rozpoznawania obrazów przez komputer jest *wykrywanie krawędzi*, co oznacza automatyczną lokalizację granicznych częśći obiektów. To w praktyce oznacza możliwość podziału obrazu na rozłączne obiekty i obszary (segmentyzację).
 
 For example, here's a photo where you might want to recognise individual objects:
+Oto przykład. Na zdjęciu łatwo dostrzec wzrokiem różne obiekty.
 
 {image filename="fruit-bowl-photo.jpg" alt="Image of a fruit bowl"}
 
-And here's a version that has been processed by an edge detection algorithm:
+Oto efekt przetwarzania obrazu przez algorytm wykrywania krawędzi:
 
 {image filename="fruit-bowl-photo-with-canny-edge-detection.png" alt="The image above with canny edge detection applied"}
 
-Notice that the grain on the table above has affected the quality; some pre-processing to filter that would have helped!
+Można zauważyć, że algorytm przetwarzał również fragment obrazu ukazujący stół; lepiej, aby właściwy proces wykrywania krawędzi poprzedzić innym wstępnym filtrowaniem!
 
-You can experiment with edge-detection yourself with the [Canny edge detector on this website](https://inspirit.github.io/jsfeat/sample_canny_edge.html) (see the information about [Canny edge detection on Wikipedia](https://en.wikipedia.org/wiki/Canny_edge_detector)).
-This is a widely used algorithm in computer vision, developed in 1986 by John F. Canny.
+Warto poeksperymentować z wykrywaczem krawędzi na stronie  [Canny detektor](https://inspirit.github.io/jsfeat/sample_canny_edge.html) (więcej informacji o [Canny detektorze](https://en.wikipedia.org/wiki/Canny_edge_detector)).
+Algorytm był zaprojektowany w 1986 roku przez Johna F. Canny'ego.
 
-### Activity: Edge detection evaluation
+### Projekt: Wykrywanie krawędzi
 
 {panel type="teacher-note" summary="NCEA"}
 
-The following activity can be used as part of a project for the 3.44 standard. This project covers material for an example for the 3.44 standard through the following components:
-
-- Key problem: edge detection in digital images
-- Practical application: segmenting an image into component objects
-- Algorithm/technique: Canny Edge detector
-- Evaluation: ability to find all real edges (and not get false edges), and speed of the detector with various settings and types of images
-- Personalised student examples: applying the processing to the student's own images
+Poniższe zadanie może być ciekawą propozycją na projekt szkolny.
+Dotyczy zagadnień:
+- Temat: Wykrywanie krawędzi na zdjęciu cyfrowym
+- zastosowania praktyczne: segmentacja obrazu (podział obrazu na części)
+- algorytm: detektor krawędzi Canny'ego
+- kryteria oceny: dokładność rozpoznawania krawędzi, fałszywe alarmy, szybkość działania
+- autorskie przykłady: zastosowanie metody do własnych zdjęć
 
 {panel end}
 
 With the canny edge detection website above, try putting different images in front of the camera and determine how good the algorithm is at detecting boundaries in the image.
 Capture images to put in your report as examples to illustrate your experiments with the detector.
 
-- Can the Canny detector find all edges in the image? If there are some missing, why might this be?
-- Are there any false edge detections? Why did they system think that they were edges?
-- Does the lighting on the scene affect the quality of edge detection?
-- Does the system find the boundary between two colours? How similar can the colours be and still have the edge detected?
-- How fast can the system process the input? Does the nature of the image affect this?
-- How well does the system deal with a page with text on it?
+Korzystając z narzędzia ze wskazanej wyżej strony internetowej, sprawdź efekt działania detektora dla różnych obiektów czy obrazów, jakie umieścisz w polu widzenia kamery.
+Zachowaj wybrane obrazy (zrzuty ekranu).
+
+- Czy system wykrył wszystkie krawędzie? Dlaczego niektórych nie wykrył? Czy niektórze krawędzie zostały błędnie zlokalizowane? Dlaczego? Jak sądzisz?
+- Czy na efektywność działania wykrywacza ma wpływ oświetlenie (jasność) pomieszczenia?
+- Czy system pozwala wykryć granicę między obszarami o dwóch różnych kolorach? Czy kolory muszą się bardzo różnić, aby system działał poprawnie?
+- Czy działanie systemu zależy od rodzaju obiektu umieszczonego przed kamerą?
+- Jak system radzi sobie z wykrywaniem krawędzi na kartce tekstu?
 
 ## The whole story!
 
