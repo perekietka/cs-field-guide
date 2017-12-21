@@ -1,17 +1,5 @@
 # Rozpoznawanie obrazów (przez komputer)
 
-{comment}
-
-.. xTCB Link the project directly to A/M/E in the standard (see email from Jenny B)
-
-This chapter supports the vision part of the "Graphics and visual computing" option of the NZ achievement standard 3.44. The topic "Visual computing" is generally regarded to include computer graphics (output) and computer vision (input); this chapter focusses on the latter. For the 3.44 standard a project based on this chapter or the computer graphics chapter would only count as one topic i.e. students shouldn't choose vision and graphics as their two required topics --- but we've chosen to put them in separate chapters.
-
-Currently all material in this chapter is relevant to the standard, although students need choose only one or two examples to focus on to meet the requirements of the standard.
-
-This chapter is currently only a sketch of topics; it should be enough for students to make decisions about which options to choose, but over the next month or two we'll add more specific information and interactives to support projects. Currently the interactives only work with images from a webcam, but a new version that students can load their own photos into will be available soon, as this will allow for more controlled experiments with the techniques. The ability to select example images to test these techniques is a useful skill, and a good choice of original images by students helps to show understanding of the purpose of the technique.
-
-{comment end}
-
 {video url="https://www.youtube.com/embed/bE2u5trQAHM?rel=0"}
 
 ## Z perspektywy
@@ -45,35 +33,9 @@ Ostatni znak trudniej było rozpoznać, gdyż rysunek postaci człowieka jest zb
 
 Celem tego rodziału jest zaznajomienie czytelnika nie tylko z tematem rozpoznawania obrazów. Proces automatycznego rozpoznawania informacji (przechwytywania danych) ze świata realnego może być użyteczny na różne sposoby. Na przykład znajduje zastosowanie w samochodach, pomagając w unikaniu kolizji na drodze, poprzez ostrzeganie o zbyt małej odległości między samochodami i o innych zagrożeniach. W połączeniu z systemami map (nawigacji) system rozpoznawania obrazów pozwala na budowę samochodów, które będą się poruszać bez kierowcy. Inny przykład zastosowania to komputerowe systemy ostrzegania wbudowane w wózki inwalidzkie. 
 
-{comment}
-
-.. https://en.wikipedia.org/wiki/Google_driverless_car
-
-.. I think for this topic, it could be important to mention the links into math, and also provide links to more advanced stuff, as there will be some high school students who are very confident with math, and could investigate this topic quite possibly to the level that more advanced university students would (and there are probably some that already have!). Graphics seems to be popular with the “geekiest” and “smartest” students.
-
-.. Of course students who aren’t so confident in math should still be given stuff they can understand as well.
-
-.. For the students who’re not so math-heavy, I wonder if it’s worth pointing out links into cognitive science (bio/psych), too. The human visual system and a computer vision system may have similar “hardware”, but they don’t interpret images in the same way. Some of the things that we find easy to do (like recognising people’s facial expressions) are challenging for a computer, and some things that we find challenging (like seeing through some optical illusions; e.g. checkerboard illusion) are easy for a computer.
-
-{comment end}
-
 ## Światła, kamera, akcja!
 
-{comment}
-
-.. big picture: camera models, noise, lighting models
-
-.. [images might be clear to a human, but they are just blurred pixels to a computer --- show closeup of sign]
-
-{comment end}
-
 Kamery cyfrowe i ludzkie oczy pełnią podobne funkcje: promienie światła przechodzą odpowiednio przez obiektyw kamery lub przez soczewkę oka, tam ulegają załamaniu i w końcu padają na powierzchnię (w oku to siatkówka) pokrytą fotoreceptorami, gdzie są przetwarzane na sygnały elektryczne, które później są przetwarzane przez komputer czy mózg. Oczywiście to tylko uproszczony schemat.
-
-{comment}
-
-.. x JRM diagram of eye vs. diagram of digital camera.(not urgent)
-
-{comment end}
 
 {panel type="teacher-note" summary="Receptory cyfrowego aparatu fotograficznego"}
 
@@ -103,10 +65,8 @@ Efekt szumu jest widoczny głównie jako losowe (przypadkowe) zmiany pikseli. W 
 
 {image filename="banana-with-salt-and-pepper-noise.jpg" alt="An image of a banana with salt-and-pepper noise"}
 
-Having noise in an image can make it harder to recognise what's in the image, so an important step in computer vision is reducing the effect of noise in an image.
-There are well-understood techniques for this, but they have to be careful that they don’t discard useful information in the process. In each case, the technique has to make an educated guess about the image to predict which of the pixels that it sees are supposed to be there, and which aren’t.
-
-Rozpoznawanie obiektów na obrazach, które zawierają szum jest trudniejsze. Dlatego ważne jest, by szukać metod redukowania ilości szumu na obrazie. 
+Rozpoznawanie obiektów na obrazach, które zawierają szum jest trudniejsze. Dlatego ważne jest, by szukać coraz lepszych metod redukowania szumu na obrazie. 
+Przy projektowaniu takich metod należy zachować ostrożność. Efektem ubocznym usunięcia szumu nie może być bowiem utrata istotnych informacji o obrazie. Trzeba podkreślić, że stosowane metody są zawsze metodami przybliżonymi rozwiązania problemu, co oznacza, że decyzja o zachowaniu wartości liczbowej lub zmianie wartości dla konkretnego piksela jest efektem domysłu, uzasadnionego domniemania.
 
 {panel type="teacher-note" summary="Image noise on Wikipedia"}
 
@@ -132,49 +92,21 @@ Każdy światłoczuły element fotoreceptora aparatu fotograficznego jest równi
 
 Zamiast analizować oddzielnie każdą ze składowych RGB piksela, techniki redukujące szum najczęściej działają tak, że sprawdzają piksele sąsiadujące z danym pikselem i na podstawie zebranych informacji przypisują mu wartość przypuszczalną wartość.
 
-*Filtr uśredniający* korzysta z założenia, że piksele sąsiadujące z danym pikselem są podobne. Wartości przypisane pikselom tworzącym kwadrat, w którego centrum znajduje się dany piksel, są uśredniane i ta wartość średnia jest przypisana pikselowi.
+W *filtrze uśredniającym* korzysta się z założenia, że piksele sąsiadujące z danym pikselem są podobne. Wartości przypisane pikselom tworzącym kwadrat, w którego centrum znajduje się dany piksel, są uśredniane i ta wartość średnia jest przypisana pikselowi.
 Im kwadrat jest większych rozmiarów, tym większe niebezpieczeństwo pojawienia się w wyniku filtrowania efektu rozmycia obrazu, zwłaszcza w przypadku, gdy fragment obrazu przedstawia np. krawędzie obietków (wtedy jasne i ciemne piksele sąsiadują).
 
+W *filtrze medianowym* stosuje się inne podejście. Odczytuje się wartości sąsiednich pikseli, podobnie jak dla filtru uśredniającego. Następnie szuka się mediany (wartości środkowej) ciągu uporządkowanego odczytanych wartości. Taki filtr daje dobre rezultaty w przypadku, gdy fragment obrazu przedstawia krawędź jakiegoś obiektu, gdyż wówczas wartość mediany będzie jedną z dwóch: albo odpowiadającą jasnemu pikselowi albo ciemnemu pikselowi. Filtr działa też dobrze, gdy analizowany obszar jest w dużej części jednolity, gdyż wówczas obecność mniej licznych pikseli o innej wartości nie ma żadnego wpływu na wartość mediany. Wadą tej metody jest czas działania, tj. koszt operacji porządkowania wartości przez wyznaczeniem mediany. 
 
-A *median filter* takes a different approach. It collects all the same values that the mean filter does, but then sorts them and takes the middle (i.e. the *median*) value. This helps with the edges that the mean filter had problems with, as it will choose either a bright or a dark value (whichever is most common), but won’t give you a value between the two. In a region where pixels are mostly the same value, a single bright or dark pixel will be ignored. However, numerically sorting all of the neighbouring pixels can be quite time-consuming!
+Inną techniką jest metoda zwana *rozmyciem Gaussa*. Działa podobnie do metody uśredniania, ale zamiast wartości średniej korzysta się własności *rozkładu normalnego*: przyjmuje się, że pikseli sąsiadujące bezpośrednio z analizowanym pikselem mają przypisaną wartość najbardziej zbliżoną do poszukiwanej, a piksele polożone dalej wręcz przeciwnie.  
 
-A *Gaussian* blur is another common technique, which assumes that the closest pixels are going to be the most similar, and pixels that are farther away will be less similar. It works a lot like the mean filter above, but is statistically weighted according to a *normal distribution*.
+### Ćwiczenie: Usuwanie szumu z obrazu
 
-{comment}
-
-.. [diagram of the probability curves of a mean and a Gaussian filter]
-
-.. [side by side before-and-after image showing a Gaussian blur on a simple image (white square on black?)]
-
-.. https://en.wikipedia.org/wiki/Gaussian_blur
-
-.. At this point we could do an activity with a noisy image and a Gaussian blur - a light blur improves the picture quality, but increase the blur too much and the features start to become indistinct.
-
-{comment end}
-
-### Activity: noise reduction filters
-
-{comment}
-
-The following activity can be used as part of a project for the 3.44 standard. This project covers material for an example for the 3.44 standard through the following components:
-
-- Key problem: noise in digital images
-- Practical application: cleaning up an image to improve the quality of computer vision
-- Algorithm/technique: noise reduction filters (mean, median, Gaussian)
-- Evaluation: quality of the image and speed of the various approaches with various settings
-- Personalised student examples: applying the processing to the student's own image
-
-{comment end}
-
-Open the [noise reduction filtering interactive using this link](http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/cv-noise-filters.html) and experiment with settings as below. You will need a webcam, and the interactive will ask you to allow access to it.
+Otwórz interaktywne narzędzie [noise reduction filtering interactive using this link](http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/cv-noise-filters.html) i przeprowadź badania według opisu poniżej. Niebędna będzie kamera internetowa.
 
 Mathematically, this process is applying a special kind of matrix called a *convolution kernel* to the value of each pixel in the source image, averaging it with the values of other pixels nearby and copying that average to each pixel in the new image. The average is weighted, so that the values of nearby pixels are given more importance than ones that are far away. The stronger the blur, the wider the convolution kernel has to be and the more calculations take place.
 
-{comment}
+Bazą matematyczną przetwarzania obrazu jest w tym przypadku specjalny rodzaj macierzy zwany *jądrem splotu* (ang. convolution kernel). Każdy z pikseli tworzących obraz jest przetwarzany: wartość mu przypisana jest uśredniania na podstawie wartości sąsiednich pikseli. Zbiór pikseli uśrednionych wartości tworzy nowy obraz. W tym przypadku średnia jest średnią ważoną, tzn. wpływ na średnią wartości pikseli sąsiadujących bezpośrednio z analizowanym pikselem jest większy niż wartości pikseli bardziej oddalonych. Im większe ma być rozmycie, tym większa macierz jest używana, co oznacza większą liczbę obliczeń do wykonania podczas przetwarzania.
 
-.. xtcb todo [Image of a convolution kernel for a small (3x3, 5x5 or 7x7?) Gaussian blur]
-
-{comment end}
 
 For this activity, investigate the different kinds of noise reduction filter and their settings (mask size, number of iterations) and determine:
 
