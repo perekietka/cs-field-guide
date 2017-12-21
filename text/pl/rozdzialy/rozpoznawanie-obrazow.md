@@ -85,13 +85,13 @@ W środku plamki żółtej, czyli części siatkówki **ludzkiego oka** o najwi�
 Inne receptory siatkówki oka to pręciki, które są bardzo wrażliwe na światło, odpowiadają za postrzeganie kształtów i postrzeganie czarno-białe widzenie nawet przy słabym oświetleniu. 
 Obszar siatkówki oka, w którym nerw wzrokowy opuszcza gałkę oczną i biegnie w stronę mózgu to plamka ślepa. Jest on całkowicie pozbawiony fotoreceptorów. Jednak luki w polu widzenia obu oczu nie pokrywają się, z więc to, czego nie widzi jedno oko, widzi drugie i powstaje wrażenie, że pole widzenia jest pełne.
 
-**Digital cameras** have uniform sensitivity to light across their whole field of vision. Light intensity and colour are picked up by RGB sensor elements on a silicon chip, but they aren’t as good at capturing a wide range of light levels as our eyes are. Typically, a modern digital camera can automatically tune its exposure to either bright or dark scenes, but it might lose some detail (e.g. when it is tuned for dark exposure, any bright objects might just look like white blobs).
+**Aparaty cyfrowe**, inaczej niż oczy, są jednakowej czułości na światło dla całego pola widzenia. Intensywność światła i kolor są rejestrowane przez elementy receptorów RGB wdrukowane na krzemowym układzie scalonym. Te receptory nie mają jednak takiej zdolności jak oczy jeśli chodzi o zakres poziomów światła podczas przechwytywania informacji. Zwykle, współczesne aparaty cyfrowe potrafią automatycznie dopasować ustawienia w zależności od jasności otoczenia, ale ma to swoją cenę: bardziej szczegółowe informacje o obiektach będą stracone (np. jasne objekty będą na zdjęciu widoczne jako białe plamy).
 
-It is important to understand that neither a human eye nor a digital camera  --- even a very expensive one --- can perfectly capture all of the information in the scene in front of it. Electronic engineers and computer scientists are constantly doing research to improve the quality of the images they capture, and the speed at which they can record and process them.
+Jest ważne, by zrozumieć, że ani ludzkie oko, ani cyfrowy aparat fotograficzny --- nawet bardzo drogi --- nie są w stanie zapisać wszystkich informacji o obiektach znajdujących się w polu widzenia. Prowadzone są badania, wspólnie przez inżynierów elektorników i informatyków, których celem jest stworzenie urządzeń, które będą pozwalać na jeszcze bardziej dokładne rejestrowanie informacji oraz jej szybkie przetwarzanie.
 
 {panel type="curiosity" summary="Further reading"}
 
-Further reading can be found at [Cambridge in Colour](http://www.cambridgeincolour.com/tutorials/cameras-vs-human-eye.htm) and [Pixiq](https://web.archive.org/web/20130309170941/http://www.pixiq.com/article/eyes-vs-cameras).
+Więcej na ten temat (w języku angielskim) można przeczytać tutaj: [Cambridge in Colour](http://www.cambridgeincolour.com/tutorials/cameras-vs-human-eye.htm), [Pixiq](https://web.archive.org/web/20130309170941/http://www.pixiq.com/article/eyes-vs-cameras).
 
 {panel end}
 
