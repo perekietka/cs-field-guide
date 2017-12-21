@@ -133,17 +133,6 @@ There is some information about [How facial recognition works](http://electronic
 
 There are some relevant [articles on the cs4fn website](http://www.cs4fn.org/vision/) that also provide some general material on computer vision.
 
-{comment}
-
-.. Possible fun image to use:
-.. http://facestuff.wordpress.com/2010/02/15/beady-eyed-tap-face/
-
-.. xtcb to do: Discuss techniques
-
-.. extend to template/pattern matching etc (QR codes?), Character/text recognition?
-
-{comment end}
-
 ### Project: Recognising faces
 
 {panel type="teacher-note" summary="NCEA"}
@@ -211,24 +200,12 @@ Capture images to put in your report as examples to illustrate your experiments 
 - How fast can the system process the input? Does the nature of the image affect this?
 - How well does the system deal with a page with text on it?
 
-{comment}
-
-.. spare material moved to https://docs.google.com/document/d/1qYEMq4LcTvotXrfkhS5rvOu0gQCHezGSSaX3vIi9mVo/
-
-{comment end}
-
 ## The whole story!
 
 The field of computer vision is changing rapidly at the moment because camera technology has been improving quickly over the last couple of decades.
 Not only is the resolution of cameras increasing, but they are more sensitive for low light conditions, have less noise, can operate in infra-red (useful for detecting distances), and are getting very cheap so that it's reasonable to use multiple cameras, perhaps to give different angles or to get stereo vision.
 
 Despite these recent changes, many of the fundamental ideas in computer vision have been around for a while; for example, the "k-means" segmentation algorithm was first described in 1967, and the first digital camera wasn't built until 1975 (it was a 100 by 100 pixel Kodak prototype).
-
-{comment}
-
-.. Computer Vision is a rapidly changing field because camera technology is changing fast - resolution, bnoise, infra red, stereo vision.
-
-{comment end}
 
 (More material will be added to this chapter in the near future)
 
