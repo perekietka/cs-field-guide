@@ -112,15 +112,14 @@ Na przykład na portalach społecznościowych coraz częściej pojawiają się n
 
 {image filename="face-recognition-software-screenshot.jpg" alt="Google's Picasa recognises these photos as being the same person"}
 
-Digital cameras can find faces in a scene and use them to adjust the focus and lighting.
 Jest wiele innych zastosowań.
 Systemy bezpieczeństwa, np. używane przez służby cele podczas przekraczania granicy między krajami, porównują twarz podróżującego z zdjęciem twarzy na paszporcie czy innym dowodzie tożsamości.
 Celem przetwarzania obrazu i rozpoznawania twarzy może być dbałość o anonimowość (zachowanie prawa do prywatności) osób, które zostały zarejestrowane przez kamery systemów map ulicznych (np. Google Maps). Wówczas odpowiednie fragmenty zdjęć poddaje się rozmyciu.
 Współczesne aparaty cyfrowe automatycznie dopasowują swoje ustawienia przez wykoaniem zdjęcia na podstawie lokalizacji twarzy wewnątrz kadru.
 
-There is some information about [How facial recognition works](http://electronics.howstuffworks.com/gadgets/high-tech-gadgets/facial-recognition.htm) that you can read up as background, and some more information at [i-programmer.info](http://www.i-programmer.info/babbages-bag/1091-face-recognition.html).
+Więcej informacji na ten temat można znaleźć (w języku angielskim) tutaj:  [How facial recognition works](http://electronics.howstuffworks.com/gadgets/high-tech-gadgets/facial-recognition.htm), [i-programmer.info](http://www.i-programmer.info/babbages-bag/1091-face-recognition.html).
 
-There are some relevant [articles on the cs4fn website](http://www.cs4fn.org/vision/) that also provide some general material on computer vision.
+Artykuły edukacyjne dotyczące tego zagadnienia znajdują się również na stronie [articles on the cs4fn website](http://www.cs4fn.org/vision/)
 
 ### Project: Recognising faces
 
