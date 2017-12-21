@@ -76,12 +76,6 @@ Warto zapoznać się z artykułem: [Image noise](https://en.wikipedia.org/wiki/I
 
 Ponieważ aparat fotograficzny zapisuje informacje o składowych (czerwona, zielona i niebieska) osobno dla każdego piksela, to czasami celem zaoszczędzenia na czasie przetwarzania obrazu, jest uzasadnione zapisanie obrazu w odcieniach szarości. Wtedy pomija się informacje o barwie, a zapisuje się tylko informacje o intensywności światła dla każdego piksela.
 
-{comment}
-
-.. todo [Demonstrate a noisy colour image and its combined greyscale]
-
-{comment end}
-
 Dzieki temu można zmieniejszyć poziom szumu na obrazie. Dlaczego? I w jakim stoponiu to pomaga? (Aby się przekonać, można zrobić ekesperyment: wykonać zdjęcie w miejscu słabo oświetlonym -- można wtedy dostrzec jakby małe łatki na obrazie. Następnie w programie graficznym można zapisać je jako czarno-białe -- czy to zmniejszy efekt szumu?)
 
 {panel type="teacher-note" summary="Noisy channels"}
@@ -103,31 +97,26 @@ Inną techniką jest metoda zwana *rozmyciem Gaussa*. Działa podobnie do metody
 
 Otwórz interaktywne narzędzie [noise reduction filtering interactive using this link](http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/cv-noise-filters.html) i przeprowadź badania według opisu poniżej. Niebędna będzie kamera internetowa.
 
-Mathematically, this process is applying a special kind of matrix called a *convolution kernel* to the value of each pixel in the source image, averaging it with the values of other pixels nearby and copying that average to each pixel in the new image. The average is weighted, so that the values of nearby pixels are given more importance than ones that are far away. The stronger the blur, the wider the convolution kernel has to be and the more calculations take place.
-
 Bazą matematyczną przetwarzania obrazu jest w tym przypadku specjalny rodzaj macierzy zwany *jądrem splotu* (ang. convolution kernel). Każdy z pikseli tworzących obraz jest przetwarzany: wartość mu przypisana jest uśredniania na podstawie wartości sąsiednich pikseli. Zbiór pikseli uśrednionych wartości tworzy nowy obraz. W tym przypadku średnia jest średnią ważoną, tzn. wpływ na średnią wartości pikseli sąsiadujących bezpośrednio z analizowanym pikselem jest większy niż wartości pikseli bardziej oddalonych. Im większe ma być rozmycie, tym większa macierz jest używana, co oznacza większą liczbę obliczeń do wykonania podczas przetwarzania.
 
+Ćwiczenie polega na zbadaniu wpływu różnych ustawień dla filtrów usuwania szumu i określeniu:
+- jak radzą sobie z różnymi rodzajami i poziomami szumu
+- jak dużo czasu trwa przetwarzanie (narzędzie wyświetla informację o liczbie ramek przewarzanych w ciągu sekundy)
+- jaki mają wpływ na jakość obrazu.
 
-For this activity, investigate the different kinds of noise reduction filter and their settings (mask size, number of iterations) and determine:
 
-- how well they cope with different kinds and levels of noise (you can set this in the interactive).
-- how much time it takes to do the necessary processing (the interactive shows the number of frames per second that it can process)
-- how they affect the quality of the underlying image (a variety of images + camera)
+## Rozpoznawanie twarzy
 
-You can take screenshots of the image to show the effects in your writeup. You can discuss the tradeoffs that need to be made to reduce noise.
-
-## Face recognition
-
-Recognising faces has become a widely used computer vision application.
-These days photo album systems like Picasa and Facebook can try to recognise who is in a photo using face recognition ---
-for example, the following photos were recognised in Picasa as being the same person, so to label the photos with people's names you only need to click one button rather than type each one in.
+Zdolność komputerów do rozpoznawania twarzy na zdjęciu znajduje wiele zastosowań. 
+Na przykład na portalach społecznościowych coraz częściej pojawiają się narzędzia określania osób na zdjęciu bazujące na algorytmach rozpoznawania twarzy (i dopasowaniu ich do tych zapisanych już w bazie danych).
 
 {image filename="face-recognition-software-screenshot.jpg" alt="Google's Picasa recognises these photos as being the same person"}
 
-There are lots of other applications.
-Security systems such as customs at country borders use face recognition to identify people and match them with their passport.
-It can also be useful for privacy --- Google Maps streetview identifies faces and blurs them.
 Digital cameras can find faces in a scene and use them to adjust the focus and lighting.
+Jest wiele innych zastosowań.
+Systemy bezpieczeństwa, np. używane przez służby cele podczas przekraczania granicy między krajami, porównują twarz podróżującego z zdjęciem twarzy na paszporcie czy innym dowodzie tożsamości.
+Celem przetwarzania obrazu i rozpoznawania twarzy może być dbałość o anonimowość (zachowanie prawa do prywatności) osób, które zostały zarejestrowane przez kamery systemów map ulicznych (np. Google Maps). Wówczas odpowiednie fragmenty zdjęć poddaje się rozmyciu.
+Współczesne aparaty cyfrowe automatycznie dopasowują swoje ustawienia przez wykoaniem zdjęcia na podstawie lokalizacji twarzy wewnątrz kadru.
 
 There is some information about [How facial recognition works](http://electronics.howstuffworks.com/gadgets/high-tech-gadgets/facial-recognition.htm) that you can read up as background, and some more information at [i-programmer.info](http://www.i-programmer.info/babbages-bag/1091-face-recognition.html).
 
