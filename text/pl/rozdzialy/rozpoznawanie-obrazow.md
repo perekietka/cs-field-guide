@@ -122,17 +122,19 @@ Ponieważ aparat fotograficzny zapisuje informacje o składowych (czerwona, ziel
 
 {comment end}
 
-Dzieki temu można zmienijszyć poziom szumu na obrazie. Dlaczego? I w jakim stoponiu to pomaga? (Aby się przekonać, można zrobić ekesperyment: wykonać zdjęcie w miejscu słabo oświetlonym -- można wtedy dostrzec jakby małe łatki na obrazie. Następnie w programie graficznym można zapisać je jako czarno-białe -- czy to zmniejszy efekt szumu?)
+Dzieki temu można zmieniejszyć poziom szumu na obrazie. Dlaczego? I w jakim stoponiu to pomaga? (Aby się przekonać, można zrobić ekesperyment: wykonać zdjęcie w miejscu słabo oświetlonym -- można wtedy dostrzec jakby małe łatki na obrazie. Następnie w programie graficznym można zapisać je jako czarno-białe -- czy to zmniejszy efekt szumu?)
 
 {panel type="teacher-note" summary="Noisy channels"}
 
-Each light-sensing element in the camera sensor is equally susceptible to noise. That means that noise artifacts in the red, green and blue channels are independent of each other. When the three channels are combined into one by averaging, the amount of noise is reduced to approximately one third. The answer isn’t *exactly* a third, though: there is a chance that noise will come through on two or three channels for the same pixel, in which case the averaged value may still be wildly inaccurate.
+Każdy światłoczuły element fotoreceptora aparatu fotograficznego jest równie podatny na szum. To oznacza, że efekty szumu dla różnych składowych RGB są zjawiskami niezależnymi. Jeśli wartości RGB uśredni się (co oznacza jedną liczbę zamiast trzech), to wartość szumu zredukuje się do ok. 1/3. Dlaczego nie *dokładnie* 1/3? Może się zdarzyć, że efekt szumu dotyczy dwóch czy nawet trzech składowych tego samego piksela: wtedy wartość uśredniona pozostanie daleka od dokładnej.
 
 {panel end}
 
-Rather than just considering the red, green and blue values of each pixel individually, most noise-reduction techniques look at other pixels in a region, to predict what the value in the middle of that neighbourhood ought to be.
+Zamiast analizować oddzielnie każdą ze składowych RGB piksela, techniki redukujące szum najczęściej działają tak, że sprawdzają piksele sąsiadujące z danym pikselem i na podstawie zebranych informacji przypisują mu wartość przypuszczalną wartość.
 
-A *mean filter* assumes that pixels nearby will be similar to each other, and takes the average (i.e. the *mean*) of all pixels within a square around the centre pixel. The wider the square, the more pixels there are to choose from, so a very wide mean filter tends to cause a lot of blurring, especially around areas of fine detail and edges where bright and dark pixels are next to each other.
+*Filtr uśredniający* korzysta z założenia, że piksele sąsiadujące z danym pikselem są podobne. Wartości przypisane pikselom tworzącym kwadrat, w którego centrum znajduje się dany piksel, są uśredniane i ta wartość średnia jest przypisana pikselowi.
+Im kwadrat jest większych rozmiarów, tym większe niebezpieczeństwo pojawienia się w wyniku filtrowania efektu rozmycia obrazu, zwłaszcza w przypadku, gdy fragment obrazu przedstawia np. krawędzie obietków (wtedy jasne i ciemne piksele sąsiadują).
+
 
 A *median filter* takes a different approach. It collects all the same values that the mean filter does, but then sorts them and takes the middle (i.e. the *median*) value. This helps with the edges that the mean filter had problems with, as it will choose either a bright or a dark value (whichever is most common), but won’t give you a value between the two. In a region where pixels are mostly the same value, a single bright or dark pixel will be ignored. However, numerically sorting all of the neighbouring pixels can be quite time-consuming!
 
