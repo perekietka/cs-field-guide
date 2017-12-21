@@ -188,16 +188,18 @@ Zachowaj wybrane obrazy (zrzuty ekranu).
 - Czy działanie systemu zależy od rodzaju obiektu umieszczonego przed kamerą?
 - Jak system radzi sobie z wykrywaniem krawędzi na kartce tekstu?
 
-## The whole story!
+## Podsumowanie
+Dziedzina grafiki komputerowej określana jako rozpoznawanie obrazów szybko się rozwija.
 
-The field of computer vision is changing rapidly at the moment because camera technology has been improving quickly over the last couple of decades.
 Not only is the resolution of cameras increasing, but they are more sensitive for low light conditions, have less noise, can operate in infra-red (useful for detecting distances), and are getting very cheap so that it's reasonable to use multiple cameras, perhaps to give different angles or to get stereo vision.
 
-Despite these recent changes, many of the fundamental ideas in computer vision have been around for a while; for example, the "k-means" segmentation algorithm was first described in 1967, and the first digital camera wasn't built until 1975 (it was a 100 by 100 pixel Kodak prototype).
+Zwiększają się możliwości teczniczne aparatów cyfrowych: rozdzielczość, czułość (światłoczułość), brak szumu, działanie w podczerwieni (użyteczne dla wykrywania odległości między obiektami), a jednocześnie zmniejszają się ceny. W konsekwencji powszechne staje się np. użytkowanie wielu kamer jednocześnie, umieszczonych pod różnymi kątami.
 
-(More material will be added to this chapter in the near future)
+Trzeba podkreślić, że fundamentalne koncepcje tej dziedziny wymyślone zostały już jakiś czas temu; na przykład pierwszy algorytm segmentacji (podziału na części) były zaproponowane w roku 1967 , a pierwszy cyfrowy aparat fotograficzny zbudowano w 1975 roku (o rozmiarach obrazu 100 x 100 pikseli).
 
-## Further reading
+(W przyszłość rozdział zostanie uzupełniony.)
+
+## Do dalszej lektury
 
 - [https://en.wikipedia.org/wiki/Computer_vision](https://en.wikipedia.org/wiki/Computer_vision)
 - [https://en.wikipedia.org/wiki/Mri](https://en.wikipedia.org/wiki/Mri)
