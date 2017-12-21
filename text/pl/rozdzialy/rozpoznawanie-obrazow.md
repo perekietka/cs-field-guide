@@ -95,24 +95,26 @@ Więcej na ten temat (w języku angielskim) można przeczytać tutaj: [Cambridge
 
 {panel end}
 
-## Noise
+## Szum
 
-One challenge when using digital cameras is something called *noise*. That’s when individual pixels in the image appear brighter or darker than they should be, due to interference in the electronic circuits inside the camera. It’s more of a problem when light levels are dark, and the camera tries to boost the exposure of the image so that you can see more. You can see this if you take a digital photo in low light, and the camera uses a high ASA/ISO setting to capture as much light as possible. Because the sensor has been made very sensitive to light, it is also more sensitive to random interference, and gives photos a "grainy" effect.
+Użytkownicy aparatów cyfrowych muszą mieć świadomość istnienia problemu, jakim jest *szum*. Mówi o nim wówczas, gdy pojedyńcze piksele rejestrowane są jako jaśniejsze niż ciemniejsze niż być powinny. Zjawisko jest skutkiem interfrencji (nakładania się) w układach elektronicznych aparatu. Problem jest większy, gdy poziomy światła sąfotografujemy w ciemnym miejscu i aparat dopasować czas ekspozycji (naświetlania), aby zapisać więcej informacji. Używa się wtedy ustawień ASA/ISO celem przechwycenia takiej ilości promieni światła, ile to tylko możliwe. Receptory są wówczas bardzo wrażliwe na światło, co wiąże się z ryzykiem interferencji i obraz ma efekt ,,ziarnistości''. 
 
-Noise mainly appears as random changes to pixels. For example, the following image has "salt and pepper" noise.
+Efekt szumu jest widoczny głównie jako losowe (przypadkowe) zmiany pikseli. W przykładzie poniżej widzimy szum typu ,,sól i pieprz'.
 
 {image filename="banana-with-salt-and-pepper-noise.jpg" alt="An image of a banana with salt-and-pepper noise"}
 
 Having noise in an image can make it harder to recognise what's in the image, so an important step in computer vision is reducing the effect of noise in an image.
 There are well-understood techniques for this, but they have to be careful that they don’t discard useful information in the process. In each case, the technique has to make an educated guess about the image to predict which of the pixels that it sees are supposed to be there, and which aren’t.
 
+Rozpoznawanie obiektów na obrazach, które zawierają szum jest trudniejsze. Dlatego ważne jest, by szukać metod redukowania ilości szumu na obrazie. 
+
 {panel type="teacher-note" summary="Image noise on Wikipedia"}
 
-The relevant Wikipedia entry is [Image noise](https://en.wikipedia.org/wiki/Image_noise)
+Warto zapoznać się z artykułem: [Image noise](https://en.wikipedia.org/wiki/Image_noise)
 
 {panel end}
 
-Since a camera image captures the levels of red, green and blue light separately for each pixel, a computer vision system can save a lot of processing time in some operations by combining all three channels into a single “grayscale” image, which just represents light intensities for each pixel.
+Ponieważ aparat fotograficzny zapisuje informacje o składowych (czerwona, zielona i niebieska) osobno dla każdego piksela, to czasami celem zaoszczędzenia na czasie przetwarzania obrazu, jest uzasadnione zapisanie obrazu w odcieniach szarości. Wtedy pomija się informacje o barwie, a zapisuje się tylko informacje o intensywności światła dla każdego piksela.
 
 {comment}
 
@@ -120,7 +122,7 @@ Since a camera image captures the levels of red, green and blue light separately
 
 {comment end}
 
-This helps to reduce the level of noise in the image. Can you tell why, and about how much less noise there might be? (As an experiment, you could take a photo in low light --- can you see small patches on it caused by noise? Now use photo editing software to change it to black and white --- does that reduce the effect of the noise?)
+Dzieki temu można zmienijszyć poziom szumu na obrazie. Dlaczego? I w jakim stoponiu to pomaga? (Aby się przekonać, można zrobić ekesperyment: wykonać zdjęcie w miejscu słabo oświetlonym -- można wtedy dostrzec jakby małe łatki na obrazie. Następnie w programie graficznym można zapisać je jako czarno-białe -- czy to zmniejszy efekt szumu?)
 
 {panel type="teacher-note" summary="Noisy channels"}
 
