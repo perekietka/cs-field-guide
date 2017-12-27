@@ -4,11 +4,11 @@
 
 Programowanie, czasami nazywane kodowowaniem, jest praktycznym zastosowaniem informatyki. Celem tej książki nie jest oczywiście nauka programowania (dodaliśmy jednakże kilka linków do stron, które mogą służyć jako znakomity wstęp do tego zagadnienia), zobaczymy natomiast, czym jest język programowania i jak informatycy z niego korzystają. Z punktu widzenia programisty kodowanie polega na wpisywaniu instrukcji, które są wykonywane przez komputer. Ale w jaki sposób komputer wie, co robić? Pamiętaj, że możesz używać jednego z wielu języków, takich jak Python, Java, Scratch, Basic lub C #, lecz komputery wyposażone są w sprzęt, który rozumie tylko jeden język, tzw. "kod maszynowy". Składa się on z bardzo prosty podstawowych instrukcji, które jest trudno czytać i pisać ludziom. Co zrobić, gdy wymyślisz nowy język programowania, jak sprawić by komputer mógł z niego korzystać?
 
-In this chapter we'll look at what happens when you write and run a program, and how this affects the way that you distribute the program for others to use.
+W tym rozdziale przyjrzymy się temu, co dzieje się podczas pisania i uruchamiania programu oraz w jaki sposób wpływa to na sposób, w jaki sposób rozpowszechniany jest program.
 
-We start with an optional subsection on what programming is, for those who have never programmed before and want an idea about what a program is. Examples of very simple programs in Python are provided, and these can be run and modified slightly. Working through this section should give you sufficient knowledge for the rest of this chapter to make sense; we won't teach you how to program, but you will get to go through the process that programmers use to get a program to run. Feel free to skip this section if you are already know a bit about programming.
+Zaczniemy od opcjonalnego podrozdziału o tym, na czym polega programowanie, dla tych, którzy wcześniej nigdy nie programowali. Wprowadzenie do programowania zawiera przykłady bardzo prostych programów w języku Python, które można uruchamiać i modyfikować. Poznanie tego podrozdziału pozwoli zrozumieć dalsze części rozdziału; nie nauczymy cię programowania, ale będziesz mógł prześledzić proces myślenia programisty podczas kodowania. Jeśli masz już pewną wiedzę o programowaniu, to możesz przeskoczyć ten podrozdział.
 
-A subsection on what this chapter focuses on then follows. Everybody should read that section.
+Poniższa część rozdziału zawiera przegląd zagadnień opisanych w rozdziale, z tego względu zalecana jest jego lektura.
 
 {comment}
 
@@ -22,13 +22,13 @@ A subsection on what this chapter focuses on then follows. Everybody should read
 
 Spójrz na [warm-up activity from CSUnplugged](http://csunplugged.org/programming-languages), lub na [rozszerzoną wersję tutaj](http://csunplugged.org/wp-content/uploads/2014/12/tellAndDraw1.5.pdf).
 
-Students who have never programmed should also work through the material in this section, intended to give them an overview of what programming is about so that the remainder of this chapter makes sense to them.
+Uczniowie, którzy nigdy wcześniej nie programowali, powinni również przejrzeć materiał w tym podrozdziale. Zawiera on przegląd tego, czym jest programowanie, pozwoli to zrozumieć dalszą część rozdziału.
 
 {panel end}
 
-Note: This section is intended for those who are unfamiliar with programming. If you already know a little about programming, feel free to skip over this section. Otherwise, it will give you a quick overview so that the remainder of the chapter makes sense.
+Uwaga: Ten podrozdział przeznaczony jest dla osób, które nie są zaznajomione z programowaniem. Jeśli masz już pewną wiedzę o programowaniu, możesz pominąć tą część rozdziału.
 
-An example of the simplest kind of program is as follows --- it has five instructions (one on each line) that are followed one after the other.
+Przykład najprostszego rodzaju programu jest następujący: ma pięć instrukcji (po jednej w każdym wierszu), które są zapisane w określonej kolejności.Przykład najprostszego rodzaju programu jest następujący: ma pięć instrukcji (po jednej w każdym wierszu), które są zapisane w określonej kolejności.
 
 ```
 print("**********************************************")
@@ -38,7 +38,7 @@ print("**********************************************")
 print("**********************************************")
 ```
 
-This program is written in a language called Python, and when the program runs, it will print the following text to the screen
+Powyższy program został napisany w języku o nazwie Python, a po uruchomieniu wyświetli na ekranie następujący tekst
 
 ```
 ************************************************
@@ -48,15 +48,15 @@ This program is written in a language called Python, and when the program runs, 
 ************************************************
 ```
 
-In order to run a Python program, we need something called a Python interpreter. A Python interpreter is able to read your program, and process it. Below is a Python interpreter that you can use to run your own programs. If you have a Python interpreter installed on your computer (ask your teacher if you are following this book for a class and are confused) and know how to start it and run programs in it, you can use that.
+Aby uruchomić program napisany w Pythonie, potrzebujemy tak zwanego interpretera Pythona. Interpreter Pythona jest w stanie odczytać program i przetworzyć go. Poniżej znajduje się interpreter języka Python, którego można używać do uruchamiania własnych programów. Jeśli masz zainstalowany interpreter Pythona na swoim komputerze (poradź się nauczyciela jeżeli czujesz się zdezorientowany) i wiesz, jak z niego korzystać możesz się ograniczyć do dostępnych narzędzi.
 
 {interactive name="python-interpreter" type="in-page"}
 
-Try changing the program so that it says your name instead of *Student*. When you think you have it right, try running the program again to see. Make sure you don’t remove the double quotes or the parentheses (round brackets) in the program by mistake. What happens if you spelt "programming" wrong? Does the computer correct it? If you are completely stuck, ask your teacher for help before going any further.
+Spróbuj tak zmienić program, aby zawierał Twoje imię zamiast *Uczeń*. Kiedy stwierdzisz, że program jest gotowy, spróbuj go ponownie uruchomić. Upewnij się, czy przez pomyłkę nie usunąłeś podwójnych cudzysłowów lub nawiasów okrągłych. Co się stanie, jeśli napiszesz słowo "programming" z błędem? Czy komputer to koryguje? Jeśli całkowicie utkniesz, poproś swojego nauczyciela o pomoc, zanim przejdziesz dalej.
 
-Hopefully you figured out how to make the program print your name. You can also change the asterisks (\*) to other symbols.  What happens if you do remove one of the double quotes or one of the parentheses? Try it!
+Mamy nadzieję, że wymyśliłeś, jak sprawić, by program wypisał twoje imię. Możesz także zamienić gwiazdki (\*) na inne symbole. Co się stanie, jeśli usuniesz jeden z cudzysłowów lub jeden z nawiasów? Spróbuj!
 
-If you change a critical symbol in the program you will probably find that the Python interpreter gives an error message. In the online Python interpreter linked to above, it says “ParseError: bad input on line 1”, although different interpreters will express the error in different ways. If you have trouble fixing the error again, just copy the program back into Python from above.
+Jeśli zmienisz istotny symbol składni programu, prawdopodobnie zobaczysz, że interpreter Pythona wyświetla komunikat o błędzie. W interpreterze online Pythona, którego link znajduje się powyżej, komunikat mówi "ParseError: bad input on line 1 (złe dane wejściowe na linii 1)". Komunikat może być inny w innym interpreterze. Jeśli masz problem z naprawieniem błędu, skopiuj kod programu jeszcze raz.
 
 {comment}
 
@@ -64,11 +64,11 @@ If you change a critical symbol in the program you will probably find that the P
 
 {comment end}
 
-Programming languages can do much more than print out text though. The following program is able to print out multiples of a number. Try running the program.
+PJęzyki programowania mogą jednak znacznie więcej niż wypisywanie tekstu. Poniższy program jest zwraca iloraz liczb. Spróbuj uruchomić program.
 
-{panel type="teacher-note" summary="Python version"}
+{panel type="teacher-note" summary="Wersje języka Python"}
 
-The following Python code is written for version 3 Python, but will also work with version 2.
+Poniższy kod Pythona jest napisany dla wersji 3 języka Python, ale będzie również działać z wersją 2.
 
 {panel end}
 
@@ -78,16 +78,16 @@ for i in range(5):
   print(i*3)
 ```
 
-The first line is a print statement, like those you saw earlier, which just tells the system to put the message on the screen. The second line is a *loop*, which says to repeat the lines after it 5 times. Each time it loops, the value of i changes. i.e. the first time i is 0, then 1, then 2, then 3, and finally 4. It may seem weird that it goes from 0 to 4 rather than 1 to 5, but programmers tend to like counting from 0 as it makes some things work out a bit simpler. The third line says to print the current value of i multiplied by 3 (because we want multiples of 3). Note that there is *not* double quotes around the last print statement, as they are only used when we want to print out a something literally as text. If we did put them in, this program would print the text "i*3" out 5 times instead of the value we want!
+Pierwsza linia to instrukcja wypisywania print (ang. drukuj), podobna do tych, które widziałeś wcześniej. Powoduje ona wyświetlenie podanego tekstu na ekranie. Druga linia to instrukcja *pętli*, która pozwala powtórzyć linie występujące po niej 5 razy. Za każdym razem zmienia się wartość i, tzn. po przy pierwszym wykonaniu wynosi 0, potem 1, potem 2, potem 3, i na końcu 4. Może wydawać się dziwne, że wartości zaczynają się od 0 i kończą na 4, a nie od 1 do 5, ale programiści mają skłonność do liczenia od 0, ponieważ dzięki temu niektóre rzeczy działają nieco prościej. Trzecia linia wypisuje bieżącą wartość i pomnożoną przez 3 (chcemy wypisać wielokrotności 3). Zwróć uwagę, że instrukcja print wewnątrz pętli *nie* zawiera cudzysłowów. Są one potrzebne jedynie, gdy chcemy wypisać coś dosłownie jako tekst. Gdybyśmy je umieścili, ten program wydrukowałby tekst "i * 3" 5 razy zamiast odpowiedniej wartości!
 
-Try make the following changes to the program.
+Spróbuj dokonać następujących zmian w programie.
 
-- Make it print multiples of 5 instead of 3. *Hint:* You need to change more than just the first line, you will need to make a change on the third line as well.
-- Make it print the first 10 multiples instead of the first 5. Make sure it printed 10 multiples, and not 9 or 11!
+- Spraw, aby program wypisał wielokrotności 5 zamiast 3. *Wskazówka:* Musisz zmienić zarówno linię pierwszą jak i trzecią.
+- Spraw, aby program wypisał pierwsze 10 wielokrotności zamiast pierwszych 5. Upewnij się, że wydrukowano 10 wielokrotności, a nie 9 lub 11!
 
-You can also loop over a list of data. Try running the program below. It will generate a series of “spam” messages, one addressed to each person in the recipients list!
+Pętla może “przechodzić” po elementach listy. Spróbuj uruchomić poniższy program. Wygeneruje serię komunikatów "spamowych", po jednym adresowanym do każdej osoby na liście odbiorców!
 
-Note that the # symbol tells the computer that it should ignore the line, as it is a comment for the programmer.
+Zauważ, że symbol # mówi komputerowi, że powinien ignorować daną linię programu. Pozwala to programiście komentować, opisywać kod.
 
 ```python3
 # List of recipients to generate messages for
@@ -106,13 +106,13 @@ for recipient in spam_recipients:
   print("\n\n\n") # Put some new lines between the messages
 ```
 
-Try changing the recipients or the letter. Look carefully at all the symbols that were used to include the recipient's name in the letter.
+Spróbuj zmienić odbiorców lub treść listu. Przyjrzyj się uważnie wszystkim symbolom, których użyto do umieszczenia nazwiska adresata w treści listu.
 
-{panel type="jargon-buster" summary="Syntax"}
-The detailed requirements of a programming language about exactly which characters need to be used and where, is called its *syntax*. In the example above, the syntax for the list of names requires square brackets around the list, inverted commas around the names, and a comma between each one. If you make a mistake, such as leaving out one of the square brackets, the system will have a *syntax error*, and won't be able to run the program. Every symbol counts, and one small error in a program can stop it running, or make it do the wrong thing.
+{panel type="jargon-buster" summary="Składnia języka programowania"}
+Szczegółowa specyfikacja wymagań języka programowania odnośnie tego, które znaki mogą być używane oraz w jakim miejscu, jest nazywana jego *składnią*. W powyższym przykładzie składnia listy nazw wymaga kwadratowych nawiasów na liście, cudzysłowów wokół nazw i przecinków między nimi. Jeśli popełnisz błąd, np. pominiesz jeden z nawiasów kwadratowych, system zakomunikuje *błąd składni* i nie będzie mógł uruchomić programu. Każdy znak jest istotny, a jeden mały błąd w programie może go zatrzymać lub sprawić, że będzie działał nieprawidłowo.
 {panel end}
 
-Programs can also use *variables* to store the results of calculations in, receive user input, and make decisions (called *conditionals*, such as *if* statements). Try running this program. Enter a number of miles to convert when asked. Don’t put units on the number you enter; for example just put “12”.
+Programy mogą również używać *zmiennych* do przechowywania wyników obliczeń, odbierania danych wejściowych pochodzących od użytkownika i podejmowania decyzji (zwanych *instrukcjami warunkowymi*, takimi jak instrukcja *if*). Spróbuj uruchomić ten program. Podaj liczbę mil, gdy program o nią zapyta. Nie umieszczaj jednostek przy wpisanym numerze; na przykład wprowadź po prostu "12".
 
 ```
 print("This program will convert miles to kilometers")
@@ -132,7 +132,7 @@ If you are keen, you could modify this program to calculate something else, such
 Programs can do many more things, such as having a graphical user interface (like most computer programs you will be familiar with), being able to print graphics onto a screen, or being able to write to and read from files on the computer in order to save information between each time you run the program.
 
 
-### Where are we going?
+### Dokąd zmierzamy?
 
 When you ran the programs, it might have seemed quite magical that the computer was able to instantly give you the output. Behind the scenes however, the computer was running your example programs through another program in order to convert them into a form that it could make sense of and then run.
 
