@@ -1,10 +1,10 @@
-# Computer Graphics
+# Grafika komputerowa
 
 {video url="https://www.youtube.com/embed/5kuoRjgfCls"}
 
-## What's the big picture?
+## Z perspektywy
 
-Computer graphics will be familiar from games, films and images, and there is amazing software available to create images, but how does the software work? The role of a computer scientist is not just to *use* graphics systems, but to *create* them, and especially invent new techniques.
+Grafika komputerowa kojarzy się z gramami, filmami i obrazami oraz niezwykłym oprogramowaniem do tworzenia i przetwarzania obrazów. Warto jednak zapytać: Jak to się dzieje, że to oprogramowanie tak świetnie działa? Jaką rolę mają informatycy? Oni nie są wyłącznie *użytkownikami* systemów graficznych, ale zajmują się *tworzeniem*, zwłaszcza obmyślaniem nowych technik.
 
 The entertainment industry is always trying to develop new graphics software so that they can push the boundaries and create new experiences. We've seen this in the evolution of animated films, from simple 2D films to realistic computer generated movies with detailed 3D images.
 The names of dozens of computer scientists now regularly appear in the credits for films that us CGI or animation, and [some have even won Oscars for their innovative software](http://www.oscars.org/news/11-scientific-and-technical-achievements-be-honored-academy-awardsr)!
