@@ -136,13 +136,14 @@ Programy mogą robić o wiele więcej, np. mogą posiadać graficzny interfejs u
 
 Może wydawać się nieco “magiczne”, że uruchomiony program może dawać natychmiastowe wyniki. Jednak za kulisami komputer uruchamia nasz program przy pomocy innego programu (interpretera), który tłumaczy kod programu na instrukcje zrozumiałe dla procesora komputera.
 
-Możesz się zastanawiać, dlaczego w ogóle potrzebujemy języków takich jak Python i dlaczego nie możemy udzielać instrukcji komputerowych w języku angielskim. Gdybyśmy wpisali na komputerze "W porządku komputerze, wypisz mi pierwszych 5 wielokrotności 3", nie jest oczywiste czemu komputer nie miałby tego wykonać. Komputer po prostu nie zna takich pojęć jak "wielokrotność", a przez to nie potrafiłby wykonać tego zdania. Komputerów nie można nauczyć znaczenia wszystkich słów, a przez to nie mogą potrafić wykonać każdego możliwego zdania. Zrozumienie ludzkiego języka jest bardzo trudnym zadaniem dla komputera, o czym dowiesz się w rozdziale "Sztuczna inteligencja". W przeciwieństwie do ludzi, którzy rozumieją świat i widzą sens, komputery mogą jedynie postępować zgodnie z precyzyjnymi instrukcjami. Dlatego potrzebujemy języków, które są ograniczone i jednoznaczne, gdyż tylko takie instrukcje "rozumie" komputer. Przykłady takich instrukcji zamieszone są w zaprezentowanych wcześniej programach.
+Możesz się zastanawiać, dlaczego w ogóle potrzebujemy języków takich jak Python i dlaczego nie możemy udzielać instrukcji komputerowych w języku angielskim. Gdybyśmy wpisali na komputerze "W porządku komputerze, wypisz mi pierwszych 5 wielokrotności 3", nie jest oczywiste czemu komputer nie miałby tego wykonać. Komputer po prostu nie zna takich pojęć jak "wielokrotność", a przez to nie potrafiłby wykonać tego zdania. Komputerów nie można nauczyć znaczenia wszystkich słów, a przez to nie mogą potrafić wykonać każdego możliwego zdania. Zrozumienie ludzkiego języka jest bardzo trudnym zadaniem dla komputera, o czym dowiesz się w rozdziale "Sztuczna inteligencja". W przeciwieństwie do ludzi, którzy rozumieją świat i widzą sens pojęć, komputery mogą jedynie postępować zgodnie z precyzyjnymi instrukcjami. Dlatego potrzebujemy języków, które są ograniczone i jednoznaczne, gdyż tylko takie instrukcje "rozumie" komputer. Przykłady takich instrukcji zamieszone są w zaprezentowanych wcześniej programach.
 
-It isn’t this simple though, a computer cannot run instructions given directly in these languages. At the lowest level, a computer has to use physical hardware to run the instructions. Arithmetic such as addition, subtraction, multiplication, and division, or simple comparisons such as less than, greater than, or equal to are done on numbers represented in binary by putting electricity through physical computer chips containing transistors. The output is also a number represented in binary. Building a fast and cheap circuit to do simple arithmetic such as this isn't that hard, but the kind of instructions that people want to give computers (like "print the following sentence", or "repeat the following 100 times") are much harder to build circuitry for.
+Nie jest to jednak tak proste ja się może wydawać ponieważ komputer nie może uruchamiać instrukcji podawanych bezpośrednio w tych językach. Na najniższym poziomie komputer musi używać fizycznego sprzętu do uruchamiania instrukcji. Działania arytmetyczne, takie jak dodawanie, odejmowanie, mnożenie i dzielenie, lub proste porównania, takie jak mniejszy, większy lub równy, są wykonywane na liczbach reprezentowanych w systemie binarnym przez przepływ prądu przez fizyczne układy komputerowe składające się z tranzystorów. Wynik jest także liczbą reprezentowaną w postaci binarnej. Budowa szybkiego i taniego obwodu do wykonywania prostych działań arytmetycznych nie jest trudna, ale instrukcje, które ludzie chcą wydawać komputerom (np. "wypisz następujące zdanie" lub "powtórz coś 100 razy") wymagają bardziej skomplikowanych obwodów elektrycznych.
 
-{panel type="jargon-buster" summary="Binary"}
+{panel type="jargon-buster" summary="System binarny"}
 
-The electronics in computers uses circuitry that mainly just works with two values (represented as high and low voltages) to make it reliable and fast. This system is called *binary*, and is often written on paper using zeroes and ones. There's a lot more about binary in the [data representation](chapters/data-representation.html) chapter, and it's worth having a quick look at the first section of that now if you haven't come across binary before.
+Elektronika w komputerach wykorzystuje obwody, które działają głównie z dwiema wartościami (reprezentowanymi jako wysokie i niskie napięcie), aby zapewnić szybkość i niezawodność. Ten system reprezentacji liczb nazywa się *binarnym* i jest często zapisywany na papierze za pomocą zer i jedynek. Więcej informacji na temat reprezentacji binarnej zamieszczone jest w rozdziale [reprezentacja danych] (chapters/data-representation.html). Warto tam zajrzeć wcześniej, szczególnie, jeśli nie miałeś do czynienia z systemem binarnym.
+
 
 {panel end}
 
@@ -154,21 +155,21 @@ The electronics in computers uses circuitry that mainly just works with two valu
 
 {comment end}
 
-So instead of building computers that can understand these high level instructions that you find in languages like Python (or Java, Basic, JavaScript, C and so on), we build computers that can follow a very limited set of instructions, and then we write programs that convert the instructions in the standard languages people write programs in into the simple instructions that the circuitry can directly carry out. The language of these simple instructions is a low level programming language often referred to as machine code.
+Zamiast budować komputery, które mogą zrozumieć te instrukcje języków wysokiego poziomu takich jak Python (lub Java, Basic, JavaScript, C i tak dalej), budujemy komputery, które mogą wykonywać bardzo ograniczony zestaw instrukcji, a następnie piszemy programy konwertujące instrukcje w języku programowania na proste instrukcje, które mogą być uruchomione przez sprzęt. Językiem tych prostych instrukcji jest język programowania niskiego poziomu, często nazywany kodem maszynowym.
 
-The conversion from a high level to a low level language can involve *compiling*, which replaces the high level instructions with machine code instructions that can then be run, or it can be done by *interpreting*, where each instruction is converted and followed one by one, as the program is run. In reality, a lot of languages use a mixture of these, sometimes compiling a program to an intermediate language, then interpreting it (Java does this). The language we looked at earlier, Python, is an interpreted language. Other languages such as C++ are compiled. We will talk more about compiling and interpreting later.
+Konwersja z języka wysokiego poziomu do języka niskiego poziomu może obejmować proces *kompilacji*, który zastępuje instrukcje wysokiego poziomu instrukcjami maszynowymi. Te z kolei mogą być uruchomione bezpośrednio przez sprzęt. Alternatywnie kod programy może zostać uruchomiony w procesie *interpretacji*. Proces ten polega na konwersji i śledzeniu każdej instrukcji podczas uruchamiania programu. W rzeczywistości wiele języków używa kombinacji tych dwóch procesów, kompilując program do języka pośredniego, a następnie interpretując go (Java to robi). Język, o którym mówiliśmy wcześniej, Python, jest językiem interpretowanym. Inne języki, takie jak C ++, są kompilowane. W dalszej części rozdziału wrócimy do kompilacji i interpretacji.
 
-We will start with looking at low level languages and how computers actually carry out the instructions in them, then we will look at some other programming languages that programmers use to give instructions to computers, and then finally we will talk about how we convert programs that were written by humans in a high level language into a low level language that the computer can carry out.
+Zaczniemy od zapoznania się z niskopoziomowymi językami i sposobu, w jaki komputery wykonują instrukcje języków maszynowych. Następnie przyjrzymy się innym językom programowania używanym przez programistów do udzielania instrukcji komputerom, a na końcu omówimy, w jaki sposób programy napisane przez ludzi w języku wysokiego poziomu są konwertowane na język maszynowy zrozumiały przez komputer.
 
-## Machine Code (Low level languages)
+## Kod maszynowy (języki niskiego poziomu)
 
-{panel type="teacher-note" summary="Not expecting students to write machine code!"}
+{panel type="teacher-note" summary="Pisanie kodu maszynowego przez uczniów nie jest wymagane!"}
 
-Students are NOT expected (or even encouraged) to be able to write their own program in these languages. The purpose of the examples and getting the students to modify them is to help them understand why programming directly in these languages is best avoided, and thus the reason for high level languages.
+Nie jest wymagane od uczniów (a nawet nie jest zalecane), aby pisali własny kod programu w języku maszynowym. Celem przykładów jest zachęcenie uczniów do ich modyfikacji w celu lepszego zrozumienia, dlaczego należy unikać programowania bezpośrednio w tych językach, a tym samym dlaczego należy stosować języki wysokiego poziomu.
 
-If they have trouble with a lot of the modifications that are suggested, this is fine. They should not be concerned about it. Remind students that if they were able to modify the high level language programs, but really struggle with these ones, that this is the point of the exercise and that they should explain why it was so difficult in their report.
+Jeśli uczniowie będą mieli problem z modyfikacjami, nie należy się tym przejmować. Przypomnij uczniom, że najważniejsze jest zrozumienie programów w językach wysokiego poziomu, natomiast zmaganie się z tymi przykładami ma tylko uświadomić zalety języków wysokiego poziomu.
 
-Having an old CPU (that you will never want to use again) that the students can pass around and look at could be a good thing to do if you can find one.
+Zalecane jest wykorzystanie starego procesora (który nie nadaje się do użycia), aby udostępnić go uczniom do bliższego przyjrzenia się
 
 {panel end}
 
@@ -178,7 +179,7 @@ Having an old CPU (that you will never want to use again) that the students can 
 
 {comment end}
 
-A computer has to carry out instructions on physical circuits. These circuits contain transistors laid out in a special way that will give a correct output based on the inputs.
+Komputer wykonuje instrukcje na fizycznych obwodach elektrycznych. Obwody te zawierają tranzystory ułożone w odpowiedni sposób, taki który daje właściwe wartości wyjściowe dla danych wartości wejściowych.
 
 {comment}
 
@@ -186,13 +187,13 @@ A computer has to carry out instructions on physical circuits. These circuits co
 
 {comment end}
 
-Data such as numbers (represented using binary) have to be put into storage places called registers while the circuit is processing them. Registers can be set to values, or data from memory can be put into registers. Once in registers, they can be added, subtracted, multiplied, divided, or be checked for equality, greater than, or less than. The output is put into a register, where it can either be retrieved or used in further arithmetic.
+Aby dane wejściowe reprezentowane przez liczby (binarne) mogły być przetworzone przez obwód muszą być umieszczano w specjalnych miejscach pamięci zwanych rejestrami. Rejestry mogą przechowywać bezpośrednio dane lub adres miejsca w pamięci, gdzie owe dane się znajdują. Dane w rejestrach można dodawać, odejmować, mnożyć, dzielić lub sprawdzać równość, warunki “większy” lub “mniejszy”. Wyniki tych operacji umieszczane są również w rejestrze, z którego można je odczytać lub użyć do dalszych obliczeń.
 
-All computers have a machine code language (commonly referred to as an instruction set) that is used to tell the computer to put values into registers, to carry out arithmetic with the values in certain registers and put the result into another specified register like what we talked about above. Machine code also contains instructions for loading and saving values from memory (into or out of registers),  jumping to a certain line in the program (that is either before or after the current line), or to jump to the line only if a certain condition is met (by doing a specified comparisons on values in registers). There are also instructions for handling simple input/ output, and interacting with other hardware on the computer.
+Wszystkie komputery mają swój język maszynowy (zwykle nazywany zbiorem instrukcji), który jest używany do instruowania komputera, aby umieścił wartości w rejestrach, wykonał obliczenia i umieścił wynik w innym rejestrze. Kod maszynowy zawiera również instrukcje dotyczące ładowania i zapisywania wartości z i do pamięci (z lub do rejestrów), przeskakiwania do określonej linii w programie (przed lub za bieżącą linią), lub do przejścia do linii tylko wtedy, gdy pewny warunek jest spełniony (wykonywane jest pewne porównanie wartości w rejestrach). Istnieją również instrukcje dotyczące obsługi prostych operacji wejścia/wyjścia oraz interakcji z innymi komponentami komputera.
 
-The instructions are quite different to the ones you will have seen before in high level languages. For example, the following program is written in a machine language called MIPS; which is used on some embedded computer systems. We will use MIPS in examples throughout this chapter.
+Instrukcje maszynowe znacząco różnią się od tych, które występują w językach wysokiego poziomu. Na przykład poniższy program napisany jest w języku maszynowym o nazwie MIPS; który jest używany w niektórych wbudowanych systemach komputerowych. Język MIPS będzie używany  w przykładach w tym rozdziale.
 
-It starts by adding 2 numbers (that have been put in registers $t0 and $t1) and printing out the result. It then prints “Hello World!” Don’t worry, we aren’t about to make you learn how to actually program in this language! And if you don’t really understand the program, that’s also fine because many software engineers wouldn’t either! (We are showing it to you to help you to appreciate high level languages!)
+Program zaczyna się od zsumowania 2 liczb (które zostały umieszczone w rejestrach $t0 i $t1) i wypisaniu wyniku. Następnie wypisywane jest "Hello World!". Nie martw się, nie chcemy, abyś nauczył się programować w tym języku! A jeśli rzeczywiście nie rozumiesz programu, to tylko potwierdza, iż języki wysokiego poziomu nie zostały stworzone na darmo.
 
 ```
 .data          	 
@@ -230,13 +231,13 @@ li $v0, 0
 jr $ra
 ```
 
-You can run this program using a MIPS emulator using this interactive:
+Przykład możesz uruchomić przy pomocy emulatora MIPS w tym ??interactive??:
 
-{interactive name="mips-assembler" type="whole-page" text="MIPS Assembler" file-type="php"}
+{interactive name="mips-assembler" type="whole-page" text="Asembler MIPS" file-type="php"}
 
-Copy and paste the output in the “Assembler Output” box into the box in this simulator interactive:
+Skopiuj i wklej dane wyjściowe z pola "Assembler Output" do symulatora MIPS:
 
-{interactive name="mips-simulator" type="whole-page" text="MIPS Simulator" file-type="php"}
+{interactive name="mips-simulator" type="whole-page" text="Symulator MIPS" file-type="php"}
 
 Once you have got the program working, try changing the values that are added. The comments tell you where these numbers that can be changed are. You should also be able to change the string (text) that is printed without too much trouble also. As a challenge, can you make it so that it subtracts rather than adds the numbers? Clue: instruction names are always very short. Unfortunately you won’t be able to make it multiply or divide using this simulator as this is not currently supported. Remember that to rerun the program after changing it, you will have to follow both steps 1 and 2 again.
 
