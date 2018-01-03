@@ -144,7 +144,6 @@ Nie jest to jednak tak proste ja się może wydawać ponieważ komputer nie moż
 
 Elektronika w komputerach wykorzystuje obwody, które działają głównie z dwiema wartościami (reprezentowanymi jako wysokie i niskie napięcie), aby zapewnić szybkość i niezawodność. Ten system reprezentacji liczb nazywa się *binarnym* i jest często zapisywany na papierze za pomocą zer i jedynek. Więcej informacji na temat reprezentacji binarnej zamieszczone jest w rozdziale [reprezentacja danych] (chapters/data-representation.html). Warto tam zajrzeć wcześniej, szczególnie, jeśli nie miałeś do czynienia z systemem binarnym.
 
-
 {panel end}
 
 {comment}
@@ -239,11 +238,11 @@ Skopiuj i wklej dane wyjściowe z pola "Assembler Output" do symulatora MIPS:
 
 {interactive name="mips-simulator" type="whole-page" text="Symulator MIPS" file-type="php"}
 
-Once you have got the program working, try changing the values that are added. The comments tell you where these numbers that can be changed are. You should also be able to change the string (text) that is printed without too much trouble also. As a challenge, can you make it so that it subtracts rather than adds the numbers? Clue: instruction names are always very short. Unfortunately you won’t be able to make it multiply or divide using this simulator as this is not currently supported. Remember that to rerun the program after changing it, you will have to follow both steps 1 and 2 again.
+Po udanym uruchomieniu programu spróbuj zmienić sumowane wartości. Komentarze w kodzie wskazują, gdzie można zmienić te liczby. Powinieneś również być w stanie, bez większego kłopotu, zmienić komunikat, który jest wyświetlany. Opcjonalnie możesz przerobić program aby odejmował zamiast dodawać liczby? Wskazówka: nazwy instrukcji są zawsze bardzo krótkie. Niestety nie będzie można pomnożyć ani podzielić za pomocą tego symulatora, ponieważ nie jest są to operacje obecnie obsługiwane. Pamiętaj, że aby ponownie uruchomić program po jego zmianie, musisz ponownie wykonać kroki 1 i 2.
 
-You may be wondering why you have to carry out both these steps. Because computers work in 1’s and 0’s, the instructions need to simply be converted into hexadecimal. Hexadecimal is a shorthand notation for binary numbers. *Don’t muddle this process with compiling or interpreting!* Unlike these, it is much simpler as in general each instruction from the source code ends up being one line in the hexadecimal.
+Możesz się zastanawiać, dlaczego musisz wykonać oba te kroki. Wynika to z faktu, że komputery działają na zerach i jedynkach, stąd konieczność konwersji na system szesnastkowy (heksadecymalny). Szesnastkowy jest skróconym zapisem liczb binarnych. *Nie myl tego procesu z kompilacją lub interpretacją!* Jest to znacznie prostsza operacja polegające prostej zamianie każdej linii kodu na linię w reprezentacji heksadecymalnej.
 
-One thing you might have noticed while reading over the possible instructions is that there is no loop instruction in MIPS. Using several instructions though, it actually is possible to write a loop using this simple language. Have another read of the paragraph that describes the various instructions in MIPS. Do you have any ideas on how to solve this problem? It requires being quite creative!
+Jedną z rzeczy, które być może zauważyłeś podczas przeglądania listy instrukcji języka MIPS, jest brak instrukcji pętli. Jednakże przy użyciu kilku instrukcji możliwe jest napisanie pętli za pomocą tego prostego języka. Jeszcze raz przeczytaj paragraf opisujący różne instrukcje w MIPS. Czy masz jakiś pomysł, jak rozwiązać ten problem? To wymaga kreatywności!
 
 {comment}
 
@@ -254,7 +253,7 @@ One thing you might have noticed while reading over the possible instructions is
 
 {comment end}
 
-The jumping to a line, and jumping to a line if a condition is met can be used to make loops! A very simple program we could write that requires a loop is one that counts down from five and then says “Go!!!!” once it gets down to one. In Python we can easily write this program in three lines.
+Instrukcja skoku oraz skoku warunkowego mogę być użyte do stworzenia pętli! Przykładem prostego programu z pętlą, jest program, który odlicza w dół od pięciu, a następnie wypisuje "Go!!!!", gdy liczniki dojdzie do jednego. W Pythonie możemy z łatwością napisać ten program w trzech linijkach.
 
 ```
 # Start at 5, count down by 1 each time, and stop when we get to 0
@@ -263,7 +262,7 @@ for number in range(5, 0, -1):
 print("GO!!!!!")
 ```
 
-But in MIPS, it isn’t that straightforward. We need to put values into registers, and we need to build the loop out of jump statements. Firstly, how can we design the loop?
+Ale w MIPS to nie jest takie proste. Musimy umieścić wartości w rejestrach i musimy zbudować pętlę z instrukcji skoku. Jak możemy właściwie zaprojektować pętlę?
 
 {comment}
 
@@ -271,7 +270,7 @@ But in MIPS, it isn’t that straightforward. We need to put values into registe
 
 {comment end}
 
-And the full MIPS program for this is as follows. You can go away and change it.
+Pełny program MIPS dla naszego problemu jest następujący. Możesz go przerobić.
 
 ```
 # Define the data strings
@@ -321,19 +320,19 @@ end_loop:
   jr $ra
 ```
 
-Can you change the Python program so that it counts down from 10? What about so it stops at 5? (You might have to try a couple of times, as it is somewhat counter intuitive. Remember that when i is the stopping number, it stops there and does not run the loop for that value!). And what about decrementing by 2 instead of 1? And changing the string (text) that is printed at the end?
+Czy możesz zmienić program Python tak, aby odliczał od 10? Czy potrafisz sprawić, aby się zatrzymał na wartości 5? (Być może będziesz musiał spróbować kilka razy, ponieważ jest to trochę nieintuicyjne. Pamiętaj, że jeśli i jest numerem zatrzymania, to program się uruchamia pętli dla tej wartości!). Czy potrafisz zmniejszać licznik o 2 zamiast 1? I zmienić komunikat wyświetlany na końcu?
 
-You probably found the Python program not too difficult to modify. See if you can make these same changes to the MIPS program.
+Prawdopodobnie program w języku Python nie był zbyt trudny do modyfikacji. Sprawdź, czy możesz wprowadzić te same zmiany w programie MIPS.
 
-If that was too easy for you, can you make both programs print out “GO!!!!” twice instead of once? (you don’t have to use a loop for that). And if THAT was too easy, what about making each program print out “GO!!!!” 10 times? Because repeating a line in a program 10 times without a loop would be terrible programming practice, you’d need to use a loop for this task.
+Jeśli to było dla ciebie zbyt proste, możesz sprawić, aby oba programy wypisywały "GO!!!!" dwa razy zamiast raz? (nie musisz do tego używać pętli). A jeśli TO było zbyt łatwe, to jakbyś go zmodyfikował, aby wypisał "GO!!!!" 10 razy? Ponieważ powtarzanie linii w programie 10 razy bez pętli byłoby okropną praktyką programistyczną, do tego zadania musiałbyś użyć pętli.
 
-More than likely, you’re rather confused at this point and unable to modify the MIPS program with all these suggested changes. And if you do have an additional loop in your MIPS program correctly printing “GO!!!” 10 times, then you are well on your way to being a good programmer!
+Najprawdopodobniej będziesz raczej zdezorientowany w tym momencie i nie będziesz w stanie zmodyfikować programu MIPS ze wszystkimi tymi sugerowanymi zmianami. Natomiast, jeśli masz jeszcze jedną pętlę w swoim programie MIPS poprawnie drukującą "GO!!!" 10 razy, to jesteś na najlepszej drodze do bycia dobrym programistą!
 
-So, what was the point of all this? These low level instructions may seem tedious and a bit silly, but the computer is able to directly run them on hardware due to their simplicity. A programmer can write a program in this language if they know the language, and the computer would be able to run it directly without doing any further processing. As you have probably realised though, it is extremely time consuming to have to program in this way. Moving stuff in and out of registers, implementing loops using jump and branch statements, and printing strings and integers using a three line pattern that you’d probably never have guessed was for printing had we not told you leaves even more opportunities for bugs in the program. Not to mention, the resulting programs are extremely difficult to read and understand.
+Jaki jest zatem sens tego wszystkiego? Te instrukcje niskiego poziomu wydają się żmudne i nieco głupie, lecz dzięki ich prostocie komputer może jest uruchomić bezpośrednio na sprzęcie. Programista może napisać program w tym języku, jeśli go dobrze zna, a komputer będzie mógł go uruchomić bezpośrednio, bez dalszego przetwarzania. Jak już zapewne wiesz, nie jest to najszybszy sposób programowania komputerów. Ładowanie danych i wyjmowanie z rejestrów, implementacja pętli za pomocą instrukcji skoku oraz wypisywanie ciągów znaków i liczb całkowitych przy pomocy trzyliniowego schematu instrukcji, którego prawdopodobnie nigdy byś nie odgadł. Wypisywanie w ten sposób, jak się okazuje w praktyce, otwiera wiele okazji na popełnienie błędu. Nie wspominając o tym, że powstałe programy są niezwykle trudne do odczytania i zrozumienia.
 
-Because computers cannot directly run the instructions in the languages that programmers like, high level programming languages by themselves are not enough. The solution to this problem of different needs is to use a compiler or interpreter that is able to convert a program in the high level programming language that the programmer used into the machine code that the computer is able to understand.
+Ponieważ komputery nie mogą bezpośrednio uruchamiać instrukcji w językach, które lubią programiści, same języki programowania wysokiego poziomu nie wystarczą. Rozwiązaniem tego problemu różnych potrzeb jest użycie kompilatora lub interpretera, który jest w stanie przekonwertować program w języku programowania wysokiego poziomu, który napisał programista, na zrozumiały dla komputera kod maszynowy.
 
-These days, few programmers program directly in these languages. In the early days of computers, programs written directly in machine language tended to be faster than those compiled from high level languages. This was because compilers weren’t very good at minimising the number of machine language instructions, referred to as *optimizing*, and people trained to write in machine code were better at it. These days however, compilers have been made a lot smarter, and can optimize code far better than most people can. Writing a program directly in machine code may result in a program that is *less* optimized than one that was compiled from a high level language. Don’t put in your report that low level languages are faster!
+Obecnie niewielu programistów programuje bezpośrednio w tych językach. Na początku rozwoju komputerów programy były pisane bezpośrednio w języku maszynowym, gdyż działały wyraźnie szybciej niż te skompilowane z języków wysokiego poziomu. Wynika to z faktu, że kompilatory nie były zbyt dobre w minimalizowaniu liczby instrukcji języka maszynowego, czyli w tak zwanej *optymalizacji*. Osoby przeszkolone do pisania w kodzie maszynowym były w tym lepsze. Obecnie jednak kompilatory są znacznie inteligentniejsze i mogą zoptymalizować kod znacznie lepiej niż większość ludzi. Napisanie programu bezpośrednio w kodzie maszynowym może spowodować, że program będzie *mniej* zoptymalizowany niż program skompilowany. Z tego względu nie uważa się języki niskiego poziomu są szybsze!
 
 {comment}
 
@@ -341,9 +340,9 @@ These days, few programmers program directly in these languages. In the early da
 
 {comment end}
 
-This isn’t the full story; the MIPS machine code described here is something called a Reduced Instruction Set Architecture (RISC). Many computers these days use a Complex Instruction Set Architecture (CISC). This means that the computer chips can be a little more clever and can do more in a single step. This is well beyond the scope of this book though, and understanding the kinds of things RISC machine code can do, and the differences between MIPS and high level languages is fine at this level, and fine for most computer scientists and software engineers.
+To nie jest koniec opowieści; Opisany tutaj kod maszynowy MIPS jest przykładem architektury ograniczonych zestawów instrukcji RISC (ang. Reduced Instruction Set Architecture). Obecnie wiele komputerów korzysta ze złożonej architektury zestawu instrukcji CISC (ang. Complex Instruction Set Architecture). Oznacza to, że chipy komputerowe mogą być trochę bardziej inteligentne i mogą zrobić więcej w jednym kroku. Jest to jednak zagadnienie znacznie wykraczające poza zakres tej książki. Dla zrozumienia różnic między kodem maszynowym a wysokopoziomowymi językami wystarczy MIPS, dotyczy to również większości informatyków i inżynierów oprogramowania.
 
-In summary, we require low level programming languages because the computer can understand them, and we require high level programming languages because humans can understand them. A later section talks more about compilers and interpreters; programs that are used to convert a program that is written in a high level language (for humans) into a low level language (for computers).
+Podsumowując, potrzebujemy języków programowania niskiego poziomu języków, ponieważ komputery je rozumieją. Potrzebujemy również języków programowania wysokiego poziomu, bo rozumieją je ludzie. Dalsza część rozdziału poświęcona jest kompilatorom i interpreterom; będziemy korzystać z programów do konwersji programu napisanego w języku wysokiego poziomu (dla ludzi) na język niskiego poziomu (dla komputerów).
 
 {comment}
 
@@ -353,20 +352,20 @@ In summary, we require low level programming languages because the computer can 
 
 {comment end}
 
-## A Babel of programming languages
+## Wieża Babel języków programowania
 
-There are many different programming languages. Here we have included a small subset of languages, to illustrate the range of purposes that languages are used for. There are many, many more languages that are used for various purposes, and have a strong following of people who find them particularly useful for their applications.
+Istnieje wiele różnych języków programowania. Tutaj zawarliśmy jedynie mały podzbiór języków, aby zademonstrować zakres ich zastosowań. Należy zdawać sobie sprawę, że poza tymi językami istnieje wiele innych, które mają wielu zwolenników wykorzystujących je do różnych celów i zastosowań.
 
-For a much larger list you can [check Wikipedia here](https://en.wikipedia.org/wiki/List_of_programming_languages).
+Bardziej kompletną listę języków programowania  [znajdziesz na Wikipedii tutaj](https://en.wikipedia.org/wiki/List_of_programming_languages).
 
 ### Python
 
 
-Python is a widely used language, that has also become very popular as a teaching language. Many people learn Python as their first programming language. In the introduction, we looked at some examples of Python programs, for those who have never programmed before.
+Python jest powszechnie używanym językiem, który stał się bardzo popularny jako język nauczania. Wiele osób uczy się Pythona jako swojego pierwszego języka programowania. We wstępie przyjrzeliśmy się kilku przykładom programów w Pythonie, przeznaczonych dla początkujących programistów.
 
-Originally though, Python was intended to be a scripting language. Scripting languages have syntax that makes them quick to write programs for file processing in, and for doing repetitive tasks on a computer.
+Pierwotnie jednak Python miał być językiem skryptowym. Języki skryptowe mają uproszczoną składnię składnię, która umożliwia szybkie pisanie programów do przetwarzania plików i wykonywania powtarzalnych zadań na komputerze.
 
-As an example of a situation where Python is very useful, imagine your teacher has given 5 quizzes throughout the year, and recorded the results for each student in a file such as this (It could include more than 6 students), where each student’s name is followed by their scores. Some students didn’t bother going to class for all the quizzes, so have less than 5 results recorded.
+Za przykład przykład sytuacji, w której Python jest bardzo przydatny, może posłużyć sytuacja, w której twój nauczyciel przeprowadził 5 sprawdzianów przez cały rok. Następnie zapisał wyniki dla każdego ucznia w pliku podobnym do poniższego (może to być więcej niż 6 uczniów), w którym po imieniu każdego ucznia następują jego wyniki. Niektórzy uczniowie nie byli obecni podczas wszystkich sprawdzianów, więc zanotowano mniej niż 5 wyników.
 
 ```
 Karen 12 12 14 18 17
@@ -377,9 +376,9 @@ Amalia 20 20 19 15 18
 Cameron 19 15 12 9 3
 ```
 
-She realises she needs to know the average (assuming 5 quizzes) that each student scored, and with many other things to do does not want to spend much time on this task. Using python, she can very quickly generate the data she needs in less than 10 lines of code.
+W pewnym momencie nauczyciel zdaje sobie sprawę, że musi ustalić średnią (z 5 sprawdzianów), którą zdobył każdy uczeń. Nie chce jednak, mając wiele innych na głowie, poświęcać zbyt wiele czasu na to zadanie. Korzystając z Pythona, może bardzo szybko wygenerować potrzebne dane w mniej niż 10 liniach kodu.
 
-Note that understanding the details of this code is irrelevant to this chapter, particularly if you aren’t yet a programmer. Just read the comments (the things that start with a “#”) if you don’t understand, so that you can get a vague idea of how the problem was approached.
+Zauważ, że zrozumienie szczegółów tego kodu jest nieistotne dla tego rozdziału, szczególnie jeśli nie jesteś jeszcze programistą. Po prostu przeczytaj komentarze (rzeczy zaczynające się od "#"), jeśli ich nie rozumiesz, dzięki czemu możesz uzyskać niejasne pojęcie o tym, w jaki sposób problem został rozwiązany.
 
 ```python3
 # Open the raw score file for reading
@@ -403,19 +402,19 @@ raw_scores_file.close()
 processed_scores_file.close()
 ```
 
-This will generate a file that contains each student’s name followed by the result of adding their scores and dividing the sum by 5. You can try the code if you have python installed on your computer (it won’t work on the online interpreter, because it needs access to a file system). Just put the raw data into a file called “scores.txt” in the same format it was displayed above. As long as it is in the same directory as the source code file you make for the code, it will work.
+Wynikiem działania programu będzie plik zawierający imię każdego ucznia, po którym wypisana będzie suma wyników po dzieleniu przez 5. Jeśli masz zainstalowany Python na swoim komputerze, możesz uruchomić program na próbę (nie zadziała on na internetowym interpreterze, ponieważ potrzebuje dostępu do systemu plików). Po prostu zapisz dane do pliku o nazwie "scores.txt" w tym samym formacie, w jakim był wyświetlany powyżej. Program zadziała pod warunkiem, że plik znajduje się w tym samym katalogu co plik kodu źródłowego.
 
-This problem could of course be solved in any language, but some languages make it far simpler than others. Standard software engineering languages such as Java, which we talk about shortly, do not offer such straight forward file processing. Java requires the programmer to specify what to do if opening the file fails in order to prevent the program from crashing. Python does not require the programmer to do this, although does have the option to handle file opening failing should the programmer wish to. Both these approaches have advantages in different situations. For the teacher writing a quick script to process the quiz results, it does not matter if the program crashes so it is ideal to not waste time writing code to deal with it. For a large software system that many people use, crashes are inconvenient and a security risk. Forcing all programmers working on that system to handle this potential crash correctly could prevent a lot of trouble later on, which is where Java’s approach helps.
+Ten problem można oczywiście rozwiązać w dowolnym języku, ale w niektórych językach jest to znacznie prostsze. Standardowe języki programowania, takie jak Java, o których wkrótce wspomnimy, nie oferują tak prostego przetwarzania plików. Java wymaga od programisty określenia, co zrobić, jeśli otwarcie pliku się nie powiedzie. Pomaga to zapobieganiu awariom programu. Python nie wymaga tego od programisty, chociaż opcjonalnie jest to możliwe, jeśli programista sobie tego życzy. Oba te podejścia mają zalety w różnych sytuacjach. Dla nauczyciela piszącego szybki skrypt do przetworzenia wyników quizu, nie ma to większego znaczenia, czy program się zawiesza w skrajnym przypadku. Nie musi więc tracić czasu na pisanie kodu obsługującego sytuacje wyjątkowe. W przypadku dużego oprogramowania, z którego korzysta wiele osób, awarie mogą stanowić zagrożenie dla bezpieczeństwa. Zmuszenie wszystkich programistów pracujących nad takim systemem do właściwego radzenia sobie z sytuacjami wyjątkowymi może zapobiec wielu problemom. W tym przypadku podejście języka Java jest korzystniejsze.
 
-In addition to straight forward file handling, Python did not require the code to be put inside a class or function, and it provided some very useful built in functions for solving the problem. For example, the function that found the sum of the list, and the line of code that was able to convert the raw line of text into a list of numbers (using a very commonly used pattern).
+Oprócz prostej obsługi plików Python nie wymagał umieszczania kodu wewnątrz klasy ani funkcji, a ponadto dostarcza bardzo przydatne wbudowane funkcje do rozwiązania problemu. Na przykład funkcja, która wyznacza sumę listy, lub linia kodu, która konwertuje tekst na listę liczb (przy użyciu bardzo często używanej konstrukcji).
 
-This same program written in Java would require at least twice as many lines of code.
+Ten sam kod napisany w Javie byłby co najmniej dwukrotnie dłuższy.
 
-There are many other scripting languages in addition to Python, such as Perl, Bash, and Ruby.
+Poza Pythonem jest wiele innych języków skryptowych, takich jak Perl, Bash i Ruby.
 
 ### Scratch
 
-Scratch is a programming language used to teach people how to program. A drag and drop interface is used so that new programmers don’t have to worry so much about syntax, and programs written in Scratch are centered around controlling cartoon characters or other sprites on the screen.
+Scratch jest językiem programowania przeznaczonym do nauczania młodszych adeptów programowania. Interfejs typu "przeciągnij i upuść" jest używany zamiast edytora kodu, aby nowi programiści nie musieli się martwić o składnię. Programy napisane w Scratch koncentrują się wokół kontrolowania postaci z kreskówek lub innych elementów animowanych na ekranie.
 
 Scratch is never used in programming in industry, only in teaching. If you are interested in trying Scratch, [you can try it out online here](http://scratch.mit.edu/projects/editor/?tip_bar=getStarted), no need to download or install anything.
 
