@@ -1,0 +1,158 @@
+WEBVTT
+
+NOTE
+Computer Science Education Research,
+University of Canterbury, New Zealand
+Subtitle file for the video "Formal Languages"
+Author: Alasdair Smith
+Date: 13/02/2017
+Translattion to Polish language: Tomasz Śliwiński
+Date: 03/07/2017
+
+00:01.000 --> 00:02.400
+Języki formalne
+
+00:02.400 --> 00:05.000
+Porozmawiajmy o językach formalnych
+
+00:05.000 --> 00:07.000
+Ups, chwileczkę
+
+NOTE
+'Ups' jest wypowiedziane wcześniej niż napis,
+ale pasuje lepiej tam gdzie jest
+
+00:07.000 --> 00:09.400
+Kiedy czytasz instrukcję w języku naturalnym, to
+
+00:09.400 --> 00:13.200
+w zasdzie możesz zrozumieć co jest napisane
+nawet gdy są tam małe błędy.
+
+00:13.200 --> 00:19.200
+Ale dla komputera, instrukcje są tak precyzyjne,
+że nawet jeden mały błąd może uniemożliwić jego działanie.
+
+00:19.200 --> 00:23.200
+To nie jest tak, że one są głupie, It's not that they're stupid,
+[yyy] one są troszeczkę głupie.
+
+00:23.200 --> 00:26.800
+W każdym razie, nawet w codziennym użyciu
+mamy sytuacje,
+
+00:26.800 --> 00:30.400
+gdzie coś absolutnie musi być
+sformatowanie prawidłowo.
+
+00:30.400 --> 00:34.700
+Nie otrzymasz tego czego chcesz, jeśli nie zastosujesz się
+do zasad podczas wpisywania adresu emailowego,
+
+00:34.700 --> 00:36.000
+<i>BŁĄD niepoprawny email</i>
+
+NOTE
+skrócone 'BŁĄD niepoprawny format adresu emailowego' do 'BŁĄD niepoprawny email'
+
+00:36.000 --> 00:37.600
+wpisywania liczb
+
+00:37.600 --> 00:39.400
+<i>BŁĄD niepoprawna kwota</i>
+
+00:39.400 --> 00:42.000
+lub wpisywania formuł do arkusza kalkulacyjnego.
+
+00:42.000 --> 00:43.600
+<b>#BŁĄD!</b>
+
+00:43.600 --> 00:48.200
+To czego potrzebujemy, to sposób na zapisanie zasad
+na to co jest akceptowalne i to co nie jest.
+
+00:48.200 --> 00:50.800
+To jest to, co języki formalne mogą dla nas zrobić. 
+
+00:50.800 --> 00:53.600
+Zacznijmy od produktu końcowego. 
+
+00:53.600 --> 00:57.800
+Języki formalne są zaangażowane nawet... 
+
+00:57.800 --> 01:01.600
+Języki formalne są zaangażowane nawet
+w dostarczenie tego wideo do ciebie.
+
+01:01.600 --> 01:06.600
+Sa one używane do określenia formatu adresu 
+strony na której jest to wideo;
+
+01:06.600 --> 01:09.000
+struktury samej strony;
+
+01:09.000 --> 01:12.600
+formatu pliku w którym to wideo jest przechowywane;
+
+01:12.600 --> 01:15.200
+oprogramowania, które odtwarza to wideo;
+
+01:15.200 --> 01:20.800
+i nawet sprzętu na twoim komputerze, który uruchamia
+oprogramowanie do renderowania tego wideo.
+
+01:20.800 --> 01:25.200
+Informatycy używają językow formalnych
+do zbadania różnego rodzaju problemów,
+
+01:25.200 --> 01:29.400
+włączając w to nawet granice tego
+co może być kiedykolwiek zrobione z komputerami.
+
+01:29.400 --> 01:30.600
+Oto zabawny fakt:
+
+01:30.600 --> 01:35.200
+możemy opisać każdy komputer lub
+urządzenie elektroniczne używając języka formalnego.
+
+01:35.200 --> 01:40.400
+W rzeczywistości języki formalnego mogą nawet pokazać nam
+granice tego, co można obliczyć.
+
+01:40.400 --> 01:44.400
+I możemy udowodnić, że naprawdę istnieją
+problemy matematyczne,
+
+01:44.400 --> 01:47.000
+których nigdy nie można rozwiązać za pomocą komputera.
+
+01:47.000 --> 01:51.000
+Wow, szokujace.
+<01:49.200><i>Bum</i>
+
+01:51.000 --> 01:57.600
+Trochę się zapędziłem, języki formalne są
+w zasadzie szereg racjonalnie prostych pomysłów,
+
+01:57.600 --> 02:00.200
+które mają nieracjonalnie dziwne nazwy.
+
+02:00.200 --> 02:01.800
+Wyrażenia regularne
+
+02:01.800 --> 02:03.600
+Automat skończenie stanowy
+
+02:03.600 --> 02:05.200
+Gramatyki bezkontekstowe
+
+02:05.200 --> 02:08.200
+Te techniki są cały czas używane
+w informatyce
+
+02:08.200 --> 02:09.800
+i są warte poznania.
+
+02:09.800 --> 02:11.800
+Języki formalne
