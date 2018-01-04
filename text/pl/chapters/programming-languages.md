@@ -416,21 +416,21 @@ Poza Pythonem jest wiele innych języków skryptowych, takich jak Perl, Bash i R
 
 Scratch jest językiem programowania przeznaczonym do nauczania młodszych adeptów programowania. Interfejs typu "przeciągnij i upuść" jest używany zamiast edytora kodu, aby nowi programiści nie musieli się martwić o składnię. Programy napisane w Scratch koncentrują się wokół kontrolowania postaci z kreskówek lub innych elementów animowanych na ekranie.
 
-Scratch is never used in programming in industry, only in teaching. If you are interested in trying Scratch, [you can try it out online here](http://scratch.mit.edu/projects/editor/?tip_bar=getStarted), no need to download or install anything.
+Zastosowanie Scratch nie jest programowanie dla przemysłu, lecz tylko nauczanie. Jeśli jesteś zainteresowany wypróbowaniem Scratch, [możesz go wypróbować online tutaj] (http://scratch.mit.edu/projects/editor/?tip_bar=getStarted), nie musisz niczego pobierać ani instalować.
 
-{button link="http://scratch.mit.edu/projects/19711355/#editor" text="Example Scratch project"}
+{button link="http://scratch.mit.edu/projects/19711355/#editor" text="Przykładowy projekt Scratch"}
 
-This is an example of a simple program in Scratch that is similar to the programs we have above for Python and Java. It asks the user for numbers until they say "stop" and then finds the average of the numbers given.
+Poniżej zamieszczony został przykład prostego programu w Scratch. Jest podobny do programów, które zamieściliśmy dla Python i Java. Pyta użytkownika o liczby, dopóki nie wpiszą "stop", a następnie wyznacza średnią z podanych liczb.
 
 {image filename="scratch-example-program.png"}
 
-And this is the output that will be displayed when the green flag is clicked:
+Po kliknięciu zielonej flagi wyświetli się następujący rezultat:
 
 {image filename="scratch-example-program-output.png"}
 
-Scratch can be used for simple calculations, creating games and animations. However it doesn't have all the capabilities of other languages.
+Scratch może posłużyć do prostych obliczeń, tworzenia gier i animacji. Jednak nie ma wszystkich możliwości pozostałych języków.
 
-Other educational languages include Alice and Logo. Alice also uses drag and drop, but in a 3D environment. Logo is a very old general purpose language based on Lisp. It is not used much anymore, but it was famous for having a turtle with a pen that could draw on the screen, much like Scratch. The design of Scratch was partially influenced by Logo. These languages are not used beyond educational purposes, as they are slow and inefficient.
+Przykładami innych języków edukacyjnych są Alicja i Logo. Alicja używa również techniki “przeciągnij i upuść”, lecz odbywa się to w środowisku 3D. Logo to bardzo stary język ogólnego przeznaczenia oparty na Lispie. Nie jest już używany, ale zasłynął z żółwia z długopisem, który może rysuje na ekranie, podobnie do Scratch. Scratch powstał dzięki inspiracji językiem Logo. Języki te nie są używane poza zastosowaniami edukacyjnymi. Wynika to z faktu, iż są wolne i nieefektywne.
 
 ### Java
 
