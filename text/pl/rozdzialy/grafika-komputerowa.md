@@ -13,20 +13,19 @@ Wśród napisów końcowych filmów, w których używano komputerowo wygenerowan
 
 Firmy z braży filmowej czy producenci gier komputerowych nie ograniczają się do korzystania z istniejącego oprogrogramowania graficznego. Czasami niezbędni są informatycy, którzy tworzą nowe, lepsze algorytmy i oprogramowanie, dzięki którym uzyskuje się nowatorskie efekty. Możliwości rozwoju w tej dziedzinie wydają się nieskończone!
 
-Computer graphics are used in a wide variety of situations: games and animated movies are common examples, but graphics techniques are also used to visualise large amounts of data (such as all cellphone calls being made in one day or friend connections in a social network), to display and animate graphical user interfaces, to create virtual reality and augmented reality worlds, and much more.
-Grafika komputerowa znajduje zastosowanie w wielu różnych sytuacjach: tworzenie gier i filmów animowanych to przykłady, ale 
+Grafika komputerowa znajduje zastosowanie w wielu różnych sytuacjach: tworzenie gier i filmów animowanych to ważne przykłady, ale jest ich znacznie więcej: wizualizacja informacji zawartych w wielkich zbiorach danych (np. dotyczących połączeń telefonicznych w konkretnym dniu albo relacji znajomości użytkowników sieci społecznościowej), graficzna realizacja interfejsów komunikacji człowieka z komputerem, modelowanie tzw. rzeczywistości wirtualnej czy rozszerzonej oraz wiele innych. 
 
 {comment} Talk about visualisation of data - any nice examples?{comment end}
 
-{panel type="jargon-buster" summary="Pixels"}
-{glossary-definition term="Pixel" definition="This term is an abbreviation of *picture element*, the name given to the tiny squares that make up a grid that is used to represent images on a computer."}
-A digital image on a screen or printer is physically made up of a grid of tiny squares called
-{glossary-link term="pixel" reference-text="definition"}pixels{glossary-link end}.
-They are usually too small to see easily (otherwise the image would look blocky).
-Photographs usually use millions of pixels (a megapixel is a million pixels; for example, a screen that is 1080 pixels across and 720 down would contain 777,600 pixels, or 0.7776 megapixels).
+{panel type="jargon-buster" summary="Piksele"}
+{glossary-definition term="Pixel" definition="TTo słowo to spolszczona wersja słowa pixel, który powstał jako skrót od *picture element* (dosł. element obrazu), na oznaczenie małych kwadratów tworzacych jakby siatkę (ang. grid) komputerowej realizacji obrazu."}
+Obraz cyfrowy wyświetlany na ekranie monitora lub wydrukowany na domowej drukarce jest skończonym zbiorem elementów, które łącznie tworzą jakby siatkę kwadratów bardzo małych rozmiarów, zwanych 
+{glossary-link term="pixel" reference-text="definition"}pikselami{glossary-link end}.
+Zazwyczaj nie da się ich dostrzec gołym okiem (inaczej obraz wyglądały topornie).
+Na zdjęciach liczba pikseli jest liczona w milionach (megapiksel to milion pikseli; np. ekran o 1080 pikselach w poziomie i 720 w pionie składa się z 777 600 pikseli, czyli ok. 0,78 megepikseli).
 
-The pixels is fundamental to computer graphics, as a lot of the work of computer graphics programmers is taking some abstract idea (such as objects in a scene), and working out the colour each pixel should be to make the viewer think they are looking at the scene.
-A digital camera also does this - but it just senses the colour falling on each of its millions of sensors, and stores those so that the pixels can be displayed when needed.
+Pojęcie piksela jest podstawowym w grafice komputerowej, praca programistów w dziedzinie grafiki komputerowej to w dużej części praca nad abstrakcyjnymi modelami obiektów graficznych złożonych z pikseli i algorytmami działajacych na nich.
+Efektem działania aparatu cyfrowego jest zapisanie informacji o zarejestorwanych na elementach światłoczułych kolorach jako zbioru pikseli, które później będą wyświetlone na takim lub innym ekranie.
 {panel end}
 
 In this chapter we'll look at some of the basic techniques that are used to create computer graphics. These will give you an idea of the techniques that are used in graphics programming, although it's just the beginning of what's possible.
