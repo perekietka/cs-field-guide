@@ -4,7 +4,7 @@
 
 ## Z perspektywy
 
-Grafika komputerowa kojarzy się z gramami, filmami i obrazami oraz niezwykłym oprogramowaniem do tworzenia i przetwarzania obrazów. Warto jednak zapytać: Jak to się dzieje, że to oprogramowanie tak świetnie działa? Jaką rolę mają informatycy? Oni nie są wyłącznie *użytkownikami* systemów graficznych, ale zajmują się *tworzeniem*, zwłaszcza obmyślaniem nowych technik.
+Grafika komputerowa kojarzy się z grami, filmami i obrazami oraz niezwykłym oprogramowaniem do tworzenia i przetwarzania obrazów. Warto jednak zapytać: Jak to się dzieje, że to oprogramowanie tak świetnie działa? Jaką rolę mają informatycy? Oni nie są wyłącznie *użytkownikami* systemów graficznych, ale zajmują się *tworzeniem*, zwłaszcza obmyślaniem nowych technik.
 
 Rozwój narzędzi do tworzenia grafiki komputerowej jest pochodną przemysłu rozrywkowego. Granice możliwości takiego oprogramowania nieustannie się poszerzają. Na początku były proste filmy animowane, zwane dziś 2D, a dziś na ekranach kin możemy oglądać postaci i obiekty w wersji 3D wygenrowane komputerowe, które momentami trudno odróżnych od tych istniejących w świecie rzeczywistym.
 Wśród napisów końcowych filmów, w których używano komputerowo wygenerowanych animacji, można by odnaleźć liczne nazwiska informatyków. [Kilku z nich otrzymało nawet Nagrody Akademii Filmowej(Oscary)] (http://www.oscars.org/news/11-scientific-and-technical-achievements-be-honored-academy-awardsr)! 
@@ -44,9 +44,9 @@ Wpisując współrzędne 3D możesz znajdować każdy z kodów(?).
 {comment}{include interactive computer-graphics-box-translation}{comment end}
 {button link="http://csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-box/CG-box-translation.html?info=In%20this%20example%20the%20only%20transforms%20we%27ve%20supplied%20are%20to%20%3Cem%3Etranslate%3C/em%3E%20it%20in%20three%20dimensions.%20The%20dimensions%20are%20%3Cem%3Ex%3C/em%3E%20(left%20and%20right),%20%3Cem%3Ey%3C/em%3E%20(up%20and%20down)%20and%20%3Cem%3Ez%3C/em%3E%20(in%20and%20out%20of%20the%20screen).%20Your%20goal%20is%20to%20type%20in%20how%20far%20it%20should%20be%20transformed%20in%20each%20of%20these%20directions%20so%20that%20you%20can%20see%20the%20symbol%20on%20each%20face,%20and%20put%20those%20symbols%20on%20the%20spinner%20wheels%20shown.%20(The%20order%20of%20the%20symbols%20doesn%27t%20matter)." text="Click for interactive: box translation challenge"}
 
-You've just applied 3D *translation transforms* to the cube. Translation just means moving it in the three dimensions up and down, forward and back, and sideways.
+Przekształcenie zwane *przesunięciem (translacją)* oznacza przemieszczenie obiektu w trzech wymiarach: w górę i w dół, do tyłu i do przodu oraz na boki.
 
-Now try the following challenge, which requires you to rotate the box to find the codes.
+Następne wyzwanie wymaga obrania pudełkiem. Należy to robić tak, aby odnaleźć kody.
 
 {comment}{include interactive computer-graphics-box-rotation}{comment end}
 {button link="http://csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-box/CG-box-rotation.html?info=Another%20common%20transform%20is%20%3Cem%3Erotation%3C/em%3E,%20which%20you%20can%20use%20in%20the%20following%20image%20to%20find%20the%20symbols%20(the%20rotation%20is%20measured%20in%20degrees)." text="Click for interactive: box rotation challenge"}
