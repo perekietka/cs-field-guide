@@ -28,13 +28,13 @@ Pojęcie piksela jest podstawowym w grafice komputerowej, praca programistów w 
 Efektem działania aparatu cyfrowego jest zapisanie informacji o zarejestorwanych na elementach światłoczułych kolorach jako zbioru pikseli, które później będą wyświetlone na takim lub innym ekranie.
 {panel end}
 
-In this chapter we'll look at some of the basic techniques that are used to create computer graphics. These will give you an idea of the techniques that are used in graphics programming, although it's just the beginning of what's possible.
+W tym rozdziale przyjrzymy się wybranym podstawowym technikom, które są używane w dziedzinie grafiki komputerowej. Celem jest zdobycie wyobrażenia na temat niektórych wymagań, jakie ta dziedzina stawia programistom. 
 
-For this chapter we are using a system called WebGL which can render 3D graphics in your browser. If your browser is up to date everything should be fine. If you have issues, or if the performance is poor, there is [information here about how to get it going](further-information/interactives.html).
+Używamy systemu o nazwie WebGL, która pozwala na uzyskanie grafiki 3D w przeglądarce internetowej. Gdyby pojawił się problem z wydajnością lub inny, to pomocne mogą się okazać informacje zamieszczone [tutaj](further-information/interactives.html).
 
-## Graphics transformations
+## Przekształcenia graficzne
 
-A computer graphics image is just the result of a whole lot of mathematical calculations. In fact, every pixel you see in an image has usually had many calculations made to work out what colour it should be, and there are often millions of pixels in a typical image.
+A computer graphics image is just the result of a whole lot of mathematical calculations. In fact, every pixel you see in an image has usually had many calculations made to work out what colour it should be, and there are often millions of pixels in a typical image. Generowanie obrazów w grafice komputerowej wymaga wykonania wielu obliczeń matematycznych. 
 
 Let's start with some simple but common calculations that are needed for in graphics programming.
 The following interactive shows a cube with writing on each face.
