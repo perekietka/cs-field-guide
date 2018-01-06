@@ -46,13 +46,13 @@ Wpisując współrzędne 3D możesz znajdować każdy z kodów(?).
 
 Przekształcenie zwane *przesunięciem (translacją)* oznacza przemieszczenie obiektu w trzech wymiarach: w górę i w dół, do tyłu i do przodu oraz na boki.
 
-Następne wyzwanie wymaga obrania pudełkiem. Należy to robić tak, aby odnaleźć kody.
+Następne wyzwanie wymaga obracania pudełkiem. Należy to robić tak, aby odnaleźć kody.
 
 {comment}{include interactive computer-graphics-box-rotation}{comment end}
 {button link="http://csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-box/CG-box-rotation.html?info=Another%20common%20transform%20is%20%3Cem%3Erotation%3C/em%3E,%20which%20you%20can%20use%20in%20the%20following%20image%20to%20find%20the%20symbols%20(the%20rotation%20is%20measured%20in%20degrees)." text="Click for interactive: box rotation challenge"}
 
-There are several transformations that are used in computer graphics, but the most common ones are translation (moving the object), rotation (spinning it) and scaling (changing its size).
-They come up often in graphics because they are applied not only to objects, but to things like the positions of the camera and lighting sources.
+Róznych typów przekształceń jest wiele, ale najczęściej stosowane to przesunięcie (translacja), obrót i skalowanie (zmiana rozmiaru).
+Przekształcenia w grafice komputerowej dotyczą nie tylko obiektów tworzących obraz, ale również położenia tzw. kamery jak i źródeł oświetlenia.
 
 In this section you can apply transformations to various images. We'll start by making the changes manually, one point at a time, but we'll move up to a quick shortcut method that uses a *matrix* to do the work for you. We'll start by looking at how these work in two dimensions - it's a bit easier to think about than three dimensions.
 
