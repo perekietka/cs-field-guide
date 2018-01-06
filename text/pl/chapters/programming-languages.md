@@ -434,9 +434,9 @@ Przykładami innych języków edukacyjnych są Alicja i Logo. Alicja używa rów
 
 ### Java
 
-Java is a popular general purpose software engineering language. It is used to build large software systems involving possibly hundreds or even thousands of software engineers. Unlike Python, it forces programmers to say how certain errors should be handled, and it forces them to state what type of data their variables are intended to hold, e.g. *int* (i.e. a number with no decimal places), or *String* (some text data). Python does not require types to be stated like this. All these features help to reduce the number of bugs in the code. Additionally, they can make it easier for other programmers to read the code, as they can easily see what type each variable is intended to hold (figuring this out in a python program written by somebody else can be challenging at times, making it very difficult to modify their code without breaking it!)
+Java jest popularnym językiem programowania ogólnego przeznaczenia. Służy do budowania dużych systemów informatycznych. Jest używana przez setki lub nawet tysiące inżynierów oprogramowania (?? wg. internetu ok 10mln.??). W przeciwieństwie do Pythona, zmusza programistów do określania, w jaki sposób program ma sobie radzić z sytuacjami wyjątkowymi i wymaga określenia jaki typ danych przechowują zmienne, np. *int* (tj. liczba całkowita) lub *String* (ciągi znaków). Python nie wymaga podawania typów danych. Wszystkie te cechy pomagają zmniejszyć liczbę błędów w kodzie. Dodatkowo, mogą ułatwić innym programistom odczytanie kodu, ponieważ mogą łatwo zobaczyć, jaki typ każdej zmiennej ma być przechowywany (ustalenie tego w programie Pythona napisanym przez kogoś innego może być czasem trudne, co bardzo utrudnia modyfikowanie cudzego kodu bez psucia go!)
 
-This is the Java code for solving the same problem that we looked at in Python; generating a file of averages.
+Poniżej zamieszczony został kod Java do rozwiązania problemu średnich, który wcześniej rozwiązaliśmy w Pythonie.
 
 ```java
 import java.io.*;
@@ -467,7 +467,7 @@ public class Averager {
 }
 ```
 
-While the code is longer, it ensures that the program doesn’t crash if something goes wrong. It says to *try* opening and reading the file, and if an error occurs, then it should *catch* that error and print out an error message to tell the user. The alternative (such as in Python) would be to just crash the program, preventing anything else from being able to run it. Regardless of whether or not an error occurs, the "I am finished!" line will be printed, because the error was safely “caught”. Python is able to do error handling like this, but it is up to the programmer to do it. Java will not even compile the code if this wasn’t done! This prevents programmers from forgetting or just being lazy.
+Kod jest dłuższy, lecz gwarantuje większą niezawodność. Mówi, aby *spróbować* (ang. try) otworzyć i czytać plik, a jeśli wystąpi błąd, to powinien *złapać* (ang. catch) ten błąd i wypisać komunikat dla użytkownika o błędzie. Alternatywą (np. w Pythonie) byłoby po prostu zawieszenie programu, uniemożliwiając dalsze jego wykonywanie. Niezależnie od tego, czy wystąpi błąd, to i tak linia "I am finished!" zostanie wypisana, gdyż błąd został bezpiecznie "złapany". Python jest również w stanie zapewnić takie postępowanie, ale zależy to od programisty. Java nawet nie skompiluje kodu, jeśli nie zostało to zrobione! Zapobiega to zapominaniu przez programistów o sytuacjach wyjątkowych i ich leniwości.
 
 {comment}
 
@@ -475,60 +475,60 @@ While the code is longer, it ensures that the program doesn’t crash if somethi
 
 {comment end}
 
-There are many other general software engineering languages, such as C# and C++. Python is sometimes used for making large software systems, although is generally not considered an ideal language for this role.
+Istnieje wiele innych języków programowania ogólnego przeznaczenia, takich jak C# i C++. Python jest czasem używany do tworzenia dużych systemów oprogramowania, chociaż generalnie nie jest uważany za idealny język w tym kontekście.
 
 ### JavaScript
 
-- Interpreted in a web browser
-- Similar language: Actionscript (Flash)
+- Interpretowany w przeglądarce internetowej
+- Podobny język: Actionscript (Flash)
 
-Note that this section will be completed in a future version of the field guide. For now, you should refer to wikipedia page for more information.
+Uwaga: podrozdział ten zostanie uzupełniony w przyszłej wersji podręcznika. Na razie po więcej informacji odsyłamy do stron Wikipedii.
 
 ### C
 
-- Low level language with the syntax of a high level language
-- Used commonly for programming operating systems, and embedded systems
-- Programs written in C tend to be very fast (because it is designed in a way that makes it easy to compile it optimally into machine code)
-- Bug prone due to the low level details. Best not used in situations where it is unnecessary
-- Related languages: C++ (somewhat)
+- Język niskiego poziomu ze składnią języka wysokiego poziomu
+- Używany powszechnie do programowania systemów operacyjnych i systemów wbudowanych
+- Programy napisane w C są przeważnie bardzo szybkie (język został zaprojektowany w sposób, który ułatwia optymalne skompilowanie do kodu maszynowego)
+- Podatny na błędy ze względu na swoją niskopoziomowość. Najlepiej nie używać go w sytuacjach, w których nie jest to konieczne
+- Powiązane języki: C++ (w pewnym sensie)
 
-Note that this section will be completed in a future version of the field guide. For now, you should refer to wikipedia page for more information.
+Uwaga: podrozdział ten zostanie uzupełniony w przyszłej wersji podręcznika. Na razie po więcej informacji odsyłamy do stron Wikipedii.
 
 ### Matlab
 
-- Used for writing programs that involve advanced math (calculus, linear algebra, etc.)
-- Not freely available
-- Related languages: Mathematica, Maple
+- Używany do pisania programów wymagających zaawansowanej matematyki (rachunku różniczkowego, algebry liniowej itp.)
+- Nie jest darmowy
+- Powiązane języki: Mathematica, Maple
 
-Note that this section will be completed in a future version of the field guide. For now, you should refer to wikipedia page for more information.
+Uwaga: podrozdział ten zostanie uzupełniony w przyszłej wersji podręcznika. Na razie po więcej informacji odsyłamy do stron Wikipedii.
 
-### Esoteric Programming Languages
+### Ezoteryczne Języki Programowania
 
-Anybody can make their own programming language. Doing so involves coming up with a syntax for your language, and writing a parser and compiler or interpreter so that programs in your language can be run. Most programming languages that people have made never become widely used.
+Każdy może stworzyć własny język programowania. Wymaga to wymyślenie składni języka, napisania parsera i kompilatora lub interpretera, tak aby możliwe było uruchomienie programu w nowym języku. Większość języków programowania stworzonych przez ludzi, nigdy nie była powszechnie używana.
 
-In addition to programming languages that have practical uses, people have made many programming languages that were intended to be nothing more than jokes, or to test the limits of how obscure a programming language can be. Some of them make the low level machine languages you saw earlier seem rather logical! Wikipedia has a [list of such languages](https://en.wikipedia.org/wiki/Esoteric_programming_language).
+Oprócz języków programowania, które mają praktyczne zastosowanie, ludzie stworzyli wiele języków programowania, które miały być jedynie dowcipami lub testami na granice tego, jak niejasny może być język programowania. Niektóre z nich sprawiają, że języki maszynowe niskiego poziomu, które wcześniej widzieliście, wydają się logiczne! Wikipedia zawiera [wykaz takich języków] (https://en.wikipedia.org/wiki/Esoteric_programming_language).
 
-You could even make your own programming language if you wanted to!
+Jeśli masz tylko ochotę, możesz nawet stworzyć własny język programowania!
 
-## How does the computer process your program?
+## Jak komputer uruchamia program?
 
-A programming language such as Python or Java is implemented using a program itself --- the thing that takes your Python program and runs it is a program that someone has written!
+Język programowania, taki jak Python lub Java jest uruchamiany przez program, który został przez kogoś napisany!
 
-Since the computer hardware can only run programs in a low level language (machine code), the programming system has to make it possible for your Python instructions to be executed using only machine language. There are two broad ways to do this: interpreting and compiling.
+Ponieważ sprzęt komputerowy może uruchamiać tylko programy w języku niskiego poziomu (kod maszynowy), system programowania musi umożliwiać wykonywanie instrukcji w języku Python przy użyciu tylko języka maszynowego. Można to zrobić na dwa sposoby: interpretując i kompilując.
 
-[This 1983 video](https://www.youtube.com/watch?v=_C5AHaS1mOA) provides a good analogy of the difference between an interpreter and a compiler.
+[Ten film z 1983 r.] (Https://www.youtube.com/watch?v=_C5AHaS1mOA) przedstawia trafną analogię między interpreterem a kompilatorem.
 
-The main difference is that a compiler is a program that converts your program to machine language, which is then run on the computer. An interpreter is a program that reads your program line by line, works out what those instructions are, and does them immediately.
+Główną różnicą sprowadza się do faktu, że kompilator to program, który konwertuje kod programu na język maszynowy, który następnie jest uruchamiany na komputerze. Interpreter to program, który czyta twój program wiersz po wierszu, analizuje instrukcje i wykonuje je natychmiast.
 
-There are advantages to both approaches, and each one suits some languages better than others. In reality, most modern languages use a mixture of compiling and interpreting. For example, most Java programs are *compiled* to an "intermediate language" called ByteCode, which is closer to machine code than Java. The ByteCode is then executed by an interpreter.
+Oba podejścia mają swoje zalety, a każdy z nich pasuje bardziej do jednych języków niż innych. W rzeczywistości większość współczesnych języków używa kombinacji kompilacji i interpretacji. Na przykład większość programów Java jest *kompilowana* do "języka pośredniego" o nazwie ByteCode, który jest bliższy kodowi maszynowemu niż Java. ByteCode jest następnie wykonywany przez interpreter.
 
-If your program is to be distributed for widespread use, you will usually want it to be in machine code because it will run faster, the user doesn't have to have an interpreter for your particular language installed, and when someone downloads the machine code, they aren't getting a copy of your original high-level program. Languages where this happens include C#, Objective C (used for programming iOS devices), Java, and C.
+Jeśli twój program ma być udostępniany większemu gronu odbiorców, zwykle będziesz chciał, aby był w postaci kodu maszynowego. Dzięki temu będzie działał szybciej, użytkownik nie będzie musiał mieć zainstalowanego interpretera i kiedy ktoś pobierze kod maszynowy, to nie będzie miał dostępu do kodu źródłowego programu wysokiego poziomu. Języki, w których mamy do czynienia z taką sytuacją to C#, Objective C (używane do programowania urządzeń iOS), Java i C.
 
-Interpreted programs have the advantage that they can be easier to program because you can test them quickly, trace what is happening in them more easily, and even sometimes type in single instructions to see what they do, without having to go through the whole compilation process. For this reason they are widely used for introductory languages (for example, Scratch and Alice are interpreted), and also for simple programs such as scripts that perform simple tasks, as they can be written and tested quickly (for example, languages like PHP, Ruby and Python are used in these situations).
+Programy interpretowane mają tę zaletę, że mogą być łatwiejsze do napisania, gdyż można je szybko przetestować, łatwiej śledzić, co się w nich dzieje, a nawet czasami dodać pojedynczą instrukcję, aby zobaczyć, co się stanie. Można to zrobić bez konieczności przechodzenia przez cały proces kompilacji. Z tego powodu są one szeroko używanie w celach edukacyjnych (na przykład Scratch i Alice są interpretowane), a także w przypadku prostych programów, takich jak skrypty wykonujące proste zadania, ponieważ można je szybko napisać i przetestować (na przykład języki takie jak PHP, Ruby i Python są używane w takich sytuacjach).
 
-The diagram below shows the difference between what happens in an interpreter and compiler if you write and run a program that sorts some numbers. The compiler produces a machine code program that will do the sorting, and the data is fed into that second program to get the sorted result. The interpreter simply does the sorting on the input by immediately following the instructions in the program. The compiler produces a machine code program that you can distribute, but it involves an extra phase in the process.
+Poniższy diagram pokazuje różnicę pomiędzy procesem interpretacji i kompilacji na przykładzie programu sortującego liczby. Rezultatem działania kompilatora program w kodzie maszynowym, który dokonuje sortowania. Dane wejściowe są podawane bezpośrednio do tego drugiego programu, w celu uzyskania posortowanego wyniku. Interpreter z kolei, po prostu wykonuje sortowanie na danych wejściowych, interpretując instrukcje programu. Kompilator tworzy program w kodzie maszynowym, który można rozpowszechniać.
 
-{image filename="comparing-sorting-programs-across-scratch-and-c.png" alt="Comparing sorting programs across Scratch and C"}
+{image filename="comparing-sorting-programs-across-scratch-and-c.png" alt="Porównanie sortowania przez program w Scratch i C"}
 
 {comment}
 
@@ -536,11 +536,11 @@ The diagram below shows the difference between what happens in an interpreter an
 
 {comment end}
 
-## The whole story!
+## ??The whole story??!
 
-There are many different programming languages, and new ones are always being invented. Each new language will need a new compiler and/or interpreter to be developed to support it. Fortunately there are good tools to help do this quickly, and some of these ideas will come up in the *Formal Languages* chapter, where things like regular expressions and grammars can be used to describe a language, and a compiler can be built automatically from the description.
+Pomimo tego, że istnieje wiele różnych języków programowania, to nowe są ciągle wymyślane. Każdy nowy język będzie wymagał opracowania nowego kompilatora i/lub interpretera. Na szczęście istnieją sprawdzone narzędzia, które pozwalają na szybkie stworzenie nowego języka. Niektóre pomysły na nowy język pojawią się w rozdziale *Języki formalne*, gdzie takie przy pomocy wyrażeń regularnych i gramatyki można opisać język, a kompilator może być zbudowany automatycznie z tego opisu.
 
-The languages we have discussed in this chapter are ones that you are likely to come across in introductory programming, but there are some completely different styles of languages that have very important applications. There is an approach to programming called [Functional programming](https://en.wikipedia.org/wiki/Functional_programming) where all operations are formulated as mathematical functions. Common languages that use functional techniques include Lisp, Scheme, Haskell, Clojure and F#; even some conventional languages (such as Python) include ideas from functional programming. A pure functional programming style eliminates a problem called *side effects*, and without this problem it can be easier to make sure a program does exactly what it is intended to do. Another important type of programming is [logic programming](https://en.wikipedia.org/wiki/Logic_programming), where a program can be thought of as a set of rules stating what it should do, rather than instructions on how to do it. The most well-known logic programming language is Prolog.
+Języki, które omawialiśmy w tym rozdziale, są często używane przy nauczaniu początkowym programowania. Istnieją zupełnie inne style języków, które mają bardzo ważne zastosowania. Przykładem tego może być podejście do programowania o nazwie [programowanie funkcjonalne] (https://en.wikipedia.org/wiki/Functional_programming), gdzie wszystkie operacje są sformułowane jako funkcje matematyczne. Popularne języki, które używają technik funkcjonalnych to: Lisp, Scheme, Haskell, Clojure i F #; nawet niektóre języki konwencjonalne (takie jak Python) zawierają elementy programowania funkcjonalnego. Czysty funkcjonalny styl programowania eliminuje problem zwany *efektami ubocznymi*, co z kolei pozwala zapewnić większą niezawodność programu. Innym ważnym typem programowania jest [programowanie logiczne] (https://en.wikipedia.org/wiki/Logic_programming), gdzie program może być traktowany jako zbiór reguł stwierdzających, co powinien robić, a nie ciąg instrukcji typu “zrób to”. Najbardziej znanym językiem programowania logicznego jest Prolog.
 
 
 
