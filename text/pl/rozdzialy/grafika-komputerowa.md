@@ -54,15 +54,15 @@ Następne wyzwanie wymaga obracania pudełkiem. Należy to robić tak, aby odnal
 Róznych typów przekształceń jest wiele, ale najczęściej stosowane to przesunięcie (translacja), obrót i skalowanie (zmiana rozmiaru).
 Przekształcenia w grafice komputerowej dotyczą nie tylko obiektów tworzących obraz, ale również położenia tzw. kamery jak i źródeł oświetlenia.
 
-In this section you can apply transformations to various images. We'll start by making the changes manually, one point at a time, but we'll move up to a quick shortcut method that uses a *matrix* to do the work for you. We'll start by looking at how these work in two dimensions - it's a bit easier to think about than three dimensions.
+W tym podrozdzaile różne obrazy poddasz przekształceniom. Zaczniemy od wprowadzenia zmian ręcznie, po jednym punkie na raz, ale potem przejdziemy do skróconej metody, która korzysta z matematycznego pojęcia *macierzy*. Na początek przyjrzymy się działaniu przekształcenia w dwóch wymiarach, bo łatwiej było temat zrozumieć.
 
-The following interactive shows an arrow, and on the right you can see a list of the points that correspond to its 7 corners. The arrow is on a grid (usually referred to as *cartesian coordinates*), where the centre point is the "zero" point. Points are specified using two numbers, *x* and *y*, usually written as (*x*,*y*). The *x* value is how far the point is to the right of the centre and the *y* value is how far above the centre it is. For example, the first point in the list is the tip at (0,2), which means it's 0 units to the right of the centre (i.e. at the centre), and 2 units above it. Which point does the last pair (2,0) correspond to? What does it mean if a coordinate has a negative *x* value?
+W interaktywnym narzędziu (poniżej) widzisz siedmiokąt tworzący jakby strzałkę, umieszczony w centralnej części ukłądu współrzędnych, zwanego czasami *kartezjańskim*. Po prawej stronie znajduje się m.in. lista par liczb (*x*,*y*), współrzędnych wierzchołków siedmiokąta (strzałki). Wartość *x* określa położenie punktu w poziomie (względem początku układu współrzędnych), a wartość *y* określa położenie punktu w pionie. Na przykład: pierwszy punkt na liście jest opisany parą liczb (0,2) i jest to punkt położony dwie jednostki powyżej punktu (0,0). Jakiemu punktowi odpowiada para liczb (2,0)? Co to znaczy, gdy wartość współrzędnej *x* jest liczbą ujemną?
 
-{panel type="teacher-note" summary="Solutions to questions"}
-(2,0) is the right-most corner of the arrow. A negative *x* value means that it's to the *left* of the centre instead of the right. (A negative *y* value is below the centre).
+{panel type="teacher-note" summary="Odpowiedzi"}
+(2,0) to wierzochłek strzałki najbardziej wysunięty na prawo. Ujemna wartość *x* oznacza, że punkt położony jest po lewej stronie punktu (0,0. Podobnie ujemna wartość *y* oznacza, że punkt położony jest poniżej punktu (0,).  
 {panel end}
 
-The first list of coordinates is for the original arrow position, and in the second list, you can type in the transformed points to move the arrow --- the original is shown in green and the moved one is in blue.
+Oprócz listy współrzędnych wierzchołków, widzisz jeszcze druga listę, jakby kopię tej pierwszej. Możesz ją edytować, tzn. wpisywać inne od początkowych wartości. W układzie współrzędnych zobaczysz efekt przekształcenia. Innymi kolorami zaznaczono postać początkową i tę po  zmianach.
 
 {comment}{include interactive computer-graphics-arrow parameters="&quiz=2 0 0 5 0 2 0 4 0 0 2 0 0 0 0 1 &hidetarget=true"}{comment end}
 {button link="http://csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-points.html?info=Your%20first%20challenge%20is%20to%20add%202%20to%20all%20the%20%3Cem%3Ex%3C/em%3E%20points,%20and%203%20to%20all%20the%20%3Cem%3Ey%3C/em%3E%20points%20(you%20can%20either%20type%20the%20new%20number%20or%20put%20the%20calculation%20in%20the%20box%20e.g.%20%220.5+2%22.%0AWhat%20effect%20does%20this%20have%20on%20the%20original%20arrow?%20(Be%20careful%20to%20add%20the%20negative%20numbers%20correctly;%20for%20example,%20adding%202%20to%20-0.5%20gives%201.5.)%20What%20happens%20if%20you%20subtract%203%20from%20each%20of%20the%20original%20coordinate%20values?%0A&quiz=2%200%200%205%200%202%200%204%200%200%202%200%200%200%200%201%20&hidetarget=true" text="Click for interactive: changing point locations"}
@@ -73,6 +73,7 @@ The transform in this interactive *translates* the arrow 2 units to the right an
 {panel end}
 
 The above transform is called a *translation* --- it translates the arrow around the grid. This kind of transform is used in graphics to specify where an object should be placed in a scene, but it has many other uses, such as making an animated object move along a path, or specifying the position of the imaginary camera (viewpoint).
+Przekształcenie to nazywa się *przesunięciem* (translacją) --- służy do zmiany położenia punktu (zbioru punktów) w układzie współrzędnych.
 
 The next challenge involves changing the size of the image.
 
