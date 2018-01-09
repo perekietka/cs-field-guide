@@ -68,26 +68,25 @@ Oprócz listy współrzędnych wierzchołków, widzisz jeszcze druga listę, jak
 {button link="http://csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-points.html?info=Your%20first%20challenge%20is%20to%20add%202%20to%20all%20the%20%3Cem%3Ex%3C/em%3E%20points,%20and%203%20to%20all%20the%20%3Cem%3Ey%3C/em%3E%20points%20(you%20can%20either%20type%20the%20new%20number%20or%20put%20the%20calculation%20in%20the%20box%20e.g.%20%220.5+2%22.%0AWhat%20effect%20does%20this%20have%20on%20the%20original%20arrow?%20(Be%20careful%20to%20add%20the%20negative%20numbers%20correctly;%20for%20example,%20adding%202%20to%20-0.5%20gives%201.5.)%20What%20happens%20if%20you%20subtract%203%20from%20each%20of%20the%20original%20coordinate%20values?%0A&quiz=2%200%200%205%200%202%200%204%200%200%202%200%200%200%200%201%20&hidetarget=true" text="Click for interactive: changing point locations"}
 
 
-{panel type="teacher-note" summary="Solution"}
+{panel type="teacher-note" summary="Rozwiązanie"}
 The transform in this interactive *translates* the arrow 2 units to the right and 3 units up. Subtracting three translates the arrow down and to the left.
 {panel end}
 
-The above transform is called a *translation* --- it translates the arrow around the grid. This kind of transform is used in graphics to specify where an object should be placed in a scene, but it has many other uses, such as making an animated object move along a path, or specifying the position of the imaginary camera (viewpoint).
-Przekształcenie to nazywa się *przesunięciem* (translacją) --- służy do zmiany położenia punktu (zbioru punktów) w układzie współrzędnych.
+Przekształcenie to nazywa się *przesunięciem* (translacją) --- służy do zmiany położenia punktu (zbioru punktów) w układzie współrzędnych. Ten typ przekształceń jest używany w grafice komputerowej do określenia położenia obiektu, ale również do innych celów, np. animowania przesunięcia obiektu wzdłuż jakiejś ścieżki, czy określenia położenia kamery (punktu obserwacyjnego). 
 
-The next challenge involves changing the size of the image.
+Następny przykład dotyczy zmiany rozmiaru obrazu.
 
 {comment}{include interactive computer-graphics-arrow parameters="&quiz=0.5 0 0 0 0 0.5 0 0 0 0 1 0 0 0 0 1 &hidetarget=true"}{comment end}
 {button link="http://csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-points.html?info=In%20this%20next%20interactive,%20try%20replacing%20the%20coordinates%20in%20the%20second%20list%20with%20all%20the%20original%20values%20multiplied%20by%202.%20What%20is%20the%20effect%20of%20this%20transform?%20What%20would%20happen%20if%20you%20multiply%20each%20value%20by%2010?%20How%20about%200.5?%20What%20if%20you%20only%20multiply%20the%20%3Cem%3Ex%3C/em%3E%20values?&quiz=0.5%200%200%200%200%200.5%200%200%200%200%201%200%200%200%200%201%20&hidetarget=true" text="Click for interactive: scaling"}
 
 
-{panel type="teacher-note" summary="Solution"}
-Multiplying by 2 makes the arrow twice as large in each dimension. Multiplying by 10 makes it 10 times as large, which won't fit in the view. Multiplying by 0.5 makes the arrow half the size. Multiplying only the x values makes the arrow wider horizontally only.
+{panel type="teacher-note" summary="Rozwiązanie"}
+Pomnożenie przez 2 skutkuje dwukrotnym powiększeniem strzałki w każdym z wymiarów (układu współrzędnych). Pomnożenie przez 10 zmiania rozmiar 10 razy i obiekt nie zmieści się w polu widzenia. Pomnożenie przez 0,5 zmniejszy strzałkę dwukrotnie. Pomnożenie tylko watości x skutkuje wyłącznie zmianą strzałki w jednym z wymiarów (w poziomie).
 {panel end}
 
-This transformation is called *scaling*, and although it can obviously be used to control the size of an object, this can in turn be used to create a visual effect such as making the object appear closer or further away.
+To przykształcenie nosi nazwę *skalowanie*, i służy do ustalania rozmiaru obiektu. Wykorzystane w odpowiedni sposób pozwala na tworzenie efektów takich jak przybliżanie obiektu lub jego oddalanie (od punktu obserwacyjnego).
 
-In the following interactive, try to get the blue arrow to match up with the red one. It will require a mixture of scaling and translation.
+Poniżej znajduje się interaktywne narzędzie, które pozwala na nakładanie strzałek jedna na drugą. Należy zastosować zarówno operację skalowanie, jak i przesunięcie.
 
 {comment}{include interactive computer-graphics-arrow parameters="&quiz=2 0 0 5 0 2 0 4 0 0 2 0 0 0 0 1"}{comment end}
 {button link="http://csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-points.html?info=%20Try%20to%20get%20the%20blue%20arrow%20to%20match%20up%20with%20the%20red%20one.%20It%20will%20require%20a%20mixture%20of%20scaling%20and%20translation.&quiz=2%200%200%205%200%202%200%204%200%200%202%200%200%200%200%201" text="Click for interactive: combining scaling and translation challenge"}
