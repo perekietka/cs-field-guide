@@ -91,37 +91,37 @@ Poniżej znajduje się interaktywne narzędzie, które pozwala na nakładanie st
 {comment}{include interactive computer-graphics-arrow parameters="&quiz=2 0 0 5 0 2 0 4 0 0 2 0 0 0 0 1"}{comment end}
 {button link="http://csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-points.html?info=%20Try%20to%20get%20the%20blue%20arrow%20to%20match%20up%20with%20the%20red%20one.%20It%20will%20require%20a%20mixture%20of%20scaling%20and%20translation.&quiz=2%200%200%205%200%202%200%204%200%200%202%200%200%200%200%201" text="Click for interactive: combining scaling and translation challenge"}
 
-Next, see what happens if you swap the *x* and *y* value for each coordinate.
+Co się stanie, gdy zamienimy miejscami wartości *x* i *y* wspólrzędnych punktu?
 
 {comment}{include interactive computer-graphics-arrow parameters="&quiz=0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 1 &hidetarget=true &zoom=-5.0"}{comment end}
 {button link="http://csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-points.html?info=Next,%20see%20what%20happens%20if%20you%20swap%20the%20%3Cem%3Ex%3C/em%3E%20and%20%3Cem%3Ey%3C/em%3E%20value%20for%20each%20coordinate.&quiz=0%201%200%200%201%200%200%200%200%200%201%200%200%200%200%201%20&hidetarget=true%20&zoom=-5.0" text="Click for interactive: swapping coordinates"}
 
-This is a simple *rotation* transformation, also useful for positioning objects in a scene,
-but also for specifying things like camera angles.
+Efektem jest prosty *obrót*. Takie przekształcenie może służyć również do określenia takich parametrów jak kąt widzenia kamery (obserwatora).
 
-Typing all these coordinates by hand is inefficent.
-Luckily there's a much better way of achieving all this.
-Read on!
+Typing all these coordinates by hand is inefficent. Oczywiście ręczna zmiana wartości współrzędnych, jedna po drugiej, jest nieefektywna. Na szczęście jest na to sposób. 
+O tym przeczytasz poniżej!
+
 
 {comment}We won't mention reflection and shearing etc., but this can go in the "whole story" section.{comment end}
 
-### Matrix transformations
+### Przekształcenia macierzowe
 
-{panel type="teacher-note" summary="Extra preparation for using matrix transforms"}
+{panel type="teacher-note" summary="Wymagania co do wiedzy uczących się"}
 
 This section introduces the use of matrices to do the transforms. It doesn't assume that they have encountered matrices before, but if students are completely new to matrix algebra and are also weak in algebra in general, the explanation in this chapter might be a little minimal for them, and extra help will be needed. There are good resources around that explain matrices, although they likely provide more detail than needed. The
-[Khan academy](https://www.khanacademy.org/math/precalculus/precalc-matrices) have videos and quizzes explaining matrices (we are particularly interested in multiplying a matrix by a vector, which is what is happening when a matrix transform is applied to a point  - the point is the vector).
+Ten podrozdział jest wprowadzeniem do zastosowania macierzy w grafice komputerowej. Nie jest konieczne, aby uczący się znali pojęcie mcierzy wcześniej. Gdyby wyjaśnienia zawarte w tekście były niewystarczające do zrozumienia tematu przez uczących się, to można im skazać inne zasoby edukacyjne, np. nagrania wideo i zadania pochodzące z 
+[Khan academy](https://www.khanacademy.org/math/precalculus/precalc-matrices).
 
-Other explanations aimed at school students include:
+Oto inne odnośniki do materiałów edukacyjnych (w języku angielskim):
 - [Math is Fun - Matrix multiplying](http://www.mathsisfun.com/algebra/matrix-multiplying.html)
 - [Math in Sight - Matrix vector multiplication](http://mathinsight.org/matrix_vector_multiplication)
 - [Math Planet - Transformation using matrices](http://www.mathplanet.com/education/geometry/transformations/transformation-using-matrices)
-- [Wikipedia entry on matrix transformation](https://en.wikipedia.org/wiki/Transformation_matrix) - which likely has too much extra detail for students in it
+- [Wikipedia entry on matrix transformation](https://en.wikipedia.org/wiki/Transformation_matrix) - w tym artykule poziom szczegółowości jest już znaczący
 {panel end}  
 
 
-There's a much easier way to specify transformations than having to change each coordinate separately.
-Transformations are usually done in graphics using *matrix* arithmetic, which is a shorthand notation for doing lots of simple arithmetic operations in one go. The matrix for the two-dimensional transformations we've been doing above has four values in it. For the 2 dimensional scaling transform where we made each *x* and *y* value twice as large, the matrix is written as:
+Istnieje o wiele prostszy sposób określenia paramatrów przekształcenia niż zmiana wartości współrzędnych punktów jednego po drugim. 
+W grafice komputerowej używa się zwykle operacji na *macierzach*, która w istocie jest skróconym opisem grupy operacji arytmetycznych. Macierz przekształcenia tego typu, które wykonaliśmy powyżej, składa się z czterech liczb. W konretnym przypadku, gdy każdą ze współrzędnych mnożymy przez 2, macierz ma postać:
 
 {math-block}
 \begin{bmatrix}
