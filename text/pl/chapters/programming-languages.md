@@ -544,9 +544,9 @@ Języki, które omawialiśmy w tym rozdziale, są często używane przy nauczani
 
 
 
-## Further reading
+## ??Further reading
 
-### Useful Links
+### ??Useful Links
 
 - The [TeachICT lesson on programming languages](http://www.teach-ict.com/gcse_computing/ocr/216_programming/programming_languages/miniweb/index.htm) covers many of the topics in this chapter
 - CS Online has a [quick overview of this topic](http://courses.cs.vt.edu/~csonline/ProgrammingLanguages/Lessons/Introduction/index.html)
