@@ -98,7 +98,7 @@ Co się stanie, gdy zamienimy miejscami wartości *x* i *y* wspólrzędnych punk
 
 Efektem jest prosty *obrót*. Takie przekształcenie może służyć również do określenia takich parametrów jak kąt widzenia kamery (obserwatora).
 
-Typing all these coordinates by hand is inefficent. Oczywiście ręczna zmiana wartości współrzędnych, jedna po drugiej, jest nieefektywna. Na szczęście jest na to sposób. 
+Oczywiście ręczna zmiana wartości współrzędnych punktów, jednego po drugiej, jest nieefektywna. Na szczęście jest na to sposób. 
 O tym przeczytasz poniżej!
 
 
@@ -108,7 +108,6 @@ O tym przeczytasz poniżej!
 
 {panel type="teacher-note" summary="Wymagania co do wiedzy uczących się"}
 
-This section introduces the use of matrices to do the transforms. It doesn't assume that they have encountered matrices before, but if students are completely new to matrix algebra and are also weak in algebra in general, the explanation in this chapter might be a little minimal for them, and extra help will be needed. There are good resources around that explain matrices, although they likely provide more detail than needed. The
 Ten podrozdział jest wprowadzeniem do zastosowania macierzy w grafice komputerowej. Nie jest konieczne, aby uczący się znali pojęcie mcierzy wcześniej. Gdyby wyjaśnienia zawarte w tekście były niewystarczające do zrozumienia tematu przez uczących się, to można im skazać inne zasoby edukacyjne, np. nagrania wideo i zadania pochodzące z 
 [Khan academy](https://www.khanacademy.org/math/precalculus/precalc-matrices).
 
@@ -130,13 +129,13 @@ W grafice komputerowej używa się zwykle operacji na *macierzach*, która w ist
 \end{bmatrix}
 {math-block end}
 
-You can try it out in the following interactive:
+Aby lepiej to zrozumieć, otwórz interaktywne narzędzie, które jest poniżej:
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix.html?info=You%20can%20type%20the%20scaling%20matrix%20into%20this%20interactive%20to%20see%20what%20it%20does%20(replace%20the%20ones%20with%20twos).%20The%20top%20left-hand%20value%20just%20means%20multiply%20all%20the%20%3Cem%3Ex%3C/em%3E%20values%20by%202,%20and%20the%20bottom%20right%20one%20means%20multiply%20all%20the%20%3Cem%3Ey%3C/em%3E%20values%20by%202.%20For%20the%20meantime,%20leave%20the%20translate%20values%20as%200.&quiz=2%200%200%200%200%202%200%200%200%200%202%200%200%200%200%201" text="Click for interactive: 2D scaling"}
 
-At this stage you may want to have the interactive open in a separate window so that you can read the text below and work on the interactive at the same time.
+Na tym etapie czytania przewodnika warto pracować z dwoma okanmi przeglądarki: w jednym czytasz tekst, a w drugim pracujesz z narzędziem.
 
-Now try changing the matrix to
+Zmień liczby w macierzy na takie:
 
 {math-block}
 \begin{bmatrix}
@@ -145,7 +144,7 @@ Now try changing the matrix to
 \end{bmatrix}
 {math-block end}
 
-or
+lub
 
 {math-block}
 \begin{bmatrix}
@@ -154,9 +153,9 @@ or
 \end{bmatrix}
 {math-block end}
 
-{panel type="teacher-note" summary="Explanation"}
+{panel type="teacher-note" summary="Wyjaśnienie"}
 
-These should create an arrow 3 times as big and 0.2 (i.e. scaled down to one fifth of the size) times as big respectively.
+Efektem powinno być odpowiednio: strzałka powiększona trzy razy (w każdym z wymiarów) i strzałka pomniejszona do 1/5 wielkości (w każdym wymiarze).
 {panel end}
 
 The "add translate" values in the interactive are added to each *x* and *y* coordinate; experiment with them to see what they do. Now try to find suitable values for these and the matrix to match the arrow up with the red one.
