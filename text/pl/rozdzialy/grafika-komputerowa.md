@@ -201,9 +201,9 @@ Góry wiersz macierzy ma wpływ na zmianę wartości współrzędnych *x* w taki
 
 góry wiersz macierzy zawiera następującą informację: w skład wartości *x* podwojona wartość początkowej wartości *x*, i nic więcej, bo wpływ *y* jest opisany w macierzy liczbą 0. Krótko mówiąc: wartość *x* zostaje podwojona. Drugi wiersz macierzy ma wpływ na wartość *y*: na nową wartość *y* nie ma wpływu wartość początkowa *x* (bo w macierzy jest 0), a tylko początkowa wartość *y*, którą należy pomnożyć przez 4.
 
-That now explains the {math}\begin{bmatrix}  0 & 1 \\   1 & 0 \\   \end{bmatrix}{math end} matrix. The new *x* value has none of the original *x*, but exactly the original *y* value, and vice versa. This swaps all the *x* and *y* coordinates, which is the same as rotating the object to the right.
+W tym momencie jasny powinien być sens macierzy {math}\begin{bmatrix}  0 & 1 \\   1 & 0 \\   \end{bmatrix}{math end}. Nowa wartość *x* jest równa początkowej wartości *y* i vice versa. Przekształcenie opsiane przez macierz, w którym nastąpiła zamiana wartości przypisywanych współrzednym *x* i *y* jest tym samym, co obrót w prawo.  
 
-Where it gets interesting is when you use a little of each value; try the following matrix:
+Interesuje może być przeanalizowanie sytuacji, w której przekształcenie opisane jest np. taką macierzą:
 
 {math-block}
 \begin{bmatrix}
@@ -212,10 +212,9 @@ Where it gets interesting is when you use a little of each value; try the follow
 \end{bmatrix}
 {math-block end}
 
-Now the *x* value of each coordinate is a mixture of 0.7 of the original *x*, and 0.7 of the original *y*.
-This is called a *rotation*.
+This is called a *rotation*. Teraz wartość *x* jest efektem jakby zmieszania 0,7 początkowych wartości *x* i *y*. 
 
-In general, to rotate an image by a given angle you need to use the sine (abbreviated sin) and cosine (abbreviated cos) functions from trigonometry. To rotate the image anticlockwise by {math}\theta{math end} degrees, you'll need the following values in the matrix, which rely on trig functions:
+W ogólnym przypadku do zapisu macierzy obrotu obiektu o konkretny kąt należy użyć funkcji trygonomtrycznych sinus (skrót: sin) i cosinus (skrót: cos):
 
 {math-block}
 \begin{bmatrix}
@@ -224,15 +223,15 @@ In general, to rotate an image by a given angle you need to use the sine (abbrev
 \end{bmatrix}
 {math-block end}
 
-{panel type="teacher-note" summary="Explanation"}
+{panel type="teacher-note" summary="Wyjaśnienie"}
 
-If your students aren't familiar with sin and cos, it may be worth going over them separately, including the idea that the angle is usually measured in degrees, and the sin and cos functions will produce a number between 0  and 1.
-The [Khan Academy](https://www.khanacademy.org/math/trigonometry/trigonometry-right-triangles) has more information about sine and cosine functions, explained in terms of triangles.
+Jeśli uczący się nie mają wiedzy o funkcjach trygnometrycznych, można poprzestać na przedstawieniu koncepcji: kąt mierzymy w stopniach, a wartości funkcji sinus i cosinus przyjmują wartości między 0 i 1.
+
 {panel end}
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix.html?info=You%20can%20type%20calculations%20directly%20into%20the%20interactive%20-%20if%20you%20type%20cos(60)%20it%20will%20work%20out%20the%20cosine%20of%2060%20degrees%20for%20you,%20which%20happens%20to%20be%20exactly%200.5.%20Or%20you%20can%20just%20type%20in%20the%20sin%20and%20cosine%20values;%20the%200.7%20numbers%20in%20the%20rotation%20matrix%20are%20just%20the%20values%20for%20sin(45)%20and%20so%20on%20(or%20at%20least,%20they%20approximately%20the%20value;%20it%27s%20actually%200.70710678...,%20which%20happens%20to%20be%20the%20square%20root%20of%200.5,%20but%200.7%20is%20close%20enough%20for%20our%20example).&quiz=0.7%200.7%200%205%20-0.7%200.7%200%204%200%200%201%200%200%200%200%201" text="Click for interactive: matrix rotation"}
 
-What is the matrix for rotation by 360 degrees?
+Jaką postać ma macierz obrotu o 360 stopni?
 
 {panel type="teacher-note" summary="Explanation"}
 If you put in 360 for {math}\Theta{math end} in the rotation formula, you get the matrix {math}\begin{bmatrix}  0 & 1 \\   1 & 0 \\   \end{bmatrix}{math end},
