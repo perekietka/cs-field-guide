@@ -133,7 +133,7 @@ Aby lepiej to zrozumieć, otwórz interaktywne narzędzie, które jest poniżej:
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix.html?info=You%20can%20type%20the%20scaling%20matrix%20into%20this%20interactive%20to%20see%20what%20it%20does%20(replace%20the%20ones%20with%20twos).%20The%20top%20left-hand%20value%20just%20means%20multiply%20all%20the%20%3Cem%3Ex%3C/em%3E%20values%20by%202,%20and%20the%20bottom%20right%20one%20means%20multiply%20all%20the%20%3Cem%3Ey%3C/em%3E%20values%20by%202.%20For%20the%20meantime,%20leave%20the%20translate%20values%20as%200.&quiz=2%200%200%200%200%202%200%200%200%200%202%200%200%200%200%201" text="Click for interactive: 2D scaling"}
 
-Na tym etapie czytania przewodnika warto pracować z dwoma okanmi przeglądarki: w jednym czytasz tekst, a w drugim pracujesz z narzędziem.
+(Na tym etapie czytania przewodnika warto pracować z dwoma okanmi przeglądarki: w jednym czytasz tekst, a w drugim pracujesz z narzędziem.)
 
 Zmień liczby w macierzy na takie:
 
@@ -158,14 +158,14 @@ lub
 Efektem powinno być odpowiednio: strzałka powiększona trzy razy (w każdym z wymiarów) i strzałka pomniejszona do 1/5 wielkości (w każdym wymiarze).
 {panel end}
 
-The "add translate" values in the interactive are added to each *x* and *y* coordinate; experiment with them to see what they do. Now try to find suitable values for these and the matrix to match the arrow up with the red one.
+Wartości wpisane do pola opisanego jako "add translate" są dodawane do współrzędnych *x* i *y*;sprawdź, jak to dziala. Następnie postaraj się znaleźć takie wartości w tym polu (i w polu macierzy), aby w efekcie nałożyć strzałkę na strzałkę czerwoną.
 
-{panel type="teacher-note" summary="Explanation"}
+{panel type="teacher-note" summary="Wyjaśnienie"}
 
-This needs the matrix {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end} and the x,y values 5 and 4 (this doubles the size of the arrow and moves it 5 across and 4 up).
+Macierze powinna mieć postać {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end} a współrzędne x i y odpowiednio 5 i 4 (rozmiar strzałki dwa razy powiększony i przesuniecie 5 w prawo i 4 w gorę).
 {panel end}
 
-What happens if you use the following matrix?
+Co stanie się, gdy użyjesz takiej macierzy, jak poniżej?
 
 {math-block}
 \begin{bmatrix}
@@ -174,12 +174,12 @@ What happens if you use the following matrix?
 \end{bmatrix}
 {math-block end}
 
-{panel type="teacher-note" summary="Explanation"}
+{panel type="teacher-note" summary="Wyjaśnienie"}
 
-The x values are doubled but the y values are multiplied by 4, so it is stretched twice as much vertically as horizontally.
+Wartość x jest dwa razy większa, ale wartość y jest powiększona cztery razy, więc to w efekcie strzałka jest powiększona w pionie dwa razy bardziej niż w poziomie.
 {panel end}
 
-Now try the following matrix:
+Teraz sprawdź efekt dla macierzy:
 
 {math-block}
 \begin{bmatrix}
@@ -188,9 +188,9 @@ Now try the following matrix:
 \end{bmatrix}
 {math-block end}
 
-This matrix should have rotated the arrow to the right.
+Efektem powinien być obrot strzałki w prawo.
 
-A simple way of looking at the matrix is that the top row determines the transformed *x* value, simply by saying how much of the original *x* value and *y* value contribute to the new *x* value. So in the matrix:
+Góry wiersz macierzy ma wpływ na zmianę wartości współrzędnych *x* w taki sposób, że określa udział (wkład) początkowych wartości *x* i *y* w wartości *x* po przekształceniu. W przykładzie:
 
 {math-block}
 \begin{bmatrix}
@@ -199,7 +199,7 @@ A simple way of looking at the matrix is that the top row determines the transfo
 \end{bmatrix}
 {math-block end}
 
-The top row just means that the new *x* value is 2 lots of the original *x*, and none of the original y, which is why all the *x* values double. The second row determines the *y* value: in the above example, it means that the new *y* value uses none of the original x, but 4 times the original *y* value. If you try this matrix, you should find that the location of all the *x* points is doubled, and the location of all the y points is multiplied by 4.
+góry wiersz macierzy zawiera następującą informację: w skład wartości *x* podwojona wartość początkowej wartości *x*, i nic więcej, bo wpływ *y* jest opisany w macierzy liczbą 0. Krótko mówiąc: wartość *x* zostaje podwojona. Drugi wiersz macierzy ma wpływ na wartość *y*: na nową wartość *y* nie ma wpływu wartość początkowa *x* (bo w macierzy jest 0), a tylko początkowa wartość *y*, którą należy pomnożyć przez 4.
 
 That now explains the {math}\begin{bmatrix}  0 & 1 \\   1 & 0 \\   \end{bmatrix}{math end} matrix. The new *x* value has none of the original *x*, but exactly the original *y* value, and vice versa. This swaps all the *x* and *y* coordinates, which is the same as rotating the object to the right.
 
