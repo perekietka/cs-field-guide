@@ -251,75 +251,71 @@ s & 0 \\
 {math-block end}
 
 Przeksztacłcenia, jakim jest przesunięcie (translacja) nie można opisać macierzą tego typu. Dlatego narzędzie interaktywne zawiera dodatkowe pole do określenia wartości *x* i *y* przesunięcia obiektu.
-Try it out in the following interactive. Sprawdź działanie innego narzędzia:
+Sprawdź działanie innego narzędzia:
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix.html?info=Try%20translating%20the%20original%20arrow%20so%20that%20it%20matches%20up%20with%20the%20red%20arrow.&quiz=1%200%200%205%200%201%200%204%200%200%201%200%200%200%200%201" text="Click for interactive: translation challenge"}
 
-{panel type="teacher-note" summary="Solution"}
-Translate x is 5 and y is 4 (5 to the right and 4 up). The matrix should be {math}\begin{bmatrix}  1 & 0 \\   0 & 1 \\   \end{bmatrix}{math end}
+{panel type="teacher-note" summary="Rozwiązanie"}
+Przesunięcie x 5, a y to 4 (5 w prawo i 4 w górę). Macierz ma postać: {math}\begin{bmatrix}  1 & 0 \\   0 & 1 \\   \end{bmatrix}{math end}
 {panel end}
 
-The next interactive needs you to combine translation with scaling.
+Kolejne narzędzie pozwala na składanie dwóch przekształceń: przesunięcia i skalowania.
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix.html?info=Now%20try%20to%20scale%20the%20original%20arrow%20in%20the%20following,%20and%20translate%20it%20to%20match%20the%20red%20arrow.&quiz=2%200%200%204%200%202%200%203%200%200%202%200%200%200%200%201" text="Click for interactive: scaling and translation challenge"}
 
-{panel type="teacher-note" summary="Solution"}
-The matrix should be {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end} (doubles the size). Translate x is 4 and y is 3.
+{panel type="teacher-note" summary="Rozwiązanie"}
+Macierz ma postać: {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end} (podwojenie rozmiaru). Przesunięcie x to 4, a y to 3..
 {panel end}
 
-The order in which translation and scaling happen makes a difference.
-Try the following challenge!
+Kolejnośc składania przekształceń (przesunięcia i skalowania) ma znaczenie. 
+Sprawdź!
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix-reversed.html?info=The%20following%20interactive%20has%20the%20translation%20and%20scaling%20the%20other%20way%20around.%20Use%20this%20one%20to%20transform%20the%20blue%20arrow%20to%20the%20red%20arrow.%20The%20order%20in%20which%20the%20operations%20happen%20makes%20a%20difference!%20&quiz=2%200%200%205%200%202%200%204%200%200%202%200%200%200%200%201" text="Click for interactive: translation before scaling"}
 
-{panel type="teacher-note" summary="Solution"}
-The matrix should be {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end} (still needed to double the size). However, the translation will be doubled as well since it comes before the matrix, therefore translate x is 2.5 and y is 2 (half of the distance needed).
+{panel type="teacher-note" summary="Rozwiązanie"}
+Macierz ma postać:e {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end} (znów podwojenie rozmiaru). Tym razem wartości opisujące przesunięcie są dwa razy mniejsze: dla x to 2,5, a dla y to 2. Wynika to z tego, że skalowanie będzie wykonane po przesunięciu.
 {panel end}
 
-In the above, you'll have noticed that scaling is affected by how far the object is from the centre.
-If you want to scale around a fixed point in the object (so it expands where it is), then an easy way is to translate it back to the centre (also called the *origin*), scale it, and then translate it back to where it was.  The following interactive allows you to move the arrow, then scale it, and move it back.
+Moża było zauważyć, że wartości opisujące przekształcenia zależą od odległości obiektu od punktu o współrzędnych (0,0) . 
+Rozwiązaniem może być przesunięcie obiektu tak, aby punkt 0 (*początek układu współrzędnych*) należał do obiektu, zmiana rozmiaru obiektu i przesunięcie go z powrotem.
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-transmatrix.html?info=The%20tip%20is%20at%20(-8,7),%20so%20you%20should%20translate%20it%20to%20(0,0),%20scale%20by%202,%20and%20translate%20back%20to%20(-8,%207).&zoom=-15.0%20&quiz=2%200%200%20-8%200%202%200%203%200%200%202%200%200%200%200%201%20&start=1%200%200%20-8%200%201%200%205%200%200%201%200%200%200%200%201%20&allPrize=5" text="Click for interactive: using translation to simplify scaling"}
 
-{panel type="teacher-note" summary="Solution"}
-The first translation is x=8 and y=-7. Now the arrow tip is at the origin, and the doubling will keep the tip where it is. The matrix should be {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end} as usual for doubling. The second translation needs to be -8,7 to get the arrow back to the starting point.
+{panel type="teacher-note" summary="Rozwiązanie"}
+Wartości dla przesunięcia to: x=8 i y=-7. W efekcie wierzchołek strzałki leży w punkcie 0 i podwojenie rozmiaru nie zmieni położenia tego wierzchołka. Macierz ma postać: {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end}. Wartości dla przesunięcia strzałki z powrotem to: -8,7.
 {panel end}
 
-The same problem comes up with rotation.
-The following interactive allows you to use a translation first to make the scaling more predicable.
+Podobny problem pojawia się w przypadku obrotu.
+Poniżej znajduje się interaktyne narzędzie, które pozwala poprzedzić skalowanie przesunięciem obiektu.
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-transmatrix.html?info=Try%20rotating%20this%20image%20by%2045%20degrees.You%27ll%20need%20to%20translate%20the%20tip%20to%20the%20origin,%20apply%20the%20rotation,%20and%20translate%20it%20back.&zoom=-10.0%20&quiz=0.699999988079071%200.699999988079071%200%20-4.400000095367432%20-0.699999988079071%200.699999988079071%200%204.599999904632568%200%200%201%200%200%200%200%201%20&start=1%200%200%20-3%200%201%200%204%200%200%201%200%200%200%200%201%20&allPrize=5" text="Click for interactive: using translation to simpilfy rotation"}
 
-{panel type="teacher-note" summary="Solution"}
-
-The first translation is x=8 and y=-7. Now the arrow tip is at the origin, and the doubling will keep the tip where it is. The matrix should be {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end} as usual for doubling. The second translation needs to be -8,7 to get the arrow back to the starting point.
-{panel end}
-
-The following two examples combine rotation, scaling and translation. You can use multiple matrices (that's the plural of matrix) to match up the target object --- the product of each matrix becomes the input to the next one. Oh, and the arrow is twice as fat, but still the same height (from base to tip).
+Kolejne dwa przykłady pozwalają na skłądanie trzech przekształceń: obrotu, skalowania i przesunięcia. Możesz używać wielu macierzy, aby dopasować efekt końcowy: wynik działania jednej macierzy staje się danymi wejściowymi dla następnej. Przy okazji: szerokość strzałki jest podwojona, ale wysokość się zmieniła. 
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-doublematrix.html?info=Try%20matching%20the%20blue%20arrow%20to%20the%20red%20one%20using%20two%20matrices%20(one%20to%20scale%20and%20one%20to%20rotate),%20and%20adding%20a%20vector.&zoom=-10.0%20&quiz=0%201%200%204%202%200%200%20-2%200%200%201%200%200%200%200%201%20&allPrize=5" text="Click for interactive: combining translation, scaling and rotation"}
 
-{panel type="teacher-note" summary="Solution"}
+{panel type="teacher-note" summary="Rozwiązanie"}
 
-There are two solutions depending on whether you scale or rotate first. If scaling first, the scaling matrix is {math}\begin{bmatrix}  2 & 0 \\   0 & 1 \\   \end{bmatrix}{math end}. That makes the arrow twice as fat, but still the same height. The rotation matrix is {math}\begin{bmatrix}  0 & 1 \\   1 & 0 \\   \end{bmatrix}{math end} -- that's a 90 degree clockwise rotation. The translation vector is 4, -2.
+Istnieją dwa rozwiązania, w zależności od wyboru pierwszego przekształcenia: skalowania lub obrotu. W pierwszym przypadku macierz ma postać: {math}\begin{bmatrix}  2 & 0 \\   0 & 1 \\   \end{bmatrix}{math end}. Macierz obrotu to: {math}\begin{bmatrix}  0 & 1 \\   1 & 0 \\   \end{bmatrix}{math end}. Wektor przesunięcia ma współrzedne 4, -2.
 
-If you rotate first, the rotation is still {math}\begin{bmatrix}  0 & 1 \\   1 & 0 \\   \end{bmatrix}{math end} (90 degrees clockwise) but the scaling is {math}\begin{bmatrix}  1 & 0 \\   0 & 2 \\   \end{bmatrix}{math end}, since it now needs to be scaled in the y direction. The translation vector is still 4, -2.
+W drugim przypasku macierz obrotu ma postać: {math}\begin{bmatrix}  0 & 1 \\   1 & 0 \\   \end{bmatrix}{math end} (90 stopni zgodnie z ruchem wskazówek zegara), ale macierz skalowanie jest inna: {math}\begin{bmatrix}  1 & 0 \\   0 & 2 \\   \end{bmatrix}{math end}, gdyż skalowanie musi tym razem być w kierunku y. Wektor przesunięcia ma współrzedne 4, -2.
 
-This can also be done by using only one matrix (if you combine the rotation and scaling); this could be a challenge to give the faster students. In that case the matrix is {math}\begin{bmatrix}  0 & 1 \\   2 & 0 \\   \end{bmatrix}{math end}. The translation is still 4,-2.
+Istnieje też rozwiązanie z jedną macierzą (opisującą obrót i skalowanie); to może być ciekawe wyzwanie dla zainteresowanych. Macierz będzie mieć postać: {math}\begin{bmatrix}  0 & 1 \\   2 & 0 \\   \end{bmatrix}{math end}. Wektor przesunięcia ma współrzedne 4, -2.
+
 {panel end}
 
-Here's another challenge combining all three transformations:
+Oto jeszcze jedno ćwiczenie, grupujące wszystkie przekształcenia:
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-doublematrix.html?info=You%20will%20need%20to%20use%20all%20three%20operations%20to%20do%20this%20next%20one.&zoom=-6.0%20&quiz=0.3499999940395355%20-0.3499999940395355%200%20-1%200.3499999940395355%200.3499999940395355%200%20-2%200%200%201%200%200%200%200%201%20&allPrize=5" text="Click for interactive: multiple transformation challenge"}
 
-{panel type="teacher-note" summary="Solution"}
+{panel type="teacher-note" summary="Rozwiązanie"}
 
-The solution will depend on the order of scaling and rotating, but a simple solution is {math}\begin{bmatrix}  0.7 & -0.7 \\   0.7 & 0.7 \\   \end{bmatrix}{math end}  for the first matrix, {math}\begin{bmatrix}  0.5 & 0 \\   0 & 0.5 \\   \end{bmatrix}{math end} for the second matrix, and -1,-2 for the translation.
+Rozwiązań może być wiele. Najprostsze to: {math}\begin{bmatrix}  0.7 & -0.7 \\   0.7 & 0.7 \\   \end{bmatrix}{math end}, {math}\begin{bmatrix}  0.5 & 0 \\   0 & 0.5 \\   \end{bmatrix}{math end}, i -1,-2 jako wartości przesunięcia. 
 {panel end}
 
-These combined transformations are common, and they might seem like a lot of work because each matrix has to be applied to every point in an object. Our arrows only had 7 points, but complex images can have thousands or even millions of points in them. Fortunately we can combine all the matrix operations in advance to give just one operation to apply to each point.
+Może się wydawać, że stosowanie grupy przekształceń jest żmudne, bo każdy punkt należący do obiektu należy poddać przekształceniom. Strzałka z przykładu to był wielokąt o 7 wierchołkach, a złożone obrazy składają się z tysięcy, czy nawet milionów punktów. Na szczęście operacje macierzowe można składać w jedną operację, która wykonanywana jest na każdym punkcie obiektu.
 
-### Combining transformations
+### Składanie przekształceń
 
 Several transforms being applied to the same image can be made more efficient by creating one matrix that has the effect of all the transforms combined.The combination is done by "multiplying" all the matrices.
 
