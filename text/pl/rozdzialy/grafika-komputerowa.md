@@ -233,15 +233,15 @@ Jeśli uczący się nie mają wiedzy o funkcjach trygnometrycznych, można poprz
 
 Jaką postać ma macierz obrotu o 360 stopni?
 
-{panel type="teacher-note" summary="Explanation"}
-If you put in 360 for {math}\Theta{math end} in the rotation formula, you get the matrix {math}\begin{bmatrix}  0 & 1 \\   1 & 0 \\   \end{bmatrix}{math end},
-because
-{math}\cos(360)=1{math end} and
+{panel type="teacher-note" summary="Wyjaśnienie"}
+Dla kąta 360 stopni {math}\Theta{math end} otrzymamy macierz {math}\begin{bmatrix}  0 & 1 \\   1 & 0 \\   \end{bmatrix}{math end},
+ponieważ
+{math}\cos(360)=1{math end} i
 {math}\sin(360)=1{math end}.
-This is also known as the 'identity' matrix because it makes no change to the original image. You get this matrix if you rotate by a multiple of 360 (including 0 degrees of course).
+Taką macierz nazywa się czasami rożsamościową (identycznościową), gdyż przekształcenie nią opisane nie zmienia niczego w położeniu obiektu. Taka macież opisuje każdy z obrotów o kąt wielokrotności 360 stopni (również 0 stopni).
 {panel end}
 
-The general matrix for *scaling* is a bit simpler than the one for rotation; if you want to scale by a factor of *s*, then you just use the matrix:
+Macierz dla *skalowania* w ogólnej postaci jest trochę prostsza niż dla obrotu; jeśli chcesz, aby współczynnik zmiany rozmiaru obiketu był opisany liczbą *s*, to macierz ma postać: 
 
 {math-block}
 \begin{bmatrix}
@@ -250,8 +250,8 @@ s & 0 \\
 \end{bmatrix}
 {math-block end}
 
-A translation can't be specified by this kind of matrix, so in the interactives we've provided an extra place to specify an *x* and *y* value to translate the input.
-Try it out in the following interactive.
+Przeksztacłcenia, jakim jest przesunięcie (translacja) nie można opisać macierzą tego typu. Dlatego narzędzie interaktywne zawiera dodatkowe pole do określenia wartości *x* i *y* przesunięcia obiektu.
+Try it out in the following interactive. Sprawdź działanie innego narzędzia:
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix.html?info=Try%20translating%20the%20original%20arrow%20so%20that%20it%20matches%20up%20with%20the%20red%20arrow.&quiz=1%200%200%205%200%201%200%204%200%200%201%200%200%200%200%201" text="Click for interactive: translation challenge"}
 
