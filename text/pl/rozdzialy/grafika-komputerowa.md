@@ -317,9 +317,9 @@ Może się wydawać, że stosowanie grupy przekształceń jest żmudne, bo każd
 
 ### Składanie przekształceń
 
-Several transforms being applied to the same image can be made more efficient by creating one matrix that has the effect of all the transforms combined.The combination is done by "multiplying" all the matrices.
+Jeśli obraz ma zostać poddany kilku przekształceniom jedno po drugim, to wówczas ten zbiór przekształceń należy opisać jedną macierzą, gdyż prowadzi to zmniejszenia liczby obliczeń, a więc wpływ na efektywność. Taką macierz wypadkową uzyskuje się przez ,,wymnożenie'' macierzy opisujących każde ze składowych przekształceń. 
 
-Multiplying two matrices can't be done by just multiplying the corresponding elements; if you are multiplying two matrices with the *a* and *b* values shown below, the resulting values from the multiplication are calculated as follows:
+Wynikiem mnożenia dwóch macierzy nie jest macierz złożona z iloczynów wartości odpowiadająch sobie nawzajem elementow macierzy; poniżej przedstawiono przykład ilustrujący zasadę mnożenia dwóch macierzy:
 
 {math-block}
 
@@ -340,9 +340,9 @@ a_{12}b_{11}+a_{22}b_{12} &  a_{12}b_{21}+a_{22}b_{22} \\
 
 {math-block end}
 
-It's a bit complicated, but this calculation is only done once to work out the combined transformation, and it gives you a single matrix that will provide two transforms in one operation.
+To może wydawać się trochę skomplikowane, ale trud zrozumienia opłaca się w praktyce: otrzymujemy jedną macierz, która opisuje złożenie dwóch przekształceń.
 
-As a simple example, consider what happens when you scale by 2 and then rotate by 45 degrees. The two matrices to multiply work out like this:
+Rozważmy prosty przykład. Chcemy złożyć dwa przekształcenia: skalowanie (zmiana rozmiaru) przez 2 i obrót o 45 stopni? Jak będzie wyglądać macierz opisująca złożenie tych przekształceń?
 
 {math-block}
 
@@ -368,12 +368,13 @@ As a simple example, consider what happens when you scale by 2 and then rotate b
 
 {math-block end}
 
-You can put the matrix we just calculated into the following interactive to see if it does indeed scale by 2 and rotate 45 degrees.
+Możesz sprawdzić działanie takiej macierzy, korzystając z interaktynego narzędzia poniżej:
+
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-singlematrix.html?info=Try%20putting%20in%20the%20final%20matrix%20here%20and%20see%20if%20it%20does%20scale%20by%202%20and%20rotate%20by%2045%20degrees.&zoom=-10.0%20&quiz=1.4%201.4%200%200%20-1.4%201.4%200%200%200%200%201%200%200%200%200%201%20&allPrize=5" text="Click for interactive: check a single matrix"}
 
-Now try making up your own combination of transforms to see if they give the result you expect.
-In this interactive you can drag the matrices to change their order.
+Warto sprawdzić inne przykłady, aby lepiej zrozumieć temat. Możesz posłużyć się narzędziem udostępnionym poniżej.
+Zwróć uwagę na to, że narzędzie pozwala na zmianę kolejności czynników (macierzy). 
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-multiply2matrix.html?info=Now%20try%20multiplying%20two%20other%20transform%20matrices%20that%20you%20make%20up%20yourself,%20and%20see%20if%20they%20produce%20the%20expected%20result.&zoom=-10.0%20&quiz=1.4%201.4%200%200%20-1.4%201.4%200%200%200%200%201%200%200%200%200%201%20&allPrize=5" text="Click for interactive: multiple matrices"}
 
