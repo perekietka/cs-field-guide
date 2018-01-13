@@ -587,15 +587,14 @@ Litera ,,g'' jest zbiorem odcinków i fragmentów krzywych. Gdy wyświetlamy ją
 
 {image filename="vector-letter-with-outline.png" caption="The points used to create the letter 'g' in Google's logo"}
 
-In 3D graphics shapes are often stored using lines and curves that mark out the edges of tiny flat surfaces (usually triangles), each of which is so small that you can't see them unless you zoom right in.
+W przypadku grafiki 3D kształty obiektow są często zbiorem ocinkow i krzywych, które stanowią krawędzie małych płaskich powierzchni (zwykle trójkątów), zwykle niedostrzegalnych dla oka.
 
 {image filename="dolphin-triangle-mesh.png"}
 {comment}
 Public domain image: https://en.wikipedia.org/wiki/Triangle_mesh#/media/File:Dolphin_triangle_mesh.png
 {comment end}
 
-The lines and circles that specify an object are usually given using numbers (for example, a line between a given starting and finishing position or a circle with a given centre and radius).
-From this a graphics program must calculate which pixels on the screen should be coloured in to represent the line or circle, or it may just need to work out where the line is without drawing it.
+Odcinki i okręgu, które są składowymi obiektów, są zwykle w pamięci komputera zapisane jako liczby (np. odcinek łączący dwa punkty, okrąg o danym środku i promieniu). Program graficzny musi umieć określić piksele, które będą reprezentować odcinki i okręgi na ekraniu monitora. Czasem program powinien umieć określić położenie odcinka bez rysowania go.
 
 For example, here's a grid of pixels with 5 lines shown magnified.
 The vertical line would have been specified as going from pixel (2,9) to (2,16) --- that is, starting 2 across and 9 up, and finishing 2 across and 16 up.
