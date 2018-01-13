@@ -384,11 +384,10 @@ Trzeba pamiętać, że złożone przekształcenie stosuje się czasem i dla mili
 Poniej opisano projekt, który ma służyć pogłębieniu tego tematu. Podano tam link do interaktywnego narzędzia do ćwieczń.
 
 
-### 3D transforms
+### Przekształcenia 3D 
 
-So far we've just done the transforms in two dimensions.
-To do this in 3D, we need a *z* coordinate as well, which is the depth of the object into the screen.
-A matrix for operating on 3D points is 3 by 3. For example, the 3D matrix for doubling the size of an object is as follows; it multiplies each of the *x*, *y* and *z* values of a point by 2.
+Do tej pory wykonywaliśmy tylko przekształcenia w dwóch wymiarach (na płaszczyźnie). Do opisu przekształceń w 3D potrzebujemy współrzędnej *z*, która opisuje trzeci wymiar, jakby głębość przestrzeni. 
+Macierz dla operacji w 3D, gdzie każdy punkt ma przypisane trzy współrzędne, jest rozmiaru 3 na 3. Na przykład, macierz opisująca podwojenie rozmiaru obiektu jest zapisana poniżej; każdą ze współrzędnych *x*, *y* i *z* trzeba pomnożyć przez 2.
 
 
 {math-block}
@@ -401,21 +400,20 @@ A matrix for operating on 3D points is 3 by 3. For example, the 3D matrix for do
 
 {math-block end}
 
-You can try out this 3D matrix in the following interactive.
+Poniżej narzędzie do ćwiczeń.
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-mini-editor/main%20(cutdown).html?info=%0AIn%20this%20interactive,%20try%20changing%20the%20scaling%20on%20the%20image%20(it%20starts%20with%20a%20scaling%20factor%20of%2010%20in%20all%20three%20dimensions)." text="Click for interactive: 3D transform matrix"}
 
-The above image mesh has 3644 points in it, and your matrix was applied to each one of them to work out the new image.
+Obraz czajniczka składa się z 3644 punktów. Przekształcenie opisane macierzą jest wykonywane na każdym z nich.
 
-The next interactive allows you to do translation (using a vector).
-Use it to get used to translating in the three dimensions (don't worry about using matrices this time.)
+Kolejne narzędzie pozwola na przesuwanie obiektu (z użyciem wektora).
+Zachęcamy do wykonania ćwiczeń. 
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-mini-editor/main%20(cutdown).html?info=%0ATranslation%20requires%203%20values,%20which%20are%20added%20to%20the%20*x*,%20*y*%20and%20*z*%20coordinates%20of%20each%20point%20in%20an%20object.%3Cp%3EIn%20the%20following%20interactive,%20try%20moving%20the%20teapot%20left%20and%20right%20(%20%3Cem%3Ex%3C/em%3E%20),%20up%20and%20down%20(%20%3Cem%3Ey%3C/em%3E%20),%20and%20in%20and%20out%20of%20the%20screen%20(%20%3Cem%3Ez%3C/em%3E%20)%20by%20adding%20a%20%E2%80%9Cvector%E2%80%9D%20to%20the%20operations.%20Then%20try%20combining%20all%20three.%3C/p%3E%0A" text="Click for interactive: 3D translation"}
 
-Rotation is trickier because you can now rotate in different directions.
-In 2D rotations were around the centre (origin) of the grid, but in 3D rotations are around a line (either the horizontal x-axis, the vertical y-axis, or the z-axis, which goes into the screen!)
+Obrót jest trudniej opisać, gdyż w przestrzeni jest trzy stopnie swobody. Na płaszczyźnie obraca się wokół punktu (0,0), a w przestrzeni obroty są wokół prostej (albo osi x, albo osi y, albo osi z, skierowanej jakby ,,w głąb'' ekranu!).
 
-The 2D rotation we used earlier can be applied to 3 dimensions using this matrix:
+Do obracania w trzech kierunkach używa się takiej macierzy:
 
 {math-block}
 
@@ -586,13 +584,11 @@ End of WebGL project
 
 {comment end}
 
-## Drawing lines and circles
+## Rysowanie odcinków i okręgów
 
-A fundamental operation is computer graphics is to draw lines and circles.
-For example, these are used as the components of scalable fonts and vector graphics;
-the letter "g" is specified as a series of lines and curves,
-so that when you zoom in on it the computer can redraw it at whatever resolution is needed.
-If the system only stored the pixels for the letter shape, then zooming in would result in a low quality image.
+Podstawową operacją w grafice komputerowej jest rysowanie odcinków i okręgów.
+Na przykład kształt czcionki na ekranie jest opisany m.in. przez odcinki i łuki okręgów.
+Litera ,,g'' jest zbiorem odcinków i fragmentów krzywych. Gdy wyświetlamy ją w powiększeniu na ekranie, to kształt litery jest rysowany od nowa. Możemy ją powiększać bez obawy o utratę jakości, gdyż obraz litery nie jest skończonym zbiorem pikseli, bo nie ma stałej rozdzielczości rozdzielczości, a jest tzw. grafiką wektorową.
 
 {comment}
 
