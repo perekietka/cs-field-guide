@@ -425,11 +425,11 @@ Do obracania w trzech kierunkach używa się takiej macierzy:
 
 {math-block end}
 
-Try applying that to the image above.
-This is rotating around the z-axis (a line going into the screen); that is, it's just moving the image around in the 2D plane.
-It's really the same as the rotation we used previously, as the last line (0, 0, 1) just keeps the z point the same.
+Spróbuj zastosować tę macierz do obrazu wyżej przedstawionymi.
+Ta macierz stanowi opis obrotu wokół osi z (prostej skierowanej ,,w głąb'' ekranu); w istocie ten przykład to obrót w płaszczyźnie.
+Ten sam, który był wcześniej. Ostatni wiersz macierzy (0, 0, 1) pozostawia wartość z bez zmian.
 
-Try the following matrix, which rotates around the x-axis (notice that the x value always stays the same because of the 1,0,0 in the first line):
+Poniżej znajduje się macierz opisującą obrót wokół osi x (współrzędna x pozostaje bez zmian: w pierwszym wierszu macierzy jest 1, 0, 0):
 
 {math-block}
 
@@ -441,7 +441,7 @@ Try the following matrix, which rotates around the x-axis (notice that the x val
 
 {math-block end}
 
-And this one for the y-axis:
+A poniżej macierz dla obrotu wokół osi y:
 
 {math-block}
 
@@ -453,7 +453,7 @@ And this one for the y-axis:
 
 {math-block end}
 
-The following interactive allows you to combine 3D matrices.
+Poniżej znajduje się interaktyne narzędzie, które pozwala na składanie macierzy dla przekształceń 3D.
 
 {comment}
 
@@ -463,29 +463,28 @@ The following interactive allows you to combine 3D matrices.
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-mini-editor/main%20(cutdown).html?info=%0AYou%20can%20experiment%20with%20moving%20the%20teapot%20around%20in%20space,%20changing%20its%20size,%20and%20angle.%3Cdl%20class=%22docutils%22%3E%0A%3Cdt%3EThink%20about%20the%20order%20in%20which%20you%20need%20to%20combine%20the%20transforms%20to%20get%20a%20particular%20image%20that%20you%20want.%3C/dt%3E%0A%3Cdd%3EFor%20example,%20if%20you%20translate%20an%20image%20and%20then%20scale%20it,%20you%E2%80%99ll%20get%20a%20different%20effect%20to%20scaling%20it%20then%20translating%20it.%0AIf%20you%20want%20to%20rotate%20or%20scale%20around%20a%20particular%20point,%20you%20can%20do%20this%20in%20three%20steps%20(as%20with%20the%202D%20case%20above):%20(1)%20translate%20the%20object%20so%20that%20the%20point%20you%20want%20to%20scale%20or%20rotate%20around%20is%20the%20origin%20(where%20the%20x,%20y%20and%20z%20axes%20meet),%20(2)%20do%20the%20scaling/rotation,%20(3)%20translate%20the%20object%20back%20to%20where%20it%20was.%20If%20you%20just%20scale%20an%20object%20where%20it%20is,%20its%20distance%20from%20the%20origin%20will%20also%20be%20scaled%20up.%3C/dd%3E%0A%3C/dl%3E%0A" text="Click for interactive: 3D with multiple matrices and vectors"}
 
-In the above examples, when you have several matrices being applied to every point in the image, a lot of time can be saved by converting the series of matrices and transforms to just one formula that does all of the transforms in one go. The following interactive can do those calculations for you.
+W tych przykładach, gdy dla pojedynczego punktu nalezało by użyć kilku macierzy kolejnych przekształceń, można zaoszczędzić dużo czasu przez zastąpienie kilku macierzy jedną, która opisuje złożenie tych przekształceń. Poniżej znajdziesz narzędzie do ćwiczeń.
 
-For example, in the following interactive, type in the matrix for doubling the size of an object (put the number 2 instead of 1 on the main diagonal values), then add another matrix that triples the size of the image (3 on the main diagonal).
-The interactive shows a matrix on the right that combines the two --- does it look right?
+Na przykład, zapisz macierz skalowania x2 (zmiany rozmiaru), zmieniając 1 na przekątnej na 2, a następnie inną macierz skalowania x3 (na przekątnej liczby 3).
+Narzędzie interaktywne pozwala zobaczyć po prawej stronie macierz, które jest opisem złożenia tych dwóch przekształceń. Co można zauważyć?
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-matrix-simplifier/CG-matrix-simplifier.html?info=Multiple%20transforms" text="Click for interactive: matrix simplifier"}
 
-{panel type="teacher-note" summary="Explanation"}
+{panel type="teacher-note" summary="Wyjaśnienie"}
 
-The combined result of scaling by 2 and then 3 should have 6 down the main diagonal (i.e. 6 times larger). The interactive gives a full derivation of the calculations being done on each x,y,z coordinate of each point in an image, but it really just has three inputs (x,y,z), which give the original position of a point, and three outputs (x',y',z') which give the transformed position of the point.
+Efekt złożenia przekształceń skalowania x2 i x3 jest identyczny z efektem skalowania x6. 
 
 {panel end}
 {comment}
 .. xTCB One teacher noted that students where need to know that the it requires transform matrix and one translation; not sure if this is now applicable
 {comment end}
 
-The interactive also allows you to combine in translations (just three numbers, for x, y and z).
-Try combining a scaling followed by a translation. What if you add a rotation --- does the order matter?
+Narzędzie pozwala też dodać przekształcenie, jakim jest przesunięcie.
+Sprawdź, jak działa składanie skalowania i przesunięcia. Co będzie, jeśli dodasz obrót --- czy kolejność przekształceń ma znaczenie?
 
-{panel type="curiosity" summary="Matrix multiplication in 3D"}
-In case you're wondering, the interactive is using the following formula to combine two matrices (you don't have to understand this to use it).
-It is called matrix multiplication, and while it might be a bit tricky, it's very useful in computer graphics because it reduces all the transformations you need to just one matrix, which is then applied to every point being transformed.
-This is way better than having to run all the matrices of every point.
+{panel type="curiosity" summary="Mnożenie macierzy w 3D"}
+Ktoś może być ciekaw, jak wygląda macierz przekształcenia wypadkowego. Poniżej ją zapiszano. 
+Możliwość zapisania macierzy wypadkowej jest bardzo użyteczna w grafice komputerowej, ponieważ grupa przekształceń jest wówczas opisana jedną macierzą, która jest stosowania dla każdego punktu obiektu. To redukuje w znaczący sposób liczbę obliczeń.  
 
 {comment}
 .. xTCB give an example for the following one day?
@@ -518,8 +517,9 @@ a_{13}b_{31}+a_{23}b_{32}+a_{33}b_{33} \\
 {math-block end}
 {panel end}
 
-{panel type="project" summary="3D transforms"}
+{panel type="project" summary="przekształcenia 3D"}
 For this project, you will demonstrate what you've learned in the section above by explaining a 3D transformation of a few objects. You should take screenshots of each step to illustrate the process for your report.
+
 
 The following scene-creation interactive allows you to choose objects (and their colours etc.),
 and apply one transformation to them.
