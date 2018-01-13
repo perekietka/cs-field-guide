@@ -374,14 +374,14 @@ Możesz sprawdzić działanie takiej macierzy, korzystając z interaktynego narz
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-singlematrix.html?info=Try%20putting%20in%20the%20final%20matrix%20here%20and%20see%20if%20it%20does%20scale%20by%202%20and%20rotate%20by%2045%20degrees.&zoom=-10.0%20&quiz=1.4%201.4%200%200%20-1.4%201.4%200%200%200%200%201%200%200%200%200%201%20&allPrize=5" text="Click for interactive: check a single matrix"}
 
 Warto sprawdzić inne przykłady, aby lepiej zrozumieć temat. Możesz posłużyć się narzędziem udostępnionym poniżej.
-Zwróć uwagę na to, że narzędzie pozwala na zmianę kolejności czynników (macierzy). 
+Zwróć uwagę na to, że narzędzie pozwala na zmianę kolejności czynników (macierzy). Wystarczy przciągnąć pola np. myszką.
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-multiply2matrix.html?info=Now%20try%20multiplying%20two%20other%20transform%20matrices%20that%20you%20make%20up%20yourself,%20and%20see%20if%20they%20produce%20the%20expected%20result.&zoom=-10.0%20&quiz=1.4%201.4%200%200%20-1.4%201.4%200%200%200%200%201%200%200%200%200%201%20&allPrize=5" text="Click for interactive: multiple matrices"}
 
-In computer graphics systems there can be many transformations combined, and this is done by multiplying them all together (two at a time) to produce one matrix that does all the transforms in one go.
-That transform might then be applied to millions of points, so the time taken to do the matrix multiplication at the start will pay off well.
+Systemy grafiki komputerowej zwykle wymagają wykonania złożonych przekształceń, które można przedstawić jako matematyczne złożenie wielu prostych przekształceń. Obliczeń nie wykonuje się etapami (efekt działania poprzedniego przekształcenia stowi zbiór danych do wykonania kolejnego przekształcenia). Projektanci systemu do opisu przekształcenia złożonego, jeśli to tylko możliwe, używają jednej macierzy, która jest iloczynem macierzy opisujących składowe przekształcenia. 
+Trzeba pamiętać, że złożone przekształcenie stosuje się czasem i dla miliona punktów naraz. Koszt znalezienia znalezienia macierzy wypadkowej dla grupy przekształceń jest niewielki w porównaniu z kosztem obliczeń dla nieefektywnego rozwiązania.
 
-The project below gives the chance to explore combining matrices, and has an interactive that will calculate the multiplied matrices for you.
+Poniej opisano projekt, który ma służyć pogłębieniu tego tematu. Podano tam link do interaktywnego narzędzia do ćwieczń.
 
 
 ### 3D transforms
