@@ -518,54 +518,43 @@ a_{13}b_{31}+a_{23}b_{32}+a_{33}b_{33} \\
 {panel end}
 
 {panel type="project" summary="przekształcenia 3D"}
-For this project, you will demonstrate what you've learned in the section above by explaining a 3D transformation of a few objects. You should take screenshots of each step to illustrate the process for your report.
+Wykonujący projekt będzie miał okazję pokazać w praktyce, czego się nauczył. Zadanie będzie polegać wyjasnieniu przekształcenia 3D. 
+Należy pamiętać o wykonaniu zrzutów ekranu, które będą elementem dokumentacji pracy.
 
 
-The following scene-creation interactive allows you to choose objects (and their colours etc.),
-and apply one transformation to them.
-To position them more interestingly, you will need to come up with multiple transformations
-(e.g. scale, then rotate, then translate),
-and use the "simplifier" interactive to combine all the matrices into one operation.
+Poniższe narzędzie pozwala na wybór obiektów (i ich kolorów etc.), i zastosowaniu jednego z przekształceń.
+Wyzwaniem będzie zaproponowanie grupy przekształceń (np. skalowanie, potem obrót, a następnie przesunięcie) i w końcu znalezienie ,,uproszczenia'' w postaci jednego wypadkowego przekształcenia.
 
-The scene-creation interactive can be run from here:
+Projektowanie należy zacząć od narzędzia zamieszczonego niżej. Podczas pracy należy robić notatki i zrzuty ekranu, które później można wykorzystać do udokumentowania etapów projektu.
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-mini-editor/main.html?info=Multiple%20transforms" text="Click for interactive: scene creation"}
 
-To generate combined transformations, you can use the following transform simplifier interactive:
+Kolejne narzędzie będzie pomocą w znalezeniu wypadkowego przekształcenia.
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-matrix-simplifier/CG-matrix-simplifier.html?info=Multiple%20transforms" text="Click for interactive: matrix simplifier"}
 
-Because you can't save your work in the interactives, keep notes and screen shots as you go along. These will be useful for your report, and also can be used if you need to start over again.
+We wprowadzeniu do projektu użyj kilku przykładów obrazów 3D. Opisz, co jest twórcze, autorskie w tych obrazach.
 
-Introduce your project with a examples of 3D images, and how they are used (perhaps from movies or scenes that other people have created). Describe any innovations in the particular image (e.g. computer generated movies usually push the boundaries of what was previously possible, so discuss what boundaries were moved by a particular movie, and who wrote the programs to achieve the new effects).
-One way to confirm that a movie is innovative in this area is if it has won an award for the graphics software.
+Aby wykazać się rozumieniem podstaw grafiki komputerowej, spróbuj umieścić kilka obiektów w konkretnym kontekście (np. czajniczek obok kilku filiżanek), i wyjaśnij istotę zastosowanych przekształceń, pokazując macierze opisujące przekształcenia.
 
-To show the basics of computer graphics,
-try putting a few objects in a particular arrangement (e.g. with the teapot sitting beside some cups),
-and explain the transforms needed to achieve this, showing the matrices needed.
+Podaj proste przykłady różnych przekształceń, również złożenia kilku przekształceń.
 
-Give simple examples of translation, scaling *and* rotation using your scene.
-You should include multiple transforms applied to one object, and show how they can be used to position an object.
+Pokaż, jak macierze składowe można zastąpić jedną macierzą wypadkową i objaśnij, używając konkretnych ilustracji, na czym polega efektywność tego rozwiązania.
 
-Show how the matrices for a series of transforms can be multiplied together to get one matrix that applies all the transforms at once.
-
-Discuss how the single matrix derived from all the others is more efficient, using your scene as an example to explain this.
 {panel end}
 {comment}
 End of 3D transform project
 {comment end}
 
 {panel type="project" summary="WebGL and OpenGL"}
-If you're confident with programming and want to explore graphics at a more practical level,
-you could do a similar project to the previous one using a graphics programming system such as
-[WebGL](https://en.wikipedia.org/wiki/WebGL) (which is the system used in the demonstrations above),
-or a widely used graphics system such as
+Biegli w programowaniu, chcący zgłębiać temat przekształceń graficznych w praktyce, mogą wykonać projekt używając jednego z systemów programowania grafiki:
+[WebGL](https://en.wikipedia.org/wiki/WebGL) (użyty do przygotowania narzędzi wyżej udostępnionych),
+lub powszechnie stosowany system
 [OpenGL](https://en.wikipedia.org/wiki/OpenGL).
-There is an interactive tutorial on OpenGL called
+Interaktywny samouczek OpenGl można znaleźć tutaj:
 [JPOT](http://www.cs.uwm.edu/%7Egrafix2/).
 
-Note that these project can be very time consuming because these are powerful systems,
-and there is quite a bit of detail to get right even for a simple operation.
+Wykonanie projektu w jednym z tych systemów może być bardzo czasochłonne. Trzeba się wiele nauczyć, zanim uda się uzyskać ciekawe efekty.
 {panel end}
 {comment}
 End of WebGL project
