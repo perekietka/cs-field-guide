@@ -606,17 +606,16 @@ Na papierze, używając linijki i cyrkla można łatwo rysować figury geometryc
 
 W tym podrozdziale przyjrzymy się bardzo prostym, ale sprytnym algorytmom, które pozwalają komputerowu szybkie wykonanie niezbędnych obliczeń.
 
-### Line drawing
+### Rysowanie odcinków
 
-{panel type="teacher-note" summary="Handouts for students to work on"}
-The students are asked to draw several lines in this section on grids;
-you could print a supply of these for them, or use graph paper.
+{panel type="teacher-note" summary="Materiały dla uczniów"}
+Do wykonania ćwiczeń uczniowie będą potrzebować kartek z wydrukowaną siatką kwadratową lub zwykłych kartek ze szkolnego zeszytu w kratkę.
 {panel end}
 
-To draw a line, a computer must work out which pixels need to be filled so that the line looks straight.
-You can try this by colouring in squares on a grid, such as the one below (they are many times bigger than the pixels on a normal printer or screen).
-We'll identify the pixels on the grid using two values, (*x*,*y*), where *x* is the distance across from the left, and *y* is the distance up from the bottom.
-The bottom left pixel below is (0,0), and the top right one is (19,19).
+Aby narysować odcinek, komputer musi wybrać piksele tak, aby ich zbiór wyglądał jak fragment linii prostej. 
+Warto wykonać kilka prób samodzielnie, na papierze w kratkę (oczywiście kratki są wielokrotnie większych rozmiarów niż piksel na monitorze czy kropka na wydruku).
+Wybrany zbiór pikseli będziemy określać za pomocą dwóch wartości (*x*,*y*), gdzie *x* to odległość od lewego brzegu kartki, a *y* to odległość od dolnego brzegu kartki.
+Piksel w lewym dolnym rogu ma współrzędne (0,0), a piksel w prawym górnym roku ma współrzędną (19,19).
 
 On the following grid, try to draw these straight lines by filling in pixels in the grid:
 
