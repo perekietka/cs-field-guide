@@ -659,16 +659,15 @@ oraz punkt, w którym prosta przecina oś Y, czyli (0, *y*). Współrzędna *y* 
 Innymi słowy, rysując linię prostą wybieramy piksele o współrzędnych ({math}x{math end}, {math}mx + c{math end}) dla kolejnych wartości *x*.
 
 Na przykład, wybierając {math}m=2{math end} and {math}c=3{math end} otrzymujemy prostą przechodzącą przez punkty (0,3), (1,5), (2,7), (3,9) itd.
-This line goes up 2 pixels for every one across {math}m=2{math end}, and crosses the y axis 3 pixels up ({math}c=3{math end}).
+Przesunięciu o 1 jednostkę w poziomie odpowiada przesunięcie o dwie jednostki w pionie ({math}m=2{math end}). Pierwszy piksel jest położony 3 jednostki powyżej brzegu siatki ({math}c=3{math end}).
 
+Poćwicz na innych przykładach dla różnych wartości  {math}m{math end} i {math}c{math end} (na przykład, zacznij od {math}c=0{math end}, i sprawdź trzy przypadki m: {math}m=1{math end}, {math}m=0.5{math end} i {math}m=0{math end}).
+Jakie są kąty nachylenia prostych?
 
-You should experiment with drawing graphs for various values of {math}m{math end} and {math}c{math end} (for example, start with {math}c=0{math end}, and try these three lines: {math}m=1{math end}, {math}m=0.5{math end} and{math}m=0{math end}) by putting in the values.
-What angle are these lines at?
-
-{panel type="teacher-note" summary="Solution"}
-A slope of 0 is a horizontal line, using {math}m=1{math end} will be at 45 degrees, because you go up 1 pixel for each one that you go across.
-A slope of a half ({math}m=0.5{math end}) is just under 27 degrees.
-There's a [demonstration here](http://www.mathopenref.com/coordslope.html) of slopes, which has an option for showing the angle (which might be more familiar to students.)
+{panel type="teacher-note" summary="Rozwiązanie"}
+Wartość m = 0 odpowiada prostej równoległej do dolnej krawędzi, wartość {math}m=1{math end} to przypadek prostej o kącie nachylenia 45 stopni (przesunięciu o 1 piksel w poziomie odpowiada przesunięcie o jeden piksel w pionie).
+Wartość ({math}m=0.5{math end}) opisuje prostą o kącie nachylenia mniejszym niż 27 stopni.
+Narzędzie [interaktywne](http://www.mathopenref.com/coordslope.html) może być pomocne w zrozumieniu związku wartości m z kątem pochylenia.)
 {panel end}
 
 The {math}mx + c{math end} formula can be used to work out which pixels should be coloured in for a line that goes between {math}(x_1, y_1){math end} and {math}(x_2, y_2){math end}.
