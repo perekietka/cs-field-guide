@@ -789,29 +789,28 @@ Poniżej zapisano obliczenia wykonane z użyciem algorytmu Bresenhama:
 
 ### Odcinki o innych kątach nachylenia
 
-So far the version of Bresenham's line drawing algorithm that you have used only works for lines that have a gradient (slope) between 0 and 1 (that is, from horizontal to 45 degrees). To make this algorithm more general, so that it can be used to draw any line, some additional rules are needed:
+Przedstawiona powyżej wersja algorytmu Bresenhama była wersją niepełną, gdyż działała poprawnie tylko dla odcinków o nachylonych do poziomu o kąt między 0 a 45 stopni (co odpowiada wartościom współczynnika m: od 0 do 1). Aby algorytm był uniwersalny, trzeba listę kroków algorytmu uzupełnić:
 
-- If a line is sloping downward instead of sloping upward, then when P is 0 or greater, draw the next column's pixel one row *below* the previous pixel, instead of above it.
-- If the change in {math}y{math end} value is greater than the change in {math}x{math end} value (which means that the slope is more than 1), then the calculations for A, B, and the initial value for P will need to be changed. When calculating A, B, and the initial P, use X where you previously would have used Y, and vice versa. When drawing pixels, instead of going across every column in the X axis, go through every row in the Y axis, drawing one pixel per row.
+- W przypadku, gdy odcinek jest nachylony nie w górę, ale w dół, to wówczas, gdy P >= 0, jako kolejny piksel należy wybrać ten położony po prawej w wierszu niżej.
+- Jeśli wartość {math}y{math end} rośnie szybciej niż wartość {math}x{math end} (co odpowiada kątowi większemu niż 45 stopni), to podczas obliczania wartości A, B, i początkowej wartości P, w miejscu X we wzorze należy wstawić Y, i vice versa. Podczas wybierania kolejnych pikseli do rysunku odcinka, zamiast dopasowywać wartość Y do X należy zrobić odwrotnie, co oznacza, że w jednym wierszu nie może być dwóch pikseli.
 
 {image filename="grid-20x20-blank.png" alt="Grid for drawing line"}
 
-In the grid above, choose two points of your own that are unique to you.
-Don't choose points that will give horizontal, vertical or diagonal lines!
+Zaznacz na siatce kwadratowej dowolne dwa punkty. 
+Wybierz je tak, aby nie łączył ich odcinek poziomy, pionowy, ani po przekątnej!
 
-Now use Bresenham's algorithm to draw the line.
-Check that it gives the same points as you would have chosen using a ruler, or using the formula {math}y = mx+b{math end}.
-How many arithmetic calculations (multiplications and additions) were needed for Bresenham's algorithm?
-How many would have been needed if you used the {math}y = mx+b{math end} formula?
-Which is faster (bear in mind that adding is a lot faster than multiplying for most computers).
+Użyj algorytmu Bresenhama do narysowania odcinka. Sprawdź, że w efekcie otrzymujesz te same piksele, które uzyskać można z użyciem linijki lub równania prostej {math}y = mx+b{math end}.
+Ile operacji arytmetycznych (mnożenia i dodawania) były niezbędne do wyznaczenia zbioru pikseli metodą Bresenhama?
+Ile byłoby ich w przypadku posługowania się równaniem {math}y = mx+b{math end}?
+Który sposób jest szybszy? (Pamiętaj, że w większości przypadków koszt dodawania jest o wiele mniejszy niż koszt mnożenia.)
 
-{panel type="teacher-note" summary="Speed of Bresenham's method"}
-This method only has to compare an integer with 0 and do one addition for each pixel, which is a lot faster than the calculations in the previous version.
+{panel type="teacher-note" summary="Szybkość metody Bresenhama"}
+Ta metoda dla wskazania kolejnego piksela wymaga wyłącznie: porównania z 0 i jednego dodawania. Jest o wiele szybsza od metody z równaniem.
 {panel end}
 
-You could write a program or design a spreadsheet to do these calculations for you --- that's what graphics programmers have to do.
+Możesz napisać program komputerowy lub użyć narzędzi arkusza kalkulacyjnego do wykonania obliczeń --- tego wymaga się od programistów zajmujących się grafiką komputerową.
 
-### Circles
+### Okręgi
 
 As well as straight lines, another common shape that computers often need to draw are circles.
 An algorithm similar to Bresenham's line drawing algorithm, called the Midpoint Circle Algorithm, has been developed for drawing a circle efficiently.
