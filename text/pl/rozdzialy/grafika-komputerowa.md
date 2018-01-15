@@ -763,31 +763,31 @@ Sprawdź działanie algorytmu Bresenhama, rysując ponownie odcinek z A do B:
 
 {image filename="grid-20x20-diagonal-question.png" alt="Grid for drawing line from A to B"}
 
-Once you have completed the line, check it with a ruler. How does it compare to the previous attempts?
+Sprawdź efekt przy pomocy linijki. Jak wyszło w porównaniu do wcześniejszych prób?
 
-{panel type="teacher-note" summary="Solution"}
-This table shows the values that would be calculated using Bresenham's method for the above example:
+{panel type="teacher-note" summary="|Rozwiązanie"}
+Poniżej zapisano obliczenia wykonane z użyciem algorytmu Bresenhama:
 
-| Calculation | Pixel to colour in |
+| Etap obliczeń | Wybór piksela |
 |-------------|--------------------|
-| {math}A = 10,  B = -16{math end} | Draw the starting pixel |
-| {math}P_0 = -3{math end} | Next pixel (to the right) is on the same row as the starting pixel. |
-| {math}P_1 = 7{math end} | Next pixel is on the row above the previous pixel. |
-| {math}P_2 = -9{math end} | Next pixel is on the same row as the previous pixel. |
-| {math}P_3 = 1{math end} | Next pixel is on the row above the previous pixel. |
-| {math}P_4 = -15{math end} | Next pixel is on the same row as the previous pixel. |
-| {math}P_5 = -5{math end} | Next pixel is on the same row as the previous pixel. |
-| {math}P_6 = 5{math end} | Next pixel is on the row above the previous pixel. |
-| {math}P_7 = -11{math end} | Next pixel is on the same row as the previous pixel. |
-| {math}P_8 = -1{math end} | Next pixel is on the same row as the previous pixel. |
-| {math}P_9 = 9{math end} | Next pixel is on the row above the previous pixel. |
-| {math}P_{10} = -7{math end} | Next pixel is on the same row as the previous pixel. |
-| {math}P_{11} = 3{math end} | Next pixel is on the row above the previous pixel. |
-| {math}P_{12} = -13{math end} | Next pixel is on the same row as the previous pixel. |
+| {math}A = 10,  B = -16{math end} | Zaznaczenie piksela początkowego. |
+| {math}P_0 = -3{math end} | Kolejny wybrany piksel jest bezpośrednio po prawej stronie poprzedniego. |
+| {math}P_1 = 7{math end} | Kolejny piksel to piksel po prawej w wierszu wyżej. |
+| {math}P_2 = -9{math end} | Kolejny piksel jest bezpośrednio po prawej stronie poprzedniego. |
+| {math}P_3 = 1{math end} | Kolejny piksel to piksel po prawej w wierszu wyżej. |
+| {math}P_4 = -15{math end} | Kolejny piksel jest bezpośrednio po prawej stronie poprzedniego. |
+| {math}P_5 = -5{math end} | Kolejny piksel jest bezpośrednio po prawej stronie poprzedniego. |
+| {math}P_6 = 5{math end} | Kolejny piksel to piksel po prawej w wierszu wyżej. |
+| {math}P_7 = -11{math end} | Kolejny piksel jest bezpośrednio po prawej stronie poprzedniego. |
+| {math}P_8 = -1{math end} | Kolejny piksel jest bezpośrednio po prawej stronie poprzedniego. |
+| {math}P_9 = 9{math end} | Kolejny piksel to piksel po prawej w wierszu wyżej. |
+| {math}P_{10} = -7{math end} | Kolejny piksel jest bezpośrednio po prawej stronie poprzedniego. |
+| {math}P_{11} = 3{math end} | Kolejny piksel to piksel po prawej w wierszu wyżej. |
+| {math}P_{12} = -13{math end} | Kolejny piksel jest bezpośrednio po prawej stronie poprzedniego. |
 
 {panel end}
 
-### Lines at other angles
+### Odcinki o innych kątach nachylenia
 
 So far the version of Bresenham's line drawing algorithm that you have used only works for lines that have a gradient (slope) between 0 and 1 (that is, from horizontal to 45 degrees). To make this algorithm more general, so that it can be used to draw any line, some additional rules are needed:
 
