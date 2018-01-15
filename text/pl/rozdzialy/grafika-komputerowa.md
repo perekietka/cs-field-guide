@@ -742,7 +742,7 @@ Wyznaczenie każdego punktu wymaga wykonania mnożenia, dodwawania i także oper
 
 ### Algorytm Bresenhama rysowania ocinka
 
-A faster way for a computer to calculate which pixels to colour in is to use Bresenham's Line Algorithm. It follows these simple rules. First, calculate these three values:
+Szybszy sposób na wyznaczenie współrzędnych punktów tworzących odcinek na ekranie jest algorytm zaproponowany prze Bresenhama.  Składa się z kilku etapów. Najpierw wyznacza się trzy wartości:
 
 {math-block}
 A = 2 \times (y_2 - y_1)
@@ -752,13 +752,14 @@ B = A - 2 \times (x_2 - x_1)
 P = A - (x_2 - x_1)
 {math-block end}
 
-To draw the line, fill the starting pixel, and then for every position along the *x* axis:
+Oto kolejne kroki algorytmu.
+- Wybierz piksel początkowy. 
 
-- if {math}P{math end} is less than 0, draw the new pixel on the same line as the last pixel, and add {math}A{math end} to {math}P{math end}.
-- if {math}P{math end} was 0 or greater, draw the new pixel one line higher than the last pixel, and add {math}B{math end} to {math}P{math end}.
-- repeat this decision until we reach the end of the line.
+Następnie dopóki nie napotkasz punktu końcowego, to dla kolejnych wartości x wykonuj:
+- Jeśli {math}P < 0{math end}, to wybierz piksel położony bezpośrednio po prawej stronie wcześniej wybranego i dodaj {math}A{math end} do {math}P{math end}.
+- W przeciwnym przypadku wybierz piksel po prawej położony wiersz wyżej niż wcześniej wybrany i dodaj {math}B{math end} do {math}P{math end}.
 
-Without using a ruler, use Bresenham's Line Algorithm to draw a straight line from A to B:
+Sprawdź działanie algorytmu Bresenhama, rysując ponownie odcinek z A do B:
 
 {image filename="grid-20x20-diagonal-question.png" alt="Grid for drawing line from A to B"}
 
