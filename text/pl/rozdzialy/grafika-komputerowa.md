@@ -885,98 +885,45 @@ Warto dodać, że algorytm można dostosować do rysowania elips. Wówczas bazą
 
 ### Zastosowania praktyczne
 
-Computers need to draw lines, circles and ellipses for a wide variety of tasks, from game graphics to lines in an architect's drawing, and even a tiny circle for the dot on the top of the letter 'i' in a word processor.  By combining line and circle drawing with techniques like 'filling' and 'antialiasing', computers can draw smooth, clear images that are resolution independent.
-When an image on a computer is described as an outline with fill colours it is called vector graphics --- these can be re-drawn at any resolution. This means that with a vector image, zooming in to the image will not cause the pixelation seen when zooming in to bitmap graphics, which only store the pixels and therefore make the pixels larger when you zoom in.
-However, with vector graphics the pixels are recalculated every time the image is redrawn, and that's why it's important to use a fast algorithm like the one above to draw the images.
+Komputery rysują odcinki prostych, okręgi i elipsy na potrzeby różnych zastosowań praktycznych: grafika w grach komputerowych, grafika w programach do architektów etc. Nawet kropka nad ,,i'' w dokumencie tekstowym musi być narysowana jako okrąg, gdy jest wyświetlana na ekranie. Przez składanie rysunków odcinków i okręgów oraz rózne techniki wypełniania krzywych i antyaliasingu można uzyskać efektowne gładkie krawędzie obiektów wyświetlanych na ekranie. W przypadku takich grafik nie ma ograniczenia stałej rozdzielczości. 
 
-Outline fonts are one of the most common uses for vector graphics as they allow the text size to be increased to very large sizes, with no loss of quality to the letter shapes.
+Taką grafikę nazywa się grafiką wektorową. Ma tę własność, że podczas powiększania wyświetlania obiektu unikniemy efektu pikselizacji. Powiększanie oznacza zwiększenie szczęgółowości obrazu, więc element obrazu jest rysowany wówczas na nowo, liczba pikseli tworzących obraz jest dopasowywana do rozmiaru ekranu. Koszt to obliczenia, które trzeba wykonać. Dlatego używa się szybkich algorytmów.
 
-Computer scientists have found fast algorithms for drawing other shapes too, which means that the image appears quickly, and graphics can display quickly on relatively slow hardware - for example, a smartphone needs to do these calculations all the time to display images, and reducing the amount of calculations can extend its battery life, as well as make it appear faster.
+Najbardziej powszechne rysunki wektorowe to rysunki konturów czcionek (fontów) wyświetlanych na ekranie.
 
-As usual, things aren't quite as simple as shown here. For example, consider a horizontal line that goes from (0,0) to (10,0), which has 11 pixels.
-Now compare it with a 45 degree line that goes from (0,0) to (10,10). It still has 11 pixels, but the line is longer (about 41% longer to be precise).
-This means that the line would appear thinner or fainter on a screen, and extra work needs to be done (mainly anti-aliasing) to make the line look ok. We've only just begun to explore how techniques in graphics are needed to quickly render high quality images.
+Informatycy zajmują się projektowaniem szybkich algorytmy dla grafiki komputerowej. Nie chodzi tu wyłącznie o szybkość wyświetlania. Dzięki postępowi w tej dziedzinie oszczędza się również na żywotności np. baterii smartfonów, gdyż nie obarcza się ich procesorów zbędnymi obliczeniami.
 
-{panel type="project" summary="Line and circle drawing"}
+Jak zwykle, szczegóły są bardziej skomplikowane. Na przykład, wyobraźmy sobie odcinek łączący punkty (0,0) i (10,0), złożony z 11 pikseli. Następnie porównajmy go z odcinkiem pochylonym pod kątem 45 stopni, łączącym punkty (0,0) i (10,10). Jego rysunek składa się z 11 pikseli, ale odcinek jest dłuższy (o ok. 41%).
 
-To compare Bresenham's method with using the equation of a line ({math}y = mx+b{math end}), choose your own start and end point of a line (of course, make sure it's at an interesting angle), and show the calculations that would be made by each method. Count up the number of additions, subtractions, multiplications and divisions that are made in each case to make the comparison. Note that addition and subtraction is usually a lot faster than multiplication and division on a computer.
+Jako skutek otrzymujemy więc efekt różnej grubości odcinków na ekranie. Tak postrzega je nasze oko. Aby zredukować to wrażenie, stosuje się różne techniki (przede wszystkim antyaliasing). 
 
-You can estimate how long each operation takes on your computer by running a program that does thousands of each operation, and timing how long it takes for each. From this you can estimate the total time taken by each of the two methods. A good measurement for these is how many lines (of your chosen length) your computer could calculate per second.
 
-If you're evaluating how fast circle drawing is, you can compare the number of addition and multiplication operations with those required by the Pythagoras formula that is a basis for the simple [equation of a circle](https://en.wikipedia.org/wiki/Circle#Equations) (for this calculation, the line from the centre of the circle to a particular pixel on the edge is the hypotenuse of a triangle, and the other two sides are a horizontal line from the centre, and a vertical line up to the point that we're wanting to locate. You'll need to calculate the *y* value for each *x* value; the length of the hypotenuse is always equal to the radius).
-{panel end}
+## Podsumowanie
 
-{comment}
-Other topics to be added:
+Powyżej ukazany jest tylko mały wycinek dziedziny, jaką jest grafika komputerowa.
+Informatycy projektują algorytmy dla wielu obszarów grafiki komputerowej:
+ - oświetlenie (np. w celu uzyskania efektu cienia w scenie 3D)
+ - teksturowanie (np. w celu uzyskania możliwie realistycznego obrazu trawy, skóry, wody, frewana itd.),
+ - antyaliasing (np. w celu zredukowania efektu ostrych krawędzi na obrazie)
+ - rzutowanie (np. w celu odwzorowania obiektów 3D na płaszczyźnie),
+ - ukrywania obiektów (np. w celu określenia fragmentów obiektu niwidocznych dla obserwatora),
+ - renderowanie fotorealistyczne (tworzenie obrazów, które wyglądają jak obrazy pochodzące z rzeczywistości), jak i renderowanie nierealistyczne, taki jak ,,renderowanie malarskie'' (np. w celu uzyskania obrazu na wzór obrazów malarskich, czyli efekt pociągnienia pędzlem), and
+ - symulowanie zajwisk takich, jak ogień, fale morskie, ruch człowieka itd. 
 
-.. Hidden surface removal
-.. =====================================================
+Mnożenie macierzy przedstawione w tym rozdziale to uproszczona wersja jednego z systemów, który oparty jest o [współrzedne jednorodne](https://en.wikipedia.org/wiki/Homogeneous_coordinates). Używa się w nim macierzy 4 x 4.
+Jego zaletą jest to, że wszystkie operacje można realizować wyłącznie przez mnożenienie (również przesunięcie). System pozwala też na uproszczenie innych operacji graficznych. Współczesne karty graficzne sprzętowo, a więc bardzo szybko, realizują operacje na współrzędnych jednorodnych.
 
-.. Occlusion: Painters algorithm, z-buffer, ray tracing
+{panel type="Curiosity" summary="Moebius i jego odkrycia"}
+System współrzędnych jednorodnych wprowadził w 1827 roku niemiecki matematyk
+[August Ferdinand Möbius](https://en.wikipedia.org/wiki/August_Ferdinand_M%C3%B6bius), ponad 100 lat przed erą komputerów.
+Möbius jest prawodopoodbnie bardziej znany jako twórca matematycznego opisu powierzchni jednostronnej, okreslanej jako [wstęga Möbiusa](https://en.wikipedia.org/wiki/M%C3%B6bius_strip)!
 
-.. Ray tracing
-.. =====================================================
-
-.. Define and render a scene using provided ray-tracing software e.g. POV-Ray
-.. (http://library.thinkquest.org/3285/)
-.. Javascript Ray Tracer
-.. (http://blog.vjeux.com/2012/javascript/javascript-ray-tracer.html)
-.. Here you can even setup your own scene and render it to an image.
-.. (http://fooo.fr/~vjeux/epita/raytracer/raytracer.html#pokeball)
-.. Javascript Real-time Raytracer
-.. (http://jsray.user2dev.com/l)
-
-.. Projections
-.. =====================================================
-
-.. Other possible projects:
-.. - Explore modelling surfaces using splines, surfaces of revolution, and simple methods to generate terrain models
-.. - Explore computational geometry methods (such as convex hulls and closest pair of points)
-
-{comment end}
-
-## The whole story!
-
-We've only scraped the surface of the field of computer graphics.
-Computer scientists have developed algorithms for many areas of graphics, including:
- - lighting (so that virtual lights can be added to the scene, which then creates shading and depth)
- - texture mapping (to simulate realistic materials like grass, skin, wood, water, and so on),
- - anti-aliasing (to avoid jaggie edges and strange artifacts when images are rendered digitally)
- - projection (working out how to map the 3D objects in a scene onto a 2D screen that the viewer is using),
- - hidden object removal (working out which parts of an image can't be seen by the viewer),
- - photo-realistic rendering (making the image as realistic as possible), as well as deliberately un-realistic simulations, such as "painterly rendering" (making an image look like it was done with brush strokes), and
- - efficiently simulating real-world phenomena like fire, waves, human movement, and so on.
-
-The matrix multiplication system used in this chapter is a simplified version of the one used by production systems, which are based on [homogeneous coordinates](https://en.wikipedia.org/wiki/Homogeneous_coordinates).
-A homogeneous system uses a 4 by 4 matrix  (instead of 3 by 3 that we were using for 3D).
-It has the advantage that all operations can be done by multiplication (in the 3 by 3 system that we used, you had to multiply for scaling and rotation, but add for translation), and it also makes some other graphics operations a lot easier.
-Graphics processing units (GPUs) in modern desktop computers are particularly good at processing homogeneous systems, which gives very fast graphics.
-
-{panel type="Curiosity" summary="Moebius strips and GPUs"}
-Homogeneous coordinate systems, which are fundamental to modern computer graphics systems,
-were first introduced in 1827 by a German mathematician called
-[August Ferdinand Möbius](https://en.wikipedia.org/wiki/August_Ferdinand_M%C3%B6bius).
-Möbius is perhaps better known for coming up with the [Möbius strip](https://en.wikipedia.org/wiki/M%C3%B6bius_strip),
-which is a piece of paper with only one side!
-
-Matrix operations are used for many things other than computer graphics, including computer vision, engineering simulations, and solving complex equations.
-Although GPUs were developed for computer graphics, they are often used as processors in their own right because they are so fast at such calculations.
-
-The idea of homogeneous coordinates was developed 100 years before the first working computer existed, and it's almost 200 years later that Möbius's work is being used on millions of computers to render fast graphics.
-An [animation of a Möbius strip](https://www.youtube.com/watch?v=ZN4TxmWK0bE) therefore uses two of his ideas, bringing things full circle, so to speak.
+[Animacja o wstędze Möbiusa](https://www.youtube.com/watch?v=ZN4TxmWK0bE) przedstawia wyniki uzyskane przez uczonego.
 {panel end}
 
 
 
-## Further reading
-
-{comment}
-
-.. todo:: this section is yet to be written
-
-{comment end}
-
-### Useful Links
+### Ciekawe linki
 
 - [https://en.wikipedia.org/wiki/Computer_graphics](https://en.wikipedia.org/wiki/Computer_graphics)
 - [https://en.wikipedia.org/wiki/Transformation_matrix](https://en.wikipedia.org/wiki/Transformation_matrix)
@@ -987,14 +934,4 @@ An [animation of a Möbius strip](https://www.youtube.com/watch?v=ZN4TxmWK0bE) t
 - [http://www.povray.org/resources/links/3D_Tutorials/POV-Ray_Tutorials/](http://www.povray.org/resources/links/3D_Tutorials/POV-Ray_Tutorials/)
 
 
-{comment}
 
-### Key concepts
-
-- Algorithms: Bresenham’s algorithm (line and circle drawing), colour space conversion, line anti-aliasing, Bézier and B-spline curves, painter’s algorithm, Z-buffer
-- Techniques: Techniques: ray tracing, texture mapping, shading, anti-aliasing, volume rendering, polygonisation, constructive solid geometry, 3D modeling, hidden object removal
-- Applications: drawing software, animation
-
-Computer Graphics, Computer Vision, Bresenham’s Line Algorithm, Ray Tracing, Magnetic Resonance Imaging (MRI), Rendering, 3D Modeling, Animation, WebGL (Web Graphics Library), OpenGL (Open Graphics Library)
-
-{comment end}
