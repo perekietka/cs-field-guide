@@ -812,27 +812,26 @@ Możesz napisać program komputerowy lub użyć narzędzi arkusza kalkulacyjnego
 
 ### Okręgi
 
-As well as straight lines, another common shape that computers often need to draw are circles.
-An algorithm similar to Bresenham's line drawing algorithm, called the Midpoint Circle Algorithm, has been developed for drawing a circle efficiently.
+Oprócz odcinków prostej, często komputery muszą tworzyć rysunki okręgów.
+Algorytm Bresenhama rysowania odcinków przystosowano do rysowania okręgów.
 
-A circle is defined by a centre point, and a radius. Points on a circle are all the radius distance from the centre of the circle.
+Dany okrąg jest jednoznacznie określony przez środek okręgu i promień okręgu. Punkty na okręgu tworzą zbiór punktów równooddalonych od punktu zwanego środkiem okręgu.
 
 {image filename="grid-20x20-circle-question.png" alt="Grid for drawing a circle"}
 
-Try to draw a circle by hand by filling in pixels (without using a ruler or compass). Note how difficult it is to make the circle look round.
+Spróbuj narysować okrąg ,,na oko'', bez posługiwania się cyrklem. Dlaczego nie jest to takie proste?
 
-It is possible to draw the circle using a formula based on Pythagoras' theorem, but it requires calculating a square root for each pixel, which is very slow.
-The following algorithm is much faster, and only involves simple arithmetic so it runs quickly on a computer.
+Do określenia pikseli tworzących rysunek okręgu można by użyć twierdzenia Pitagorasa, ale to wymagałoby wielokrotnego obliczania pierwiastka kwadratowego, a tego nie da się zrobić zbyt szybko.
+Poniżej opisany algorytm jest o wiele szybszy. Poza tym posługuje się wyłącznie prostymi operacjami arytmetycznymi.
 
-### Bresenham's Midpoint Circle Algorithm
-
+### Algorytm Bresenhama dla okręgu
 {comment}
 
 .. xTCB could mention later that Bresenham didn't invent it, but idea comes from his line algorithm and is often named after him
 
 {comment end}
 
-Here are the rules for the Midpoint Circle Algorithm for a circle around ({math}c_{x}{math end}, {math}c_{y}{math end}) with a radius of {math}R{math end}:
+Oto kolejne kroki algorytmu dla okręgu o środku ({math}c_{x}{math end}, {math}c_{y}{math end}) i promieniu {math}R{math end}:
 
 {math-block}
 
@@ -842,58 +841,49 @@ Y = 0
 
 {math-block end}
 
-Repeat the following rules in order until {math}Y{math end} becomes greater than {math}X{math end}:
+Powtarzaj kolejne kroki aż {math}Y{math end} będzie mieć większą wartość niż {math}X{math end}:
 
-- Fill the pixel at coordinate ({math}c_{x} + X{math end}, {math}c_{y} + Y{math end})
-- Increase {math}E{math end} by {math}2 \times Y + 1{math end}
-- Increase {math}Y{math end} by 1
-- If {math}E{math end} is greater than or equal to 0,  subtract {math}2 \times X - 1{math end} from {math}E{math end}, and then subtract 1 from {math}X{math end}.
+- Wybierz piksel o współrzędnych ({math}c_{x} + X{math end}, {math}c_{y} + Y{math end})
+- Zwiększ {math}E{math end} o wartość wyrażenia {math}2 \times Y + 1{math end}
+- Zwiększ {math}Y{math end} o 1
+- Jeśli {math}E >=0{math end} ,  to odejmij wartość {math}2 \times X - 1{math end} od {math}E{math end}, a następnie odejmij 1 od {math}X{math end}.
 
-Follow the rules to draw a circle on the grid, using ({math}c_{x}{math end}, {math}c_{y}{math end})  as the centre of the circle, and {math}R{math end} the radius.
-Notice that it will only draw the start of the circle and then it stops because {math}Y{math end} is greater than {math}X{math end}!
+Zastosuj algorytm, by stworzyć rysnek okręgu na siatce kwadratowej. Piksel opisany literą C ({math}c_{x}{math end}, {math}c_{y}{math end}) niech będzie środkiem okręgu, a piksel {math}R{math end} jednym z punktów na okręgu.
+Zwróć uwagę na to, że zgodnie z algorytmem rysowanie należy przerwać, gdy {math}Y{math end} będzie {math}X{math end}! 
 
 {image filename="grid-20x20-circle-question.png" alt="Grid for drawing a circle"}
 
-{panel type="teacher-note" summary="Solution"}
-In the following diagram, the black pixels below represent the initial octant of the circle drawn by the algorithm above, the darker gray pixels represent reflection along the {math}X{math end} and {math}Y{math end} axis (details are given below), and the lighter gray pixels represent the reflection along a diagonal (see also below).
+{panel type="teacher-note" summary="Rozwiązanie"}
+Na rysunku poniżej piksele uzyskane po wykonaniu algorytmu (ośma część okręgu) są zaznaczone kolorem czarnym. Ciemnym szarym kolorem zaznaczono piksele uzyskane kolejno jako efekt symetrii osiowej (jakby odbicia lustrzane) względem prostych równoległych do osi X i osi Y. Jasnym szarym kolorem zaznaczono piksele, które są obrazem pikseli w symetrii względem przekątnej kwadratu (siatki). 
+Warto, aby uczniowie samodzielnie poszukali odpowiednich przekształceń. (Dla przekątnej będą osiami symetrii będą proste o współczynnikach kierunkowych 1 i -1.)
 
 {image filename="grid-20x20-circle-answer.png" alt="Solution for drawing a circle"}
 
-The values in the calculation for the above example are:
+Oto etapy obliczeń:
 
-| Calculation | Pixel to colour in |
+| Etap obliczń | Wybrany piksel |
 |-------------|--------------------|
-| {math}E_0 = -7, X_0 = 7, Y_0 = 0{math end} | Plot pixel (16, 9) |
-| {math}E_1 = -6, Y_1 = 1{math end} | Plot pixel (16, 10) |
-| {math}E_2 = -3, Y_2 = 2{math end} | Plot pixel (16, 11) |
+| {math}E_0 = -7, X_0 = 7, Y_0 = 0{math end} | Wybór piksela (16, 9) |
+| {math}E_1 = -6, Y_1 = 1{math end} | Wybór piksela (16, 10) |
+| {math}E_2 = -3, Y_2 = 2{math end} | Wybór piksela (16, 11) |
 | {math}E_3 = 2, Y_3 = 3{math end} | -  |
-| {math}E_4 = -11, X_4 = 6{math end} | Plot pixel (15, 12) |
-| {math}E_5 = -4, Y_5 = 4{math end} | Plot pixel (15, 13) |
+| {math}E_4 = -11, X_4 = 6{math end} | Wybór piksela (15, 12) |
+| {math}E_5 = -4, Y_5 = 4{math end} | Wybór pikselal (15, 13) |
 | {math}E_6 = 5, Y_6 = 5{math end} | - |
-| {math}E_7 = -6, X_7 = 5{math end} | Plot pixel (14, 14) |
-| {math}E_8 = 5, Y_8 = 6{math end} | *y* is greater than *x*, so we can now reflect our octant |
+| {math}E_7 = -6, X_7 = 5{math end} | Wybór piksela (14, 14) |
+| {math}E_8 = 5, Y_8 = 6{math end} | *y* > *x*, co oznacza, że mamy ośmą część okręgu narysowaną |
 
 {panel end}
 
-When {math}Y{math end} becomes greater than {math}X{math end}, one eighth (an octant) of the circle is drawn.
-The remainder of the circle can be drawn by reflecting the octant that you already have (you can think of this as repeating the pattern of steps you just did in reverse).
-You should reflect pixels along the X and Y axis, so that the line of reflection crosses the middle of the centre pixel of the circle.
-Half of the circle is now drawn, the left and the right half.
-To add the remainder of the circle, another line of reflection must be used.
-Can you work out which line of reflection is needed to complete the circle?
-
-{panel type="jargon-buster" summary="Quadrants and octants"}
-A quadrant is a quarter of an area; the four quadrants that cover the whole area are marked off by a vertical and horizontal line that cross. An *octant* is one eighth of an area, and the 8 octants are marked off by 4 lines that intersect at one point (vertical, horizontal, and two diagonal lines).
+{panel type="jargon-buster" summary="Kwadranty i oktanty"}
+*Kwadrant* to ćwiartka jakiegoś obszaru. *Oktant* to óśma część jakiegoś obszaru.
 {panel end}
 
-To complete the circle, you need to reflect along the diagonal.
-The line of reflection should have a slope of 1 or -1, and should cross through the middle of the centre pixel of the circle.
+W istocie komputer nie wykonuje wielu dodatkowych obliczeń w celu narysowania 7/8 okręgu. Algorytm wyznacza w każdej iteracji dwie liczby (x, y), które określają położenie piksela względem środka okręgu. Z łatwością wówczas wskazać 7 par liczb odpowiadających (x,y) w odpowiedniej symetrii: (x,-y), (-x,y), (-x,-y), (y,x), (y,-x), (-y,x) i (-y,-x). W sumie jest ich 8!
 
-While using a line of reflection on the octant is easier for a human to understand, a computer can draw all of the reflected points at the same time it draws a point in the first octant because when it is drawing pixel with an offset of (x,y) from the centre of the circle, it can also draw the pixels with offsets (x,-y), (-x,y), (-x,-y), (y,x), (y,-x), (-y,x) and (-y,-x), which give all eight reflections of the original point!
+Warto dodać, że algorytm można dostosować do rysowania elips. Wówczas bazą jest wskazanie pikseli tworzących rysunek 1/4 elipsy.
 
-By the way, this kind of algorithm can be adapted to draw ellipses, but it has to draw a whole quadrant because you don't have octant symmetry in an ellipse.
-
-### Practical applications
+### Zastosowania praktyczne
 
 Computers need to draw lines, circles and ellipses for a wide variety of tasks, from game graphics to lines in an architect's drawing, and even a tiny circle for the dot on the top of the letter 'i' in a word processor.  By combining line and circle drawing with techniques like 'filling' and 'antialiasing', computers can draw smooth, clear images that are resolution independent.
 When an image on a computer is described as an outline with fill colours it is called vector graphics --- these can be re-drawn at any resolution. This means that with a vector image, zooming in to the image will not cause the pixelation seen when zooming in to bitmap graphics, which only store the pixels and therefore make the pixels larger when you zoom in.
