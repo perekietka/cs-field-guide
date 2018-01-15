@@ -617,11 +617,10 @@ Warto wykonać kilka prób samodzielnie, na papierze w kratkę (oczywiście krat
 Wybrany zbiór pikseli będziemy określać za pomocą dwóch wartości (*x*,*y*), gdzie *x* to odległość od lewego brzegu kartki, a *y* to odległość od dolnego brzegu kartki.
 Piksel w lewym dolnym rogu ma współrzędne (0,0), a piksel w prawym górnym roku ma współrzędną (19,19).
 
-On the following grid, try to draw these straight lines by filling in pixels in the grid:
-
-- from  (2, 17) to (10, 17)
-- from  (18, 2) to (18, 14)
-- from  (1, 5)  to (8, 12)
+Na siatce kwadratowej 19 x 19 spróbuj narysować odcinki (jako zbiory zamalowanych kwadratów) łączące punkty:
+- (2, 17) i (10, 17)
+- (18, 2) i (18, 14)
+- (1, 5) i (8, 12)
 
 {image filename="grid-20x20-blank.png" alt="Grid for drawing line from A to B"}
 
@@ -631,36 +630,37 @@ On the following grid, try to draw these straight lines by filling in pixels in 
 
 {comment end}
 
-{panel type="teacher-note" summary="Solution"}
+{panel type="teacher-note" summary="Rozwiązanie"}
 
-The above three lines are easy to draw as they are horizontal, vertical and diagonal.
+Te odcinki było łatwo narysować, gdyż tworzące je piksele są równoległe do brzegów siatki lub leżą na przekątnej kwadratu (siatki).
 
 {image filename="grid-20x20-answer-1.png" alt="Answer for previous question on grid"}
 
 {panel end}
 
-Drawing a horizontal, vertical or diagonal line like the ones above is easy; it's the ones at different angles that require some calculation.
+Rysowanie linii równoległych do krawędzi ekranu lub leżących na głównej przekątnej ekranu łatwo narysować; do narysowania odcinków, które tworzą z krawędzią ekranu inne kąty jest trudniej, gdyż trzeba wykonać odpowiednie obliczenia.
 
-Without using a ruler, can you draw a straight line from A to B on the following grid by colouring in pixels?
+Potrafisz, bez użycia linijki, wybrać i zamalować odpowiednie plikselie tak, aby tworzyły odcinek z A do B? Spróbuj.
 
 {image filename="grid-20x20-diagonal-question.png" alt="Grid for drawing line from A to B"}
 
-Once you have finished drawing your line, try checking it with a ruler. Place the ruler so that it goes from the centre of A to the centre of B. Does it cross all of the pixels that you have coloured?
+Sprawdź efekt, przykłądając linijkę do rysunku. Umieść ją tak, aby krawędź linijki przechodziła przez środki małych kwadratów A i B. Czy linijka przechodzi przez wszystkie zamalowane piksele.
 
-### Using a formula to draw a line
+### Rysowanie odcinka z użyciem równania prostej
 
 {glossary-definition term="Slope" definition="This is a way of expressing the angle or gradient of a line. The slope is simply how far up the line goes for every unit we move to the right. For example, if we have a line with a slope of 2, then after moving 3 units to the right, it will have gone up 6 units. A line with a slope of 0 is horizontal.
 Normally the slope of a line is represented using the symbol {math}m{math end}."}
-The mathematical formula for a line is {math}y = mx + c{math end}.
-This gives you the *y* value for each *x* value across the screen,
-and you get to specify two things: the
-{glossary-link term="slope" reference-text="computer graphics"}slope{glossary-link end} of the line,
-which is {math}m{math end},
-and where the line crosses the *y* axis, which is {math}c{math end}.
-In other words, when you are *x* pixels across the screen with your line, the pixel to colour in would be ({math}x{math end}, {math}mx + c{math end}).
+Prostą w układzie współrzędnych XY można opisać równaniem {math}y = mx + c{math end}.
+Używając tego równania możemy wyznaczyć wartość współrzędnej *y* dla wartości współrzednej *x*.
+Wcześniej trzeba określić wartość współczynnika opisującego
+{glossary-link term="slope" reference-text="computer graphics"}nachylenie prostej{glossary-link end} of the line,
+którym jest {math}m{math end},
+oraz punkt, w którym prosta przecina oś Y, czyli (0, *y*). Współrzędna *y* tego punktu w równaniu jest oznaczona jako {math}c{math end}.
+Innymi słowy, rysując linię prostą wybieramy piksele o współrzędnych ({math}x{math end}, {math}mx + c{math end}) dla kolejnych wartości *x*.
 
-For example, choosing {math}m=2{math end} and {math}c=3{math end} means that the line would go through the points (0,3), (1,5), (2,7), (3,9) and so on.
+Na przykład, wybierając {math}m=2{math end} and {math}c=3{math end} otrzymujemy prostą przechodzącą przez punkty (0,3), (1,5), (2,7), (3,9) itd.
 This line goes up 2 pixels for every one across {math}m=2{math end}, and crosses the y axis 3 pixels up ({math}c=3{math end}).
+
 
 You should experiment with drawing graphs for various values of {math}m{math end} and {math}c{math end} (for example, start with {math}c=0{math end}, and try these three lines: {math}m=1{math end}, {math}m=0.5{math end} and{math}m=0{math end}) by putting in the values.
 What angle are these lines at?
