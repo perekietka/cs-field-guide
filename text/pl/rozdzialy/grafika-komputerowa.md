@@ -670,15 +670,14 @@ Wartość ({math}m=0.5{math end}) opisuje prostą o kącie nachylenia mniejszym 
 Narzędzie [interaktywne](http://www.mathopenref.com/coordslope.html) może być pomocne w zrozumieniu związku wartości m z kątem pochylenia.)
 {panel end}
 
-The {math}mx + c{math end} formula can be used to work out which pixels should be coloured in for a line that goes between {math}(x_1, y_1){math end} and {math}(x_2, y_2){math end}.
-What are {math}(x_1, y_1){math end} and {math}(x_2, y_2){math end} for the points A and B on the grid below?
+Równanie {math}mx + c{math end} może być użyte w celu określenia pikseli, które należy wybrać dla cyfrowej reprezentacji odcinka łączącego punkty {math}(x_1, y_1){math end} i {math}(x_2, y_2){math end}.
+Jakie wartości mają współrzędne {math}(x_1, y_1){math end} i {math}(x_2, y_2){math end} w przykładzie poniżej?
 
-{panel type="teacher-note" summary="Solution"}
-The calculations for a line from A to B above are as follows.
-The two points are A = (3,4) and B = (16,9). This means that {math}x_1 = 3, y_1 = 4, x_2=16{math end} and {math}y_2 = 9{math end}.
+{panel type="teacher-note" summary="Rozwiązanie"}
+Końce odcinka to punkty: A = (3,4) i B = (16,9). To znaczy, że {math}x_1 = 3, y_1 = 4, x_2=16{math end} i {math}y_2 = 9{math end}.
 {panel end}
 
-See if you can work out the {math}m{math end} and {math}b{math end} values for a line from A to B, or you can calculate them using the following formulas:
+Potrafisz wyznaczyć wartości {math}m{math end} i {math}b{math end} dla równania prostej przechodzącej przez punkty A  B? Możesz użyć następujących wzorów:
 
 {math-block}
 
@@ -687,18 +686,18 @@ b = \frac{(y_1x_2 - y_2x_1)}{(x_2-x_1)}
 
 {math-block end}
 
-{panel type="teacher-note" summary="Solution"}
-For the formula for a line this results in:
+{panel type="teacher-note" summary="Rozwiązanie"}
+Oto wyniki obliczeń:
 
 \\[
-m = \frac{(9 - 4)}{(16 - 3)}  = 5/13 = 0.384615
-b = \frac{(4 \times 16 - 9 \times 3)}{(16-3)} = 37/13 = 2.846154
+m = \frac{(9 - 4)}{(16 - 3)}  = 5/13 \approx 0.384615
+b = \frac{(4 \times 16 - 9 \times 3)}{(16-3)} = 37/13 \approx 2.846154
 \\]
 
 
-So we can use the formula {math}y = 0.384615x + 2.846154{math end}.
+Równanie ma więc postać {math}y \approx 0.384615x + 2.846154{math end}.
 
-For the next question, this can be put into a spreadsheet to give the values for the pixel locations as follows:
+W kolejnym ćwiczeniu warto użyć arkusza kalkulacyjnego do określenia wartości *y*.
 
 | *x* | *y* |
 |-----|-----|
@@ -719,30 +718,29 @@ For the next question, this can be put into a spreadsheet to give the values for
 
 {panel end}
 
-Now draw the same line as in the previous section (between A and B) using the formula {math}y = mx + c{math end} to calculate {math}y{math end} for each value of {math}x{math end} from {math}x_1{math end} to {math}x_2{math end} (you will need to round {math}y{math end} to the nearest integer to work out which pixel to colour in).
-If the formulas have been applied correctly, the {math}y{math end} value should range from  {math}y_1{math end} to {math}y_2{math end}.
+Teraz do narysowania odcinka między punktami A i B (z poprzedniego ćwiczenia) wykonaj obliczenia, używając równania {math}y = mx + c{math end}. Wyznacz odpowiednie wartości {math}y{math end} dla kolejnych wartości {math}x{math end} z zakresu od {math}x_1{math end} do {math}x_2{math end}. Dla wskazania odpowiednich pikseli wartości *y* trzeba będzie zaokrąglić do najbliższej liczby całkowitej.
+Wartości {math}y{math end} powinny być liczbami pomiędzy:  {math}y_1{math end} i {math}y_2{math end}.
 
 {image filename="grid-20x20-diagonal-question.png" alt="Grid for drawing line from A to B"}
 
-{panel type="teacher-note" summary="Solution"}
+{panel type="teacher-note" summary="Rozwiązanie"}
 
-The following image shows which pixels would be coloured in (rounding the coordinates above to the nearest integer).
+Efekt końcowy jest pokazany na rysunku:
 {image filename="grid-20x20-diagonal-answer.png" alt="Grid for drawing line from A to B"}
 
 {panel end}
 
-Once you have completed the line, check it with a ruler. How does it compare to your first attempt?
+Po wykonaniu ćwiczenia sprawdź linijką, czy wynik jest lepszy od tego z pierwszej próby.
 
-Now  consider the number of calculations that are needed to work out each point.
-It won't seem like many, but remember that a computer might be calculating hundreds of points on thousands of lines in a complicated image.
-Although this formula works fine, it's too slow to generate the complex graphics needed for good animations and games.
-In the next section we will explore a method that greatly speeds this up.
+Zastanów się nad tym, ile obliczeń było niezbędnych do wyznaczenia każdego punktu (i dalej wyboru piksela). Może wydawać się, że niewiele. Pamiętaj jednak, że obliczenia mogą w praktyce dotyczyć tysięcy odcinków składających się z setek punktów. 
 
-{panel type="teacher-note" summary="Solution"}
-Each point requires a multiplication and an addition, and also needs to round the numbers. Multiplications are relatively slow, and one is required for every pixel in the output (there could be thousands or even millions of pixels to calculate, so can be very significant!) Even worse, the numbers are floating point, which usually have slower arithmetic than integers.
+Okazuje się, że rozwiązanie wykorzystujące opisane wyżej równanie nie jest zbyt szybkie i w praktyce może być nieprzydatne (np. dla animacji i w grach komputerowych). W praktyce korzysta się ze znacznie bardziej efektywnej metody.
+
+{panel type="teacher-note" summary="Rozwiązanie"}
+Wyznaczenie każdego punktu wymaga wykonania mnożenia, dodwawania i także operacji zaokrąglania. Operacja mnożenia jest obliczeniowo dość kosztowną operacją (zwłaszcza, gdy obraz składa się z tysięcy czy nawet milionów pikseli!). Co gorsze, metoda opisana wyżej wymaga wykonywania obliczeń w tzw. arytmetyce zmiennoprzecinkowej, co jest o wiele bardziej czasochłonne niż operacje wykonywane na liczbach całkowitych.
 {panel end}
 
-### Bresenham's Line Algorithm
+### Algorytm Bresenhama rysowania ocinka
 
 A faster way for a computer to calculate which pixels to colour in is to use Bresenham's Line Algorithm. It follows these simple rules. First, calculate these three values:
 
