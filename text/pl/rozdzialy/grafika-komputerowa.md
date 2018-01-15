@@ -596,14 +596,15 @@ Public domain image: https://en.wikipedia.org/wiki/Triangle_mesh#/media/File:Dol
 
 Odcinki i okręgu, które są składowymi obiektów, są zwykle w pamięci komputera zapisane jako liczby (np. odcinek łączący dwa punkty, okrąg o danym środku i promieniu). Program graficzny musi umieć określić piksele, które będą reprezentować odcinki i okręgi na ekraniu monitora. Czasem program powinien umieć określić położenie odcinka bez rysowania go.
 
-For example, here's a grid of pixels with 5 lines shown magnified.
-The vertical line would have been specified as going from pixel (2,9) to (2,16) --- that is, starting 2 across and 9 up, and finishing 2 across and 16 up.
-Of course, this is only a small part of a screen, as normally they are more like 1000 by 1000 pixels or more; even a smartphone can be hundreds of pixels high and wide.
+Poniżej widzisz powiększoną siatkę pikseli binarnego obrazu, na której znajduje się 5 odcinków.
+Wiersze i kolumny są ponumerowane. Więc można powiedzieć, że odcinek pionowy ma początek w punkcie (2,9|) i koniec w punkcie (2,16).
+Oczywiście taka grafika przedstawia tylko mały fragment ekranu. Monitory komputerowe wyświetlają zwykle ponad 1000 pikseli, zarówno w poziomie, jak i w pionie. Również na ekranach smarfonów odcinki składają się z setek pikseli.
 
 {image filename="grid-20x20-example.png" alt="An example of 5 lines drawn on a grid of pixels"}
 
-These are things that are easy to do with pencil and paper using a ruler and compass, but on a computer the calculations need to be done for every pixel, and if you use the wrong method then it will take too long and the image will be displayed slowly or a live animation will appear jerky.
-In this section we will look into some very simple but clever algorithms that enable a computer to do these calculations very quickly.
+Na papierze, używając linijki i cyrkla można łatwo rysować figury geometryczne. Wyświetlenie takiej figury na ekranie komputera wymaga wykonania obliczeń dla wyznaczenia współrzędnych każdego z pikseli tworzących obraz figury. Wybór kiepskiej metody do wykonania takich obliczeń wpływnie na czas potrzebny na wyświetlenie zbioru pikseli i będzie miał fatalne skutki np. w przypadku animacji.
+
+W tym podrozdziale przyjrzymy się bardzo prostym, ale sprytnym algorytmom, które pozwalają komputerowu szybkie wykonanie niezbędnych obliczeń.
 
 ### Line drawing
 
