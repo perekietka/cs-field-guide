@@ -918,9 +918,6 @@ System współrzędnych jednorodnych wprowadził w 1827 roku niemiecki matematyk
 [August Ferdinand Möbius](https://en.wikipedia.org/wiki/August_Ferdinand_M%C3%B6bius), ponad 100 lat przed erą komputerów.
 Möbius jest prawodopoodbnie bardziej znany jako twórca matematycznego opisu powierzchni jednostronnej, okreslanej jako [wstęga Möbiusa](https://en.wikipedia.org/wiki/M%C3%B6bius_strip)!
 
-[Animacja o wstędze Möbiusa](https://www.youtube.com/watch?v=ZN4TxmWK0bE) przedstawia wyniki uzyskane przez uczonego.
-{panel end}
-
 
 
 ### Ciekawe linki
