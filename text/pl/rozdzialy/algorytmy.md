@@ -10,37 +10,32 @@ Działanie każdego z urządzeń komputerowych, jakie znasz, nawet prosty kalkul
 
 {interactive name="sorting-algorithm-comparison" type="in-page"}
 
-Computers are incredibly fast at manipulating, moving and looking through data. However the amount of data computers use is often so large that it doesn't matter how fast the computer is, it will take it far too long to examine every single piece of data (companies like Google, Facebook and Twitter routinely process billions of things per day, and in some cases, per minute!) This is where algorithms come in. If a computer is given a better algorithm to process the data then it doesn't matter how much information it has to look through, it will still be able to do it in a reasonable amount of time.
-Komputery z niesamowitą szybkością przetwarzają informacje. Okazuje się, że ich moc może okazać się jednak niewystarczająca, jeśli chcielibyśmy ogromne zbiory danych przewarzać (choćby przeszukiwać) posługując się w sposób mało przemyślany. Czas reakcji komputera na zadanie czy pytanie użytkownika nie może być zbyt długi.
+Komputery z niesamowitą szybkością przetwarzają informacje. Okazuje się, że ich moc może okazać się jednak niewystarczająca, jeśli chcielibyśmy ogromne zbiory danych przetwarzać (choćby przeszukiwać) w sposób mało przemyślany. Czas reakcji komputera na zadanie czy pytanie użytkownika nie może być zbyt długi. To byłoby frustrujące, niezależnie od tego, jak atrakcyjna jest szata graficzna programu. Z pewnością firmy takie jak Google, Facebook czy Twitter nie mogłyby sobie na to pozwolić! 
+Tutaj jest miejsce na pomysłowe efektywne algorytmy, które w rozsądnym czasie poradzą sobie w przetwarzaniem nawet ogromnych zbiorów danych.
 
-If you have read through the Introduction chapter you may remember that the speed of an application on a computer makes a big difference to a human using it. If an application you create is too slow, people will get frustrated with it and won't use it. It doesn't matter if your software is amazing,
-if it takes too long they will simply give up and try something else!
+### Algorytmy, programy komputerowe i inne sposoby zapisu algorytmów
 
-### Algorithms, Programs and Informal Instructions
+Być może ktoś myśli, że algorytmy i programy komputerowe to jedno i to samo. Takie twierdzenie jest nieuprawnione. 
+Istnieją różne sposoby opisu instrukcji do wykonania, o bardzo różnych poziomach szczegółowości:
 
-At this stage you might be thinking that algorithms and computer programs kind of sound like the same thing, but they are actually two very distinct concepts.
-They are each different ways of describing how to do something, but at different levels of precision:
-
-Often you can get away with describing a process just using some sort of informal instructions using natural language; for example, an informal instruction in a non computing context might be
-"please get me a glass of water".
-A human can understand what this means and can figure out how to accomplish this task by thinking, but a computer would have no idea how to do this!
+Człowiek zrozumie instrukcję wypowiedzianą w języku naturalnym, np. ,,Proszę podać mi szklankę wody''. Komputery prawdopodobnie nie!
 
 {interactive name="high-score-boxes" type="whole-page" text="High Score Boxes"}
 
-An example in a computational context might be if you wanted to find a high score in a table of scores:
-go through each score keeping track of the largest so far.
-Informal instructions like this aren't precise; there's no way that a computer could follow those instructions exactly, but a human could probably get the general idea of what you mean if they know what you're trying to achieve. This sort of description is only useful for quickly giving another human the general idea of what you mean, and even then there's a risk that they won't properly understand it.
+Oto prosty przykład: Chcesz znaleźć najlepszy wynik w tabeli wyników, która nie jest uporządkowana. Rozwiązaniem jest sprawdzenie liczb jedna po drugiej i pamiętywanie w każdym kroku największej znalezionej do tej pory. Co to jednak miałoby znaczyć konkretnie dla komputera? Taki zwięzły opis metody będzie być może zrozumiały dla człowieka, ale bezużyteczny dla maszyny.
 
 {glossary-definition term="Algorithm" definition="A step by step process that describes how to solve a problem and/or complete a task, which will always give a result."}
 
-In contrast, an {glossary-link term="algorithm" reference-text="introduction"}algorithm{glossary-link end} is a step by step process that describes how to solve a problem and/or complete a task, which will always give the correct result.
-For our previous non-computing example, the algorithm might be
-1) Go to the kitchen. 2) Pick up a glass. 3) Turn on the tap. 4) Put the glass under the running water and remove it once it is almost full. 5) Turn off the tap. 6) Take the glass back to the person who gave the instruction. A human could follow these instructions easily, but it's still using general English language rather than a strict list of computer instructions.
+Algorytm to opis kolejnych kroków potrzebnych do poprawnego rozwiązania problemu (zadania).
 
-Algorithms are often expressed using a loosely defined format called [pseudo-code](https://en.wikipedia.org/wiki/Pseudocode),
-which matches a programming language fairly closely,
-but leaves out details that could easily be added later by a programmer.
-Pseudocode doesn't have strict rules about the sorts of commands you can use, but it's halfway between an informal instruction and a specific computer program.
+Algorytm dostarczenia szklanki wody można by zapisać jako listę kroków:
+1) Idź do kuchni. 2) Weź szklankę. 3) Odkręć kran. 4) Podstaw szklankę i nalej wodę. 5) Zakręć kran. 6) Zanieś szklankę osobie, którą prosiła o wodę.  
+Choć opis jest szczegółowy, to jednak ciągle jest to język naturalny. Informatycy posługują się bardziej sformalizowanymi opisami.
+
+Algorytmy komputerowe w podręcznikach często zapisuje się w postaci [pseudokodu](https://en.wikipedia.org/wiki/Pseudocode),
+który przypomina kod języka programowania, ale pozbawiony jest szczegółów technicznych, które są istotne wyłącznie dla programisty.
+
+Pseudocode doesn't have strict rules about the sorts of commands you can use, but it's halfway between an informal instruction and a specific computer program. 
 
 With the high score problem, the algorithm might be written in pseudo-code like this:
 
