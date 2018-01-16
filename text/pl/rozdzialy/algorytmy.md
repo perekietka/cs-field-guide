@@ -22,7 +22,7 @@ Człowiek zrozumie instrukcję wypowiedzianą w języku naturalnym, np. ,,Prosz�
 
 {interactive name="high-score-boxes" type="whole-page" text="High Score Boxes"}
 
-Oto prosty przykład: Chcesz znaleźć najlepszy wynik w tabeli wyników, która nie jest uporządkowana. Rozwiązaniem jest sprawdzenie liczb jedna po drugiej i pamiętywanie w każdym kroku największej znalezionej do tej pory. Co to jednak miałoby znaczyć konkretnie dla komputera? Taki zwięzły opis metody będzie być może zrozumiały dla człowieka, ale bezużyteczny dla maszyny.
+Oto prosty przykład: Chcesz znaleźć najlepszy wynik w tablicy wyników liczbowych, która nie jest uporządkowana. Rozwiązaniem jest sprawdzenie liczb jedna po drugiej i pamiętywanie w każdym kroku największej znalezionej do tej pory. Co to jednak miałoby znaczyć konkretnie dla komputera? Taki zwięzły opis metody będzie być może zrozumiały dla człowieka, ale bezużyteczny dla maszyny.
 
 {glossary-definition term="Algorithm" definition="A step by step process that describes how to solve a problem and/or complete a task, which will always give a result."}
 
@@ -35,29 +35,24 @@ Choć opis jest szczegółowy, to jednak ciągle jest to język naturalny. Infor
 Algorytmy komputerowe w podręcznikach często zapisuje się w postaci [pseudokodu](https://en.wikipedia.org/wiki/Pseudocode),
 który przypomina kod języka programowania, ale pozbawiony jest szczegółów technicznych, które są istotne wyłącznie dla programisty.
 
-Pseudocode doesn't have strict rules about the sorts of commands you can use, but it's halfway between an informal instruction and a specific computer program. 
-
-With the high score problem, the algorithm might be written in pseudo-code like this:
+Algorytm znajdowania wartości największej w tablicy, zapisany w pseudokodzie może wyglądać tak:
 
 ```
-if the table is empty
-  display that there is no high score, and quit
-otherwise, note the first score in the table
-for each of the other scores in the table,
-  if that score is larger than the one noted,
-    replace the noted one with the current score
-display the currently noted score
+Jeżeli tablica jest pusta,
+  to zakończ.
+W przeciwnym przypadku, zapamiętaj pierwszą wartość w tablicy.
+Dla każdej z pozostałych wartości w tablicy wykonaj:
+  Jeżeli ta wartość jest większa od zapamiętanej, 
+    to zastąp wartość pamiętaną na tę wartość.
+Wyświetl zapmiętaną wartość.
 ```
 
-Algorithms are more precise than informal instructions and do not require any insight to follow;
-they are still not precise enough for a computer to follow in the form they are written,
-but are precise enough for a human to know exactly what you mean,
-so they can then work out how to implement your algorithm,
-either doing it themselves, or writing a computer program to do it.
-The other important thing with this level of precision is that we can often make a good estimate of how fast it will be.
-For the high score problem above, if the score table gets twice as big, the algorithm will take about twice as long.
-If the table could be very big (perhaps we're tracking millions of games and serving up the high score many times each second), that might already be enough to tell us that we need a better algorithm to track high scores regardless of which language it's going to be programmed in;
-or if the table only ever has 10 scores in it, then we know that the program is only going to do a few dozen operations, and is bound to be really fast even on a slow computer.
+Algorytmy zapisane w pseudokodzie lub jako lista kroków to ciąg jednoznacznych instrukcji, zrozumiałych dla informatyka;
+mimo to nie jest to jeszcze ten poziom precyzji sfmormułowań, jaki wymagany jest od instrukcji przeznaczonych do wykonania przez komputer.
+
+Algorytm powinien być tak zapisany, na takim poziomie szczegółowości, żeby można było oszacować jego efektywność.
+Osoba, która przeanalizuje przedstawiony wyżej algorytm znajdowania największej wartości w tablicy, nie powinna mieć wątpliwości, że że podwojenie rozmiaru tablicy skutkowałoby podwojeniem czasu wykonania.
+Taka wiedza ma ogromne znaczenie: algorytm jest wystarczająco szybki dla małych tablic wyników, ale niepraktyczny dla wielodostepnych (obługujących wielu użytkowników) systemów internetowych przetwarzających ogromne zbiory danych, które wymagałyby istnienia tablicy o milonach wyników.
 
 The most precise way of giving a set of instructions is in the form of a
 {glossary-link term="Algorithm" reference-text="computer program"}program{glossary-link end},
@@ -354,19 +349,19 @@ Big O Notation however requires some advanced mathematics to explore thoroughly 
 
 To make things even more complicated, in practice algorithms are running on computers that have cached memory and virtual memory, where the time to access a particular value can be particularly short, or particularly long. There is a whole range of algorithms that are used for this situation to make sure that the algorithm still runs efficiently in such environments. Such algorithms are still based on the ideas we've looked at in this chapter, but require some clever adjustments to ensure that they work well.
 
-## Further reading
+## Do dalszej lektury
 
-### Other topics in algorithms
+### Inne zagadnienia algorytmiczne
 
-- There is another searching algorithm which performs even better than Binary Search. It is called Hashing and can be investigated with the CS Unplugged [Battleships Game](http://csunplugged.org/searching-algorithms).
-- There are some problems for which no good algorithms have been found (and many people believe they will never be found). For more on these kinds of algorithms see the Complexity and Tractability chapter in the Field Guide.
+- Istnieje metoda przeszukiwania zbiorów danych, lepsza od przeszukiwania binarnego. Nazywa się haszowaniem (ang. "to hash" oznacza "posiekać"). Łagodne wprowadzenie do tematu znajdziesz w materiałach pt. [Gra w statki](http://csunplugged.org/searching-algorithms).
+- Istnieją problemy, dla których nie znaleziono dobrych algorytmów, a nawet takie, których prawdopoodbnie nigdy nie da się rozwiązać w efektywny sposób. Więcej na ten temat piszemy w rozdziale o złożoności obliczenionej algorytmów i pojęciu praktycznej wykonalności algorymów.
 
-### Useful Links
+### Ciekawe linki
 
-- [CS Unplugged Searching algorithms](http://csunplugged.org/searching-algorithms)
-- CS Unplugged [Sorting algorithms](http://csunplugged.org/sorting-algorithms)
-- [Searching algorithm game, may not be suitable](http://csunplugged.org/divideAndConquer)
-- Wikipedia has more details on [Linear Search](https://en.wikipedia.org/wiki/Linear_search), [Binary Search](https://en.wikipedia.org/wiki/Binary_search), [Selection sort](https://en.wikipedia.org/wiki/Selection_sort), [Insertion sort](https://en.wikipedia.org/wiki/Insertion_sort) and  [Quicksort](https://en.wikipedia.org/wiki/Quicksort).
-- The [Sorting Bricks game](http://mathsite.math.berkeley.edu/sorting/brick.html) is a great way to learn about several sorting algorithms (requires Java).
-- [Sorting Algorithms Visualisations](http://www.sorting-algorithms.com/) shows several different sorting algorithms racing and contains information and pseudocode for each.
-- [Beginner's Guide to Big O Notation](http://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/)
+- [CS Unplugged i algorytmy przeszukiwania](http://csunplugged.org/searching-algorithms)
+- CS Unplugged [i algorymy sortowania](http://csunplugged.org/sorting-algorithms)
+- [Gra na temat przeszukiwania (http://csunplugged.org/divideAndConquer)
+- Wikipedia has more details on [Przeszukiwanie liniowe](https://en.wikipedia.org/wiki/Linear_search), [Przeszukiwanie binarne](https://en.wikipedia.org/wiki/Binary_search), [Sortowanie przez wybór](https://en.wikipedia.org/wiki/Selection_sort), [Sortowanie przez wstawianie](https://en.wikipedia.org/wiki/Insertion_sort) and  [Quicksort](https://en.wikipedia.org/wiki/Quicksort).
+- [Sortowanie cegieł (gra)](http://mathsite.math.berkeley.edu/sorting/brick.html) do nauki algorytmów sortowania (wymaga obługi Javy przez przeglądarkę).
+- [Wizualizacja algorytmów sortowania](http://www.sorting-algorithms.com/) przestawia różne algorytmy sortowania, są zapisane w pseudokodzie.
+- [Wprowadzenie do notacji dużego O](http://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/)
