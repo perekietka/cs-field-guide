@@ -116,32 +116,34 @@ Na przykładach tych typów algorytmów można w ciekawy sposób przedstawić kl
 
 ## Przeszukiwanie
 
-{panel type="teacher-note" summary="Presenting searching in the classroom"}
+{panel type="teacher-note" summary="Prezentacja tematu w klasie"}
 
-The present searching game in this section is split into two parts, the first corresponds to the Linear Search algorithm (also known as Sequential Search) and the second corresponds to {glossary-link term="Binary Search"}Binary Search{glossary-link end}. We recommend you play through the levels yourself for a while, or after reading this description. It is based on the [CS Unplugged Battleships game](http://csunplugged.com/searching-algorithms) which can be used as a classroom activity to enforce the lessons in this chapter (the hashing activity is not used for the present searching game). The
+Gry zaproponowane w tym podrozdziale są wzorowane na scenariuszu [Gra w statki](http://csunplugged.com/searching-algorithms). Pierwsza dotyczy algorytmu przeszukiawnia liniowego (zwanego też sekwencyjnym), a druga algorytmu przeszukiwania binarnego.
 
-To run this as a classroom activity get all the students to play each section of the game at the same time and then when they have all finished have a discussion about the results. After students have finished the first part ask them questions like "Did anyone find the pet on the first go?", "Did anyone only find it after checking every other present?", or find the average number of presents students had to open to find the pet (this should be around 5 for the first level and around 10 for the second).
+Wszyscy uczniowie w klasie powinny w tym samym czasie zagrać w każdą z gier. Po zakończeniu pierwszej gry (obu części) nauczyciel powinien poprowadzić krótką dyskusję. Może zacząć od pytań: "Komu udało się zakończyć grę z sukcesem już w pierwszej próbie?", "Kto potrzebował sprawdzić wszyskie pudełka?". Warto wyznaczyć wartość średnią liczby prób.
 
-While they are playing the second part some may have trouble finding the correct algorithm to find the pet. If they are finding these levels confusing you can give them a hint like "Why don't you start by opening the present in the centre" and when they do ask them "What does the number you found tell you about all the numbers before it?" if the number is smaller than the one they are looking for, or "all the numbers after it?" if the number is bigger than the one they are looking for.
+Po zakończeniu przez wszystkich uczniów drugiej gry nauczyciel może zapytać: "Czy pięć pytań to nie za mało, aby zakończyć grę z sukcesem?", "Jaką strategią można się posłużyć?". Może się okazać, że wielu uczniów nieświadomie posługiwało się metodą dwudzielną (binarnym przeszukiwaniem). 
 
-When students have finished ask them questions like "Where you able to find the pet even though you had less lives? What strategy did you use to find the pet?", we have found that many students will have ended up doing a binary search (or similar) without even knowing what a binary search is! Explaining these algorithms to students is likely to be easier now that they have seen them in action.
+Gier nie powinno się pomijać. Te aktywności powinny poprzedzić prezentację tematu przez nauczyciela.
 {panel end}
 
-Searching through collections of data is something computers have to do all the time. It happens every time you type in a search on Google, or when you type in a file name to search for on your computer. Computers deal with such huge amounts of data that we need fast algorithms to help us find information quickly.
+Przeszukiwanie różnych zbiorów danych zajmuje znaczącą część pracy wielu komputerów. Gdy używasz wyszukiwarki Google'a, to w istocie prowadzisz dialog z programem przeszukującym indeksy baz danych na serwerach wyszukiwarki. Komputery często muszą przetwarzać ogromne ilości danych, a to oznacza, że potrzebują szybkich algorytmów.
 
-Lets investigate searching with a game...
+Zdobywanie wiedzy na ten temat zacznij od poniższej gry...
 
 {interactive name="searching-algorithms" type="whole-page" text="Searching Boxes - Part 1" parameters="max=2"}
 
-You may have noticed that the numbers on the monsters and pets in the game were in a random order, which meant that finding the pet was basically luck! You might have found it on your first try, or if you were less lucky you might have had to look inside almost all the presents before you found it. This might not seem like such a bad thing since you had enough lives to look under all the boxes, but imagine if there had been 1,000 boxes, or worse 1,000,000! It would have taken far too long to look through all the boxes and the pet might have never been found.
+Cechą charakterystyczną tej gry było losowae rozmieszczenie liczb. Skutek był taki, że sukces zależał najpierw od szczęścia! 
+Wyobraź sobie, że pudełek jest 1000, czy nawet 1 000 000! Przeszukiwanie takich zbiorów trwałoby długo.
 
-Now this next game is slightly different. You have less lives, which makes things a bit more challenging, but this time the numbers inside the boxes will be in order. The monsters, or maybe the pet, with the smallest number is in the present on the far left, and the one with the largest number is in the present on the far right. Let's see if you can collect all the pets without running out of lives...
+Kolejna gra różni się od poprzedniej. Liczba dopuszczalnych prób będzie mniejsza, ale tym razem liczby będą rozmieszczone od najmniejszej (po lewej) do największej (po prawej). Wyzwaniem będzie zakończyć grę z sukcesem. To jest jednak możliwe! 
 
 {interactive name="searching-algorithms" type="whole-page" text="Searching Boxes - Part 2" parameters="level=3" thumbnail="thumbnail2.png"}
 
-Now that you have played through the whole game (and hopefully found all of the lost pets!) you may have noticed that even though you had less lives in the second part of the game, and lots of presents to search through, you were still able to find the pet. Why was this possible?
+Dlaczego w drugiej grze wygrana była zawsze możliwa? Na czym opiera się zwycięska strategia?
 
-### Linear Search
+
+### Przeszukiwanie liniowe
 
 Since the boxes in the first game were in a random order there really wasn't any strategy you could have used to find the pet, except simply keep opening presents one by one until you found the pet. This is essentially the *Linear Search* algorithm (sometimes called a sequential search). In plain English, Linear Search algorithm is as follows:
 - Check if the first item in a list is the item you are searching for, if it is the one you are looking for, you are done.
