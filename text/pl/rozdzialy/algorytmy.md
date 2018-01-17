@@ -54,58 +54,49 @@ Algorytm powinien być tak zapisany, na takim poziomie szczegółowości, żeby 
 Osoba, która przeanalizuje przedstawiony wyżej algorytm znajdowania największej wartości w tablicy, nie powinna mieć wątpliwości, że że podwojenie rozmiaru tablicy skutkowałoby podwojeniem czasu wykonania.
 Taka wiedza ma ogromne znaczenie: algorytm jest wystarczająco szybki dla małych tablic wyników, ale niepraktyczny dla wielodostepnych (obługujących wielu użytkowników) systemów internetowych przetwarzających ogromne zbiory danych, które wymagałyby istnienia tablicy o milonach wyników.
 
-The most precise way of giving a set of instructions is in the form of a
-{glossary-link term="Algorithm" reference-text="computer program"}program{glossary-link end},
-which is a specific implementation of an algorithm, written in a specific programming language,
-with a very specific result for any particular input.
-This is the most precise of these three descriptions and computers are able to follow and understand these.
+Najbardziej precyzjnym sposobem zapisu listy instrukcji algorytmu jest kod źródłowy programu komputerowego, zapisany w konkretnym języku programowania. Taka forma zapisu algorytmu stanowi kod zrozumiały dla komputera.
 
-For the example with getting a drink, we might program a robot to do that;
-it would be written in some programming language that the robot's computer can run,
-and would tell the robot exactly how to retrieve a glass of water and bring it back to the person who asked for the water.
+Algorytm dostarczenia szklanki wody można by zapisać w formie programu komputerowego, który wykonałby robot. Oczywiście programista musiałby użyć języka programowania, który rozumie komputer wbudowany w robota.
 
-With the high-score problem, it would be written in a particular language; even in a particular language there are lots of choices about how to write it, but here's one particular way of working out a high score
-(don't worry too much about the detail of the program if the language isn't familiar; the main point is that you could give it to a computer that runs Python, and it would follow the instructions exactly):
+Poniżej zapisano algorytm znajdowania największej wartości w tablicy. Użyto języka Python.
+Trzeba podkreślić, że nawet w tym jednym konkretnym języku programowania można by na wiele sposobów zapisać ten sam algorytm. Różni programiści mogliby zapisać pewne szczegóły techniczne w trochę inny sposób.
 
 ```python3
-def find_high_score(scores):
-    if len(scores) == 0:
-        print("No high score, table is empty")
+def znajdz_najwiekszy(wyniki):
+    if len(wyniki) == 0:
+        print("Tabela wyników jest pusta.")
         return -1
     else:
-        highest_so_far = scores[0]
-        for score in scores[1:]:
-            if score > highest_so_far:
-                highest_so_far = score
-        return highest_so_far
+        najwiekszy = wyniki[0]
+        for wynik in wyniki[1:]:
+            if wynik > najwiekszy:
+                najwiekszy = wynik
+        return najwiekszy
 ```
 
-But here's another program that implements exactly the same algorithm, this time in the Scratch language.
-
+Poniżej ten sam algorytm przedstawiono w języku Scratch.
 {image filename="highscore-in-scratch.png" alt="High score program in Scratch"}
 
-Both of the above programs are the same algorithm.
-In this chapter we'll look in more detail about what an algorithm is, and why they are such a fundamental idea in computer science.
-Because algorithms exist even if they aren't turned in to programs, we won't need to look at programs at all for this topic, unless you particularly want to.
+Oba programy realizują ten sam algorytm. 
+
+W tym rozdziale, w dalszej części, zajmiemy się tematem algorytmów bardziej szczegółowo. Koncepcja algorytmu jest fundamentalną koncepcją informatyki. Interesować będą nas algorymy same w sobie, a nie ich konkretne komputerowe realizacje.
 
 {glossary-link term="Algorithm" reference-text="algorithm cost"}{glossary-link end}
 
-### Algorithm cost
+### Koszt algorytmu
 
-When Computer Scientists are comparing algorithms they often talk about the 'cost' of an algorithm. The cost of an algorithm can be interpreted in several different ways, but it is always related to how well an algorithm performs based on the size of its input, *n*. In this chapter we will talk about the cost of an algorithm as either the time it takes a program (which performs the algorithm) to complete, or the number of steps that the algorithm makes before it finishes.
+Kiedy informatycy porównują dwa algorytmy rozwiązujące ten sam problem, to często używają określenia ,,koszt algorytmu''. Mówi się o zależności sprawności lub pracochłonności algorytmu od rozmiaru danych wejściowych (oznaczmy ten rozmiar jako *n*).
+W tym rozdziale koszt działania algorytmu będziemy mierzyć albo badając czas wykonania programu (realizującego algorytm), albo zliczając liczbę kroków, operacji podstawowych algorytmu.
 
-For example, one way of expressing the cost of the high score algorithm above would be to observe that for a table of 10 values, it does about 10 sets of operations to find the best score,
-whereas for a table of 20 scores, it would do about twice as many operations.
-In general the number of operations for a table of *n* items will be proportional to *n*.
-Not all algorithms take double the time for double the input; some take a lot more than double, while others take a lot less.
-That's worth knowing in advance because we usually need our programs to scale up well;
-in the case of the high scores, if you're running a game that suddenly becomes popular, you want to know in advance that the high score algorithm will be fast enough if you get more scores to check.
+Jednym ze sposobów określenia kosztu algorytmu znajdowania największej wartości w tablicy może być zliczenie operacji odczytu wartości z tablicy. Okazuje się, że jeśli tablica składa się z 10 elementów, to operacji jest 10. Podwojenie liczby elementów tablicy prowadzi do podwojenia liczby operacji.
+Można więc powiedzieć, że liczba operacji jest proporcjonalna do *n*.
+Nie wszystkie algorytmy mają tę własność; niektóre algorytmy są o wiele bardziej kosztowne, a niektóre mniej kosztowne;
+Warto, aby programista potrafił określić pracochłonność algorytmu, zanim zdecyduje się nim posłużyć. Program komputerowy musi być skalowalny. Gra komputerowa, którą programista stworzył, może okazać się bardzo popularna, więc algorytm znajdowania najlepszego wyniku musi być wystarczająco szybka.
 
-{panel type="extra-for-experts" "Algorithm complexity"}
+{panel type="extra-for-experts" "Złożoność obliczeniowa algorytmów"}
 The formal term for working out the cost of an algorithm is [algorithm analysis](https://en.wikipedia.org/wiki/Analysis_of_algorithms),
 and we often refer to the cost as the algorithm's *complexity*.
-The most common complexity is the "time complexity" (a rough idea of how long it takes to run),
-but often the "space complexity" is of interest - how much memory or disk space will the algorithm use up when it's running?
+Szacowanie kosztów algorytmu znane jest w informatyce pod nazwa [analiza algorytmu]. Taka analiza powinna prowadzić do określenia złożoności obliczeniowej algorytmu (dotyczącej czasu wykonania), ale częśto i zlożności pamięciowej (dotyczącej ilości pamięci, potrzebnej podczas uruchomienia programu).
 
 There's more about how the cost of an algorithm is described in industry,
 using a widely agreed on convention called 'Big-O Notation',
