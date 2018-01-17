@@ -94,28 +94,27 @@ Nie wszystkie algorytmy mają tę własność; niektóre algorytmy są o wiele b
 Warto, aby programista potrafił określić pracochłonność algorytmu, zanim zdecyduje się nim posłużyć. Program komputerowy musi być skalowalny. Gra komputerowa, którą programista stworzył, może okazać się bardzo popularna, więc algorytm znajdowania najlepszego wyniku musi być wystarczająco szybka.
 
 {panel type="extra-for-experts" "Złożoność obliczeniowa algorytmów"}
-The formal term for working out the cost of an algorithm is [algorithm analysis](https://en.wikipedia.org/wiki/Analysis_of_algorithms),
-and we often refer to the cost as the algorithm's *complexity*.
-Szacowanie kosztów algorytmu znane jest w informatyce pod nazwa [analiza algorytmu]. Taka analiza powinna prowadzić do określenia złożoności obliczeniowej algorytmu (dotyczącej czasu wykonania), ale częśto i zlożności pamięciowej (dotyczącej ilości pamięci, potrzebnej podczas uruchomienia programu).
+Szacowanie kosztów algorytmu znane jest w informatyce pod nazwa [analiza algorytmu](https://en.wikipedia.org/wiki/Analysis_of_algorithms). Taka analiza powinna prowadzić do wyznaczenia *złożoności obliczeniowej* algorytmu (dotyczącej czasu wykonania), ale częśto i zlożności pamięciowej (dotyczącej ilości pamięci, potrzebnej podczas uruchomienia programu).
 
-There's more about how the cost of an algorithm is described in industry,
-using a widely agreed on convention called 'Big-O Notation',
-in the ["The whole story!"](chapters/algorithms.html#the-whole-story) section at the end of this chapter.
+Więcej informacji na temat określania kosztu algorytmu, m.in. o notacji "duże-O", znajduje się w podrozdziale ["Podsumowanie"](chapters/algorithms.html#the-whole-story) .
 {panel end}
 
-The amount of time a program which performs the algorithm takes to complete may seem like the simplest cost we could look at, but this can actually be affected by a lot of different things, like the speed of the computer being used, or the programming language the program has been written in. This means that if the time the program takes to complete is used to measure the cost of an algorithm it is important to use the same program and the same computer (or another computer with the same speed) for testing the algorithm with different numbers of inputs.
+Trzeba podkreślić, że czas potrzebny różnym komputerom do realizacji tego samego algorytmu i tych samych danych może być różny. Zależy to od parametrów komputerów, ilości zasobów przydzielonych do wykonania zadania, ale i od języka programowania, w którym algorytm został zakodowany. Dlatego trzeba być ostrożnym w wyciąganiu pochopnych wniosków o koszcie algorytmu tylko na podstawie czasu wykonania programu. 
 
-The number of operations (such as comparisons of data items) that an algorithm makes however will not change depending on the speed of a computer, or the programming language the program using the algorithm is written in. Some algorithms will always make the same number of comparisons for a certain input size, while others might vary.
+Znacznie lepszą miarą jest zliczanie operacji (takich jak porównywanie dwóch wartości), które są właściwe danemu algorytmowi. 
 
 
-### Searching and Sorting
+### Przeszukiwanie i porządkowanie
 
 In this chapter we will look at two of the most common and important types of algorithms, Searching and Sorting. You probably come across these kinds of algorithms every time you use a computer without even realising!
 They also happen to be great for illustrating some of the key concepts that arise with algorithms.
+W tym rozdziale przyjrzymy się dokładniej dwu najważniejszym typom algorytmów: przeszukiwania i porządkowania danych. Prawdopodobnie każdy z nas z jednym z tych typów problemów już się musiał zmierzyć, być może nie do końca świadomie!
+
+Na przykładach tych typów algorytmów można w ciekawy sposób przedstawić kluczowe koncepcje projektowania i analizy algorytmów.
 
 {glossary-link term="Algorithm" reference-text="searching algorithms"}{glossary-link end}
 
-## Searching
+## Przeszukiwanie
 
 {panel type="teacher-note" summary="Presenting searching in the classroom"}
 
