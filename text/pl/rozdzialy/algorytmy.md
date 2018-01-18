@@ -216,30 +216,33 @@ Wymyślono wiele algorytmów porządkowania. W tym podrozdziale przedstawione b�
 
 ### Waga szalkowa (online)
 
-Throughout this section you can use the sorting interactive to test out the algorithms we talk about. When you're using it make sure you take note of the comparisons at the bottom of the screen, each time you compare two boxes the algorithm is making 'one comparison' so the total number of comparisons you have to make with each algorithm is the cost of that algorithm for the 8 boxes.
+Udostępniamy interaktywne narzędzie z wirtualną wagą szalkową do testowania algorytmów opisanych poniżej. U dołu ekranu pojawia się informacja o liczbie porównań (ważeń): każde ważenie to jedno porównanie. Koszt algorytmu będzie określony liczbą porównań użytych do uporządkowania 8 pudełek. Zakładamy, że na każdej szalce wagi kładzie się jedno pudełko.
 
-Use the scales to compare the boxes (you can only compare two boxes at a time) and then arrange them along the bottom of the screen. Arrange them so that the lightest box is on the far left and the heaviest is on the far right. Once you think they are in order click 'Test order'.
+Pudełka należy uporządkować od najlżejszego po lewej do najcięższego po prawej. Do sprawdzenia użyj przycisku ,,Sprawdź porządek''.
 
-If the interactive does not run properly on your computer you can use a set of physical balance scales instead; just make sure you can only tell if one box is heavier than the other, not their exact weight (so not digital scales that show the exact weight).
+Możesz posłużyć się prawdziwą wagą szalkową. Odważniki trzeba tak przygotować, żeby dla każdej pary odważników można było określić, który z odważników jest cięższy.
 
 {interactive name="sorting-algorithms" type="whole-page" text="Scales interactive"}
 
 
 ### Porządkowanie przez wybór
 
-One of the most intuitive ways to sort a group of boxes into order, from lightest to heaviest, is to start by first finding the lightest (or the heaviest) box and placing that to the side. Try this with the scales interactive.
+Jednym z najbardziej intuicyjnych sposobów porządkowania jest: zacząć od znalezienia najlżejszego (lub najcięższego) pudełka i odłożyć je na bok. Spróbuj to zrobić z użyciem wagi szalkowej. Zapisz liczbę wykonanych porównań.
 
-After finding the lightest box simply repeat the process again with the remaining boxes until you find the second lightest, now place that to the side alongside the lightest box. If you keep repeating this process you will eventually find you have placed each box into order. Try sorting the whole group of boxes in the scales interactive into order using this method and count how many comparisons you have to make.
+Po znalezieniu najlżejszego pudełka znajdź drugie najlżejsze pudełko w ten sam sposób i ustaw je obok najlżejszego. Zapisz liczbę porównań.
+Powtarzaj poszukiwanie kolejnych najlżejszych, na danym etapie, pudełek, aż wszystkie pudełka będą uporządkowane. Zapisuj liczbę porównań.
+Ile porównań (ważeń) zostało wykonanych?
 
-Tip: Start by moving all the boxes to the right of the screen and then once you have found the lightest box place it to the far right (if you want to find the heaviest first instead then move them all to the left).
+Wskazówka: Zacznij od przeniesienia wszystkich pudełek na prawą stronę ekranu. (Jeśli szukasz najcięższego, to przenieś pudełka na lewą stronę ekranu.)
 
-If you record how many comparisons you had to make each time to find the next lightest box you might notice a pattern (hint: finding the lightest  should take 7 comparisons, and then finding the second lightest should take 6 comparisons…). If you can see the pattern then how many comparisons do you think it would take to then sort 9 boxes into order? What about 20? If you knew how many comparisons it would take to sort 1000 boxes, then how many more comparisons would it take to sort 1001 instead?
+Przeanalizuj notatki dotyczące liczby porównań. Dostrzegasz jakąś prawidłowość? Ile porównań było wykonywanych w kolejnych etapach wybierania najlżeszych pudełek? Ile porównań łącznie byłoby wykonanych, gdybyśmy porządkowali zbiór 9 pudełek? Ile dla 20 pudełek? Załóżmy, że wiesz, ile porównań potrzeba do uporządkowania 1000 pudełek tym algorytmem. O ile więcej byłoby potrzebnych, gdyby pudełek było 1001?
 
-{panel type="teacher-note" summary="Answer for box analysis"}
-For a list of 8 objects (like in the interactive) it should take 7 comparisons to find the lightest, 6 to find the next lightest, 5 to find the next, then 4, then 3, then 2, and then 1 to sort the final two boxes. In total this is 7+6+5+4+3+2+1 = 28 comparisons. If there had been 9 boxes it would have taken 8+7+6+5+4+3+2+1 = 36 comparisons. 20 boxes will take 190. Going from 1000 boxes up to 1001 will require 1000 extra comparisons, even though only 1 box has been added. Selection sort will always take
-{math}(n\times(n-1))/2{math end} comparisons to sort *n* items into order.
+{panel type="teacher-note" summary="Odpowiedzi"}
+Dla pudełek mamy kolejno: 7 porównań do znalezienia najlżejszego, 6 do znalezienia drugiego najlżejszego, 5 do znalezienia następnego, potem 4, potem 3, 2 i w końcu 1 porównanie (gdy zostaną dwa pudełka do porównania). W sumie mamy:  7+6+5+4+3+2+1 = 28 porównań. 
+Gdyby pudełek było 9, to porównań byłoby: 8+7+6+5+4+3+2+1 = 36. Dla 20 pudełek byłoby 190 porównań. Liczba porównań w algorytmie dla przypadku 1001 pudełek będzie o 1000 większa niż w przypadku 1000 pudełek. 
+Algorytm porządkowania przez wybór wymaga wykonania {math}(n\times(n-1))/2{math end} porównań do uporządkowania *n* elementów.
 
-For example: To calculate the number of comparisons required for 20 boxes, using {math}(n\times(n-1))/2{math end} where *n* = 20:
+Dla przykładu wyznaczmy liczbę porównań dla 20 pudełek (*n* = 20):
 
 (20*(20-1))/2
 
@@ -247,7 +250,7 @@ For example: To calculate the number of comparisons required for 20 boxes, using
 
 = 380/2
 
-= 190 comparisons
+= 190 porównań
 
 Some students may recognise this formula as Gauss' trick (see [the anecdotes about Gauss on Wikipedia](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss#Anecdotes). One way of expressing this trick for the above example is that 20 boxes would require summing the numbers 1+2+3+...+17+18+19. If we write the numbers backwards (19+18+17+...3+2+1) then it would be the same sum. Now if we add these two lists together, pairing up the corresponding numbers, we get (1+19)+(2+18)+(3+17)+...+(17+3)+(18+2)+(19+1). Each pair in this sum adds up to 20, and there are 19 pairs, so adding the two lists together is just 20x19. Since both lists add up to the same amount, the original sum is a half of that, or 20x19/2, which is 190 comparisons, which is what we got from the formula above. If students can follow this reasoning then they can easily work out the comparisons needed for a large number of boxes, and the don't have to use the "magic" formula given above. There's a visual explanation in [this video](http://www.numberphile.com/videos/one_to_million.html) and more examples on [this page](http://nzmaths.co.nz/gauss-trick-staff-seminar).
 {panel end}
