@@ -149,7 +149,7 @@ Since the boxes in the first game were in a random order there really wasn't any
 W pierwszej z gier pudełka były w przypadkowej kolejności. Trudno więc mówić o stosowaniu jakiejkolwiek strategii przeszukiwania. Konieczne było sprawdzanie pudełek jedno po drugim, aż do skutku. W informatyce mówi się w takim przypadku o *przeszukiwaniu liniowym* (czasami o przeszukiwaniu sekwencyjnym). Taki algorytm można by opisać listą kroków:
 - Sprawdź, czy pierwszy element listy jest tym, który jest poszukiwany. Jeśli tak, to zakończ przeszukiwanie.
 - W przeciwnym przypadku, sprawdź kolejny element listy.
-- Kontynuuj przeszukiwanie, aż znajadziesz element, który jest poszukiwany.
+- Kontynuuj przeszukiwanie, aż znajdziesz element, który jest poszukiwany.
 
 W przypadku przeszukiwania listy 10 elementów, średnia liczba prób prowadzących do sukcesu to 5. Dla listy 10 000 elementów tych prób będzie średnio 5000. Oczywiście w konkretnym przypadku liczba prób może być mniejsza od średniej, nawet znacznie mniejsza, albo i większa.
 
@@ -252,17 +252,19 @@ Dla przykładu wyznaczmy liczbę porównań dla 20 pudełek (*n* = 20):
 
 = 190 porównań
 
-Some students may recognise this formula as Gauss' trick (see [the anecdotes about Gauss on Wikipedia](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss#Anecdotes). One way of expressing this trick for the above example is that 20 boxes would require summing the numbers 1+2+3+...+17+18+19. If we write the numbers backwards (19+18+17+...3+2+1) then it would be the same sum. Now if we add these two lists together, pairing up the corresponding numbers, we get (1+19)+(2+18)+(3+17)+...+(17+3)+(18+2)+(19+1). Each pair in this sum adds up to 20, and there are 19 pairs, so adding the two lists together is just 20x19. Since both lists add up to the same amount, the original sum is a half of that, or 20x19/2, which is 190 comparisons, which is what we got from the formula above. If students can follow this reasoning then they can easily work out the comparisons needed for a large number of boxes, and the don't have to use the "magic" formula given above. There's a visual explanation in [this video](http://www.numberphile.com/videos/one_to_million.html) and more examples on [this page](http://nzmaths.co.nz/gauss-trick-staff-seminar).
+Niektórzy uczniowie mogą znać anegdotę o Gaussie (zobacz [Wikipedia](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss#Anecdotes). 
+W wersji dla 20 obliczenia przypisywane młodemu matematykowi wyglądałyby tak: 
+Sumę 1+2+3+...+17+18+19 zapisujemy wspak (19+18+17+...3+2+1) w taki sposób, aby 19 znalazło się pod 1, 18 pod 2, 17 pod 3 itd. Otrzymuejmy 19 par: (1+19)+(2+18)+(3+17)+...+(17+3)+(18+2)+(19+1). Ta suma jest równa: 20x19. Liczba porównań jest więc równa 20x19/2 = 190 (każdy składnik sumy występuje dwa razy).  
+Warto obejrzeć [to video](http://www.numberphile.com/videos/one_to_million.html) i zapoznać się z innymi przykładami [na tej stronie](http://nzmaths.co.nz/gauss-trick-staff-seminar).
 {panel end}
 
-This algorithm is called Selection sort, because each time you look through the list you are 'selecting' the next lightest box and putting it into the correct position. If you go back to the algorithms racing interactive at the top of the page you might now be able to watch the selection sort list and understand what it is doing at each step.
+Przedstawiony wyżej algorytm nazywa się porządkowaniem przez wybór (selekcję).
+Taki algorytm można by opisać listą kroków:
+- Znajdź najmniejszy element na liście. Umieść go na początku nowej listy.
+- Znajdź najmniejszy element wśród pozostałych na liście. Umieść go na drugiej liście obok elementu ustawionego tam po poprzednim przeszukiwaniu.
+- Kontynuuj przeszukiwanie listy, aż wszystkie elementy znajdą się na drugiej liście. Ta lista będzie uporządkowana.
 
-The selection sort algorithm can be described as follows:
-- Find the smallest item in the list and place it to one side. This will be your sorted list.
-- Next find the smallest item in the remaining list, remove it and place it into your sorted list beside the item you previously put to the side.
-- Repeat this process until all items have been selected and moved into their correct position in the sorted list.
-
-You can swap the word 'smallest' for 'largest' and the algorithm will still work, as long as you are consistent it doesn't matter if you are looking for the smallest or the largest item each time.
+W powyższym opisie można zastąpić słowo ,,najmniejszy'' słowem ,,największy'' i algorytm będzie nadal poprawny. Oczywiście w tym przypadku porządek elementów na liście będzie odwrócony (od największego do najmniejszego).
 
 ### Porządkowanie przez wstawianie
 
