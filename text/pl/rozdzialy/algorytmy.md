@@ -173,29 +173,26 @@ Warto przeanalizować z uczniami ciąg liczb, który odpowiada liczbie kartek po
 Na przykład dla 512 kartek będzie to: 256, potem 128, potem 64, 32, 16, 8, 4, 2 i w końcu jedna kartka. To oznacza, że do znalezienia odpowiedniej kartki wystarczy co najwyżej 9 prób.
 (Można się posłużyć przykładem z liczbami, które nie są potęgami liczby 2, ale wówczas trzeba by doprecyzować znaczenie ,,połowienia''.)
 
-Siłę przeszukiwania binarnego niektórym łatwiej pojąć, gdy zapytamy ich o liczbę prób wystarczających do przeszukania książki o podwojonej liczbie stron. 
+Siłę przeszukiwania binarnego niektórym być może będzie łatwiej pojąć, gdy zapytamy ich o liczbę prób wystarczających do przeszukania książki o podwojonej liczbie stron. 
 Warto podkreślić w czasie zajęć, że na gdyby stworzyć uporządkowaną (np. według nazwisk i imion) listę wszystich ludzi obecnie żyjących na świecie, to potrzeba nie więcej niż 30 prób do znalezienia dowolnej osoby. 
 {panel end}
 
-If you used a Binary Search on each of the levels then you would have always had enough lives to find the pet! Informally, the Binary Search algorithm is as follows:
-- Look at the item in the centre of the list and compare it to what you are searching for
-- If it is what you are looking for then you are done.
-- If it is larger than the item you are looking for then you can ignore all the items in the list which are larger than that item (if the list is from smallest to largest this means you can ignore all the items to the right of the centre item).
-- If it is smaller then you can ignore all the items in the list which are smaller than that centre item.
-- Now repeat the algorithm on the remaining half of the list, checking the middle of the list and choosing one of the halves, until you find the item you are searching for.
+Algorytm przeszukiwania binarnego można by opisać listą kroków:
+- Sprawdź, czy element znajdujący się w środku listy jest tym, który jest poszukiwany. Jeśli tak, to zakończ przeszukiwanie.
+- W przeciwnym przypadku: Jeśli ten środkowy element ma wartość większą od poszukiwanego, to w dalszych przeszukiwaniach pomiń elementy listy po prawej stronie środkowego. (Jeśli lista jest uporządkowana od nawiększego do najmniejszego, to pomiń elementy po lewej.)
+Jeśli ten środkowy element ma wartość mniejszą od poszukiwanego, to w dalszych poszukiwaniach pomiń elementy mniejsze od środkowego.
+- Kontynuuj przeszukiwanie, aż znajdziesz element, który jest poszukiwany.
 
-Binary Search is a very powerful algorithm. If you had 1000 presents to search through it would take you at most 10 checks for Binary search to find something and Linear search would take at most 1000 checks, but if you doubled the number of presents to search through how would this change the number of checks made by Binary Search and Linear search?
-
-{panel type="spoiler" summary="How does doubling the number of boxes affect the number of checks required?"}
-The answer to the above question is that the maximum number of checks for Linear Search would double, but the maximum number for Binary Search would only increase by one.
+{panel type="spoiler" summary="Jak podwojenie liczby pudełek wpływa na liczbę prób podczas przeszukiwania?"}
+W przypadku przeszukiwania liniowego niezbędna liczba prób wzrośnie dwa razy. W przypadku przeszukiwania binarnego wzrośnie tylko o jedno! 
 {panel end}
 
-It is important to remember that you can only perform a Binary Search if the items you are searching through are sorted into order. This makes the sorting algorithms we will look at next even more important because without sorting algorithms we wouldn't be able to use Binary Search to quickly look through data!
+Jest ważne, by pamiętać, że przeszukiwanie binarne można stosować tylko dla zbiorów uporządkowanych. To oznacza, że algorytmy porządkowania należy uznać za jeszcze ważniejsze!
 
 
-{panel type="project" summary="Code to   run linear and binary search for yourself"}
-The following files will run linear and binary search in various languages; you can use them to generate random lists of values and measure how long they take to find a given value.
-Your project is to measure the amount of time taken as the number of items (*n*) increases; try drawing a graph showing this.
+{panel type="project" summary="Zakodowane algorytmy przeszukiwania"}
+Poniżej znajdują się odnośniki do komputerowych realizacji algorytmów przeszukiwania zapisanych w różnych językach; możesz się nimi posłużyć do przygotowania list losowych wartości i porównania kosztów wykonania programów.
+Twoje zadanie polega na wykonaniu pomiarów czasu działania programów dla coraz większych wartości (*n*); wyniki spróbuj przedstawić na wykresie.
 - [Scratch](files/linear-binary-search-scratch.zip) - [Download Scratch here](https://scratch.mit.edu/scratch2download/)
 - [Python (Version 2)](files/linear-binary-search-python2.py) - [Download Python 2 here](https://www.python.org/downloads/)
 - [Python (Version 3)](files/linear-binary-search-python3.py) - [Download Python 3 here](https://www.python.org/downloads/)
