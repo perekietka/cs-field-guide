@@ -202,15 +202,17 @@ Twoje zadanie polega na wykonaniu pomiarów czasu działania programów dla cora
 
 ## Porządkowanie
 
-{panel type="teacher-note" summary="Why are we also covering sorting?"}
-Our main points have already been made --- what an algorithm is, how to estimate its cost, and that the cost isn't always proportional to the amount of data.
-However, it's good to reinforce this with some different algorithms.
-Sorting algorithms are useful to study because they illustrate many of the key issues that come up in algorithms, and there are some good contrasts, particularly between quicksort (which is fast and is widely used) and selection or insertion sort (which become very slow as the number of items sorted increases).
+{panel type="teacher-note" summary="Dlaczego o sortowaniu?"}
+Powyżej przedstawione zostały główne zagadnienia: pojęcie algorytmu, pracochłonność (koszt) algorytmu, przykłady algorytmów o różnych kosztach (proporcjonalne do liczby danych wejściowych, ale i inne).
+Warto przywołać jeszcze kilka innych przykładów algorytmów komputerowych. I opisać ich własności. 
+Algorytmy porządkowania mają duże walory dydaktyczne, gdyż na ich przykładzie można ukazać kluczowe zagadnienia z dziedziny algorytmów. 
 {panel end}
 
-Sorting is another very important area of algorithms. Computers often have to sort large amounts of data into order based on some attribute of that data, such as sorting a list of files by their name or size, or emails by the date they were received, or a customer list according to people's names. Most of the time this is done to make searching easier. For example you might have a large amount of data and each piece of data could be someone's name and their phone number. If you want to search for someone by name it would help to first have the data sorted alphabetically according to everyones names, but if you then wanted to search for a phone number it would be more useful to have the data sorted according to people's phone numbers.
+Porządkowanie danych to innych bardzo ważny temat z dziedziny algorytmów. Komputery często muszą porządkować duże zbiory danych. Kryteria porządkowania mogą być różne, mogą się zmieniać. Użytkownik komputera czasami chce zobaczyć listę plików uporządkowaną według nazw, a czasem według rozmiaru itp. Lista klientów zwykle jest porządkowana według nazwisk. 
+Uporządkowanie danych ułatwia ich przeszukiwanie. 
+Jak zwykle uporządkowane są informacje w książce telefonicznej telefonu? Według nazwiska, czy według numerów telefonów? Dlaczego?
 
-Like searching there are many different sorting algorithms, but some take much longer than others. In this section you will be introduced to two slower algorithms and one much better one.
+Wymyślono wiele algorytmów porządkowania. W tym podrozdziale przedstawione będą trzy: dwa mniej efektywne i jeden bardzo szybki.
 
 ### Waga szalkowa (online)
 
