@@ -290,57 +290,56 @@ Taki algorytm można by opisać listą kroków:
 
 ### Porządkowanie szybkie (Quicksort)
 
-Insertion and Selection Sort may seem like logical ways to sort things into order, but they both take far too many comparisons when they are used for large amounts of data. Remember computers often have to search through HUGE amounts of data, so even if they use a good searching algorithm like Binary Search to look through their data, if they use a bad sorting algorithm to first sort that data into order then finding anything will take far too long!
+Algorytmy porządkowania przedstawione wcześniej dla dużych zbiorów danych wymagają wykonania stosunkowo dużej liczby porównań.
 
 O wiele lepszym algorytmem porządkowania jest metoda {glossary-link term="quicksort"}Quicksort!{glossary-link end} 
 
 {interactive name="sorting-algorithms" type="whole-page" text="Quicksort interactive" parameters="method=quick" thumbnail="thumbnail-quick.png"}
 
-This algorithm is a little more complicated, but is very powerful. To do this algorithm with the sorting interactive, start by randomly choosing a box and placing it on the scales. Now compare every other box to the one you selected; heavier boxes should be put on the right of the second row and lighter boxes are put on the left. When you are done, place the box you were comparing everything else to between these two groups, but to help you keep track of things, put it in the row below. The following example shows how it might look after this step. Note that the selected block is in the right place for the final sorted order, and everything on either side will remain on the side that it is on.
+Ten algorytm jest trochę bardziej skomplikowany, ale bardzo efektowny. Przekonaj się o tym, wykonując eksperyment z wykorzystaniem wirtualnej lub prawdziwej wagi szalkowej. Wybierz pudełko losowo i umieść je na jednej z szalek wagi. Następnie porównaj je z każdym z pozostałych pudełek; cięższe powinny być odkładane po prawej stronie, a lżejsze po lewej. Na końcu tego etapu wybrane początku pudełko umieść pomiędzy dwa zbiory lżejszych i cięższych, w rzędzie poniżej. Ile było porównań? Zauważ, że to pudełko jest już na właściwym miejscu docelowego zbioru uporządkowanego.
 
 {image filename="quicksort-interactive-step-1.png" alt="Quicksort interactive in progress"}
 
-Now apply this process to each of the two groups of boxes (the lighter ones, then the heavier ones). Keep on doing this until they are all sorted. The boxes should then be in sorted order!
+Kolejny etap to powtórzenie opisanej wyżej procedury dla każego z dwóch ustalonych wcześniej zbiorów pudełek (lżejszych i cięższych).
+Następnie procedurę należy powtarzaj wielokrotnie dla nowo ustalonych zbiorów. Aż wszystkie pudełka są we właściwej kolejności!
 
-It might be worth trying this algorithm out a few times and counting the number of comparisons you perform each time. This is because sometimes you might be unlucky and happen to pick the heaviest, or the lightest box first. On the other hand you might be very lucky and choose the middle box to compare everything to first. Depending on this the number of comparisons you perform will change.
+Warto powtórzyć cały eksperyment z wagą kilkukrotnie. Dlaczego? Dlatego, że wiele zależy od szczęścia, to znaczy od wyboru pierwszego pudełka. W przypadku pecha może się okazać, że to kluczowe pudełko jest najcieższym lub najlżejszym w ogóle. W przypadku szczęścia wybrane pudełko będzie takim, które w zbiorze uporządkowanym znajdzie się pośrodku. Krótko mówiąc: Całkowita liczba porównań może być różna w każdym z eksperymentów.
 
-Quicksort can be described in the following way:
-- Choose an item from the list and compare every other item in the list to this (this item is often called the pivot).
-- Place all the items that are greater than it into one subgroup and all the items that are smaller into another subgroup. Place the pivot item in between these two subgroups.
-- Choose a subgroup and repeat this process. Eventually each subgroup will contain only one item and at this stage the items will be in sorted order.
+Taki algorytm można by opisać listą kroków:
+- Wybierz losowo element z listy i porównaj go z wszystkimi pozostałymi elementami (ten element czasami nazywa się osiowym).
+- Zgrupuj wszystkie elementy o mniejszej wartości po lewej stronie elementu osiowego, a wszystkie elementy o większej wartości po prawej stronie.
+- Wybierz jedną z nieposortowanych podrgup i powtórz proces opisany w krokach powyżej. 
+Proces jest przerywany, gdy wszystkie powstałe podgrupy są już jednoelementowe.
 
-{panel type="project" summary="Code to run selection sort and quicksort for yourself"}
-The following files will run selection sort and quicksort in various languages; you can use them to generate random lists of values and measure how long they take to be sorted.
-Note how long these take for various amounts of input (*n*), and show it in a table or graph.
-You should notice that the time taken by Quicksort is quite different to that taken by selection sort.
-- [Scratch](files/selection-quicksort-scratch.zip) - [Download Scratch here](https://scratch.mit.edu/scratch2download/)
-- [Python (Version 2)](files/selection-quicksort-python2.py) - [Download Python 2 here](https://www.python.org/downloads/)
-- [Python (Version 3)](files/selection-quicksort-python3.py) - [Download Python 3 here](https://www.python.org/downloads/)
+{panel type="project" summary="Zakodowane algorytmy porządkowania"}
+Poniżej znajdują się odnośniki do komputerowych realizacji algorytmów porządkowania zapisanych w różnych językach; możesz się nimi posłużyć do przygotowania list losowych wartości i porównania kosztów wykonania programów.
+Twoje zadanie polega na wykonaniu pomiarów czasu działania programów dla coraz większych wartości (*n*); wyniki spróbuj przedstawić na wykresie.
+- [Scratch](files/selection-quicksort-scratch.zip) - [Pobierz Scratch here](https://scratch.mit.edu/scratch2download/)
+- [Python (Version 2)](files/selection-quicksort-python2.py) - [Pobierz Python 2 here](https://www.python.org/downloads/)
+- [Python (Version 3)](files/selection-quicksort-python3.py) - [Pobierz Python 3 here](https://www.python.org/downloads/)
 {panel end}
 
-There are dozens of sorting algorithms that have been invented; most of the ones that are used in practice are based on quicksort and/or mergesort. These, and many others, can be seen in this intriguing animated video.
+Istnieją całe tuziny różnych algorytmów porzadkowania. Większość tych istotnie praktycznych jest oparta na dwóch algorytmach: porządkowaniu szybkim (quicksort) i porządkowaniu przez łączenie (mergesort). Te, oraz wiele innych, może zobaczyć oglądając wideo (link poniżej).
 
 {video url="https://www.youtube.com/watch?v=kPRA0W1kECg"}
 
 ## Podsumowanie
 
-We've only really scratched the surface of algorithms in this chapter, as there are millions of different algorithms for millions of different problems! Algorithms are used in maths, route planning, network planning and operation, problem solving, artificial intelligence, genetic programming, computer vision, the list goes on and on! But by going through this chapter you should have gained an understanding of the key concepts of algorithms and will be well prepared to tackle more complicated ones in the future.
+Ten rozdział to tylko wprowadzenie do tematu algorytmów. Istnieją z pewnością tysiące algorytmów dla tysięcy różnych zadań! Algorytmy są podstawą rozwiązywania problemów w wielu dziedzinach informatyki praktycznej (np. sztuczna intelignecja, rozpoznwanie obrazów, wyznaczanie najkrótszej trasy) i innych dziedzinach. Dzięki zrozumieniu kluczowych pojęć łatwiej będzie zrozumieć trudniejsze pojęcia na studiach.
 
-The algorithms introduced in this chapter aren't even necessarily the best for any situation; there are several other common ways of searching (e.g. hashing and search trees) and sorting (e.g. mergesort), and a computer scientist needs to know them, and be able to apply and fine tune the right one to a given situation.
+Warto podkreślić, że istnieją inne metody przeszukiwania (np. z haszowaniem, drzewa przeszukiwań) i porządkowania (np. przez łączenie), które w knkretnej sytuacji mogą być bardziej efektywne od przedstawionych w tym rozdziale. Informatyk powinien je poznać, by szukając rozwiązania rzeczywistego problemu nie ,,wywarzał otwartych drzwi'', a wyłącznie dostosowywał do konkretnej sytuacji algorytmy o utrwalonej renomie.
 
-In this chapter we have only talked about the number of comparisons an algorithm makes, and the amount of time a program takes to complete as 'costs' of algorithms. There are actually many other ways of measuring the cost of an algorithm. These include the amount of memory the algorithm uses and its computational complexity. Computer Scientists use 'Big O notation' to more accurately describe the performance or complexity of an algorithm, and you are likely to come across this notation very quickly when investigating the performance of algorithms. It characterises the resources needed by an algorithm and is usually applied to the execution time required, or sometimes the space used by the algorithm.
-
-{panel type="extra-for-experts" summary="Examples of Big O notation"}
-Here are some Big O examples:
-- {math}O(1){math end} - An algorithm with {math}O(1){math end} complexity will always execute in the same amount of time regardless of how much data you give it to process. For example, finding the smallest value in a sorted list is always easy.
-- {math}O(n){math end} - The amount of time an algorithm with {math}O(n){math end} complexity will take to execute will increase roughly linearly with (i.e. in direct proportion to) the amount of data you give it to process. The high-score algorithm was {math}O(n){math end}, and so was the linear search.
-- {math}O(n^{2}){math end} - The performance of an algorithm with this complexity is roughly proportional to the square of the size of the input data set. Selection sort and insertion sort take {math}O(n^{2}){math end} time. That's not very good value - 10 times the amount of input will take 100 times as long!
-- {math}O(2^{n}){math end} - The amount of time an algorithm with this complexity will take to complete will double with each additional element added to the data set! We haven't seen these kinds of situations in this chapter, but they are common, and are a theme of the Complexity and Tractability chapter. Algorithms that are this slow can be almost impossible to use!
+{panel type="extra-for-experts" summary="Przykłady notacji duże-O"}
+Oto przykłady zapisów dotyczących kosztów (pracochłonności) algorytmów, jakie można spotkać w podręcznikach akademickich z dziedziny algorytmów:
+- {math}O(1){math end} - Czas działania takiego algorytmu nie zależy od rozmiaru danych. Przykład: Znajdowanie wartości najmniejszej na liście uporządkowanej.
+- {math}O(n){math end} - Czas działania takiego algorytmu można opisać funkcją liniową (względem rozmiaru danych). Można powiedzić, że czas rośnie wprost proporcjonalnie do rozmiaru danych. Przykład: przeszukiwanie liniowe.
+- {math}O(n^{2}){math end} - Czas działania takiego algorytmu można opisać funkcją kwadratową (względem rozmiaru danych). Można powiedzić, że czas rośnie wprost proporcjonalnie do kwadratu rozmiaru danych. Przykład: porządkowanie przez wybór, porzadkowanie przez wstawianie. Co to znaczy w praktyce? Zwiększenie liczby danych 10 razy skutkuje zwiększeniem liczby obliczeń 100 razy!
+- {math}O(2^{n}){math end} - Czas działania takiego algorytmu podwaja się po zwiększeniu liczby danych o 1! Nawet dla stosunkowo niewielkich rozmiarów danych algorytmy te są prkatycznie niewykonalne w rozsądnym czasie!
 {panel end}
 
-Big O Notation however requires some advanced mathematics to explore thoroughly so has been intentionally left out of this main chapter, but if you want to learn more check out the Useful Links section. These topics are looked at in more depth in the Complexity and Tractability chapter.
+Do pełnego zrozumienia notacji dużego 0 potrzebna jest znajomość elementów matematyki wyższej. Temat jest przywołany w rozdziale na temat złożoności obliczeniowej i problemach praktycznie niewykonalnych.
 
-To make things even more complicated, in practice algorithms are running on computers that have cached memory and virtual memory, where the time to access a particular value can be particularly short, or particularly long. There is a whole range of algorithms that are used for this situation to make sure that the algorithm still runs efficiently in such environments. Such algorithms are still based on the ideas we've looked at in this chapter, but require some clever adjustments to ensure that they work well.
+Trzeba podkreślić, że komputerowe realizacje algorytmów korzystają z pamięci cache (rejestrów procesora), ale też czasem z tzw. wirtualnej pamięci (dysku komputerowego), a więc czas dostępu do konkretnej wartości może być bardzo krótki, ale też bardzo długi. Te różne uwarunkowania wymagają od projektantów systemów komputerowych stosowania algorytmów, które w danej sytuacji są najbardziej efektywne.
 
 ## Do dalszej lektury
 
