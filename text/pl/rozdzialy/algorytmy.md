@@ -268,25 +268,23 @@ W powyższym opisie można zastąpić słowo ,,najmniejszy'' słowem ,,najwięks
 
 ### Porządkowanie przez wstawianie
 
-{panel type="teacher-note" summary="This section could be skipped"}
-This algorithm is useful and commonly taught, although for the purpose of teaching the principles of algorithms, it's doesn't add a lot to what we've just covered with selection sort, so could be skipped.
-However, if you have time, it's worth looking at for extra examples.
+{panel type="teacher-note" summary="Ten podrozdział można pominąć"}
+Algorytm przedstawiony poniżej jest użyteczny (zwłaszcza dla małych zbiorów danych) i w wykładach akademickich jest tematem obowiązkowym, to w przypadku podstawowego szkolnego kursu o algorytmach, niewiele wnosi nowego. Można go pominąć w pracy z uczniami, jeśli ilość czasu na kurs jest ograniczona.
 {panel end}
-This algorithm works by removing each box from the original group of boxes and inserting it into its correct position in a new sorted list. Like Selection Sort, it is very intuitive and people often perform it when they are sorting objects themselves, like cards in their hands.
 
-Try this with the scales interactive. Start by moving all the boxes to one side of the screen, this is your original, and unsorted, group. Now choose a box at random and place that on the other side of the screen, this is the start of your sorted group.
+Ten algorytm działa w oparciu o następujący pomysł: Wybrane pudełko wyjmujemy z zbioru nieuporządkowego i wstawiamy na właściwej pozycji w zbiorze elementów wcześniej uporządkowanych. Podobnie jak porządkowanie przez wybór, algorytm przez wstawienie jest bardzo intuicyjny i ludzie często mniej lub bardziej świadomie stosują go, gdy porządkują jakiś zbiór obiektów lub np. karty do gry trzymane w ręce.
 
-To insert another box into the sorted group, compare it to the box that is already in the sorted group and then arrange these two boxes in the correct order. Then to add the next box compare it to these boxes (depending on the weight of the box you might only have to compare it to one!) and then arrange these three boxes in the correct order. Continue inserting boxes until the sorted list is complete. Don't forget to count how many comparisons you had to make!
+Spróbuj poćwiczyć algorytm z użyciem wagi szalkowej. Rozpocznij od przeniesienia wszystkich pudełek na jedną stronę ekranu.
+Następnie wybierz pudełko losowo i umieść je po drugiej stronie ekranu. 
 
-This algorithm is called Insertion Sort. If you're not quite sure if you've got the idea of the algorithm yet then have a look at [this animation](https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif) from [Wikipedia](https://en.wikipedia.org/wiki/Insertion_sort).
+Aby znaleźć właściwe miejsce do wstawienia kolejnego pudełka, porównaj je z pudełkiem ustawionym wcześniej. W razie potrzeby zmień kolejność pudełek. Kolejne wstawiane pudełka należy umieścić we właściwym miejscu. Jedyną dozwoloną operacją jest porównywami dwóch pudełek. Zliczaj liczbę wykonanych porównań (ważeń)!
 
-Insertion sort can be described with informal instructions as follows:
-- Take an item from your unsorted list and place it to the side, this will be your sorted list.
-- One by one, take each item from the unsorted list and insert it into the correct position in the sorted list.
-- Do this until all items have been sorted.
+Ten algorytm nazywa się algorytmem porządkowania przez wstawianie. Dla lepszego zropzumienia tematu warto obejrzeć [tę animację](https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif) z [Wikipedii](https://en.wikipedia.org/wiki/Insertion_sort).
 
-People often perform this when they physically sort items. It can also be a very useful algorithm to use if you already have a sorted set of data and want to add a new piece of data into the set. For example if you owned a library and purchased a new book you wouldn't do a Selection Sort on the entire library just to place this new book, you would simply insert the new book in its correct place.
-
+Taki algorytm można by opisać listą kroków:
+- Wybierz losowo element z listy. Umieść go na początku nowej listy.
+- Wybierz losowo element spośród pozostałych na liście. Umieść go na drugiej liście we właściwym miejscu.
+- Powtarzaj krok drugi, aż wszystkie elementy znajdą się na drugiej liście. Ta lista będzie uporządkowana.
 
 {glossary-definition term="Quicksort" definition="A process for achieving an outcome, normally for a general problem such as searching, sorting, finding an optimal path through a map and so on."}
 
