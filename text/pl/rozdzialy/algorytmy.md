@@ -161,14 +161,20 @@ W filmie na początku rozdziału pojawił się zabawny przykład przeszukiwania,
 
 {glossary-definition term="Binary Search" definition="Searching a sorted list by looking at the middle item, and then searching the appropriate half recursively (used for phone books, dictionaries and computer algorithms)."}
 
- drugiej z gier pudełka były uporządkowane, co umożliwiło podejmowanie kolejnych prób w sposób przemyślany. Być może nieświadomie ktoś stosował algorytm zwany w informatyce przeszukiwaniem binarnym (dwudzielnym).
+W drugiej z gier pudełka były uporządkowane, co umożliwiło podejmowanie kolejnych prób w sposób przemyślany. Być może nieświadomie ktoś stosował algorytm zwany w informatyce przeszukiwaniem binarnym (dwudzielnym).
 
 {panel type="teacher-note" summary="O przeszukiwaniu binarnym z książką telefoniczną"}
-Temat algorytmu przeszukiwania binarnego można zilustrować za pomocą książki telefonicznej lub słownika: wybierz nazwisko (lub jakieś słowo), otwórz książkę lub słownik mniej więcej w połowie. (Jeśli książka jest na makulaturę, to warto dosłownie przedrzeć ją mniej więcej w połowie objętości.) Następnie uczniowie powinni wskazać tę część książki, którą należy przeszukiwać. 
+Temat algorytmu przeszukiwania binarnego można zilustrować za pomocą książki telefonicznej lub słownika: wybierz nazwisko (lub jakieś słowo), otwórz książkę lub słownik mniej więcej w połowie i sprawdź pierwszy wyraz na stronie, najlepiej tej o numerze nieparzystym. (Jeśli książka jest przeznaczona na makulaturę, to warto dosłownie przedrzeć ją mniej więcej w połowie objętości.) Następnie uczniowie powinni wskazać tę część książki, którą należy przeszukiwać. 
+Odrzucenie połowy stron książki, czyli prawdopodobnie setek stron, było możliwe na podstawie tylko jednej decyzji.
 
-Throw away the half that can't contain the name, pointing out that hundreds of pages have been eliminated by one decision. Repeat this on the remaining half, ripping that in half, then half again, and so on. On the board you can work out the number of pages left; for example, if there were 512 pages in the phone book, after the first rip there are 256, then 128, then 64, 32, 16, 89, 4, 2 and finally just one page. That's  9 pages that were examined to get down to the desired page. (Note that it's easiest to pick numbers that are powers of 2 i.e. 512, 1024, 2048, otherwise you have to deal with halving odd numbers, which works fine, but is a bit distracting).
+Tę strategię połowienia należy stosować dalej. Powtórzyć dla połowy, połowy tej połowy itd. 
 
-The power of binary search becomes obvious when you ask how long it would take to search a book twice as large. The first rip on the larger book will reduce it to the original problem, so, for example, a book of 1024 pages requires 10 rips instead of the 9 used for 512 pages. A million page phone book (1,048,576 pages to be precise) is reduced to 1 page by only 20 rips (students will probably think that it will be a lot more, but they can work it out by halving 1,048,576 20 times). A billion pages requires only 30 rips - again, have students work this out for themselves, as it is surprising. You could point out that a billion-page phone book could hold every name in the world, and in fact a social network site could have a billion users on it, so searching for someone on a billion-user system could be done *by hand* looking at just 30 names. The catch? They need to be in sorted order, but sorting things into order is easy too if you use the right algorithm. (In practice large systems use a variation of this kind of searching, but this demonstrates how a very fast algorithm is possible on very large amounts of data, such as those used by search engines or social networks).
+Warto przeanalizować z uczniami ciąg liczb, który odpowiada liczbie kartek pozostałych po wykonaniu kolejnych decyzji. 
+Na przykład dla 512 kartek będzie to: 256, potem 128, potem 64, 32, 16, 8, 4, 2 i w końcu jedna kartka. To oznacza, że do znalezienia odpowiedniej kartki wystarczy co najwyżej 9 prób.
+(Można się posłużyć przykładem z liczbami, które nie są potęgami liczby 2, ale wówczas trzeba by doprecyzować znaczenie ,,połowienia''.)
+
+Siłę przeszukiwania binarnego niektórym łatwiej pojąć, gdy zapytamy ich o liczbę prób wystarczających do przeszukania książki o podwojonej liczbie stron. 
+Warto podkreślić w czasie zajęć, że na gdyby stworzyć uporządkowaną (np. według nazwisk i imion) listę wszystich ludzi obecnie żyjących na świecie, to potrzeba nie więcej niż 30 prób do znalezienia dowolnej osoby. 
 {panel end}
 
 If you used a Binary Search on each of the levels then you would have always had enough lives to find the pet! Informally, the Binary Search algorithm is as follows:
