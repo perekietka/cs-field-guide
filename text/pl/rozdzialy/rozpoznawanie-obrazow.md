@@ -4,7 +4,7 @@
 
 ## Z perspektywy
 
-W początkach ery komputerów komunikacja komputera ze światem zewnętrznym odbywała się poprzez bezpośrednie zestawianie połączeń kablowych lub poprzez klawiaturę. Współczesne urządzenia cyfrowe wyposażone są w aparaty fotograficzne, kamery, mikrofony i inne urządzenia wejściowe, używane przez oprogramowanie do automatycznego pobierania informacji ze świata, w którym żyjemy. Przetwarzanie obrazów z kamery w celu znalezenia poszukiwanych informacji (wzorców) nazywa się w informatyce * rozpoznawaniem obrazów * lub komputerowym widzeniem (ang. computer vision).
+W początkach ery komputerów komunikacja komputera ze światem zewnętrznym odbywała się poprzez bezpośrednie zestawianie połączeń kablowych lub poprzez klawiaturę. Współczesne urządzenia cyfrowe wyposażone są w aparaty fotograficzne, kamery, mikrofony i inne urządzenia wejściowe, używane przez oprogramowanie do automatycznego pobierania informacji ze świata, w którym żyjemy. Przetwarzanie obrazów z kamery w celu znalezenia poszukiwanych informacji (wzorców) nazywa się w informatyce *rozpoznawaniem obrazów* lub widzeniem komputerowym (ang. computer vision).
 
 Wraz ze wzrostem mocy obliczeniowej komputerów, ich miniaturyzacją oraz stopniowym rozwojem algorytmicznych metod przetwarzania danych, komputerowe rozpoznawanie obrazów znajdowało coraz więcej zastosowań. Najpierw w dziedzinach takich, jak medycyna, bezpieczeństwo i przemysł, a później coraz częściej w codziennym życiu ludzi.
 
@@ -25,7 +25,7 @@ Rozpoznawanie pisma chińskiego może być czasem niedoskonałe. Oto drogowy zna
 
 Przedstawiony na zdjęciu smartfon znalazł tłumaczenie dla znaków o znaczeniu ,,stromy'' i ,,ostrożnie'', ale nie rozpoznał ostatniego znaku w linii. Dlaczego?
 
-{panel type="teacher-note" summary="The importance of image segmentation"}
+{panel type="teacher-note" summary="Znaczenie segmentacji obrazu"}
 
 Ostatni znak trudniej było rozpoznać, gdyż rysunek postaci człowieka jest zbyt blisko znaku. Oprogramowanie smarfona nie potrafiło określić, gdzie kończy się znak pisma, a gdzie rozpoczyna się rysunek. Ten problem jest znany pod nazwą *segmentacji obrazu*. Wrócimy do niego później.
 
@@ -39,11 +39,11 @@ Kamery cyfrowe i ludzkie oczy pełnią podobne funkcje: promienie światła prze
 
 {panel type="teacher-note" summary="Receptory cyfrowego aparatu fotograficznego"}
 
-Jest kilka różnych typów sensorów cyfrowego aparatu fotogrficznego. W tym rozdziale ograniczymy się do sensorów [CMOS](https://en.wikipedia.org/wiki/CMOS_sensor”), najbardziej popularnych. Inny typ to [Charge-Coupled Device (CCD)](https://en.wikipedia.org/wiki/Charge-coupled_device), znany bardziej wśród fachowców zajmujących się astronomią.
+Jest kilka różnych typów sensorów cyfrowego aparatu fotogrficznego. W tym rozdziale ograniczymy się do sensorów [CMOS](https://pl.wikipedia.org/wiki/Matryca_CMOS), najbardziej popularnych. Inny typ to [Charge-Coupled Device (CCD)](https://pl.wikipedia.org/wiki/Matryca_CCD), znany bardziej wśród fachowców zajmujących się astronomią.
 
 {panel end}
 
-W środku plamki żółtej, czyli części siatkówki **ludzkiego oka** o największym zagęszczeniu fotoreceptorów, zwanych czopkami, znajduje się zagłębienie dołeczkiem (łac. fovea). To miejsce o największej rozdzielczości widzenia, to znaczy, że odpowiada za postrzeganie szczegółów obiektu, na który patrzymy wprost. Mamy trzy zbiory czopków, wrażliwych na różne barwy (kolory), odpowiednio na światło czerwone, zielone i niebieskie. 
+W środku plamki żółtej, czyli części siatkówki **ludzkiego oka** o największym zagęszczeniu fotoreceptorów, zwanych czopkami, znajduje się zagłębienie zwane dołeczkiem (łac. fovea). To miejsce o największej rozdzielczości widzenia, to znaczy, że odpowiada za postrzeganie szczegółów obiektu, na który patrzymy wprost. Mamy trzy zbiory czopków, wrażliwych na różne barwy (kolory), odpowiednio na światło czerwone, zielone i niebieskie. 
 Inne receptory siatkówki oka to pręciki, które są bardzo wrażliwe na światło, odpowiadają za postrzeganie kształtów i postrzeganie czarno-białe widzenie nawet przy słabym oświetleniu. 
 Obszar siatkówki oka, w którym nerw wzrokowy opuszcza gałkę oczną i biegnie w stronę mózgu to plamka ślepa. Jest on całkowicie pozbawiony fotoreceptorów. Jednak luki w polu widzenia obu oczu nie pokrywają się, z więc to, czego nie widzi jedno oko, widzi drugie i powstaje wrażenie, że pole widzenia jest pełne.
 
@@ -51,7 +51,7 @@ Obszar siatkówki oka, w którym nerw wzrokowy opuszcza gałkę oczną i biegnie
 
 Jest ważne, by zrozumieć, że ani ludzkie oko, ani cyfrowy aparat fotograficzny --- nawet bardzo drogi --- nie są w stanie zapisać wszystkich informacji o obiektach znajdujących się w polu widzenia. Prowadzone są badania, wspólnie przez inżynierów elektorników i informatyków, których celem jest stworzenie urządzeń, które będą pozwalać na jeszcze bardziej dokładne rejestrowanie informacji oraz jej szybkie przetwarzanie.
 
-{panel type="curiosity" summary="Further reading"}
+{panel type="Ciekawostka" summary="Do dalszej lektury"}
 
 Więcej na ten temat (w języku angielskim) można przeczytać tutaj: [Cambridge in Colour](http://www.cambridgeincolour.com/tutorials/cameras-vs-human-eye.htm), [Pixiq](https://web.archive.org/web/20130309170941/http://www.pixiq.com/article/eyes-vs-cameras).
 
@@ -59,39 +59,39 @@ Więcej na ten temat (w języku angielskim) można przeczytać tutaj: [Cambridge
 
 ## Szum
 
-Użytkownicy aparatów cyfrowych muszą mieć świadomość istnienia problemu, jakim jest *szum*. Mówi o nim wówczas, gdy pojedyńcze piksele rejestrowane są jako jaśniejsze niż ciemniejsze niż być powinny. Zjawisko jest skutkiem interfrencji (nakładania się) w układach elektronicznych aparatu. Problem jest większy, gdy poziomy światła sąfotografujemy w ciemnym miejscu i aparat dopasować czas ekspozycji (naświetlania), aby zapisać więcej informacji. Używa się wtedy ustawień ASA/ISO celem przechwycenia takiej ilości promieni światła, ile to tylko możliwe. Receptory są wówczas bardzo wrażliwe na światło, co wiąże się z ryzykiem interferencji i obraz ma efekt ,,ziarnistości''. 
+Użytkownicy aparatów cyfrowych muszą mieć świadomość istnienia problemu, jakim jest *szum*. Mówi się o nim wówczas, gdy pojedyncze piksele rejestrowane są jako jaśniejsze lub ciemniejsze niż być powinny. Zjawisko jest skutkiem interfrencji (nakładania się) w układach elektronicznych aparatu. Jest to większy problem, gdy poziomy światła są niskie, a aparat próbuje zwiększyć czas ekspozycji obrazu (naświetlania), aby można było zobaczyć więcej. Używa się wtedy ustawień ASA/ISO celem przechwycenia takiej ilości promieni światła, ile to tylko możliwe. Receptory są wówczas bardzo wrażliwe na światło, co wiąże się z ryzykiem interferencji i obraz ma efekt "ziarnistości". 
 
-Efekt szumu jest widoczny głównie jako losowe (przypadkowe) zmiany pikseli. W przykładzie poniżej widzimy szum typu ,,sól i pieprz'.
+Efekt szumu jest widoczny głównie jako losowe (przypadkowe) zmiany pikseli. W przykładzie poniżej widzimy szum typu "sól i pieprz".
 
-{image filename="banana-with-salt-and-pepper-noise.jpg" alt="An image of a banana with salt-and-pepper noise"}
+{image filename="banana-with-salt-and-pepper-noise.jpg" alt="Obrazek banana z szumem typu sól i pieprz"}
 
 Rozpoznawanie obiektów na obrazach, które zawierają szum jest trudniejsze. Dlatego ważne jest, by szukać coraz lepszych metod redukowania szumu na obrazie. 
 Przy projektowaniu takich metod należy zachować ostrożność. Efektem ubocznym usunięcia szumu nie może być bowiem utrata istotnych informacji o obrazie. Trzeba podkreślić, że stosowane metody są zawsze metodami przybliżonymi rozwiązania problemu, co oznacza, że decyzja o zachowaniu wartości liczbowej lub zmianie wartości dla konkretnego piksela jest efektem domysłu, uzasadnionego domniemania.
 
-{panel type="teacher-note" summary="Image noise on Wikipedia"}
+{panel type="teacher-note" summary="Szumy w fotografii na Wikipedii"}
 
-Warto zapoznać się z artykułem: [Image noise](https://en.wikipedia.org/wiki/Image_noise)
+Warto zapoznać się z artykułem: [Image noise](https://en.wikipedia.org/wiki/Image_noise) lub po polsku [Szumy] (https://pl.wikipedia.org/wiki/Szumy_(fotografia_cyfrowa))
 
 {panel end}
 
 Ponieważ aparat fotograficzny zapisuje informacje o składowych (czerwona, zielona i niebieska) osobno dla każdego piksela, to czasami celem zaoszczędzenia na czasie przetwarzania obrazu, jest uzasadnione zapisanie obrazu w odcieniach szarości. Wtedy pomija się informacje o barwie, a zapisuje się tylko informacje o intensywności światła dla każdego piksela.
 
-Dzieki temu można zmieniejszyć poziom szumu na obrazie. Dlaczego? I w jakim stoponiu to pomaga? (Aby się przekonać, można zrobić ekesperyment: wykonać zdjęcie w miejscu słabo oświetlonym -- można wtedy dostrzec jakby małe łatki na obrazie. Następnie w programie graficznym można zapisać je jako czarno-białe -- czy to zmniejszy efekt szumu?)
+Dzieki temu można zmieniejszyć poziom szumu na obrazie. Dlaczego? I w jakim stoponiu to pomaga? (Aby się przekonać, można zrobić eksperyment: wykonać zdjęcie w miejscu słabo oświetlonym -- można wtedy dostrzec jakby małe łatki na obrazie. Następnie w programie graficznym można zapisać je jako czarno-białe -- czy to zmniejszy efekt szumu?)
 
-{panel type="teacher-note" summary="Noisy channels"}
+{panel type="teacher-note" summary="Zaszumione kanały"}
 
 Każdy światłoczuły element fotoreceptora aparatu fotograficznego jest równie podatny na szum. To oznacza, że efekty szumu dla różnych składowych RGB są zjawiskami niezależnymi. Jeśli wartości RGB uśredni się (co oznacza jedną liczbę zamiast trzech), to wartość szumu zredukuje się do ok. 1/3. Dlaczego nie *dokładnie* 1/3? Może się zdarzyć, że efekt szumu dotyczy dwóch czy nawet trzech składowych tego samego piksela: wtedy wartość uśredniona pozostanie daleka od dokładnej.
 
 {panel end}
 
-Zamiast analizować oddzielnie każdą ze składowych RGB piksela, techniki redukujące szum najczęściej działają tak, że sprawdzają piksele sąsiadujące z danym pikselem i na podstawie zebranych informacji przypisują mu wartość przypuszczalną wartość.
+Zamiast analizować oddzielnie każdą ze składowych RGB piksela, techniki redukujące szum najczęściej działają tak, że sprawdzają piksele sąsiadujące z danym pikselem i na podstawie zebranych informacji przypisują mu przypuszczalną wartość.
 
 W *filtrze uśredniającym* korzysta się z założenia, że piksele sąsiadujące z danym pikselem są podobne. Wartości przypisane pikselom tworzącym kwadrat, w którego centrum znajduje się dany piksel, są uśredniane i ta wartość średnia jest przypisana pikselowi.
 Im kwadrat jest większych rozmiarów, tym większe niebezpieczeństwo pojawienia się w wyniku filtrowania efektu rozmycia obrazu, zwłaszcza w przypadku, gdy fragment obrazu przedstawia np. krawędzie obietków (wtedy jasne i ciemne piksele sąsiadują).
 
-W *filtrze medianowym* stosuje się inne podejście. Odczytuje się wartości sąsiednich pikseli, podobnie jak dla filtru uśredniającego. Następnie szuka się mediany (wartości środkowej) ciągu uporządkowanego odczytanych wartości. Taki filtr daje dobre rezultaty w przypadku, gdy fragment obrazu przedstawia krawędź jakiegoś obiektu, gdyż wówczas wartość mediany będzie jedną z dwóch: albo odpowiadającą jasnemu pikselowi albo ciemnemu pikselowi. Filtr działa też dobrze, gdy analizowany obszar jest w dużej części jednolity, gdyż wówczas obecność mniej licznych pikseli o innej wartości nie ma żadnego wpływu na wartość mediany. Wadą tej metody jest czas działania, tj. koszt operacji porządkowania wartości przez wyznaczeniem mediany. 
+W *filtrze medianowym* stosuje się inne podejście. Odczytuje się wartości sąsiednich pikseli, podobnie jak dla filtru uśredniającego. Następnie szuka się mediany (wartości środkowej) ciągu uporządkowanego odczytanych wartości. Taki filtr daje dobre rezultaty w przypadku, gdy fragment obrazu przedstawia krawędź jakiegoś obiektu, gdyż wówczas wartość mediany będzie jedną z dwóch: albo odpowiadającą jasnemu pikselowi albo ciemnemu pikselowi. Filtr działa też dobrze, gdy analizowany obszar jest w dużej części jednolity, gdyż wówczas obecność mniej licznych pikseli o innej wartości nie ma żadnego wpływu na wartość mediany. Wadą tej metody jest czas działania, tj. koszt operacji porządkowania wartości przed wyznaczeniem mediany. 
 
-Inną techniką jest metoda zwana *rozmyciem Gaussa*. Działa podobnie do metody uśredniania, ale zamiast wartości średniej korzysta się własności *rozkładu normalnego*: przyjmuje się, że pikseli sąsiadujące bezpośrednio z analizowanym pikselem mają przypisaną wartość najbardziej zbliżoną do poszukiwanej, a piksele polożone dalej wręcz przeciwnie.  
+Inną techniką jest metoda zwana *rozmyciem Gaussa*. Działa podobnie do metody uśredniania, ale zamiast wartości średniej korzysta się własności *rozkładu normalnego*: przyjmuje się, że piksele sąsiadujące bezpośrednio z analizowanym pikselem mają przypisaną wartość najbardziej zbliżoną do poszukiwanej, a piksele położone dalej wręcz przeciwnie.  
 
 ### Ćwiczenie: Usuwanie szumu z obrazu
 
@@ -110,16 +110,16 @@ Bazą matematyczną przetwarzania obrazu jest w tym przypadku specjalny rodzaj m
 Zdolność komputerów do rozpoznawania twarzy na zdjęciu znajduje wiele zastosowań. 
 Na przykład na portalach społecznościowych coraz częściej pojawiają się narzędzia określania osób na zdjęciu bazujące na algorytmach rozpoznawania twarzy (i dopasowaniu ich do tych zapisanych już w bazie danych).
 
-{image filename="face-recognition-software-screenshot.jpg" alt="Google's Picasa recognises these photos as being the same person"}
+{image filename="face-recognition-software-screenshot.jpg" alt="Picasa do Google rozpoznaje te zdjęcia, jako te, na których jest tam sama osoba"}
 
 Jest wiele innych zastosowań.
-Systemy bezpieczeństwa, np. używane przez służby cele podczas przekraczania granicy między krajami, porównują twarz podróżującego z zdjęciem twarzy na paszporcie czy innym dowodzie tożsamości.
+Systemy bezpieczeństwa, np. używane przez służby celne podczas przekraczania granicy między krajami, porównują twarz podróżującego z zdjęciem twarzy na paszporcie czy innym dowodzie tożsamości.
 Celem przetwarzania obrazu i rozpoznawania twarzy może być dbałość o anonimowość (zachowanie prawa do prywatności) osób, które zostały zarejestrowane przez kamery systemów map ulicznych (np. Google Maps). Wówczas odpowiednie fragmenty zdjęć poddaje się rozmyciu.
 Współczesne aparaty cyfrowe automatycznie dopasowują swoje ustawienia przez wykoaniem zdjęcia na podstawie lokalizacji twarzy wewnątrz kadru.
 
-Więcej informacji na ten temat można znaleźć (w języku angielskim) tutaj:  [How facial recognition works](http://electronics.howstuffworks.com/gadgets/high-tech-gadgets/facial-recognition.htm), [i-programmer.info](http://www.i-programmer.info/babbages-bag/1091-face-recognition.html).
+Więcej informacji na ten temat można znaleźć (w języku angielskim) tutaj:  [Jak działa rozpoznawanie twarzy?](http://electronics.howstuffworks.com/gadgets/high-tech-gadgets/facial-recognition.htm), [i-programmer.info](http://www.i-programmer.info/babbages-bag/1091-face-recognition.html).
 
-Artykuły edukacyjne dotyczące tego zagadnienia znajdują się również na stronie [articles on the cs4fn website](http://www.cs4fn.org/vision/)
+Artykuły edukacyjne dotyczące tego zagadnienia znajdują się również [na stronie cs4fn](http://www.cs4fn.org/vision/)
 
 ### Projekt: Rozpoznawanie twarzy
 
@@ -142,25 +142,24 @@ Zacznijmy od ręcznych prób zastosowania kilku metod dla rozpoznania, czy dwa z
 - Sprawdź, czy na każdym ze zdjęć odpowiednie ilorazy dla konkretnej osoby są takie same. Czy te wartości różnią się w istotny sposób dla różnych osób? Czy te informacje pozwolą na bezbłędne rozpoznanie danej osoby na dwóch zdjęciach?
 - Jakie inne cechy osób można by zmierzyć, aby zwiększyć skuteczność rozpoznawania twarzy na zdjęciu?
 
-Wypróbuj interaktywne narzędzie [do rozpoznawania twarzy](https://inspirit.github.com/jsfeat/sample_haar_face.html), używające obrazu z kamery (np. wbudowanej w laptop). Sprawdź, jak dobrze działa śledzenie ruchu twarzy w tym systemie. Kiedy system zaczyna źle działać? Wystarczy zasłonić jedno oko? Wystarczy założyć kapelusz? Jaką część twarzy trzeba zakryć, aby rozpoznawanie twrzy przestało dobrze działąć? Co zrobić, aby system opacznie rozpoznał twarz w miejscu, gdzie jej nie ma?
+Wypróbuj interaktywne narzędzie [do rozpoznawania twarzy](https://inspirit.github.com/jsfeat/sample_haar_face.html), używające obrazu z kamery (np. wbudowanej w laptop). Sprawdź, jak dobrze działa śledzenie ruchu twarzy w tym systemie. Kiedy system zaczyna źle działać? Wystarczy zasłonić jedno oko? Wystarczy założyć kapelusz? Jaką część twarzy trzeba zakryć, aby rozpoznawanie twrzy przestało dobrze działzć? Co zrobić, aby system opacznie rozpoznał twarz w miejscu, gdzie jej nie ma?
 
 ## Wykrywanie krawędzi
 
 Użyteczną techniką rozpoznawania obrazów przez komputer jest *wykrywanie krawędzi*, co oznacza automatyczną lokalizację granicznych częśći obiektów. To w praktyce oznacza możliwość podziału obrazu na rozłączne obiekty i obszary (segmentyzację).
 
-For example, here's a photo where you might want to recognise individual objects:
 Oto przykład. Na zdjęciu łatwo dostrzec wzrokiem różne obiekty.
 
-{image filename="fruit-bowl-photo.jpg" alt="Image of a fruit bowl"}
+{image filename="fruit-bowl-photo.jpg" alt="Zdjęcie miski z owocami"}
 
 Oto efekt przetwarzania obrazu przez algorytm wykrywania krawędzi:
 
-{image filename="fruit-bowl-photo-with-canny-edge-detection.png" alt="The image above with canny edge detection applied"}
+{image filename="fruit-bowl-photo-with-canny-edge-detection.png" alt="Zdjęcie powyżej z zastosowanym wykrywaniem krawędzi Canny'ego"}
 
 Można zauważyć, że algorytm przetwarzał również fragment obrazu ukazujący stół; lepiej, aby właściwy proces wykrywania krawędzi poprzedzić innym wstępnym filtrowaniem!
 
-Warto poeksperymentować z wykrywaczem krawędzi na stronie  [Canny detektor](https://inspirit.github.io/jsfeat/sample_canny_edge.html) (więcej informacji o [Canny detektorze](https://en.wikipedia.org/wiki/Canny_edge_detector)).
-Algorytm był zaprojektowany w 1986 roku przez Johna F. Canny'ego.
+Warto poeksperymentować z wykrywaczem krawędzi na stronie  [Canny detektor](https://inspirit.github.io/jsfeat/sample_canny_edge.html) (więcej informacji o [detektorze Canny'ego](https://pl.wikipedia.org/wiki/Canny)).
+Algorytm został zaprojektowany w 1986 roku przez Johna F. Canny'ego.
 
 ### Projekt: Wykrywanie krawędzi
 
@@ -176,11 +175,8 @@ Dotyczy zagadnień:
 
 {panel end}
 
-With the canny edge detection website above, try putting different images in front of the camera and determine how good the algorithm is at detecting boundaries in the image.
-Capture images to put in your report as examples to illustrate your experiments with the detector.
-
 Korzystając z narzędzia ze wskazanej wyżej strony internetowej, sprawdź efekt działania detektora dla różnych obiektów czy obrazów, jakie umieścisz w polu widzenia kamery.
-Zachowaj wybrane obrazy (zrzuty ekranu).
+Zachowaj wybrane obrazy (zrzuty ekranu), jako przykład eksperymentowania z detektorem.
 
 - Czy system wykrył wszystkie krawędzie? Dlaczego niektórych nie wykrył? Czy niektórze krawędzie zostały błędnie zlokalizowane? Dlaczego? Jak sądzisz?
 - Czy na efektywność działania wykrywacza ma wpływ oświetlenie (jasność) pomieszczenia?
@@ -193,9 +189,9 @@ Dziedzina grafiki komputerowej określana jako rozpoznawanie obrazów szybko si�
 
 Not only is the resolution of cameras increasing, but they are more sensitive for low light conditions, have less noise, can operate in infra-red (useful for detecting distances), and are getting very cheap so that it's reasonable to use multiple cameras, perhaps to give different angles or to get stereo vision.
 
-Zwiększają się możliwości teczniczne aparatów cyfrowych: rozdzielczość, czułość (światłoczułość), brak szumu, działanie w podczerwieni (użyteczne dla wykrywania odległości między obiektami), a jednocześnie zmniejszają się ceny. W konsekwencji powszechne staje się np. użytkowanie wielu kamer jednocześnie, umieszczonych pod różnymi kątami.
+Zwiększają się możliwości teczniczne aparatów cyfrowych: rozdzielczość, czułość (światłoczułość), mniej szumu, działanie w podczerwieni (użyteczne dla wykrywania odległości między obiektami), a jednocześnie spadają ceny. W konsekwencji powszechne staje się np. użytkowanie wielu kamer jednocześnie, umieszczonych pod różnymi kątami aby otrzymać widzenie stereoskopowe.
 
-Trzeba podkreślić, że fundamentalne koncepcje tej dziedziny wymyślone zostały już jakiś czas temu; na przykład pierwszy algorytm segmentacji (podziału na części) były zaproponowane w roku 1967 , a pierwszy cyfrowy aparat fotograficzny zbudowano w 1975 roku (o rozmiarach obrazu 100 x 100 pikseli).
+Trzeba podkreślić, że fundamentalne koncepcje tej dziedziny wymyślone zostały już jakiś czas temu; na przykład pierwszy algorytm segmentacji (podziału na części) były zaproponowane w roku 1967, a pierwszy cyfrowy aparat fotograficzny zbudowano w 1975 roku (o rozmiarach obrazu 100 x 100 pikseli).
 
 (W przyszłość rozdział zostanie uzupełniony.)
 
