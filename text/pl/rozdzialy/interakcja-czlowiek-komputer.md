@@ -30,11 +30,11 @@ Wypróbuj następujące narzędzie interaktywne i poproś również znajomych, a
 {interactive name="deceiver" type="in-page"}
 
 Czy ktoś z was dostał nieprawidłową odpowiedź na pytanie, mimo że sądził, że jest to prawda?
-Być może zauważyłeś, że przyciski "parzysty" i "nieparzysty" czasami zamieniają się miejscami.
+Być może zauważyłeś, że przyciski „parzysty” i „nieparzysty” czasami zamieniają się miejscami.
 Niespójność w interfejsie jest na ogół czymś nieporządanym, ponieważ może łatwo zmylić użytkownika, który przez to popełni błąd.
 
 Jedyną sytuacją, w której może być to pożądane, jest celowe uczynienie gry komputerowej bardziej interesującą (w której powyższa interakcja mogłaby wystąpić).
-Wyobraź sobie, że masz formularz internetowy, w którym przyciski "wyczyść" i "prześlij" często zmieniają się miejscami.
+Wyobraź sobie, że masz formularz internetowy, w którym przyciski „wyczyść” i „prześlij” często zmieniają się miejscami.
 Użytkownicy często czyściliby formularz, gdy zamierzaliby go przesłać, lub przesyłaliby formularz, gdyby chcieli go wyczyścić!
 
 {panel type="teacher-note" summary="Dokładność vs szybkość w powyższej interakcji"}
@@ -42,11 +42,11 @@ Interaktywna narzędzie zamiany parzysty/nieparzysty może nie oszukać wszystki
 {panel end}
 
 Badanie interakcji człowieka z komputerem wiąże się z wykorzystaniem dużej ilości psychologii (jak ludzie się zachowują), ponieważ ma to wpływ na sposób korzystania z systemu. Prosty przykład: ludzka pamięć krótkotrwała przechowuje informacje tylko kilka sekund (nawet u młodych ludzi!).
-Jeśli urządzenie odpowiada po więcej niż około 10 sekundach, użytkownik musi podjąć wysiłek, aby pamiętać, co robił. To jest dodatkowa praca dla użytkownika (co z jego punktu widzenia powoduje, że system jest bardziej męczący w użyciu). Innym przykładem jest to, że ludzie zostają "schwytani w nawyk" - robienie czegoś na pamięć: jeśli zaczniesz jeździć na rowerze po trasie, którą pokonujesz każdego dnia, wkrótce osiągniesz cel bez myślenia o każdym zakręcie po drodze. Jest to normalne, chyba że masz wstąpić gdzieś po drodze lub jeśli niedawno przeprowadziłeś się do nowego domu lub zmieniłeś miejsce pracy. Podobny efekt występuje w dialogowych okienkach potwierdzających; może często przypadkowo zamykasz plik bez zapisywania go, a system pyta się "Czy chcesz to zapisać?", więc naciskasz "Tak". Po wykonaniu tej czynności kilka razy zaczniesz ją wykonywać bez zastanowienia. Może się wtedy zdarzyć, że np. gdy nie chcesz zastąpić starego pliku, możesz przypadkowo kliknąć "Tak".
+Jeśli urządzenie odpowiada po więcej niż około 10 sekundach, użytkownik musi podjąć wysiłek, aby pamiętać, co robił. To jest dodatkowa praca dla użytkownika (co z jego punktu widzenia powoduje, że system jest bardziej męczący w użyciu). Innym przykładem jest to, że ludzie zostają „schwytani w nawyk” - robienie czegoś na pamięć: jeśli zaczniesz jeździć na rowerze po trasie, którą pokonujesz każdego dnia, wkrótce osiągniesz cel bez myślenia o każdym zakręcie po drodze. Jest to normalne, chyba że masz wstąpić gdzieś po drodze lub jeśli niedawno przeprowadziłeś się do nowego domu lub zmieniłeś miejsce pracy. Podobny efekt występuje w dialogowych okienkach potwierdzających; może często przypadkowo zamykasz plik bez zapisywania go, a system pyta się „Czy chcesz to zapisać?”, więc naciskasz „Tak”. Po wykonaniu tej czynności kilka razy zaczniesz ją wykonywać bez zastanowienia. Może się wtedy zdarzyć, że np. gdy nie chcesz zastąpić starego pliku, możesz przypadkowo kliknąć „Tak”.
 
 {panel type="ciekawostka" summary="Przechwytywanie błędów"}
 Przyzwyczajenie się do standardowej trasy lub procedury, a co za tym idzie zapominanie czegoś innego, co trzeba było zrobić tego dnia, nazywa się *błędem przechwytywania* (ang. capture error).
-Jest to łatwe do zapamiętania, ponieważ zostajesz "schwytany" w swój typowy bieg wydarzeń (nawyk).
+Jest to łatwe do zapamiętania, ponieważ zostajesz „schwytany” w swój typowy bieg wydarzeń (nawyk).
 Na ogół jest to dobrą rzeczą, ponieważ oszczędza ci ciężaru myślenia o codziennych czynnościach (co mogłoby być jeszcze bardziej męczące),
 ale może również skłonić cię do zrobienia czegoś, czego nie zamierzałeś.
 Dobry projektant interfejsu będzie tego świadomy i uniknie wykonania interfejsu tak, aby użytkownik mógł zostać schwytany i zrobić coś, czego nie można już cofnąć.
@@ -101,7 +101,7 @@ Przedyskutuj swoje odpowiedzi z kolegą z klasy lub znajomym. To powinno pomóc 
 {panel end}
 
 {panel type="teacher-note" summary="Możliwe odpowiedzi na poniższe wyzwania"}
-Celem edukacyjnym dla uczniów jest dostrzeżenie ogromnej przepaści między naiwnym widokiem "budzika" jako wystarczającym opisem zadania, a konkretnym scenariuszem, który nadaje temu zadaniu więcej sensu. Może to wymagać od uczniów, aby rozpisali zadanie w jego krytycznych krokach; jeśli wykonali zadanie, zanim prawdopodobnie stali się mistrzami w tej dziedzinie to zapomnieli o początkowych trudnościach, a jeśli nie wykonali zadania, mogą założyć, że jest to łatwe. Niektóre z pomysłów, o które możesz poprosić, to:
+Celem edukacyjnym dla uczniów jest dostrzeżenie ogromnej przepaści między naiwnym widokiem „budzika” jako wystarczającym opisem zadania, a konkretnym scenariuszem, który nadaje temu zadaniu więcej sensu. Może to wymagać od uczniów, aby rozpisali zadanie w jego krytycznych krokach; jeśli wykonali zadanie, zanim prawdopodobnie stali się mistrzami w tej dziedzinie to zapomnieli o początkowych trudnościach, a jeśli nie wykonali zadania, mogą założyć, że jest to łatwe. Niektóre z pomysłów, o które możesz poprosić, to:
 
 - ustaw budzik: zadanie jest często wykonywane późno w nocy, a jeśli popełnisz błąd, użytkownik może przegapić ważne spotkanie lub samolot rano, więc zadanie jest bardzo ważne. W zależności od zegara (może to być na smartfonie lub fizyczny zegar), użytkownik musi ustawić czas alarmu (w tym prawidłowe ustawienie oznaczenia am/pm w przypadku zegarów dwunastogodzinowych), włączyć dźwięk alarmu (być może upewniając się, że urządzenie nie jest wyciszone) i upewnić się, że ma wystarczająco dużo baterii do rana. Wszystko to dzieje się podczas gdy użytkownik jest zmęczony, a błąd może być kosztowny!
 
@@ -110,7 +110,7 @@ Aby utrudnić wyzwanie, to projektor zwykle wymaga czasu, aby się rozgrzać, i 
 {panel end}
 
 {panel type="Ciekawostka" summary="Głupi użytkownicy czy głupie interfejsy?"}
-Systemy komputerowe często sprawiają, że ludzie czują się głupimi - w rzeczywistości dostępnych jest wiele książek "dla głupich", takich jak "iPad dla głupich" (ang." iPad for dummies") lub "Kompletny przedowdnik dla idiotów po Microsoft Windows 8" (ang. "The Complete Idiot's Guide to Microsoft Windows 8").
+Systemy komputerowe często sprawiają, że ludzie czują się głupimi - w rzeczywistości dostępnych jest wiele książek „dla głupich”, takich jak „iPad dla głupich” (ang. „iPad for dummies”) lub „Kompletny przedowdnik dla idiotów po Microsoft Windows 8” (ang. „The Complete Idiot's Guide to Microsoft Windows 8”).
 Te książki sprzedają się w milionach egzemplarzy, ale są szanse, że ludzie, którzy je kupują, są całkiem inteligentni --- po prostu interfejsy mogą sprawiać, że ludzie są tak sfrustrowani, że czują się jak głupek.
 Prawda jest taka, że ​​jeśli interfejs powoduje, że ​​wielu ludzi czuje się jak idiota, istnieje poważny problem z interfejsem, a nie użytkownikiem.
 W przeszłości istniała zasada, że to programiści, którzy zaprojektowali dane oprogramowanie, mogli sobie pozwolić na obwinianie użytkowników za wszelkie problemy.
@@ -142,19 +142,19 @@ Zadanie to jest [szczegółowo opisane w działaniach związanych z projektowani
 {panel type="teacher-note" summary="Niektóre z kluczowych celów edukacyjnych tego rozdziału"}
 Kluczowe idee, które powinni wyłowić uczniowie, obejmują:
 
-- "System", który musi działać dobrze, to komputer i człowiek *razem*.
+- „System”, który musi działać dobrze, to komputer i człowiek *razem*.
 - Wiele osób denerwuje się urządzeniami cyfrowymi. Czasami muszą to znosić, ponieważ jest to jedyna dostępna opcja, ale w innych przypadkach urządzenia i oprogramowanie z dobrymi interfejsami sprzedają się znacznie lepiej lub mogą mieć wyższe ceny, ponieważ pomagają użytkownikowi w wykonaniu pracy.
 - Najgorszą osobą do oceny interfejsu jest osoba, która go zaprojektowała. Wie dokładnie, jak to powinno działać; ale jeśli ktoś inny wypróbuje urządzenie, dowiesz się, jak wygląda typowy użytkownik (z tego powodu tutaj nie chodzi o to, żeby uczeń napisał własny program i oceni jego interfejs - to byłby dowód, że nie zrozumie oceny HCI!)
 - Do wykonania danego zadania używany jest interfejs, dlatego najlepiej jest zidentyfikować zadania, dla których ten interfejs jest przeznaczony, a następnie rozważyć, jak one są trudne. Najczęstszym błędem jest skupienie się na funkcjach interfejsu, ale w świecie rzeczywistym pytanie brzmi, czy te funkcje mogą być używane do wykonywania zadań od początku do końca.
 {panel end}
 
-Urządzenia są często sprzedawane przy użyciu zwrotów takich jak "przyjazny dla użytkownika" i "intuicyjny", niestety są to niejasne terminy, które trudno określić. W tej sekcji wykorzystamy bardziej techniczny termin. [Użyteczność] (https://pl.wikipedia.org/wiki/U%BFyteczno%B6%E6_(informatyka)), który jest dobrze rozumiany przez ekspertów HCI, i daje nam kilka sposobów oceniania, jak bardzo odpowiedni jest interfejs do określonego zadania. Użyteczność nie polega tylko na tym, że interfejs jest przyjemny w użyciu: słaba użyteczność może prowadzić do poważnych problemów i jest przyczyną poważnych katastrof, takich jak wypadki samolotów, katastrofy finansowe i wypadki medyczne. Jest to również ważne, ponieważ interfejs wymagający dużej zręczności, szybkich reakcji lub dobrej pamięci czyni go mniej dostępnym dla dużej części społeczeństwa, gdy dostępność może być zarówno moralnym, jak i prawnym oczekiwaniem.
+Urządzenia są często sprzedawane przy użyciu zwrotów takich jak „przyjazny dla użytkownika” i „intuicyjny”, niestety są to niejasne terminy, które trudno określić. W tej sekcji wykorzystamy bardziej techniczny termin. [Użyteczność] (https://pl.wikipedia.org/wiki/U%BFyteczno%B6%E6_(informatyka)), który jest dobrze rozumiany przez ekspertów HCI, i daje nam kilka sposobów oceniania, jak bardzo odpowiedni jest interfejs do określonego zadania. Użyteczność nie polega tylko na tym, że interfejs jest przyjemny w użyciu: słaba użyteczność może prowadzić do poważnych problemów i jest przyczyną poważnych katastrof, takich jak wypadki samolotów, katastrofy finansowe i wypadki medyczne. Jest to również ważne, ponieważ interfejs wymagający dużej zręczności, szybkich reakcji lub dobrej pamięci czyni go mniej dostępnym dla dużej części społeczeństwa, gdy dostępność może być zarówno moralnym, jak i prawnym oczekiwaniem.
 
 {panel type="Ciekawostka" summary="Kiedy inerfejs został źle wykonany"}
-- 87 osób zginęło, gdy [lot lini Air Inter nr 148 rozbił się] (https://pl.wikipedia.org/wiki/Katastrofa_lotu_Air_Inter_148), ponieważ piloci schodzili „33”, aby uzyskać kąt schodzenia 3,3 stopnia, ale ten sam interfejs był używany do wprowadzenia szybkość]ci zniżania, którą autopilot interpretuje jako 3300 stóp na minutę. Ten problem z interfejsem nazywany jest "błędem trybu" (opisany będzie poniżej). Więcej informacji [tutaj] (http://blog.martindoms.com/2011/01/24/poor-ui-design-can-kill/).
+- 87 osób zginęło, gdy [lot lini Air Inter nr 148 rozbił się] (https://pl.wikipedia.org/wiki/Katastrofa_lotu_Air_Inter_148), ponieważ piloci schodzili „33”, aby uzyskać kąt schodzenia 3,3 stopnia, ale ten sam interfejs był używany do wprowadzenia szybkość]ci zniżania, którą autopilot interpretuje jako 3300 stóp na minutę. Ten problem z interfejsem nazywany jest „błędem trybu” (opisany będzie poniżej). Więcej informacji [tutaj] (http://blog.martindoms.com/2011/01/24/poor-ui-design-can-kill/).
 - 13 osób zginęło, a wiele innych zostało rannych, gdy piloci [lotu Varig 254] (https://en.wikipedia.org/wiki/Varig_Flight_254) wpisali niepoprawny kierunek. Plan lotu określał kierunek 0270, którą kapitan zinterpretował i wprowadził do komputera pokładowego jako 270 stopni. W rzeczywistości oznaczało to 027,0 stopni. To zamieszanie nastąpiło z powodu zmiany formatu kierunków i pozycji separatora dziesiętne w planach lotów, a kapitan o tym nie wiedział. Niestety, drugi pilot bezmyślnie skopiował kierunek kapitana zamiast odczytać go z planu lotu, tak jak powinien. Samolot przeleciał przez kilka godzin na autopilocie. Niestety, [efekt potwierdzenia] (https://pl.wikipedia.org/wiki/Efekt_potwierdzenia) wziął górę nad pilotami, którzy byli przekonani, że są blisko celu, podczas gdy w rzeczywistości byli setki kilometrów dalej. Samolotowi zabrakło paliwa i rozbił się w dżungli amazońskiej. Projektowanie systemów lotniczych, które są wykorzystywane przez ludzi, jest dużym wyzwaniem i jest częścią szerszego obszaru badań nad czynnikami ludzkimi.
 - Pracownik banku [przypadkowo udzielił klientowi pożyczki w wysokości 10 milionów dolarów zamiast 100 000 dolarów] (http://edition.cnn.com/2012/08/24/world/asia/new-zealand-accidental-millionaire-sentenced/). Klient wypłacił większość pieniędzy i uciekł do Azji, bank stracił w tym czasie miliony dolarów, a kasjer bankowy miał traumatyczne przeżycia. Błąd był spowodowany tym, że pracownik wpisał dwa dodatkowe zera, prawdopodobnie dlatego, że niektóre interfejsy automatycznie wstawiały kropkę dziesiętną (można wpisać 524, aby wprowadzić 5,25 USD), a inne nie. Ten błąd można wytłumaczyć w kategoriach braku spójności interfejsu, co powoduje błąd trybu.
-- U 43-letniej kobiety zatrzymał się oddech po tym, jak pielęgniarka przypadkowo wpisała 5 zamiast 0,5 dawki morfiny. Interfejs powinien utrudnić popełnienie błędu wpisania dziesięcikrotnie większej dawki. Istnieje [artykuł na ten temat] (http://www.ncbi.nlm.nih.gov/pubmed/16738293) oraz artykuł [o problemie z interfejsem] (http://hrcak.srce.hr/file/95851). Podobne problemy mogą wystąpić w każdym systemie sterowania, w którym operator wpisuje wartość; lepszy interfejs zmusiłby operatora do naciśnięcia przycisku "w górę" i "w dół", więc duże zmiany wymagają dużo pracy (jest to przykład "błędu o jeden" (ang. off by one error), w którym jedna dodatkowa cyfra została pominięta lub dodana, a także odnosi się do zasady współmiernego wysiłku)
+- U 43-letniej kobiety zatrzymał się oddech po tym, jak pielęgniarka przypadkowo wpisała 5 zamiast 0,5 dawki morfiny. Interfejs powinien utrudnić popełnienie błędu wpisania dziesięcikrotnie większej dawki. Istnieje [artykuł na ten temat] (http://www.ncbi.nlm.nih.gov/pubmed/16738293) oraz artykuł [o problemie z interfejsem] (http://hrcak.srce.hr/file/95851). Podobne problemy mogą wystąpić w każdym systemie sterowania, w którym operator wpisuje wartość; lepszy interfejs zmusiłby operatora do naciśnięcia przycisku „w górę” i „w dół”, więc duże zmiany wymagają dużo pracy (jest to przykład „błędu o jeden” (ang. off by one error), w którym jedna dodatkowa cyfra została pominięta lub dodana, a także odnosi się do zasady współmiernego wysiłku)
 
 We wszystkich tych przypadkach winę za popełnienie błędu można przypisać użytkownikowi (pilotom, kasjerowi i pielęgniarce), ale dobrze zaprojektowany interfejs, który nie powoduje poważnych konsekwencji z błędów, które ludzie mogą łatwo popełnić, byłby o wiele lepszy.
 {panel end}
@@ -163,7 +163,7 @@ Istnieje wiele elementów, które można wziąć pod uwagę w użyteczności, a 
 
 ### Konsekwencja
 
-"Złotą zasadą" użyteczności jest *konsekwencja*. Jeśli system ciągle się zmienia, korzystanie z niego będzie frustrujące. Wcześniej mieliśmy przykład pary przycisków „parzysty”/„nieparzysty”, które sporadycznie zamieniały się miejscami. Pozytywnym przykładem jest konsekwentne stosowanie "control-C" i "control-V" w wielu różnych programach do kopiowania i wklejania tekstu lub obrazów. Pomaga to także *bezmyślności*: gdy nauczysz się kopiować i wklejać w jednym programie, wiesz, jak to robić w wielu innych. Wyobraź sobie, że każdy program używałby do tego różnych poleceń menu i klawiszy!
+„Złotą zasadą” użyteczności jest *konsekwencja*. Jeśli system ciągle się zmienia, korzystanie z niego będzie frustrujące. Wcześniej mieliśmy przykład pary przycisków „parzysty”/„nieparzysty”, które sporadycznie zamieniały się miejscami. Pozytywnym przykładem jest konsekwentne stosowanie „control-C” i „control-V” w wielu różnych programach do kopiowania i wklejania tekstu lub obrazów. Pomaga to także *bezmyślności*: gdy nauczysz się kopiować i wklejać w jednym programie, wiesz, jak to robić w wielu innych. Wyobraź sobie, że każdy program używałby do tego różnych poleceń menu i klawiszy!
 
 Powiązanym problemem jest *błąd trybu* [ang. *Mode error*] (https://pl.wikipedia.org/wiki/Mode_error#Mode_errors), w którym akcja zależy od trybu, w którym się znajdujesz. Prostym przykładem jest wciśnięty klawisz caps lock (w szczególności przy wprowadzaniu hasła, gdzie nie widać efektu wpisywania). Klasycznym przykładem są arkusze kalkulacyjne Excel, w których efekt kliknięcia komórki zależy od trybu: czasami wybiera komórkę, a innym razem umieszcza nazwę komórki, którą kliknąłeś w innej komórce. Tryby są uważane za złe praktyki w projektowaniu interfejsu, ponieważ mogą one łatwo spowodować, że użytkownik wykona niewłaściwą rzecz i powinny być w miarę możliwości unikane.
 
@@ -173,14 +173,14 @@ Sposób, w jaki ludzie postrzegają czas, nie zawsze jest proporcjonalny do czas
 Jeśli coś dzieje się wystarczająco szybko, będziemy postrzegać to jako natychmiastowe.
 Jeśli musimy czekać i nie możemy nic zrobić podczas oczekiwania, czas może wydawać się wolniejszy!
 
-Poniższa narzędzie interaktywne pozwala dowiedzieć się, co znaczy "natychmiastowy" dla ciebie.
+Poniższa narzędzie interaktywne pozwala dowiedzieć się, co znaczy „natychmiastowy” dla ciebie.
 Gdy klikniesz na każdą komórkę, czasami wystąpi losowe opóźnienie, zanim coś pojawi się; inne komórki nie będą miały opóźnienia. Kliknij każdą komórkę i jeśli wydaje się, że reaguje natychmiast, pozostaw ją bez zmian.
 Jeśli jednak zauważysz małe opóźnienie przed pojawieniem się obrazu, kliknij go ponownie (co spowoduje, że komórka zmieni kolor na zielony). Wystarczy, że wykonasz szybką decyzję na poziomie intuicyjnym przy pierwszym kliknięciu każdej komórki - nie przemyślaj jej.
 Opóźnienie może być bardzo krótkie, jednak gdy je tylko zauważysz, to kliknij w komórkę, aby zmieniła ona kolor na zielony.
 
 {interactive name="delay-analyser" type="whole-page" text="Interaktywny analizer opóźnień"}
 
-Po ukończeniu zadania kliknij "Wyświetl statystyki", aby zobaczyć, jak długo opóźnienia były porównywane z twoją percepcją.
+Po ukończeniu zadania kliknij „Wyświetl statystyki”, aby zobaczyć, jak długo opóźnienia były porównywane z twoją percepcją.
 Dla większośći osób, punktem, w którym zaczynają dostrzegać opóźnienie jest 100 ms (100 milisekund) czyli jedna dziesiąta sekundy.
 Cokolwiek krótszego (szczególnie około 50 ms) jest bardzo trudne do zauważenia. Dłuższe opóźnienia (na przykład 350 ms, czyli ponad jedna trzecia sekundy) są bardzo łatwe do zauważenia.
 
@@ -203,7 +203,7 @@ Jest więcej informacji na temat „limitów czasowych” dla interfejsów w [ty
 
 ### Ludzka pamięć przestrzenna
 
-Kolejną ważną kwestią związaną z użytecznością jest *pamięć przestrzenna* - nasza zdolność do pamiętania, gdzie znajdują się rzeczy (np. gdzie znajduje się przycisk lub ikona). Ludzka pamięć przestrzenna ma dużą pojemność (prawdopodobnie pamiętasz położenie wielu miejsc i obiektów), jest długotrwała (ludzie odwiedzający miasto, w którym dorastali, często pamiętają jego rozmieszczenie przestrzenne) i możemy bardzo szybko zapamiętać rzeczy. Z tego wynika bardzo prosty aspekt użyteczności - mianowicie - rozmieszczenie interfejsu nie powinien się zmieniać. Narzędzie interaktywne na początku tego rozdziału zostało celowo skonfigurowane jako frustrujące przez sporadyczną zamianę dwóch przycisków. Powodem, dla którego ludzie często popełniają błąd w tej sytuacji, jest to, że uaktywnia się ich pamięćprzestrzenna, więc położenie przycisku jest ważniejsze niż to, co jest na nim napisane. Systemy, które nie są spójne w rozmieszczeniu przestrzennym przycisków "OK" i "Anuluj", mogą łatwo spowodować naciśnięcie niewłaściwego przycisku.
+Kolejną ważną kwestią związaną z użytecznością jest *pamięć przestrzenna* - nasza zdolność do pamiętania, gdzie znajdują się rzeczy (np. gdzie znajduje się przycisk lub ikona). Ludzka pamięć przestrzenna ma dużą pojemność (prawdopodobnie pamiętasz położenie wielu miejsc i obiektów), jest długotrwała (ludzie odwiedzający miasto, w którym dorastali, często pamiętają jego rozmieszczenie przestrzenne) i możemy bardzo szybko zapamiętać rzeczy. Z tego wynika bardzo prosty aspekt użyteczności - mianowicie - rozmieszczenie interfejsu nie powinien się zmieniać. Narzędzie interaktywne na początku tego rozdziału zostało celowo skonfigurowane jako frustrujące przez sporadyczną zamianę dwóch przycisków. Powodem, dla którego ludzie często popełniają błąd w tej sytuacji, jest to, że uaktywnia się ich pamięćprzestrzenna, więc położenie przycisku jest ważniejsze niż to, co jest na nim napisane. Systemy, które nie są spójne w rozmieszczeniu przestrzennym przycisków „OK” i „Anuluj”, mogą łatwo spowodować naciśnięcie niewłaściwego przycisku.
 
 Innym miejscem, w którym rozmieszczenie interfejsu szybko się zmienia, jest obrót tabletu lub smartfona. Niektóre urządzenia zmieniają kolejność ikon dla nowej orientacji, która zmienia układ przestrzenny, podczas gdy inne zachowują je tak samo (z wyjątkiem tego, że mogą nie wyglądać dobrze w nowym ułożeniu). Wypróbuj kilka różnych urządzeń i zobacz, które zmieniają rozmieszczenie po obróceniu.
 
@@ -213,7 +213,7 @@ Istnieje wiele innych sytuacji, w których rozmieszczenie może nagle zmienić s
 - Jeśli zmienisz rozmiar urządzenia (takie jak większy monitor lub inny smartfon), będziesz musiał ponownie nauczyć się, gdzie jest wszystko.
 - Układy często zmieniają się wraz z nowymi wersjami oprogramowania (co jest jednym z powodów, dla których aktualizacja za każdym razem, gdy pojawi się nowa wersja oprogramowania, może nie być najlepszym planem).
 - To samo oprogramowanie w innym systemie operacyjnym może mieć nieco inny układ (np. jeśli osoba używała przeglądarki Chrome cały czas w systemie Windows  i zaczyna używać Chrome w systemie MacOS). Może to być szczególnie frustrujące, ponieważ położenie wspólnych elementów sterujących (okno zamknięcia/maksymalizacji, a nawet klawisz kontrolny na klawiaturze) jest inne, co sprawia, że przestrzenna pamięć użytkownika zaczyna być zagubiona.
-- "Wstążka" Microsoft Word była szczególnie frustrująca dla użytkowników, gdy pojawiła się z kilku już wspomnianych powodów - pozycja każdego elementu była zupełnie inna niż w poprzednich wersjach.
+- „Wstążka” Microsoft Word była szczególnie frustrująca dla użytkowników, gdy pojawiła się z kilku już wspomnianych powodów - pozycja każdego elementu była zupełnie inna niż w poprzednich wersjach.
 - interfejsy adaptacyjne również mogą stanowić problem; może się wydawać, że dobrym pomysłem jest stopniowe zmienianie menu w programie, tak aby często używane przedmioty znajdowały się w pobliżu lub nieużywane przedmioty były ukryte, ale może to prowadzić do frustrującego poszukiwania opcji przez użytkownika, ponieważ nie może on polegać na jego pamięci przestrzennej, aby znaleźć to czego oczekuje.
 {panel end}
 
@@ -223,19 +223,19 @@ Praca z nową klawiaturą może oznaczać konieczność ponownego uczenia pamię
 ### Brakujący przycisk
 
 Jednym z powszechnych błędów człowieka, który musi być rozważaony przy projektowaniu inferfejsu jest *błąd o jeden* (ang. off by one error), w którym użytkownik przypadkowo klika lub wpisuje element obok tego, w którym zamierzał.
-Na przykład, jeśli element menu "zapisz" znajduje się obok pozycji menu "usuń", jest to ryzykowne, ponieważ jedno małe przesunięce może spowodować, że użytkownik usunie plik zamiast go zapisać.
+Na przykład, jeśli element menu „zapisz” znajduje się obok pozycji menu „usuń”, jest to ryzykowne, ponieważ jedno małe przesunięce może spowodować, że użytkownik usunie plik zamiast go zapisać.
 Podobny problem występuje na klawiaturach; na przykład control-W może zamknąć tylko jedno okno w przeglądarce, a control-Q może zamknąć całą przeglądarkę, więc wybór tych dwóch sąsiednich klawiszy jest problemem. Oczywiście można to naprawić poprzez sprawdzenie czy użytkownik kończy pracę czy zapisać wszystkie okna, aby użytkownik mógł odzyskać to nad czym pracował po ponownym otworzeniu przeglądarki. Może się to również zdarzyć w formularzach internetowych, w których obok przycisku wysyłania znajduje się przycisk czyszczenia, a błąd o jeden powoduje, że użytkownik traci wszystkie dane, które właśnie wprowadził.
 
 {image filename="reset-submit.png" alt="Ryzykowny inferfejs."}
 
 
 {comment}
-.. xjrm dodał w menu "Akcje", z "Zamów pizzę", "Uruchom atak nuklearny", "Uruchom helikopter zabawkowy". Każdy po prostu natychmiastowo wyświetla okno dialogowe z napisem "Pizza zamówiona" itd.
+.. xjrm dodał w menu „Akcje”, z „Zamów pizzę”, „Uruchom atak nuklearny”, „Uruchom helikopter zabawkowy”. Każdy po prostu natychmiastowo wyświetla okno dialogowe z napisem „Pizza zamówiona” itd.
 {comment end}
 
 ### Sprawne wykonywanie zadań jest trudniejsze
 
-Innym pomysłem stosowanym przez projektantów HCI jest *zasada współmiernego wysiłku*, która mówi, że często wykonywane proste zadania powinny być łatwe do zrobienia, ale dobrze jest wymagać skomplikowanej procedury złożonego zadania. Na przykład w edytorze tekstu drukowanie strony w takiej postaci, w jakiej jest wyświetlane, powinno być łatwe, ale jest w porządku, jeśli wymaga pewnego wysiłku, aby wydrukować dwustronnie, dwie strony na jednej, ze zszywką w lewym górnym rogu itp. W rzeczywistości czasami więcej wysiłku należy *wymagać*, jeśli polecenie ma poważne konsekwencje, takie jak usunięcie pliku, wyczyszczenie urządzenia lub usunięcie konta. W takich przypadkach można dodać sztuczne zadania, takie jak pytanie "Czy jesteś pewien?" lub ustawienie skrajnego ustawienia na urządzeniu (np. ustawienie napięcia zasilania) może wymagać wielokrotnego naciśnięcia przycisku "w górę", a nie pozwolenie użytkownikowi wpisania dodatkowych kilku zer.
+Innym pomysłem stosowanym przez projektantów HCI jest *zasada współmiernego wysiłku*, która mówi, że często wykonywane proste zadania powinny być łatwe do zrobienia, ale dobrze jest wymagać skomplikowanej procedury złożonego zadania. Na przykład w edytorze tekstu drukowanie strony w takiej postaci, w jakiej jest wyświetlane, powinno być łatwe, ale jest w porządku, jeśli wymaga pewnego wysiłku, aby wydrukować dwustronnie, dwie strony na jednej, ze zszywką w lewym górnym rogu itp. W rzeczywistości czasami więcej wysiłku należy *wymagać*, jeśli polecenie ma poważne konsekwencje, takie jak usunięcie pliku, wyczyszczenie urządzenia lub usunięcie konta. W takich przypadkach można dodać sztuczne zadania, takie jak pytanie „Czy jesteś pewien?” lub ustawienie skrajnego ustawienia na urządzeniu (np. ustawienie napięcia zasilania) może wymagać wielokrotnego naciśnięcia przycisku „w górę”, a nie pozwolenie użytkownikowi wpisania dodatkowych kilku zer.
 
 {interactive name="action-menu" type="in-page"}
 
@@ -251,11 +251,11 @@ Będziesz robić notatki na temat tego, co mówi, i możesz zastanowić się nad
 
 Ten sposób podejścia do problemu daje wgląd w to, co może być mylące w interfejsie i dlaczego.
 
-Na przykład, jeśli ktoś ustawia budzik mówi "Naciskam przycisk w górę, aż dojdę do 7 rano - o nie! zatrzymał się na 7:09, teraz muszę iść dalej aby dojść do 7:00", co daje wgląd w to, jak interfejs może przeszkodzić użytkownikom w skutecznym wykonaniu zadania.
+Na przykład, jeśli ktoś ustawia budzik mówi „Naciskam przycisk w górę, aż dojdę do 7 rano - o nie! zatrzymał się na 7:09, teraz muszę iść dalej aby dojść do 7:00”, co daje wgląd w to, jak interfejs może przeszkodzić użytkownikom w skutecznym wykonaniu zadania.
 
 Takie podejście koncentruje się na obserwacji użytkownika wykonującego określone *zadanie*, aby uchwycić to, co dzieje się w rzeczywistości, gdy ludzie używają interfejsu.
 *Zadania* często są mylone z *funkcjami*; używasz funkcji urządzenia do wykonania zadania.
-Na przykład aparat może mieć funkcję robienia wielu zdjęć szybko, ale odpowiednim zadaniem jest "zrobienie zdjęcia jakiegoś zdarzenia, wybranie najlepszego zdjęcia i udostępnienie go".
+Na przykład aparat może mieć funkcję robienia wielu zdjęć szybko, ale odpowiednim zadaniem jest „zrobienie zdjęcia jakiegoś zdarzenia, wybranie najlepszego zdjęcia i udostępnienie go”.
 Może to obejmować wiele działań użytkownika: wchodzenie w tryb wielu zdjęć, konfigurowanie kamery pod kątem warunków oświetleniowych, robienie zdjęć, wybieranie najlepszego, łączenie się z komputerem, przesyłanie zdjęcia do strony internetowej i udostępnianie go przyjacielowi.
 
 Projekt będzie bardziej interesujący, jeśli osoba tobie pomagająca nie jest w pełni zaznajomiony z systemem lub jeśli jest to system, który często jest mylący lub frustrujący dla użytkownika.
@@ -272,7 +272,7 @@ Twój pomocnik może nie być do tego przyzwyczajony, więc możesz pomoc mu pop
    - czy widzisz, co poszło nie tak?
    - jak się z tym czujesz?
 
-Jeśli zrozumie on "myślenie na głos", po prostu milcz i rób notatki o tym, co mówi.
+Jeśli zrozumie on „myślenie na głos"”, po prostu milcz i rób notatki o tym, co mówi.
 
 Bardzo ważne jest, aby nie krytykować ani nie zastraszać pomocnika!
 Jeśli popełni błąd, spróbuj dowiedzieć się, w jaki sposób interfejs spowodował, że zrobił coś niewłaściwego, zamiast go obwiniać.
@@ -290,14 +290,14 @@ i
 
 
 {panel type="projekt" summary="Przejście poznawcze"}
-Innym sposobem oceny interfejsu jest "Przejście poznawcze" (ang. "Cognitive Walkthrough").
+Innym sposobem oceny interfejsu jest „Przejście poznawcze” (ang. „Cognitive Walkthrough”).
 Zwykle robi się to bez angażowania kogoś innego, chociaż nasz opis został dostosowany do zaangażowania innego użytkownika, aby uczynić go nieco prostszym, jeśli nie masz doświadczenia w ocenie HCI.
 *Przejście poznawcze* to technika, której używają eksperci HCI do szybkiej oceny interfejsu.
 Jest to szczególnie przydatne przy ocenie interfejsów o kilku krokach, które są wykorzystywane przez nowych lub okazjonalnych użytkowników (np. osoby korzystające z automatu biletowego na lotnisku, ustawiania budzika w pokoju hotelowym lub przy użyciu wyświetlacza muzealnego).
 
 Pierwszym krokiem jest wybranie typowego zadania, które ktoś mógłby zrobić z ocenianym interfejsem (np. wydrukować bilet 2-godzinny, ustawić alarm na 5:20 rano lub dowiedzieć się, gdzie znajduje się dany eksponat w muzeum).
 
-Celem przejścia poznawczego jest ustalenie, czy użytkownik może zobaczyć, co należy zrobić na każdym etapie, a zwłaszcza, aby zauważyć, że jest coś mylącego lub niejednoznacznego (na przykład przycisk, który należy nacisnąć), i dowiedzieć się, czy "Jestem pewien, że wykonana została prawidłowa rzecz".
+Celem przejścia poznawczego jest ustalenie, czy użytkownik może zobaczyć, co należy zrobić na każdym etapie, a zwłaszcza, aby zauważyć, że jest coś mylącego lub niejednoznacznego (na przykład przycisk, który należy nacisnąć), i dowiedzieć się, czy „Jestem pewien, że wykonana została prawidłowa rzecz”.
 
 Doświadczony ewaluator HCI zrobiłby to samodzielnie, wyobrażając sobie, co zrobiłby użytkownik na każdym kroku, ale może to być łatwiejsze dla ciebie, gdy ktoś inny używa interfejsu, ponieważ pozwala to zobaczyć interfejs przez czyjeś oczy.
 Zalecamy więc poproszenie znajomego o wykonanie zadania dla ciebie.
@@ -337,7 +337,7 @@ Ocenianie interfejsu najlepiej wykonać, zbierając opinie od wielu potencjalnyc
 
 Istnieją różne zestawy heurystyk, które ludzie zaproponowali do oceny interfejsów, ale duński badacz o nazwie Jakob Nielsen wymyślił zestaw 10 heurystyk, które stały się bardzo szeroko stosowane i opiszemy je w tej sekcji. Jeśli napotkasz problem z użytecznością w interfejsie, prawie na pewno spotkasz się jedną z tych heurystyk i być może z kilkoma z nich. Nie jest łatwo zaprojektować system, który nie złamie żadnej heurystyki, a czasami nie będziesz chciał ich ściśle przestrzegać - dlatego nazywa się je heurystykami, a nie regułami.
 
-Często myląca funkcja w projekcie interfejsu powoduje przerwanie wielu heurystyk. Na przykład następujący komunikat o błędzie (to jest na serio) nie pomaga użytkownikom w uwolnieniu się od błędów (prawdziwy błąd to ustawienie sieciowe, ale jest wyjaśniony jako powodujący miganie światła!), A przyciski "Pomiń", "Anuluj" oraz "Ignoruj" nie nie są zrozumiałe dla użytkownika (intefejs musi być dopasowany do świata rzeczywistego!).
+Często myląca funkcja w projekcie interfejsu powoduje przerwanie wielu heurystyk. Na przykład następujący komunikat o błędzie (to jest na serio) nie pomaga użytkownikom w uwolnieniu się od błędów (prawdziwy błąd to ustawienie sieciowe, ale jest wyjaśniony jako powodujący miganie światła!), A przyciski „Pomiń”, „Anuluj” oraz „Ignoruj” nie nie są zrozumiałe dla użytkownika (intefejs musi być dopasowany do świata rzeczywistego!).
 
 {image filename="time-capsule.png" alt="Mylenie się na wielu poziomach." side="right_wrap"}
 
@@ -357,9 +357,9 @@ Istnieje wiele zadań, które użytkownicy chcą wykonać na komputerze, a któr
 
 Jednak wskaźniki postępu nie zawsze są pomocne; powyższe kursory nie wskazują, czy będziesz musiał poczekać kilka sekund lub kilka minut (lub nawet godzin) na wykonanie zadania, co może być frustrujące.
 
-Przekazywanie informacji w "rozsądnym czasie" jest naprawdę ważne, a "rozsądny czas" jest często krótszy niż myślisz. W powyższej sekcji przeprowadzono eksperyment, aby dowiedzieć się, w którym momencie ludzie postrzegają opóźnioną reakcję; prawdopodobnie odkryłeś, że była to około jedna dziesiąta sekundy. Jeśli komputer potrzebuje więcej czasu na odpowiedź, może być on mylący w użytku. Więcej na ten temat w poprzedniej sekcji.
+Przekazywanie informacji w „rozsądnym czasie” jest naprawdę ważne, a „rozsądny czas” jest często krótszy niż myślisz. W powyższej sekcji przeprowadzono eksperyment, aby dowiedzieć się, w którym momencie ludzie postrzegają opóźnioną reakcję; prawdopodobnie odkryłeś, że była to około jedna dziesiąta sekundy. Jeśli komputer potrzebuje więcej czasu na odpowiedź, może być on mylący w użytku. Więcej na ten temat w poprzedniej sekcji.
 
-{image filename="xkcd-estimation.png" hover-text="Mogliby powiedzieć, że "połączenie jest prawdopodobnie stracone", ale fajniej jest robić naiwne uśrednienie czasu, by dać ci nadzieję, że jeśli poczekasz około 1 163 godzin, to w końcu operacja zostanie wykonana." alt="Autor windowsowego okienka kopiowania odwiedza znajomych i nie może zdecydować kiedy przybędzie." source="https://xkcd.com/612/"}
+{image filename="xkcd-estimation.png" hover-text="Mogliby powiedzieć, że „połączenie jest prawdopodobnie stracone”, ale fajniej jest robić naiwne uśrednienie czasu, by dać ci nadzieję, że jeśli poczekasz około 1 163 godzin, to w końcu operacja zostanie wykonana." alt="Autor windowsowego okienka kopiowania odwiedza znajomych i nie może zdecydować kiedy przybędzie." source="https://xkcd.com/612/"}
 
 W ocenie interfejsu istnieją inne ważne okresy opóźnienia: opóźnienie około 1 sekundy to sytuacja, w której naturalne okienka dialogowe zaczynają się robić niezgrabne, a około 10 sekund nakłada na użytkownika duże obciążenie, aby zapamiętać, co robi. Nielsen ma [artykuł na temat znaczenia tych okresów czasu] (http://www.nngroup.com/articles/response-times-3-important-limits/). Jeśli chcesz przetestować te pomysły, spróbuj porozmawiać z kimś, czekając 3 sekundy przed każdą odpowiedzią; lub wstawiaj losowe 10-sekundowe opóźnienia podczas wypowiadania zdania!
 
@@ -390,34 +390,34 @@ Notacja „$1699.50” jest popularnym sposobem wyrażenia kwoty w dolarach, ale
 Spróbuj znaleźć inne kwoty, które powinny być prawidłowe, ale ten system wydaje się odrzucać. W idealnej sytuacji system powinien być elastyczny w stosunku do wprowadzanego tekstu, aby zapobiec błędom.
 
 {panel type="spoiler" summary="Odpowiedzi do powyższego, spróbuj przed przeczytaniem tego!"}
-Okienko dialogowe odrzuca także przecinki (jako anglosaski separator tysięcy) w danych wejściowych, np. "1,000", mimo że są bardzo przydatnym sposobem odczytywania kwot w dolarach, np. ciężko jest rozróżnić 1000000 do 100000, ale to może zrobić ogromną różnicę! Nie pozwala także na spację przed lub po liczbie, ale jeśli liczba została skopiowana i wklejona z wiadomości e-mail, może wyglądać zupełnie dobrze. Mniej leniwy programista pozwoliłby na takie sytuację; obecna wersja prawdopodobnie używa prostego systemu konwersji liczb, który oszczędza konieczność dodatkowego programowania ...
+Okienko dialogowe odrzuca także przecinki (jako anglosaski separator tysięcy) w danych wejściowych, np. „1,000”, mimo że są bardzo przydatnym sposobem odczytywania kwot w dolarach, np. ciężko jest rozróżnić 1000000 do 100000, ale to może zrobić ogromną różnicę! Nie pozwala także na spację przed lub po liczbie, ale jeśli liczba została skopiowana i wklejona z wiadomości e-mail, może wyglądać zupełnie dobrze. Mniej leniwy programista pozwoliłby na takie sytuację; obecna wersja prawdopodobnie używa prostego systemu konwersji liczb, który oszczędza konieczność dodatkowego programowania ...
 {panel end}
 
 ### Kontrola użytkownika i wolność
 
-*Użytkownicy często przez pomyłkę wybierają funkcje systemu i będą potrzebować wyraźnie oznaczonego "wyjścia awaryjnego", aby opuścić niepożądany stan bez konieczności przejśćia przez przedłużany dialog z systemem. Obsługa cofania i ponawiania.*
+*Użytkownicy często przez pomyłkę wybierają funkcje systemu i będą potrzebować wyraźnie oznaczonego „wyjścia awaryjnego”, aby opuścić niepożądany stan bez konieczności przejśćia przez przedłużany dialog z systemem. Obsługa cofania i ponawiania.*
 
-Bardzo frustrujące jest popełnienie błędu i nie być w stanie wydostać się z niego. Jest to szczególnie złe, jeśli jedna mała operacja może wymazać wiele pracy, której nie można odzyskać. Przycisk resetowania w niektórych formularzach internetowych jest z tego powodu niepopularny - często jest obok przycisku wysyłania i możesz wyczyścić wszystkie dane poprzez "błąd o jeden".
+Bardzo frustrujące jest popełnienie błędu i nie być w stanie wydostać się z niego. Jest to szczególnie złe, jeśli jedna mała operacja może wymazać wiele pracy, której nie można odzyskać. Przycisk resetowania w niektórych formularzach internetowych jest z tego powodu niepopularny - często jest obok przycisku wysyłania i możesz wyczyścić wszystkie dane poprzez „błąd o jeden”.
 
-Powszechnym sposobem na zapewnienie swobody użytkownikowi jest funkcja "cofania", co oznacza, że nie tylko można łatwo naprawić błędy, ale zachęca się użytkownika do eksperymentowania, wypróbowując funkcje interfejsu wiedząc, że może je po prostu "cofnąć" aby powrócić do tego, co było przedtem, zamiast martwić się, że znajdzie się w stanie, którego nie może naprawić. Jeśli dostępne jest również "powtórzenie", użytkownik może poruszać się w przód i w tył, decydując, który z nich jest najlepszy. (W rzeczywistości, powtórz jest naprawdę cofnięciem się cofnięcia!)
+Powszechnym sposobem na zapewnienie swobody użytkownikowi jest funkcja „cofania”, co oznacza, że nie tylko można łatwo naprawić błędy, ale zachęca się użytkownika do eksperymentowania, wypróbowując funkcje interfejsu wiedząc, że może je po prostu „cofnąć” aby powrócić do tego, co było przedtem, zamiast martwić się, że znajdzie się w stanie, którego nie może naprawić. Jeśli dostępne jest również „powtórzenie”, użytkownik może poruszać się w przód i w tył, decydując, który z nich jest najlepszy. (W rzeczywistości, powtórz jest naprawdę cofnięciem się cofnięcia!)
 
 Oto przykład przycisku, który nie zapewnia kontroli użytkownika; jeśli go naciśniesz, stracisz całą tę stronę i będziesz musiał znaleźć drogę powrotną (ostrzegaliśmy cię!)
 
 {interactive name="close-window" type="in-page"}
 
 {panel type="teacher-note" summary="OSTRZEGALIŚMY cię..."}
-Naciśnięcie przycisku "tak" poniżej może być bardzo frustrujące! Większość nowoczesnych przeglądarek internetowych zapewnia pewną kontrolę i swobodę w tym przypadku - jeśli twoi uczniowie są sfrustrowani naciśnięciem przycisku, strona prawdopodobnie znajdzie się w ich menu historii (a niektóre przeglądarki mają nawet funkcję przywracania ostatniej strony zamkniętej).
+Naciśnięcie przycisku „tak” poniżej może być bardzo frustrujące! Większość nowoczesnych przeglądarek internetowych zapewnia pewną kontrolę i swobodę w tym przypadku - jeśli twoi uczniowie są sfrustrowani naciśnięciem przycisku, strona prawdopodobnie znajdzie się w ich menu historii (a niektóre przeglądarki mają nawet funkcję przywracania ostatniej strony zamkniętej).
 {panel end}
 
 Czasami interfejs może zmusić użytkownika do zrobienia czegoś, czego nie chce robić. Na przykład często zdarza się, że systemy operacyjne lub programy automatycznie wykonują aktualizacje, które wymagają ponownego uruchomienia. Czasami interfejs może nie dać użytkownikowi możliwości anulowania lub opóźnienia i zrestartować się. Jest to złe ponieważ użytkownik może stracić całą niezapisaną pracę lub oczekiwac na ponowne uruchomienie się systemu w czasie gdy musi coś zaprezentować.
 
-Inną powszechną formą tego problemu jest brak możliwości zamknięcia systemu. Pozytywnym przykładem jest przycisk "home" na smartfonach, który prawie zawsze zatrzymuje bieżącą aplikację, która jest w użyciu.
+Inną powszechną formą tego problemu jest brak możliwości zamknięcia systemu. Pozytywnym przykładem jest przycisk „home” na smartfonach, który prawie zawsze zatrzymuje bieżącą aplikację, która jest w użyciu.
 
 ### Spójność i standardy
 
 *Użytkownicy nie powinni się zastanawiać, czy różne słowa, sytuacje lub działania oznaczają to samo. Przestrzegaj konwencji platformy*.
 
-Spójność (coś, co za każdym razem jest takie samo) jest niezwykle przydatna dla osób używających interfejsów i jest czasami nazywana "złotą regułą HCI". Jeśli interfejs jest spójny z innymi interfejsami, nauka w jednym interfejsie przenosi się bezpośrednio do drugiego. Jednym z największych przykładów spójności programów komputerowych jest kopiowanie i wklejanie, które działa w ten sam sposób w większości programów, więc użytkownicy muszą tylko raz nauczyć się tej koncepcji. Klawisze skrótów do kopiowania i wklejania są również dość spójne między programami. Ale w niektórych programach kopiowanie/wklejanie zachowuje się inaczej, co może być mylące dla użytkowników.
+Spójność (coś, co za każdym razem jest takie samo) jest niezwykle przydatna dla osób używających interfejsów i jest czasami nazywana „złotą regułą HCI”. Jeśli interfejs jest spójny z innymi interfejsami, nauka w jednym interfejsie przenosi się bezpośrednio do drugiego. Jednym z największych przykładów spójności programów komputerowych jest kopiowanie i wklejanie, które działa w ten sam sposób w większości programów, więc użytkownicy muszą tylko raz nauczyć się tej koncepcji. Klawisze skrótów do kopiowania i wklejania są również dość spójne między programami. Ale w niektórych programach kopiowanie/wklejanie zachowuje się inaczej, co może być mylące dla użytkowników.
 
 Przykład niespójności jest zwykle spotykany w programach arkusza kalkulacyjnego, gdzie wynik naciśnięcia „control-A” (wybierz wszystko) zależy od tego, czy edytujesz komórkę, czy tylko wybierzesz komórkę (ten konkretny problem jest problemem „trybu”). Chociaż może to mieć sens dla użytkownika doświadczonego w arkuszach kalkulacyjnych, nowy użytkownik może być bardzo zdezorientowany, gdy to samo polecenie powoduje inną odpowiedź.
 
@@ -454,7 +454,7 @@ Jakie techniki widziałeś w oprogramowaniu bankomatów, aby zapobiec tego rodza
 
 {panel type="teacher-note" summary="Zapobieganie błędom bankomatów"}
 Niektóre bankomaty uniemożliwiają wprowadzenie nieprawidłowej kwoty, oferując jedynie konkretne kwoty do wypłaty i/lub mając przyciski takie jak +20 zł i - 20 zł.
-Wyszukanie w Internecie obrazów "wpisywanie kwoty w bankomacie" może przypomnieć kilka różnych sposobów, lub interfejsy radzą sobie z tym problemem (lub powodują problem!)
+Wyszukanie w Internecie obrazów „wpisywanie kwoty w bankomacie” może przypomnieć kilka różnych sposobów, lub interfejsy radzą sobie z tym problemem (lub powodują problem!)
 Wpisanie kwoty *wpłaty* jest oczywiście inne, ponieważ może to być dowolna kwota, więc prawdopodobnie użyje ono interfejsu,
 co pomaga w zapobieganiu błędom, ale teraz zmniejsza spójność!
 {panel end}
@@ -469,9 +469,9 @@ Użytkownik może po prostu nie zauważyć, że jest w trybie binarnym, a komuni
 
 *Zminimalizuj obciążenie pamięci użytkownika, wyświetlając widoczne obiekty, akcje i opcje. Użytkownik nie powinien pamiętać informacji z jednego okienka dialogowego w drugim. Instrukcje dla użytkowania systemu powinny być widoczne lub łatwe do odzyskania w razie potrzeby.*
 
-Ludzie są ogólnie bardzo dobrzy w rozpoznawaniu przedmiotów, ale komputery dobrze pamiętają je dokładnie. Dobrym tego przykładem jest system menu; jeśli klikniesz na menu "Edycja" w oprogramowaniu, przypomnisz sobie o wszystkich dostępnych opcjach edycyjnych i łatwo wybierzesz interesującą cię opcję.
+Ludzie są ogólnie bardzo dobrzy w rozpoznawaniu przedmiotów, ale komputery dobrze pamiętają je dokładnie. Dobrym tego przykładem jest system menu; jeśli klikniesz na menu „Edycja” w oprogramowaniu, przypomnisz sobie o wszystkich dostępnych opcjach edycyjnych i łatwo wybierzesz interesującą cię opcję.
 Jeśli zamiast tego musiałbyś wpisać polecenie z pamięci, to spowodowałoby większe obciążenie dla użytkownika.
-Ogólnie rzecz biorąc, dobrze jest, aby komputer "zapamiętywał" szczegóły, a użytkownik mógł wyświetlać opcje, zamiast je pamiętać.
+Ogólnie rzecz biorąc, dobrze jest, aby komputer „zapamiętywał” szczegóły, a użytkownik mógł wyświetlać opcje, zamiast je pamiętać.
 Wyjątkiem jest system, który jest cały czas używany przez eksperta, który zna wszystkie opcje; w tym przypadku bezpośrednie wprowadzanie poleceń może czasami być bardziej elastyczne i szybsze niż wybór z listy.
 
 Na przykład, gdy wpiszesz nazwę miejsca w mapie online, system może zacząć sugerować nazwy w oparciu o to, co piszesz, i prawdopodobne dostosowanie, skupiając się na twojej lokalizacji lub poprzednich wyszukiwaniach.
@@ -493,7 +493,7 @@ Ważnym obszarem badań w HCI jest wypracowywanie sposobów łatwego uczenia si�
 Nie chcesz, aby przeszkadzały one początkującym, ale nie chcesz, aby doświadczeni użytkownicy nie byli ich świadomi.
 Prostym sposobem na to jest posiadanie ekwiwalentów klawiszy w menu (akceleratorze); wyświetlone menu pokazuje, że shift-command-O otworzy nowy projekt, aby użytkownik mógł nauczyć się tej sekwencji, jeśli często używa tego polecenia.
 {image filename = "menu-keystroke-equivalent.png" alt = "Menu ze skrótami klawiszowymi" wrap = "left"}
-Elastyczny system pozwoliłby użytkownikowi dodać ekwiwalent naciśnięcia klawisza dla samego polecenia "Zamknij panel", gdyby okazało się, że jest często używany.
+Elastyczny system pozwoliłby użytkownikowi dodać ekwiwalent naciśnięcia klawisza dla samego polecenia „Zamknij panel”, gdyby okazało się, że jest często używany.
 Inne systemy mogą oferować użytkownikowi sugestie, jeśli zauważą, że czynność jest wykonywana często.
 Pokrewne podejście oferuje ostatnie wybory z menu u góry listy opcji.
 
@@ -506,12 +506,12 @@ Oprogramowanie może zawierać wiele funkcji, a jeśli wszystkie są widoczne w 
 Piloty do telewizora często stanowią świetny przykład skomplikowanego interfejsu.
 Jednym z powodów, dla których ma tak wiele przycisków, jest to, że może sprawić, że urządzenie będzie wyglądało imponująco w sklepie, ale gdy będziesz go używać w domu, wiele przycisków staje się zbędnych lub mylących.
 {image filename="remote-complex.jpg" alt="Złożony pilot TV" wrap="left"}
-Pokazany tutaj pilot zdalnego sterowania ma kilka przycisków, które mogą potencjalnie zrobić to samo: "Direct Navigator", "Guide", "Function Menu", "Status" i "Option" dają dostęp do różnych funkcji, ale trudno przewidzieć, które jest która.
+Pokazany tutaj pilot zdalnego sterowania ma kilka przycisków, które mogą potencjalnie zrobić to samo: „Direct Navigator”, „Guide”, „Function Menu”, „Status” i „Option” dają dostęp do różnych funkcji, ale trudno przewidzieć, które jest która.
 Ten pilot ma w sumie około 55 przycisków!
 
 {image filename="remote-simple.jpg" alt="Prosty pilot." wrap="left"}
 Natomiast pilot Apple ma bardzo mało przycisków i jest dobrym przykładem minimalistycznego interfejsu.
-Jest tylko jedno "Menu" do wyboru, więc jest dość oczywiste, co zrobić, aby wybrać potrzebne ustawienia.
+Jest tylko jedno „Menu” do wyboru, więc jest dość oczywiste, co zrobić, aby wybrać potrzebne ustawienia.
 Oczywiście, prosty pilot polega na wyświetlaniu menu na ekranie, a te mają potencjał, aby uczynić rzeczy bardziej skomplikowanymi.
 
 {image filename="remote-adapted.jpg" alt="Dostosowany pilot TV." wrap="left"}
@@ -522,10 +522,10 @@ Niektóre piloty starają się oferować najlepsze z obu światów, mając mał�
 
 
 {panel type="ciekawostka" summary="Przerażające interfejsy"}
-Następująca witryna zidentyfikowała niektóre z "najbardziej przerażających" interfejsów, z których niektóre są świetnymi przykładami  *nie* posiadania minimalistycznego wzornictwa:[OK/Anuluj najbardziej przerażające interfejsy](http://okcancel.com/archives/article/2005/11/the-scariest-interface-part-ii.html).
+Następująca witryna zidentyfikowała niektóre z „najbardziej przerażających” interfejsów, z których niektóre są świetnymi przykładami  *nie* posiadania minimalistycznego wzornictwa:[OK/Anuluj najbardziej przerażające interfejsy](http://okcancel.com/archives/article/2005/11/the-scariest-interface-part-ii.html).
 
 Rysownik [Roz Chast](http://rozchast.com/) ilustruje, jak przerażający może być pilot w jego kreskówkach
-["Jak babcia widzi pilota"](http://www.art.com/products/p15063313199-sa-i6845922/roz-chast-how-grandma-sees-the-remote-new-yorker-cartoon.htm).
+[„Jak babcia widzi pilota”](http://www.art.com/products/p15063313199-sa-i6845922/roz-chast-how-grandma-sees-the-remote-new-yorker-cartoon.htm).
 {panel end}
 
 
@@ -549,7 +549,7 @@ Wariant nieprzydatnych komunikatów o błędach to taki, który daje dwie altern
 Bardziej poprawny komunikat pozwoliłby użytkownikowi na ustalenie, który z nich jest problemem.
 
 Pozytywny przykład można znaleźć w niektórych budzikach, takich jak następujący, na smartfonie z systemem Android.
-Na przykład tutaj czas alarmu jest pokazany na "9:00".
+Na przykład tutaj czas alarmu jest pokazany na „9:00”.
 W kraju, który korzysta z 12-godzinnego czasu, użytkownik może pomylić to z 21:00, a alarm włączy się w niewłaściwym czasie.
 {image filename="android-alarm-9am.png" alt="Alarm w Androidzie ustawiony na 9:00."}
 
@@ -562,7 +562,7 @@ Interfejs daje jednak możliwość jego zauważenia, ponieważ wyświetlacz wska
 Nawet jeśli jest lepiej, jeśli system może być używany bez dokumentacji, może być konieczne dostarczenie pomocy i dokumentacji. Wszelkie takie informacje powinny być łatwe do wyszukania, skoncentrowane na tym co użytkownik ma do zrobienia, wymieniać konkretne kroki do wykonania i nie być zbyt obszerne. Poniższa interaktywne narzędzie ilustruje sytuację, na którą mogłeś się przedtem natknąć!
 {interactive name="no-help" type="in-page"}
 
-Często pomoc jest refleksją po, i zazwyczaj koncentruje się na funkcji (na przykład na katalogu pozycji menu), a nie skupia się na zadaniu (seria działań potrzebnych do wykonania typowych zadań, która jest bardziej przydatna dla użytkownika). Gdy użytkownik potrzebuje pomocy, zwykle ma do wykonania zadanie (takie jak przesłanie zdjęć z aparatu), a dobra dokumentacja powinna wyjaśniać, jak wykonywać typowe zadania, zamiast wyjaśniać każdą funkcję (np. "Ustawienie trybu aparatu na USB" ).
+Często pomoc jest refleksją po, i zazwyczaj koncentruje się na funkcji (na przykład na katalogu pozycji menu), a nie skupia się na zadaniu (seria działań potrzebnych do wykonania typowych zadań, która jest bardziej przydatna dla użytkownika). Gdy użytkownik potrzebuje pomocy, zwykle ma do wykonania zadanie (takie jak przesłanie zdjęć z aparatu), a dobra dokumentacja powinna wyjaśniać, jak wykonywać typowe zadania, zamiast wyjaśniać każdą funkcję (np. „Ustawienie trybu aparatu na USB”).
 
 
 ### Aby dowiedzieć się więcej o heurystyce
@@ -591,11 +591,11 @@ oraz wiele innych praw, obserwacji i wytycznych dotyczących projektowania inter
 
 ### Do dalszej lektury
 
-- Książka "Projektowanie z myślą o umyśle" (ang. "Designing with the mind in mind") Jeffa Johnsona zapewnia doskonały podkład dla wielu zagadnień omawianych w tym rozdziale
+- Książka „Projektowanie z myślą o umyśle” (ang. „Designing with the mind in mind”) Jeffa Johnsona zapewnia doskonały podkład dla wielu zagadnień omawianych w tym rozdziale
 
 - [Strona cs4fn ma wiele artykułów i ćwiczeń o interakcji człowiek - komputer](http://www.cs4fn.org/fundamentals/hci.php), takich jak [problemy związane z raportowaniem problemamów z interfejsem](http://www.cs4fn.org/chi-med/reportingincidents.php), [problemy kulturowe w projektowaniu interfejsów](http://www.cs4fn.org/usability/tzeltal.php), i [znaczenie Sushi](http://www.cs4fn.org/usability/importanceofsushi.php).
 
-- Klasyczną książką o użyteczności jest "Psychologia rzeczy codziennych" (ang. "The psychology of everyday things") (później nazywana "Projekt codziennych rzeczy" (ang. "The design of everyday things")) Dona Normana. Chodzi o przedmioty codziennego użytku, takie jak drzwi i telefony, i została to napisane jakiś czas temu, ale zawiera wiele prowokujących i często humorystycznych przykładów.
+- Klasyczną książką o użyteczności jest „Psychologia rzeczy codziennych” (ang. „The psychology of everyday things”) (później nazywana „Projekt codziennych rzeczy” (ang. „The design of everyday things”)) Dona Normana. Chodzi o przedmioty codziennego użytku, takie jak drzwi i telefony, i została to napisane jakiś czas temu, ale zawiera wiele prowokujących i często humorystycznych przykładów.
 
 ### Użyteczne linki
 
