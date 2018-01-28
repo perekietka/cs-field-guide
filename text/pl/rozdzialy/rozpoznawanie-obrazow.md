@@ -59,9 +59,9 @@ Więcej na ten temat (w języku angielskim) można przeczytać tutaj: [Cambridge
 
 ## Szum
 
-Użytkownicy aparatów cyfrowych muszą mieć świadomość istnienia problemu, jakim jest *szum*. Mówi się o nim wówczas, gdy pojedyncze piksele rejestrowane są jako jaśniejsze lub ciemniejsze niż być powinny. Zjawisko jest skutkiem interfrencji (nakładania się) w układach elektronicznych aparatu. Jest to większy problem, gdy poziomy światła są niskie, a aparat próbuje zwiększyć czas ekspozycji obrazu (naświetlania), aby można było zobaczyć więcej. Używa się wtedy ustawień ASA/ISO celem przechwycenia takiej ilości promieni światła, ile to tylko możliwe. Receptory są wówczas bardzo wrażliwe na światło, co wiąże się z ryzykiem interferencji i obraz ma efekt "ziarnistości". 
+Użytkownicy aparatów cyfrowych muszą mieć świadomość istnienia problemu, jakim jest *szum*. Mówi się o nim wówczas, gdy pojedyncze piksele rejestrowane są jako jaśniejsze lub ciemniejsze niż być powinny. Zjawisko jest skutkiem interfrencji (nakładania się) w układach elektronicznych aparatu. Jest to większy problem, gdy poziomy światła są niskie, a aparat próbuje zwiększyć czas ekspozycji obrazu (naświetlania), aby można było zobaczyć więcej. Używa się wtedy ustawień ASA/ISO celem przechwycenia takiej ilości promieni światła, ile to tylko możliwe. Receptory są wówczas bardzo wrażliwe na światło, co wiąże się z ryzykiem interferencji i obraz ma efekt „ziarnistości”. 
 
-Efekt szumu jest widoczny głównie jako losowe (przypadkowe) zmiany pikseli. W przykładzie poniżej widzimy szum typu "sól i pieprz".
+Efekt szumu jest widoczny głównie jako losowe (przypadkowe) zmiany pikseli. W przykładzie poniżej widzimy szum typu „sól i pieprz”.
 
 {image filename="banana-with-salt-and-pepper-noise.jpg" alt="Obrazek banana z szumem typu sól i pieprz"}
 
