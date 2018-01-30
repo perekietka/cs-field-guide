@@ -10,7 +10,7 @@ W tym rozdziale staraliśmy się uchwycić to, co naprawdę dzieje się w branż
 
 {video url="https://www.youtube.com/embed/ZNMbEbz2dys?rel=0"}
 
-## ??What's the big picture?
+## Z lotu ptaka
 
 Błędy w oprogramowaniu zdarzały się zawsze. Czasami jest to mały błąd, który sprawia, że program jest trudny w użyciu; innym razem błąd może spowodować awarię całego komputera. Niektóre błędy w oprogramowaniu są bardziej spektakularne niż inne.
 
@@ -20,7 +20,7 @@ W 1996 roku rakieta ARIANE 5 Europejskiej Agencji Kosmicznej została wysłana w
 
 {image filename="ariane-rocket-cartoon.png" alt="Kreskówka o Ariane"}
 
-W skrajnych przypadkach błędy oprogramowania mogą stanowić zagrożenie dla życia. Taki przypadek miał miejsce w latach 80., gdy [urządzenie do radioterapii] (https://en.wikipedia.org/wiki/Therac) spowodowało śmierć 3 pacjentów, dając 100-krotność zamierzonej dawki promieniowania. W 1979 r. Komputer armii amerykańskiej prawie rozpoczął wojnę nuklearną, błędnie interpretując test pocisku przez Związek Radziecki jako atak! (Jeśli jesteś zainteresowany innymi błędami oprogramowania, [CS4FN] (http://www.cs4fn.org/softwareengineering/backtodrawingboard.php) wymienia najbardziej spektakularne!)
+W skrajnych przypadkach błędy oprogramowania mogą stanowić zagrożenie dla życia. Taki przypadek miał miejsce w latach 80., gdy [urządzenie do radioterapii](https://en.wikipedia.org/wiki/Therac) spowodowało śmierć 3 pacjentów, dając 100-krotność zamierzonej dawki promieniowania. W 1979 r. Komputer armii amerykańskiej prawie rozpoczął wojnę nuklearną, błędnie interpretując test pocisku przez Związek Radziecki jako atak! (Jeśli jesteś zainteresowany innymi błędami oprogramowania, [CS4FN](http://www.cs4fn.org/softwareengineering/backtodrawingboard.php) wymienia najbardziej spektakularne!)
 
 Dzisiejsze społeczeństwo jest tak uzależnione od oprogramowania, że nie możemy sobie nawet wyobrazić życia bez niego. Pod wieloma względami programy ułatwiły nam życie: piszemy e-maile, rozmawiamy z przyjaciółmi na Facebooku, gramy w gry komputerowe i szukamy informacji w Google. Oprogramowanie stało się niewidoczne, często nie wiemy, że z niego korzystamy. Mamy z nim do czynienia w samochodach, sygnalizacji świetlnej, telewizorach, pralkach, japońskich toaletach i aparatach słuchowych. Przyzwyczailiśmy się oprogramowania, oczekujemy, że będzie działało przez cały czas!
 
@@ -54,10 +54,10 @@ W tym rozdziale przyjrzymy się podstawom inżynierii oprogramowania. Wprowadzon
 {panel type="curiosity" summary="Więcej informacji o błędach w oprogramowaniu"}
 O ile każdy chce aby jego projekt się powiódł, wiele można się nauczyć od błędów! Oto niektóre strony, które dostarczają dalszych materiałów na ten temat.
 
-- [??Back to the drawing board - CS4FN](http://www.cs4fn.org/softwareengineering/backtodrawingboard.php)
-- [Why software fails - IEEE](http://spectrum.ieee.org/computing/software/why-software-fails)
-- [Learning from software failure - IEEE](http://spectrum.ieee.org/computing/software/learning-from-software-failure)
-- [Engineering Disasters 13: Software Flaws](http://youtu.be/EMVBLg2MrLs) is an excerpt from Engineering Disaster Episode 13 explaining software flaws in Ariane 5 and Patriot Missiles
+- [Z powrotem do tablicy projektowej - CS4FN](http://www.cs4fn.org/softwareengineering/backtodrawingboard.php)
+- [Dlaczego oprogramowanie zawodzie - IEEE](http://spectrum.ieee.org/computing/software/why-software-fails)
+- [Uczenie się na błędacj - IEEE](http://spectrum.ieee.org/computing/software/learning-from-software-failure)
+- [Katastrofy inżynieryjne 13: Błędy w oprogramowaniu](http://youtu.be/EMVBLg2MrLs) jest częścią odcinka 13 cyklu Katastrofy inżynieryjne tłumaczący błędy w oprogramowaniu rakiety Ariane 5 i pocisków Patriot
 {panel end}
 
 ## Analiza: Co budujemy?
