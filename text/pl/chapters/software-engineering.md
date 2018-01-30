@@ -423,75 +423,75 @@ Nie będziesz tego potrzebował!
 Programowanie zwinne bardzo poważnie traktują testowanie. Zwykle polega ono na wielu zautomatyzowanych testach jednostkowych, które są uruchamiane co najmniej raz dziennie. W ten sposób, jeśli zostanie wprowadzona zmiana (co się często zdarza), możemy łatwo sprawdzić, czy ta zmiana spowodowała nieoczekiwany błąd.
 
 
-### Refactoring
+### Refaktoryzacja
 
-There are many different ways to design and program a system. YAGNI tells you to start by doing the simplest thing that’s possible. As the project develops, you might have to change the original, simple design. This is called *refactoring*.
+Istnieje wiele różnych sposobów projektowania i programowania systemu informatycznego. YAGNI zaleca zacząć od najprostszej możliwej rzeczy. Wraz z rozwojem projektu może zajść potrzeba zmiany pierwotnego, prostego projektu. Zmianę tę nazywamy *refaktoryzacją*.
 
-Refactoring means to change your design or implementation without changing the program’s behaviour. After a refactoring, the program will work exactly the same, but will be better structured in some way. Unit tests really come in handy here because you can use them to check that the code works the same way before and after the refactoring.
+Refaktoryzacja oznacza zmianę projektu lub implementacji bez zmiany zachowania programu. Po refaktoryzacji program będzie działał dokładnie tak samo, ale będzie w pewien sposób lepiej zorganizowany. Testy jednostkowe naprawdę przydadzą się w tej sytuacji, ponieważ można ich użyć do sprawdzenia, czy kod działa w ten sam sposób jak przed refaktoryzacją.
 
-Refactoring only works on software because it is “soft” and flexible. The same concept does not really work for physical engineering products. Imagine that when building a bridge, for example, you started off by doing the simplest possible thing (putting a plank over the river) and then continually refactored the bridge to get the final product.
-
-
-### Test-driven development
-
-In standard software development, we first write some code and then test it. This makes sense: we need the code before we can test it, right? Test-driven development tells you to do the exact opposite!
-
-Before you write a piece of code, you should write a test for the code that you are about to write. This forces you to think about exactly what you’re trying to do and what special cases there are. Of course, if you try to run the test, it will fail (since the functionality it is testing does not yet exist). When you have a failing test, you can then write code to make the test pass.
-
-### Programmer welfare
-
-Software developers should not work more than 40 hours per week. If they do overtime one week they should not do more overtime the following week. This helps keep software developers happy, productive, creative and energetic, and makes sure they don’t get overworked.
+Refaktoryzacja działa tylko w przypadku oprogramowania, ponieważ programowanie jest elastyczne. Ta sama koncepcja nie zadziała w przypadku produktów inżynierii fizycznej. Wyobraź sobie, że budując most, na przykład, zacząłeś od zrobienia najprostszej rzeczy (położyłeś deskę nad rzeką), a następnie zacząłeś refaktoryzować most, aby  w końcu uzyskać solidny most.
 
 
-### Customer involvement
+### Rozwój oparty na testach
 
-A customer representative should be part of the developing team (ideally spending full-time with the team), on hand to answer questions or give feedback at all times. This is important to be able to quickly change the requirements or direction of the project. If you have to wait 2 weeks until you can get feedback from your customer, you will not be able to adapt to change very quickly!
+W standardowym rozwoju oprogramowania najpierw piszemy kod, a następnie testujemy. Ma to sens: potrzebujemy kodu, zanim będziemy mogli go przetestować. Rozwój oparty na testach (ang. test-driven development - TDD) zaleca, aby postępować dokładnie odwrotnie!
 
-Although having a customer on the development team is a great idea in theory, it is quite hard to achieve in practice. Most customers simply want to tell you their requirements, pay you and then get the software delivered 5 months later. It’s rare to find a customer who is willing and has the time to be more involved in the project. Sometimes companies will hire an expert to be part of the team; for example, a company working on health software might have a doctor on the team, or if they are working on educational software, they may hire a teacher. This sounds expensive, but since failed software can cost millions of dollars, paying the salary of an expert is a relatively small part of the overall cost, and much more likely to lead to success.
+Zanim napiszesz fragment kodu, powinieneś napisać test kodu, który zamierzasz napisać. To zmusza do myślenia o tym, co dokładnie próbujesz osiągnąć i jakie są specjalne przypadki. Oczywiście, jeśli spróbujesz uruchomić test, to się nie powiedzie (ponieważ funkcjonalność, którą testuje jeszcze nie istnieje). Aby naprawić wyniki testów należy po prostu napisać kod poprawnie implementujący funkcjonalność.
+
+### Dobrostan programisty
+
+Twórcy oprogramowania nie powinni pracować dłużej niż 40 godzin tygodniowo. Jeśli pracują w trybie nadgodzin w jednym tygodniu, to nie powinni tego robić w następnym. Dzięki temu możemy utrzymać programistów w stanie zadowolenia, mogą być produktywni, kreatywni i energiczni oraz mamy gwarancję, że nie są przepracowani.
+
+
+### Zaangażowanie klienta
+
+Przedstawiciel klienta powinien być członkiem zespołu rozwijającego oprogramowanie (w najlepszym przypadku powinien spędzać cały czas z zespołem), powinien być pod ręką, aby móc odpowiadać na pytania i wyrażać opinię w każdej chwili. Jest to istotne, gdyż pozwala szybko zmieniać wymagania lub kierunek projektu. Jeśli musisz czekać 2 tygodnie, zanim uzyskasz informację zwrotną od klienta, nie będziesz w stanie szybko dostosować się do zmian!
+
+Chociaż posiadanie przedstawiciela klienta w zespole programistów jest świetnym pomysłem, w praktyce jest to dość trudne do osiągnięcia. Większość klientów po prostu chce przekazać wymaganie, zapłacić, a następnie odebrać oprogramowanie w ustalonym terminie. Rzadko zdarza się znaleźć klienta, który jest chętny i ma czas na większe zaangażowanie w projekt. Czasami firmy zatrudniają eksperta, który staje się częścią zespołu; na przykład firma zajmująca się oprogramowaniem dla opieki zdrowotnej może mieć w zespole lekarza lub jeśli pracuje nad oprogramowaniem edukacyjnym, może zatrudnić nauczyciela. Wydaje się to kosztownym rozwiązanie, ale ponieważ nieudane oprogramowanie może kosztować miliony dolarów, wypłacanie wynagrodzenia ekspertowi stanowi stosunkowo niewielką część całkowitych kosztów, a znacznie zwiększa prawdopodobieństwo sukcesu.
 
 {panel type="curiosity" summary="Christopher Alexander"}
-So far, we’ve mainly compared software development to engineering and building bridges, but you might have noticed that it’s also pretty similar to architecture. In fact, software development (in particular agile software development) has borrowed a lot of concepts from architecture. An architect called Christopher Alexander, for example, suggested involving customers in the design process. Sound familiar? Several other suggestions from Christopher Alexander were also picked up by the agile development community and as a result his thinking about architecture has shaped how we think about software development. This is despite the fact that Christopher Alexander knew nothing about software development. He was apparently very surprised when he found out how well known he is among software developers!
+Do tej pory porównywaliśmy rozwój oprogramowania głównie do inżynierii i budowania mostów, ale mogłeś zauważyć, że jest również bardzo podobny do architektury. W rzeczywistości rozwój oprogramowania (w szczególności zwinne tworzenie oprogramowania) zapożyczyło wiele koncepcji z architektury. Architekt Christopher Alexander zasugerował zaangażowanie klientów w proces projektowania. Brzmi znajomo? Kilka innych sugestii od Christophera Alexandra zostało również przejętych przez społeczność zwolenników zwinnego programowania. W rezultacie jego myślenie o architekturze ukształtowało nasz sposób myślenia o rozwoju oprogramowania. Dzieje się tak pomimo faktu, że Christopher Alexander nie wiedział nic o programowaniu. Okazało, że był bardzo zaskoczony, gdy dowiedział się, że jest dobrze znany wśród programistów!
 {panel end}
 
-### Courage
+### Odwaga
 
-“Courage” might seem like an odd concept in the context of software development. In agile processes, things change all the time and therefore programmers need to have the courage to make changes to the code as needed, fix the problems that need to be fixed, correct the design where needed, throw away code that doesn’t work, and so on. This might not seem like a big deal, but it can actually be quite scary to change code, particularly if the code is complicated or has been written by a different person. Unit tests really help by giving you courage: you’ll feel more confident to change the code if you have tests that you can run to check your work later.
+"Odwaga" może wydawać się dziwny pojęciem w kontekście rozwoju oprogramowania. W procesach zwinnych rzeczy zmieniają się cały czas i dlatego programiści muszą mieć odwagę, aby wprowadzić zmiany w kodzie, naprawić problemy, poprawić projekt, wyrzucić kod, który nie działa, i tak dalej. To może nie wydawać się wielkim wyzwaniem, ale zmiana kodu może być dość przerażająca, szczególnie jeśli kod jest skomplikowany lub został napisany przez inną osobę. Testy jednostkowe naprawdę pomagają, dając odwagę: będziesz mieć większą pewność, że zmieniając kod, nie popsujesz go.
 
 
-{panel type="project" summary="Software processes"}
-This project will provide insight into a real software engineering process, but you'll need to find a software engineer who is prepared to be interviewed about their work. It will be ideal if the person works in a medium to large size company, and they need to be part of a software engineering team (i.e. not a lone programmer).
+{panel type="project" summary="Procesy tworzenia oprogramowania"}
+To zadanie zapewni wgląd w prawdziwy proces inżynierii oprogramowania, ale musisz znaleźć inżyniera oprogramowania, który udzieli odpowiedzi na pytania dotyczące jego pracy. Najlepiej jeśli osoba ta pracuje w średniej lub dużej firmie, w której jest częścią zespołu inżynierii oprogramowania (tzn. nie jest samotnym programistą).
 
-The project revolves around interviewing the person about the process they went through for some software development they did recently. They may be reluctant to talk about company processes, in which case it may help to assure them that you will keep their information confidential (your project should only be viewed by you and those involved in supervising and marking it; you should state its confidential nature clearly at the start so that it doesn't get published later).
+Zadanie polega na przeprowadzeniu wywiadu z osobą, która doświadczenie w rozwijaniu oprogramowania. Pamiętaj, że takie osoby mogą niechętnie rozmawiać o procesach firmy i, że należy zapewnić im poufność (wyniki zadania powinny być dostępne tylko uczestnikom oraz osobom zaangażowanym w jego nadzorowanie, powinieneś o tym poinformować wyraźnie na samym początku, aby zapobiec niepożądanym publikacjom).
 
-You need to do substantial preparation for the interview. Find out about the kind of software that the company makes. Read up about software engineering (in this chapter) so that you know the main terminology and techniques.
+Musisz przeprowadzić dokładne przygotowania do tej rozmowy. Dowiedz się o oprogramowaniu, które firma zaproszonego programisty wytwarza. Poczytaj o inżynierii oprogramowania (w tym rozdziale), aby poznać główną terminologię i techniki.
 
-Now prepare a list of questions for the interviewee.
-These should find out what kind of software development processes they use, what aspects your interviewee works on, and what the good and bad points are of the process, asking for examples to illustrate this.
+Przygotuj listę pytań dla gościa.
+Powinny one dotyczyć tego, jakiego rodzaju procesy rozwoju oprogramowania są używane przez jego zespół, nad jakimi aspektami pracuje rozmówca oraz jakie są dobre i złe strony stosowanego procesu. Przy okazji proś dyskutanta o przykłady.
 
-You should take extensive notes during the interview (and record it if the person doesn't mind).
+Powinieneś sporządzać obszerne notatki podczas wywiadu (a nawet nagrywać, jeśli dana osoba nie ma nic przeciwko).
 
-You then need to write up what you have learned, describing the process, discussing the techniques used, illustrating it with examples, and evaluating how well the process works.
+Następnie powinieneś napisać, czego się nauczyłeś, opisać proces, omówić stosowane techniki, zilustrować je przykładami i ocenić, jak dobrze działa dany proces.
 {panel end}
 
 ## Podsumownie
 
-In this chapter, we’ve tried to give you an introduction to the challenges of creating software and some techniques that software engineers use to overcome them. We’ve really only scratched the surface of software analysis, design, testing and software processes; there are entire books about each of these areas!
+W tym rozdziale staraliśmy się przedstawić wprowadzenie do wyzwań związanych z tworzeniem oprogramowania i technikami używanymi przez programistów do ich przezwyciężenia. Naprawdę tylko dotknęliśmy zagadnień analizy oprogramowania, projektowania, testowania i procesów oprogramowania; istnieją całe książki poświęcone tym tematom!
 
-It can be difficult to understand the importance of some of the problems and techniques we have described here if you have never worked on a larger software project yourself. Some may seem blindingly obvious to you, others may seem irrelevant. When you work on your first large project, come back to this chapter and hopefully you’ll recognise some of the problems we have described here!
+Zrozumienie znaczenia niektórych problemów i technik, które tutaj opisaliśmy, może być trudne. Szczególnie jeśli sam nigdy nie pracowałeś nad większym projektem informatycznym. Niektóre mogą wydawać się dla ciebie zadziwiająco oczywiste, inne mogą wydawać się nieistotne. Kiedy będziesz pracował nad swoim pierwszym dużym projektem, wróć do tego rozdziału i, miejmy nadzieję, rozpoznasz niektóre przedstawione tu problemy!
 
 ## Dalsza lektura
 
 ### Ciekawe linki
 - [Wikipedia - Inżynieria oprogramowania](https://en.wikipedia.org/wiki/Software_engineering)
 - [CS4FN - Inżynieria oprogramowania](http://www.cs4fn.org/fundamentals/softwareeng.php)
-- [Teach ICT - Systems Life Cycle](http://www.teach-ict.com/as_a2_ict_new/ocr/A2_G063/331_systems_cycle/slc_stages/home_slc.html)
-- [Wikipedia - Software crisis](https://en.wikipedia.org/wiki/Software_crisis)
-- [IEEE - Why software fails](http://spectrum.ieee.org/computing/software/why-software-fails)
-- [Wikipedia - Software design](https://en.wikipedia.org/wiki/Software_design)
-- [Wikipedia - Abstraction](https://en.wikipedia.org/wiki/Abstraction_(computer_science\))
-- [Wikipedia - Software testing](https://en.wikipedia.org/wiki/Software_testing)
-- [Wikipedia - Software development process](https://en.wikipedia.org/wiki/Software_development_process)
-- [Wikipedia - Waterfall model](https://en.wikipedia.org/wiki/Waterfall_model)
-- [Wikipedia - Iterative and incremental development](https://en.wikipedia.org/wiki/Iterative_and_incremental_development)
-- [Wikipedia - Agile software development](https://en.wikipedia.org/wiki/Agile_software_development)
+- [Nauka ICT - Cykl życia systemów](http://www.teach-ict.com/as_a2_ict_new/ocr/A2_G063/331_systems_cycle/slc_stages/home_slc.html)
+- [Wikipedia - Kryszys oprogramowania](https://en.wikipedia.org/wiki/Software_crisis)
+- [IEEE - Dlaczego oprogramowanie zawodzi](http://spectrum.ieee.org/computing/software/why-software-fails)
+- [Wikipedia - Projektowanie oprogramowania](https://en.wikipedia.org/wiki/Software_design)
+- [Wikipedia - Abstrakcja](https://en.wikipedia.org/wiki/Abstraction_(computer_science\))
+- [Wikipedia - Testowanie oprogramowania](https://en.wikipedia.org/wiki/Software_testing)
+- [Wikipedia - Procesy rozwoju oprogramowania](https://en.wikipedia.org/wiki/Software_development_process)
+- [Wikipedia - Model kaskadowy](https://en.wikipedia.org/wiki/Waterfall_model)
+- [Wikipedia - Model przyrostowy](https://en.wikipedia.org/wiki/Iterative_and_incremental_development)
+- [Wikipedia - Programowanie zwinne](https://en.wikipedia.org/wiki/Agile_software_development)
 - [Wikipedia - Test driven development](https://en.wikipedia.org/wiki/Test-driven_development)
