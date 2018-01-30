@@ -376,51 +376,51 @@ Na koniec *przetestuj* język, używając innego ucznia. Nie mów im, dokąd zmi
 Zwróć uwagę, ile czasu zabiera ci każda z różnych faz projektu. Kiedy skończysz, porozmawiaj o tym, ile czasu poświęciłeś danemu etapowi i porównaj z innymi uczniami. Która faza była najtrudniejsza? Która trwała najdłużej? Czy uważasz, że powinieneś mieć więcej czasu na niektóre fazy? Jakie problemy napotkaliście? Co zrobiłbyś inaczej następnym razem?
 {panel end}
 
-{panel type="project" summary="Block Building (Precise Communication)"}
-Communicating clearly with other software engineers and customers is essential for software engineers. In this activity, you get to practice communicating as precisely as possible!
+{panel type="project" summary="Budowanie z klocków (precyzyjna komunikacja)"}
+Dobra komunikacja z innymi informatykami i klientami jest niezbędna dla programistów. W tym zadaniu możesz ćwiczyć precyzyjną komunikację!
 
-Divide up into pairs, with one *creator* and one *builder* in each pair. Each person needs a set of at least 10 coloured building blocks (e.g. lego blocks). Make sure that each pair has a matching set of blocks or this activity won’t work!
+Dobierz uczniów w pary, z jednym *twórcą* i jednym *budowniczym*. Każda osoba potrzebuje zestawu co najmniej 10 kolorowych klocków (np. klocków lego). Upewnij się, że każda para ma taki sam zestaw bloków, inaczej to ćwiczenie nie zadziała!
 
-The two people in each pair should not be able to see each other but need to be able to hear each other to communicate. Put up a screen between the people in each pair or make them face in opposite directions. Now, the creator builds something with their blocks. The more creative you are the more interesting this activity will be!
+Osoby w parze nie powinny widzieć się nawzajem, ale muszą być w stanie słyszeć się, aby się komunikować. Umieść przegrodę pomiędzy osobami w każdej parze lub każ odwrócić się w przeciwne strony. Następnie twórca ma za zadanie zbudować coś z klocków. Im bardziej kreatywny będzie, tym bardziej interesujące będzie to zadanie!
 
-When the creator has finished building, it’s the builder's turn. His or her aim is to build an exact replica of the creator's structure (but obviously without knowing what it looks like). The creator should describe exactly what they need to do with the blocks. For example, the creator could say “Put the small red block on the big blue block” or “Stand two long blue blocks up vertically with a one block spacing between them, and then balance a red block on top of them”. But the creator should not describe the building as a whole (“Make a doorframe.”).
+Kiedy twórca zakończy budowę, przychodzi kolej budowniczego. Jego celem jest zbudowanie dokładnej repliki budowli twórcy (ale oczywiście bez naocznej znajomości wyglądu). Twórca powinien dokładnie opisać, co należy zrobić z klockami. Na przykład twórca może powiedzieć "Umieść mały czerwony klocek na dużym niebieskim klocku" lub "Ustaw dwa długie niebieskie klocki pionowo w odległości jednego klocka między nimi, a następnie umieść czerwony klocek na nich". Twórca nie powinien opisywać budynku jako całości ("Utwórz framugę").
 
-When the builder thinks they are done, compare what you built! How precise was your communication? Which parts were difficult to describe for the creator / unclear for the builder? Switch roles so that you get to experience both sides!
+Kiedy budowniczy dochodzi do wniosku, że kopia jest gotowa należy porównać obie konstrukcje! Jak precyzyjna była komunikacja? Które części były trudne do opisania dla twórcy lub niejasne dla budowniczego? Zmień role, aby uczestnicy mogli poznać obie strony!
 {panel end}
 
-## Agile software development
+## Programowanie zwinne
 
-*Agile* software development has become popular over the last 10 years; two of the most famous agile processes are called [XP](https://en.wikipedia.org/wiki/Extreme_programming) and [Scrum](https://en.wikipedia.org/wiki/Scrum_(development\)). Agile software development is all about being extremely flexible and adaptive to change. Most other software processes try to manage and control changes to requirements during the process; agile processes accept and expect change. The following xkcd comic illustrates part of the apparent dilemma that agile processes aim to address. With Agile, we can develop software quickly, correctly, and be adaptive to change.
+*Programowanie zwinne* stało się popularne w ciągu ostatnich 10 lat; dwa z najbardziej znane procesy zwinne to [XP] (https://en.wikipedia.org/wiki/Extreme_programming) i [Scrum] (https://en.wikipedia.org/wiki/Scrum_(development\)) . Zwinne tworzenie oprogramowania jest niezwykle elastyczne i łatwo dostosowuje się do zmian. Większość innych procesów tworzenia oprogramowania stara się zarządzać i kontrolować zmiany podczas proces; zwinne procesy akceptują i oczekują zmian. Poniższy komiks xkcd ilustruje część pozornego dylematu, z którym muszą się zmierzyć procesy zwinne. Dzięki metodologii zwinnej możemy szybko i poprawnie tworzyć oprogramowanie i dostosowywać je do zmian.
 
-{image filename="xkcd-good-code.png" hover-text="You can either hang out in the Android Loop or the HURD loop." alt="A xkcd comic on good code" source="https://xkcd.com/844/"}
+{image filename="xkcd-good-code.png" hover-text="??(nie rozumiem)You can either hang out in the Android Loop or the HURD loop." alt="Komiks xkcd poświęcony dobremu kodowaniu" source="https://xkcd.com/844/"}
 
-Agile processes work similarly to iterative processes in that they do a number of iterations of analysis, design, implementation and testing. However, these iterations are extremely short, each usually lasting only about 2 weeks.
+Procesy zwinne działają podobnie do procesów iteracyjnych, ponieważ wykonują wiele iteracji analizy, projektowania, implementacji i testowania. Jednak te powtórzenia są niezwykle krótkie, gdyż trwają zwykle tylko około 2 tygodni.
 
-In many other processes, documentation is important. We document the requirements so that we can look back at them; we document our design so that we can refer back to it when we program the system. Agile software processes expect things to change all the time. Therefore, they do very little planning and documentation because documenting things that will change anyway is a bit of a waste of time.
+W wielu innych procesach ważnym elementem jest dokumentacja. Zawiera ona wymagania ora opis projektu tak, abyśmy mogli się do nich odwoływać, gdy programujemy system. Zwinne procesy programowe zakładają, że rzeczy będą się zmieniać przez cały czas. Dlatego też bardzo mało planują i dokumentują. Wynika to z faktu, że dokumentowanie rzeczy, które i tak ulegną zmianie, jest raczej stratą czasu.
 
-Agile processes include lots of interesting principles that are quite different from standard software development. We look at the most interesting ones here. If you want to find out more, have a look at [Agile Academy on Youtube](https://www.youtube.com/user/AgileAcademyAus) which has lots of videos about interesting agile practices! There’s also [another video here](https://www.youtube.com/watch?v=kqz_jDS0RWY) that explains the differences between agile software development and the waterfall process.
+Zwinne programowanie postuluje wiele interesujących zasad, które odróżniają to podejście od standardowego tworzenia oprogramowania. Poniżej znajduje się ich przegląd. Jeśli chcesz dowiedzieć się więcej, zajrzyj do [Agile Academy na Youtube](https://www.youtube.com/user/AgileAcademyAus), w którym znajdziesz wiele filmów o ciekawych zwinnych praktykach! Jest także [inny film tutaj](https://www.youtube.com/watch?v=kqz_jDS0RWY), który wyjaśnia różnice pomiędzy zwinnym programowaniem a modelem kaskadowym.
 
-Here are some general principles used for agile programming:
+Oto kilka ogólnych zasad stosowanych w programowaniu zwinnym:
 
-### Pair-programming
+### Programowanie w parach
 
-Programming is done in pairs with one person coding while the other person watches and looks for bugs and special cases that the other might have missed. It’s simply about catching small errors before they become bugs. After all, 4 eyes see more than 2.
+Programowanie odbywa się w parach, jedna osoba pisze kod, podczas gdy druga przygląda się, szuka błędów i specjalnych przypadków, które mogły zostać pominięte. Chodzi po prostu o złapanie drobnych błędów, zanim staną się poważnymi błędami. W końcu co dwie pary oczu to nie jedna.
 
-You might think that pair-programming is not very efficient and that it would be more productive to have programmers working separately; that way, they can write more code more quickly, right? Pair-programming is about reducing errors. Testing, finding and fixing bugs is hard; trying not to create them in the first place is easier. As a result, pair-programming has actually been shown to be more efficient than everyone programming by themselves!
+Można by pomyśleć, że programowanie w parze nie jest zbyt wydajne i że bardziej wydajne byłoby programowanie samodzielne; w ten sposób można przecież szybciej pisać kod, nieprawdaż? Celem programowanie w parach jest zmniejszenie liczby błędów. Testowanie, znajdowanie i naprawianie błędów jest trudne; staranie się nie tworzyć ich w pierwszej kolejności jest łatwiejsze. W rezultacie programowanie parowe okazało się wydajniejsze od wszystkich programujących samodzielnie!
 
 
 ### YAGNI
 
-YAGNI stands for “You ain’t gonna need it” and tells developers to keep things simple and only design and implement the things that you know you are really going to need. It can be tempting to think that in the future you might need feature x and so you may as well already create it now. But remember that requirements are likely to change so chances are that you won’t need it after all.
+YAGNI oznacza “Nie będziesz tego potrzebował” (ang. “You ain’t gonna need it”) mówi programistom, aby dbali o prostotę oraz aby projektowali i implementowali rzeczy, które naprawdę są potrzebne. Może wydawać się kuszące, że skoro w przyszłości może się przydać funkcja x, to należy ją niezwłocznie zaimplementować. Pamiętaj, że wymagania ciągle się zmieniają, więc może się okazać, że jednak x nie jest potrzebne.
 
-{image filename="xkcd-the-general-problem.png" hover-text="I find that when someone's taking time to do something right in the present, they're a perfectionist with no ability to prioritize, whereas when someone took time to do something right in the past, they're a master artisan of great foresight." alt="A xkcd comic on the general problem" source="https://xkcd.com/974/"}
+{image filename="xkcd-the-general-problem.png" hover-text="Uważam, że kiedy ktoś poświęca czas na poprawianie czegoś w teraźniejszości, jest perfekcjonistą, który nie ma zdolności ustalania priorytetów, podczas gdy gdy ktoś postarał się zrobić coś porządnie w przeszłości, jest on mistrzowskim rzemieślnikiem o wielkiej zdolności przewidywania." alt="Komiks xkcd na temat  ogólnego rozwiązanie problemu" source="https://xkcd.com/974/"}
 
-You ain’t gonna need it!
+Nie będziesz tego potrzebował!
 
 
-### Constant testing
+### Ciągłe testowanie
 
-Agile processes take testing very seriously. They usually rely on having lots of automated unit tests that are run at least once a day. That way, if a change is made (and this happens often), we can easily check if this change has introduced an unexpected bug.
+Programowanie zwinne bardzo poważnie traktują testowanie. Zwykle polega ono na wielu zautomatyzowanych testach jednostkowych, które są uruchamiane co najmniej raz dziennie. W ten sposób, jeśli zostanie wprowadzona zmiana (co się często zdarza), możemy łatwo sprawdzić, czy ta zmiana spowodowała nieoczekiwany błąd.
 
 
 ### Refactoring
@@ -473,17 +473,17 @@ You should take extensive notes during the interview (and record it if the perso
 You then need to write up what you have learned, describing the process, discussing the techniques used, illustrating it with examples, and evaluating how well the process works.
 {panel end}
 
-## The whole story!
+## Podsumownie
 
 In this chapter, we’ve tried to give you an introduction to the challenges of creating software and some techniques that software engineers use to overcome them. We’ve really only scratched the surface of software analysis, design, testing and software processes; there are entire books about each of these areas!
 
 It can be difficult to understand the importance of some of the problems and techniques we have described here if you have never worked on a larger software project yourself. Some may seem blindingly obvious to you, others may seem irrelevant. When you work on your first large project, come back to this chapter and hopefully you’ll recognise some of the problems we have described here!
 
-## Further reading
+## Dalsza lektura
 
-### Useful Links
-- [Wikipedia - Software engineering](https://en.wikipedia.org/wiki/Software_engineering)
-- [CS4FN - Software engineering](http://www.cs4fn.org/fundamentals/softwareeng.php)
+### Ciekawe linki
+- [Wikipedia - Inżynieria oprogramowania](https://en.wikipedia.org/wiki/Software_engineering)
+- [CS4FN - Inżynieria oprogramowania](http://www.cs4fn.org/fundamentals/softwareeng.php)
 - [Teach ICT - Systems Life Cycle](http://www.teach-ict.com/as_a2_ict_new/ocr/A2_G063/331_systems_cycle/slc_stages/home_slc.html)
 - [Wikipedia - Software crisis](https://en.wikipedia.org/wiki/Software_crisis)
 - [IEEE - Why software fails](http://spectrum.ieee.org/computing/software/why-software-fails)
