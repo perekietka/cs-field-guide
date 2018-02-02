@@ -1,9 +1,9 @@
 # Kodowanie - Kompresja
 
-## ??What's the big picture?
+## Z lotu ptaka
 
 Kompresja danych pozwala zredukować ilość miejsca potrzebną do zapisu plików. Jeżeli możesz zmniejszyć o połowę rozmiar pliku, to oznacza, że możesz przechowywać dwa razy więcej plików przy tych samych kosztach, lub możesz ściągać pliki dwa razy szybciej (płacąc dwa razy mniej za transfer).
-Pomimo tego, iż dyski twarde zwiększają objętość oraz wysoka przepustowość łącz staje się powszechna, to nadal dobrze jest osiągnąć tą samą wartość pracując na mniejszym, skompresowanym pliku.
+Pomimo tego, iż dyski twarde zwiększają objętość oraz wysoka przepustowość łączy staje się powszechna, to nadal dobrze jest osiągnąć tą samą wartość pracując na mniejszym, skompresowanym pliku.
 Dla dużych magazynów danych, takich jakie posiadają Google lub Facebook, zmniejszenie o połowę przestrzeni potrzebnej do zapisu oznacza olbrzymie oszczędności w przestrzeni dyskowej, mocy obliczeniowej, a w konsekwencji  oszczędności w zużyciu energii, chłodzeniu oraz niepożądanym wpływie na środowisko.
 
 Częste formy kompresji będące aktualnie w użyciu to JPEG (dla zdjęć), MP3 (dla plików audio), MPEG (dla wideo w tym DVD), oraz ZIP (dla dowolnych typów danych).
@@ -572,14 +572,14 @@ Pytania typu "jaki jest najwyższy możliwy stopień kompresji" są przedmiotem 
 .. xtcb jargon uncompressed are typically BMP or RAW. TIFF files Tagged Image File Format can contain many formats, including uncompressed, runlength and JPEG.
 {comment end}
 
-## Further reading
+## Dalsza lektura
 
-- "The Data Compression Book" by Mark Nelson and Jean-Loup Gailly is a good overview of this topic
+- „The Data Compression Book” by Mark Nelson and Jean-Loup Gailly is a good overview of this topic
 - A list of books on this topic (and lots of other information about compression) is available from [The Data Compression Site](http://www.data-compression.info/Books/).
 - Gleick's book "The Information" has some background to compression, and coding in general.
 
 
-### Useful Links
+### Ciekawe linki
 
 - Images, run-length-coding [http://csunplugged.org/image-representation](http://csunplugged.org/image-representation) This is also relevant to binary representations in general, although is probably best used in the compression section.
 - There is a detailed section on [JPEG encoding on Wikipedia](https://en.wikipedia.org/wiki/Jpeg).
