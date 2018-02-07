@@ -100,25 +100,25 @@ Sędzia w tej rozmowie musiał być trochę złośliwy oszukując ją i mówiąc
 
 ### Uczące się czatboty
 
-W poprzednich podrozdziałach widzieliśmy przykłady dwóch czatbotów, które mają reguły pomagające określić im odpowiednią rzecz do powiedzenia. Jeden z nich działa w specjalistycznej dziedzinie, symulując terapeutę i nie jest w stanie prowadzić bardzo ogólnej konwersacji. Drugi jest w stanie prowadzić bardziej ogólną rozmowę. Obydwa czatboty mają swoje reguły, które zostały wbudowane w nie przez ich twórców. Te zasady mogą się zmienić tylko, gdy ich twórca o tym zdecyduje i zaktualizuje oprogramowanie czatbota.
+W poprzednich podrozdziałach widzieliśmy przykłady dwóch czatbotów, które mają wbudowane reguły pomagające określić im odpowiednią rzecz do powiedzenia. Jeden z nich działa w specjalistycznej dziedzinie, symulując terapeutę i nie jest w stanie prowadzić bardzo ogólnej konwersacji. Drugi jest w stanie prowadzić bardziej ogólną rozmowę. Obydwa czatboty mają swoje reguły, które zostały wbudowane w nie przez ich twórców. Te zasady mogą się zmienić tylko, gdy ich twórca o tym zdecyduje i zaktualizuje oprogramowanie czatbota.
 
-Istnieją innego rodzaju czatboty, które są w stanie uczyć się zasad od ludzi w czasie konwersacji z człowiekiem. Poprzez analizowanie tego co pisze człowiek, czatbot próbuje nauczyć się jak powinien odpowiadać w różnych sytuacjach. Założeniem jest, że jeśli odpowiada w sposób podobny do człowieka, wtedy może będzie brzmiał jak człowiek. Celem większości tych czatbotów jest prowadzenie ogólnej konwersacji, tzn. nie są one ograniczone do jednej dziedziny, tak jak terapeutka Eliza.
+Istnieją innego rodzaju czatboty, które są w stanie uczyć się tego co należy powiedzieć od ludzi w czasie konwersacji z człowiekiem. Poprzez analizowanie tego co pisze człowiek, czatbot próbuje nauczyć się jak powinien odpowiadać w różnych sytuacjach. Założeniem jest, że jeśli czatbot odpowiada w sposób podobny do człowieka, wtedy może będzie brzmiał jak człowiek. Celem większości tych czatbotów jest prowadzenie ogólnej konwersacji, tzn. nie są one ograniczone do jednej dziedziny, tak jak terapeutka Eliza.
 
 Twórcy uczących się czatbotów przyjęli zasadę, żę jeśli próbujesz symulować ludzką inteligencję, wtedy prawdopodobnie uczenie się od ludzi jest drogą do celu.
 
-{panel type="Ostrzeżenie" summary="Interakcja z czarbotami, które się uczą"}
-Proszę zauważ, że poniższe ćwiczenie wymaga interakcji z jednym z czatbotów, które się uczą. Ponieważ czatbot uczy się od ludzi, wtedy z dość dużym prawdopodobieństwem nauczył się mówić rzeczy, które dla ciebie mogą być bardzo obraźliwe. Podczas gdy staraliśmy się wybrać czatboty, które nie wypowiadają się obraźliwie, nie jest możliwe zagwarantowanie tego, więc bądź dyskretny rozmawiając z nimi; możesz także pominąć ten paragraf i nadal zrozumieć główne założenia tego rozdziału. Ponieważ Eliza i Alice nie uczą się od ludzi, nigdy nie powiedzą obraźliwych rzeczy, dopóki ty nie zrobisz tego pierwszy!
+{panel type="Ostrzeżenie" summary="Interakcja z ucącymi się czatbotami"}
+Proszę, zauważ że poniższe ćwiczenie wymaga interakcji z jednym z uczących się czatbotów. Ponieważ czatbot uczy się od ludzi, wtedy z dość dużym prawdopodobieństwem nauczył się mówić rzeczy, które dla ciebie mogą być bardzo obraźliwe. Staraliśmy się wybrać czatboty, które nie wypowiadają się obraźliwie. Nie możemy jednak zagwarantować tego, więc bądź dyskretny rozmawiając z nimi. Możesz także pominąć ten paragraf i nadal zrozumieć główne założenia tego rozdziału. Ponieważ Eliza i Alice nie uczą się od ludzi, nigdy nie powiedzą obraźliwych rzeczy, dopóki ty nie zrobisz tego pierwszy!
 
-Przypominamy znowu, nie używaj w konwersacji z czatbotami twoich danych personalnych (takich jak imię i nazwisko, datę urodzenia, adres i żadnej innej informacji, której nie chciałbyś nikomu udostępnić). Gdy potrzeba, zmyślaj. Bardzo prawdopodobne, że czatbot, który uczy się od ludzi, przekaże, to co powiedziałeś innym ludziom, żeby brzmieć inteligentnie w stosunku do *nich*.
+Przypominamy znowu, nie używaj w konwersacji z czatbotami twoich danych personalnych (takich jak imię i nazwisko, datę urodzenia, adres i żadnej innej informacji, której nie chciałbyś nikomu udostępnić). Gdy potrzeba, zmyślaj. Bardzo prawdopodobne, że uczący się czatbot wykorzysta to co powiedziałeś w konwersacji z innymi ludźmi. Dzięki temu będzie chciał brzmieć inteligentnie w stosunku do *nich*.
 
-Te ostrzeżenia będą bardziej sensowne, wtedy gdy nauczysz się jak działają czatboty.
+Te ostrzeżenia będą bardziej sensowne, wtedy gdy zrozumiesz jak działają czatboty.
 {panel end}
 
-Przykładem czatbota, który uczy się od ludzi jest Cleverbot.
+Przykładem uczącego sie czatbota jest Cleverbot.
 
 [Kliknij w ten link, aby porozmawiać z Cleverbotem](http://www.cleverbot.com/)
 
-{image filename="cleverbot-chatbot-screenshot.png" alt="Czatbot Cleverbot"}
+{image filename="cleverbot-chatbot-screenshot.png" alt="Cleverbot"}
 
 W przeciwieństwie do Elizy i Alice, których reguły były określone przez programistów, Cleverbot uczy się zasad opierając się na tym co powiedzą ludzie. Na przykład, gdy Cleverbot mówi „cześć” do człowieka, to śledzi wszystkie różne reakcje, które ludzie robią na to stwierdzenie, takie jak „hej”, „hello!”, „siema”, „co tam?” (angielskie „hi”, „hello!”, „hey ya”, „sup!”). Zasada działa w ten sposób: gdy ktoś powie cześć do Cleverbota, to rzeczy, które rzeczy które na ogół ludzie mówili w odpowiedzi do Cleverbota na „hej” są właściwymi rzeczami na odpowiedzenie na „cześć”. Z kolei gdy Cleberbot mówi coś w rodzaju „co tam?” lub „hello!”, to wtedy będzie przyglądał się temu jak ludzie odpowiadają na to, aby nauczyć się właściwej odpowiedzi na te stwierdzenia. To pozwala zbudować Celverbotowi coraz większą bazę danych odpowiedzi.
 
