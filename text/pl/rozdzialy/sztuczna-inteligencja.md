@@ -4,42 +4,42 @@
 
 ## Z lotu ptaka
 
-Myśląc o sztucznej inteligencji prawdopodobnie myślisz o przyjaznych systemach, które mogą z tobą rozmawiać i rozwiązywać trudne problemy albo o maniakalnych robotach, które są skłonne do dominacji nad światem. Słyszeliśmy o obietnicy autonomicznych samochodów, które są bezpieczniejsze niż człowiek prowadzący auto, oraz obawy o systemy doradztwa medycznego które utrzymują życie ludzi w ich wirtualnych rękach. Sztuczna inteligencja jest obiecującą częścią informatyki, ale też stwarza wiele obaw. Może być ona używana do podejmowania decyzji w systemach tak dużych jak samolot czy [automatyczna wywrotka](http://www.komatsu.com/CompanyInfo/profile/product_supports/), jak i małych takich jak telefony komórkowe, które precyzyjnie przewidują wpisywany tekst. Ich wspólną cechą jest to, że próbują naśladować ludzką inteligencję. I co ważne, takie systemy mogą być znaczącym ułatwieniem w codziennym ludzkim życiu.
+Myśląc o sztucznej inteligencji prawdopodobnie myślisz o przyjaznych systemach, które mogą z tobą rozmawiać i rozwiązywać trudne problemy albo o maniakalnych robotach, które są skłonne do dominacji nad światem. Naukowcy obiecują nam autonomiczne samochody, które będą bezpieczniejsze niż człowiek prowadzący auto. Możemy także usłyszeć o obawach o systemy wspomagania medycznego które utrzymują życie ludzi w ich wirtualnych rękach. Sztuczna inteligencja jest obiecującą częścią informatyki, ale też stwarza wiele obaw. Może być ona używana do podejmowania decyzji w systemach tak dużych jak samolot czy [automatyczna wywrotka](http://www.komatsu.com/CompanyInfo/profile/product_supports/), jak i małych takich jak telefony komórkowe, które potrafią prezycyjnie przewidzieć wpisywany tekst. Ich wspólną cechą jest to, że próbują naśladować ludzką inteligencję. I co ważne, takie systemy mogą być znaczącym ułatwieniem w życiu codziennym.
 
-Sztuczna inteligencja (w skrócie SI lub po angielsku AI) (znana także jako inteligentne systemy) jest przede wszystkim gałęzią informatyki, ale czerpie wiele z koncepcji i pomysłów innych dziedzin, w szczególności z [matematyki](https://pl.wikipedia.org/wiki/Matematyka) (głównie logika, kombinatoryka, statystyka, prawdopodobieństwo i teoria optymalizacji), [biologii](https://pl.wikipedia.org/wiki/Biologia), [psychologii](https://pl.wikipedia.org/wiki/Psychologia), [językoznawstwa](https://pl.wikipedia.org/wiki/Lingwistyka), [naurobiologii](https://pl.wikipedia.org/wiki/Neurobiologia) i [filozofii](https://pl.wikipedia.org/wiki/Filozofia).
+Sztuczna inteligencja (w skrócie SI lub po angielsku AI) (znana także jako inteligentne systemy) jest przede wszystkim nauką informatyczną, ale czerpie wiele z koncepcji i pomysłów innych dziedzin, w szczególności z [matematyki](https://pl.wikipedia.org/wiki/Matematyka) (głównie logika, kombinatoryka, statystyka, prawdopodobieństwo i teoria optymalizacji), [biologii](https://pl.wikipedia.org/wiki/Biologia), [psychologii](https://pl.wikipedia.org/wiki/Psychologia), [językoznawstwa](https://pl.wikipedia.org/wiki/Lingwistyka), [naurobiologii](https://pl.wikipedia.org/wiki/Neurobiologia) i [filozofii](https://pl.wikipedia.org/wiki/Filozofia).
 
-W tym rozdziale omówimy kilka inteligentnych systemów. Wiąże się to nieuchronnie z rozpatrzeniem również aspektów etycznych i filozoficznych -– Czy naprawdę chcemy, aby maszyny przejmowany niektóre nasze zawody? Czy możemy im ufać? Czy pewnego dnia może to wszystko pójść za daleko? Co tak naprawdę rozumiemy przez powiedzenie, że komputer jest inteligentny? Chociaż nie odpowiemy na te pytania bezpośrednio w tym rozdziale, zdobycie wiedzy technicznej na temat SI pozwoli ci podejmować bardziej świadome decyzje dotyczące bardziej skomplikowanych problemów.
+W tym rozdziale omówimy kilka inteligentnych systemów. Wiąże się to nieuchronnie z rozpatrzeniem również aspektów etycznych i filozoficznych -– Czy naprawdę chcemy, aby maszyny przejmowany niektóre z naszych zawodów? Czy możemy im ufać? Czy pewnego dnia nie przekroczymy bariery i nie zrobimy jednego kroku za daleko? Co tak naprawdę rozumiemy przez powiedzenie, że komputer jest inteligentny? Nie odpowiemy na te pytania bezpośrednio w tym rozdziale. Jednakże zdobycie wiedzy technicznej na temat SI pozwoli ci podejmować bardziej świadome decyzje dotyczące bardziej skomplikowanych problemów.
 
 ## Chatboty i test Turinga
 
 {image filename="computer-studying-turing-test.png" alt="Komputer czyta książkę pod tytułem „Rozmawiać jak człowiek”"}
 
-Dla wielu ludzi oczywiste jest to, że mogą łatwo rozmawiać z drugą osobą i na podstawie tej rozmowy wypowiedzieć własne zdanie. Zdolność do tego jest formą inteligencji, a dla komputerów nie jest to takie proste! Podjęto wiele prób zaprojektowania programów komputerowych, które mogą prowadzić rozmowę z człowiekiem i brzmieć inteligetnie. Te programy komputerowe nazywane są *chatterbotami* lub po prostu *chatbotami* (lub spolszczona wersja *czatbot*) albo *linguabotami*
+Dla wielu ludzi jest oczywiste, że mogą łatwo rozmawiać z drugą osobą i na podstawie tej rozmowy wypowiedzieć własne zdanie. Zdolność do tego jest formą inteligencji. Dla komputerów nie jest to takie proste! Podjęto wiele prób zaprojektowania programów komputerowych, które mogą prowadzić rozmowę z człowiekiem i brzmieć inteligetnie. Te programy komputerowe nazywane są *chatterbotami* lub po prostu *chatbotami* (także spolszczona wersja *czatbot*) albo *linguabotami*.
 
-Możesz spotkać się z czatbotami w internecie w poważnych sytuacjach (np. udzielanie pomocy na stronie rezerwacji). 
-Czasami nawet trudno powiedzieć, czy otrzymujesz automatyczną odpowiedź. 
-Zaczniemy od spojrzenia na kilka bardzo prostych czatbotów, które są zaprojektowane raczej jako eksperyment niż oferowanie poważnej porady.
+Czatboty możesz spotkać w internecie w takich sytuacjach jak np. udzielanie pomocy na stronie rezerwacji biletu. 
+Czasami nawet trudno stwierdzić czy otrzymujesz automatyczną odpowiedź, czy rozmawiasz online z konsultantem. 
+Zaczniemy od spojrzenia na kilka bardzo prostych czatbotów, które zostały zaprojektowane raczej jako eksperyment niż oferowanie poważnej pomocy.
 
-### Terapeutyczna sesja z czatbotem Eliza
+### Terapeutyczna sesja z Elizą
 
 {panel type="teacher-note" summary="Czatboty na lekcji"}
 Jeśli ten materiał jest używany w klasie i czas jest ograniczony, upewnij się, że uczniowie nie spędzają za dużo czasu rozmawiając z każdym z czatbotów. 15 minut to maksymalny czas na rozmowę z każdym czatbotem - Elizą, Alice i Cleverbotem (w sumie 45 minut) oraz dodatkowe 15 - 45 minut (w zależności od ograniczeń czasowych) dla uczniów na poszukanie innych czatbotów, które będą adekwatne dla uczniów, aby uczyć się o różnicach między czatbotami.
 {panel end}
 
-Jednym z takich czatbotów jest **Eliza**, która stara się naśladować psychoterapeutkę rogeriańską i brzmi najbardziej inteligentnie rozmowach, które miałaby miejsce podczas sesji terapeutycznej. ([Psychoterapia rogeriańska](https://pl.wikipedia.org/wiki/Psychoterapia_zorientowana_na_klienta) – jest to technika, która polega na próbie zrozumienia pacjenta poprzez zadawanie pytań i odzwierciedlania jego wypowiedzi w celu wyjaśnienia, że zostały one poprawnie zrozumiane). 
+Jednym z takich czatbotów jest **Eliza**, która stara się naśladować psychoterapeutkę rogeriańską i brzmi najbardziej inteligentnie rozmowach, które miałaby miejsce podczas takiej sesji terapeutycznej. ([Psychoterapia rogeriańska](https://pl.wikipedia.org/wiki/Psychoterapia_zorientowana_na_klienta) – jest to technika, która polega na próbie zrozumienia pacjenta poprzez zadawanie pytań i odzwierciedlania jego wypowiedzi w celu wyjaśnienia, że zostały one poprawnie zrozumiane). 
 
 {panel type="Uwaga" summary="Czatboty i informacje osobiste!"}
-Eliza jest systemem, który był przeznaczony do wprowadzenia ludzi w świat SI i nie powinna być używana do prawdziwych sesji terapeutycznych. Nigdy nie powinieneś wprowadzać informacji osobistych, których nie chciałbyś aby inni czytali, do komputera, ponieważ nigdy nie możesz być pewnym, że strona internetowa nie zbiera informacji lub przekazuje je do innych. Tak więc nie chcesz powiedzieć Elizie takich rzeczy, które prawdziwy pacjent powiedziałby na sesji terapeutycznej --- dlatego zmyślaj rzeczy, gdy będziesz rozmawiać z Elizą. Z tego samego powodu nie przekazuj żadnemu czatbotowi żadnych innych informacji osobistych takich jak pełne imię i nazwisko, data urodzenia lub adres.
+Eliza jest systemem, który został stworzony, aby pokazać ludziom świat SI i nie powinna być używana do prawdziwych sesji terapeutycznych. Nigdy nie powinieneś podawać osobistych informacji komputerowi, tzn takich, które nie chciałbyś, aby inni przeczytali. Nigdy nie możesz być pewien, że strona internetowa nie zbiera informacji lub przekazuje je dalej. Nie pisz Elizie takich rzeczy, które prawdziwy pacjent powiedziałby na sesji terapeutycznej --- dlatego zmyślaj rzeczy, gdy w czasie rozmowy z Elizą. Z tego samego powodu nie przekazuj żadnemu czatbotowi żadnych innych osobistych informacji, w szczególności imienia i nazwiska, data urodzenia lub adresu.
 {panel end}
 
-Przejdź do linku poniżej i rozpocznij rozmowę z Elizą w języku angielskim, (pamiętając, że została zaprojektowana jako psychoterapeutka rogeriańska więc będzie odpowiadała tak, jak jedna z nich)
-[Naciśnij tutaj aby użyć Elizy na stronie nlp-addiction.com](http://nlp-addiction.com/eliza/)
+Kliknij na poniższy link i rozpocznij rozmowę z Elizą w języku angielskim, (pamiętając, że została zaprojektowana jako psychoterapeutka rogeriańska więc będzie odpowiadała w tym stylu)
+[Naciśnij tutaj, aby porozmawiać z  Elizą na stronie nlp-addiction.com](http://nlp-addiction.com/eliza/)
 
 {image filename="eliza-chatbot-screenshot.png" alt="Czatbot Eliza na stronie nlp-addiction.com"}
 
-Myślisz, że Eliza jest tak samo mądra jak człowiek? Czy uwierzyłbyś, że ona była człowiekiem jeśli ktoś inny tak tobie powiedział? 
+Myślisz, że Eliza jest tak samo mądra jak człowiek? Czy uwierzyłbyś, że Eliza jest człowiekiem jeśli ktoś inny powiedziałby tak tobie? 
 
-Prawdopodobnie zgodzisz się, że chociaż Eliza brzmi czasami trochę inteligentnie, to daje ona bardzo niejasne i ogólnikowe odpowiedzi, zapomina o wcześniejszej części rozmowy i czasami mówi rzeczy, które brzmią bardzo dziwnie!. Jako przykład, przeanalizuj poniższą rozmowę:
+Prawdopodobnie zgodzisz się, że chociaż Eliza brzmi czasami trochę inteligentnie, to daje ona bardzo niejasne i ogólnikowe odpowiedzi. Zapomina o wcześniejszej części rozmowy i czasami mówi rzeczy, które brzmią bardzo dziwnie!. Jako przykład, przeanalizuj poniższą rozmowę:
 
 **Eliza**: Cześć, Jestem Eliza.
 **Człowiek**: Cześć, jestem człowiekiem
@@ -50,38 +50,37 @@ Prawdopodobnie zgodzisz się, że chociaż Eliza brzmi czasami trochę inteligen
 **Eliza**: Dlaczego powtarzasz się?
 
 
-Eliza często daje bardzo ogólnikowe odpowiedzi, patrząc na wbudowane w nią wzorce, opierając się tylko na linii tekstu, którą właśnie wpisałeś. To często prowadzi do bardzo dziwnych konwersacji, takich jak ta powyżej! W tym przypadku Eliza użyła dopasowania wzorców do określenia, że może będzie właściwie zapytać „czy wierzysz w to, że to normalne być człowiekiem?”, gdy powiedziałem, że jestem człowiekiem. Jeśli powiedziałbym „Jestem bananem”, wtedy ta sama reguła wygenerowałaby odpowiedź „Czy wierzysz w to, że to normalne być bananem?”. Gdy odpowiedziałem „Tak”, to właściwie Eliza nie zrozumiała znaczenia mojej wypowiedzi, więc po prostu zapytała mnie czy byłem tego pewny jako, że ma generalną zasadę, że gdy ktoś mówi „Tak”, to dobrze jest go zapytać czy na pewno. Eliza ma także wzorce, które są wywoływane, gdy ktoś powtarza się i wtedy powinna zapytać się dlaczego. Ponieważ Eliza tak faktycznie nie rozumie znaczeń, ale zamiast tego trzyma się reguł, które mówią co może być właściwą odpowiedzią. W żaden sposób ona nie wie czy dwukrotna odpowiedź „Tak” była dla mnie naprawdę ważna! To właściwie duża wskazówka, że Eliza nie jest tak naprawdę inteligentna i właściwie nie rozumie kontekstu rozmowy, a także nawet tego czy odpowiedź na jej pytanie jest lub nie jest faktycznie sensowna.
+Eliza często daje bardzo ogólnikowe odpowiedzi. Korzysta z wbudowanych wzorów odpowiedzi lub opiera się tylko na ostatniej wpisanej przez ciebie linijce tekstu. Prowadzi to często do bardzo dziwnych konwersacji, takich jak ta powyżej! W tym przypadku gdy powiedziałem, że jestem człowiekiem, to Eliza użyła dopasowania wzorców do określenia, że może będzie właściwie zapytać „czy wierzysz w to, że to normalne być człowiekiem?”. Jeśli powiedziałbym „Jestem bananem”, wtedy ta sama reguła wygenerowałaby odpowiedź „Czy wierzysz w to, że to normalne być bananem?”. Gdy odpowiedziałem „Tak”, to właściwie Eliza nie zrozumiała znaczenia mojej wypowiedzi, więc po prostu zapytała mnie czy byłem tego pewny. Ma ona generalną zasadę, że gdy ktoś mówi „Tak”, to dobrze jest go zapytać czy na pewno. Eliza ma także wzorce, które są wywoływane, gdy ktoś powtarza się i wtedy powinna zapytać się dlaczego. Ponieważ Eliza tak faktycznie nie rozumie teg, aleo co do niej piszesz (znaczenia tekstu), zamiast tego trzyma się reguł, które mówią co może być właściwą odpowiedzią. W żaden sposób nie jest w stanie stwierdzić, że dwukrotna odpowiedź „Tak” była dla mnie naprawdę ważna! To właściwie duża wskazówka, że Eliza nie jest tak naprawdę inteligentna i nie rozumie kontekstu rozmowy, a także nawet tego czy odpowiedź na jej pytanie jest lub nie jest naprawdę sensowna.
 
 {panel type="teacher-note" summary="Odpowiedzi Elizy"}
 Te odpowiedzi, które daje Eliza są nazywane *odpowiedziami predefiniowanymi ang. canned responses*.
 {panel end}
 
 
-Teraz wróć i przeprowadź kolejną konwersację z Elizą. Jest wiele innych przykładów podobnych do konwersacji powyżej, gdy Eliza mówi rzeczy, które nie mają sensu. Ile możesz znaleźć takich przykładów? Dodatkowo, jak Eliza odpowiada, gdy robisz poniższe rzeczy:
+Teraz przeprowadź kolejną konwersację z Elizą. Jest wiele innych przykładów podobnych do konwersacji powyżej, pokazujące jak Eliza mówi bez sensu. Ile możesz znaleźć takich przykładów? Dodatkowo, jak Eliza odpowiada, gdy wykonasz poniższe rzeczy:
 
 - Spróbuj być „papugą”, która tylko powtarza wszystko, co powiedziała Eliza.
 - Co się dzieje, gdy nie dajesz znaczących odpowiedzi na jej pytania? 
 - Jeśli mówisz te same rzeczy, które powiedziałeś wcześniej, czy Eliza zawsze odpowiada w ten sam sposób? (Gdy napiszesz je od razu, jeszcze raz po wypowiedzeniu, wtedy prawdopodobnie nie, jako że będzie ona komentowała dwukrotne powtórzenie tej samej wypowiedzi!)
-- Co się stanie gdy zaczniesz mówić o rzeczach, które są niezwiązane z tym co mogło być powiedziane na sesji terapeutycznej -- będziesz starał się mieć ogólną konwersację z Elizą (pamiętaj, że Eliza operuje w specjalistycznej dziedzinie to znaczy ona zakłada, że jest terapeutką). 
+- Co się stanie gdy zaczniesz mówić o rzeczach, które są niezwiązane z tym co mogło być powiedziane na sesji terapeutycznej -- będziesz starał się rozmawiać z Elizą na ogólne tematy (pamiętaj, że Eliza operuje w specjalistycznej dziedzinie, to znaczy ona zakłada, że jest terapeutką). 
 
 ### Czatbot Alice
 
-Widzieliśmy wyżej, że Eliza jest czatbotem, który pracuje w specjalistycznej dziedzinie (próbuje być terapeutką), I stara się brzmieć inteligentnie poprzez wypisywanie ogólnikowych odpowiedzi. Jako, że prawdopodobnie to odkryłeś, to szybko ujawniło się, że Eliza nie jest w ogóle inteligentna i będzie powtarzała te same rzeczy w kółko. Dodatkowo, prawdopodobnie zauważyłeś, że wypowiedzi Elizy często nie zawierają zbyt dużo sensu i ostatecznie kończy się zdaniem które jest bez sensu dla człowieka.
+Widzieliśmy powyżej, że Eliza jest czatbotem, który pracuje w specjalistycznej dziedzinie (próbuje być terapeutką). Stara się brzmieć inteligentnie poprzez wypisywanie ogólnikowych odpowiedzi. Jako, że prawdopodobnie to odkryłeś, to szybko przekonałeś się, że Eliza nie jest w ogóle inteligentna i będzie powtarzała te same rzeczy w kółko. Dodatkowo, prawdopodobnie zauważyłeś, że wypowiedzi Elizy często nie zawierają zbyt dużo sensu i ostatecznie kończy się zdaniem które jest bez sensu dla człowieka.
 
-Spróbuj przeprowadzić rozmowę z kolejnym czatbotem --- Alice. Zauważ, że ona nazywa cię „sędzią”. Możesz odkryć dlaczego tak jest, gdy przeczytasz część rozdziału o teście Turinga poniżej. 
+Spróbuj przeprowadzić rozmowę z kolejnym czatbotem --- Alice. Zauważ, że ona nazywa cię „sędzią”. Możesz przekonać się dlaczego tak jest, gdy przeczytasz część rozdziału o teście Turinga poniżej. 
 
-[Naciśnij tutaj,aby przejść do Alice na stronie pandorabots.com](http://www.pandorabots.com/pandora/talk?botid=f5d922d97e345aa1)
+[Naciśnij tutaj, aby przejść do Alice na stronie pandorabots.com](http://www.pandorabots.com/pandora/talk?botid=f5d922d97e345aa1)
 
 {image filename="alice-chatbot-screenshot.png" alt="Czatbot Alice na stronie pandorabots.com"}
 
-Czy Alice brzmi bardziej inteligentnie od Elizy? Czy brzmi równie inteligentnie jak człowiek lub czy możesz sprawić, że będzie mówiła ona rzeczy bez sensu? Spróbuj użyć tych samych wskazówek, które używałeś w przypadku i Elizy i zobacz czy działają one na Alice. (spójrz na listę punktów e podrozdziale poświęconym Elizie). 
+Czy Alice brzmi bardziej inteligentnie od Elizy? Czy brzmi równie inteligentnie jak człowiek lub czy możesz sprawić, że będzie mówiła bezsensowne rzeczy? Spróbuj użyć tych samych wskazówek, których używałeś w przypadku i Elizy i zobacz czy działają one na Alice. (spójrz na listę punktów w podrozdziale poświęconym Elizie). 
 
-Alice oraz Eliza, używają reguł do tego, aby wiedzieć co napisać, jednakże Alice ich więcej, a algorytm odpowiedzialny za wybranie tego co powiedzieć jest bardziej wyrafinowany. Jeśli chcesz wiedzieć więcej, po prostu zapytaj Alice jak ona pracuje i dowiesz się tego!
+Alice oraz Eliza, używają reguł do tego, aby wiedzieć co napisać, jednakże Alice ma ich więcej. Algorytm odpowiedzialny za wybranie tego co powiedzieć jest w tym przypadku bardziej wyrafinowany. Jeśli chcesz się dowiedzieć jak skonsturowana jest Alice, po prostu ją zapytaj, a ona da tobie odpowiedź!
 
-Wybrane możliwe reguły, które może posiadać Alice:
+Poniżej zamieszczamy możliwe reguły, które może posiadać Alice:
 - Jeśli jest wspomniany “ulubiony kolor”, powiedz, że twoim ulubionym kolorem jest „zielony”
 - Jeśli wspomniany jest członek rodziny (np. „mama”, „tata” lub „brat”), powiedz coś związanego z rodziną.
-
 
 Aby użyć reguł, czatbot analizuje twoje ostatnie zdanie (i możliwe, ze również wcześniejsze zdania) poprzez dopasowanie zdania do wzorców, które ma zapisane. Jeśli zdanie pasuje do wzorca w regułach, wtedy dana reguła jest „aktywowana”. Reguła określa odpowiedź. Czasami jest ona po prostu szablonem zdania i czatbot analizuje tekst, który ty wpisałeś i wybiera słowa, które mogą być wpisane szablon. To dlatego czasami odpowiedzi są konstruowane w ten sposób, że używane są części tekstu, które zostały wpisane przez człowieka.
 
@@ -101,7 +100,7 @@ Sędzia w tej rozmowie musiał być trochę złośliwy oszukując ją i mówiąc
 
 ### Uczące się czatboty
 
-W poprzednich podrozdziałach widzieliśmy przykłady dwóch czatbotów, które mają reguły pomagające określić im odpowiednią rzecz do powiedzenia. Jeden z nich działa w specjalistycznej dziedzinie, symulując terapeutę i nie jest w stanie prowadzić bardzo ogólnej konwersacji. Drugi jest w stanie prowadzić bardziej ogólną rozmowę. Obydwa czatboty mają swoje zasady co powiedzieć, które zostały określone przez programistów w czasie ich programowania. Te zasady nie zmienią się nigdy jeśli programista nie zdecyduje o ich zmianie.
+W poprzednich podrozdziałach widzieliśmy przykłady dwóch czatbotów, które mają reguły pomagające określić im odpowiednią rzecz do powiedzenia. Jeden z nich działa w specjalistycznej dziedzinie, symulując terapeutę i nie jest w stanie prowadzić bardzo ogólnej konwersacji. Drugi jest w stanie prowadzić bardziej ogólną rozmowę. Obydwa czatboty mają swoje reguły, które zostały wbudowane w nie przez ich twórców. Te zasady mogą się zmienić tylko, gdy ich twórca o tym zdecyduje i zaktualizuje oprogramowanie czatbota.
 
 Istnieją innego rodzaju czatboty, które są w stanie uczyć się zasad od ludzi w czasie konwersacji z człowiekiem. Poprzez analizowanie tego co pisze człowiek, czatbot próbuje nauczyć się jak powinien odpowiadać w różnych sytuacjach. Założeniem jest, że jeśli odpowiada w sposób podobny do człowieka, wtedy może będzie brzmiał jak człowiek. Celem większości tych czatbotów jest prowadzenie ogólnej konwersacji, tzn. nie są one ograniczone do jednej dziedziny, tak jak terapeutka Eliza.
 
