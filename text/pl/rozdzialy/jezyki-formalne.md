@@ -27,9 +27,9 @@ Może się to wydawać irytujące, ale w rzeczywistości poprzez wymuszenie prec
 
 Zawsze przy wystąpieniu takiego błędu, masz do czynienia z *językiem formalnym*. Określają one ścisłe zasady, takie jak „wszystkie nawiasy, które zostały otwarte, muszą zostać zamknięte”, „wszystkie polecenia w programie muszą być słowami kluczowymi wybranymi ze ściśle okreśłonego, małego zestawu” lub „data musi zawierać trzy liczby odseparowane myślnikami”. 
 
-Języki formalne nie są tylko używane w językach programowania --- są one używane wszędzie tam, gdzie format jakiegoś wejścia jest ściśle określony, na przykład wpisywanie adresu emailowego w formularz internetowy. 
+Języki formalne nie są tylko używane w językach programowania — są one używane wszędzie tam, gdzie format jakiegoś wejścia jest ściśle określony, na przykład wpisywanie adresu emailowego w formularz internetowy. 
 
-W tych wszystkich przypadkach, polecenia, które wpisałeś (czy to w Python, Scratch, Snap!, C, Pascal, Basic, C#, HTML, lub XML) zostały zinterpetowane przez program komputerowy. (Zgadza się… Python jest programem, który interpetuje programy napisane w języku Phyton). W rzeczywistości, kompilator języka programowanie jest często napisany w swoim własnym języku. Większość kompilatorów języka C jest napisana w C --- co stawarza pytanie, kto napisał pierwszy kompilator C (i co jeśli miał on błędy)?! Informatycy odkryli dobre sposoby na pisanie programów, które przetwarzają inne programy, a kluczowym składnikiem jest to, że musisz dokładnie określić to, co jest dozwolone w programie. Nad tym własnie czuwają języki formalne.
+W tych wszystkich przypadkach, polecenia, które wpisałeś (czy to w Python, Scratch, Snap!, C, Pascal, Basic, C#, HTML, lub XML) zostały zinterpetowane przez program komputerowy. (Zgadza się… Python jest programem, który interpetuje programy napisane w języku Phyton). W rzeczywistości, kompilator języka programowanie jest często napisany w swoim własnym języku. Większość kompilatorów języka C jest napisana w C — co stawarza pytanie, kto napisał pierwszy kompilator C (i co jeśli miał on błędy)?! Informatycy odkryli dobre sposoby na pisanie programów, które przetwarzają inne programy, a kluczowym składnikiem jest to, że musisz dokładnie określić to, co jest dozwolone w programie. Nad tym własnie czuwają języki formalne.
 
 Wiele z koncepcji, którym będziemy przyglądać się w tym rozdziale, jest używane w wielu innych sytuacjach: sprawdzenie poprawności wpisanych danych na stronie internetowej; analizowanie interfejsów użytkowników; przeszukiwanie tekstu, w szczególności z wieloznacznikami, które mogą pasować do dowolnego ciągu znaków; tworzenia układów logicznych; określenia protokołów komunikacyjnych; projektowaniu systemów wbudowanych. Niektóre zaawansowane koncepcje w językach formalnych wykorzystano do zbadania granic tego co może zostać obliczone.
 
@@ -44,7 +44,7 @@ Przypuśćmy, że szukasz słów, które zawierają imię „tim”. wpisz słow
 
 {interactive name="regular-expression-filter" type="in-page"}
 
-Teraz wprowadzimy *dziką kartę*, znak który zastąpi nam dowolny symbol, który w tym przypadku to „.” --- jest to powszechnie stosowana konwencja w językach formalnych.
+Teraz wprowadzimy *dziką kartę*, znak który zastąpi nam dowolny symbol, który w tym przypadku to „.” — jest to powszechnie stosowana konwencja w językach formalnych.
 Ten znak oznacza, że przypasować możemy do niego dowolną literę.
 Teraz możesz zrobić wyszukiwanie takie jak:
 
@@ -89,7 +89,7 @@ Przyjrzymy się im bardziej szczegółowo w sekcji na temat [wyrażeń regularny
 
 Następnie zbadamy prosty system do odczytu wejścia o nazwie
 {glossary-link term="automat skończenie stanowy" reference-text="Jęzki formalne"}automat skończenie stanowy{glossary-link end},
-który --- jak przekonamy się później--- jest blisko związany z 
+który — jak przekonamy się później — jest blisko związany z 
 {glossary-link term="wyrażenie regularne"}wyrażeniami regularnymi{glossary-link end}.
 Później przyjrzymy się idei
 {glossary-link term="gramatyka"}gramatyki{glossary-link end},
@@ -110,12 +110,12 @@ Może to być zbyt dziecinne dla niektórych uczniów, ale jeśli możesz im to 
 
 {panel end}
 
-Oto mapa systemu kolei podmiejskich dla miasta Trainsylvania. Kłopot w tym, że nie pokazuje ona, dokąd jeżdżą pociągi --- wiesz jedynie, że z każdej stacji odjeżdżają dwa pociagu, pociąg A i pociąg B. Mieszkańcom Trainsylvanii wydaje się to nie przeszkadzać --- fajnie jest wybierać pociąg na każdej stacji, a po pewnym czasie zwykle przyjeżdżasz tam, gdzie chciałeś.
+Oto mapa systemu kolei podmiejskich dla miasta Trainsylvania. Kłopot w tym, że nie pokazuje ona, dokąd jeżdżą pociągi — wiesz jedynie, że z każdej stacji odjeżdżają dwa pociagu, pociąg A i pociąg B. Mieszkańcom Trainsylvanii wydaje się to nie przeszkadzać — fajnie jest wybierać pociąg na każdej stacji, a po pewnym czasie zwykle przyjeżdżasz tam, gdzie chciałeś.
 
 {image filename="trainsylvania-blank.png" alt="Niekompletna mapa pociągów" caption="Kliknij, aby powiększyć"}
 
 Możesz podróżować po Transylwani samodzielnie, korzystając z następujących narzęrzędzi interaktywnych. Zaczynasz od stacji City Mall i musisz znaleźć drogę do Suburbopolis.
-Na każdej stacji możesz wybrać pociąg A lub pociąg B --- naciśnij przycisk, aby dowiedzieć się, dokąd cię zabierze.
+Na każdej stacji możesz wybrać pociąg A lub pociąg B — naciśnij przycisk, aby dowiedzieć się, dokąd cię zabierze.
 Prawdopodobnie, tak jak mieszkańcy Trainsylvanii, prawdopodobnie zaczniesz rysować mapę linii kolejowych, ponieważ później możesz zostać poproszony o znalezienie drogi w inne miejsce.
 Jeśli chcesz narysować szablon, możesz [wydrukować go stąd](files/trainsylvania-blank.pdf).
 
@@ -123,7 +123,7 @@ Jeśli chcesz narysować szablon, możesz [wydrukować go stąd](files/trainsylv
 
 {panel type="teacher-note" summary="Użycie narzędzia interaktywnego i rozwiązanie"}
 
-Powinieneś pozwolić uczniom wymyślić ich własną notację do tego zadania. Wkrótce dowiedzą się (być może na swój sposób), że powinni zapisywać wszystkie trasy ze strzałką (ponieważ pociągi niekoniecznie wracają tą samą trasą) i oznaczać je strzałki z literami A lub B. Pełna mapa dla tego ćwiczenia znajduje się poniżej, ale nie psuj zabawy uczniom, pokazując mapę -- przynajmniej, jeszcze nie teraz.
+Powinieneś pozwolić uczniom wymyślić ich własną notację do tego zadania. Wkrótce dowiedzą się (być może na swój sposób), że powinni zapisywać wszystkie trasy ze strzałką (ponieważ pociągi niekoniecznie wracają tą samą trasą) i oznaczać je strzałki z literami A lub B. Pełna mapa dla tego ćwiczenia znajduje się poniżej, ale nie psuj zabawy uczniom, pokazując mapę — przynajmniej, jeszcze nie teraz.
 
 {image filename="trainsylvania-complete.png" alt="Rozwiązanie dla mapy pociągów" caption="Kliknij obrazek, aby powiększyć"}
 
@@ -204,7 +204,7 @@ Jeden ze stanów ma podwójne kółko.
 Zgodnie z konwencją oznacza to stan „ostateczny” lub „akceptujący”. Jeśli tam dotrzemy, to osiągnęliśmy pewien cel.
 Jest też stan „startowy” - do którego dochodzi znikąd strzałka.
 W FSA na ogół chodzi o to, aby znaleźć ciąg danych wejściowych, które doprowadzą cię od stanu początkowego do stanu końcowego.
-W powyższym przykładzie najkrótszym wejściem, aby przejść do stanu 2, jest „a”, ale możesz też tam dotrzeć poprzez „aa”, „aba” lub „baaaaa”. Mówimy wtedy, że te dane wejściowe są „akceptowane”, ponieważ potrafią nasz przeprowadzić od stanu początkowego do stanu końcowego --- nie musi to być najkrótsza droga.
+W powyższym przykładzie najkrótszym wejściem, aby przejść do stanu 2, jest „a”, ale możesz też tam dotrzeć poprzez „aa”, „aba” lub „baaaaa”. Mówimy wtedy, że te dane wejściowe są „akceptowane”, ponieważ potrafią nasz przeprowadzić od stanu początkowego do stanu końcowego — nie musi to być najkrótsza droga.
 
 W jakim stanie znalazłbyś się, gdyby dane wejściowe były literą „a” powtórzoną 100 razy?
 
@@ -249,7 +249,7 @@ Aby zachować precyzję, zdefiniujemy dwa kolejne terminy.
 Jednym z nich jest 
 {glossary-link term="alfabet" reference-text="Języki formalne"}alfabet{glossary-link end},
 który jest po prostu listą wszystkich możliwych wejść, które mogą wystąpić.
-W kilku ostatnich przykładach alfabet składa się z dwóch liter -- „a” i „b”,
+W kilku ostatnich przykładach alfabet składa się z dwóch liter — „a” i „b”,
 ale w przypadku FSA, który przetwarza tekst wpisany na komputerze, alfabet będzie musiał zawierać każdą literę występującą na klawiaturze.
 
 {glossary-definition term="Przejście" definition="W automacie skończenie stanowym, połączenie pomiędzy dwoma stanami."}
@@ -286,7 +286,7 @@ Poniższy diagram podsumowuje wprowadzoną przez nas terminologię. Zauważ, że
 W przypadku tego FSA, łańcuchy „aa” i „aabba” byłyby akceptowane, w przeciwieństwie do „aaa” oraz „ar”.
 Przy okazji zauważmy, że często umieszczamy łańcuchy w cudzysłowach, aby było jasne, gdzie zaczynają się oraz kończą.
 Oczywiście cudzysłowy nie są częścią łańcuchów.
-Zauważ, że „r” zawsze wraca do stanu 1 --- jeśli kiedykolwiek wystąpi na wejściu, to zadziała jak reset.
+Zauważ, że „r” zawsze wraca do stanu 1 — jeśli kiedykolwiek wystąpi na wejściu, to zadziała jak reset.
 
 Czasami zobaczysz FSA nazywane Skończoną Maszyną Stanową lub FSM (z angielskiego „Finite State Machine”). Istnieją także inne ściśle powiązane systemy o podobnych nazwach. Póżniej, wspomnimy niektóre z nich w tym rozdziale.
 
@@ -294,7 +294,7 @@ Czasami zobaczysz FSA nazywane Skończoną Maszyną Stanową lub FSM (z angielsk
 Poniższa strona zawiera obszerną listę terminów odnoszących się do języków formalnych, chociaż jest dużo głębsza i bardziej formalna niż nasza: [http://www.csee.umbc.edu/portal/help/theory/lang_def.shtml](http://www.csee.umbc.edu/portal/help/theory/lang_def.shtml)
 {panel end}
 
-Teraz jest coś, co musimy wyjaśnić, zanim pójdziemy dalej. Jeśli mówimy o tym, które łańcuchy danych wejściowych wprowadzą cię w konkretny stan, a system zaczyna się w tym stanie, to *pusty łańcuch* --- czyli ciąg bez żadnych liter --- jest jednym z rozwiązań!
+Teraz jest coś, co musimy wyjaśnić, zanim pójdziemy dalej. Jeśli mówimy o tym, które łańcuchy danych wejściowych wprowadzą cię w konkretny stan, a system zaczyna się w tym stanie, to *pusty łańcuch* — czyli ciąg bez żadnych liter — jest jednym z rozwiązań!
 Dla przykładu, oto prosty automat skończenie stanowy z jednym tylko wejściem (przycisk a), który reprezentuje specyficzny rodzaj przełącznika światła.
 Przycisk resetowania nie jest częścią FSA; to tylko sposób na powrót do stanu początkowego.
 Sprawdź, czy potrafisz określić, które wzorce wejścia zapalą światło:
@@ -315,7 +315,7 @@ Może to być nieco mylące. Na przykład język (to znaczy lista wszystkich zaa
 Jeśli chciałbyś komuś powiedzieć, że „nic” zapali światło, tak osoba mogłaby opacznie zrozumieć, że światła nigdy nie da się zaświecić. Dlatego przydaje się tutaj stwierdzenie, że *pusty ciąg* (lub {math}\epsilon{math end}) zapali światło.
 Jak widać „nic” może mieć różne znaczenie i musimy być precyzyjni co do tego, co mamy na myśli!
 
-Oto FSA dla dziwnego przełącznika światła. Możesz powiedzieć, że {math}\epsilon{math end} jest częścią języka, ponieważ stan początkowy jest również stanem końcowym (w rzeczywistości jest to jedyny stan końcowy). W rzeczywistości przełącznik nie jest wcale taki dziwny --- rzutniki często wymagają dwóch naciśnięć przycisku zasilania, aby uniknąć ich przypadkowego wyłączenia.
+Oto FSA dla dziwnego przełącznika światła. Możesz powiedzieć, że {math}\epsilon{math end} jest częścią języka, ponieważ stan początkowy jest również stanem końcowym (w rzeczywistości jest to jedyny stan końcowy). W rzeczywistości przełącznik nie jest wcale taki dziwny — rzutniki często wymagają dwóch naciśnięć przycisku zasilania, aby uniknąć ich przypadkowego wyłączenia.
 
 {image filename="finite-state-automata-light-switch-example.png" alt="Automat skończenie stanowy dla dziwnego przełącznika światła"}
 
@@ -341,7 +341,7 @@ Czy zaakceptuje on ciąg „aaa”? lub „aba”? Czy może cokolwiek z 3 lub w
 
 Gdy przejdzie on do trzeciego znaku ciągu, znajdziesz się w stanie nr 4 który nazywa się stanem *pułapki* (po angielsku „trap state”), ponieważ nie możesz się z niego wydostać.
 Gdyby to była mapa dla systemu kolei podmiejskiej, który mieliśmy na początku tej sekcji, spowodowałoby to problemy, ponieważ w końcu wszyscy znaleźliby się w stanie pułapki i mielibyśmy potężne przeludnienie na dworcu.
-Stan pułapki może być jednak bardzo przydatny w innych sytuacjach --- szczególnie, gdy wystąpi błąd w danych wejściowych. Nie ważne co wystąpi po błędzie, nie chcesz iść dalej.
+Stan pułapki może być jednak bardzo przydatny w innych sytuacjach — szczególnie, gdy wystąpi błąd w danych wejściowych. Nie ważne co wystąpi po błędzie, nie chcesz iść dalej.
 
 W powyższym przykładzie językiem FSA jest dowolna kombinacja co najwyżej dwóch liter „a” i „b”.
 Nie zapominaj, że pusty ciąg jest również akceptowany. To bardzo mały język; jedynymi ciągami w nim są:
@@ -376,7 +376,7 @@ Dla przykładu spórz na poniższy FSA dla kuchenki mikrofalowej. Zwróć uwagę
 Na przykład, jeśli ktoś chciałby ustawić power1, to nie zadziała to dopóki nie ustawi przedtem timer1.
 Po zapoznaniu się z tą sekwencją jest to łatwe, ale projektant powinien zastanowić się, czy konieczne jest zmuszenie użytkownika do tego rodzaju czynności.
 Tego rodzaju problemy stają się proste, gdy spojrzysz na FSA.
-Właśnie wkroczyliśmy w obszar interakcji człowiek -- komputer! Nie jest to zaskakujące, ponieważ większość dziedzin informatyki ostatecznie przenika się nawzajem --- ale nie jest to aż tak ważne zastosowanie FSA, więc wróćmy do bardziej powszechnych zastosowań.
+Właśnie wkroczyliśmy w obszar interakcji człowiek — komputer! Nie jest to zaskakujące, ponieważ większość dziedzin informatyki ostatecznie przenika się nawzajem — ale nie jest to aż tak ważne zastosowanie FSA, więc wróćmy do bardziej powszechnych zastosowań.
 
 {image filename="finite-state-automata-microwave-example.png" alt="FSA dla kuchenki mikrofalowej"}
 
@@ -467,7 +467,7 @@ Możesz kliknąć prawym przyciskiem myszy na stany i przejścia, aby je zmienia
 Zapis „a|b” oznacza, że przejście zostanie wykonane dla znaku „a” lub „b” (odpowiada to dwóm równoległym przejściom).
 
 Jeśli twój FSA nie rozwiąże zadanego problemu, otrzymasz podpowiedź w postaci łańcucha, który FSA traktuje niepoprawnie. Dzięki temu możesz go testować i poprawiać. Jeśli utkniesz, kliknij „Rozwiąż ćwiczenie”.
-Możesz również śledzić dane wejściowe podczas pisania -- kliknij prawym przyciskiem myszy, aby wybrać tę opcję.
+Możesz również śledzić dane wejściowe podczas pisania — kliknij prawym przyciskiem myszy, aby wybrać tę opcję.
 Na [stronie SwissEduc](http://www.swisseduc.ch/compscience/) możesz znaleźć więcej instrukcji.
 
 {image filename="finite-state-automata-exorciser-error-screenshot.png" alt="Oprogramowanie Exorciser od SwissEduc"}
@@ -491,7 +491,7 @@ Innym szeroko stosowanym programem do eksperymentowania z FSA jest JFLAP (pobier
 
 Poniżej przedstawiamy instrukcję do stworzenia FSA w JFLAP. Użyjemy następującego przykładu:
 
-{image filename="jflap-create-state.png" alt="Tworzenie FSA --- przykład"}
+{image filename="jflap-create-state.png" alt="Tworzenie FSA — przykład"}
 
 {comment}
 
@@ -513,11 +513,11 @@ Możesz przesuwać stany za pomocą narzędzia strzałki.
 Aby zobaczyć, jak FSA przetwarza dane wejściowe, użyj menu „Wejście” (u góry), wybierz „Krok z zamknięciem”, wpisz krótki ciąg znaków, np. „abaa” i kliknij „OK”. Następnie w dolnej części okna możesz śledzić łańcuch znak po znaku, naciskając „Krok”, który podświetla bieżący stan podczas przechodzenia przez łańcuch.
 Jeśli przejdziesz przez łańcuch i skończysz w stanie ostatecznym (akceptującym), panel zmieni się na zielony. Aby powrócić do okna edytora, przejdź do menu „Plik” i wybierz „Odrzuć kartę”.
 
-{image filename="jflap-create-accept.png" alt="Tworzenie FSA --- testowanie z wejściem"}
+{image filename="jflap-create-accept.png" alt="Tworzenie FSA — testowanie z wejściem"}
 
 Możesz uruchomić wiele testów za jednym razem. Z menu „Wejście” wybierz „Wielokrotne uruchomienie” i wpisz swoje łańcuchy testowe do tabeli lub załaduj je z pliku tekstowego.
 
-{image filename="jflap-create-accept-multi.png" alt="Tworzenie FSA --- wielokrotne uruchomienie"}
+{image filename="jflap-create-accept-multi.png" alt="Tworzenie FSA — wielokrotne uruchomienie"}
 
 Możesz nawet wykonać testy z pustym łańcuchem, pozostawiając pustą linię w tabeli, którą możesz zrobić, naciskając przycisk „Enter Lambda”.
 
@@ -544,7 +544,7 @@ Korzystając z Exorciser lub JFLAP, skonstruuj FSA, który pobiera dane wejścio
 
 {panel type="teacher-note" summary="Rozwiązania"}
 
-Poniższe rozwiązania podane są dla najmniejszego/najprostszego sposobu przedstawienia powyższych języków, ale uczniowie mogą wymyślić inne, które są prawidłowe. Aby je sprawdzić, wypróbuj przykłady łańcuchów, które są akceptowane i nie są akceptowane. [Rozwiązania do powyższego, które należy jeszcze podać --- skontaktuj się z Timem Bellem, jeśli ich potrzebujesz, a my ustalimy je priorytetowo]
+Poniższe rozwiązania podane są dla najmniejszego/najprostszego sposobu przedstawienia powyższych języków, ale uczniowie mogą wymyślić inne, które są prawidłowe. Aby je sprawdzić, wypróbuj przykłady łańcuchów, które są akceptowane i nie są akceptowane. [Rozwiązania do powyższego, które należy jeszcze podać — skontaktuj się z Timem Bellem, jeśli ich potrzebujesz, a my ustalimy je priorytetowo]
 
 {panel end}
 
@@ -558,7 +558,7 @@ W przypadku FSA, które konstruujesz, sprawdź, czy akceptują prawidłowe dane 
 
 {panel type="teacher-note" summary="Wskazówka"}
 
-Sprawdzenie, czy nieprawidłowe dane wejściowe nie są skuteczne, jest ważne --- w przeciwnym razie uczeń mógłby wykonać FSA, który akceptuje dowolne dane wejściowe, i przejdzie wszystkie testy. Uczniowie będą musieli wymyślić przykłady, które testują różne części FSA, aby pokazać, że nie dają wyników fałszywie pozytywnych lub fałszywie ujemnych.
+Sprawdzenie, czy nieprawidłowe dane wejściowe nie są skuteczne, jest ważne — w przeciwnym razie uczeń mógłby wykonać FSA, który akceptuje dowolne dane wejściowe, i przejdzie wszystkie testy. Uczniowie będą musieli wymyślić przykłady, które testują różne części FSA, aby pokazać, że nie dają wyników fałszywie pozytywnych lub fałszywie ujemnych.
 
 {panel end}
 
@@ -577,7 +577,7 @@ Rozwiązania dla zadań zostaną dostarczone w późniejszej wersji tego przewod
 
 {comment}
 
-.. xTCB udziel odpowiedzi/wskazówek dla nauczycieli --- np. miej „dzień” wspólnie na końcu
+.. xTCB udziel odpowiedzi/wskazówek dla nauczycieli — np. miej „dzień” wspólnie na końcu
 
 {comment end}
 
@@ -615,7 +615,7 @@ Ten FSA wykrywa liczby binarne, które są wielokrotnościami 3 (tj. 0, 11, 110,
 {panel type="activity" summary="Automaty skończenie stanowe w życiu codziennym"}
 Istnieje wiele systemów wykorzystujących FSA. Mógłbyś wybrać jakiś system iwyjaśnić, jak można go reprezentować za pomocą FSA oraz pokazać przykłady sekwencji danych wejściowych, które musi obsłużyć. Przykłady takich systemów to:
 
-- Gry planszowe. Proste gry planszowe są często po prostu FSA, gdzie następny ruch jest określony przez pewne dane wejściowe (np. liczbę z rzutu kostką), a stan końcowy oznacza, że ​​ukończyłeś grę --- czyli pierwsza osoba, która dotrze do stanu końcowego wygrywa. Większość gier jest zbyt skomplikowana, aby narysować pełną wersję FSA, ale jako przykład można posłużyć się prostą grą, taką jak węże i drabiny. Podaj przykłady sekwencji rzutów kostką, które doprowadzą cię do końca gry? A które nie?!
+- Gry planszowe. Proste gry planszowe są często po prostu FSA, gdzie następny ruch jest określony przez pewne dane wejściowe (np. liczbę z rzutu kostką), a stan końcowy oznacza, że ​​ukończyłeś grę — czyli pierwsza osoba, która dotrze do stanu końcowego wygrywa. Większość gier jest zbyt skomplikowana, aby narysować pełną wersję FSA, ale jako przykład można posłużyć się prostą grą, taką jak węże i drabiny. Podaj przykłady sekwencji rzutów kostką, które doprowadzą cię do końca gry? A które nie?!
 - Proste urządzenia z kilkoma przyciskami często mają stany, które można łatwo zidentyfikować. Na przykład zdalne sterowanie alarmem samochodowym może mieć dwa przyciski. To, co dzieje się z samochodem, zależy od kolejności, w jakiej je naciskasz i aktualnego stanu samochodu (czy alarm w nim jest włączony, czy nie). W przypadku urządzeń, które automatycznie włączają się lub wyłączają po pewnym czasie, konieczne może być wprowadzenie danych wejściowych, takich jak „oczekiwanie przez 30 sekund”. Inne urządzenia do rozważenia to zegarki cyfrowe (z takimi stanami jak „pokazywanie czasu”, „pokazywanie daty”, „pokazywanie stopera”, „stoper działa”), przyciski zasilania i wysuwania na odtwarzaczu CD, wybór kanału na pilocie telewizora (tylko liczby), ustawienie zegara, przechowywanie ustawień wstępnych w radiu samochodowym i panele kontrolne alarmów przeciwwłamaniowych.
 
 {panel end}
@@ -668,7 +668,7 @@ Jeśli chcesz utworzyć schematy FSA, możesz użyć programu JFLAP lub programu
 .. stronie, ale byłoby to rozpraszające linkowanie tego tutaj:
 .. http://www.ccs3.lanl.gov/mega-math/workbk/machine/mabkgd.html
 
-.. Maszyny Mealy'ego/ Moore'a --- poza zakresem?
+.. Maszyny Mealy'ego/ Moore'a — poza zakresem?
 .. Jeśli pracowałeś z liczbami binarnymi, sprawdź, czy możesz dowiedzieć się, co ten
 .. FSA robi (wypróbuj każdą liczbę binarną jako dane wejściowe: 0, 1, 10, 11, 100, 101, 110 etc.)
 .. zrób to w jflap
@@ -705,11 +705,11 @@ i ostatecznie
 {glossary-link term="automat skończenie stanowy"}automaty skończenie stanowe{glossary-link end}.
 Dlatego poprzedni podrozdział dotyczący FSA musi zostać omówiona przed rozpoczęciem wyrażeń regularnych.
 
-Możliwe, że uczniowie używali już wyrażeń regularnych, ponieważ są one wbudowane w wiele języków programowania i są często używane podczas pisania programów skryptowych. Będziemy krótko przyglądać się takim zastosowaniom --- a są one bardzo istotne --- ale w językach formalnych interesuje nas również granica tego, co może zostać zaprezentowane za ich pomocą i jak przekonwertować wyrażenie regularne na FSA. Dlatego to powinno być coś, co skłoni uczniów do myślenia, nawet jeśli są ekspertami w programowaniu z wykorzystaniem „regex”.
+Możliwe, że uczniowie używali już wyrażeń regularnych, ponieważ są one wbudowane w wiele języków programowania i są często używane podczas pisania programów skryptowych. Będziemy krótko przyglądać się takim zastosowaniom — a są one bardzo istotne — ale w językach formalnych interesuje nas również granica tego, co może zostać zaprezentowane za ich pomocą i jak przekonwertować wyrażenie regularne na FSA. Dlatego to powinno być coś, co skłoni uczniów do myślenia, nawet jeśli są ekspertami w programowaniu z wykorzystaniem „regex”.
 
 {panel end}
 
-{panel type="teacher-note" summary="Ćwiczenie -- odwrócone kalambury"}
+{panel type="teacher-note" summary="Ćwiczenie — odwrócone kalambury"}
 
 Jeśli masz czas, następujące ćwiczenie („odwrócone kalambury”) można wykonać przed lub po nauczeniu wyrażeń regularnych. Zalecamy korzystanie z niego wcześniej, ponieważ staje się ono konstruktywistycznym podejściem, które zachęca uczniów do projektowania własnych notacji dla języków regularnych i jest motywatorem do nauki precyzyjnej notacji.
 
@@ -771,7 +771,7 @@ Teraz spróbuj wpisać kropkę jako czwartą literę: „cat.”. W wyrażeniu r
 
 Co otrzymasz, jeśli wyszukujesz „ ... ” (trzy kropki ze spacją przed i po)?
 
-Teraz spróbuj wyszukać „ic.”. Znak „.” pasuje do dowolnej litery, więc jeśli chcesz wyszukać kropkę, musisz napisać tak: „ic\.” --- użyj tego wyszukiwania, aby znaleźć „ic” na końcu zdania.
+Teraz spróbuj wyszukać „ic.”. Znak „.” pasuje do dowolnej litery, więc jeśli chcesz wyszukać kropkę, musisz napisać tak: „ic\.” — użyj tego wyszukiwania, aby znaleźć „ic” na końcu zdania.
 
 Kolejny specjalny symbol to „\\d”, który pasuje do dowolnej cyfry. Spróbuj dopasować 2, 3 lub 4 cyfry z rzędu (na przykład dwie cyfry z rzędu to „\\d\\d”).
 
@@ -887,7 +887,7 @@ Szczególna forma wyrażen regularnych, których używalismy została zaczerpni�
 
 {comment end}
 
-Wyrażenia regularne mają swoje ograniczenia --- na przykład, nie będziesz w stanie stworzyć takiego, który będzie w stanie dopasować palindromom (słowa i frazy, które są takie same czytane zarówno od przodu jak i od tyłu, takie jak „kajak”, „oko” i „atak kata”). Nie można użyć jednego do wykrycia łańcuchów składających się z *n* powtórzeń litery „a”, po której następuje *n* powtórzeń litery „b”.
+Wyrażenia regularne mają swoje ograniczenia — na przykład, nie będziesz w stanie stworzyć takiego, który będzie w stanie dopasować palindromom (słowa i frazy, które są takie same czytane zarówno od przodu jak i od tyłu, takie jak „kajak”, „oko” i „atak kata”). Nie można użyć jednego do wykrycia łańcuchów składających się z *n* powtórzeń litery „a”, po której następuje *n* powtórzeń litery „b”.
 Do tego typu wzorców potrzebny jest mocniejszy system zwany gramatyką (zobacz [rozdział o gramatyce] ((rozdzialy/jezyki-formalne.html#gramatyki-i-paroswanie)).
 Niemniej jednak wyrażenia regularne są bardzo przydatne w w typowym dostosowaniu wzorców.
 
@@ -904,7 +904,7 @@ Istnieje bezpośredni związek między wyrażeniami regularnych i FSA. Dla przyk
 (aa)+(bb)+
 ```
 
-Teraz spójrz, jak następujący FSA działa na tych łańcuchach --- możesz spróbować „aabb”, „aaaabb”, „aaaaabbbb”, a także zobacz, co dzieje się z łańcuchami takimi jak „aaabb”, „aa”, „aabbb” i tak dalej.
+Teraz spójrz, jak następujący FSA działa na tych łańcuchach — możesz spróbować „aabb”, „aaaabb”, „aaaaabbbb”, a także zobacz, co dzieje się z łańcuchami takimi jak „aaabb”, „aa”, „aabbb” i tak dalej.
 
 {image filename="finite-state-automata-aabb-trap.png" alt="FSA dla (aa)+(bb)+"}
 
@@ -920,7 +920,7 @@ które pasują do tego wyrażenia regularnego.
 W powyższym przykładzie najkrótszym łańcuchem w języku jest „aabb”, potem są „aaaabb”, „aabbbb” i tak dalej w nieskończoność.
 Istnieje również nieskończona liczba łańcuchów, które *nie są* w tym języku, jak „a”, „aaa”, „aaaaaa” i tak dalej.
 
-W powyższym przykładzie FSA jest naprawdę łatwym sposobem sprawdzenia wyrażenia regularnego --- możesz napisać bardzo szybki i mały program, żeby zaimplementować to (w rzeczywistości jest to dobre ćwiczenie: zazwyczaj masz tablicę lub listę z wpisem dla każdego stanu, a każdy wpis informuje cię, do którego stanu idziesz po każdym znaku, a także czy jest to stan ostateczny. Na każdym kroku program po prostu sprawdza, do którego stanu iść.)
+W powyższym przykładzie FSA jest naprawdę łatwym sposobem sprawdzenia wyrażenia regularnego — możesz napisać bardzo szybki i mały program, żeby zaimplementować to (w rzeczywistości jest to dobre ćwiczenie: zazwyczaj masz tablicę lub listę z wpisem dla każdego stanu, a każdy wpis informuje cię, do którego stanu idziesz po każdym znaku, a także czy jest to stan ostateczny. Na każdym kroku program po prostu sprawdza, do którego stanu iść.)
 
 Na szczęście *każde* wyrażenie regularne można przekonwertować na FSA. Nie przyjrzymy się w jaki sposób jest to robione, ale zarówno Exorciser, jak i JFLAP mogą to zrobić za ciebie (zobacz ćwiczenia poniżej).
 
@@ -984,9 +984,9 @@ Na przykład „a+” jest tym samym co „aa*”, a „\\d” to „0|1|2|3|4|5
 
 Skorzystaj z tej części, jeśli używasz Exorciser, który jest zalecany dla tego projektu, ale jeśli używasz JFLAP, przejdź do **Konwersja z JFLAP** poniżej.
 
-Exorciser jest bardzo prosty. W rzeczywistości, jeśli nie zmienisz ustawień domyślnych, może on konwertować tylko wyrażenia regularne, używając dwóch znaków: „a” i „b”. Ale nawet to wystarczy (teoretycznie każde wejście może być reprezentowane dwoma znakami --- to tak jak w liczbach binarnych!)
+Exorciser jest bardzo prosty. W rzeczywistości, jeśli nie zmienisz ustawień domyślnych, może on konwertować tylko wyrażenia regularne, używając dwóch znaków: „a” i „b”. Ale nawet to wystarczy (teoretycznie każde wejście może być reprezentowane dwoma znakami — to tak jak w liczbach binarnych!)
 
-Na dodatek Exorciser ma dostępny pusty symbol łańcucha --- jeśli wpiszesz „e”, zostanie przekonwertowany na {math}\epsilon{math end}.
+Na dodatek Exorciser ma dostępny pusty symbol łańcucha — jeśli wpiszesz „e”, zostanie przekonwertowany na {math}\epsilon{math end}.
 Na przykład „(a| {math}\epsilon{math end})” oznacza opcjonalne „a” w danych wejściowych.
 
 Aby wykonać ten projekt za pomocą Exorciser, przejdź do okna startowego („home”) i wybierz drugie łącze „Konwersja wyrażenia regularnego do automatów skończonych”.
@@ -998,7 +998,7 @@ Na rozgrzewkę spróbuj:
 aabb
 ```
 
-potem kliknij „rozwiąż ćwiczenie” (to jest skrót --- oprogramowanie jest przeznaczone dla uczniów do tworzenia własnych FSA, ale to wykracza poza to, co robimy w tym rozdziale).
+potem kliknij „rozwiąż ćwiczenie” (to jest skrót — oprogramowanie jest przeznaczone dla uczniów do tworzenia własnych FSA, ale to wykracza poza to, co robimy w tym rozdziale).
 
 Powinieneś otrzymać bardzo prosty FSA!
 
@@ -1018,7 +1018,7 @@ Twój raport z projektu powinien pokazywać wyrażenia regularne, wyjaśniać, j
 **Konwertowanie z JFLAP**
 
 W [JFLAP] (http://www.jflap.org) możesz używać prawie dowolnego znaku jako danych wejściowych.
-Głównymi wyjątkami są „\*”, „+” (mylące: „+” jest używany zamiast „|” dla alternatywy) i „!” (który jest pustym łańcuchem --- w preferencjach, które możesz wybrać, ustaw czy jest pokazywany jako {math}\lambda{math end} lub {math}\epsilon{math end}).
+Głównymi wyjątkami są „\*”, „+” (mylące: „+” jest używany zamiast „|” dla alternatywy) i „!” (który jest pustym łańcuchem — w preferencjach, które możesz wybrać, ustaw czy jest pokazywany jako {math}\lambda{math end} lub {math}\epsilon{math end}).
 
 Zatem głównymi operatorami dostępnymi w JFLAP są:
 
@@ -1028,7 +1028,7 @@ Zatem głównymi operatorami dostępnymi w JFLAP są:
 
 Oprogramowanie JFLAP może współpracować z różnymi językami formalnymi, więc musisz zignorować wiele opcji, które oferuje! W tej części dowiesz się, co dokładnie należy robić.
 
-W poniższym samouczku są pewne szczegóły dotyczące formatu, który JFLAP wykorzystuje do wyrażeń regularnych --- wystarczy przeczytać sekcję „Definicja” i „Tworzenie wyrażeń regularnych”.
+W poniższym samouczku są pewne szczegóły dotyczące formatu, który JFLAP wykorzystuje do wyrażeń regularnych — wystarczy przeczytać sekcję „Definicja” i „Tworzenie wyrażeń regularnych”.
 
 [http://www.jflap.org/tutorial/regular/index.html](http://www.jflap.org/tutorial/regular/index.html)
 
@@ -1059,7 +1059,7 @@ Aby przekonwertować NFA na DFA, naciśnij przycisk „Eksportuj”, a następni
 
 {image filename="jflap-ab-star-a-dfa-screenshot.png" alt="Po konwersji do DFA"}
 
-To już prawie koniec. Jeśli trudno jest odczytać FSA, możesz przesuwać stany po ekranie, wybierając narzędzie strzałki (po lewej stronie paska narzędzi --- jeśli stany nie będą się przesuwać, gdy je chwycisz, to upewnij się, że klikniesz ikonę strzałki zanim spróbujesz je przenieść). Stany mogą mieć pod nimi jakieś nieistorne etykiety; możesz je ukryć, wybierając narzędzie strzałki, klikając prawym przyciskiem myszy białą część okna i odznacz pole „Wyświetlaj etykiety stanów”.
+To już prawie koniec. Jeśli trudno jest odczytać FSA, możesz przesuwać stany po ekranie, wybierając narzędzie strzałki (po lewej stronie paska narzędzi — jeśli stany nie będą się przesuwać, gdy je chwycisz, to upewnij się, że klikniesz ikonę strzałki zanim spróbujesz je przenieść). Stany mogą mieć pod nimi jakieś nieistorne etykiety; możesz je ukryć, wybierając narzędzie strzałki, klikając prawym przyciskiem myszy białą część okna i odznacz pole „Wyświetlaj etykiety stanów”.
 
 {image filename="jflap-ab-star-a-dfa-tidy-screenshot.png" alt="Po uporządkowaniu DFA"}
 
@@ -1101,7 +1101,7 @@ które to narzędzie może wykonać i napisz wyrażenia regularne do wyszukiwani
  - słowa, które składają się z liter które występują w twoim imieniu
  - słowa zawierające wszystkie samogłoski w odwrotnej kolejności
  - słowa, które można stworzyć za pomocą używając tylko nut na pianinie (tj. litery od A do G i od a do g)
- - słowa, które są wyjątkami od reguły w języku angielskim „i przed e za wyjątkiem po c” (ang. „i before e except after c”) --- upewnij się, że znajdziesz słowa takie jak „forfeit” oraz „science”.
+ - słowa, które są wyjątkami od reguły w języku angielskim „i przed e za wyjątkiem po c” (ang. „i before e except after c”) — upewnij się, że znajdziesz słowa takie jak „forfeit” oraz „science”.
 
 - Komenda *Znajdź* w Microsoft Word używa wyrażeń regularnych po wybraniu opcji „Użyj symboli wieloznacznych”. Aby uzyskać więcej informacji, zobacz artykuł [Grahama Mayora](http://word.mvps.org/AboutMVPs/graham_mayor.htm) - [„Znajdowanie i zastępowanie znaków za pomocą symboli wieloznacznych”](http://word.mvps.org/FAQs/General/UsingWildcards.htm).
 
@@ -1129,7 +1129,7 @@ Inne strony do eksperymentów z wyrażeniami regularnymi obejmują:
 
 - [http://regexpal.com/](http://regexpal.com/) (dopasowuje podczas pisania)
 - [http://www.regexplanet.com/advanced/javascript/index.html](http://www.regexplanet.com/advanced/javascript/index.html) (zawiera odmiany wyrażeń regularnych dla wielu języków programowania)
-- [http://www.txt2re.com/](http://www.txt2re.com/) --- wpisujesz przykładowy tekst i próbuje zasugerować wyrażenie regularne!
+- [http://www.txt2re.com/](http://www.txt2re.com/) — wpisujesz przykładowy tekst i próbuje zasugerować wyrażenie regularne!
 - [http://www.regextester.com/](http://www.regextester.com/)
 - [http://www.pyweek.org/e/RegExExpress/](http://www.pyweek.org/e/RegExExpress/)
 - [https://regexhero.net/  (może być płatne)](https://regexhero.net/)
@@ -1155,7 +1155,7 @@ Przygotowując się do lektury tego rozdziału, możesz wykonać ćwiczenie „p
 
 {comment}
 
-.. xtcb albo gra karciana, w której możesz podstawić reguły gramatyki (podając ciąg znaków, spróbuj zastosować gramatykę od dołu do góry --- zamień sekwencję na terminal, dozwolone jest cofanie, to znaczy zamień terminal ponownie - używaj obrazów zamiast  a/b? zobrazkami powinny być jabłka/banany, może nawiasy?) lub HTML5, w którym musisz rozwiązać zagadkę (zasady, aby dostać się do danego ciągu znaków)
+.. xtcb albo gra karciana, w której możesz podstawić reguły gramatyki (podając ciąg znaków, spróbuj zastosować gramatykę od dołu do góry — zamień sekwencję na terminal, dozwolone jest cofanie, to znaczy zamień terminal ponownie - używaj obrazów zamiast  a/b? zobrazkami powinny być jabłka/banany, może nawiasy?) lub HTML5, w którym musisz rozwiązać zagadkę (zasady, aby dostać się do danego ciągu znaków)
 
 .. xtcb http://cs.jhu.edu/~jason/papers/#eisner-smith-2008-tnlp może być użyteczne (konkursowe pisanie gramatyki)
 
@@ -1169,7 +1169,7 @@ Pamietasz Yodę z Gwiednych Wojen? Ma on bardzo osobliwą gramatykę. Jednak wci
 Elastyczność reguł gramatyki angielskiej (jak i polskiej) oznacza, że zazwyczaj możesz zostać zrozumiany, nawet jeśli nie jesteś całkiem poprawny, ale oznacza to również, że reguły są bardzo skomplikowane i trudne do zastosowania.
 
 Gramatyki w językach formalnych są znacznie bardziej przewidywalne niż gramatyki w językach naturalnych. Dlatego nazywa się je językami *formalnymi*!
-Kiedy mówisz po angielsku, gramatyka moze sprawiać tobie wiele trudności. Istnieje wiele reguł i wiele wyjatków od tych reguł -- na przykład potrzebujesz apostrofu, jeśli piszesz „the computer's USB port”, ale musisz to pominąć, jeśli powiesz „its USB port”.
+Kiedy mówisz po angielsku, gramatyka moze sprawiać tobie wiele trudności. Istnieje wiele reguł i wiele wyjatków od tych reguł — na przykład potrzebujesz apostrofu, jeśli piszesz „the computer's USB port”, ale musisz to pominąć, jeśli powiesz „its USB port”.
 
 {glossary-definition term="gramatyka" definition="W językach formalnych: zestaw reguł dla określania języka, na przykład w celu określenia składni języków programowania."}
 {glossary-link term="gramatyka" reference-text="Języki formalne"}Gramatyki{glossary-link end}
@@ -1223,7 +1223,7 @@ Program *context free art* (http://www.contextfreeart.org/](http://www.contextfr
 
 {comment}
 
-..TCB powyższy film context-free-tree został wygenerowany z programu bezkontekstowego --- możesz kontrolować szybkość klatek itp., Jeśli potrzebna jest inna wersja. To jest po prostu „demo1” w programie. Muzyka pochodzi z utworu Andrew Bella
+..TCB powyższy film context-free-tree został wygenerowany z programu bezkontekstowego — możesz kontrolować szybkość klatek itp., Jeśli potrzebna jest inna wersja. To jest po prostu „demo1” w programie. Muzyka pochodzi z utworu Andrew Bella
 
 {comment end}
 
