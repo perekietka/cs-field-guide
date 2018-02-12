@@ -69,7 +69,7 @@ Teraz przeprowadź kolejną konwersację z Elizą. Jest wiele innych przykładó
 
 Jak już wspomnieliśmy, Eliza jest czatbotem, który pracuje w specjalistycznej dziedzinie (próbuje być terapeutką). Stara się brzmieć inteligentnie poprzez zadawanie ogólnikowych pytań. Dzięki temu szybko zapewne odkryłeś, że Eliza nie jest w ogóle inteligentna i będzie powtarzała te same rzeczy w kółko. Dodatkowo, prawdopodobnie zauważyłeś, że wypowiedzi Elizy często nie zawierają zbyt dużo sensu i ostatecznie kończy się zdaniem które jest bez sensu dla człowieka.
 
-Spróbuj przeprowadzić rozmowę z kolejnym czatbotem — Mitsuku. Zauważ, że ona nazywa cię „sędzią”. Możesz przekonać się dlaczego tak jest, gdy przeczytasz część rozdziału o teście Turinga poniżej. 
+Spróbuj przeprowadzić rozmowę z kolejnym czatbotem — Mitsuku.
 
 Czabot Mitsuku został aparty na czatbocie Alice, która jednak nie jest już dostępny na stronie producenta. Mitsuku zawiera całą bazę wiedzy *AIML* czatbota Alice. Dalsze informacje o projekcie Alice można znaleźć na [Wikipedii] (https://pl.wikipedia.org/wiki/ALICE_(sztuczna_inteligencja)) [przyp. tlum.].
 
@@ -91,15 +91,15 @@ Jakość tych reguł determinuje to, jak inteligentnie czatbot będzie brzmiał.
 
 Mitsuku jest bez wątpienia bardziej inteligentna od Elizy, jednak nadal ma ograniczenia. Czasami sama się do nich przyznaje!!
 
-**Sędzia**:: Co wydarzy się w roku 2000?
+**Człowiek**:: Co wydarzy się w roku 2000?
 **Mitsuku**: Nie mogę przewidzieć przyszłości.
-**Sędzia**: To jest przeszłość
+**Człowiek**: To jest przeszłość
 **Mitsuku**: Tak, to jest coś z przeszłości.
-**Sędzia**: Więc dlaczego powiedziałaś, że nie możesz przewidzieć przyszłości?
+**Człowiek**: Więc dlaczego powiedziałaś, że nie możesz przewidzieć przyszłości?
 **Mitsuku**: To była wstępnie zaprogramowana odpowiedź, całkowicie zdeterminowana przez twoje stwierdzenie.
 
 
-Sędzia w tej rozmowie musiał być trochę złośliwy, oszukując ją i mówiąc „co wydarzy się”. Jej zasady nie przewidują, że człowiek może ją w taki sposób traktować. 
+Człowiek w tej rozmowie musiał być trochę złośliwy, oszukując ją i mówiąc „co wydarzy się”. Jej zasady nie przewidują, że człowiek może ją w taki sposób traktować. 
 
 ### Uczące się czatboty
 
