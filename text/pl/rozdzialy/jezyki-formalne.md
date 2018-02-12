@@ -83,7 +83,7 @@ Uczniowie mogą zapytać, jak wykonać bardziej skomplikowane wyszukiwania, taki
 
 {panel end}
 
-Kod, którego użyłeś powyżej, jest częścią języka formalnego zwanego „wyrażeniem regularnym”. Programy komputerowe, które mają za zadanie interpretowanie wpisanych danych wejściowych i ich akceptację, używają wyrażeń regularnych do sprawdzania elementów takich jak daty, numery kart kredytowych i kody produktów. Są szeroko używane przez kompilatory i interpretatory języków programowania, aby zrozumieć tekst, który programista wpisuje.
+Kod, którego użyłeś powyżej, jest częścią języka formalnego zwanego „wyrażeniem regularnym”. Programy komputerowe, które mają za zadanie interpretowanie wpisanych danych wejściowych i ich akceptację, używają wyrażeń regularnych do sprawdzania elementów takich jak daty, numery kart kredytowych i kody produktów. Są szeroko używane przez kompilatory i interpretery języków programowania, aby zrozumieć tekst, który programista wpisuje.
 
 Przyjrzymy się im bardziej szczegółowo w podrozdziale na temat [wyrażeń regularnych](rozdzialy/jezyki-formalne.html#wyrażenia-regularne).
 
