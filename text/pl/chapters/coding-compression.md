@@ -110,7 +110,7 @@ Kluczowym pytaniem w przypadku kompresji jest czy możemy zapisać obraz przy po
 
 Okazuje się, że możemy. Jest wiele sposobów na osiągnięcie tego celu, ale w tym podrozdziale skupimy się na metodzie zwanej *kodowaniem długości serii*.
 
-Wyobraź sobie, że masz za zadanie przeczytać powyższe bity komuś, kto z kolei ma je zapisać. Po pewnej chwili będziesz mówił “pięć zer” zamiast “zero zero zero zero zero”. To usprawnienie jest podstawą kodowania długości serii (RLE), które pozwala zaoszczędzić przestrzeń potrzebną do przechowywania cyfrowych obrazów. W kodowaniu długości serii zastępujemy każdy wiersz liczbą kolejnych pikseli tego samego koloru, *zawsze zaczynając od liczby pikseli białych*. W omówiony wyżej przykładzie pierwszy wiersz zawiera jeden biały, dwa czarne, cztery białe, jedne czarny, cztery białe, dwa czarne i jeden biały piksel.
+Wyobraź sobie, że masz za zadanie przeczytać powyższe bity komuś, kto z kolei ma je zapisać. Po pewnej chwili będziesz mówił „pięć zer” zamiast „zero zero zero zero zero”. To usprawnienie jest podstawą kodowania długości serii (RLE), które pozwala zaoszczędzić przestrzeń potrzebną do przechowywania cyfrowych obrazów. W kodowaniu długości serii zastępujemy każdy wiersz liczbą kolejnych pikseli tego samego koloru, *zawsze zaczynając od liczby pikseli białych*. W omówiony wyżej przykładzie pierwszy wiersz zawiera jeden biały, dwa czarne, cztery białe, jedne czarny, cztery białe, dwa czarne i jeden biały piksel.
 
 ```
 011000010000110
@@ -255,7 +255,7 @@ Jaki obraz będzie miał największy stopień kompresji przy kodowaniu długośc
 Kiedy kompresja jest najgorsza? Czy potrafisz znaleźć obraz, który ma *większą* reprezentację skompresowaną? (Pamiętaj o przecinkach, którymi oddzielamy długości serii!) Jest to przypadek, w którym wydajność algorytmu jest najgorsza.
 {panel end}
 
-{panel type="spoiler" summary="Rozwiązanie zadania”}
+{panel type="spoiler" summary="Rozwiązanie zadania"}
 Najlepszy przypadek jest wtedy, gdy obraz jest całkowicie biały (wystarczy jedna liczba na wiersz).
 Najgorszy przypadek ma miejsce, gdy na zmianę występują piksele białe i czarne.
 {panel end}
@@ -283,7 +283,7 @@ Istnieją inne sytuacje, w których obrazy muszą być przechowywane w dokładni
 W podrozdziale o reprezentacji danych sprawdziliśmy, jak można zmniejszyć rozmiar pliku obrazu, używając mniejszej liczby bitów do opisania koloru każdego piksela.
 Jednak metody kompresji obrazu, takie jak JPEG, wykorzystują wzorce w obrazie, aby zmniejszyć przestrzeń potrzebną do jego przedstawienia, bez niekorzystnego wpływu na obraz.
 
-Poniższe trzy obrazy pokazują różnicę między zmniejszeniem głębi bitowej a użyciem wyspecjalizowanego systemu kompresji obrazu. Obraz po lewej stronie jest oryginałem, który używa 24 bity na piksel. Środkowy obraz został skompresowany do jednej trzeciej oryginalnego rozmiaru za pomocą JPEG; pomimo, iż jest to "stratna" wersja oryginału, różnica jest widoczna. Obraz po prawej stronie ma liczbę kolorów zmniejszoną do 256, a więc używa 8 bitów na piksel zamiast 24, co oznacza, że ​​zajmuje jedną trzecią pierwotnego rozmiaru. Mimo że stracił tyle samo bitów, usunięte informacje miały znacznie większy wpływ na to, jak wygląda. Na tym polega zaleta formatu JPEG: usuwa informacje z obrazu, które nie mają dużego wpływu na postrzeganą jakość. Ponadto w przypadku formatu JPEG można ustalić kompromis między jakością a rozmiarem pliku.
+Poniższe trzy obrazy pokazują różnicę między zmniejszeniem głębi bitowej a użyciem wyspecjalizowanego systemu kompresji obrazu. Obraz po lewej stronie jest oryginałem, który używa 24 bity na piksel. Środkowy obraz został skompresowany do jednej trzeciej oryginalnego rozmiaru za pomocą JPEG; pomimo, iż jest to „stratna” wersja oryginału, różnica jest widoczna. Obraz po prawej stronie ma liczbę kolorów zmniejszoną do 256, a więc używa 8 bitów na piksel zamiast 24, co oznacza, że zajmuje jedną trzecią pierwotnego rozmiaru. Mimo że stracił tyle samo bitów, usunięte informacje miały znacznie większy wpływ na to, jak wygląda. Na tym polega zaleta formatu JPEG: usuwa informacje z obrazu, które nie mają dużego wpływu na postrzeganą jakość. Ponadto w przypadku formatu JPEG można ustalić kompromis między jakością a rozmiarem pliku.
 
 Zmniejszenie liczby bitów (głębia kolorów) jest na tyle istotną zmianą, że nie uważamy tego za metodę kompresji, lecz po prostu za reprezentację niskiej jakości. Metody kompresji obrazu, takie jak JPEG, GIF i PNG, zostały zaprojektowane tak, aby wykorzystać wzorce w obrazie, w celu uzyskania znacznej redukcji rozmiaru pliku bez znaczącej utraty jakości.
 
@@ -351,7 +351,7 @@ Okazuje się, że gdyby kontynuować ten wzorzec z większą ilością sinusoid,
 Ta pokazana powyżej jest wyboista, gdyż wykorzystaliśmy tylko 4 fale sinusoidalne, aby ją opisać.
 
 To właśnie dzieje się w algorytmie JPEG, jeśli kompresujesz czarno-biały obraz.
-"Kolor" pikseli w miarę przesuwania się po obrazie będzie wynosił 0 (czarny) lub pełny poziom intensywności (biały), lecz JPEG będzie przybliżał go za pomocą sumy niewielkiej liczby fal cosinusów (które mają taki sam kształt jak sinusoidy)
+„Kolor” pikseli w miarę przesuwania się po obrazie będzie wynosił 0 (czarny) lub pełny poziom intensywności (biały), lecz JPEG będzie przybliżał go za pomocą sumy niewielkiej liczby fal cosinusów (które mają taki sam kształt jak sinusoidy)
 Daje to „przedobrzenia” widoczne na powyższym obrazku; w obrazie JPEG pojawiają się one jako jasne i ciemne plamy otaczające nagłą zmianę koloru:
 
 {image filename="jpeg-word-zoomed.jpg"}
@@ -443,7 +443,7 @@ appearing soon!
 Metody kompresji ogólnego przeznaczenia muszą być bezstratne, ponieważ nie można założyć, że użytkownik zgodzi się na utratę danych. Najbardziej popularne algorytmy tego typu (takie jak ZIP, gzip i rar) oparte są na metodzie zwanej „kodowaniem Ziva-Lempela”, wymyślonej przez Jacoba Ziva i Abrahama Lempela w latach siedemdziesiątych.
 
 Przyjrzymy się temu zagadnieniu na przykładzie pliku tekstowego.
-Główną ideą kodowania Ziva-Lempela jest zastępowanie sekwencji znaków często występujących w plikach (na przykład sekwencja znaków "obraz" pojawia się często w tym rozdziale) odnośnikami do miejsca, w którym ostatnio się pojawił. Pod warunkiem, że odniesienie jest mniejsze niż zastępowana fraza, oszczędzamy miejsce. Zwykle systemy oparte na tym podejściu można wykorzystać do zredukowania plików tekstowych do zaledwie jednej czwartej ich oryginalnego rozmiaru, co nie ustepuje prawie żadnej znanej metodzie kompresowania tekstu.
+Główną ideą kodowania Ziva-Lempela jest zastępowanie sekwencji znaków często występujących w plikach (na przykład sekwencja znaków „obraz” pojawia się często w tym rozdziale) odnośnikami do miejsca, w którym ostatnio się pojawił. Pod warunkiem, że odniesienie jest mniejsze niż zastępowana fraza, oszczędzamy miejsce. Zwykle systemy oparte na tym podejściu można wykorzystać do zredukowania plików tekstowych do zaledwie jednej czwartej ich oryginalnego rozmiaru, co nie ustepuje prawie żadnej znanej metodzie kompresowania tekstu.
 
 Poniższe narzędzie interaktyne pozwala zapoznać się z tą ideą.
 Możesz kliknąć pole, aby zobaczyć, dokąd prowadzi odnośnik, a następnie wpisać odpowiednie znaki i w rezultacie odkodować tekst.
@@ -495,7 +495,7 @@ Powyższy przykład dobrze ilustruje, co dzieje się z obrazami podczas zapisu w
 
 {panel type="teacher-note" summary="Ćwiczenie metody Ziva-Lempela"}
 [Na strone CS Unplugged znajduje się ćwiczenie oraz informacje na temat metody Ziva-Lempela](http://csunplugged.org/text-compression),
-również [strona "Computing Science Inside" zawiera ćwiczenia dotyczące tego zagadnienia](https://web.archive.org/web/20150311225517/http://csi.dcs.gla.ac.uk/workshop-view.php?workshopID=1).
+również [strona „Computing Science Inside” zawiera ćwiczenia dotyczące tego zagadnienia](https://web.archive.org/web/20150311225517/http://csi.dcs.gla.ac.uk/workshop-view.php?workshopID=1).
 Strona CS4FN omawia [podobną, nieco prostszą metodę, która nie jest zbyt praktyczna](http://www.cs4fn.org/internet/crushed.php).
 {panel end}
 

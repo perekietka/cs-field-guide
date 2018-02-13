@@ -383,7 +383,7 @@ Dobierz uczniów w pary, z jednym *twórcą* i jednym *budowniczym*. Każda osob
 
 Osoby w parze nie powinny widzieć się nawzajem, ale muszą być w stanie słyszeć się, aby się komunikować. Umieść przegrodę pomiędzy osobami w każdej parze lub każ odwrócić się w przeciwne strony. Twórca ma za zadanie zbudować coś z klocków. Im bardziej kreatywny będzie, tym bardziej interesujące będzie to zadanie!
 
-Kiedy twórca zakończy budowę, przychodzi kolej budowniczego. Jego celem jest zbudowanie dokładnej repliki budowli twórcy (ale oczywiście bez znajomości wyglądu). Twórca powinien dokładnie opisać, co należy zrobić z klockami. Na przykład twórca może powiedzieć "Umieść mały czerwony klocek na dużym niebieskim klocku" lub "Ustaw dwa długie niebieskie klocki pionowo w odległości jednego klocka między nimi, a następnie umieść czerwony klocek na nich". Twórca nie powinien opisywać budynku jako całości ("Utwórz framugę").
+Kiedy twórca zakończy budowę, przychodzi kolej budowniczego. Jego celem jest zbudowanie dokładnej repliki budowli twórcy (ale oczywiście bez znajomości wyglądu). Twórca powinien dokładnie opisać, co należy zrobić z klockami. Na przykład twórca może powiedzieć „Umieść mały czerwony klocek na dużym niebieskim klocku” lub „Ustaw dwa długie niebieskie klocki pionowo w odległości jednego klocka między nimi, a następnie umieść czerwony klocek na nich”. Twórca nie powinien opisywać budynku jako całości („Utwórz framugę”).
 
 Kiedy budowniczy dochodzi do wniosku, że kopia jest gotowa, należy porównać obie konstrukcje. Jak precyzyjna była komunikacja? Które części były trudne do opisania dla twórcy lub niejasne dla budowniczego? Zmień role, aby uczestnicy mogli poznać obie strony!
 {panel end}

@@ -112,7 +112,7 @@ Spróbuj zmienić odbiorców lub treść listu. Przyjrzyj się uważnie wszystki
 Szczegółowa specyfikacja wymagań języka programowania odnośnie tego, które znaki mogą być używane oraz w jakim miejscu, jest nazywana jego *składnią*. W powyższym przykładzie składnia listy nazw wymaga kwadratowych nawiasów na liście, cudzysłowów wokół nazw i przecinków między nimi. Jeśli popełnisz błąd, np. pominiesz jeden z nawiasów kwadratowych, system zakomunikuje *błąd składni* i nie będzie mógł uruchomić programu. Każdy znak jest istotny, a jeden mały błąd w programie może go zatrzymać lub sprawić, że będzie działał nieprawidłowo.
 {panel end}
 
-Programy mogą również używać *zmiennych* do przechowywania wyników obliczeń, odbierania danych wejściowych pochodzących od użytkownika i podejmowania decyzji (zwanych *instrukcjami warunkowymi*, takimi jak instrukcja *if*). Spróbuj uruchomić ten program. Podaj liczbę mil, gdy program o nią zapyta. Nie umieszczaj jednostek przy wpisanym numerze; na przykład wprowadź po prostu "12".
+Programy mogą również używać *zmiennych* do przechowywania wyników obliczeń, odbierania danych wejściowych pochodzących od użytkownika i podejmowania decyzji (zwanych *instrukcjami warunkowymi*, takimi jak instrukcja *if*). Spróbuj uruchomić ten program. Podaj liczbę mil, gdy program o nią zapyta. Nie umieszczaj jednostek przy wpisanym numerze; na przykład wprowadź po prostu „12”.
 
 ```
 print("This program will convert miles to kilometers")
@@ -138,7 +138,7 @@ Może wydawać się nieco magiczne, że uruchomiony program daje natychmiastowe 
 
 Możesz się zastanawiać, dlaczego w ogóle potrzebujemy języków takich jak Python i dlaczego nie możemy udzielać instrukcji komputerowych w języku angielskim. Gdybyśmy wpisali na komputerze „W porządku komputerze, wypisz mi pierwszych pięć wielokrotności 3”, nie jest oczywiste czemu komputer miałby to rozumieć. Komputer po prostu nie zna takich pojęć jak „wielokrotność”, a przez to nie potrafiłby wykonać tego zdania. Komputerów nie można nauczyć znaczenia wszystkich słów, a przez to nie mogą wykonać każdego zadania. Zrozumienie ludzkiego języka jest bardzo trudnym zadaniem dla komputera, o czym dowiesz się w rozdziale „Sztuczna inteligencja”. W przeciwieństwie do ludzi, którzy rozumieją świat i widzą sens pojęć, komputery mogą jedynie postępować zgodnie z precyzyjnymi instrukcjami. Dlatego potrzebujemy języków, które są ograniczone i jednoznaczne, gdyż tylko takie instrukcje „rozumie” komputer. Przykłady takich instrukcji zamieszone są w zaprezentowanych wcześniej programach.
 
-Nie jest to jednak tak proste jak się może wydawać ponieważ komputer nie może uruchamiać instrukcji podawanych bezpośrednio w tych językach. Na najniższym poziomie komputer musi używać fizycznego sprzętu do uruchamiania instrukcji. Działania arytmetyczne, takie jak dodawanie, odejmowanie, mnożenie i dzielenie, lub proste porównania, takie jak mniejszy, większy lub równy, są wykonywane na liczbach reprezentowanych w systemie binarnym przez przepływ prądu przez fizyczne układy komputerowe składające się z tranzystorów. Wynik działania jest także liczbą reprezentowaną w postaci binarnej. Budowa szybkiego i taniego obwodu do wykonywania prostych działań arytmetycznych nie jest trudna, ale instrukcje, które ludzie chcą wydawać komputerom (np. "wypisz następujące zdanie" lub "powtórz coś 100 razy") wymagają bardziej skomplikowanych obwodów elektrycznych.
+Nie jest to jednak tak proste jak się może wydawać ponieważ komputer nie może uruchamiać instrukcji podawanych bezpośrednio w tych językach. Na najniższym poziomie komputer musi używać fizycznego sprzętu do uruchamiania instrukcji. Działania arytmetyczne, takie jak dodawanie, odejmowanie, mnożenie i dzielenie, lub proste porównania, takie jak mniejszy, większy lub równy, są wykonywane na liczbach reprezentowanych w systemie binarnym przez przepływ prądu przez fizyczne układy komputerowe składające się z tranzystorów. Wynik działania jest także liczbą reprezentowaną w postaci binarnej. Budowa szybkiego i taniego obwodu do wykonywania prostych działań arytmetycznych nie jest trudna, ale instrukcje, które ludzie chcą wydawać komputerom (np. „wypisz następujące zdanie” lub „powtórz coś 100 razy”) wymagają bardziej skomplikowanych obwodów elektrycznych.
 
 {panel type="jargon-buster" summary="System binarny"}
 
@@ -378,7 +378,7 @@ Cameron 19 15 12 9 3
 
 W pewnym momencie nauczyciel zdaje sobie sprawę, że musi ustalić średnią (z 5 sprawdzianów), którą zdobył każdy uczeń. Nie chce jednak, mając wiele innych spraw na głowie, poświęcać zbyt wiele czasu na to zadanie. Korzystając z Pythona, może bardzo szybko wygenerować potrzebne dane za pomocą mniej niż 10 linijek kodu.
 
-Zrozumienie szczegółów poniższego kodu jest nieistotne dla tego rozdziału, szczególnie jeśli nie jesteś jeszcze programistą. Jeśli kod nie jest dla ciebie jasny, prostu przeczytaj komentarze (zaczynające się od "#"), dzięki czemu zrozumiesz z grubsza, jak problem został rozwiązany.
+Zrozumienie szczegółów poniższego kodu jest nieistotne dla tego rozdziału, szczególnie jeśli nie jesteś jeszcze programistą. Jeśli kod nie jest dla ciebie jasny, prostu przeczytaj komentarze (zaczynające się od „#”), dzięki czemu zrozumiesz z grubsza, jak problem został rozwiązany.
 
 ```python3
 # Open the raw score file for reading
@@ -402,7 +402,7 @@ raw_scores_file.close()
 processed_scores_file.close()
 ```
 
-Wynikiem działania programu będzie plik zawierający imię każdego ucznia, po którym wypisana będzie suma wyników po dzieleniu przez 5. Jeśli masz zainstalowany Python na swoim komputerze, możesz uruchomić program na próbę (nie zadziała on na internetowym interpreterze, ponieważ potrzebuje dostępu do systemu plików). Po prostu zapisz dane do pliku o nazwie "scores.txt" w tym samym formacie, w jakim był wyświetlany powyżej. Program zadziała pod warunkiem, że plik znajduje się w tym samym katalogu co plik kodu źródłowego.
+Wynikiem działania programu będzie plik zawierający imię każdego ucznia, po którym wypisana będzie suma wyników po dzieleniu przez 5. Jeśli masz zainstalowany Python na swoim komputerze, możesz uruchomić program na próbę (nie zadziała on na internetowym interpreterze, ponieważ potrzebuje dostępu do systemu plików). Po prostu zapisz dane do pliku o nazwie „scores.txt” w tym samym formacie, w jakim był wyświetlany powyżej. Program zadziała pod warunkiem, że plik znajduje się w tym samym katalogu co plik kodu źródłowego.
 
 Ten problem można oczywiście rozwiązać w dowolnym języku, ale w niektórych językach jest to znacznie prostsze. Standardowe języki programowania, takie jak Java, o których wkrótce wspomnimy, nie oferują tak prostego przetwarzania plików. Java wymaga od programisty określenia, co zrobić, jeśli otwarcie pliku się nie powiedzie. Pomaga to zapobieganiu awariom programu. Python nie wymaga tego od programisty, chociaż opcjonalnie jest to możliwe, jeśli programista sobie tego życzy. Oba te podejścia mają zalety w różnych sytuacjach. Dla nauczyciela piszącego szybki skrypt do przetworzenia wyników quizu, nie ma to większego znaczenia, czy program się czasem zawiesza. Nie musi więc tracić czasu na pisanie kodu obsługującego sytuacje wyjątkowe. W przypadku dużego oprogramowania, z którego korzysta wiele osób, awarie mogą stanowić zagrożenie dla bezpieczeństwa. Zmuszenie wszystkich programistów pracujących nad takim systemem do właściwego radzenia sobie z sytuacjami wyjątkowymi może zapobiec wielu problemom. W tym przypadku podejście języka Java jest korzystniejsze.
 
@@ -420,7 +420,7 @@ Scratch nie jest przeznaczony do programowania dla przemysłu, tylko do celów e
 
 {button link="http://scratch.mit.edu/projects/19711355/#editor" text="Przykładowy projekt Scratch"}
 
-Poniżej zamieszczony został przykład prostego programu w Scratch. Jest podobny do programów, które zamieściliśmy dla Pythona i Javy. Program pyta użytkowników o liczby, dopóki nie wpiszą "stop", a następnie wyznacza średnią z podanych liczb.
+Poniżej zamieszczony został przykład prostego programu w Scratch. Jest podobny do programów, które zamieściliśmy dla Pythona i Javy. Program pyta użytkowników o liczby, dopóki nie wpiszą „stop”, a następnie wyznacza średnią z podanych liczb.
 
 {image filename="scratch-example-program.png"}
 
@@ -467,7 +467,7 @@ public class Averager {
 }
 ```
 
-Kod jest dłuższy, lecz gwarantuje większą niezawodność. Mówi, aby *spróbować* (ang. try) otworzyć i czytać plik, a jeśli wystąpi błąd, to powinien *złapać* (ang. catch) ten błąd i wypisać komunikat dla użytkownika o błędzie. Niezależnie od tego, czy wystąpi błąd, to i tak linia „I am finished!” zostanie wypisana, gdyż błąd został bezpiecznie "złapany". W języky Python możemy również wyrazić podobne zachowanie, ale nie jest to obowiązkowe i zależy od programisty. Java nawet nie skompiluje kodu, jeśli nie zostało to zrobione! Dzięki temu programist nie zapomni o sytuacjach wyjątkowych, ani nie pominie ich z lenistwa.
+Kod jest dłuższy, lecz gwarantuje większą niezawodność. Mówi, aby *spróbować* (ang. try) otworzyć i czytać plik, a jeśli wystąpi błąd, to powinien *złapać* (ang. catch) ten błąd i wypisać komunikat dla użytkownika o błędzie. Niezależnie od tego, czy wystąpi błąd, to i tak linia „I am finished!” zostanie wypisana, gdyż błąd został bezpiecznie „złapany”. W języky Python możemy również wyrazić podobne zachowanie, ale nie jest to obowiązkowe i zależy od programisty. Java nawet nie skompiluje kodu, jeśli nie zostało to zrobione! Dzięki temu programist nie zapomni o sytuacjach wyjątkowych, ani nie pominie ich z lenistwa.
 
 {comment}
 
@@ -520,7 +520,7 @@ Ponieważ sprzęt komputerowy może uruchamiać tylko programy w języku niskieg
 
 Główna różnica sprowadza się do faktu, że kompilator to program, który konwertuje kod programu na język maszynowy, który następnie jest uruchamiany na komputerze. Interpreter to program, który czyta twój program wiersz po wierszu, analizuje instrukcje i wykonuje je natychmiast.
 
-Oba podejścia mają swoje zalety, a każde z nich do jednych języków pasuje bardziej, a do innych mniej. W rzeczywistości większość współczesnych języków używa kombinacji kompilacji i interpretacji. Na przykład większość programów Java jest *kompilowana* do "języka pośredniego" o nazwie ByteCode, który jest bliższy kodowi maszynowemu niż Java. ByteCode jest następnie wykonywany przez interpreter.
+Oba podejścia mają swoje zalety, a każde z nich do jednych języków pasuje bardziej, a do innych mniej. W rzeczywistości większość współczesnych języków używa kombinacji kompilacji i interpretacji. Na przykład większość programów Java jest *kompilowana* do „języka pośredniego” o nazwie ByteCode, który jest bliższy kodowi maszynowemu niż Java. ByteCode jest następnie wykonywany przez interpreter.
 
 Jeśli twój program ma być udostępniany większemu gronu odbiorców, zwykle będziesz chciał, aby był w postaci kodu maszynowego. Dzięki temu będzie działał szybciej, użytkownik nie będzie musiał mieć zainstalowanego interpretera i kiedy ktoś pobierze kod maszynowy, nie będzie miał dostępu do kodu źródłowego programu wysokiego poziomu. Języki, w których mamy do czynienia z taką sytuacją to C#, Objective C (używane do programowania urządzeń iOS), Java i C.
 
