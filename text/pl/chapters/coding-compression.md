@@ -1,4 +1,4 @@
-# Kodowanie - Kompresja
+# Kodowanie -- Kompresja
 
 ## Z lotu ptaka
 
@@ -9,7 +9,7 @@ Dla dużych magazynów danych, takich jakie posiadają Google lub Facebook, zmni
 Częste formy kompresji będące aktualnie w użyciu to JPEG (dla zdjęć), MP3 (dla plików audio), MPEG (dla wideo w tym DVD), oraz ZIP (dla dowolnych typów danych).
 Przykładowo, metoda kompresji JPEG redukuje rozmiar zdjęcia do jednej dziesiątej lub mniejszej części początkowego rozmiaru, co oznacza, iż aparat może przechowywać 10 razy więcej zdjęć, a obrazki w sieci mogą być ściągane 10 razy szybciej.
 
-Na czym polega haczyk? Okazuje się, że może być problem z jakością danych - np. mocno skompresowany JPEG może nie być tak ostry jak nieskompresowany oryginał. Poza tym, kompresowanie i dekompresowanie wymaga mocy obliczeniowej procesora. W większości przypadków ten narzut się jednak opłaca.
+Na czym polega haczyk? Okazuje się, że może być problem z jakością danych -- np. mocno skompresowany JPEG może nie być tak ostry jak nieskompresowany oryginał. Poza tym, kompresowanie i dekompresowanie wymaga mocy obliczeniowej procesora. W większości przypadków ten narzut się jednak opłaca.
 
 {interactive name="compression-comparer" type="in-page"}
 
@@ -205,7 +205,7 @@ Przykładowy obrazek pochodzi z [ćwiczenia interaktywnego „Reprezentacja obra
 
 Poniższe ćwiczenie interaktywne pozwala na dalsze eksperymentowanie z kodowaniem długości serii.
 
-{interactive name="run-length-encoding" type="whole-page" text="RLE --- ćwiczenie interaktywne"}
+{interactive name="run-length-encoding" type="whole-page" text="RLE -- ćwiczenie interaktywne"}
 
 ### Analiza kodowania długości serii
 
@@ -213,7 +213,7 @@ Ile przestrzeni zaoszczędziliśmy wykorzystując alternatywną reprezentację, 
 
 Aby opisać obraz z naszego przykładu w postaci nieskompresowanej potrzebnych jest 225 cyfr (zer i jedynek). Policz ile potrzeba przecinków i cyfr (pomiń spacje i znaki nowej linii) w nowej reprezentacji. Innymi słowy, policz znaki potrzebne do zapisania skompresowanej reprezentacji (abyś miał pewność, że wiesz o co chodzi, podajemy ci liczbę znaków w każdym z trzech pierwszych wierszy: 29).
 
-Powinieneś otrzymać wynik 119 znaków (sprawdź, czy wszystko się zgadza). Oznacza to, że skompresowana postać wymaga jedynie 53% znaków reprezentacji oryginalnej (wynika to z proporcji 119/225). To znacząca redukcja w ilości przestrzeni potrzebnej do zapisania obrazu --- to prawie połowa rozmiaru. Nowa reprezentacja jest skompresowaną postacią poprzedniej.
+Powinieneś otrzymać wynik 119 znaków (sprawdź, czy wszystko się zgadza). Oznacza to, że skompresowana postać wymaga jedynie 53% znaków reprezentacji oryginalnej (wynika to z proporcji 119/225). To znacząca redukcja w ilości przestrzeni potrzebnej do zapisania obrazu -- to prawie połowa rozmiaru. Nowa reprezentacja jest skompresowaną postacią poprzedniej.
 
 {panel type="curiosity" summary="Kodowanie długości serii w praktyce"}
 W praktyce metoda ta (z pewnymi modyfikacjami) może być użyta do osiągnięcia kompresji na poziomie 15% oryginalnego rozmiaru. W prawdziwych systemach tylko jeden bit jest wykorzystywany do przechowywania wartości czarno/białe (w przeciwieństwie do jednego znaku z naszych obliczeń).
@@ -262,14 +262,14 @@ Najgorszy przypadek ma miejsce, gdy na zmianę występują piksele białe i czar
 
 {panel type="curiosity" summary="Kompresja może powiększać pliki"}
 W najgorszym przypadku (na zmianę piksele białe i czarne) kodowanie długości serii da nam plik skompresowany o rozmiarze większym niż plik oryginalny!
-Jak został wspomniane wcześniej, *każdy* bezstratny algorytm kompresji, który przynajmniej jeden plik zmniejsza, musi mieć kilka plików, które powiększa --- nie jest
+Jak został wspomniane wcześniej, *każdy* bezstratny algorytm kompresji, który przynajmniej jeden plik zmniejsza, musi mieć kilka plików, które powiększa -- nie jest
 matematycznie możliwe, aby stworzyć algorytm kompresji bezstratnej, który zmniejsza każdy plik.
 Jako trywialny przykład posłuży nam pewna kompresja plików z 3-bitowych do 2-bitowych.
 Ile jest plików 3-bitowych? (Jest ich 8.) Ile jest plików 2-bitowych (Są ich 4.) Czy widzisz problem? Mamy 8 plików, które możemy chcieć skompresować, ale jednocześnie tylko 4 sposoby na ich reprezentację. Zatem niektóre z nich będą miały taką samą reprezentację, a przez to nie mogą zostać odkodowane dokładnie.
 
 Na przestrzeni lat było kilka oszustw opartych na twierdzeniach o bezstratnej metodzie kompresji, która kompresuje każdy plik.
 Skompresować każdy plik do mniejszego można tylko metodą stratną (czyli tracąc informacje); wszystkie metody bezstratne muszą powiększać niektóre pliki.
-Dobrze byłoby mieć metodę, która kompresuje wszystkie pliki bez strat; można by wtedy skompresować duży plik, a następnie zastosować kompresję do skompresowanego pliku i zmniejszyć go ponownie, powtarzając aż do uzyskanie jednego bajtu --- lub jednego bitu!
+Dobrze byłoby mieć metodę, która kompresuje wszystkie pliki bez strat; można by wtedy skompresować duży plik, a następnie zastosować kompresję do skompresowanego pliku i zmniejszyć go ponownie, powtarzając aż do uzyskanie jednego bajtu -- lub jednego bitu!
 Niestety nie jest to możliwe.
 {panel end}
 
@@ -384,7 +384,7 @@ Zauważ, iż w każdym bloku występuje bardzo niewielka różnorodność. Na po
 
 {image filename="compressed-jpeg-zoomed-highlighted.png"}
 
-Pomimo tego, że jakość jest dość niska, to oszczędność w przestrzeni dyskowej jest ogromna --- plik JPEG jest 60 razy mniejszy (mógłby zostać pobrany 60 razy szybciej). Obrazy JPEG o wyższej jakości przechowują więcej szczegółów dla każdego bloku 8 na 8, co sprawia, że odwzorowują wierniej oryginalny obraz. Zajmują też więcej miejsca, ponieważ zawierają informację o większej liczbie szczegółów. Możesz samemu przetestować jak to wszystko działa, wybierając stopień kompresji w czasie zapisywania pliku w formacie JPEG (większość edytorów graficznych na to pozwala).
+Pomimo tego, że jakość jest dość niska, to oszczędność w przestrzeni dyskowej jest ogromna -- plik JPEG jest 60 razy mniejszy (mógłby zostać pobrany 60 razy szybciej). Obrazy JPEG o wyższej jakości przechowują więcej szczegółów dla każdego bloku 8 na 8, co sprawia, że odwzorowują wierniej oryginalny obraz. Zajmują też więcej miejsca, ponieważ zawierają informację o większej liczbie szczegółów. Możesz samemu przetestować jak to wszystko działa, wybierając stopień kompresji w czasie zapisywania pliku w formacie JPEG (większość edytorów graficznych na to pozwala).
 
 {comment}
 low priority : interactive that could load a photo, zoom in on pixels, and change it to different qualities of jpg coding
@@ -543,7 +543,7 @@ Z drugiej strony, jeśli słuchamy nagrań w domu na dobrym sprzęcie, jakość 
 Aby ocenić stopień kompresji pliku audio, należy przyjrzeć się oryginalnym nagraniom wysokiej jakości, takim jak płyta CD (lub nieskompresowane pliki WAV lub AIFF). Przygotuj pliki audio z różnymi stylami muzycznymi oraz innymi rodzajami dźwięku, takimi jak mowa lub nawet cisza. Przekowertuj te nagrania do różnych formatów audio. Jednym z narzędzi, które to umożliwia, jest iTunes firmy Apple. Można go użyć do zgrywania płyt CD i zapisu w różnych formatach, po uprzednim ustaleniu jakości i wielkości.
 Wiele innych programów audio oferuje podobne możliwości.
 
-Skompresuj każde z przygotowanych nagrań przy użyciu różnych metod, po upewnieniu się, że każdy skompresowany plik jest tworzony z oryginału wysokiej jakości. Stwórz tabelę pokazującą, ile czasu zajęło przetwarzanie każdego nagrania, jaki jest rozmiar skompresowanego pliku oraz ocenę jakości dźwięku w porównaniu z oryginałem. Prześledź związki pomiędzy jakością a rozmiarem - czy potrzebujesz dużo większych plików do przechowywania dobrej jakości dźwięku? Czy istnieje minimum dla rozmiaru pliku, który zachowuje akceptowalną jakość? Czy w przypadku mowy niektóre metody działają lepiej niż inne? Czy 2-minutowe nagranie ciszy zajmuje więcej miejsca niż 1 minuta nagrania ciszy? Czy 1 minuta muzyki zajmuje więcej miejsca niż minuta ciszy?
+Skompresuj każde z przygotowanych nagrań przy użyciu różnych metod, po upewnieniu się, że każdy skompresowany plik jest tworzony z oryginału wysokiej jakości. Stwórz tabelę pokazującą, ile czasu zajęło przetwarzanie każdego nagrania, jaki jest rozmiar skompresowanego pliku oraz ocenę jakości dźwięku w porównaniu z oryginałem. Prześledź związki pomiędzy jakością a rozmiarem -- czy potrzebujesz dużo większych plików do przechowywania dobrej jakości dźwięku? Czy istnieje minimum dla rozmiaru pliku, który zachowuje akceptowalną jakość? Czy w przypadku mowy niektóre metody działają lepiej niż inne? Czy 2-minutowe nagranie ciszy zajmuje więcej miejsca niż 1 minuta nagrania ciszy? Czy 1 minuta muzyki zajmuje więcej miejsca niż minuta ciszy?
 
 {comment}
 .. xtcb could have a section on Huffman coding sometime (remove from "the whole story")
@@ -576,7 +576,7 @@ Pytania typu „jaki jest najwyższy możliwy stopień kompresji” są przedmio
 - Książka Gleicka „The Information” jest dobrym podręcznikiem na temat kompresji i kodowania.
 
 
-### Ciekawe linki
+### Ciekawe odnośniki
 
 - Obrazy, kodowanie długości serii [http://csunplugged.org/image-representation](http://csunplugged.org/image-representation).
 - Wykipedia zawiera [szczegółowy opis metoody kodowania JPEG](https://en.wikipedia.org/wiki/Jpeg).

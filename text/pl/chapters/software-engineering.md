@@ -44,7 +44,7 @@ W 1965 roku Gordon Moore zauważył, że liczba tranzystorów na układach scalo
 
 Co ciekawe, prawo Moore'a sprawdzało nie tylko 10 lat, ale nadal działa (chociaż przewiduje się spowolnienie w ciągu najbliższych kilku lat). Oznacza to, że dzisiejsze komputery są ponad 100 milionów razy szybsze niż w 1965 roku! (W 2015 roku minęło 50 lat od 1965 roku, co oznacza, że według prawa Moore'a moc obliczeniowa podwoiła się około 25 razy, {math}2 ^{25}{math end} wynosi 16 777 216, więc jeśli komputery mogły uruchomić jedną instrukcję na sekundę w 1965 roku, to teraz mogą ich uruchomić 33 544 432). Oznacza to również, że jeśli kupisz dziś komputer, możesz żałować za dwa lata, gdy nowe komputery będą dwa razy szybsze. Prawo Moore'a odnosi się także do innych ulepszeń w urządzeniach cyfrowych, takich jak moc przetwarzania w telefonach komórkowych i liczba pikseli w matrycach aparatów cyfrowych.
 
-Dokładne liczby powyżej będą zależeć od tego, co opisują, ale najważniejsze jest to, że moc obliczeniowa wzrasta *wykładniczo* &mdash; wykładniczy wzrost nie tylko oznacza, że coś dzieje się o wiele szybciej, ale że dzieje się to niewiarygodnie szybko; nic w historii ludzkości nie rozwinęło się tak szybko! Aby zilustrować to w drugą stronę, czas otwarcia aplikacji na smartfonie może wynosić dziś pół sekundy, a na smartfonie z 1965 roku zajęłoby to ponad rok (a telefon prawdopodobnie byłby wielkości boiska do piłki nożnej). Nic dziwnego, że smartfony nie były popularne w latach sześćdziesiątych.
+Dokładne liczby powyżej będą zależeć od tego, co opisują, ale najważniejsze jest to, że moc obliczeniowa wzrasta *wykładniczo* -- wykładniczy wzrost nie tylko oznacza, że coś dzieje się o wiele szybciej, ale że dzieje się to niewiarygodnie szybko; nic w historii ludzkości nie rozwinęło się tak szybko! Aby zilustrować to w drugą stronę, czas otwarcia aplikacji na smartfonie może wynosić dziś pół sekundy, a na smartfonie z 1965 roku zajęłoby to ponad rok (a telefon prawdopodobnie byłby wielkości boiska do piłki nożnej). Nic dziwnego, że smartfony nie były popularne w latach sześćdziesiątych.
 {panel end}
 
 Mimo że inżynieria oprogramowania przeszła długą drogę w ostatnich dziesięcioleciach, pisanie oprogramowania jest nadal trudne. Jako użytkownik widzisz tylko te programy, które zostały ukończone, a nie te, które się nie udały. W 2009 r. prawie jedna trzecia wszystkich projektów informatycznych odniosła sukces, podczas gdy prawie jedna czwarta nie powiodła się całkowicie lub została anulowana przed dostarczeniem oprogramowania. Pozostałe projekty zostały zakończone z opóźnieniem, przekroczyły budżet lub brakowało funkcjonalności. Słynną niedawną porażką projektu informatycznego było oprogramowanie systemu obsługi bagażu na nowym lotnisku w Denver. System okazał się bardziej złożony, niż spodziewali się tego inżynierowie; w końcu całe lotnisko było gotowe, ale musiało czekać 16 miesięcy na otwarcie, ponieważ oprogramowanie do systemu bagażowego nie działało. Lotnisko traciło milion dolarów dziennie podczas tych 16 miesięcy!
@@ -54,9 +54,9 @@ W tym rozdziale przyjrzymy się podstawom inżynierii oprogramowania. Wprowadzon
 {panel type="curiosity" summary="Więcej informacji o błędach w oprogramowaniu"}
 O ile każdy chce aby jego projekt się powiódł, na błędach można się wiele nauczyć! Oto niektóre strony, które dostarczają dalszych materiałów na ten temat.
 
-- [Z powrotem do tablicy projektowej - CS4FN](http://www.cs4fn.org/softwareengineering/backtodrawingboard.php)
-- [Dlaczego oprogramowanie zawodzi - IEEE](http://spectrum.ieee.org/computing/software/why-software-fails)
-- [Uczenie się na błędach oprogramowania - IEEE](http://spectrum.ieee.org/computing/software/learning-from-software-failure)
+- [Z powrotem do tablicy projektowej -- CS4FN](http://www.cs4fn.org/softwareengineering/backtodrawingboard.php)
+- [Dlaczego oprogramowanie zawodzi -- IEEE](http://spectrum.ieee.org/computing/software/why-software-fails)
+- [Uczenie się na błędach oprogramowania -- IEEE](http://spectrum.ieee.org/computing/software/learning-from-software-failure)
 - [Katastrofy inżynieryjne 13: Błędy w oprogramowaniu](http://youtu.be/EMVBLg2MrLs) jest fragmentem odcinka 13 cyklu Katastrofy inżynieryjne tłumaczącego błędy w oprogramowaniu rakiety Ariane 5 i pocisków Patriot
 {panel end}
 
@@ -204,7 +204,7 @@ W 1947 roku inżynierowie pracujący na komputerze o nazwie *Mark II* badali bł
 
 Problem z testowaniem polega na tym, że możemy wykazać tylko obecność błędów, a nie ich brak! Jeśli otrzymasz niepoprawne dane wyjściowe z programu, wiesz, że znalazłeś błąd. Lecz jeśli otrzymasz poprawne wyniki, czy naprawdę możesz być pewien, że program jest poprawny? Nie do końca. Oprogramowanie może działać poprawnie w tym konkretnym przypadku, ale nie można zakładać, że zadziała w innych sytuacjach. Bez względu na to, jak dokładnie testujesz program, nigdy nie możesz być w 100% pewny, że jest on poprawny. Teoretycznie musisz przetestować każdy możliwy zestaw danych wejściowych, ale zazwyczaj nie jest to możliwe. Wyobraź sobie, że testujemy wyszukiwarkę Google pod względem wszystkich możliwych zapytań, które mogą zadać ludzie! Jeśli nawet nie możemy przetestować wszystkiego, zawsze możemy wypróbować jak najwięcej różnych przypadków testowych i mieć nadzieję, że w ten sposób zmniejszyliśmy prawdopodobieństwo wystąpienia błędów.
 
-Podobnie jak w przypadku projektowania, nie jesteśmy w stanie poradzić sobie z całym oprogramowaniem naraz, więc ponownie przyglądamy się mniejszym elementom, testując każdy z nich z osobna. To podejście nazywamy *testowaniem jednostkowym*. Test jednostkowy jest zwykle wykonywany przez oddzielny program, który uruchamia testy. W ten sposób możesz przeprowadzać testy tak często, jak chcesz --- być może raz dziennie lub za każdym razem, gdy następuje zmiana w programie.
+Podobnie jak w przypadku projektowania, nie jesteśmy w stanie poradzić sobie z całym oprogramowaniem naraz, więc ponownie przyglądamy się mniejszym elementom, testując każdy z nich z osobna. To podejście nazywamy *testowaniem jednostkowym*. Test jednostkowy jest zwykle wykonywany przez oddzielny program, który uruchamia testy. W ten sposób możesz przeprowadzać testy tak często, jak chcesz -- być może raz dziennie lub za każdym razem, gdy następuje zmiana w programie.
 
 Nie jest niczym niezwykłym napisanie testów jednostkowych przed napisaniem danego fragmentu programu.
 Może się wydawać daremną pracą pisanie dwóch programów zamiast jednego, ale możliwość sprawdzenia systemu dokładnie po każdej zmianie znacznie poprawia niezawodność produktu końcowego i może zaoszczędzić wiele czasu na szukaniu błędów w całym systemie. Testy jednostkowe zwiększają pewność, że każdy element działa poprawnie.
@@ -354,7 +354,7 @@ Jeśli udało wam się zbudować most, twoja grupa oraz grupa odpowiedzialna za 
 
 Udoskonal swój projekt, korzystając z wiedzy uzyskanej od drugiej grupy. Możesz eksperymentować z kartami i zmieniać projekt, gdy sprawdzisz, że coś nie działa. Jest to przykład podejścia zwinnego, które poznamy bliżej w dalszej części rozdziału. Wykonuj iterację (opracowywanie pomysłów), aż uzyskasz coś, co działa.
 
-Które z tych podejść sprawdza się lepiej --- projektowanie wszystkiego na początku, czy działanie w stylu zwinnym?
+Które z tych podejść sprawdza się lepiej -- projektowanie wszystkiego na początku, czy działanie w stylu zwinnym?
 {panel end}
 
 
@@ -434,7 +434,7 @@ Refaktoryzacja działa tylko w przypadku oprogramowania, ponieważ programowanie
 
 ### Rozwój oparty na testach
 
-W standardowym rozwoju oprogramowania najpierw piszemy kod, a następnie testujemy. Ma to sens: potrzebujemy kodu, zanim będziemy mogli go przetestować. Rozwój oparty na testach (ang. test-driven development - TDD) zaleca, aby postępować dokładnie odwrotnie!
+W standardowym rozwoju oprogramowania najpierw piszemy kod, a następnie testujemy. Ma to sens: potrzebujemy kodu, zanim będziemy mogli go przetestować. Rozwój oparty na testach (ang. test-driven development -- TDD) zaleca, aby postępować dokładnie odwrotnie!
 
 Zanim napiszesz fragment kodu, powinieneś napisać test kodu, który zamierzasz napisać. To zmusza do myślenia o tym, co dokładnie próbujesz osiągnąć i jakie są specjalne przypadki. Oczywiście jeśli spróbujesz uruchomić test, to się nie powiedzie (ponieważ funkcjonalność, którą testuje, jeszcze nie istnieje). Aby testowanie miało sens, należy po prostu napisać kod poprawnie implementujący funkcjonalność.
 
@@ -481,17 +481,17 @@ Zrozumienie znaczenia niektórych problemów i technik, które tutaj opisaliśmy
 
 ## Dalsza lektura
 
-### Ciekawe linki
-- [Wikipedia - Inżynieria oprogramowania](https://en.wikipedia.org/wiki/Software_engineering)
-- [CS4FN - Inżynieria oprogramowania](http://www.cs4fn.org/fundamentals/softwareeng.php)
-- [Nauka ICT - Cykl życia systemów](http://www.teach-ict.com/as_a2_ict_new/ocr/A2_G063/331_systems_cycle/slc_stages/home_slc.html)
-- [Wikipedia - Kryszys oprogramowania](https://en.wikipedia.org/wiki/Software_crisis)
-- [IEEE - Dlaczego oprogramowanie zawodzi](http://spectrum.ieee.org/computing/software/why-software-fails)
-- [Wikipedia - Projektowanie oprogramowania](https://en.wikipedia.org/wiki/Software_design)
-- [Wikipedia - Abstrakcja](https://en.wikipedia.org/wiki/Abstraction_(computer_science\))
-- [Wikipedia - Testowanie oprogramowania](https://en.wikipedia.org/wiki/Software_testing)
-- [Wikipedia - Procesy rozwoju oprogramowania](https://en.wikipedia.org/wiki/Software_development_process)
-- [Wikipedia - Model kaskadowy](https://en.wikipedia.org/wiki/Waterfall_model)
-- [Wikipedia - Model przyrostowy](https://en.wikipedia.org/wiki/Iterative_and_incremental_development)
-- [Wikipedia - Programowanie zwinne](https://en.wikipedia.org/wiki/Agile_software_development)
-- [Wikipedia - Rozwój oprogramowania oparty na testach](https://en.wikipedia.org/wiki/Test-driven_development)
+### Ciekawe odnośniki
+- [Wikipedia -- Inżynieria oprogramowania](https://en.wikipedia.org/wiki/Software_engineering)
+- [CS4FN -- Inżynieria oprogramowania](http://www.cs4fn.org/fundamentals/softwareeng.php)
+- [Nauka ICT -- Cykl życia systemów](http://www.teach-ict.com/as_a2_ict_new/ocr/A2_G063/331_systems_cycle/slc_stages/home_slc.html)
+- [Wikipedia -- Kryszys oprogramowania](https://en.wikipedia.org/wiki/Software_crisis)
+- [IEEE -- Dlaczego oprogramowanie zawodzi](http://spectrum.ieee.org/computing/software/why-software-fails)
+- [Wikipedia -- Projektowanie oprogramowania](https://en.wikipedia.org/wiki/Software_design)
+- [Wikipedia -- Abstrakcja](https://en.wikipedia.org/wiki/Abstraction_(computer_science\))
+- [Wikipedia -- Testowanie oprogramowania](https://en.wikipedia.org/wiki/Software_testing)
+- [Wikipedia -- Procesy rozwoju oprogramowania](https://en.wikipedia.org/wiki/Software_development_process)
+- [Wikipedia -- Model kaskadowy](https://en.wikipedia.org/wiki/Waterfall_model)
+- [Wikipedia -- Model przyrostowy](https://en.wikipedia.org/wiki/Iterative_and_incremental_development)
+- [Wikipedia -- Programowanie zwinne](https://en.wikipedia.org/wiki/Agile_software_development)
+- [Wikipedia -- Rozwój oprogramowania oparty na testach](https://en.wikipedia.org/wiki/Test-driven_development)

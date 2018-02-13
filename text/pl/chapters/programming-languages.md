@@ -546,9 +546,9 @@ Języki, które omawialiśmy w tym rozdziale, są często używane na początku 
 
 ## Dalsza lektura
 
-### Ciekawe linki
+### Ciekawe odnośniki
 
-- [Lekcje poświęcone językom programowania - TeachICT](http://www.teach-ict.com/gcse_computing/ocr/216_programming/programming_languages/miniweb/index.htm) obejmujące wiele zagadnień z tego rozdziału
+- [Lekcje poświęcone językom programowania -- TeachICT](http://www.teach-ict.com/gcse_computing/ocr/216_programming/programming_languages/miniweb/index.htm) obejmujące wiele zagadnień z tego rozdziału
 - CS Online zawiera [przegląd zagadnień poruszonych w rozdziale](http://courses.cs.vt.edu/~csonline/ProgrammingLanguages/Lessons/Introduction/index.html)
 - Artykuły Wikipedii o [Językach programowania](https://en.wikipedia.org/wiki/Programming_language), [Język wysokiego poziomu](https://en.wikipedia.org/wiki/High-level_programming_language), oraz [Język niskiego poziomu](https://en.wikipedia.org/wiki/Low-level_programming_language)
 

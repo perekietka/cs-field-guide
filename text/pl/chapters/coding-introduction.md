@@ -1,10 +1,10 @@
-# Kodowanie - wprowadzenie
+# Kodowanie -- wprowadzenie
 
 ## Z lotu ptaka
 
 Słowo “kod” ma wiele znaczeń w informatyce. Często używa się go mówiąc o programowaniu (jako o kodowaniu), a treść programu nazywa się “kodem źródłowym”. Nawet reprezentację binarną informacji określa się mianem kodu. Jednakże w tym rozdziale (oraz w kolejnych trzech rozdziałach) sens tego słowa będzie wyrażony jako sprytny sposób reprezentacji informacji, który przy okazji pozwala na rozwiązanie jednego z praktycznych problemów, jakim jest szyfrowanie danych w celu zachowania ich w tajemnicy.
 
-W poprzednim rozdziale zajmowaliśmy się binarną reprezentacją pozwalającą zapisywać różne rodzaje danych --- liczby, tekst, obrazy itp. Jednakże w wielu sytuacjach prosta reprezentacja binarna nie sprawdza się. Czasami zajmuje za dużo miejsca, innym razem mały błąd w zapisie może spowodować olbrzymi problem, a w innym przypadku naszym zmartwieniem może być fakt, że ktoś przeczyta naszą wiadomość. Bardzo często wszystkie trzy wspomniane problemy są istotne. Kody, którymi się zajmiemy radzą sobie właśnie z tymi problemami, i są powszechnie wykorzystywane w zapisywaniu i przesyłaniu informacji.
+W poprzednim rozdziale zajmowaliśmy się binarną reprezentacją pozwalającą zapisywać różne rodzaje danych -- liczby, tekst, obrazy itp. Jednakże w wielu sytuacjach prosta reprezentacja binarna nie sprawdza się. Czasami zajmuje za dużo miejsca, innym razem mały błąd w zapisie może spowodować olbrzymi problem, a w innym przypadku naszym zmartwieniem może być fakt, że ktoś przeczyta naszą wiadomość. Bardzo często wszystkie trzy wspomniane problemy są istotne. Kody, którymi się zajmiemy radzą sobie właśnie z tymi problemami, i są powszechnie wykorzystywane w zapisywaniu i przesyłaniu informacji.
 
 Trzy główne powody, dla których stosujemy skomplikowane reprezentacje danych to:
 - **Kompresja:** pozwala zredukować przestrzeń jaką potrzebują dane (np. zakodowanie pliku audio do formatu MP3 pozwala zmniejszyć rozmiar do 10% rozmiaru początkowego).
@@ -20,7 +20,7 @@ Bez tych form kodowania współczesne urządzenia elektroniczne byłyby bardzo w
 {image filename="shannon-juggling.png" alt="Cartoon of Claude Shannon juggling and riding a unicycle."}
 {comment image from http://csunplugged.org/information-theory/}
 
-Idea kodowania danych w celu skrócenia zapisu, uodpornienia na błędy lub zabezpiecznia prywatności jest znana od wieków, jednakże twarda teoria potrzebna do stworzenia kodów dla ery informacyjnej została rozwinięta dopiero w latach czterdziestych --- nie powinno to być zaskoczeniem biorąc pod uwagę rolę jaką odegrała technologia w II wojnie światowej, podczas której wydajność, niezawodność i tajność były bardzo ważne. Jednym z najbardziej uznanych naukowców w tej dziedzinie był Claude Shannon, który rozwinął dyscyplinę *teorii informacji* zajmującą się efektywną reprezentacją danych (Shannon był również żąglerem, cyklistą oraz wynalazcą pomysłowych maszyn).
+Idea kodowania danych w celu skrócenia zapisu, uodpornienia na błędy lub zabezpiecznia prywatności jest znana od wieków, jednakże twarda teoria potrzebna do stworzenia kodów dla ery informacyjnej została rozwinięta dopiero w latach czterdziestych -- nie powinno to być zaskoczeniem biorąc pod uwagę rolę jaką odegrała technologia w II wojnie światowej, podczas której wydajność, niezawodność i tajność były bardzo ważne. Jednym z najbardziej uznanych naukowców w tej dziedzinie był Claude Shannon, który rozwinął dyscyplinę *teorii informacji* zajmującą się efektywną reprezentacją danych (Shannon był również żąglerem, cyklistą oraz wynalazcą pomysłowych maszyn).
 
 
 {panel type="curiosity" summary="Entropy"}
@@ -36,7 +36,7 @@ oraz [gra w zgadywanie zdań online](http://www.math.ucsd.edu/~crypto/java/ENTRO
 
 Ksiażka Jamesa Gleicka [*The Information: A History, a Theory, a Flood*](http://www.amazon.com/The-Information-History-Theory-Flood/dp/1400096235) pokazuje ciekawe spojrzenie na historię kilku dziedzin związanych z kodowaniem.
 
-### Ciekawe linki
+### Ciekawe odnośniki
 
 - Materiały dotyczące wszystkich trzech rodzajów kodowania znajdziesz w [zasobach Bletchley Park](http://www.cimt.org.uk/resources/codes/index.htm)
 - [Entropia i teoria informacji](https://en.wikipedia.org/wiki/Entropy_(information_theory))
