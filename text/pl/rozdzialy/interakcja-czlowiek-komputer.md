@@ -210,7 +210,7 @@ Istnieje wiele innych sytuacji, w których rozmieszczenie może nagle zmienić s
 - Jeśli zmienisz rozmiar urządzenia (takie jak większy monitor lub inny smartfon), będziesz musiał ponownie nauczyć się, gdzie wszystko jest.
 - Układy często zmieniają się wraz z nowymi wersjami oprogramowania (co jest jednym z powodów, dla których aktualizacja za każdym razem, gdy pojawi się nowa wersja oprogramowania, może nie być najlepszym pomysłem).
 - To samo oprogramowanie w innym systemie operacyjnym może mieć nieco inny układ (np. jeśli osoba używała przeglądarki Chrome cały czas w systemie Windows  i zaczyna używać Chrome w systemie MacOS). Może to być szczególnie frustrujące, ponieważ położenie wspólnych elementów sterujących (okno zamknięcia/maksymalizacji, a nawet klawisz kontrolny na klawiaturze) jest inne, co sprawia, że przestrzenna pamięć użytkownika zaczyna być zagubiona.
-- Pasek szybkiego dostępu w programie Microsoft Word był szczególnie frustrujący dla użytkowników, gdy pojawił po raz pierwszy — pozycja każdego elementu menu była zupełnie inna niż w poprzednich wersjach.
+- [Wstążka] (https://pl.wikipedia.org/wiki/Wst%C4%85%C5%BCka_(informatyka)) Microsoft Word była szczególnie frustrująca dla użytkowników, gdy pojawiła po raz pierwszy — pozycja każdego elementu menu była zupełnie inna niż w poprzednich wersjach.
 - interfejsy autoamtycznie dopasowujące się do zachowań użytkownika również mogą stanowić problem; może się wydawać, że dobrym pomysłem jest zmienianie menu w programie, tak aby często używane opcje były wyżej niż te używane rzadziej lub nieużywane przedmioty były ukryte, ale może to prowadzić do frustrującego poszukiwania opcji przez użytkownika, przypominającego niekiedy poszukiwanie skarbów.
 {panel end}
 
