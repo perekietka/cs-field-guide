@@ -3,20 +3,20 @@ WEBVTT
 NOTE
 Computer Science Education Research,
 University of Canterbury, New Zealand
-Subtitle file for the video "Formal Languages"
+Subtitle file for the video „Formal Languages”
 Author: Alasdair Smith
 Date: 13/02/2017
-Translattion to Polish language: Tomasz Śliwiński
+Translation to Polish language: Tomasz Śliwiński
 Date: 03/07/2017
 
 00:01.000 --> 00:02.400
 Języki formalne
 
 00:02.400 --> 00:05.000
-Porozmawiajmy o językach formalnych
+Porozmawiajmy o językach formalnych.
 
 00:05.000 --> 00:07.000
-Ups, chwileczkę
+Ups, chwileczkę.
 
 NOTE
 'Ups' jest wypowiedziane wcześniej niż napis,
@@ -26,15 +26,15 @@ ale pasuje lepiej tam gdzie jest
 Kiedy czytasz instrukcję w języku naturalnym, to
 
 00:09.400 --> 00:13.200
-w zasdzie możesz zrozumieć co jest napisane
+w zasadzie możesz zrozumieć, co jest napisane,
 nawet gdy są tam małe błędy.
 
 00:13.200 --> 00:19.200
-Ale dla komputera, instrukcje są tak precyzyjne,
+Ale dla komputera instrukcje są tak precyzyjne,
 że nawet jeden mały błąd może uniemożliwić jego działanie.
 
 00:19.200 --> 00:23.200
-To nie jest tak, że one są głupie, It's not that they're stupid,
+To nie jest tak, że komputery są głupie,
 [yyy] one są troszeczkę głupie.
 
 00:23.200 --> 00:26.800
@@ -43,7 +43,7 @@ mamy sytuacje,
 
 00:26.800 --> 00:30.400
 gdzie coś absolutnie musi być
-sformatowanie prawidłowo.
+sformułowane prawidłowo.
 
 00:30.400 --> 00:34.700
 Nie otrzymasz tego czego chcesz, jeśli nie zastosujesz się
@@ -68,8 +68,8 @@ lub wpisywania formuł do arkusza kalkulacyjnego.
 <b>#BŁĄD!</b>
 
 00:43.600 --> 00:48.200
-To czego potrzebujemy, to sposób na zapisanie zasad
-na to co jest akceptowalne i to co nie jest.
+To czego potrzebujemy, to zestaw zasad, 
+decydujących czy coś jest akceptowalne, czy nie.
 
 00:48.200 --> 00:50.800
 To jest to, co języki formalne mogą dla nas zrobić. 
@@ -106,7 +106,7 @@ Informatycy używają językow formalnych
 do zbadania różnego rodzaju problemów,
 
 01:25.200 --> 01:29.400
-włączając w to nawet granice tego
+włączając w to nawet granice tego,
 co może być kiedykolwiek zrobione z komputerami.
 
 01:29.400 --> 01:30.600
@@ -114,7 +114,7 @@ Oto zabawny fakt:
 
 01:30.600 --> 01:35.200
 możemy opisać każdy komputer lub
-urządzenie elektroniczne używając języka formalnego.
+urządzenie elektroniczne, używając języka formalnego.
 
 01:35.200 --> 01:40.400
 W rzeczywistości języki formalnego mogą nawet pokazać nam
@@ -128,12 +128,12 @@ problemy matematyczne,
 których nigdy nie można rozwiązać za pomocą komputera.
 
 01:47.000 --> 01:51.000
-Wow, szokujace.
+Łoł, szokujace.
 <01:49.200><i>Bum</i>
 
 01:51.000 --> 01:57.600
 Trochę się zapędziłem, języki formalne są
-w zasadzie szereg racjonalnie prostych pomysłów,
+oparte na wielu racjonalnych pomysłach,
 
 01:57.600 --> 02:00.200
 które mają nieracjonalnie dziwne nazwy.
