@@ -1,0 +1,225 @@
+WEBVTT
+
+NOTE
+Computer Science Education Research,
+University of Canterbury, New Zealand
+Subtitle file for the video „Computer Science Field Guide: Algorithms”
+Author: Alasdair Smith
+Date: 14/02/2017
+Translation to Polish language: Tomasz Śliwiński
+Date: 15/02/2018
+
+00:00.000 --> 00:02.000
+Algorytmy
+
+00:02.000 --> 00:02.000
+Używamy komputerów do setek
+różnych rzeczy w ciągu dnia:
+
+00:05.400 --> 00:10.200
+rzeczy jak przeszukiwanie internetu;
+<00:07.000>edycji obrazka; lub wysukiwania drogi na mapie.
+
+00:10.200 --> 00:13.600
+Ale czy kiedykolwiek zastanawiałeś się, jak komputer 
+wykonuje te rzeczy?
+
+00:13.600 --> 00:18.400
+Algrotym jest procesem, który krok po kroku
+mówi komputerowi, jak wykonać dane zadanie.
+
+00:18.400 --> 00:21.200
+Ale istnieje wiele różnych
+algorytmów dla tego samego problemu,
+00:21.200 --> 00:24.400
+tak samo jak może być wiele różnych przepisów
+jak upiec ciasto.
+
+00:24.400 --> 00:27.400
+I także wiemy, 
+że niektóre przepisy są lepsze niż inne.
+
+
+00:27.400 --> 00:31.400
+Więc wykonamy mały eskperyment,
+żeby zobaczyć czy to samo jest prawdą dla algorytmów.
+
+00:31.400 --> 00:34.600
+Jesteśmy  przez biblioteką
+Uniwersytetu w Canterbury.
+
+00:34.600 --> 00:37.000
+Zaraz zaczniemy wielki wyścig algorytmów.
+
+00:37.000 --> 00:43.800
+Dziś udział bioą:
+Dziś konkurują ze sobą
+Speedy Spencer oraz Slowcoach Slade.
+
+00:43.800 --> 00:46.600
+Ich zadaniem jest bieg do biblioteki
+i znalezienie ksiązki napisanej przez <i>Knutha</i>
+
+00:46.600 --> 00:50.400
+pośród milionów książęk, które tam są.
+Pierwszy, który ją znajdzie wygrywa.
+
+00:50.400 --> 00:55.600
+Gotowi?<00:52.02> Naprzód!
+
+00:58.600 --> 01:02.000
+Spencer!
+
+01:07.200 --> 01:11.600
+Speedy Spencer rozpoczął obiecująceo;
+przeszukał już dziesiątki książek.
+
+01:11.600 --> 01:15.400
+Wygląda na to, że używa on algorytmu <i>wyszukiwania liniowego</i>,
+więc patrzy na pierwszą książkę,
+
+01:15.400 --> 01:19.000
+a potem kontynuuje i patrzy na każdą 
+książkę z osobna, aż...
+
+01:19.000 --> 01:21.800
+Dokąd on idzie?
+
+01:21.800 --> 01:26.600
+Wygląda na to, ze on dokładnie wie czego szuka.
+
+01:39.000 --> 01:43.400
+Slade wykorzystuje coś, jak algorytm
+<i>wyszukiwania binarnego</i> jako swoją strategię.
+
+01:43.400 --> 01:46.600
+Popatrzył na książkę w środku biblioteki,
+i patrząc na tę jedną książkę,
+
+01:46.600 --> 01:49.600
+zdał sobie sprawę, że książkę, której szuka
+nie może być w pierwszej połowie.
+
+01:49.600 --> 01:53.000
+Tak więc, wykonując jedno sprawdzenie,
+wyeliminował połowę książek z biblioteki.
+
+01:53.000 --> 01:55.800
+Może jest on powolny, ale jest inteligentny.
+
+02:00.000 --> 02:02.600
+Wydaje się, że Spencer prawie skończył 
+swoją pierwszą półkę z książkami.
+
+02:02.600 --> 02:06.200
+Ma jeszcze kilka tysięcy do przejścia
+zanim znajdzie właściwą książkę.
+
+02:06.200 --> 02:08.400
+To trochę tak, jakby wziął
+jeden z najszybszych komputerów na świecie,
+
+02:08.400 --> 02:12.400
+i uruchomił na nim jeden z najgorszych algorytmów na świecie.
+
+02:12.400 --> 02:15.800
+Wyobraź sobie szybki silnik taki jak Google
+wyświetlał ci wyniki, przeszukując
+
+02:15.800 --> 02:19.800
+strona po stronie, każdą stronę w internecie.
+
+02:19.800 --> 02:23.200
+Wracając do Slade, Slade dokąd idziesz?
+
+02:23.200 --> 02:28.000
+SLADE: Dokładnie tak, jak planowałem. Zawęziłem wyszukiwanie,
+i powinna być na tej półce.
+
+02:28.000 --> 02:31.400
+Wiesz już, że książka jest na tej półce?
+
+02:31.400 --> 02:33.200
+SLADE: Ta połowa półki
+
+02:33.200 --> 02:34.600
+BOZO: Przepraszam
+
+02:34.600 --> 02:37.000
+Bozo?, czy szukasz również książki?
+
+02:37.000 --> 02:39.200
+BOZO: Tak! wykorzystuję „wyszukiwanie Bozo”.
+
+02:39.200 --> 02:44.600
+Jak to działa?
+<02:40.200>BOZO: Cóż, biorę książkę,
+i mam nadzieję, że to właściwa książka.
+
+02:44.600 --> 02:46.400
+A co, jeśli to nie jest właściwa książka?
+
+02:46.400 --> 02:51.200
+BOZO: Więc wtedy pójdę poszukać innej książki.
+<02:50.000>Przepraszam.
+
+02:51.200 --> 02:53.000
+SLADE: Tutaj jest!
+
+02:53.000 --> 03:00.200
+Gratulacje Slade, wygrałeś!
+Chłopcy, możecie przestać szukać.<02:58.200> Chłopcy.
+
+03:00.200 --> 03:03.400
+Slade znalazł książkę.
+
+03:03.400 --> 03:07.400
+Możecie przestać szukać.
+Slade wygrał.
+
+03:07.400 --> 03:13.000
+Chłopcy. Możecie przestać teraz.
+<03:11.000>[westchnienie]
+
+03:13.800 --> 03:16.600
+Wygląda na to, ze algorytm, który 
+wybierzesz może spowodować wielką różnicę
+
+03:16.600 --> 03:18.600
+szczególnie przy dużych ilościach danych.
+
+03:18.600 --> 03:21.800
+Widzisz, gdyby biblioteka była dwukrotnie większa,
+to zajęłoby Speedy Spencerowi
+
+03:21.800 --> 03:27.200
+dwa razy dłużej, aby znaleźć książkę. Ale Slowcoach Slade
+musiałby tylko sprawdzić jedną dodatkową książkę.
+
+03:27.200 --> 03:30.200
+W tym rozdziale będziemy bardziej przyglądać się
+do czego algorytmy są używane,
+
+03:30.200 --> 03:32.600
+i dlaczego to ważne, aby wybrać ten właściwy..
+
+03:32.600 --> 03:37.200
+Więc Slowcoach Slade, jeśli byłeś algorytmem
+w programie, który pisałam
+
+03:37.200 --> 03:41.000
+byłabym najszczęśliwszym żyjącym programistą.
+
+03:42.700 --> 03:45.700
+Algorytmy.
+
+03:47.600 --> 03:52.000
+SPENCER: Tak! Znalazłem.
+<03:50.200>Bozo? Co ty czytasz?
+
+03:52.000 --> 03:56.800
+BOZO:Och, to książka o metaginetyce 
+w Argentynie i Peru.
+
+03:56.800 --> 03:59.400
+SPENCER: Hmm, bardzo blisko.

@@ -1,0 +1,76 @@
+WEBVTT
+
+NOTE
+Computer Science Education Research,
+University of Canterbury, New Zealand
+Subtitle file for the video „Finite State Automata - 7 - Adding More States”
+Author: Alasdair Smith
+Language: English
+Date: 10/04/2017
+Translation to Polish language: Tomasz Śliwiński
+Date: 15/02/2018
+
+00:00.200 --> 00:06.200
+Teraz możemy spojrzeć na to, co się dzieje, 
+gdy odejdziemy od naszego stanu początkowego.
+
+00:06.200 --> 00:12.000
+Co spowoduje, że łańcuch 
+<b>nie</b> zostanie zaakceptowany przez nasz automat?
+
+00:12.000 --> 00:17.900
+Z naszej definicji byłby łańcuch, 
+zawierający trzy lub więcej „B” z rzędu.
+
+00:17.900 --> 00:24.100
+W związku z tym musimy dodać więcej stanów,
+jeden dla jednego „B” z rzędu, nazwiemy „1”;
+
+00:24.100 --> 00:27.800
+jeden dla dwóch „B” z rzędu, nazwiemy „2”;
+
+00:27.800 --> 00:33.200
+i jeden dla trzech i więcej „B” z rzędu nazwiemy „3”.
+
+00:33.200 --> 00:36.000
+Możemy połaczyć je przejściami „B”.
+
+00:36.000 --> 00:42.000
+Każde przejście reprezentuje zwiększenie liczby 
+„B” z rzędu o jeden.
+
+00:43.600 --> 00:49.200
+Co możemy zinterpretować z tych nowych stanów?
+Z naszej definicji wiemy, że jeśli jest
+
+00:49.200 --> 00:55.800
+zero, jeden lub dwa „B”z rzędu,
+to łańcuch, jak dotąd, jest akceptowalny.
+
+00:55.800 --> 01:01.700
+W związku z tym, możemy stany
+1. i 2. również nazwać akceptującymi.
+
+01:01.700 --> 01:06.400
+Do stanu 3. dochodzimy po trzech
+przejściach „B” z rzędu,
+
+01:06.400 --> 01:13.400
+więc to musi być nasz stan nieakceptujacy.
+Bez względu na to, jaki znak po nim umieścimy,
+
+
+01:13.400 --> 01:19.800
+już wiemy, że były trzy
+„B” z rzędu, a więc ten ciąg nie jest akceptowalny.
+
+01:19.800 --> 01:26.900
+Pokażmy to, dodając pętli powrotną
+do stanu 3 i nazywając ją  „A, B”.
+
+01:26.900 --> 01:30.800
+Zarówno „A” i „B” podążają za tym przejściem.
+
+01:30.800 --> 01:40.000
+3. stan może być nazwany stanem pułapki,
+jak raz tam dotrzemy, nie ma już żadnego przejścia, aby się z niego wydostać.

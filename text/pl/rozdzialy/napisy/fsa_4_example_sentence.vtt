@@ -1,0 +1,66 @@
+WEBVTT
+
+NOTE
+Computer Science Education Research,
+University of Canterbury, New Zealand
+Subtitle file for the video „Finite State Automata - 4 - An Example 'Sentence'”
+Author: Alasdair Smith
+Language: English
+Date: 10/04/2017
+Translation to Polish language: Tomasz Śliwiński
+Date: 15/02/2018
+
+
+00:00.200 --> 00:08.200
+Mamy nowy schemat, dokładnie taki sam jak poprzednio.
+Jak właściwie go używamy?
+
+00:08.200 --> 00:11.400
+Powiedzmy, że mamy zdanie „Moo.”
+
+00:11.400 --> 00:16.400
+Już widzimy, że zaczyna się od 
+dużej litery i kończy się kropką,
+
+00:16.400 --> 00:20.600
+ale przepuśćmy go przez automat, aby 
+zobaczyć, co się stanie.
+
+00:20.600 --> 00:26.200
+Zaczynamy od stanu początkowego (który jest „1”),
+bierzemy każdy znak po kolei,
+
+00:26.200 --> 00:29.000
+kolejno przechodząc przejścia dla każdego.
+
+00:29.000 --> 00:36.200
+Pierwszy znak „M” jest dużą literą,
+więc podążamy za przejściem „U” do 3. stanu.
+
+00:36.200 --> 00:43.200
+Potem mamy małe „o”, więc podążamy za
+przejściem „L” ,które jest pętlą i kończymy w 3. stanie.
+
+00:43.200 --> 00:49.200
+kolejne małe „o”, więc znów podążamy za 
+przejściem „L” do 3 stanu.
+
+00:49.200 --> 00:56.400
+I na koniec mamy kropkę, więc podążamy
+przejściem „S” do 4. stanu.
+
+00:57.400 --> 01:02.200
+Więc przeszliśmy przez ciąg liter
+i skończyliśmy na 4. stanie.
+
+01:02.200 --> 01:08.200
+Pamiętaj z poprzedniego filmu, że jest to stan akceptujący,
+ponieważ ma dwa kółka.
+
+01:08.200 --> 01:13.400
+Ponieważ skończyliśmy w stanie akceptującym, to
+zdanie „Moo.” jest akceptowalne;
+
+01:13.400 --> 01:20.000
+rzeczywiście zaczyna się od dużej litery
+i kończy się kropką.

@@ -1,0 +1,85 @@
+WEBVTT
+
+NOTE
+Computer Science Education Research,
+University of Canterbury, New Zealand
+Subtitle file for the video „Finite State Automata - 5 - Another Example and Common Terms”
+Author: Alasdair Smith
+Language: English
+Date: 10/04/2017
+Translation to Polish language: Tomasz Śliwiński
+Date: 15/02/2018
+
+00:00.200 --> 00:05.800
+Spójrzmy na kolejne zdanie: „URL.com”
+
+00:05.800 --> 00:13.000
+Zaczynając ponownie od stanu początkowego,
+bierzemy dużą literę „U” i przenosimy się do 3. stanu,
+
+00:13.000 --> 00:16.800
+potem duże „R” przenosi nas do 3. stanu,
+
+00:16.800 --> 00:21.000
+kolejna duża litera „L” przenosi nas do 3 stanu,
+
+00:21.000 --> 00:24.000
+i kropka przenosi nas do 4. stanu,
+
+00:24.000 --> 00:28.200
+mała litera „c” przenosi nas z powrotem do 3. stanu,
+
+00:28.200 --> 00:32.000
+kolejno małe „o” przenosi nas do 3. stanu,
+
+00:32.000 --> 00:37.600
+i ostanie małe „m” przenosi nas do 3. stanu.
+
+00:37.600 --> 00:44.400
+Tym razem nie jesteśmy w stanie akceptującym,
+więc mimo, że przeszliśmy przez stan akceptujący,
+
+00:44.400 --> 00:50.200
+automat nie akceptuje
+„URL.com” jako poprawnego zdania.
+
+00:50.200 --> 00:53.400
+Jednak po dodaniu jednej dodatkowej kropki,
+
+00:53.400 --> 00:58.200
+możemy je zamienić na zdanie,
+akceptowane przez automat.
+
+01:00.900 --> 01:07.800
+W sensie bardziej ogólnym są trzy
+dodatkowe słowa, których często używamy w automatach skończenie stanowych.
+
+01:07.800 --> 01:11.800
+Pierwsze nazywane jest <i>aflabetem</i> naszego automatu.
+
+01:11.800 --> 01:16.800
+To tylko lista wszystkich możliwych danych 
+wejściowych, które powodują przejście.
+
+01:16.800 --> 01:22.200
+W naszym przykładzie, nasz alfabet to „U”, „S”, i „L”.
+
+01:22.200 --> 01:27.400
+Zdania, których używamy do testowania 
+tego automatu, są znane jako <i>łańcuchy </i>,
+
+01:27.400 --> 01:37.400
+które są sekwencjami wejść z naszego alfabetu.
+Przykładami są „Moo.” i „URL.com”.
+
+01:37.400 --> 01:45.800
+Wreszcie mamy <i>język</i>. To wszystkie możliwe 
+łańcuchy akceptowane przez nasz automat.
+
+01:45.800 --> 01:53.000
+„Moo.” jest jednym z wielu łańcuchów w tym języku,
+ale chociaż „URL.com” jest łańcuchem,
+
+01:53.000 --> 01:59.800
+nie należy do naszego języka,
+ponieważ nie został zaakceptowany przez nasz automat.

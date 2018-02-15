@@ -1,0 +1,92 @@
+WEBVTT
+
+NOTE
+Computer Science Education Research,
+University of Canterbury, New Zealand
+Subtitle file for the video „Finite State Automata - 6 - Let's Build Our Own”
+Author: Alasdair Smith
+Language: English
+Date: 10/04/2017
+Translation to Polish language: Tomasz Śliwiński
+Date: 15/02/2018
+
+00:00.200 --> 00:05.800
+Powininniśmy już mieć dobre rozumienie 
+automatów skończenie stanowych 
+
+00:05.800 --> 00:11.600
+do czego są używane i jak je czytać. 
+Spróbujmy stworzyć własny.
+
+00:11.600 --> 00:17.400
+Najpierw musimy zdefiniować
+co chcemy, aby ten automat osiągnął.
+
+00:17.400 --> 00:19.200
+Zróbmy tak:
+
+00:19.200 --> 00:29.800
+Ten automat będzie akceptował dowolny łańcuch liter „A” i „B”,
+który ma nie więcej niż dwie litery „B” z rzędu.
+
+00:29.800 --> 00:37.200
+Okej, mamy naszą definicję,
+teraz zróbmy to, aby zrozumieć, co to znaczy:
+
+00:37.200 --> 00:40.000
+“dwolny łańcuch „A” i „B”.”
+
+00:40.000 --> 00:48.400
+To mówi nam, że w naszym alfabecie 
+mamy dwa typy przejść, „A” i „B”.
+
+00:48.400 --> 00:55.200
+„Akceptuj… nie więcej niż dwa „B” z rzędu.”
+To mówi nam, że nasz język,
+
+00:55.200 --> 01:05.400
+lub zbiór łańcuchów, które nasz automat będzie akceptował,
+to są wszystkie łańcuchy z co najwyżej zerem, jednym lub dwoma „B” z rzędu.
+
+01:05.400 --> 01:07.800
+Więc zacznijmy nasz schemat.
+
+01:07.800 --> 01:13.600
+Dobrym punktem początkowym jest stan początkowy, 
+kółko ze strzałką do niego.
+
+01:13.600 --> 01:16.400
+Nazwijmy ten stan „0”.
+
+01:16.400 --> 01:19.400
+Świetnie, co jeszcze możemy zrobić?
+
+01:19.400 --> 01:25.200
+Cóż, spójrzmy na to, czego się spodziewamy,
+jeśli nie nie damy nic automatowi.
+
+01:25.200 --> 01:29.400
+Ciąg zawierający zero „A” i zero „B”.
+
+01:29.400 --> 01:35.600
+To może wydawać się nieco dziwne, ale pusty ciąg, 
+oznaczony jako <i>epsilon</i> lub czasami <i>lambda</i>,
+
+01:35.600 --> 01:40.000
+jest bardzo przydatny do zrozumienia 
+działania naszego automatu.
+
+01:40.000 --> 01:46.400
+Więc nic nie wkładamy.
+W naszym ciągu jest co najwyżej zero „B” z rzędu.
+
+01:46.400 --> 01:52.200
+Zero „B” to oczywiście mniej niż trzy „B”,
+więc ciąg jest akceptowany.
+
+01:52.200 --> 01:56.800
+Oznacza to, że nasz pierwszy stan 
+jest także stanem akceptującym.
+
+01:56.800 --> 02:00.000
+Dajmy mu inne kółko, żeby to pokazać.

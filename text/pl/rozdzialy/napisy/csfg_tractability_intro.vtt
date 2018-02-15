@@ -1,0 +1,151 @@
+WEBVTT
+
+NOTE
+Computer Science Education Research,
+University of Canterbury, New Zealand
+Subtitle file for the video „Computer Science Field Guide: Tractability”
+Author: Alasdair Smith
+Date: 15/02/2017
+Translation to Polish language: Tomasz Śliwiński
+Date: 15/02/2018
+
+
+00:00.000 --> 00:02.400
+Zlożoność obliczeniowa
+
+00:03.000 --> 00:06.800
+Mam cztery zaproszenia na przyjęcie dla czterech przyjaciół,
+
+00:06.800 --> 00:09.300
+i opracowałem najlepszy sposób ich dostarczenia.
+
+00:09.300 --> 00:11.500
+Obliczyłem, ile czasu zajmie odwiedzenie:
+
+NOTE
+Następna sekcja przechodzi bardzo szybko, więc może być trudna do odczytania.
+Imiona Alice, Bob, Carol i David zostały skrócone do A,B,C i D 
+
+00:11.500 --> 00:13.000
+przyjaciela A, potem B, potem C, potem D;
+
+00:13.000 --> 00:14.800
+lub B, A, C, D;
+
+00:14.800 --> 00:16.400
+lub A, B, D, C;
+
+00:16.400 --> 00:18.000
+lub B, A, D, C;
+
+00:18.000 --> 00:20.000
+lub A, C, B, D.
+
+NOTE koniec sekcji
+
+00:20.000 --> 00:22.400
+[<i>westchnienie</i>] Rozumiesz to.
+
+00:22.400 --> 00:26.600
+Z czterema przyjaciółmi mam 24 możliwości, które musiałbym spróbować.
+
+00:26.600 --> 00:29.400
+Rozważałem zaproszenie piątego przyjaciela,
+00:29.400 --> 00:33.200
+ale to oznaczałoby, że byłoby 120 różnych kombinacji, które musiałbym spróbować,
+
+00:33.200 --> 00:35.200
+więc ona nie dostała zaproszenia.
+
+00:35.200 --> 00:37.200
+Tak naprawdę, mam 35 przyjaciół,
+
+00:37.200 --> 00:38.800
+ale żeby zaprosić ich wszystkich, musiałbym wypróbować
+
+00:38.800 --> 00:42.600
+dziesięć tysięcy<00:00:39.400>milion <00:00:39.800>milion <00:00:40.200>milion
+<00:00:40.800>milion <00:00:41.400>milion <00:00:41.800>milionów (w zaokrągleniu)
+
+00:42.600 --> 00:44.200
+różnych kombinacji.
+
+00:44.200 --> 00:49.600
+W rzeczywistości, jeśli dinozaur rozpocząłby te obliczenia
+używając najszybszego obecnie dostępnego komputera,
+
+00:49.600 --> 00:52.800
+it would still only be a fraction of a percent
+complete today.
+to do teraz wykonany by został 
+ułamek procenta obliczeń.
+
+00:52.800 --> 00:58.400
+Do czasu, gdy słońce zgaśnie, 
+wykonany by został tylko 1%.
+
+00:58.400 --> 01:02.800
+Problem polega na tym, że wiele ważnych problemów 
+w informatyce jest trudnych,
+
+01:02.800 --> 01:04.800
+i nikt nie znalazł dobrego sposobu programowania,
+
+01:04.800 --> 01:07.600
+takie jak: wycinanie kształtów z materiału;
+
+01:07.600 --> 01:10.200
+ładowanie ładunków na ciężarówki w optymalny sposób;
+
+01:10.200 --> 01:12.600
+opracowywanie rozkładów jazdy;
+
+01:12.600 --> 01:15.000
+nawet rozwiązywanie dużych zagadek sudoku.
+
+01:16.400 --> 01:20.000
+Dobrze, że te problemy istnieją,
+oto przykład:
+
+01:20.000 --> 01:22.400
+Większość zabezpieczeń internetowych opiera się na <i>kluczach bezpieczeństwa</i>,
+
+NOTE
+YouTube nie rozpoznaje <i> podczas przesyłania pliku,
+ale robi to po opublikowaniu
+
+01:22.400 --> 01:25.400
+które są iloczynem dwóch dużych liczb pierwszych,
+
+01:25.400 --> 01:28.600
+co zajmie miliardy lat, aby ustalić rozkład na czynniki.
+
+NOTE kursywa w powyższych „kluczach bezpieczeństwa”
+
+01:28.600 --> 01:30.800
+Jeśli mi nie wierzysz, spróbuj tego:
+
+01:30.800 --> 01:34.000
+Liczba wyświetlana na ekranie
+jest iloczynem dwóch liczb pierwszych.
+
+01:34.000 --> 01:36.800
+Jeśli potrafisz ustalić, 
+jakie są dwa czynniki tej liczby,
+
+01:36.800 --> 01:39.600
+wyślij nam wiadomość, a my wyślemy ci darmową koszulkę.
+
+01:39.600 --> 01:44.200
+Nawet informatycy nie wiedzą, czy istnieją lepsze sposoby na znalezienie optymalnego rozwiązania.
+
+
+0:44.200 --> 01:48.800
+W międzyczasie nacisk położony jest na obliczenie 
+wystarczająco dobrych rozwiązań
+
+01:49.600 --> 01:54.800
+lub możesz po prostu zaprosić czterech przyjaciół na imprezę.
+
+01:56.400 --> 01:59.000
+Złożonośc obliczeniowa

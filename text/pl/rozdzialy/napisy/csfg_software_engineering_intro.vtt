@@ -1,0 +1,158 @@
+WEBVTT
+
+NOTE
+Computer Science Education Research,
+University of Canterbury, New Zealand
+Subtitle file for the video „Computer Science Field Guide: Software Engineering”
+Author: Alasdair Smith
+Date: 15/02/2017
+Translation to Polish language: Tomasz Śliwiński
+Date: 15/02/2018
+
+
+00:00.000 --> 00:02.000
+Inżynieria oprogramowania
+
+00:02.000 --> 00:04.400
+Oprogramowanie jest niezbędne do naszego życia.
+
+00:04.400 --> 00:09.800
+Wyobrażsobie życie bez internetu, 
+Googla, Facebooka lub twojego smartfona.
+
+00:09.800 --> 00:12.200
+Oczekujemy, że nasze oprogramowanie będzie działać poprawnie.
+
+00:12.200 --> 00:15.600
+Błąd w programie może sprawić, że 
+korzystanie z niego będzie naprawdę frustrujące,
+
+00:15.600 --> 00:19.400
+lub może nawet <00:18.000>zepsuć twój komputer.
+
+00:19.400 --> 00:21.800
+Ale może być o wiele gorzej.
+
+00:21.800 --> 00:24.800
+Co się stanie, jeśli oprogramowanie kontrolujące 
+elektrownię jądrową ulegnie awarii?
+
+NOTE
+The next section has been broken up to make different
+combinations of subtitles appear at the same time
+
+00:24.800 --> 00:29.200
+Lub oprogramowanie kontrolujące samolot
+<00:27.000>[Krzyki]
+
+00:29.200 --> 00:31.600
+Na szczęście techniki inżynierii oprogramowania
+[Krzyki]
+
+00:31.600 --> 00:36.600
+mogą nam pomóc w tworzeniu oprogramowania, które działa poprawnie.
+<00:34.000>[Tak]
+
+NOTE end of section
+
+00:36.600 --> 00:41.600
+Tworzenie dobrego oprogramowania jest trudne,
+ponieważ często oprogramowanie jest ogromne i złożone.
+
+00:41.600 --> 00:45.000
+Niektóre ogromne systemy 
+mają dziesiątki milionów linijek kodu.
+
+00:45.000 --> 00:48.200
+Jeśłi wydrukowałbyś je na papierze 
+i złożył je w książkę,
+
+00:48.200 --> 00:51.200
+dostałbyś stos, który
+jest około stu metrów wysoki.
+
+00:51.200 --> 00:54.600
+To jest, jak 25-piętrowy budynek.
+
+00:54.600 --> 00:59.000
+Jeśli chcałbyś przeczytać program o takim rozmiarze,
+aby spróbować zrozumieć, jak to działa,
+
+00:59.000 --> 01:02.200
+orawdopodobnie zajęłoby ci to około 50 lat!
+
+01:02.200 --> 01:05.400
+Jeśli jakieś oprogramowanie zajmuje prawie 
+całe życie, żeby je przeczytać,
+
+01:05.400 --> 01:07.800
+wyobraź sobie, jak długo zajęłoby go napisanie.
+
+01:07.800 --> 01:13.000
+Oczywiście żadna osoba nie może zrobić tego sama.
+Potrzebujemy zespołów deweloperow pracujących nad oprogramowaniem,
+
+01:13.000 --> 01:14.600
+czasami trzech deweloperow,
+
+01:14.600 --> 01:16.200
+czasamim dziesięciu deweloperow,
+
+01:16.200 --> 01:19.400
+czasami setki,
+<01:17.400>a czasami więcej.
+
+01:19.400 --> 01:21.800
+Tutaj wkracza inżynieria oprogramowania.
+
+01:21.800 --> 01:25.200
+Jak zdobyć zespół deweloperów, aby
+pisać ogromne oprogramowanie,
+
+01:25.200 --> 01:30.200
+gdzie wszystkie elementy pasują do siebie i
+działa niezawodnie i robi to, czego chce użytkownik.
+
+01:30.200 --> 01:33.800
+Inżynieria oprogramowania to coś 
+więcej niż tylko programowanie.
+
+01:33.800 --> 01:39.600
+W rzeczywistości rzeczywista część programowa to zwykle 
+tylko około 20% projektów programistycznych.
+
+01:39.600 --> 01:43.400
+Nawet dzisiaj nie jesteśmy dobrzy 
+w prawidłowym rozwoju oprogramowania.
+
+01:43.400 --> 01:48.000
+Badanie przeprowadzone w 2009 r. Wykazało, że tylko około 
+jedna trzecia projektów programistycznych odniosła sukces.
+
+01:48.000 --> 01:50.400
+Podczas, gdy jedna czwarta projektów zakończyła się niepowodzeniem,
+
+01:50.400 --> 01:53.600
+lub została anulowana przed 
+dostarczeniem oprogramowania.
+
+01:53.600 --> 01:58.200
+Na szczęście wiemy teraz dużo o tym,
+co działa, a co nie.
+
+01:58.200 --> 02:02.000
+W tym rozdziale przyjrzymy się
+niektórym podejściim skazanynm na porażkę,
+
+02:02.000 --> 02:04.000
+które, o dziwo, są używane dość często,
+
+02:04.000 --> 02:08.400
+i niektórym podejściom, które wydają się działać dużo lepiej
+i mogą nam pomóc w tworzeniu oprogramowania,
+
+02:08.400 --> 02:11.000
+które robi to, co mamy na myśli.
+
+02:11.000 --> 02:14.000
+Inżynieria oprogramowania

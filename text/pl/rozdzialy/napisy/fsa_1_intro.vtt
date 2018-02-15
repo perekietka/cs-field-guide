@@ -1,0 +1,52 @@
+WEBVTT
+
+NOTE
+Computer Science Education Research,
+University of Canterbury, New Zealand
+Subtitle file for the video „Finite State Automata - 1 - Introduction”
+Author: Alasdair Smith
+Language: English
+Date: 10/04/2017
+Translation to Polish language: Tomasz Śliwiński
+Date: 15/02/2018
+
+00:00.200 --> 00:06.400
+Rzućmy okiem na automat skończenie stanowy
+<00:03.900>lub w skrócie FSA.
+
+00:06.400 --> 00:11.200
+W tej serii filmów
+przyjrzymy się, jak przydatne są FSA,
+
+00:11.200 --> 00:15.000
+użyj ich w przykładzie
+do testowania poprawnych zdań,
+
+00:15.000 --> 00:20.400
+a następnie zbudujemy nasz własny automat
+do zbadania innych zastosowań.
+
+00:20.400 --> 00:25.800
+Więc co znaczą te słowa:
+<i>automaty skończenie stanowe</i>
+
+00:25.800 --> 00:28.600
+Skończony oznacza, że istnieje ograniczona liczba,
+
+00:28.600 --> 00:33.400
+w przeciwieństwie do nieskończonej,
+co oznacza, że liczba jest nieograniczona.
+
+00:33.400 --> 00:41.400
+Stan jest formą maszyny w danym czasie
+<00:37.000>i automaty to liczba mnoga automatu
+
+NOTE w angielskim ma to więcej sensu: And Automata is the plural for Automaton;
+
+00:41.400 --> 00:47.600
+maszyna, która działa samodzielnie,
+postępując według prostych instrukcji i reguł.
+
+00:47.600 --> 00:54.600
+Dlatego też automat skończenie stanowy,
+to prosta maszyna ze skończoną liczbą stanów.

@@ -1,0 +1,38 @@
+WEBVTT
+
+NOTE
+Computer Science Education Research,
+University of Canterbury, New Zealand
+Subtitle file for the video „Finite State Automata - 2 - Uses”
+Author: Alasdair Smith
+Language: English
+Date: 10/04/2017
+Translation to Polish language: Tomasz Śliwiński
+Date: 15/02/2018
+
+00:00.200 --> 00:04.400
+Jeśli masz doświadczenie 
+w programowaniu konsolowym,
+
+00:04.400 --> 00:09.400
+obliczeniach w Excelu,
+lub nawet pisaniu zdań w Wordzie,
+
+00:09.400 --> 00:13.200
+być może spotkałeś się z przerażającym i>błądem składni</i>,
+
+00:13.200 --> 00:18.200
+gdzie przypadkowo pominąłeś nawias 
+lub źle napisane słowo.
+
+00:18.200 --> 00:22.600
+Nawet zanim twój komputer uruchomi kod 
+lub wykona te obliczenia,
+
+00:22.600 --> 00:28.600
+wie, że popełniłeś błąd;
+i często może ci powiedzieć, gdzie dokładnie on jest.
+
+00:28.600 --> 00:34.000
+Możemy korzystać z automatów skończenie stanowych,
+aby znaleźc niektóre z tych błędów.
