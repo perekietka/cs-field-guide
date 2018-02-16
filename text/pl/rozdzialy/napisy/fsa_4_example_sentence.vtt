@@ -28,39 +28,39 @@ zobaczyć, co się stanie.
 
 00:20.600 --> 00:26.200
 Zaczynamy od stanu początkowego (który jest „1”),
-bierzemy każdy znak po kolei,
+bierzemy każdy znak po kolei
 
 00:26.200 --> 00:29.000
-kolejno przechodząc przejścia dla każdego.
+i przechodzimy do kolejnego stanu.
 
 00:29.000 --> 00:36.200
 Pierwszy znak „M” jest dużą literą,
-więc podążamy za przejściem „U” do 3. stanu.
+więc podążamy za przejściem U do stanu 3.
 
 00:36.200 --> 00:43.200
 Potem mamy małe „o”, więc podążamy za
-przejściem „L” ,które jest pętlą i kończymy w 3. stanie.
+przejściem L, które jest pętlą i kończymy w stanie 3.
 
 00:43.200 --> 00:49.200
 kolejne małe „o”, więc znów podążamy za 
-przejściem „L” do 3 stanu.
+przejściem L do stanu 3.
 
 00:49.200 --> 00:56.400
 I na koniec mamy kropkę, więc podążamy
-przejściem „S” do 4. stanu.
+przejściem S do stanu 4.
 
 00:57.400 --> 01:02.200
-Więc przeszliśmy przez ciąg liter
-i skończyliśmy na 4. stanie.
+Przeszliśmy przez ciąg liter
+i skończyliśmy w stanie 4.
 
 01:02.200 --> 01:08.200
-Pamiętaj z poprzedniego filmu, że jest to stan akceptujący,
+Pamiętasz pewnie z poprzedniego filmu, że jest to stan akceptujący,
 ponieważ ma dwa kółka.
 
 01:08.200 --> 01:13.400
-Ponieważ skończyliśmy w stanie akceptującym, to
-zdanie „Moo.” jest akceptowalne;
+Ponieważ skończyliśmy w stanie akceptującym, 
+zdanie „Moo.” jest akceptowalne.
 
 01:13.400 --> 01:20.000
-rzeczywiście zaczyna się od dużej litery
+Rzeczywiście zaczyna się od dużej litery
 i kończy się kropką.
