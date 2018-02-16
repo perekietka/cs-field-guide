@@ -14,7 +14,7 @@ Date: 15/02/2018
 Zlożoność obliczeniowa
 
 00:03.000 --> 00:06.800
-Mam cztery zaproszenia na przyjęcie dla czterech przyjaciół,
+Mam cztery zaproszenia na przyjęcie dla czterech przyjaciół
 
 00:06.800 --> 00:09.300
 i opracowałem najlepszy sposób ich dostarczenia.
@@ -39,7 +39,7 @@ lub A, B, D, C;
 lub B, A, D, C;
 
 00:18.000 --> 00:20.000
-lub A, C, B, D.
+lub A, C, B, D...
 
 NOTE koniec sekcji
 
@@ -47,12 +47,12 @@ NOTE koniec sekcji
 [<i>westchnienie</i>] Rozumiesz to.
 
 00:22.400 --> 00:26.600
-Z czterema przyjaciółmi mam 24 możliwości, które musiałbym spróbować.
+Z czterema przyjaciółmi mam 24 możliwości, które musiałbym zbadać.
 
 00:26.600 --> 00:29.400
-Rozważałem zaproszenie piątego przyjaciela,
+Rozważałem zaproszenie dodatkowo przyjaciółki,
 00:29.400 --> 00:33.200
-ale to oznaczałoby, że byłoby 120 różnych kombinacji, które musiałbym spróbować,
+ale to oznaczałoby, że byłoby 120 różnych kombinacji, które musiałbym wypróbować,
 
 00:33.200 --> 00:35.200
 więc ona nie dostała zaproszenia.
@@ -75,8 +75,6 @@ W rzeczywistości, jeśli dinozaur rozpocząłby te obliczenia
 używając najszybszego obecnie dostępnego komputera,
 
 00:49.600 --> 00:52.800
-it would still only be a fraction of a percent
-complete today.
 to do teraz wykonany by został 
 ułamek procenta obliczeń.
 
@@ -89,23 +87,23 @@ Problem polega na tym, że wiele ważnych problemów
 w informatyce jest trudnych,
 
 01:02.800 --> 01:04.800
-i nikt nie znalazł dobrego sposobu programowania,
+i nikt nie znalazł dobrego ich rozwiązania,
 
 01:04.800 --> 01:07.600
-takie jak: wycinanie kształtów z materiału;
+takie jak: wycinanie kształtów z materiału,
 
 01:07.600 --> 01:10.200
-ładowanie ładunków na ciężarówki w optymalny sposób;
+ładowanie ładunków na ciężarówki w optymalny sposób,
 
 01:10.200 --> 01:12.600
-opracowywanie rozkładów jazdy;
+opracowywanie rozkładów jazdy,
 
 01:12.600 --> 01:15.000
 nawet rozwiązywanie dużych zagadek sudoku.
 
 01:16.400 --> 01:20.000
-Dobrze, że te problemy istnieją,
-oto przykład:
+Dobrze, że te problemy istnieją.
+Oto przykład:
 
 01:20.000 --> 01:22.400
 Większość zabezpieczeń internetowych opiera się na <i>kluczach bezpieczeństwa</i>,
@@ -115,10 +113,10 @@ YouTube nie rozpoznaje <i> podczas przesyłania pliku,
 ale robi to po opublikowaniu
 
 01:22.400 --> 01:25.400
-które są iloczynem dwóch dużych liczb pierwszych,
+które są iloczynem dwóch dużych liczb pierwszych.
 
 01:25.400 --> 01:28.600
-co zajmie miliardy lat, aby ustalić rozkład na czynniki.
+Jego rozład na czynniki zająłoby miliardy lat.
 
 NOTE kursywa w powyższych „kluczach bezpieczeństwa”
 
@@ -137,15 +135,15 @@ jakie są dwa czynniki tej liczby,
 wyślij nam wiadomość, a my wyślemy ci darmową koszulkę.
 
 01:39.600 --> 01:44.200
-Nawet informatycy nie wiedzą, czy istnieją lepsze sposoby na znalezienie optymalnego rozwiązania.
+Nawet informatycy nie wiedzą, czy istnieją dobre sposoby na znalezienie optymalnego rozwiązania.
 
 
 0:44.200 --> 01:48.800
-W międzyczasie nacisk położony jest na obliczenie 
-wystarczająco dobrych rozwiązań
+W międzyczasie zajmują się więc obliczaniem 
+wystarczająco dobrych rozwiązań.
 
 01:49.600 --> 01:54.800
-lub możesz po prostu zaprosić czterech przyjaciół na imprezę.
+A ty mógłbyś po prostu zaprosić czterech przyjaciół na imprezę.
 
 01:56.400 --> 01:59.000
 Złożonośc obliczeniowa
