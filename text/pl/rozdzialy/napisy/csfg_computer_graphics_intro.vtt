@@ -13,37 +13,37 @@ Date: 15/02/2018
 Grafika komputerowa służy do tworzenia różnego rodzaju obrazów.
 
 00:06.200 --> 00:10.600
-Ale ostatecznie są po prostu 
-<00.08.000>pikselami, którym nadano pewną wartość koloru.
+Obrazy w gruncie rzeczy są po prostu grupą 
+<00.08.000>pikseli, którym nadano pewną wartość koloru.
 
 00:10.600 --> 00:13.000
-Informatycy, którzy pracują w grafice komputerowej
+Informatycy graficy komputerowi,
 
 00:13.000 --> 00:15.400
-pracują nad tym, jak wziąć objekt,
+pracują nad tym, jak dla obiektu
 
 00:15.400 --> 00:19.000
 wykonać jakieś obliczenia i przenieść 
 to na ekran komputera.
 
 00:19.000 --> 00:23.000
-Na przykład: musimy myśleć o obrocie obiektu;
+Na przykład: musimy myśleć o obrocie obiektu,
 
 00:24.600 --> 00:27.000
-jego pozycji w przestrzeni trójwymiarowej;
+jego pozycji w przestrzeni trójwymiarowej,
 
 00:32.000 --> 00:33.600
 i jego wielkości.<00:33.200> [kwak]
 
 00:33.600 --> 00:38.000
-Dotyczy to również matematycznego określania kolorów,
+Dotyczy to również matematycznego określania kolorów
 
 00:38.600 --> 00:44.000
-i opracowaniu tego, jakie obiekty powinny
+i opracowania tego, jak obiekty powinny
 wyglądać przed innymi.
 
 00:45.600 --> 00:50.000
-I jak dodać cienie,<00:47:600> o dobicia.
+I jak dodać cienie,<00:47:600> odobicia.
 
 00:52.000 --> 00:58.000
 Nawet opracowanie, których pikseli użyć
@@ -56,11 +56,10 @@ nie jest takie proste.
 W tym rozdziale przyjrzymy się
 
 01:01.600 --> 01:04.200
-niektórym wyzwaniom
-i niektórym potrzebnym obliczeniom,
+niektórym obliczeniom,
 
 01:04.200 --> 01:06.000
-aby dostać odpowiedni piksel,
+pozwalającym dostać odpowiedni piksel
 
 01:06.600 --> 01:08.400
 w odpowiednim miejscu
