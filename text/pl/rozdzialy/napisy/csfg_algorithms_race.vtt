@@ -17,43 +17,42 @@ Używamy komputerów do setek
 różnych rzeczy w ciągu dnia:
 
 00:05.400 --> 00:10.200
-rzeczy jak przeszukiwanie internetu;
-<00:07.000>edycji obrazka; lub wysukiwania drogi na mapie.
+przeszukiwania internetu,
+<00:07.000>edycji obrazka lub wyszukiwania drogi na mapie.
 
 00:10.200 --> 00:13.600
 Ale czy kiedykolwiek zastanawiałeś się, jak komputer 
 wykonuje te rzeczy?
 
 00:13.600 --> 00:18.400
-Algrotym jest procesem, który krok po kroku
+Algorytm jest procesem, który krok po kroku
 mówi komputerowi, jak wykonać dane zadanie.
 
 00:18.400 --> 00:21.200
 Ale istnieje wiele różnych
 algorytmów dla tego samego problemu,
 00:21.200 --> 00:24.400
-tak samo jak może być wiele różnych przepisów
+tak samo jak może być wiele różnych przepisów,
 jak upiec ciasto.
 
 00:24.400 --> 00:27.400
-I także wiemy, 
+Wiemy też, 
 że niektóre przepisy są lepsze niż inne.
 
 
 00:27.400 --> 00:31.400
-Więc wykonamy mały eskperyment,
-żeby zobaczyć czy to samo jest prawdą dla algorytmów.
+Wykonamy mały eskperyment,
+żeby sprawdzić, czy tak samo jest z algorytmami.
 
 00:31.400 --> 00:34.600
-Jesteśmy  przez biblioteką
+Jesteśmy  przed biblioteką
 Uniwersytetu w Canterbury.
 
 00:34.600 --> 00:37.000
 Zaraz zaczniemy wielki wyścig algorytmów.
 
 00:37.000 --> 00:43.800
-Dziś udział bioą:
-Dziś konkurują ze sobą
+Dziś udział w nim biorą:
 Speedy Spencer oraz Slowcoach Slade.
 
 00:43.800 --> 00:46.600
@@ -62,7 +61,7 @@ i znalezienie ksiązki napisanej przez <i>Knutha</i>
 
 00:46.600 --> 00:50.400
 pośród milionów książęk, które tam są.
-Pierwszy, który ją znajdzie wygrywa.
+Pierwszy, który ją znajdzie, wygrywa.
 
 00:50.400 --> 00:55.600
 Gotowi?<00:52.02> Naprzód!
@@ -71,7 +70,7 @@ Gotowi?<00:52.02> Naprzód!
 Spencer!
 
 01:07.200 --> 01:11.600
-Speedy Spencer rozpoczął obiecująceo;
+Speedy Spencer rozpoczął obiecująco;
 przeszukał już dziesiątki książek.
 
 01:11.600 --> 01:15.400
@@ -86,18 +85,18 @@ książkę z osobna, aż...
 Dokąd on idzie?
 
 01:21.800 --> 01:26.600
-Wygląda na to, ze on dokładnie wie czego szuka.
+Wygląda na to, ze on dokładnie wie, czego szuka.
 
 01:39.000 --> 01:43.400
 Slade wykorzystuje coś, jak algorytm
 <i>wyszukiwania binarnego</i> jako swoją strategię.
 
 01:43.400 --> 01:46.600
-Popatrzył na książkę w środku biblioteki,
+Popatrzył na książkę w środku biblioteki
 i patrząc na tę jedną książkę,
 
 01:46.600 --> 01:49.600
-zdał sobie sprawę, że książkę, której szuka
+zdał sobie sprawę, że książki, której szuka,
 nie może być w pierwszej połowie.
 
 01:49.600 --> 01:53.000
@@ -123,14 +122,14 @@ jeden z najszybszych komputerów na świecie,
 i uruchomił na nim jeden z najgorszych algorytmów na świecie.
 
 02:12.400 --> 02:15.800
-Wyobraź sobie szybki silnik taki jak Google
-wyświetlał ci wyniki, przeszukując
+Wyobraź sobie, że szybki silnik taki jak Google
+wyświetla ci wyniki, przeszukując
 
 02:15.800 --> 02:19.800
 strona po stronie, każdą stronę w internecie.
 
 02:19.800 --> 02:23.200
-Wracając do Slade, Slade dokąd idziesz?
+Wracając do Slade'a, Slade, dokąd idziesz?
 
 02:23.200 --> 02:28.000
 SLADE: Dokładnie tak, jak planowałem. Zawęziłem wyszukiwanie,
@@ -140,27 +139,27 @@ i powinna być na tej półce.
 Wiesz już, że książka jest na tej półce?
 
 02:31.400 --> 02:33.200
-SLADE: Ta połowa półki
+SLADE: Ta połowa półki.
 
 02:33.200 --> 02:34.600
-BOZO: Przepraszam
+BOZO: Przepraszam.
 
 02:34.600 --> 02:37.000
-Bozo?, czy szukasz również książki?
+Bozo? Czy i ty szukasz książki?
 
 02:37.000 --> 02:39.200
-BOZO: Tak! wykorzystuję „wyszukiwanie Bozo”.
+BOZO: Tak! Wykorzystuję „wyszukiwanie Bozo”.
 
 02:39.200 --> 02:44.600
 Jak to działa?
-<02:40.200>BOZO: Cóż, biorę książkę,
+<02:40.200>BOZO: Cóż, biorę książkę
 i mam nadzieję, że to właściwa książka.
 
 02:44.600 --> 02:46.400
 A co, jeśli to nie jest właściwa książka?
 
 02:46.400 --> 02:51.200
-BOZO: Więc wtedy pójdę poszukać innej książki.
+BOZO: Wtedy pójdę poszukać innej książki.
 <02:50.000>Przepraszam.
 
 02:51.200 --> 02:53.000
@@ -183,7 +182,7 @@ Chłopcy. Możecie przestać teraz.
 
 03:13.800 --> 03:16.600
 Wygląda na to, ze algorytm, który 
-wybierzesz może spowodować wielką różnicę
+wybierzesz, może spowodować wielką różnicę,
 
 03:16.600 --> 03:18.600
 szczególnie przy dużych ilościach danych.
@@ -194,21 +193,21 @@ to zajęłoby Speedy Spencerowi
 
 03:21.800 --> 03:27.200
 dwa razy dłużej, aby znaleźć książkę. Ale Slowcoach Slade
-musiałby tylko sprawdzić jedną dodatkową książkę.
+musiałby sprawdzić tylko jedną dodatkową książkę.
 
 03:27.200 --> 03:30.200
-W tym rozdziale będziemy bardziej przyglądać się
-do czego algorytmy są używane,
+W tym rozdziale będziemy przyglądać się,
+do czego algorytmy są używane
 
 03:30.200 --> 03:32.600
-i dlaczego to ważne, aby wybrać ten właściwy..
+i dlaczego to ważne, aby wybrać ten właściwy...
 
 03:32.600 --> 03:37.200
-Więc Slowcoach Slade, jeśli byłeś algorytmem
-w programie, który pisałam
+Slowcoach Slade, jeśli byłbyś algorytmem
+w programie, który pisałam,
 
 03:37.200 --> 03:41.000
-byłabym najszczęśliwszym żyjącym programistą.
+byłabym najszczęśliwszą żyjącą programistką.
 
 03:42.700 --> 03:45.700
 Algorytmy.
