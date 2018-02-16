@@ -15,43 +15,43 @@ Rzućmy okiem na ten prosty automat, który stworzyłem.
 
 00:04.800 --> 00:11.200
 Jego celem jest sprawdzenie, czy dane zdanie
-zaczyna się od dużej litery i kończy się kropką.
+zaczyna się od dużej litery i czy kończy się kropką.
 
 00:11.200 --> 00:16.400
-Może wydawać się teraz trochę zniechęcający
+Może wydawać się trochę zniechęcający,
 więc przejrzyjmy go krok po kroku.
 
 00:16.400 --> 00:25.400
-Po pierwsze, widzimy, że ten schemat ma cztery okręgi
+Po pierwsze, widzimy, że schemat ma cztery kółka,
 oznaczone 1, 2, 3 i 4.
 
 00:25.400 --> 00:29.200
-Są różne<i>stany</i> naszego automatu.
+To są różne <i>stany</i> naszego automatu.
 
 00:29.200 --> 00:34.600
 Pomiędzy tymi stanami znajdują się strzałki oznaczone:
-„U” dla dużych liter;
+U -- dla dużych liter,
 
 00:34.600 --> 00:36.500
-„S”, dla kropki;
+S -- dla kropki
 
 00:36.500 --> 00:42.000
-i „L” dla małych liter
-jak również dla każdej innej interpunkcji.
+i L -- dla małych liter,
+jak również dla każdego innego znaku.
 
 00:42.000 --> 00:46.800
 Reprezentują one <i> przejścia </i> z jednego stanu do drugiego.
 
 00:46.800 --> 00:53.000
-Na przykład, jeśli jesteśmy w stanie „1”,
-to strzalka „U” przejdzie
+Na przykład, jeśli jesteśmy w stanie 1,
+to strzalka U przejdzie
 
 00:53.000 --> 00:59.800
-(lub przeniesie nas) do stanu „3”
-podczas gdy „L, S” przeniosą nas do stanu „2”.
+(lub przeniesie nas) do stanu 3,
+podczas gdy L, S przeniosą nas do stanu 2.
 
 00:59.800 --> 01:07.600
-Tutaj „L, S” oznacza po prostu, że zarówno „L” jak i „S”
+Tutaj „L, S” oznacza po prostu, że zarówno L, jak i S
 powodują to samo przejście.
 
 01:07.600 --> 01:13.600
@@ -59,25 +59,25 @@ Zwróć uwagę, że strzałka po lewej stronie nie jest oznaczona etykietą
 i nie przechodzi między stanami,
 
 01:13.600 --> 01:16.500
-zamiast tego tylko wprowadza nas do stanu „1”.
+tylko wprowadza nas do stanu 1.
 
 01:16.500 --> 01:20.800
-To mówi nam, że stan „1” jest <i>stanem startowym</i>,
+To mówi nam, że stan 1 jest <i>stanem startowym</i>,
 
 01:20.800 --> 01:27.400
 więc za każdym razem, gdy przechodzimy przez ten automat,
 zawsze zaczynamy od tego miejsca.
 
 01:27.400 --> 01:35.200
-po prawej mający dwa kółka,
-informuje nas, że jest to <i> stan akceptujący </i>.
+Stan 4 po prawej ma dwa kółka,
+co informuje nas, że jest to <i> stan akceptujący </i>.
 
 01:35.200 --> 01:41.200
 W tym przykładzie akceptowalne zdania, które
 zaczynają się dużą literą i kończą kropką,
 
 01:41.200 --> 01:45.500
-spowodują przejścia, które kończą się w tym stanie.
+doprowadzą nas do stanu 4.
 
 01:45.500 --> 01:51.800
 Możemy mieć dowolną liczbę stanów akceptujących;
