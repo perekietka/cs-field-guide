@@ -1,0 +1,86 @@
+WEBVTT
+
+NOTE
+Computer Science Education Research,
+University of Canterbury, New Zealand
+Subtitle file for the video „Regular Expressions - 3 - Extended Syntax”
+Author: Alasdair Smith
+Language: English
+Date: 20/06/17
+Translation to Polish language: Tomasz Śliwiński
+Date: 16/02/18
+
+00:00.000 --> 00:04.600
+Powiedzmy, że chcemy znaleźć każdą liczbę w tekście.
+
+00:04.600 --> 00:09.600
+Liczby składają się z jednej 
+lub więcej cyfr zapisanych obok siebie.
+
+NOTE w oryginale "concatenated together", czyli "powiązanych razem"/"połączonych razem" brzmi dla mnie dziwnie
+
+00:09.600 --> 00:21.000
+W prostym języku wyrażeń regularnych, to byłaby dowolna cyfra:
+<00:14.000>0 lub 1 lub 2 lub 3 lub 4 lub 5 lub 6 lub 7 lub 8 lub 9,
+
+00:21.000 --> 00:31.600
+zapisana z zerem lub większą liczbą cyfr:
+<00:24.800>0 lub 1 lub 2 lub 3 lub 4 lub 5 lub 6 lub 7 lub 8 lub 9 gwiazdka.
+
+00:31.600 --> 00:36.400
+To zajmuje <i>zdecydowanie</i> za dużo czasu zapracowanemu informatykowi.
+
+00:36.400 --> 00:44.600
+Na szczęście możemy użyć kilku dodatkowych symboli, 
+z tak zwanej rozszerzonej składni wyrażeń regularnych.
+
+00:44.600 --> 00:57.400
+W wielu systemach lista symboli między nawiasami kwadratowymi,
+taka jak [0,1,2,3,4,5], oznacza „wybierz jeden element z tej listy”.
+
+00:57.400 --> 01:07.800
+Możemy to skrócić do [0-5],
+co oznacza „wybierz jeden symbol z zakresu od 0 do 5”.
+
+01:07.800 --> 01:16.000
+Ale w naszym przykładzie chcemy jakiejkolwiek pojedynczej cyfry, 
+więc możemy użyć innego zapisu: ukośnik wsteczny d (\d).
+
+01:16.000 --> 01:26.200
+Zapis \d(\d)* jest o wiele krótszy, 
+a wciąż pasuje dokładnie do tego samego wzorca!
+
+01:26.200 --> 01:32.400
+W rzeczywistości możemy go jeszcze bardziej skrócić, 
+wprowadzając notację wykorzystującą plus.
+
+01:32.400 --> 01:40.600
+Podczas gdy A* znajduje zero lub więcej liter A,
+A+ wyszukuje jedną lub więcej liter A.
+
+01:40.600 --> 01:49.000
+Możemy więc zapisać nasze wyrażenie regularne,
+które wyszukuje dowolną liczbę, jako (\d)+.
+
+01:49.000 --> 01:55.800
+Inne popularne symbole to: znak zapytania, 
+który sprawia, że symbol może wystąpić opcjonalnie;
+
+01:55.800 --> 02:02.600
+liczba w nawiasach klamrowych, która wyszukuje dokładną 
+liczbę wystąpień symbolu zapisanego przed nawiasami;
+
+02:02.600 --> 02:08.800
+oraz kropka, która wyszukuje 
+dany symbol jednokrotnie.
+
+02:08.800 --> 02:17.000
+Pamiętaj, że wszystkie te rozszerzone symbole wyrażeń regularnych 
+mogą być bardzo wymyślne, ale służą tylko skróceniu zapisu.
+
+02:17.000 --> 02:23.800
+Tak naprawdę to tylko skróty, które można 
+zapisać w dłuższej formie, używając czterech podstawowych symboli:
+
+02:23.800 --> 02:27.600
+kreski, gwiazdki i nawiasów.

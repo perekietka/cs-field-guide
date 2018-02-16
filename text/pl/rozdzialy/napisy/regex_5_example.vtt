@@ -1,0 +1,100 @@
+WEBVTT
+
+NOTE
+Computer Science Education Research,
+University of Canterbury, New Zealand
+Subtitle file for the video „Regular Expressions - 5 - A Bigger Example”
+Author: Alasdair Smith
+Language: English
+Date: 20/06/17
+Translation to Polish language: Tomasz Śliwiński
+Date: 16/02/18
+
+00:00.000 --> 00:10.400
+Rzućmy okiem na inny przykład — adresy URL.
+<00:05.800>Oto wyrażenie regularne dla adresów URL, które wymyśliłem wcześniej.
+
+00:10.400 --> 00:16.600
+Nie jest doskonałe, być może pod koniec tego filmu
+zorientujesz się, że czegoś tu brakuje,
+
+00:16.600 --> 00:21.400
+ale to dobry przykład na początek, więc spójrzmy na niego.
+
+00:21.400 --> 00:25.800
+Zanim to jednak zrobimy, 
+musimy wyjaśnić jeszcze jedną rzecz.
+
+00:25.800 --> 00:33.000
+Poza niektórymi przypadkami, takimi jak „ukośnik wsteczny d”,
+ukośnik wsteczny jest używany jako znak ucieczki (znak maskujący),
+
+00:33.000 --> 00:36.400
+dlatego następujący symbol jest rozumiany jako „taki jakim jest”.
+
+00:36.400 --> 00:44.600
+Zauważmy, że kropka wyszukuje dowolny znak,
+ale „ukośnik wsteczny kropka” wyszukuje kropkę.
+
+00:44.600 --> 00:51.400
+To samo dla „ukośnik lewy ukośnik prawy”,
+jako że ukośnik (prawy) oznacza granice wyrażenia regularnego.
+
+NOTE zamieniłem to, bo „normally matches the division symbol”, niezbyt pasuje mi tutaj... Może masz lepszy pomysł?
+
+00:51.400 --> 01:04.400
+W adresie mamy skrót od „Hypertext Transfer Protocol”, HTTP,
+z żadnym lub jednym wystąpieniem S, potem dwukropek, ukośnik prawy, ukośnik prawy.
+
+01:04.400 --> 01:12.000
+Ta część adresu URL znajduje się przed faktycznym adresem internetowym.
+Cała ta sekwencja może zostać pominięta,
+
+01:12.000 --> 01:16.800
+więc jest ujęta w nawiasy,
+a następnie występiuje znak zapytania.
+
+01:16.800 --> 01:23.000
+Kolejna sekwencja, główny adres internetowy,
+jest kombinacją liter i symboli.
+
+01:23.000 --> 01:29.200
+Możemy mieć literę, cyfrę
+lub kropkę, lub łącznik, lub ukośnik prawy.
+
+NOTE łącznik został przypadkowo pominięty na rysunku
+
+01:29.200 --> 01:37.000
+Zazwyczaj potrzebujemy więcej niż jednego,
+więc zapisujemy to w nawiasie i dopisujemy symbol plusa.
+
+01:37.000 --> 01:43.400
+Następnie pojawia się kropka, a następnie przyrostek.
+„.com” występuje najczęsciej w biznesie,
+
+NOTE „w biznesie” zostało przypadkowo pominięte w wypowiedzi
+
+01:43.400 --> 01:53.600
+ale istnieje wiele alternatyw regionalnych,
+takich jak „.co.nz” dla Nowej Zelandii, czy „.co.uk” dla Wielkiej Brytanii.
+
+01:53.600 --> 01:59.600
+W tej serii filmów zapoznaliśmy się
+z podstawowymi wyrażeniami regularnymi,
+
+01:59.600 --> 02:05.600
+do czego są używane, a także omówiliśmy niektóre 
+z wielu różnych symboli używanych w praktycznych systemach,
+
+02:05.600 --> 02:10.000
+choć wszystkie można wyrazić za pomocą zaledwie czterech.
+
+02:10.000 --> 02:15.600
+Aby uzyskać więcej informacji i przykładów, zapoznaj się 
+z podręcznikiem „Computer Science Field Guide”.
+
+02:15.600 --> 02:20.200
+Wyrażenia regularne znajdują się w rozdziale o językach formalnych.
+
+02:20.200 --> 02:22.000
+Dziękujemy za uwagę!

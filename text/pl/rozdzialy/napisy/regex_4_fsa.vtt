@@ -1,0 +1,93 @@
+WEBVTT
+
+NOTE
+Computer Science Education Research,
+University of Canterbury, New Zealand
+Subtitle file for the video „Regular Expressions - 4 - Regex and Finite State Automata”
+Author: Alasdair Smith
+Language: English
+Date: 20/06/17
+Translation to Polish language: Tomasz Śliwiński
+Date: 16/02/18
+
+00:00.000 --> 00:09.800
+Automaty skończenie stanowe, objaśnione wcześniejszej, 
+opisują dokładnie te same języki co wyrażenia regularne.
+
+00:09.800 --> 00:15.400
+Każde wyrażenie regularne może być 
+zapisane jako automat skończenie stanowy,
+
+00:15.400 --> 00:21.000
+a każdy automat skończenie stanowy może być 
+zapisany za pomocą wyrażenia regularnego.
+
+00:21.000 --> 00:29.600
+Na przykład, nasze wyrażenie regularne dla liczb: (\d)+,
+może zostać przekonwertowane do tego automatu:
+
+00:29.600 --> 00:35.600
+nieakceptujący stan startowy
+i stan akceptujący, z dwoma przejściami.
+
+00:35.600 --> 00:42.000
+Możesz zauważyć, że w tym automacie
+nie ma przejścia dla innych znaków niż cyfry.
+
+00:42.000 --> 00:46.600
+Możemy uwzględnić te inne przejścia przez
+wprowadzenie stanu pułapki,
+
+00:46.600 --> 00:51.400
+jako że nasze wyrażenie regularne 
+dopuszcza tylko cyfry.
+
+00:51.400 --> 00:58.000
+Ale zwykle jest to pominięte dla uproszczenia
+i jeśli symbol nie ma przejścia ze stanu,
+
+00:58.000 --> 01:06.400
+zakładamy, że przechodzi do stanu pułapki 
+a dany łańcuch nie jest akceptowany jako część języka.
+
+01:06.400 --> 01:09.200
+O co chodzi z tymi językami?
+
+01:09.200 --> 01:15.800
+Cóż, tutaj nie mówimy o zwykłych językach naturalnych, 
+takich jak warianty języka angielskiego.
+
+01:15.800 --> 01:24.400
+Mówimy o językach formalnych, z których każdy jest
+zestawem łańcuchów, które są akceptowane przez jakąś regułę.
+
+01:24.400 --> 01:39.200
+Na przykład: (\d)+ tworzy język zawierający łańcuchy
+takie jak 203, 57, a nawet 000, ale nie b17, czy -12.
+
+01:39.200 --> 01:49.400
+Wyrażenia regularne i automaty skończenie stanowe opisują 
+bardzo szczególny rodzaj języków formalnych, zwanych językami regularnymi.
+
+01:49.400 --> 01:56.200
+To są jedne z najbardziej podstawowych języków formalnych, 
+więc nie mogą opisać wszystkiego,
+
+01:56.200 --> 02:00.000
+ale wciąż mają mnóstwo zastosowań.
+
+02:00.000 --> 02:09.400
+Nazwy zmiennych, liczby, adresy URL, adresy email i numery telefonów
+mogą być opisane za pomocą języka regularnego.
+
+02:09.400 --> 02:15.800
+Informatykom łatwiej odczytać 
+wyrażenia regularne niż automaty skończenie stanowe,
+
+02:15.800 --> 02:21.800
+ale komputery są lepsze w rozumieniu automatów.
+Zwykle więc projektujemy wyrażenie,
+
+02:21.800 --> 02:29.000
+następnie używamy programu komputerowego do konwersji
+do automatu, który jest następnie używany zgodnie z przeznaczeniem.

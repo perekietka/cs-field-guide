@@ -1,0 +1,89 @@
+WEBVTT
+
+NOTE
+Computer Science Education Research,
+University of Canterbury, New Zealand
+Subtitle file for the video „Regular Expressions - 1 - Introduction”
+Author: Alasdair Smith
+Language: English
+Date: 20/06/17
+Translation to Polish language: Tomasz Śliwiński
+Date: 16/02/18
+
+00:00.000 --> 00:07.200
+Wyrażenia regularne, w skrócie
+(z ang.) „RE”, „regexp”, „regex” itp,
+
+00:07.200 --> 00:14.200
+są powszechnie stosowane w tworzeniu oprogramowania 
+i algorytmach wyszukujących wzorce w tekście;
+
+NOTE zmieniłem liczbę pojedynczą na mnogą oraz chyba lepsza druga linia, niż "algorytmach wyszukujących dopasowania wzorców w tekście?
+
+00:14.200 --> 00:19.800
+są one szczególnie ważne przy 
+wdrażaniu języków programowania.
+
+00:19.800 --> 00:25.200
+Wyrażenia regularne są to zaawansowane formuły
+do definiowania wzorców do wyszukania.
+
+00:25.200 --> 00:32.400
+Są one bardzo proste; można je zdefiniować 
+za pomocą kombinacji tylko czterech symboli:
+
+00:32.400 --> 00:38.800
+„domknięcia Kleene’ego” (reprezentowanego jako gwiazdka),
+<00:36.000>„alternatywy” (pionowej kreski)
+
+00:38.800 --> 00:43.400
+nawiasów okrągłych i kwadratowych.
+
+00:43.400 --> 00:48.400
+Powiedzmy, że chcemy wyszukać
+w tym stosie dokumentów ważne daty.
+
+00:48.400 --> 00:52.400
+Dla uproszczenia będziemy zajmować się tylko datami zapisanych za pomocą liczb.
+
+00:52.400 --> 00:57.600
+Jest kilka formatów liczbowych, 
+w których możemy zapisać daty prawidłowowo.
+
+00:57.600 --> 01:01.800
+Wyszukujemy: dzień-dzień-miesiąc-miesiąc-rok-rok.
+
+01:01.800 --> 01:07.800
+Jednakże mogłoby to być: dzień-dzień-miesiąc-miesiąc-rok-rok-rok-rok, 
+jeśli chemy być prezycyjni.
+
+01:07.800 --> 01:12.800
+Albo po prostu: dzień-dzień-miesiąc-miesiąc,
+jeśli nie potrzebujemy roku.
+
+01:12.800 --> 01:20.200
+Pierwszą cyfrą miesiąca może być tylko 0 lub 1,
+a pierwszą cyfrą dnia może być 0, 1, 2 lub 3.
+
+01:20.200 --> 01:26.600
+Czasami ludzie nie piszą zera, gdy liczba jest jednocyfrowa,
+więc data mogłaby być w postaci dzień-miesiąc.
+
+01:26.600 --> 01:33.000
+Ale dla innych osób miesiąc powinien być <i>przed</i> oznaczeniem
+dnia i to musimy również brać pod uwagę.
+
+01:33.000 --> 01:36.600
+To co mówię jest takie skomplikowane, prawda?
+
+01:36.600 --> 01:43.800
+Na szczęście możemy użyć wyrażeń regularnych, aby uprościć 
+zapisywanie reguł dla wzorców, wg których chcemy wyszukiwać.
+
+01:43.800 --> 01:50.400
+Ta seria filmów przybliża ten koncept.
+Poznamy znaczenie podstawowych symboli,
+
+01:50.400 --> 01:58.800
+rozszerzoną składnię i bliskie relacje 
+pomiędzy wyrażeniami regularnymi i automatami skończonymi.
