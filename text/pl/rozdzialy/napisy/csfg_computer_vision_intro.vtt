@@ -1,0 +1,52 @@
+WEBVTT
+
+00:00.000 --> 00:03.000
+Rozpoznawanie obrazów 
+<00:01.000>Pomysł, by nauczyć komputery „widzieć”
+
+00:03.000 --> 00:05.000
+już od dawna nie jest z gatunku science fiction.
+
+00:05.000 --> 00:11.400
+Znane są niezłe metody lokalizacji twarzy na obrazie,
+a nawet rozpoznawania konturów twarzy.
+
+00:11.400 --> 00:13.000
+Zdolność rozpoznawania położenia objektów
+
+00:13.000 --> 00:16.400
+pozwala na sterowanie pojazdami
+z zachowaniem należytej odległości od innych obiektów.
+
+00:16.400 --> 00:22.200
+To jest szczególnie ważne w przypadku
+wózków inwalidzkich, robotów czy samochodów poruszających się bez kierowcy.
+
+00:22.200 --> 00:25.800
+Poprzez analizę obiektów system ma możliwość
+wykrycia istotnych własności obiektów.
+
+00:25.800 --> 00:30.200
+np. jakość sfotografowanych owoców.
+
+00:31.800 --> 00:35.200
+czy guza na zdjęciu wnętrza ciała wykonanym w szpitalu.
+
+00:35.200 --> 00:39.400
+W tym rozdziale poznasz metody, jakimi zajmuje się dziedzina informatyki 
+określana angielskim terminem „computer vision” zajmuje się:
+
+00:39.400 --> 00:42.600
+znajdowanie krawędzi obiektów na obrazie;
+
+00:42.600 --> 00:45.400
+rozpoznwanie twarzy na obrazach;
+
+00:45.400 --> 00:48.000
+rozpoznwanie znaków tekstu;
+
+00:54.000 --> 00:57.600
+oraz śledzenie obiektów poruszających się na ruchowym obrazie wideo.
+
+00:57.600 --> 00:59.400
+Rozpoznawanie obrazów
