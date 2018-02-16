@@ -17,7 +17,7 @@ Inżynieria oprogramowania
 Oprogramowanie jest niezbędne do naszego życia.
 
 00:04.400 --> 00:09.800
-Wyobrażsobie życie bez internetu, 
+Wyobraź sobie życie bez internetu, 
 Googla, Facebooka lub twojego smartfona.
 
 00:09.800 --> 00:12.200
@@ -42,7 +42,7 @@ The next section has been broken up to make different
 combinations of subtitles appear at the same time
 
 00:24.800 --> 00:29.200
-Lub oprogramowanie kontrolujące samolot
+Lub oprogramowanie kontrolujące samolot?
 <00:27.000>[Krzyki]
 
 00:29.200 --> 00:31.600
@@ -64,7 +64,7 @@ Niektóre ogromne systemy
 mają dziesiątki milionów linijek kodu.
 
 00:45.000 --> 00:48.200
-Jeśłi wydrukowałbyś je na papierze 
+Jeśli wydrukowałbyś je na papierze 
 i złożył je w książkę,
 
 00:48.200 --> 00:51.200
@@ -72,65 +72,65 @@ dostałbyś stos, który
 jest około stu metrów wysoki.
 
 00:51.200 --> 00:54.600
-To jest, jak 25-piętrowy budynek.
+Czyli jak 25-piętrowy budynek.
 
 00:54.600 --> 00:59.000
 Jeśli chcałbyś przeczytać program o takim rozmiarze,
 aby spróbować zrozumieć, jak to działa,
 
 00:59.000 --> 01:02.200
-orawdopodobnie zajęłoby ci to około 50 lat!
+prawdopodobnie zajęłoby ci to około 50 lat!
 
 01:02.200 --> 01:05.400
 Jeśli jakieś oprogramowanie zajmuje prawie 
 całe życie, żeby je przeczytać,
 
 01:05.400 --> 01:07.800
-wyobraź sobie, jak długo zajęłoby go napisanie.
+wyobraź sobie, ile trwałoby jego napisanie.
 
 01:07.800 --> 01:13.000
 Oczywiście żadna osoba nie może zrobić tego sama.
-Potrzebujemy zespołów deweloperow pracujących nad oprogramowaniem,
+Potrzebujemy zespołów pracujących nad oprogramowaniem,
 
 01:13.000 --> 01:14.600
-czasami trzech deweloperow,
+czasami trzech informatyków,
 
 01:14.600 --> 01:16.200
-czasamim dziesięciu deweloperow,
+czasami dziesięciu,
 
 01:16.200 --> 01:19.400
-czasami setki,
+czasami setek,
 <01:17.400>a czasami więcej.
 
 01:19.400 --> 01:21.800
 Tutaj wkracza inżynieria oprogramowania.
 
 01:21.800 --> 01:25.200
-Jak zdobyć zespół deweloperów, aby
-pisać ogromne oprogramowanie,
+Jak zorganizować zespół
+piszący ogromne oprogramowanie,
 
 01:25.200 --> 01:30.200
-gdzie wszystkie elementy pasują do siebie i
-działa niezawodnie i robi to, czego chce użytkownik.
+gdzie wszystkie elementy pasują do siebie,
+działa niezawodnie i robi to, czego chce użytkownik?
 
 01:30.200 --> 01:33.800
 Inżynieria oprogramowania to coś 
 więcej niż tylko programowanie.
 
 01:33.800 --> 01:39.600
-W rzeczywistości rzeczywista część programowa to zwykle 
+W rzeczywistości część związana z samym programowaniem to zwykle 
 tylko około 20% projektów programistycznych.
 
 01:39.600 --> 01:43.400
 Nawet dzisiaj nie jesteśmy dobrzy 
-w prawidłowym rozwoju oprogramowania.
+w prawidłowym projektowaniu oprogramowania.
 
 01:43.400 --> 01:48.000
-Badanie przeprowadzone w 2009 r. Wykazało, że tylko około 
+Badanie przeprowadzone w 2009 r. wykazało, że tylko około 
 jedna trzecia projektów programistycznych odniosła sukces.
 
 01:48.000 --> 01:50.400
-Podczas, gdy jedna czwarta projektów zakończyła się niepowodzeniem,
+Jedna czwarta projektów zakończyła się niepowodzeniem
 
 01:50.400 --> 01:53.600
 lub została anulowana przed 
@@ -142,7 +142,7 @@ co działa, a co nie.
 
 01:58.200 --> 02:02.000
 W tym rozdziale przyjrzymy się
-niektórym podejściim skazanynm na porażkę,
+niektórym podejściom skazanym na porażkę,
 
 02:02.000 --> 02:04.000
 które, o dziwo, są używane dość często,
