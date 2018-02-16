@@ -19,32 +19,32 @@ W tej serii filmów
 przyjrzymy się, jak przydatne są FSA,
 
 00:11.200 --> 00:15.000
-użyj ich w przykładzie
-do testowania poprawnych zdań,
+użyjemy ich 
+do testowania poprawności zdań,
 
 00:15.000 --> 00:20.400
 a następnie zbudujemy nasz własny automat
-do zbadania innych zastosowań.
+do innych zastosowań.
 
 00:20.400 --> 00:25.800
-Więc co znaczą te słowa:
-<i>automaty skończenie stanowe</i>
+A co znaczą te słowa:
+<i>automaty skończenie stanowe</i>?
 
 00:25.800 --> 00:28.600
-Skończony oznacza, że istnieje ograniczona liczba,
+„Skończenie” oznacza, że licza stanów jest ograniczona,
 
 00:28.600 --> 00:33.400
-w przeciwieństwie do nieskończonej,
-co oznacza, że liczba jest nieograniczona.
+w przeciwieństwie do nieskończonej
+(nieograniczonej).
 
 00:33.400 --> 00:41.400
-Stan jest formą maszyny w danym czasie
-<00:37.000>i automaty to liczba mnoga automatu
+Stan to sytuacja, w jakiej w danym czasie znajduje się automat,
+<00:37.000>a automat to coś jak maszyna.
 
 NOTE w angielskim ma to więcej sensu: And Automata is the plural for Automaton;
 
 00:41.400 --> 00:47.600
-maszyna, która działa samodzielnie,
+Maszyna, która działa samodzielnie,
 postępując według prostych instrukcji i reguł.
 
 00:47.600 --> 00:54.600
