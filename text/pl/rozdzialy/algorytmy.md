@@ -94,7 +94,7 @@ Warto, aby programista potrafił określić szybkość algorytmu, zanim zdecyduj
 {panel type="extra-for-experts" "Złożoność obliczeniowa algorytmów"}
 Szacowanie kosztów algorytmu znane jest w informatyce pod nazwa [analiza algorytmu](https://en.wikipedia.org/wiki/Analysis_of_algorithms). Taka analiza powinna prowadzić do wyznaczenia *złożoności obliczeniowej* algorytmu (dotyczącej czasu działania komputerowej realizacji algorytmu), ale czasami dodatkowo i *złożoności pamięciowej* algorytmu (dotyczącej wymagań co do pamięci potrzebnej do działania).
 
-Więcej informacji na temat określania kosztu algorytmu, m.in. o notacji „duże O”, znajduje się w podrozdziale ["Podsumowanie"](chapters/algorithms.html#the-whole-story) .
+Więcej informacji na temat określania kosztu algorytmu, m.in. o notacji „duże Θ”, znajduje się w podrozdziale ["Podsumowanie"](chapters/algorithms.html#the-whole-story) .
 {panel end}
 
 Trzeba podkreślić, że czas potrzebny różnym komputerom do realizacji tego samego algorytmu i tych samych danych może być różny. Zależy to od parametrów komputerów, ilości zasobów przydzielonych do wykonania zadania, ale i od języka programowania, w którym algorytm został zakodowany. Dlatego trzeba być ostrożnym w wyciąganiu pochopnych wniosków o koszcie algorytmu tylko na podstawie czasu wykonania programu. 
@@ -263,19 +263,19 @@ W powyższym opisie można zastąpić słowo „najmniejszy” słowem „najwi�
 ### Porządkowanie przez wstawianie
 
 {panel type="teacher-note" summary="Ten podrozdział można pominąć"}
-Algorytm przedstawiony poniżej jest użyteczny (zwłaszcza dla małych zbiorów danych) i w wykładach akademickich jest tematem obowiązkowym, to w przypadku podstawowego szkolnego kursu o algorytmach, niewiele wnosi nowego. Można go pominąć w pracy z uczniami, jeśli ilość czasu na kurs jest ograniczona.
+Algorytm przedstawiony poniżej jest użyteczny zwłaszcza dla małych zbiorów danych i w wykładach akademickich jest tematem obowiązkowym, lecz w przypadku podstawowego szkolnego kursu o algorytmach, niewiele wnosi nowego, gdy uczniowie znają już porządkowanie przez wybór. Można go pominąć w pracy z uczniami, jeśli czasu jest mało.
 {panel end}
 
-Ten algorytm działa w oparciu o następujący pomysł: Wybrane pudełko wyjmujemy z zbioru nieuporządkowego i wstawiamy na właściwej pozycji w zbiorze elementów wcześniej uporządkowanych. Podobnie jak porządkowanie przez wybór, algorytm przez wstawienie jest bardzo intuicyjny i ludzie często mniej lub bardziej świadomie stosują go, gdy porządkują jakiś zbiór obiektów lub np. karty do gry trzymane w ręce.
+Algorytm działa w oparciu o następujący pomysł: Wybrane pudełko wyjmujemy z zbioru nieuporządkowego i wstawiamy na właściwej pozycji w zbiorze elementów wcześniej uporządkowanych. Podobnie jak porządkowanie przez wybór, algorytm przez wstawienie jest bardzo intuicyjny i ludzie często mniej lub bardziej świadomie stosują go, gdy porządkują jakiś zbiór obiektów lub np. karty do gry trzymane w ręce.
 
 Spróbuj poćwiczyć algorytm z użyciem wagi szalkowej. Rozpocznij od przeniesienia wszystkich pudełek na jedną stronę ekranu.
 Następnie wybierz pudełko losowo i umieść je po drugiej stronie ekranu. 
 
-Aby znaleźć właściwe miejsce do wstawienia kolejnego pudełka, porównaj je z pudełkiem ustawionym wcześniej. W razie potrzeby zmień kolejność pudełek. Kolejne wstawiane pudełka należy umieścić we właściwym miejscu. Jedyną dozwoloną operacją jest porównywami dwóch pudełek. Zliczaj liczbę wykonanych porównań (ważeń)!
+Aby znaleźć właściwe miejsce do wstawienia kolejnego pudełka, porównaj je z pudełkiem ustawionym wcześniej. W razie potrzeby zmień kolejność pudełek. Kolejne wstawiane pudełka należy umieścić we właściwym miejscu. Jedyną dozwoloną operacją jest porównywanie dwóch pudełek. Zliczaj liczbę wykonanych porównań (ważeń)!
 
-Ten algorytm nazywa się algorytmem porządkowania przez wstawianie. Dla lepszego zropzumienia tematu warto obejrzeć [tę animację](https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif) z [Wikipedii](https://en.wikipedia.org/wiki/Insertion_sort).
+Ten algorytm nazywa się algorytmem porządkowania przez wstawianie. Dla lepszego zrozumienia tematu warto obejrzeć [tę animację](https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif) z [Wikipedii](https://en.wikipedia.org/wiki/Insertion_sort).
 
-Taki algorytm można by opisać listą kroków:
+Ten algorytm można tak opisać listą kroków:
 - Wybierz losowo element z listy. Umieść go na początku nowej listy.
 - Wybierz losowo element spośród pozostałych na liście. Umieść go na drugiej liście we właściwym miejscu.
 - Powtarzaj krok drugi, aż wszystkie elementy znajdą się na drugiej liście. Ta lista będzie uporządkowana.
@@ -284,9 +284,9 @@ Taki algorytm można by opisać listą kroków:
 
 ### Porządkowanie szybkie (Quicksort)
 
-Algorytmy porządkowania przedstawione wcześniej dla dużych zbiorów danych wymagają wykonania stosunkowo dużej liczby porównań.
+W przypadku dużych zbiorów danych algorytmy porządkowania przedstawione wcześniej wymagają wykonania stosunkowo dużej liczby porównań.
 
-O wiele lepszym algorytmem porządkowania jest metoda {glossary-link term="quicksort"}Quicksort!{glossary-link end} 
+O wiele lepszym algorytmem porządkowania jest metoda zwana po angielsku {glossary-link term="quicksort"}Quicksort!{glossary-link end} 
 
 {interactive name="sorting-algorithms" type="whole-page" text="Quicksort interactive" parameters="method=quick" thumbnail="thumbnail-quick.png"}
 
@@ -297,12 +297,12 @@ Ten algorytm jest trochę bardziej skomplikowany, ale bardzo efektowny. Przekona
 Kolejny etap to powtórzenie opisanej wyżej procedury dla każego z dwóch ustalonych wcześniej zbiorów pudełek (lżejszych i cięższych).
 Następnie procedurę należy powtarzaj wielokrotnie dla nowo ustalonych zbiorów. Aż wszystkie pudełka są we właściwej kolejności!
 
-Warto powtórzyć cały eksperyment z wagą kilkukrotnie. Dlaczego? Dlatego, że wiele zależy od szczęścia, to znaczy od wyboru pierwszego pudełka. W przypadku pecha może się okazać, że to kluczowe pudełko jest najcieższym lub najlżejszym w ogóle. W przypadku szczęścia wybrane pudełko będzie takim, które w zbiorze uporządkowanym znajdzie się pośrodku. Krótko mówiąc: Całkowita liczba porównań może być różna w każdym z eksperymentów.
+Warto powtórzyć cały eksperyment z wagą kilkukrotnie. Dlaczego? Dlatego, że wiele zależy od szczęścia, to znaczy od wyboru pierwszego pudełka. W przypadku pecha może się okazać, że to kluczowe pudełko jest najcieższe lub najlżejsze wśród wszystkich. W przypadku szczęścia wybrane pudełko będzie tym, które w zbiorze uporządkowanym znajdzie się pośrodku. Krótko mówiąc: Całkowita liczba porównań może być różna w każdym z eksperymentów.
 
-Taki algorytm można by opisać listą kroków:
+Ten algorytm można tak opisać listą kroków:
 - Wybierz losowo element z listy i porównaj go z wszystkimi pozostałymi elementami (ten element czasami nazywa się osiowym).
 - Zgrupuj wszystkie elementy o mniejszej wartości po lewej stronie elementu osiowego, a wszystkie elementy o większej wartości po prawej stronie.
-- Wybierz jedną z nieposortowanych podrgup i powtórz proces opisany w krokach powyżej. 
+- Wybierz jedną z nieposortowanych podgrup i powtórz proces opisany w krokach powyżej. 
 Proces jest przerywany, gdy wszystkie powstałe podgrupy są już jednoelementowe.
 
 {panel type="project" summary="Zakodowane algorytmy porządkowania"}
@@ -313,41 +313,40 @@ Twoje zadanie polega na wykonaniu pomiarów czasu działania programów dla cora
 - [Python (Version 3)](files/selection-quicksort-python3.py) - [Pobierz Python 3 here](https://www.python.org/downloads/)
 {panel end}
 
-Istnieją całe tuziny różnych algorytmów porzadkowania. Większość tych istotnie praktycznych jest oparta na dwóch algorytmach: porządkowaniu szybkim (quicksort) i porządkowaniu przez łączenie (mergesort). Te, oraz wiele innych, może zobaczyć oglądając wideo (link poniżej).
+Istnieją krocie różnych algorytmów porzadkowania. Większość tych istotnie praktycznych jest oparta na dwóch algorytmach: porządkowaniu szybkim (quicksort) i porządkowaniu przez łączenie (mergesort). Te, oraz wiele innych, może zobaczyć oglądając wideo (link poniżej).
 
 {video url="https://www.youtube.com/watch?v=kPRA0W1kECg"}
 
 ## Podsumowanie
 
-Ten rozdział to tylko wprowadzenie do tematu algorytmów. Istnieją z pewnością tysiące algorytmów dla tysięcy różnych zadań! Algorytmy są podstawą rozwiązywania problemów w wielu dziedzinach informatyki praktycznej (np. sztuczna intelignecja, rozpoznwanie obrazów, wyznaczanie najkrótszej trasy) i innych dziedzinach. Dzięki zrozumieniu kluczowych pojęć łatwiej będzie zrozumieć trudniejsze pojęcia na studiach.
+Ten rozdział to tylko wprowadzenie do tematu algorytmów. Istnieją z pewnością tysiące algorytmów dla tysięcy różnych zadań! Algorytmy są podstawą rozwiązywania problemów w wielu dziedzinach informatyki praktycznej (np. sztucznej intelignecji, rozpoznwania obrazów, wyznaczania najkrótszej trasy) i innych dziedzinach. Dzięki zrozumieniu kluczowych pojęć łatwiej będzie zrozumieć trudniejsze pojęcia na studiach.
 
-Warto podkreślić, że istnieją inne metody przeszukiwania (np. z haszowaniem, drzewa przeszukiwań) i porządkowania (np. przez łączenie), które w knkretnej sytuacji mogą być bardziej efektywne od przedstawionych w tym rozdziale. Informatyk powinien je poznać, by szukając rozwiązania rzeczywistego problemu nie ,,wywarzał otwartych drzwi'', a wyłącznie dostosowywał do konkretnej sytuacji algorytmy o utrwalonej renomie.
+Warto podkreślić, że istnieją inne metody przeszukiwania (np. z haszowaniem, drzewa przeszukiwań) i porządkowania (np. przez łączenie), które w konkretnej sytuacji mogą być bardziej efektywne od przedstawionych w tym rozdziale. Informatyk powinien je poznać, by szukając rozwiązania rzeczywistego problemu nie „wywarzał otwartych drzwi”, a dostosowywał do konkretnej sytuacji algorytmy o utrwalonej renomie.
 
-{panel type="extra-for-experts" summary="Przykłady notacji duże-O"}
-Oto przykłady zapisów dotyczących kosztów (pracochłonności) algorytmów, jakie można spotkać w podręcznikach akademickich z dziedziny algorytmów:
-- {math}O(1){math end} - Czas działania takiego algorytmu nie zależy od rozmiaru danych. Przykład: Znajdowanie wartości najmniejszej na liście uporządkowanej.
-- {math}O(n){math end} - Czas działania takiego algorytmu można opisać funkcją liniową (względem rozmiaru danych). Można powiedzić, że czas rośnie wprost proporcjonalnie do rozmiaru danych. Przykład: przeszukiwanie liniowe.
-- {math}O(n^{2}){math end} - Czas działania takiego algorytmu można opisać funkcją kwadratową (względem rozmiaru danych). Można powiedzić, że czas rośnie wprost proporcjonalnie do kwadratu rozmiaru danych. Przykład: porządkowanie przez wybór, porzadkowanie przez wstawianie. Co to znaczy w praktyce? Zwiększenie liczby danych 10 razy skutkuje zwiększeniem liczby obliczeń 100 razy!
-- {math}O(2^{n}){math end} - Czas działania takiego algorytmu podwaja się po zwiększeniu liczby danych o 1! Nawet dla stosunkowo niewielkich rozmiarów danych algorytmy te są prkatycznie niewykonalne w rozsądnym czasie!
+{panel type="extra-for-experts" summary="Przykłady notacji duże Θ"}
+Oto przykłady zapisów dotyczących kosztów algorytmów, jakie można spotkać w podręcznikach akademickich z dziedziny algorytmów:
+- {math}Θ(1){math end} -- Czas działania takiego algorytmu nie zależy od rozmiaru danych. Przykład: Znajdowanie wartości najmniejszej na liście uporządkowanej.
+- {math}Θ(n){math end} -- Czas działania takiego algorytmu można opisać funkcją liniową (względem rozmiaru danych). Można powiedzić, że czas rośnie wprost proporcjonalnie do rozmiaru danych. Przykład: przeszukiwanie liniowe.
+- {math}Θ(n^{2}){math end} -- Czas działania takiego algorytmu można opisać funkcją kwadratową (względem rozmiaru danych). Można powiedzić, że czas rośnie mniej więcej wprost proporcjonalnie do kwadratu rozmiaru danych. Przykład: porządkowanie przez wybór, porzadkowanie przez wstawianie. Co to znaczy w praktyce? Zwiększenie liczby danych 10 razy skutkuje zwiększeniem liczby obliczeń ok. 100 razy!
+- {math}Θ(2^{n}){math end} -- Czas działania takiego algorytmu podwaja się po zwiększeniu liczby danych o 1! Nawet dla stosunkowo niewielkich rozmiarów danych algorytmy te są praktycznie niewykonalne w rozsądnym czasie!
 {panel end}
 
-Do pełnego zrozumienia notacji dużego 0 potrzebna jest znajomość elementów matematyki wyższej. Temat jest przywołany w rozdziale na temat złożoności obliczeniowej i problemach praktycznie niewykonalnych.
+Do pełnego zrozumienia notacji dużego Θ potrzebna jest znajomość elementów matematyki wyższej. Do tematu wrócimy w rozdziale o złożoności obliczeniowej i problemach praktycznie niewykonalnych.
 
-Trzeba podkreślić, że komputerowe realizacje algorytmów korzystają z pamięci cache (rejestrów procesora), ale też czasem z tzw. wirtualnej pamięci (dysku komputerowego), a więc czas dostępu do konkretnej wartości może być bardzo krótki, ale też bardzo długi. Te różne uwarunkowania wymagają od projektantów systemów komputerowych stosowania algorytmów, które w danej sytuacji są najbardziej efektywne.
+Trzeba podkreślić, że komputerowe realizacje algorytmów korzystają z rejestrów procesora (pamięci cache), ale też czasem z tzw. wirtualnej pamięci (dysku komputerowego), a więc czas dostępu do konkretnej wartości może być bardzo krótki, ale też bardzo długi. Te różne uwarunkowania wymagają od projektantów systemów komputerowych stosowania algorytmów, które w danej sytuacji są najbardziej efektywne.
 
 ## Do dalszej lektury
 
 ### Inne zagadnienia algorytmiczne
 
-- Istnieje metoda przeszukiwania zbiorów danych, lepsza od przeszukiwania binarnego. Nazywa się haszowaniem (ang. "to hash" oznacza "posiekać"). Łagodne wprowadzenie do tematu znajdziesz w materiałach pt. [Gra w statki](http://csunplugged.org/searching-algorithms).
-- Istnieją problemy, dla których nie znaleziono dobrych algorytmów, a nawet takie, których prawdopoodbnie nigdy nie da się rozwiązać w efektywny sposób. Więcej na ten temat piszemy w rozdziale o złożoności obliczenionej algorytmów i pojęciu praktycznej wykonalności algorymów.
+- Istnieje metoda przeszukiwania zbiorów danych, lepsza od przeszukiwania binarnego. Nazywa się haszowaniem (ang. to hash oznacza posiekać). Łagodne wprowadzenie do tematu znajdziesz w materiałach pt. [Gra w statki](http://csunplugged.org/searching-algorithms).
+- Istnieją problemy, dla których nie znaleziono dobrych algorytmów, a nawet takie, których prawdopoodbnie nigdy nie da się rozwiązać w efektywny sposób. Więcej na ten temat piszemy w rozdziale o złożoności obliczenionej algorytmów i praktycznej wykonalności algorymów.
 
 ### Ciekawe linki
 
 - [CS Unplugged i algorytmy przeszukiwania](http://csunplugged.org/searching-algorithms)
 - CS Unplugged [i algorymy sortowania](http://csunplugged.org/sorting-algorithms)
 - [Gra na temat przeszukiwania (http://csunplugged.org/divideAndConquer)
-- Wikipedia has more details on [Przeszukiwanie liniowe](https://en.wikipedia.org/wiki/Linear_search), [Przeszukiwanie binarne](https://en.wikipedia.org/wiki/Binary_search), [Sortowanie przez wybór](https://en.wikipedia.org/wiki/Selection_sort), [Sortowanie przez wstawianie](https://en.wikipedia.org/wiki/Insertion_sort) and  [Quicksort](https://en.wikipedia.org/wiki/Quicksort).
+- [Przeszukiwanie liniowe](https://en.wikipedia.org/wiki/Linear_search), [Przeszukiwanie binarne](https://en.wikipedia.org/wiki/Binary_search), [Sortowanie przez wybór](https://en.wikipedia.org/wiki/Selection_sort), [Sortowanie przez wstawianie](https://en.wikipedia.org/wiki/Insertion_sort) i  [Quicksort](https://en.wikipedia.org/wiki/Quicksort) w artykułach Wikipedii.
 - [Sortowanie cegieł (gra)](http://mathsite.math.berkeley.edu/sorting/brick.html) do nauki algorytmów sortowania (wymaga obługi Javy przez przeglądarkę).
-- [Wizualizacja algorytmów sortowania](http://www.sorting-algorithms.com/) przestawia różne algorytmy sortowania, są zapisane w pseudokodzie.
-- [Wprowadzenie do notacji dużego O](http://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/)
+- [Wizualizacja algorytmów sortowania](http://www.sorting-algorithms.com/) przedstawiająca różne algorytmy sortowania, zapisane w pseudokodzie.
