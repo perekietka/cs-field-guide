@@ -20,13 +20,13 @@ Człowiek zrozumie instrukcję wypowiedzianą w języku naturalnym, np. „Prosz
 
 {interactive name="high-score-boxes" type="whole-page" text="High Score Boxes"}
 
-Oto prosty przykład: Chcesz znaleźć najlepszy wynik w tablicy wyników liczbowych, która nie jest uporządkowana. Rozwiązaniem jest sprawdzenie liczb jedna po drugiej i pamiętywanie w każdym kroku największej znalezionej do tej pory. Co to jednak miałoby znaczyć konkretnie dla komputera? Taki zwięzły opis metody będzie być może zrozumiały dla człowieka, ale bezużyteczny dla maszyny.
+Oto prosty przykład: Chcesz znaleźć największą liczbę w tabeli, która nie jest uporządkowana. Rozwiązaniem jest sprawdzenie liczb jedna po drugiej i zapamiętywanie w każdym kroku największej znalezionej do tej pory. Co to jednak miałoby znaczyć konkretnie dla komputera? Taki zwięzły opis metody będzie być może zrozumiały dla człowieka, ale bezużyteczny dla maszyny.
 
 {glossary-definition term="Algorithm" definition="A step by step process that describes how to solve a problem and/or complete a task, which will always give a result."}
 
 Algorytm to opis kolejnych kroków potrzebnych do poprawnego rozwiązania problemu (zadania).
 
-Algorytm dostarczenia szklanki wody można by zapisać jako listę kroków:
+Algorytm przyniesienia szklanki wody z kuchni można by zapisać jako listę kroków:
 1) Idź do kuchni. 2) Weź szklankę. 3) Odkręć kran. 4) Podstaw szklankę i nalej wodę. 5) Zakręć kran. 6) Zanieś szklankę osobie, którą prosiła o wodę.  
 Choć opis jest szczegółowy, to jednak ciągle jest to język naturalny. Informatycy posługują się bardziej sformalizowanymi opisami.
 
@@ -38,10 +38,10 @@ Algorytm znajdowania wartości największej w tablicy, zapisany w pseudokodzie m
 ```
 Jeżeli tablica jest pusta,
   to zakończ.
-W przeciwnym przypadku, zapamiętaj pierwszą wartość w tablicy.
+W przeciwnym przypadku zapamiętaj pierwszą wartość w tablicy.
 Dla każdej z pozostałych wartości w tablicy wykonaj:
   Jeżeli ta wartość jest większa od zapamiętanej, 
-    to zastąp wartość pamiętaną na tę wartość.
+    to zamień wartość pamiętaną na tę wartość.
 Wyświetl zapmiętaną wartość.
 ```
 
@@ -49,12 +49,12 @@ Algorytmy zapisane w pseudokodzie lub jako lista kroków to ciąg jednoznacznych
 mimo to nie jest to jeszcze ten poziom precyzji sfmormułowań, jaki wymagany jest od instrukcji przeznaczonych do wykonania przez komputer.
 
 Algorytm powinien być tak zapisany, na takim poziomie szczegółowości, żeby można było oszacować jego efektywność.
-Osoba, która przeanalizuje przedstawiony wyżej algorytm znajdowania największej wartości w tablicy, nie powinna mieć wątpliwości, że że podwojenie rozmiaru tablicy skutkowałoby podwojeniem czasu wykonania.
-Taka wiedza ma ogromne znaczenie: algorytm jest wystarczająco szybki dla małych tablic wyników, ale niepraktyczny dla wielodostepnych (obługujących wielu użytkowników) systemów internetowych przetwarzających ogromne zbiory danych, które wymagałyby istnienia tablicy o milonach wyników.
+Osoba, która przeanalizuje przedstawiony wyżej algorytm znajdowania największej wartości w tablicy, nie powinna mieć wątpliwości, że podwojenie rozmiaru tablicy skutkowałoby podwojeniem czasu wykonania.
+Taka wiedza ma ogromne znaczenie: algorytm jest wystarczająco szybki dla małych tablic wyników, ale niepraktyczny dla wielodostępnych (obługujących wielu użytkowników) systemów internetowych przetwarzających ogromne zbiory danych, które potrzebowałyby tablicy o milonach wyników.
 
 Najbardziej precyzjnym sposobem zapisu listy instrukcji algorytmu jest kod źródłowy programu komputerowego, zapisany w konkretnym języku programowania. Taka forma zapisu algorytmu stanowi kod zrozumiały dla komputera.
 
-Algorytm dostarczenia szklanki wody można by zapisać w formie programu komputerowego, który wykonałby robot. Oczywiście programista musiałby użyć języka programowania, który rozumie komputer wbudowany w robota.
+Algorytm rzyniesienia szklanki wody z kuchni można by zapisać w formie programu komputerowego, który wykonałby robot. Oczywiście programista musiałby użyć języka programowania, który rozumie komputer wbudowany w robota.
 
 Poniżej zapisano algorytm znajdowania największej wartości w tablicy. Użyto języka Python.
 Trzeba podkreślić, że nawet w tym jednym konkretnym języku programowania można by na wiele sposobów zapisać ten sam algorytm. Różni programiści mogliby zapisać pewne szczegóły techniczne w trochę inny sposób.
@@ -83,18 +83,18 @@ W tym rozdziale, w dalszej części, zajmiemy się tematem algorytmów bardziej 
 
 ### Koszt algorytmu
 
-Kiedy informatycy porównują dwa algorytmy rozwiązujące ten sam problem, to często używają określenia ,,koszt algorytmu''. Mówi się o zależności sprawności lub pracochłonności algorytmu od rozmiaru danych wejściowych (oznaczmy ten rozmiar jako *n*).
+Kiedy informatycy porównują dwa algorytmy rozwiązujące ten sam problem, to często używają określenia „koszt algorytmu”. Mówi się o zależności szybkości algorytmu od rozmiaru danych wejściowych (oznaczmy ten rozmiar jako *n*).
 W tym rozdziale koszt działania algorytmu będziemy mierzyć albo badając czas wykonania programu (realizującego algorytm), albo zliczając liczbę kroków, operacji podstawowych algorytmu.
 
 Jednym ze sposobów określenia kosztu algorytmu znajdowania największej wartości w tablicy może być zliczenie operacji odczytu wartości z tablicy. Okazuje się, że jeśli tablica składa się z 10 elementów, to operacji jest 10. Podwojenie liczby elementów tablicy prowadzi do podwojenia liczby operacji.
 Można więc powiedzieć, że liczba operacji jest proporcjonalna do *n*.
-Nie wszystkie algorytmy mają tę własność; niektóre algorytmy są o wiele bardziej kosztowne, a niektóre mniej kosztowne;
-Warto, aby programista potrafił określić pracochłonność algorytmu, zanim zdecyduje się nim posłużyć. Program komputerowy musi być skalowalny. Gra komputerowa, którą programista stworzył, może okazać się bardzo popularna, więc algorytm znajdowania najlepszego wyniku musi być wystarczająco szybka.
+Nie wszystkie algorytmy mają tę własność; niektóre algorytmy są o wiele bardziej kosztowne, a niektóre mniej;
+Warto, aby programista potrafił określić szybkość algorytmu, zanim zdecyduje się nim posłużyć np. w kodzie oprogramowania internetowego, z którego będzie korzystać wielu użytkowników jednocześnie. Gra komputerowa, którą programista stworzył, może okazać się bardzo popularna, więc algorytm znajdowania najlepszego wyniku musi być wystarczająco szybki.
 
 {panel type="extra-for-experts" "Złożoność obliczeniowa algorytmów"}
-Szacowanie kosztów algorytmu znane jest w informatyce pod nazwa [analiza algorytmu](https://en.wikipedia.org/wiki/Analysis_of_algorithms). Taka analiza powinna prowadzić do wyznaczenia *złożoności obliczeniowej* algorytmu (dotyczącej czasu wykonania), ale częśto i zlożności pamięciowej (dotyczącej ilości pamięci, potrzebnej podczas uruchomienia programu).
+Szacowanie kosztów algorytmu znane jest w informatyce pod nazwa [analiza algorytmu](https://en.wikipedia.org/wiki/Analysis_of_algorithms). Taka analiza powinna prowadzić do wyznaczenia *złożoności obliczeniowej* algorytmu (dotyczącej czasu działania komputerowej realizacji algorytmu), ale czasami dodatkowo i *złożoności pamięciowej* algorytmu (dotyczącej wymagań co do pamięci potrzebnej do działania).
 
-Więcej informacji na temat określania kosztu algorytmu, m.in. o notacji "duże-O", znajduje się w podrozdziale ["Podsumowanie"](chapters/algorithms.html#the-whole-story) .
+Więcej informacji na temat określania kosztu algorytmu, m.in. o notacji „duże O”, znajduje się w podrozdziale ["Podsumowanie"](chapters/algorithms.html#the-whole-story) .
 {panel end}
 
 Trzeba podkreślić, że czas potrzebny różnym komputerom do realizacji tego samego algorytmu i tych samych danych może być różny. Zależy to od parametrów komputerów, ilości zasobów przydzielonych do wykonania zadania, ale i od języka programowania, w którym algorytm został zakodowany. Dlatego trzeba być ostrożnym w wyciąganiu pochopnych wniosków o koszcie algorytmu tylko na podstawie czasu wykonania programu. 
@@ -104,8 +104,6 @@ Znacznie lepszą miarą jest zliczanie operacji (takich jak porównywanie dwóch
 
 ### Przeszukiwanie i porządkowanie
 
-In this chapter we will look at two of the most common and important types of algorithms, Searching and Sorting. You probably come across these kinds of algorithms every time you use a computer without even realising!
-They also happen to be great for illustrating some of the key concepts that arise with algorithms.
 W tym rozdziale przyjrzymy się dokładniej dwu najważniejszym typom algorytmów: przeszukiwania i porządkowania danych. Prawdopodobnie każdy z nas z jednym z tych typów problemów już się musiał zmierzyć, być może nie do końca świadomie!
 
 Na przykładach tych typów algorytmów można w ciekawy sposób przedstawić kluczowe koncepcje projektowania i analizy algorytmów.
@@ -116,7 +114,7 @@ Na przykładach tych typów algorytmów można w ciekawy sposób przedstawić kl
 
 {panel type="teacher-note" summary="Prezentacja tematu w klasie"}
 
-Gry zaproponowane w tym podrozdziale są wzorowane na scenariuszu [Gra w statki](http://csunplugged.com/searching-algorithms). Pierwsza dotyczy algorytmu przeszukiawnia liniowego (zwanego też sekwencyjnym), a druga algorytmu przeszukiwania binarnego.
+Gry zaproponowane w tym podrozdziale są wzorowane na scenariuszu [Gra w statki](http://csunplugged.com/searching-algorithms). Pierwsza dotyczy algorytmu przeszukiawnia liniowego (zwanego też sekwencyjnym), a druga -- algorytmu przeszukiwania binarnego.
 
 Wszyscy uczniowie w klasie powinny w tym samym czasie zagrać w każdą z gier. Po zakończeniu pierwszej gry (obu części) nauczyciel powinien poprowadzić krótką dyskusję. Może zacząć od pytań: "Komu udało się zakończyć grę z sukcesem już w pierwszej próbie?", "Kto potrzebował sprawdzić wszyskie pudełka?". Warto wyznaczyć wartość średnią liczby prób.
 
