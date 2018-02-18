@@ -305,10 +305,9 @@ Komputery zapisują liczby binarne i posługują się nimi, przetwarzając dane.
 Wyobraź sobie, że masz przepisać na kartce 16-bitową liczbę:  0101001110010001. 
 Można zastosować wówczas zapis skrócony: grupujemy cyfry po cztery (w tym przypadku:  0101 0011 1001 0001), i zastępujemy każdą czwórkę zapisem dziesiętnym, co daje 5391. Pojawia się jednak mały problem: co z grupą bitów postaci 1111 (czyli 15)? Przecież mamy tylko cyfry od 0 do 9.
  
-Rozwiązanie jest proste: wprowadzimy specjalne symbole dla cyfr od 1010 (10) do 1111(15), tj. posłużymy się literami od A do F.
-Na przykład liczbę 1011 1000 1110 0001 można w zwięzły sposób zapis tak: B8 E1. Litera "B" jest kodem dla 1011 (=11 w systemie dziesiętnym), a litera E jest kodem dla 1110 (=14).
+Rozwiązanie jest proste: wprowadzimy specjalne symbole dla czwórek bitów od 1010 (10) do 1111 (15), tj. posłużymy się literami od A do F. Na przykład liczbę 1011 1000 1110 0001 można w zwięzły sposób zapis tak: B8 E1. Litera "B" jest kodem dla 1011 (=11 w systemie dziesiętnym), a litera E jest kodem dla 1110 (=14).
 
-W tym momencie mamy już 16 cyfr. Taki system liczbowy nazywamy szesnastkowym (heksadecymalnym) lub w skrócie hex. Zamiana (konwersja) reprezentacji między systemem binarnym a szesnastkowym jest bardzo prosta. To wyjaśnia, dlaczego system szesnastkowy jest bardzo powszechnie stosowany wtedy, gdy chcemy zapisać poza komputerem dużą liczbę binarną. 
+W tym momencie mamy już 16 cyfr. Taki system liczbowy nazywamy szesnastkowym (heksadecymalnym) lub w skrócie hex. Zamiana reprezentacji liczby między systemem binarnym a szesnastkowym jest bardzo prosta. To wyjaśnia, dlaczego system szesnastkowy jest bardzo powszechnie stosowany wtedy, gdy chcemy zapisać poza komputerem dużą liczbę binarną. 
 
 Oto kompletna tablica liczb 4-bitowych i ich szesnastkowych odpowiedników:
 
@@ -333,7 +332,7 @@ Oto kompletna tablica liczb 4-bitowych i ich szesnastkowych odpowiedników:
 
 Przykład: Największą liczbą 8-bitową jest 11111111. Można ją zapisać jako FF. Można sprawdzić, że w systemie dziesiątkowym jest to 255.
 
-To, jakiego zapisu (reprezentacji) liczby należy użyć, zależy od konkretnej sytuacji. Reprezentacja binarna jest reprezentacją maszynową, ale jest nieodpowiednia dla człowieka. Zapis szesnastkowy to dobry sposób na skrócenie zapisu binarnego. Zapis dziesiętny jest używany wtedy, gdy człowiek musi odczytać wartość jakiejś liczby. Wszystkie trzy notacje są używane w informatyce.
+To, jakiego zapisu liczby należy użyć, zależy od konkretnej sytuacji. Reprezentacja binarna jest reprezentacją maszynową, ale jest nieodpowiednia dla człowieka. Zapis szesnastkowy to dobry sposób na skrócenie zapisu binarnego. Zapis dziesiętny jest używany wtedy, gdy człowiek wykonuje obliczenia. Wszystkie trzy notacje są używane w informatyce.
 
 Należy pamiętać, że w praktyce w komputerach stosuje się **wyłącznie** binarny zapis liczb. Jest **niemożliwym** zapisanie liczby bezpośrednio w systemie dziesiętnym lub szesnastkowym. 
 
