@@ -114,25 +114,25 @@ Na przykładach tych typów algorytmów można w ciekawy sposób przedstawić kl
 
 {panel type="teacher-note" summary="Prezentacja tematu w klasie"}
 
-Gry zaproponowane w tym podrozdziale są wzorowane na scenariuszu [Gra w statki](http://csunplugged.com/searching-algorithms). Pierwsza dotyczy algorytmu przeszukiawnia liniowego (zwanego też sekwencyjnym), a druga -- algorytmu przeszukiwania binarnego.
+Gry zaproponowane w tym podrozdziale są wzorowane na scenariuszu [Gra w statki](http://csunplugged.com/searching-algorithms). Pierwsza dotyczy algorytmu przeszukiawnia liniowego (zwanego też sekwencyjnym), a druga -- algorytmu przeszukiwania binarnego (zwanego też dwudzielnym).
 
-Wszyscy uczniowie w klasie powinny w tym samym czasie zagrać w każdą z gier. Po zakończeniu pierwszej gry (obu części) nauczyciel powinien poprowadzić krótką dyskusję. Może zacząć od pytań: "Komu udało się zakończyć grę z sukcesem już w pierwszej próbie?", "Kto potrzebował sprawdzić wszyskie pudełka?". Warto wyznaczyć wartość średnią liczby prób.
+Wszyscy uczniowie w klasie powinni w tym samym czasie zagrać w każdą z gier. Po zakończeniu pierwszej gry (obu części) nauczyciel powinien poprowadzić krótką dyskusję. Może zacząć od pytań: „Komu udało się zakończyć grę z sukcesem już w pierwszej próbie?”, „Kto potrzebował sprawdzić wszystkie pudełka?”. Warto wyznaczyć średnią liczby prób.
 
-Po zakończeniu przez wszystkich uczniów drugiej gry nauczyciel może zapytać: "Czy pięć pytań to nie za mało, aby zakończyć grę z sukcesem?", "Jaką strategią można się posłużyć?". Może się okazać, że wielu uczniów nieświadomie posługiwało się metodą dwudzielną (binarnym przeszukiwaniem). 
+Po zakończeniu przez wszystkich uczniów drugiej gry nauczyciel może zapytać: „Czy pięć pytań to nie za mało, aby zakończyć grę z sukcesem?”, „Jaką strategią można się posłużyć?”. Może się okazać, że wielu uczniów nieświadomie posługiwało się metodą dwudzielną (binarnym przeszukiwaniem). 
 
 Gier nie powinno się pomijać. Te aktywności powinny poprzedzić prezentację tematu przez nauczyciela.
 {panel end}
 
-Przeszukiwanie różnych zbiorów danych zajmuje znaczącą część pracy wielu komputerów. Gdy używasz wyszukiwarki Google'a, to w istocie prowadzisz dialog z programem przeszukującym indeksy baz danych na serwerach wyszukiwarki. Komputery często muszą przetwarzać ogromne ilości danych, a to oznacza, że potrzebują szybkich algorytmów.
+Przeszukiwanie różnych zbiorów danych zajmuje znaczącą część pracy wielu komputerów. Gdy używasz wyszukiwarki Google'a prowadzisz dialog z programem przeszukującym indeksy baz danych na serwerach wyszukiwarki. Komputery często muszą przetwarzać ogromne ilości danych, a to oznacza, że potrzebują szybkich algorytmów.
 
 Zdobywanie wiedzy na ten temat zacznij od poniższej gry...
 
 {interactive name="searching-algorithms" type="whole-page" text="Searching Boxes - Part 1" parameters="max=2"}
 
-Cechą charakterystyczną tej gry było losowae rozmieszczenie liczb. Skutek był taki, że sukces zależał najpierw od szczęścia! 
+Cechą charakterystyczną tej gry było losowe rozmieszczenie liczb. Skutek był taki, że sukces zależał od szczęścia! 
 Wyobraź sobie, że pudełek jest 1000, czy nawet 1 000 000! Przeszukiwanie takich zbiorów trwałoby długo.
 
-Kolejna gra różni się od poprzedniej. Liczba dopuszczalnych prób będzie mniejsza, ale tym razem liczby będą rozmieszczone od najmniejszej (po lewej) do największej (po prawej). Wyzwaniem będzie zakończyć grę z sukcesem. To jest jednak możliwe! 
+Kolejna gra różni się od poprzedniej. Liczba dopuszczalnych prób będzie mniejsza, ale tym razem liczby będą rozmieszczone od najmniejszej (po lewej) do największej (po prawej). Spróbuj wygrać w tę grę!
 
 {interactive name="searching-algorithms" type="whole-page" text="Searching Boxes - Part 2" parameters="level=3" thumbnail="thumbnail2.png"}
 
@@ -141,10 +141,9 @@ Dlaczego w drugiej grze wygrana była zawsze możliwa? Na czym opiera się zwyci
 
 ### Przeszukiwanie liniowe
 
-Since the boxes in the first game were in a random order there really wasn't any strategy you could have used to find the pet, except simply keep opening presents one by one until you found the pet. This is essentially the *Linear Search* algorithm (sometimes called a sequential search). In plain English, Linear Search algorithm is as follows:
-W pierwszej z gier pudełka były w przypadkowej kolejności. Trudno więc mówić o stosowaniu jakiejkolwiek strategii przeszukiwania. Konieczne było sprawdzanie pudełek jedno po drugim, aż do skutku. W informatyce mówi się w takim przypadku o *przeszukiwaniu liniowym* (czasami o przeszukiwaniu sekwencyjnym). Taki algorytm można by opisać listą kroków:
+W pierwszej z gier pudełka ustawione były w przypadkowej kolejności. Trudno więc mówić o stosowaniu jakiejkolwiek strategii przeszukiwania. Konieczne było sprawdzanie pudełek jedno po drugim, aż do skutku. W informatyce mówi się w takim przypadku o *przeszukiwaniu liniowym* (czasami o *przeszukiwaniu sekwencyjnym*). Taki algorytm można by opisać listą kroków:
 - Sprawdź, czy pierwszy element listy jest tym, który jest poszukiwany. Jeśli tak, to zakończ przeszukiwanie.
-- W przeciwnym przypadku, sprawdź kolejny element listy.
+- W przeciwnym przypadku sprawdź kolejny element listy.
 - Kontynuuj przeszukiwanie, aż znajdziesz element, który jest poszukiwany.
 
 W przypadku przeszukiwania listy 10 elementów, średnia liczba prób prowadzących do sukcesu to 5. Dla listy 10 000 elementów tych prób będzie średnio 5000. Oczywiście w konkretnym przypadku liczba prób może być mniejsza od średniej, nawet znacznie mniejsza, albo i większa.
@@ -160,7 +159,7 @@ W filmie na początku rozdziału pojawił się zabawny przykład przeszukiwania,
 W drugiej z gier pudełka były uporządkowane, co umożliwiło podejmowanie kolejnych prób w sposób przemyślany. Być może nieświadomie ktoś stosował algorytm zwany w informatyce przeszukiwaniem binarnym (dwudzielnym).
 
 {panel type="teacher-note" summary="O przeszukiwaniu binarnym z książką telefoniczną"}
-Temat algorytmu przeszukiwania binarnego można zilustrować za pomocą książki telefonicznej lub słownika: wybierz nazwisko (lub jakieś słowo), otwórz książkę lub słownik mniej więcej w połowie i sprawdź pierwszy wyraz na stronie, najlepiej tej o numerze nieparzystym. (Jeśli książka jest przeznaczona na makulaturę, to warto dosłownie przedrzeć ją mniej więcej w połowie objętości.) Następnie uczniowie powinni wskazać tę część książki, którą należy przeszukiwać. 
+Ideę algorytmu przeszukiwania binarnego można zilustrować za pomocą książki telefonicznej lub słownika: wybierz nazwisko (lub jakieś słowo), otwórz książkę lub słownik mniej więcej w połowie i sprawdź pierwszy wyraz na stronie, najlepiej tej o numerze nieparzystym. (Jeśli książka jest przeznaczona na makulaturę, to warto dosłownie przedrzeć ją mniej więcej w połowie objętości.) Następnie uczniowie powinni wskazać tę część książki, którą należy przeszukiwać. 
 Odrzucenie połowy stron książki, czyli prawdopodobnie setek stron, było możliwe na podstawie tylko jednej decyzji.
 
 Tę strategię połowienia należy stosować dalej. Powtórzyć dla połowy, połowy tej połowy itd. 
@@ -169,21 +168,21 @@ Warto przeanalizować z uczniami ciąg liczb, który odpowiada liczbie kartek po
 Na przykład dla 512 kartek będzie to: 256, potem 128, potem 64, 32, 16, 8, 4, 2 i w końcu jedna kartka. To oznacza, że do znalezienia odpowiedniej kartki wystarczy co najwyżej 9 prób.
 (Można się posłużyć przykładem z liczbami, które nie są potęgami liczby 2, ale wówczas trzeba by doprecyzować znaczenie ,,połowienia''.)
 
-Siłę przeszukiwania binarnego niektórym być może będzie łatwiej pojąć, gdy zapytamy ich o liczbę prób wystarczających do przeszukania książki o podwojonej liczbie stron. 
+Siłę przeszukiwania binarnego niektórym być może będzie łatwiej docenić, gdy zapytamy ich o liczbę prób wystarczających do przeszukania książki o podwojonej liczbie stron. 
 Warto podkreślić w czasie zajęć, że na gdyby stworzyć uporządkowaną (np. według nazwisk i imion) listę wszystich ludzi obecnie żyjących na świecie, to potrzeba nie więcej niż 30 prób do znalezienia dowolnej osoby. 
 {panel end}
 
-Algorytm przeszukiwania binarnego można by opisać listą kroków:
+Algorytm przeszukiwania binarnego można opisać listą kroków:
 - Sprawdź, czy element znajdujący się w środku listy jest tym, który jest poszukiwany. Jeśli tak, to zakończ przeszukiwanie.
 - W przeciwnym przypadku: Jeśli ten środkowy element ma wartość większą od poszukiwanego, to w dalszych przeszukiwaniach pomiń elementy listy po prawej stronie środkowego. (Jeśli lista jest uporządkowana od nawiększego do najmniejszego, to pomiń elementy po lewej.)
 Jeśli ten środkowy element ma wartość mniejszą od poszukiwanego, to w dalszych poszukiwaniach pomiń elementy mniejsze od środkowego.
 - Kontynuuj przeszukiwanie, aż znajdziesz element, który jest poszukiwany.
 
 {panel type="spoiler" summary="Jak podwojenie liczby pudełek wpływa na liczbę prób podczas przeszukiwania?"}
-W przypadku przeszukiwania liniowego niezbędna liczba prób wzrośnie dwa razy. W przypadku przeszukiwania binarnego wzrośnie tylko o jedno! 
+W przypadku przeszukiwania liniowego niezbędna liczba prób wzrośnie dwa razy. W przypadku przeszukiwania binarnego wzrośnie tylko o jeden! 
 {panel end}
 
-Jest ważne, by pamiętać, że przeszukiwanie binarne można stosować tylko dla zbiorów uporządkowanych. To oznacza, że algorytmy porządkowania należy uznać za jeszcze ważniejsze!
+Trzeba pamiętać, że przeszukiwanie binarne można stosować tylko dla zbiorów uporządkowanych. To oznacza, że algorytmy porządkowania należy uznać za jeszcze ważniejsze!
 
 
 {panel type="project" summary="Zakodowane algorytmy przeszukiwania"}
@@ -199,14 +198,13 @@ Twoje zadanie polega na wykonaniu pomiarów czasu działania programów dla cora
 ## Porządkowanie
 
 {panel type="teacher-note" summary="Dlaczego o sortowaniu?"}
-Powyżej przedstawione zostały główne zagadnienia: pojęcie algorytmu, pracochłonność (koszt) algorytmu, przykłady algorytmów o różnych kosztach (proporcjonalne do liczby danych wejściowych, ale i inne).
-Warto przywołać jeszcze kilka innych przykładów algorytmów komputerowych. I opisać ich własności. 
-Algorytmy porządkowania mają duże walory dydaktyczne, gdyż na ich przykładzie można ukazać kluczowe zagadnienia z dziedziny algorytmów. 
+Powyżej przedstawione zostały główne zagadnienia: pojęcie algorytmu, koszt algorytmu, przykłady algorytmów o kosztach proporcjonalnych do rozmiaru danych wejściowych, ale i inne.
+Teraz opowiemy o algorytmach porządkowania, które mają duże walory dydaktyczne, gdyż na ich przykładzie można ukazać kluczowe zagadnienia z dziedziny algorytmów. 
 {panel end}
 
-Porządkowanie danych to innych bardzo ważny temat z dziedziny algorytmów. Komputery często muszą porządkować duże zbiory danych. Kryteria porządkowania mogą być różne, mogą się zmieniać. Użytkownik komputera czasami chce zobaczyć listę plików uporządkowaną według nazw, a czasem według rozmiaru itp. Lista klientów zwykle jest porządkowana według nazwisk. 
+Komputery często muszą porządkować duże zbiory danych. Kryteria porządkowania mogą być różne, mogą się zmieniać. Użytkownik komputera czasami chce zobaczyć listę plików uporządkowaną według nazw, a czasem według rozmiaru itp. Lista klientów zwykle jest porządkowana według nazwisk. 
 Uporządkowanie danych ułatwia ich przeszukiwanie. 
-Jak zwykle uporządkowane są informacje w książce telefonicznej telefonu? Według nazwiska, czy według numerów telefonów? Dlaczego?
+Jak zwykle uporządkowane są informacje w książce telefonicznej? Według nazwiska, czy według numerów telefonów? Dlaczego?
 
 Wymyślono wiele algorytmów porządkowania. W tym podrozdziale przedstawione będą trzy: dwa mniej efektywne i jeden bardzo szybki.
 
@@ -214,16 +212,16 @@ Wymyślono wiele algorytmów porządkowania. W tym podrozdziale przedstawione b�
 
 Udostępniamy interaktywne narzędzie z wirtualną wagą szalkową do testowania algorytmów opisanych poniżej. U dołu ekranu pojawia się informacja o liczbie porównań (ważeń): każde ważenie to jedno porównanie. Koszt algorytmu będzie określony liczbą porównań użytych do uporządkowania 8 pudełek. Zakładamy, że na każdej szalce wagi kładzie się jedno pudełko.
 
-Pudełka należy uporządkować od najlżejszego po lewej do najcięższego po prawej. Do sprawdzenia użyj przycisku ,,Sprawdź porządek''.
+Pudełka należy uporządkować od najlżejszego po lewej do najcięższego po prawej. Do sprawdzenia użyj przycisku „Sprawdź porządek”.
 
-Możesz posłużyć się prawdziwą wagą szalkową. Odważniki trzeba tak przygotować, żeby dla każdej pary odważników można było określić, który z odważników jest cięższy.
+Możesz posłużyć się prawdziwą wagą szalkową. Odważniki trzeba tak przygotować, żeby żadne dwa nie ważyły tyle samo.
 
 {interactive name="sorting-algorithms" type="whole-page" text="Scales interactive"}
 
 
 ### Porządkowanie przez wybór
 
-Jednym z najbardziej intuicyjnych sposobów porządkowania jest: zacząć od znalezienia najlżejszego (lub najcięższego) pudełka i odłożyć je na bok. Spróbuj to zrobić z użyciem wagi szalkowej. Zapisz liczbę wykonanych porównań.
+Jednym z najbardziej intuicyjnych sposobów rozpoczęcia porządkowania jest: zacząć od znalezienia najlżejszego (lub najcięższego) pudełka i odłożyć je na bok. Spróbuj to zrobić z użyciem wagi szalkowej. Zapisz liczbę wykonanych porównań.
 
 Po znalezieniu najlżejszego pudełka znajdź drugie najlżejsze pudełko w ten sam sposób i ustaw je obok najlżejszego. Zapisz liczbę porównań.
 Powtarzaj poszukiwanie kolejnych najlżejszych, na danym etapie, pudełek, aż wszystkie pudełka będą uporządkowane. Zapisuj liczbę porównań.
@@ -248,19 +246,19 @@ Dla przykładu wyznaczmy liczbę porównań dla 20 pudełek (*n* = 20):
 
 = 190 porównań
 
-Niektórzy uczniowie mogą znać anegdotę o Gaussie (zobacz [Wikipedia](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss#Anecdotes). 
-W wersji dla 20 obliczenia przypisywane młodemu matematykowi wyglądałyby tak: 
-Sumę 1+2+3+...+17+18+19 zapisujemy wspak (19+18+17+...3+2+1) w taki sposób, aby 19 znalazło się pod 1, 18 pod 2, 17 pod 3 itd. Otrzymuejmy 19 par: (1+19)+(2+18)+(3+17)+...+(17+3)+(18+2)+(19+1). Ta suma jest równa: 20x19. Liczba porównań jest więc równa 20x19/2 = 190 (każdy składnik sumy występuje dwa razy).  
-Warto obejrzeć [to video](http://www.numberphile.com/videos/one_to_million.html) i zapoznać się z innymi przykładami [na tej stronie](http://nzmaths.co.nz/gauss-trick-staff-seminar).
+Niektórzy uczniowie mogą znać anegdotę o Gaussie (zobacz artykuł w [Wikipedii](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss#Anecdotes). 
+W wersji dla 20 pudełek obliczenia przypisywane młodemu Gaussowi wyglądałyby tak: 
+Sumę 1+2+3+...+17+18+19 zapisujemy wspak (19+18+17+...3+2+1) w taki sposób, aby 19 znalazło się pod 1, 18 pod 2, 17 pod 3 itd. Otrzymuejmy 19 par: (1+19)+(2+18)+(3+17)+...+(17+3)+(18+2)+(19+1). Ta suma jest równa: 20\*19. Liczba porównań jest więc równa 20\*19/2 = 190 (każdy składnik sumy występuje dwa razy).  
+Warto obejrzeć [trik Gaussa na wideo](http://www.numberphile.com/videos/one_to_million.html) i zapoznać się z innymi przykładami [na tej stronie](http://nzmaths.co.nz/gauss-trick-staff-seminar).
 {panel end}
 
 Przedstawiony wyżej algorytm nazywa się porządkowaniem przez wybór (selekcję).
-Taki algorytm można by opisać listą kroków:
+Tenalgorytm można tak opisać listą kroków:
 - Znajdź najmniejszy element na liście. Umieść go na początku nowej listy.
 - Znajdź najmniejszy element wśród pozostałych na liście. Umieść go na drugiej liście obok elementu ustawionego tam po poprzednim przeszukiwaniu.
 - Kontynuuj przeszukiwanie listy, aż wszystkie elementy znajdą się na drugiej liście. Ta lista będzie uporządkowana.
 
-W powyższym opisie można zastąpić słowo ,,najmniejszy'' słowem ,,największy'' i algorytm będzie nadal poprawny. Oczywiście w tym przypadku porządek elementów na liście będzie odwrócony (od największego do najmniejszego).
+W powyższym opisie można zastąpić słowo „najmniejszy” słowem „największy” i algorytm będzie nadal poprawny. Oczywiście w tym przypadku porządek elementów na liście będzie odwrócony (od największego do najmniejszego).
 
 ### Porządkowanie przez wstawianie
 
