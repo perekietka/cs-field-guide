@@ -5,7 +5,7 @@
 Celem tego przewodnika (interaktywnego podręcznika) jest wsparcie procesu nauczania informatyki w szkołach średnich.
 Pierwotnie podręcznik był tworzony w związku z wprowadzeniem zajęć informatyki do szkół średnich w Nowej Zelandii w latach 2011-2013.
 
-W wersji dla nauczyciela w specjalnych ramkach znajdują się dodatkowe informacje oraz odpowiedzi i wskazówki do zadań. Z tego względu podręcznik ten nie powinien być udestępniany uczniom (jednakże ze względy na to, iż materiał ten jest open-source bardziej rezolutni uczniowie mogą znaleźć do na własną rękę).
+W wersji dla nauczyciela w specjalnych ramkach znajdują się dodatkowe informacje oraz odpowiedzi i wskazówki do zadań. Z tego względu ta wersja podręcznika nie powininna być udostępniana uczniom (jednakże ze względu na to, iż do tego materiału jest darmowy bardziej rezolutni uczniowie mogą znaleźć go na własną rękę).
 
 {panel end}
 
@@ -13,18 +13,18 @@ W wersji dla nauczyciela w specjalnych ramkach znajdują się dodatkowe informac
 
 ## Z lotu ptaka
 
-Dlaczego jest tak, że ludzie albo kochają komputery albo ich nienawidzą? Dlaczego niektórzy nie wyobrażają sobie życia bez różnego rodzaju urządzeń komputerowych, a  inni na samą myśl o takich urządzeniach są poirytowani i są nawet gotowi zniszczyć sprzęt komputerowy? I co to ma wspólnego z informatyką? I co to jest w ogóle informatyka?
+Dlaczego jest tak, że ludzie albo kochają komputery, albo ich nienawidzą? Dlaczego niektórzy nie wyobrażają sobie życia bez różnego rodzaju urządzeń komputerowych, a  inni na samą myśl o takich urządzeniach irytują się, a nawet gotowi są zniszczyć je? I co to ma wspólnego z informatyką? A co właściwie jest informatyka?
 
 Dobrze, że zadajesz takie pytania!
 
 Wielu ludzi myli informatykę z programowaniem. Ktoś kiedyś powiedział „Informatyka ma tyle samo wspólnego z programowaniem, co astronomia z teleskopami” ([Mike Fellows](http://en.wikiquote.org/wiki/Computer_science)). 
-Programowanie to narzędzie, którym informatycy posługują się, aby urzeczywistnić różne wspaniałe pomysły, które mogą zmienić życie ludzi na lepsze. Jednak wyłącznie znajomość składni języka programowania nie wystarczy, by tworzyć oprogramowanie szybkie, przyjazne w użyciu, niezawodne, bezpieczne, użyteczne i do tego zabawne! 
+Programowanie to narzędzie, którym informatycy posługują się, aby urzeczywistnić różne wspaniałe pomysły, które mogą zmienić życie ludzi na lepsze. Jednak znajomość języka programowania nie wystarczy, by tworzyć oprogramowanie szybkie, przyjazne w użyciu, niezawodne, bezpieczne, użyteczne i do tego zabawne! 
 
-Oto przykład: Komputery potrafią wykonywać miliardy operacji w ciągu sekundy, a ciągle możemy usłyszeć narzekania, że są zbyt powolne. Człowiek jest w stanie dostrzec ułamek czasu rzędu 1/10 sekundy. Jeśli na odpowiedź programu komputerowego ktoś czeka dłużej, to może uznać program za powolny, działający mało płynnie i frustrujący. Aby zadowolić użytkownika, reakcja programu na polecenie użytkownika powinna pojawić się o wiele szybciej niż w ciągu sekundy! Jeśli stworzony przez Ciebie program przeszukuje miliony pozycji w danych lub wyświetla miliony pikseli (megapiksele), to nie możesz pozwolić sobie na to, aby działał w sposób nieefektywny. Nie możesz po prostu powiedzieć użytkownikowi, by kupił szybszy komputer ...skończy się prawdopodobnie tym, że użytkownik podziękuje Ci za współpracę i pójdzie kupić u konkurencji szybsze oprogramowanie!
+Oto przykład: Komputery potrafią wykonywać miliardy operacji w ciągu sekundy, a ciągle możemy usłyszeć narzekania, że są zbyt powolne. Człowiek jest w stanie dostrzec zmiany dokonujące się w czasie 1/10 sekundy. Jeśli na odpowiedź programu komputerowego ktoś czeka dłużej, to może uznać program za powolny, działający mało płynnie i frustrujący. Aby zadowolić użytkownika, reakcja programu na polecenie użytkownika powinna pojawić się o wiele szybciej niż w ciągu sekundy. Jeśli stworzony przez Ciebie program ma przeszukać miliony pozycji w bazie danych lub wyświetlić miliony pikseli na ekranie, to nie możesz pozwolić sobie na to, aby działał w sposób nieefektywny. Nie możesz po prostu powiedzieć użytkownikowi, by kupił szybszy komputer... Skończyłoby się to prawdopodobnie tym, że użytkownik podziękuje ci za współpracę i pójdzie kupić u konkurencji szybsze oprogramowanie!
 
 Oto rada pochodząca od Freda Wilsona, który zainwestował wiele w firmy z branży komputerowej:
 
-> Po pierwsze i najważniejsze, wierzymy, że szybkość to coś więcej niż cecha (właściwość). Szybkość jest najważniejszą cechą. Jeśli twoje oprogramowanie działa powoli, ludzie nie będą go używać. Dotyczy to zwłaszcza zwykłych użytkowników. Myślę, że użytkownicy, którzy korzystają z zaawansowanych funkcji danego oprogramowania, są czasami bardziej wyrozumiali, ale kiedy patrzę na moją żonę i moje dzieci, to oni są dla mnie jak zwykli, typowi użytkownicy. Jeśli coś działa powoli, to oni po prostu odchodzą. ...Szybkość to coś więcej niż cecha. To jest niezbędne wymaganie.
+> Po pierwsze i najważniejsze, wierzymy, że szybkość to coś więcej niż zwykła cecha. Szybkość jest najważniejszą cechą. Jeśli twoje oprogramowanie działa powoli, ludzie nie będą go używać. Dotyczy to zwłaszcza zwykłych użytkowników. Myślę, że użytkownicy, którzy korzystają z zaawansowanych funkcji danego oprogramowania, są czasami bardziej wyrozumiali, ale kiedy patrzę na moją żonę i moje dzieci, to oni są dla mnie jak zwykli, typowi użytkownicy. Jeśli coś działa powoli, to oni po prostu odchodzą&hellip;. Szybkość to coś więcej niż cecha. To jest niezbędne wymaganie.
 
 > -- [Fred Wilson](https://en.wikipedia.org/wiki/Fred_Wilson_(financier\)) ([Source](http://triple-networks.com/2011/12/06/10-golden-principles-of-successful-web-apps/))
 
