@@ -647,7 +647,7 @@ Własności kodowania U2 są bardzo użyteczne. Dzięki temu można wykonywać d
 {panel type="curiosity" summary="O co chodzi z kodeum U2?"}
 
 Pomysł wykonywania dodawania na tzw. dopełnieniu liczby zamast odejmowania liczby można zastosować w obliczeniach na liczbach dziesiętnych. Dopełnieniem dziesiętnym *x* jest 10-*x*, np. dla 4 to 6, a dla 8 to 2. 
-(Słowo "dopełnić" ma ten sam rdzeń, co słowo pełnia. Liczba 10 jest w tym przypadku taką pełną, ,,okrągłą'' liczbą.)
+(Słowo "dopełnić" ma ten sam rdzeń, co słowo pełnia. Liczba 10 jest w tym przypadku taką pełną, „okrągłą” liczbą.)
 
 Odejmowanie 2 od 6 jest tożsame z dodawaniem 8 do 6 (6 + 8 = 14) i ignorowaniem 1 z przeniesienia (po lewej).
 
@@ -661,7 +661,7 @@ W przypadku zapisu binarnego sytuacja jest prostsza, bo używa się tylko dwóch
 
 #### Porównanie kodów bit-znak i U2
 
-Przedstawiliśmy dwa różne sposoby zapisu liczb ujemnych na komputerze. W praktyce, pierwszy sposób (bit-znak) jest rzadko używany.
+Przedstawiliśmy dwa różne sposoby zapisu liczb ujemnych na komputerze. W praktyce pierwszy sposób (bit-znak) jest rzadko używany.
 Drugi sposób (uzupełnienie do 2) jest powszechnie w użyciu, gdyż pozbawiony jest wad pierwszego rozwiązania, tj. liczba 0 ma jedną reprezentację, a odejmowanie można w prosty sposób zastąpić dodawaniem.
 
 Istnieją jeszcze inne sposoby kodowania liczb ujemnych (np. uzupłenienie do 1, kodowanie z przesunięciem), ale metoda U2 jest najbardziej powszechna.
@@ -672,22 +672,22 @@ Istnieje kilka różnych sposobów używanych przez komputery do zapisywania zna
 
 ### ASCII
 
-W poprzednim podrozdziale stwierdziliśmy, że sześć punktów systemu Braille'a pozwala uzyskać 64 różne wzorce (znaki). 
+W jednym z poprzednich podrozdziałów stwierdziliśmy, że sześć punktów systemu Braille'a pozwala uzyskać 64 różne wzorce (znaki). 
 
 Spróbuj policzyć, ile różnych dużych liter, małych liter, liczb i innych znaków możesz wprowadzić do edytora tekstu, używając klawiatury komputerowej. (Nie zapomnij o znakach, które współdzielą klawisze z liczbami i o znakach interpunkcyjnych!) 
 
 {panel type="jargon-buster" summary="Znaki"}
-Wspólną nazwą dla dużych i małych liter, liczb i symboli jest *znak* (ang. character). Na przykład a, D, 1, h, 6, \*, ], jak również ~ (tylda) są wszystkie znakami.
+Wspólną nazwą dla dużych i małych liter, liczb i symboli jest *znak* (ang. character). Na przykład a, D, 1, h, 6, \*, ], jak również ~ (tylda), wszystkie są znakami.
 Należy podkreślić, że spacja (odstęp) jest również znakiem.
 {panel end}
 
 Jeśli ktoś dokładnie policzył, to wie, że znaków jest więcej niż 64, bo ponad 90! Użycie 6 bitów nie wystarczy, by zapisać wszystkie znaki. Okazuje się, że potrzeba przynajmniej 7 bitów. Dokładnie tyle zastosowano w oryginalnej wersji kodowania **ASCII**.
 
 {panel type="challenge" summary="Dlaczego 7 bitów?"}
-W poprzednim rozdziale wyjaśniliśmy, co dzieje się po zwiększeniu liczby punktów o 1 (pamiętaj, że kod Braille'a jest kodem binarnym). Możesz wyjaśnić, skąd wiadomo, że 6 bitów wystarczy do zapisu 64 znaków, a 7 bitów pozwala na zapis nawet 128 znaków?
+Przy omawianiu kodu Braille'a wyjaśniliśmy, co dzieje się po zwiększeniu liczby punktów o 1 (pamiętaj, że kod Braille'a jest kodem binarnym). Możesz wyjaśnić, skąd wiadomo, że 6 bitów wystarczy do zapisu 64 znaków, a 7 bitów pozwala na zapis nawet 128 znaków?
 {panel end}
 
-Koncepcją zastosowaną w ASCII było przypisanie różnych wzorców bitowych każdemu ze znaków stosowanych w tekstach angielskich (oraz pewnej liczbie tzw. znaków sterujących, używanych dawniej w aparatach dalekopisowych – dziś tylko niektóre z nich mają zastosowanie w technice komputerowej, ale ten wątek pominiemy). W dzisiejszej postaci kodu ASCII dla języka angielskiego stosuje się wzorce 8-bitowe (oktety bitów, czy bajty), w których pierwszy bit ma zawsze wartość 0, co znaczy, że kod pozwala na zapis 128 znaków. 
+Koncepcją zastosowaną w ASCII było przypisanie różnych wzorców bitowych każdemu ze znaków stosowanych w tekstach angielskich (oraz pewnej liczbie tzw. znaków sterujących, używanych dawniej w aparatach dalekopisowych – dziś tylko niektóre z nich mają zastosowanie w technice komputerowej, ale ten wątek pominiemy). W dzisiejszej postaci kodu ASCII dla języka angielskiego stosuje się wzorce 8-bitowe (bajty), w których pierwszy bit ma zawsze wartość 0, co znaczy, że kod pozwala na zapis 128 znaków. 
 
 W tabeli przedstawiono zestawienie znaków i odpowiadajacych im wzorców 7-bitowych:
 
@@ -726,18 +726,18 @@ W tabeli przedstawiono zestawienie znaków i odpowiadajacych im wzorców 7-bitow
 | 0111110 | >     | 1011110 | ^    | 1111110 | ~     |
 | 0111111 | ?     | 1011111 | _    | 1111111 | Delete   |
 
-Przykład: Litera c (mała litera) ma w tabeli przypisany wzorzec: „01100011” (0 na początku jest dopełnieniem kodu do 8 bitów). Litera o ma wzorzec „01101111”.
-Warto w ramach ćwiczenia zapisać jakieś angielskie słowo, używając kodu ASCII i dać komuś innemu, kto również zapoznaje się z tym tematem, do odkodowania. 
+Przykład: Litera *c* (mała litera) ma w tabeli przypisany wzorzec: „01100011” (0 na początku jest dopełnieniem kodu do 8 bitów). Litera *o* ma wzorzec „01101111”.
+Warto w ramach ćwiczenia zapisać jakieś słowo, używając kodu ASCII i dać komuś innemu, kto również zapoznaje się z tym tematem, do odkodowania. 
 
 {panel type="teacher-note" summary="Jak stosować tablicę?"}
 Należy polecić uczniom wymianę krótkich wiadomości zapisanych w kodzie ASCII. Wtedy będą mieli okazję dostrzec pewne prawidłowości, wzorce (np. duże litery różnią się od odpowiadających im małych liter tylko na jednym bicie).
 {panel end}
 
 W komputerach teksty w języku angielskim są zapisywane w postaci ciągów (sekwencji) wzorców 8-bitowych, bardzo podobnie jak to było z zapisem w Braille'u. Dla przykładu słowo „computers” będzie zapisane jako: 01100011 01101111 01101101 01110000 01110101 01110100 01100101 01110010 01110011.
-Litera "c" ma kod 01100011, litera "o" ma kod 01101111 itd. Spójrz do tablicy ASCII, aby to sprawdzić! 
+Litera *c* ma kod 01100011, litera *o* ma kod 01101111 itd. Spójrz do tablicy ASCII, aby to sprawdzić! 
 
 {panel type="curiosity" summary="Co oznacza skrót ASCII?"}
-Nazwa „ASCII” jest skrótem od „American Standard Code for Information Interchange”. Była to standaryzacja sposobu kodowania znaków w maszynie dalekopisowej (zautomatyzowanym systemie telegraficznym). Dlatego system ASCII zawiera takie „znaki” dla sygnału dzwonka, dla informacji o potrzebie usunięcia poprzedniego znaku (jakby przodek polecenia „cofnij”), czy dla potwierdzenia zakończenia transmisji (END). We fragmencie tabeli ASCII, zamieszczonym powyżej, znajdziesz tylko jeden z nich (DEL). Resztę pominięto.  
+Nazwa „ASCII” jest skrótem od „American Standard Code for Information Interchange”. Była to standaryzacja sposobu kodowania znaków w maszynie dalekopisowej (zautomatyzowanym systemie telegraficznym). Dlatego system ASCII zawiera także „znaki” dla sygnału dzwonka, dla informacji o potrzebie usunięcia poprzedniego znaku (jakby przodek polecenia „cofnij”), czy dla potwierdzenia zakończenia transmisji (END). We fragmencie tabeli ASCII, zamieszczonym powyżej, znajdziesz tylko jeden z nich (DEL). Resztę pominięto.  
 Dzisiaj system ASCII został wyparty przez kodowanie UTF-8. Należy podkreślić, że teksty angielskie zakodowane w UTF-8 mają identyczną reprezentację binarną, co teksty w ASCII, gdyż pierwszy bit każdego 8-bitowego wzorca jest wówczas równy 0. Inaczej mówiąc plik tekstowy zawierający wzorce 1xxxxxxx z całą pewnością nie jest zapisany w kodzie ASCII i zawiera informacje o znakach spoza alfabetu angielskiego.
 
 {panel end}
@@ -754,18 +754,18 @@ Jak zapisać słowo „science”, używając kodu ASCII? A słowo „Wellington
 
 Oto odpowiedzi:
 
-- "science" = 01110011 01100011 01101001 01100101 01101110 01100011 01100101
-- "Wellington" = 01010111 01100101 01101100 01101100 01101001 01101110 01100111 01110100 01101111 01101110
-- "358" = 00110011 00110101 00111000
+- „science” to 01110011 01100011 01101001 01100101 01101110 01100011 01100101
+- „Wellington” to 01010111 01100101 01101100 01101100 01101001 01101110 01100111 01110100 01101111 01101110
+- „358” to 00110011 00110101 00111000
 
-Zauważ, że ciąg znaków "358" (w kodzie ASCII) można pomyliźć z liczbą 358! Z taką sytuacją możesz spotkać się np. w arkuszu kalkulacyjnym. Warto wiedzieć, że poprzedzenie pierwszej cyfry znakiem ' niejako wymusza, by arkusz traktował cyfry jako znaki tekstu, a nie liczby. To jest istotne np. gdy chcemy zapisać numer telefonu. Domyślnie 027555555 przez artkusz będzie potraktowane jako 27555555 (pominięte będzie 0).
+Zauważ, że ciąg znaków „358” (w kodzie ASCII) można pomylić z liczbą 358! Z taką sytuacją możesz spotkać się np. w arkuszu kalkulacyjnym. Warto wiedzieć, że poprzedzenie pierwszej cyfry znakiem ' niejako wymusza, by arkusz traktował cyfry jako znaki tekstu, a nie liczby. To jest istotne np. gdy chcemy zapisać numer telefonu. Domyślnie 061555555 przez artkusz będzie potraktowane jako 61555555 (pominięte będzie 0).
 {panel end}
 
 #### ASCII w praktyce
 
 Kod ASCII jest stosowany w technice komputerowej i telekomunikacji już od roku 1963. Pomimo wielkich zmian w konstrukcji komputerów i systemów operacyjnych, kodowanie ASCII jest ciągle podstawą komputerowych systemów zapisu tekstu w języku angielskim.
 
-Dla tekstów w języku angielskim kod ASCII jest wystarczającym rozwiązaniem. Co jednak zrobić w przypadku języków takich, jak chiński, w których stosuje się tysiące różnych znaków? 128 kombinacji zerojedynkowych to za mało! ASCII dzisiaj nie jest już powszechnie stosowany. Używa się rozwiązania zwanego Unicode.
+Dla tekstów w języku angielskim kod ASCII jest wystarczającym rozwiązaniem. Co jednak zrobić w przypadku języków takich jak chiński, w których stosuje się tysiące różnych znaków? 128 kombinacji zerojedynkowych to za mało! ASCII dzisiaj nie jest już powszechnie stosowany. Używa się rozwiązania zwanego Unicode.
 
 {panel type="curiosity" summary="Co było przed ASCII?"}
 Warto wspomnieć, że zanim pojawił się standard ASCII w usługach telegraficznych stosowano inne standardy: kod Baudota i EBCDIC. 
@@ -774,22 +774,22 @@ Powszechnie stosowana była odmiana kodu o nazwie "Baudot-Murray code". Jej auto
 
 ### Wprowadzenie do Unicode
 
-Dzisiaj standardem, który pozwala na zapis liter spoza alfabetu angielskiego, jest **Unicode**. To jakby tablica kodowa, w której znajdziemy ok. 120 000 różnych znaków, właściwych dla różnych języków, współczesnych i martywch. 
+Dzisiaj standardem, który pozwala na zapis liter spoza alfabetu angielskiego, jest **Unicode**. To tablica kodowa, w której znajdziemy ok. 120 000 różnych znaków, właściwych dla różnych języków, współczesnych i martywch. 
 
 Uzyskanie konkretnego binarnego kodu znaku w Unicode wymaga użycia schematu kodowania (ang. encoding scheme). 
 
-Poniżej dostępne jest interaktywne narzędzie, które pozwola na zaznajomienie się ze szczegółami. Po wpisaniu liczby w oknie po lewej zobaczysz odpowiadający mu znak. Po wpisaniu znaku po prawej zobaczysz liczbę Unicode (warto sprawdzić znak spoza angielskiego alfabetu, np. wkleić ze strony zapisanej w innym języku).
+Poniżej dostępne jest interaktywne narzędzie, które pozwola na zaznajomienie się ze szczegółami. Po wpisaniu liczby w polu po lewej, zobaczysz odpowiadający mu znak. Po wpisaniu znaku w polu po prawej, zobaczysz liczbę Unicode (warto sprawdzić znak spoza angielskiego alfabetu).
 
 {interactive name="unicode-chars" type="in-page"}
 
-Najbardziej popularne schematy kodowania Unicode to UTF-8, UTF-16, and UTF-32; takie skróty można czasem zobaczyć w nagłówkach e-maili lub opisach właściwości plików tekstowych. Część schematów to schematy o stałej długości (liczbie bitów np. 32), a inne są zmiennej długości.
+Najbardziej popularne schematy kodowania Unicode to UTF-8, UTF-16, and UTF-32; takie skróty można czasem zobaczyć w nagłówkach emaili lub opisach właściwości plików tekstowych. Część schematów to schematy o stałej długości (liczbie bitów np. 32), a inne są zmiennej długości.
 W tym drugim przypadku znaki powszechnie używane zapisuje się z użyciem mniejszej liczby bitów (np. 1 bajta), co daje oszczędność.
-Istnienie wielości schematów kodowania wynika z tego, że różne są lepsze dla różnych języków.
+Istnienie wielu schematów kodowania wynika z tego, że różne są lepsze dla różnych języków.
 
 
 ### UTF-32
 
-UTF-32 jest schematem kodowania Unicode o stałej długości. Kod każdego znaku to liczba 32-bitowa. W praktyce oznacza to, że właściwy kod znaku poprzedza odpowiednia liczba 0 (dopełniająca liczbę bitów do 32). To tak, jak czterocyfrowy zapis liczby 254  -- 0254.
+UTF-32 jest schematem kodowania Unicode o stałej długości. Kod każdego znaku to liczba 32-bitowa. Oznacza to, że właściwy kod znaku poprzedza odpowiednia liczba 0 (dopełniająca liczbę bitów do 32). To tak jak czterocyfrowy zapis liczby 254  -- 0254.
 32 bity określa się czasem jako słowo maszynowe (w architekturze komputera), więc można powiedzieć, że to tzw. okrągła liczba.
 
 Na przykład znak **H** w schemacie UTF-32 to:
@@ -818,11 +818,11 @@ Poniżej znajduje się interaktywne narzędzie, które pozwala wyznaczyć kod Un
 
 {panel type="project" summary="Imię w kodzie UTF-32"}
 1. Znajdź kody liter Twojego imienia dla schematu UTF-32.
-2. Sprawdź, ile bitów zajmuje właściwy kod litery, a ile bitów to 0 uzupełniające zapis binanrny do 32 bitów.
+2. Sprawdź, ile bitów zajmuje właściwy kod litery, a ile bitów to 0 uzupełniające zapis binarny do 32 bitów.
 3. Wyjaśnij, na czym polega binarny zapis danego znaku tekstu (według numeru Unicode).
 {panel end}
 
-W kodzie ASCII stosuje się właściwie identyczne podejście. Każdy znak ma kod binarny, który zapisany dziesiętnie jest liczbą z zakresu 0-255. ASCII jest także schematem o ustalonej długości -- każdy znak w ASCII jest kodowany z użyciem 8 bitów.
+W kodzie ASCII stosuje się właściwie identyczne podejście. Każdy znak ma kod binarny, który zapisany dziesiętnie jest liczbą z zakresu 0--255. ASCII jest także schematem o ustalonej długości -- każdy znak w ASCII jest kodowany z użyciem 8 bitów.
 
 W praktyce schemat UTF-32 jest rzadko używany -- własnie dlatego, że wiąże się z marnotrawieniem zasobów.
 Schematy UTF-8 i UTF-16 są zmiennej długości, są powszechnie używane. Teraz się nimi zajmiemy.
@@ -830,22 +830,22 @@ Schematy UTF-8 i UTF-16 są zmiennej długości, są powszechnie używane. Teraz
 {panel type="challenge" summary="Ile to jest 32 bity?"}
 1. Jaka jest największa liczba, którą można zapisać na 32 bitach? (Odpowiedź zapisz zarówno dziesiętnie, jak i binarnie.)
 
-2. Największa liczba Unicode jest daleko mniejsza od największej liczby, którą da się zapisać na 32 bitach -- ma postać 00000000 00010000 11111111 11111111. Jaką wartość dziesiętną ma ta liczba?
+2. Największa liczba Unicode jest daleko mniejsza od największej liczby, którą da się zapisać na 32 bitach -- ma postać 00000000 00010000 11111111 11111111. Jaką postać dziesiętną ma ta liczba?
 
 3. Jaka jest najmniejsza liczba bitów, która wystarczyłaby do zapisania każdego z ok. 120 000 znaków Unicode?
 {panel end} 
 
-{panel type="spoiler" summary="Answers to above challenge"}
+{panel type="spoiler" summary="Odpowiedzi"}
 1. 4 294 967 295 (ok. 4,3 miliarda). 
 
 2. 1 114 111.
 
-3. 17 bitów. 16 nie wystarczy, bo 2^16 = 65 536.
+3. 17 bitów. 16 nie wystarczy, bo {math}2^{16}{math end} = 65 536.
 {panel end}
 
 ### UTF-8
 
-Kody binarne znaków w schemacie UTF-8 są zapisywane z użyciem 8, 16, 24, lub 32 bitów, czyli 1, 2,3 lub 4 **bajtów**.
+Kody binarne znaków w schemacie UTF-8 są zapisywane z użyciem 8, 16, 24, lub 32 bitów, czyli 1, 2, 3 lub 4 **bajtów**.
 
 Na przykład znak **H** w kodzie UTF-8 to:
 ```
@@ -867,9 +867,9 @@ Poniżej znajduje się interaktywne narzędzie, które pozwola na wyznaczenie ko
 
 #### Jak działa UTF-8?
 
-Jak działa kodowanie według schematu UTF-8? Oto instrukcja, która pozwola na znalezienie kodu krok po kroku.
+Jak działa kodowanie według schematu UTF-8? Oto instrukcja, która pozwoli na znalezienie kodu krok po kroku.
 
-1. Znajdź numer (pozycji) Unicode dla znaku.
+1. Znajdź numer Unicode dla znaku.
 
 2. Zapisz numer Unicode w systemie binarnym, używając jak **najmniejszej** liczby bitów.
 
@@ -882,23 +882,22 @@ Jak działa kodowanie według schematu UTF-8? Oto instrukcja, która pozwola na 
   21 lub mniej bitów: 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
   ```
 
-4. Zastąp ciąg x bitami z zapisu binarnego uzyskanego w kroku 2. Jeśli liczba x jest większa od liczby bitów, to zastąp x cyframi 0.
+4. Zastąp ciąg *x* bitami z zapisu binarnego uzyskanego w kroku 2. Jeśli liczba *x* jest większa od liczby bitów, to zastąp *x* cyframi 0.
 
-Na przykład dla znalu **貓** (czyli kot w języku chińskim) proces wyznaczania kodu wygląda tak:
+Na przykład dla znaku **貓** (w języku chińskim oznaczającego kota) proces wyznaczania kodu wygląda tak:
 
-1.  **35987**.
-2.  **10001100 10010011**.
-3. **16** bitów, więc używamy wzorca **1110xxxx 10xxxxxx 10xxxxx**.
-4. **11101000 10110010 10010011**.
+1.  **35987**
+2.  **10001100 10010011**
+3. Jest **16** bitów, więc używamy wzorca **1110xxxx 10xxxxxx 10xxxxx**
+4. **11101000 10110010 10010011**
 
-Kod znaku **貓** w UTF-8 to: **11101000 10110010 10010011**.
+Kod znaku **貓** w UTF-8 to: **11101000 10110010 10010011**
 
 ### UTF-16
 
-Just like UTF-8, UTF-16 is a **variable length** encoding scheme for Unicode. Because it is far more complex than UTF-8, we won't explain how it works here.
 Podobnie jak UTF-8, również UTF-16 jest schematem kodowania zmiennej długości. Jego budowa jest bardziej skomplikowana niż UTF-8. Nie będziemy jej tutaj objaśniać.
 
-Poniżej znajduje się interaktywne narzędzie, które pozwala zapisać tekst w kodzieUTF-16. Możesz porównać efekty dla różnych języków (np. angielski i japoński) w przypadku stosowania schematów UTF-16 i UTF-8.
+Poniżej znajduje się interaktywne narzędzie, które pozwala zapisać tekst w kodzie UTF-16. Możesz porównać efekty dla różnych języków (np. polskiego i japońskiego) w przypadku stosowania schematów UTF-16 i UTF-8.
 
 {interactive name="unicode-binary" type="iframe" parameters="mode=utf16"}
 
@@ -910,30 +909,28 @@ Poniższa tabela zbiera różne informacje na ich temat.
 
 kod | typ schematu | liczba bitów na znak | powszechność użycia
 --- | --- | --- | ---
-*ASCII* | stałej długości | 8 bits | obecnie rzadko używany
-*UTF-8* | zmiennej długości | 8, 16, 24, or 32 bits | powszechnie używany
-*UTF-16* | zmiennej długości | 16 or 32 bits | często używany
-*UTF-32* |stałej długości | 32 bits | rzadko używany
+*ASCII* | stałej długości | 8 bitów | obecnie rzadko używany
+*UTF-8* | zmiennej długości | 8, 16, 24 lub 32 bity | powszechnie używany
+*UTF-16* | zmiennej długości | 16 lub 32 bity | często używany
+*UTF-32* |stałej długości | 32 bity | rzadko używany
 
 Celem porównania metod kodowania, trzeba określić kryteria uznania kodowania za "dobre". Oto dwa kryteria:
 
-1. Pozwala na zapis wszystkich znajów, niezależnie od języka.
-2. Do zapisu używa możliwie jak najmniejszej liczby bitów.
+1. Pozwala na zapis wszystkich znaków, niezależnie od języka.
+2. Do zapisu używa jak najmniejszej liczby bitów.
 
 Kodowanie ASCII nie spełnia pierwszego kryterium.
 Z drugim kryterium sprawa nie jest taka prosta.
 
-The following interactive will allow you to find out the length of pieces of text using UTF-8, UTF-16, or UTF-32. 
 Poniżej znajduje się interaktywne narzędzie, które pozwala na określenie liczby bitów użytych do zapisu krótkiego tekstu z użyciem schematów: UTF-8, UTF-16 i UTF-32. 
 
 {interactive name="unicode-length" type="in-page"}
 
 Można powiedzieć, że UTF-8 jest lepsze dla tekstów w języku angielskim, UTF-16 dla tekstów w językach azjatyckich. 
 
-{panel type="curiosity" summary="Emoji i Unicode"}
-Różne urocze małe znaki, które można używać w portalach społecznościowych itp. nazywa się "emojis". Każdy z nich ma numer pozycji w tablicy Unicode. Najpierw eojis pojawiły się Japonii w wiadomościach wysyłanych z telefów komórkowych. Dziś jest ponad 1000 różnych znaków emoji. Ich listę można zobaczyć [tutaj](http://unicode.org/emoji/charts/full-emoji-list.html).
-What is interesting to notice is that a single emoji will look very different across different platforms, i.e. &#128518 ("smiling face with open mouth and tightly-closed eyes") in my tweet will look very different to what it does on your iPhone.
-Co ciekawe, pojedyncze znaki emoji mogą mieć różny wygląd w zależności od platformy, tj.  &#128518 (czyli uśmiechnięta twarz z otwartymi ustami i przymkniętymi oczami) zapisana jako element tweeta będzie wyglądać inaczej niż na IPhone'ie. 
+{panel type="curiosity" summary="Emotikony i Unicode"}
+Różne urocze małe znaki, które można używać na portalach społecznościowych itp. nazywa się emotikonami. Każdy z nich ma numer w tablicy Unicode. Najpierw emotikony pojawiły się w Japonii w wiadomościach wysyłanych z telefonów komórkowych. Dziś jest ponad 1000 różnych emotikonów. Ich listę można zobaczyć [tutaj](http://unicode.org/emoji/charts/full-emoji-list.html).
+Co ciekawe, pojedyncze znaki emoji mogą mieć różny wygląd w zależności od platformy, tj.  &#128518 (czyli uśmiechnięta twarz z otwartymi ustami i przymkniętymi oczami) zapisana jako element tweeta będzie wyglądać inaczej niż na iPhone'ie. 
 {panel end}
 
 ### Projekt: Wiadomość ukryta w muzyce
@@ -944,10 +941,9 @@ W nagraniu wideo udostępnionym poniżej ukryte są wiadomości zapisane z użyc
 
 Jeśli założyć, że chcemy zapisywać 26 liter angielskiego alfabetu (bez rozróżniania małych i dużych liter), to okazuje się, że 5 bitów wystarczy. 
 
-You might have exchanged notes which used 1 for "a", 2 for "b", 3 for "c", all the way up to 26 for "z". We can convert those numbers into 5 digit binary numbers.
-Niech 1 odpowiada literze "a", 2 -- literze "b", 3 --"c", a 26 -- "z". (Istotnie jeśli kody ASCII liter "obciąć" do 5 bitów mniej znaczących, to otrzymamy kody odpowiadające 1, 2, ..., 26.)
+Niech 1 odpowiada literze *a*, 2 -- literze *b*, 3 --*c*, a 26 -- *z*. (Możesz się sam przekonać, że jeśli kody ASCII liter „obciąć” do 5 bitów mniej znaczących, to otrzymamy kody odpowiadające 1, 2, ..., 26.)
 
-Zapisz słowo "water" używając opisanego wyżej schematu 5-bitowego kodowania.
+Zapisz słowo „water” używając opisanego wyżej schematu 5-bitowego kodowania.
 
 {panel type="spoiler" summary="Odpowiedzi"}
 ```
@@ -964,10 +960,10 @@ r: 10010
 {panel type="teacher-note" summary="Więcej informacji o nagraniu wideo"}
 
 W nagraniu wideo odnaleźć można ponad 20 ukrytych wiadomości, zawsze zapisanych z użyciem 5 bitów.
-Na początku mamy solo na bębnie. Pierwsze pięć dźwięków to: "kick kick snare kick kick".
+Na początku mamy solo na bębnie. Pierwsze pięć dźwięków to: „tuk tuk trzask tuk tuk”.
 Uczniowie powinni zdecydować, który odpowiada cyfrze 0, a który cyfrze 1. Liczba zakodowana to: 00100
-("d") lub 11011 (dziesiętnie to 27, co nie jest kodem żadnej litery!) 
-Pierwsza wiadomość to "drum" (pol. bęben).
+(*d*) lub 11011 (dziesiętnie to 27, co nie jest kodem żadnej litery!) 
+Pierwsza wiadomość to „drum” (pol. bęben).
 
 Kolejne wyzwania stają się trudniejsze (wiadomości zakodowane są również w śpiewie, ale i w tańcu oraz kolorach tła).
 Piosenka opowiada o steganografii. Warto, by uczniowie poszukali wyjaśnienia tego terminu.
@@ -978,18 +974,18 @@ Piosenka opowiada o steganografii. Warto, by uczniowie poszukali wyjaśnienia te
 
 ### Jak komputery wyświetlają kolory?
 
-Pewnie przypominasz sobie lekcje plastyki, na których mieszaliście farby różnych kolorów, chcąc drogą prób i błędów uzyskać inną barwę. Ile było z tym zabawy! Po wymieszaniu kolorów czerwonego,  i niebieskiego można było uzyskać purpurowy. Po zmieszaniu żółtłego i niebieskiego — zielony. Czerwony w połączeniu z żółtym dawał pomarańczowy. Pewnie próbowaliście również uzyskać czarny przez zmieszanie niebieskiego, czerwonego i żółtego w równych ilościach. Zwykle efekt przypominał bardziej ciemny brąz. Mieszając farby trzech podstawowych kolorów w różnych ilościach, razem z farbą białą lub czarną, uzyskiwaliście wiele różnych, nowych kolorów.
+Pewnie przypominasz sobie lekcje plastyki, na których mieszaliście farby różnych kolorów, chcąc drogą prób i błędów uzyskać inną barwę. Ile było z tym zabawy! Po wymieszaniu kolorów czerwonego i niebieskiego można było uzyskać fioletowy. Po zmieszaniu żółtłego i niebieskiego -- zielony. Czerwony w połączeniu z żółtym dawał pomarańczowy. Pewnie próbowaliście również uzyskać czarny przez zmieszanie niebieskiego, czerwonego i żółtego w równych ilościach. Zwykle efekt przypominał bardziej ciemny brąz. Mieszając farby trzech podstawowych kolorów w różnych ilościach, razem z farbą białą lub czarną, uzyskiwaliście wiele różnych, nowych kolorów.
 
-Być może już wiesz, że w atramentowych drukarkach komputerowych też stosuje się tylko trzy podstawowe kolory. To zestaw lepszy od tego z zajęć plastycznych: turkusowy (niebieskozielony, ang. cyan), purpurowy (ang. magneta) oraz żółty (ang. yellow), określany skrótem CMY. Ten sposób mieszania barw nazywa się subtraktywnym, ponieważ można mówić o odejmowaniu (pochłanianiu niektórych długości fal przez powierzchnię). Na początku płótno, czy kartka, jest białe (czyli od powierzchni kartki odbijają się wszystkie składowe), a nałożenie farb działa jak filtr i od koloru białego odejmowane są różne składowe.
+Być może już wiesz, że w atramentowych drukarkach komputerowych też stosuje się tylko trzy podstawowe kolory. To zestaw lepszy od tego z zajęć plastycznych: turkusowy (niebieskozielony, ang. cyan), niebieskoczerwony (ang. magneta) oraz żółty (ang. yellow), określany skrótem CMY. Ten sposób mieszania barw nazywa się subtraktywnym, ponieważ można mówić o odejmowaniu (ang. subtracting, pochłanianiu niektórych długości fal przez powierzchnię). Na początku płótno, czy kartka, jest białe (czyli od powierzchni kartki odbijają się wszystkie składowe), a nałożenie farb działa jak filtr i od koloru białego odejmowane są różne składowe.
 
 Poniżej znajduje się interaktywne narzędzie, które pozwala na lepsze zrozumienie modelu kolorów CMY.
 
 
 {interactive name="cmy-mixer" type="in-page"}
 
-Ekran monitora komputerowego (czy wydruk) nie zawiera informacji tylko o jednym kolorze. Obraz składa się z milionów pikseli, a a kolor każdego z nich może inny niż kolory sąsiadujących z nim pikseli. 
+Ekran monitora komputerowego (czy wydruk) nie zawiera informacji tylko o jednym kolorze. Obraz składa się z milionów pikseli, a kolor każdego z nich może inny niż kolory sąsiadujących z nim pikseli. 
 
-Kolory wyświetlane na ekranach telewizorów też uzyskuje się przez zmieszanie kolorów podstawowych: czerwonego (ang. red), zielonego (ang. green) i niebieskiego (ang. blue). Mamy tu jednak do czynienia z modelem addytywnym RGB : ekran na początku jest czarny, a inne kolory uzyskuje się jakby przez dodawanie kolorów (odcieni) trzech składowych subpikseli, świecących z różną intensywnością odpowiednio: na czerwono, na zielono i na niebiesko.
+Kolory wyświetlane na ekranach telewizorów też uzyskuje się przez zmieszanie kolorów podstawowych: czerwonego (ang. red), zielonego (ang. green) i niebieskiego (ang. blue). Mamy tu jednak do czynienia z modelem addytywnym RGB: ekran na początku jest czarny, a inne kolory uzyskuje się jakby przez dodawanie kolorów (odcieni) trzech składowych subpikseli, świecących z różną intensywnością odpowiednio: na czerwono, na zielono i na niebiesko.
 
 Poniżej znajduje się interaktywne narzędzie, które pozwala na lepsze zrozumienie modelu kolorów RGB.
 
@@ -1006,13 +1002,13 @@ Możesz sprawdzić, jak to działa, używając małej aplikacji, zamieszczonej p
 •    Jak uzyskać kolor czarny? A biały?
 
 {panel type="spoiler" summary="Wskazówki"}
-Having all the sliders at the extremes will produce black and white, and if they are all the same value but in between, it will be grey (i.e. between black and white).
+Ustawienie wszystkich suwaków w skrajnych pozycjach (na jednym z końców) da kolor biały lub czarny, a ustawienie ich w równej odległości od końców da odciecie szarości (tj. przejście między czarnym a białym).
 
-Yellow is not what you might expect - it's made from red and green, with no blue.
+Aby uzyskać kolor żółty należy zmieszać czerwony i zielony, bez niebieskiego. To może być zaskakujące.
 {panel end}
 
 {panel type="curiosity" summary="Kolory podstawowe a ludzkie oko"}
-Ludzkie oko zawiera miliony światłoczułych receptorów, zwanych czopkami. Istnieją trzy rodzaje czopków: wywołujące odpowiednio wrażenie czerwieni, wrażenie zieleni i wrażenie barwy niebieskiej. Dla przykładu: jeśli na światło reagują z podobną czułością czopki z pierwszej i trzeciej z wyżej wymienionych grup, a czopki z drugiej grupy nie reagują, to mózg postrzega tę barwę jako purpurową (ang. magenta).
+Ludzkie oko zawiera miliony światłoczułych receptorów, zwanych czopkami. Istnieją trzy rodzaje czopków: wywołujące odpowiednio wrażenie czerwieni, wrażenie zieleni i wrażenie barwy niebieskiej. Dla przykładu: jeśli na światło reagują z podobną czułością czopki z pierwszej i trzeciej z wyżej wymienionych grup, a czopki z drugiej grupy nie reagują, to mózg postrzega tę barwę jako niebieskoczerwoną, jaśnieszą odmianę purpurowego (ang. magenta).
 
 {image filename="pixels-on-screens.jpg" alt="Na zdjęciu można zobaczyć trzy rodzaje subpikseli."}
 
@@ -1029,42 +1025,42 @@ Słowo piksel (ang. pixel) to skrót powstały z angielskiego zwrotu picture ele
 
 Kluczową koncepcją zapisu informacji graficznej jest to, że kolor piksela opisuje się, używając trzech liczb (składowych). W powyższym przykładzie były to liczby od 0 do 255. Dla każdej składowej mamy wtedy 256 możliwości, co umożliwia zapis informacji o 256 x 256 x 256 = 16 777 216 różnych kolorach. To więcej, niż ludzkie oko jest w stanie rozróżnić. 
 
-Oczywiście, zazwyczaj na ekranie wyświetlany jest więcej niż jeden kolor. Dzisiaj nawet ekrany komputerowe najmniejszych rozmiarów zawierają miliony pikseli i w komputerze musi być zapisana informacja o kolorze każdego z nich. Współcześnie rozmiary zdjęć mierzy się używając jednostki zwanej MP, czyli megapikselem (=milion pikseli). W systemie komputerowym informacja o kolorze każdego z pikseli zapisywana jest w postaci trzech liczb (o tym była mowa wyżej). Oznacza to, że do zapisania pełnej informacji o zdjęciu rozmiaru 2MP potrzeba sześciu milionów liczb! Mamy tu na myśli oczywiście taki sposób zapisu, w którym nie stosuje się kompresji. 
+Oczywiście zazwyczaj na ekranie wyświetlany jest więcej niż jeden kolor. Dzisiaj nawet ekrany komputerowe najmniejszych rozmiarów zawierają miliony pikseli i w komputerze musi być zapisana informacja o kolorze każdego z nich. Współcześnie rozmiary zdjęć mierzy się używając jednostki zwanej MP, czyli megapikselem (=milion pikseli). W systemie komputerowym informacja o kolorze każdego z pikseli zapisywana jest w postaci trzech liczb (o tym była mowa wyżej). Oznacza to, że do zapisania pełnej informacji o zdjęciu rozmiaru 2MP potrzeba sześciu milionów liczb! Mamy tu na myśli oczywiście taki sposób zapisu, w którym nie stosuje się kompresji. 
 
-Poniżej znajduje się interaktywne narzędzie, które pozwala na powiększenie obrazu tak, aby dostrzec piksele tworzące obraz. Każdy z elementów obrazu to kwadrat o jednolitym kolorze. Po odpowiednim powiększeniu wyświetlone zostaną wartości skłądowych RGB.
+Poniżej znajduje się interaktywne narzędzie, które pozwala na powiększenie obrazu tak, aby dostrzec piksele tworzące obraz. Każdy z elementów obrazu to kwadrat o jednolitym kolorze. Po odpowiednim powiększeniu wyświetlone zostaną wartości składowych RGB.
 
 {interactive name="pixel-viewer" type="whole-page" text="Pixel Viewer interactive"}
 
-{panel type="curiosity" summary="Alternative material on bits and colour"}
+{panel type="curiosity" summary="Inne materiały edukacyjne"}
 Inne ćwiczenie, które ukazuje związek między wartościami składowych RGB a wyświetlanym kolorem jest [tutaj](https://sites.google.com/a/bxs.org.uk/mrkershaw/ict/bitmapgraphics).
 {panel end}
 
 ### Binarny zapis informacji kolorze
 
-W jaki sposób binarnie, czyli w systemie dwójkowym, zapisać informację o kolorze, tak obraz był wysokiej jakości. Ilu bitów potrzeba do zapisania informacji o kolorze pojedynczego piksela?
+W jaki sposób binarnie, czyli w systemie dwójkowym, zapisać informację o kolorze, tak by obraz był wysokiej jakości? Ilu bitów potrzeba do zapisania informacji o kolorze pojedynczego piksela?
 
-#### Ile bitów potrzeba do zapisania iformacji o kolorze?
+#### Ile bitów potrzeba do zapisania informacji o kolorze?
 
-Wykonując ćwiczenie dotyczące składowych koloru (z suwakami), można było zauważyć, że suwak dla każdej składowej (czerwona, zielona, niebieska) był ustawiany w jednej z 256 pozycji (od 0 do 255). Do zapisania informacji składowej potrzeba zatem 8 bitów (ponieważ 28 = 2 x 2 x 2 x 2 x 2 x 2 x 2 x 2 = 256).
+Wykonując ćwiczenie dotyczące składowych koloru (z suwakami), można było zauważyć, że suwak dla każdej składowej (czerwonej, zielonej, niebieskiej) był ustawiany w jednej z 256 pozycji (od 0 do 255). Do zapisania informacji składowej potrzeba zatem 8 bitów (ponieważ 2 x 2 x 2 x 2 x 2 x 2 x 2 x 2 = 256).
 
 Najmniejszą liczbą, którą można zapisać na 8 bitach jest 00000000 -- czyli 0. Największa liczba to 11111111 -- czyli 255.
 
 Są trzy składowe, więc potrzebujemy 24 (3 x 8 = 24) bity do zapisania informacji o kolorze piksela.
 
-Liczbę 2^24 (czyli liczbę wszystkich liczb, które można zapisać używając 24 bitów) można wyznaczyć wykonując mnożenie: 256 x 256 x 256. Otrzymujemy 16 777 216. To oznacza, że zapis 24-bitowy pozwala zachować informację o ponad 16 milionach różnych kolorów. To nam wystarczy, aby mówić o zapisie wysokiej jakości (wierności). Czasami mówi się o pełnym kolorze (ang. true color).
+Liczbę {math}2^{24}{math end} (czyli liczbę wszystkich liczb, które można zapisać używając 24 bitów) można wyznaczyć wykonując mnożenie: 256 x 256 x 256. Otrzymujemy 16 777 216. To oznacza, że zapis 24-bitowy pozwala zachować informację o ponad 16 milionach różnych kolorów. To nam wystarczy, aby mówić o zapisie wysokiej jakości. 24-bitowy kolor nazywany bywa pełnym kolorem (ang. true color).
 
 #### Jak zapisać informację o kolorze z użyciem bitów?
 
-Jak to w praktyce wygląda? Wydaje się, że najrozsądniej jest użyć równej liczby bitów dla każdej składowej koloru. W ćwiczeniu powyżej składowe kolorów były wyświetlane jako liczby dziesiętne. Aby uzyskać binarny zapis informacji o składowych, należy zapisać te liczby w systemie dwójkowym i ustawić te 8-bitowe ciągi zer i 1jedynek obok siebie w odpowiedniej kolejności w jeden ciąg 24-bitowy (zgodnie z tradycyjną kolejnością: najpierw wzorzec bitowy dla składowej czerwonej, później dla zielonej, a na końcu dla niebieskiej).
+Jak to w praktyce wygląda? Wydaje się, że najrozsądniej jest użyć równej liczby bitów dla każdej składowej koloru. W ćwiczeniu powyżej składowe kolorów były wyświetlane jako liczby dziesiętne. Aby uzyskać binarny zapis informacji o składowych, należy zapisać te liczby w systemie dwójkowym i ustawić te 8-bitowe ciągi zer i jedynek obok siebie w odpowiedniej kolejności w jeden ciąg 24-bitowy (zgodnie z tradycyjną kolejnością: najpierw wzorzec bitowy dla składowej czerwonej, później dla zielonej, a na końcu dla niebieskiej).
 
-Przykład: Wyobraź sobie, że składowe koloru to: czerwona = 145, zielona = 50 i niebieska = 123 (jeśli nie wierzysz, że to odcień purpurowego, możesz sam sprawdzić). 
+Przykład: Wyobraź sobie, że składowe koloru to: czerwona = 145, zielona = 50 i niebieska = 123 (jeśli nie wierzysz, że to odcień fioletowego, możesz sam sprawdzić). 
 
 
-{image filename="colour-purple.png" alt="Kolor purpurowy."}
+{image filename="colour-purple.png" alt="Kolor fioletowy."}
 
-Każdą z tych trzech liczb należy napisać binarnie, używając 8 bitów. Możesz to zrobić samodzielnie (np. posługując się tzw. pianinem binarnym). Otrzymasz: czerwona = 10010001, zielona = 00110010 i niebieska = 01111011. Informacja o kolorze (odcień purpury) będzie mieć zatem następujący wzorzec bitowy: 100100010011001001111011.
+Każdą z tych trzech liczb należy napisać binarnie, używając 8 bitów. Możesz to zrobić samodzielnie (np. posługując się tzw. pianinem binarnym). Otrzymasz: czerwona = 10010001, zielona = 00110010 i niebieska = 01111011. Informacja o kolorze (odcień fioletu) będzie mieć zatem następujący wzorzec bitowy: 100100010011001001111011.
 
-Zauważ, że nie zapisujemy odstępów między 8. i 9. bitem, ani między 16. i 17. bitem, by podkreślić, że w komputerze oczywiście nie ma miejsca na inny znak niż reprezentacja fizyczna 0 i 1 (np. niższe lub wyższe napięcie prądu). Dla wygody odczytu możesz jednak zapisywać odstępy (spacje), kiedy zapisujesz taką informację w edytorze tekstu, czy na długopisem na kartce. Zwróć uwagę na to, że każda składowa opisana jest z użyciem ośmiu bitów, nawet jeśli te najbardziej znaczące ustawione są na 0. W celu lepszego zrozumienia tego zagadnienia warto zapisać kilka innych przykładów.
+Zauważ, że nie zapisujemy odstępów między 8. i 9. bitem, ani między 16. i 17. bitem, by podkreślić, że w komputerze oczywiście nie ma miejsca na inny znak niż reprezentacja fizyczna 0 i 1 (np. niższe lub wyższe napięcie prądu). Dla wygody odczytu możesz jednak zapisywać odstępy (spacje), kiedy zapisujesz taką informację w edytorze tekstu, czy długopisem na kartce. Zwróć uwagę na to, że każda składowa opisana jest z użyciem ośmiu bitów, nawet jeśli te najbardziej znaczące ustawione są na 0. W celu lepszego zrozumienia tego zagadnienia warto zapisać kilka innych przykładów.
 
 {panel type="curiosity" summary="Obrazy monochromatyczne"}
 Obrazy czarno-białe zwykle składają się z większej liczby kolorów niż dwa. Zwykle to 256 odcieni szarości, zapisane z użyciem 8 bitów.
@@ -1073,19 +1069,19 @@ Zapamiętaj, że odcienie szarości można uzyskać przez ustawienie tej samej w
 
 {panel end}
 
-Należy podkreślić, że komputery przetwarzają informacje zapisane binarnie, bez ich konwersji do liczb dziesiętnych. Tym przetwarzaniem zajmują się nierzaqdko bezpośrednio karty graficzne i drukarki. Wszystkie przykłady, w których pojawiają się wartości dziesiętne są wyłącznie po to, aby dany wątek lepiej zrozumieć.
+Należy podkreślić, że komputery przetwarzają informacje zapisane binarnie, bez ich konwersji do liczb dziesiętnych. Tym przetwarzaniem zajmują się nierzadko bezpośrednio karty graficzne i drukarki. W naszych przykładach pojawiają się wartości dziesiętne wyłącznie po to, aby łatwiej je było zrozumieć.
 
-The main point about knowing this representation is to understand the trade-off that is being made between the accuracy of colour (which should ideally be beyond human perception) and the amount of storage (bits) needed (which should be as little as possible).
+Najważniesze jest, aby rozumieć, że cyfrowy zapis informacji o kolorze wymaga pogodzenia dwóch wyzwań: właściwego postrzegania koloru przez ludzkie oko i użycia możliwie małej liczby bitów pamieci.
 
 {panel type="curiosity" summary="Szesnastkowe kody kolorów"}
 Podczas tworzenia kodu HTML strony internetowej często trzeba określać kolor tekstu, tła itd. Można wtedy podać wprost angielską nazwę koloru, np. "red", "blue", "purple" lub "gold". W ten sposób nie da się jednak opisać różnych odcieni koloru czerwonego, niebieskiego i innych. Jedynym rozwiązaniem jest wskazanie odpowiedniego kodu koloru. W praktyce nie stosuje się w tym miejscu zapisu binarnego (24 bitów), ale kody szestnastkowe, które są znacznie bardziej czytelne dla człowieka, więc pisze się np. #00FF9E. Znak # (ang. hash) to informacja dla przeglądarki internetowej, która kolejne sześć znaków zinterpretuje jako 24-bitową informację o kolorze. Takie "trójki szesnastkowe" stosuje się nie tylko w kodzie HTML, ale również np. w przypadku określania atrybutu koloru dla stylów w plikach CSS i SVG.
-W przykładzie używanym we wcześniejszej części tekstu pojawił się następujący wzorzec bitowy: 100100010011001001111011. Ten 24-bitowy ciąg można rozdzielić na grupy półbajtów: 1001 0001 0011 0010 0111 1011. Jeśli zastapimy każdy z nich cyfrą szesnastkową, to otrzymamy 91327B. Taki kod nazwiemy kodem szesnastkowym (heksadecymalnym) koloru!
+W przykładzie używanym we wcześniejszej części tekstu pojawił się następujący wzorzec bitowy: 100100010011001001111011. Ten 24-bitowy ciąg można rozdzielić na grupy półbajtów: 1001 0001 0011 0010 0111 1011. Jeśli zastapimy każdy z nich cyfrą szesnastkową, to otrzymamy 91327B. Taki kod nazywamy kodem szesnastkowym (heksadecymalnym) koloru.
 
-Dla przykładu: tworząc stronę internetową możemy w pliku HTML określić kolor tła strony, pisząc  <body bgcolor="#00FF9E">
+Oto przykład. Tworząc stronę internetową możemy w pliku HTML określić kolor tła strony, pisząc  <body bgcolor="#00FF9E">
 
-Osoba, która rozumie, na czym polega tworzenie kodów szesnastkowych, potrafi z łatowścią dostosować kod koloru tak, aby uzyskać oczekiwany odcień koloru. Wiadomo, że w przypadku 24-bitowej głębi koloru, pierwsze osiem bitów (w konsekwencji pierwsze dwie cyfry szesnastkowe) określa wartość składowej czerwonej, kolejne osiem — zielonej, a ostatnie osiem — niebieskiej. Aby zwiększyć udział odpowiedniej składowej, wystarczy zmienić odpowiednio jej kod szesnastkowy. Na przykład zmiana kodu #000000 (kolor czarny) na #002300) da w efekcie odcień koloru zielonego. Jakie kolory uzyskamy, używając kodów: #FF0000, #FF00FF, #FFFFFF?
+Osoba, która rozumie, na czym polega tworzenie kodów szesnastkowych, potrafi z łatwością dostosować kod koloru tak, aby uzyskać oczekiwany odcień koloru. Wiadomo, że w przypadku 24-bitowej głębi koloru, pierwsze osiem bitów (w konsekwencji pierwsze dwie cyfry szesnastkowe) określa wartość składowej czerwonej, kolejne osiem — zielonej, a ostatnie osiem — niebieskiej. Aby zwiększyć udział odpowiedniej składowej, wystarczy zmienić odpowiednio jej kod szesnastkowy. Na przykład zmiana kodu #000000 (kolor czarny) na #002300 da w efekcie odcień koloru zielonego. Jakie kolory uzyskamy, używając kodów: #FF0000, #FF00FF, #FFFFFF?
 
-Poniżej znajduje się narzędzie, które pozwala na eksperymentowanie z szesnastkowymi kodwami koloru.
+Poniżej znajduje się narzędzie, które pozwala na eksperymentowanie z szesnastkowymi kodami koloru.
 
 {interactive name="hex-background-colour" type="in-page"}
 
@@ -1102,9 +1098,9 @@ Kolejne narzędzie (poniżej) pozwala zobaczyć, jaki będzie efekt stosowania c
 
 Można zapytać, czy zyskalibyśmy coś zapisując informację o kolorze z użyciem liczby bitów większej niż 24? Okazuje się, że ludzkie oko potrafi rozróżniać ok. 10 milionów kolorów, więc liczba kolorów dla głębi 24-bitowej (ponad 16 milionów) jest większa. Czasami jednak stosuje się więcej bitów, np. w przypadku, gdy chcemy na obrazie odzwierciedlić kontrast.
 
-Wykonując eksperyment z użyciem narzędzia poniżej można się przekonać jaki będzie efekt zmniejszenia głębi koloru. Określ kolor klikając na obrazku po lewej stronie, a następnie spróbuj uzyskać odpowiednie dla wybranego koloru ustawienie suwaków 24-bitowych (po kilku próbach wyświetlony zostanie komunikat-wskazówka; zamiast myszy możesz używać strzałek na klawiaturze, aby precyzyjnie ustawić suwaki). Przekonasz się, że określony wcześniej kolor można precyzyjnie opisać, używając reprezentacji 24-bitowej.
+Wykonując eksperyment z użyciem narzędzia poniżej można się przekonać jaki będzie efekt zmniejszenia głębi koloru. Określ kolor klikając na obrazku po lewej stronie, a następnie spróbuj uzyskać odpowiednie dla wybranego koloru ustawienie suwaków 24-bitowych (po kilku próbach wyświetlony zostanie komunikat-wskazówka; zamiast myszy możesz używać strzałek na klawiaturze, aby precyzyjnie ustawić suwaki). Przekonasz się, że kolor można precyzyjnie opisać, używając reprezentacji 24-bitowej.
 
-Następnie spróbuj to powtórzyć dla suwaków w wersji 8-bitowej. W tym przypadku na opis składowych czerwonej i zielonej przypadać będzie jedna z ośmiu możliwych wartości, a dla niebieskiej — jedna z czterech wartości!
+Następnie spróbuj to powtórzyć dla suwaków w wersji 8-bitowej. W tym przypadku na opis składowych czerwonej i zielonej przypadać będzie jedna z ośmiu możliwych wartości, a dla niebieskiej — jedna z czterech wartości.
 
 {interactive name="colour-matcher" type="whole-page" text="Colour Matcher interactive"}
 
@@ -1115,7 +1111,7 @@ Inaczej mówiąc: trzykrotne zmniejszenie liczby bitów z 24 do 8 ma taki skutek
 Dlaczego najmniejszą liczbę bitów przeznaczyliśmy na składową niebieską? Okazuje się, że ludzkie oko jest najmniej wrażliwe na kolor niebieski i dlatego tak można było postąpić. W komputerze łatwiej przetwarzać grupy składające się z 8 bitów niż z 9 bitów.
 
 {panel type="jargon-buster" summary="Głębia koloru"}
-Z informacją o liczbie bitów zastosowanych do zapisu informacji o kolorach pikseli wiąże się ściśle określenie „głębia koloru” (lub „głębia bitowa”). Przykład: obraz o 8-bitowej głębi koloru to taki, w którym każdy z pikseli ma przyspisany jeden z 256 kolorów palety barw. Trzeba podkreślić, że drastyczne zmniejszenie głębi koloru może dać taki efekt, że obraz będzie wyglądał bardzo dziwnie (utrata kolorów prowadzi do powstania fałszywych konturów). Czasami taki efekt jest stosowany w programach graficznych specjalnie. Mówi się wtedy o efekcie posteryzcji (tj. upodobnieniu obrazu do plakatów, które drukuje się z użyciem tylko kilku kolorów).
+Z informacją o liczbie bitów zastosowanych do zapisu informacji o kolorach pikseli wiąże się ściśle określenie „głębia koloru” (lub „głębia bitowa”). Przykład: obraz o 8-bitowej głębi koloru to taki, w którym każdy z pikseli ma przypisany jeden z 256 kolorów palety barw. Trzeba podkreślić, że drastyczne zmniejszenie głębi koloru może dać taki efekt, że obraz będzie wyglądał bardzo dziwnie (utrata kolorów prowadzi do powstania fałszywych konturów). Czasami taki efekt jest stosowany w programach graficznych specjalnie. Mówi się wtedy o efekcie posteryzacji (tj. upodobnieniu obrazu do plakatów, które drukuje się z użyciem tylko kilku kolorów).
 {panel end}
 
 {panel type="curiosity" summary="Głębia koloru a kompresja"}
@@ -1130,7 +1126,7 @@ Kolejne narzędzie (poniżej) pozwala na pracę z dowolnym obrazem (np. z Twojeg
 
 Okazuje się, że głębia 8-bitowa, a nawet 16-bitowa, nie wystarcza do dobrego odzwierciedlenia subtelnych przejść tonalnych na skórze twarzy. 
 
-W niektórych przypadkach obrazy 16-bitowe mogą być prawie tak samo dobre, jak 24-bitowe. 
+W innych przypadkach obrazy 16-bitowe mogą być prawie tak samo dobre, jak 24-bitowe. 
 
 Poniżej znajduje się narzędzie, które pozwala dostrzec efekt różnego przydziału bitów dla trzech składowych RGB.
 
@@ -1145,89 +1141,85 @@ Można zapytać, czy zyskalibyśmy coś zapisując informację o kolorze z użyc
 
 Rodzi się pytanie: Czy warto zaoszczędzić na pamięci, tracąc na jakości obrazu? W przypadku obrazu zapisanego z użyciem 24 bitów na piksel o rozmiarach 800 x 600 pikseli liczba bitów informacji o obrazie będzie równa  600 x 800 x 24 bity = 11 520 000 bitów, czyli ok. 1,44 megabajta. Jeśli zastosujemy 8 bitów na piksel, zaoszczędzimy 2/3 tej pamięci, czyli prawie 1MB. 
 
-Współcześnie rzadko używa się już systemu 8-bitowego. Choć zdarza się, że stosuje się takie rozwiązanie np. w sytuacji zdalnej pracy na innym komputerze, z użyciem graficznego interfejsu użytkownika, kiedy nie ma szeropasmowego dostępu do sieci. Obraz pulpitu wygląda wtedy dziwnie, ale to nie ma wtedy większego znaczenia, bo ciągle jesteśmy w stanie wykonać pracę, którą zamierzaliśmy łącząc się z tym komputerem. Podobnie w przypadku tworzenia niektórych typów grafik, takich jak diagramy, czy rysunki czarno-białe (line art), stosuje się zmniejszoną liczbę bitów przy zapisie. Warto wspomnieć, że wiele ikon (pulpitu) jest 8-bitowych.
+Współcześnie rzadko używa się już systemu 8-bitowego. Jednak zdarza się, że stosuje się takie rozwiązanie np. w sytuacji zdalnej pracy na innym komputerze, z użyciem graficznego interfejsu użytkownika, kiedy nie ma szeropasmowego dostępu do sieci. Obraz pulpitu wygląda wtedy dziwnie, ale to nie ma wtedy większego znaczenia, bo ciągle jesteśmy w stanie wykonać pracę, którą zamierzaliśmy łącząc się z tym komputerem. Podobnie w przypadku tworzenia niektórych typów grafik, takich jak diagramy, czy rysunki czarno-białe (line art), stosuje się zmniejszoną liczbę bitów przy zapisie. Warto wspomnieć, że wiele ikon (pulpitu) jest 8-bitowych.
 
 
 
-#### What about in practice?
+#### Jak jest w rzeczywistości?
 
-W sytuacji, kiedy chcemy uzyskać mniejszy rozmiar pliku z informacją graficzną, stosuje stosuje się powszechnie kompresję (np. dla formatów plików JPEG, GIF i PNG). Takie zapis wymaga jednak pewnego czasu przetwarzania obrazu przy zapisie oraz odczycie, a więc wydłuża się czas potrzebny np. na wyświetlenie obrazu. 
-
-If space really is an issue, then this crude method of reducing the range of colours isn't usually used; instead, compression methods such as JPEG, GIF and PNG are used.
+W sytuacji, kiedy chcemy uzyskać mniejszy rozmiar pliku z grafiką, bez znacznego pogarszania jakości obrazu, stosuje stosuje się powszechnie kompresję (np. JPEG, GIF i PNG). Taki zapis wymaga jednak pewnego czasu przetwarzania obrazu przy zapisie oraz odczycie, a więc wydłuża się czas potrzebny np. na wyświetlenie obrazu. 
 
 Więcej informacji znajdziesz w rozdziale poświęconym kompresji danych!
 
 ## Zapis binarny instrukcji w komputrze
 
 {panel type="caution" expanded="True"}
-Lekturę tego podrozdziału warto poprzedzić zapoznaniem się opisem języków programowania niskiego poziomu w rozdziale. (chapters/programming-languages.html#machine-code-low-level-languages).
+Lekturę tego podrozdziału warto poprzedzić zapoznaniem się opisem języków programowania niskiego poziomu w rozdziale „Języki programowania”. (chapters/programming-languages.html#machine-code-low-level-languages).
 {panel end}
 
-W pamięci komputera zapsuje się binarnie również ciąg instrukcji tworzących program komputerowy.
+W pamięci komputera zapisuje się binarnie również ciąg instrukcji tworzących program komputerowy.
 
-Zwykle instrukcje składają się z dwóch części kodu: kodu operacji i operandów.
+Zwykle instrukcje składają się z dwóch części: kodu operacji i operandów.
 
 ```
-li $t0, 10 #Umieść wartość 10 do rejestru $t0
-li $t1, 20 #Umieść wartość 20 do rejestru $t1
+li $t0, 10 #Umieść wartość 10 w rejestrze $t0
+li $t1, 20 #Umieść wartość 20 w rejestrze $t1
 #Dodaj wartości rejestrów $t0 i $t1, wynik dodawania umieść w rejestrze $a0
 add $a0, $t0, $t1
 ```
 
-W powyższym kodzie języka programowania niskiego poziomu programu skróty li i add oznaczają odpowiednio operacje "umieść wartość całkowitą" i "dodaj dwie wartości całkowite". 
+W powyższym kodzie języka programowania niskiego poziomu skróty *li* i *add* oznaczają odpowiednio operacje „umieść wartość całkowitą” i „dodaj dwie wartości całkowite”. 
 $t0, $t1 i $a0 są operandami (argumentami) i wskazują na miejsca (w rejestrach procesora), gdzie przechowuje się dane.
-10 i 20 są argumentami dla instrukcji, które wymagają argumentów liczbowych.
+10 i 20 są argumentami dla instrukcji i oznaczają dosłownie liczby 10 i 20.
 
-W przypadku 32-bitowego systemu operacyjnego powyższe instrukcje można by przedstawić jako cztery 8-bitowe oktety:
+W przypadku 32-bitowego systemu operacyjnego każdą z powyższych instrukcji można by przedstawić jako cztery 8-bitowe fragmenty:
 
-| Operation |    Op1   |    Op2   |   Op3    |
+| operacja |    Op1   |    Op2   |   Op3    |
 |-----------|----------|----------|----------|
 | 00001000  | 00000000 | 00000000 | 00001010 |
 | 00001000  | 00000001 | 00000000 | 00010100 |
 | 00001010  | 10000000 | 00000000 | 00000001 |
 
-Can you figure out what the bits in Op3 for each instruction represent?
-
 Pierwsze 8 bitów 32-bitowej instrukcji określa jednoznacznie operację do wykonania. 
-W powyższym przykładzie: 00001000 jest kodem operacji li a 00001010 jest kodem operacji add.
-Dla operacji li bity z kolumny Op1 określają miejsce, tj. 00000000 wskazuje na rejestr $t0.
-Podobnie dla operacji add bity z kolumny Op1 wskazują na rejestr $a0.
-Co oznaczają bity z kolumny Op3 dla każdej z instrukcji?
+W powyższym przykładzie: 00001000 jest kodem operacji *li* a 00001010 jest kodem operacji *add*.
+Dla operacji *li* bity z kolumny Op1 określają miejsce, tj. 00000000 wskazuje na rejestr $t0.
+Podobnie dla operacji *add* bity z kolumny Op1 wskazują na rejestr $a0.
+Czy potrafisz odgadnąć, co oznaczają bity z kolumny Op3 dla każdej z instrukcji?
 
-Koncepcja przechowywania w pamięci komputera zarówno instrukcji programu, jak i danych takich jak tekst, obrazy itp. wymaga, aby również programy komputerowe były zapisane w kodzie binanrym. 
+Koncepcja przechowywania w pamięci komputera zarówno instrukcji programu, jak i danych takich jak tekst, obrazy itp. wymaga, aby również programy komputerowe były zapisane w kodzie binarnym. 
 
 ## Podsumowanie
 
 Informacje na temat binarnego zapisu grafiki zawarte w tym rozdziale to informacje podstawowe. Celem rozdziału było ukazać zasadę cyfrowego (binarnego) zapisu informacji oraz zwrócić uwagę na problem kompromisu między rozmiarem danych a jakością.
 
-W podrozdziale dotyczącym kolorów poprzestano na opisie binarnego zapisu nieskompresowanych obrazów w postaci „surowej” czy bitmapy (format BMP). W praktyce dla obrazów dużych rozmiarów używa się metod kompresji takich, jak JPEG, GIF lub PNG. Należy podkreślić, że w momencie utworzenia obrazu (zdjęcia), czy wyświetlania na ekranie w sposób nieunikniony obraz ma reprezentację „surową”, o jakiej była mowa w tym rozdziale, a wybór reprezentacji zawartej w niej danych będzie miał wpływ na jej jakość i na koszt urządzenia wyświetlającego. 
+W podrozdziale dotyczącym kolorów poprzestano na opisie binarnego zapisu nieskompresowanych obrazów w postaci „surowej” czy bitmapy (format BMP). W praktyce dla obrazów dużych rozmiarów używa się metod kompresji takich, jak JPEG, GIF lub PNG. Należy podkreślić, że w momencie utworzenia obrazu (zdjęcia), czy wyświetlania na ekranie w sposób nieunikniony obraz ma reprezentację „surową”, o jakiej była mowa w tym rozdziale. Wybór docelowych parametrów zapisu obrazu i formatu pliku ma wpływ zarówno na jakość cyfrowej reprezentacji obrazu, jak i na koszt urządzenia, na którym docelowo obraz ma być wyświetlany. 
 
-Binarna reprezentacja liczb jest obszernym tematem, któremu poświęca się odrębne badania naukowe. Wybór komputerowej reprezentacji ma ogromny wpływ np. na szybkość operacji arytmetycznych, dokładność wyniku oraz zapotrzebowanie na pamięć czy miejsce na dysku. Dla reprezentacji zmiennoprzecinkowych określono standardy (najbardziej znany to  IEEE 754), aby ułatwić projektowanie sprzętu komputerowego, który będzie zajmować się przetwarzaniem takich liczb.
-Arkusz kalkulacyjne zwykle używają reprezentacji zmiennoprzecinkowej do zapisywania wartości liczbowych, co wpływa na dokładność wykonywanych obliczeń (zwykle 64 bity na  każdą liczbę). Możesz sprawdzić, jakie są ograniczenia skończonej komputerowej reprezentacji liczb rzeczywistych np. wykonując w arkuszu kalkulacyjnym dodawanie bardzo dużej liczby i bardzo małej liczby.
+Reprezentacja liczb jest obszernym tematem i jest przedmiotem badań naukowych. Wybór komputerowej reprezentacji ma ogromny wpływ np. na szybkość operacji arytmetycznych, dokładność wyniku oraz zapotrzebowanie na pamięć czy miejsce na dysku. Dla reprezentacji zmiennoprzecinkowych określono standardy (najbardziej znany to  IEEE 754), aby ułatwić projektowanie sprzętu komputerowego, który będzie zajmować się przetwarzaniem takich liczb.
+Arkusz kalkulacyjne zwykle używają reprezentacji zmiennoprzecinkowej do zapisywania wartości liczbowych, co ogranicza dokładność wykonywanych obliczeń (zwykle są używane 64 bity na  każdą liczbę). Możesz sprawdzić, jakie są ograniczenia skończonej komputerowej reprezentacji liczb rzeczywistych np. wykonując dziele 1 przez 3 lub dodając w arkuszu kalkulacyjnym bardzo dużą liczbę do bardzo małej liczby.
 
 Wiedza na temat ograniczeń komputerowej reprezentacji liczb jest istotna dla osoby zajmującej się programowaniem (np. w języku Python, Java, C, C++, C#), ponieważ programista musi dokonać wyboru typu danych. Jeśli źle wybierze, może nastąpić przepełnienie. Przykład: Jeśli programista zadeklaruje zmienną 16-bitową bez znaku, a następnie będzie w niej przechowywać informację o liczbie znaków w pliku tekstowym, to pojawi się błąd już w przypadku pliku o wielkości 65 kilobajtów.
 
 Jeśli wielkość pamięci urządzenia komputerowego jest bardzo ograniczona (np. w małym przenośnym urządzeniu), programista nie będzie chciał rezerwować 32 bitów dla przechowywania informacji o liczbie, która nigdy nie przekroczy 100.
 Zresztą, nawet jeśli w urządzeniu rozmiar pamięci jest bardzo duży, to świadomy programista, wiedząc że program będzie przechowywał w pamięci miliony danych liczbowych, do zapisu których wystarczą reprezentacje 8-bitowe, nie będzie marnował milionów bajtów pamięci i używał reprezentacji 16-bitowych.
 
-Nie zawsze jest to takie oczywiste, jakie długości  mają reprezentacje różnych typów danych w językach programowania (nie wynika to z nazwy typu). Zwykle deklaruje się je używając nazw typu „int” lub „long”, z których wprost nie wynika rozmiar rezerwowanej pamięci. Przykład: W języku Java są następujące typy całkowitoliczbowe: 8-bitowy typ „byte”, 16-bitowy typ „short”, 32-bitowy „int” i 64-bitowy „long”. W niektórych przypadkach (jak np. typ „int” w języku C) rozmiar rezerwowanej pamięci zależy od wersji języka i typu (architektury) komputera. W innych przypadkach (jak np. w języku Python) reprezentacja liczby jest automatycznie dostosowywana, jeśli liczba jest zbyt duża!
+Nie zawsze jest to oczywiste, jakie długości  mają reprezentacje różnych typów danych w językach programowania (nie wynika to z nazwy typu). Zwykle deklaruje się je używając nazw typu „int” lub „long”, z których wprost nie wynika rozmiar rezerwowanej pamięci. Przykład: Na przykład w języku Java są następujące typy całkowitoliczbowe: 8-bitowy typ „byte”, 16-bitowy typ „short”, 32-bitowy „int” i 64-bitowy „long”. W niektórych przypadkach (jak np. typ „int” w języku C) rozmiar rezerwowanej pamięci zależy od wersji języka i typu (architektury) komputera. W innych przypadkach (jak np. w języku Python) liczba bajtów niezbędna do zapisania liczby jest automatycznie zmieniana, jeśli liczba jest zbyt duża dla domyślnych ustawień.
 
 Ten rozdział nie zwierał informacji na temat zapisu binarnego innego typu danych takich, jak np. pliki dźwiękowe i pliki wideo.
 
 
-## Further reading
+## Dalsza lektura
 
-Warto zapoznać się łamigłówkami na temat wzorców binarnych: [http://www.cs4fn.org/binary/lock/](http://www.cs4fn.org/binary/lock/)
+Warto zapoznać się łamigłówkami, w których rozwiązaniu przydaje się znajomość zapisu binarnego: [http://www.cs4fn.org/binary/lock/](http://www.cs4fn.org/binary/lock/)
 
 [Ta strona](http://courses.cs.vt.edu/~csonline/NumberSystems/Lessons/index.html) zawiera wiele informacji i ćwiczeń na temat arytmetyki komputerowej.
 
 
-### Użyteczne linki
+### Ciekawe odnośniki
 
 - [Podstawy zapisu binarnego](http://csunplugged.org/binary-numbers)
 - [Zapis bitów z użyciem dźwieku](http://csunplugged.org/modem)
 - [Gra Hex](http://www.purposegames.com/game/049fc90a)
-- [Thriving w naszym cyfrowym świecie](http://www.cs.utexas.edu/~engage/) has good illustrations of data representation
+- [Życie w naszym cyfrowym świecie](http://www.cs.utexas.edu/~engage/) 
 - [O zasadach działania dysku twardego](http://ed.ted.com/lessons/how-do-hard-drives-work-kanawat-senanan)
 
 
