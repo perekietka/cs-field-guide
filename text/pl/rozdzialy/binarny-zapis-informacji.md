@@ -354,7 +354,7 @@ Z tematem zapisu liczb w komputerze wiążą się pytania:
 - Jak zapisywać liczby ujemne?
 - Jak zapisywać liczby niecałkowite?
 
-### Liczba bitów używana w prkatyce
+### Liczba bitów używana w praktyce
 
 W praktyce wygląda to tak, że w pamięci komputera trzeba zarezerwować konkretną liczbę bitów jeszcze zanim będzie znana dokładna wartość liczby, którą chcemy w pamięci zapisać. Dzisiaj często rezerwuje się 32 bity lub 64 bity, choć czasem, w uzasadnionych przypadkach, może to być 16 bitów lub nawet 128 bitów. 
 
@@ -362,71 +362,75 @@ W każdym systemie komputerowym trzeba przyjąć pewne kompromisowe rozwiązanie
 
 Niektóre narzędzia pozwalają na wybór ilości przydzielanej pamięci spośród pewnej liczby możliwości (języki programowania czy systemy baz danych); inne w sposób arbitralny mają to ustalone z góry (np. arkusze kalkulacyjne).
 
-Istnieją też narzędzia, które potrafią samodzielnie w razie potrzeby zwiększyć obszar rezerwowanej pamięci (np. dla liczby całkowitej czyni tak interpretator języka programowania Python). Należy podkreślić, że to zawsze będzie wielokrotność 32 bitów  (odpowiednio 32, 64, 96, 128, 160 itd.). Działa to tak, że w momencie, gdy 32 bity to zbyt mało do zapisania dokładnej wartości liczby, to następuje rezerwacja innego fragmentu pamięci o wielkości 64 bitów itp.
+Istnieją też narzędzia, które potrafią samodzielnie w razie potrzeby zwiększyć obszar rezerwowanej pamięci (np. dla liczby całkowitej czyni tak interpreter języka programowania Python). Należy podkreślić, że to zawsze będzie wielokrotność 32 bitów  (odpowiednio 32, 64, 96, 128, 160 itd.). Działa to tak, że w momencie, gdy 32 bity to zbyt mało do zapisania liczby, to komputer przenosi jej zapis do innego fragmentu pamięci o wielkości 64 bitów itp.
 
 W niektórych językach programowania nie ma automatycznej kontroli, która pozwoliłaby stwierdzić, że nastąpiła próba zapisu zbyt dużej liczby (przepełnienie). Przykład: Dodanie 1 do liczby 127 w przypadku zapisu 8-bitowego zakończy się uzyskaniem liczby -128.
-Innym przykładem jest tzw. problem roku 2038. Okazuje się, że 19 stycznia 2038 roku nastąpi błąd przepełnienia i błędnie będzie interpretowana data w oprogramowaniu, które do zapisu daty używa pewnego tradycyjnego jej zapisu jako liczby 32-bitowej. Z dość podobnym problemem mieliśmy do czynienia w roku 2000.
+Innym przykładem jest tzw. problem roku 2038. Okazuje się, że 19 stycznia 2038 roku nastąpi błąd przepełnienia i błędnie będzie interpretowana data w oprogramowaniu, które datę zapisuje jako liczbę 32-bitową. Z dość podobnym problemem mieliśmy do czynienia w roku 2000.
 
 {image filename="xkcd-cant-sleep-comic.png" alt="A xkcd comic on number overflow" source="https://xkcd.com/571/"}
 
-W komputerach małych rozmiarów, takich jak np. te wbudowane wewnątrz samochodu, zmywarki, czy w czujnikach o rozmiarach wielkości ziarnka piasku, może być konieczne bardziej precyzyjne określenie zakresu przewarzanych liczb. W przypadku standardowych komputerów standardem jest przetwarzanie bloków 32 bitowych jako niepodzielnej liczby bitów. Jednak czasami (np. w oprogramowaniu czujnika wstrząsów sejsmicznych) może być konieczne zastosowanie podziału: 7 bitów do zapisu szerokości geograficznej, następne 7 bitów do zapisu długości geograficznej, kolejne 10 bitów do zapisania informacji o głębokości pod powierznią ziemi, a 8 bitów dla informacji o sile wstrząsu.
+W komputerach małych rozmiarów, takich jak np. te wbudowane wewnątrz samochodu, zmywarki, czy w czujnikach o rozmiarach wielkości ziarnka piasku, może być konieczne bardziej precyzyjne określenie zakresu przewarzanych liczb. W przypadku zwyczajnych komputerów standardem jest przetwarzanie bloków 32 bitowych jako niepodzielnej liczby bitów. Jednak czasami (np. w oprogramowaniu czujnika wstrząsów sejsmicznych) może być konieczne zastosowanie podziału: 7 bitów do zapisu szerokości geograficznej, następne 7 bitów do zapisu długości geograficznej, kolejne 10 bitów do zapisania informacji o głębokości pod powierznią ziemi, a 8 bitów dla informacji o sile wstrząsu.
 
-Nawet podczas pracy ze standardowym komputerem jest ważne, aby starannie określić liczbę potrzebnych bitów. Na przykład, jeśli w bazie danych wartość konkretnego pola ma przyjmować jedną z czterech wartości (np. 0, 1, 2, 3 lub wartości składowych sekwencji DNA), to rezerwowanie 64 bitów do zapisania takiej wartości niepotrzebnie powiększa rozmiar bazy danych (zapisanej na dysku). Gdyby liczba rekordów bazy danych była równa 10 000 000, to w konsekwencji zmarnowanych będzie 620 000 000 bitów, czyli ok. 74 MB, gdyż do zapisu czterech różnych wartości wystarczą 2 bity. Jeśli podobnych pól w bazie danych jest więcej, to efekt marnowania pamięci komputera kumuluje się do ogromnych rozmiarów.
+Nawet podczas pracy ze standardowym komputerem jest ważne, aby starannie określić liczbę potrzebnych bitów. Na przykład, jeśli w bazie danych wartość konkretnego pola ma przyjmować jedną z czterech wartości (np. 0, 1, 2, 3 lub wartości składowych sekwencji DNA), to rezerwowanie 64 bitów do zapisania takiej wartości niepotrzebnie powiększa rozmiar bazy danych (zapisanej na dysku). Gdyby liczba rekordów bazy danych była równa 10 000 000, to w konsekwencji zmarnowanych byłoby 620 000 000 bitów, czyli ok. 74 MB, gdyż do zapisu czterech różnych wartości wystarczą 2 bity. Jeśli podobnych pól w bazie danych jest więcej, to efekt marnowania pamięci komputera kumuluje się do ogromnych rozmiarów.
 
 Narzędzia takie jak Google Maps przetwarzają astronomiczne ilości danych. Marnowanie pamięci w ich przypadkach wcale nie wchodzi w grę!
 
-{panel type="challenge" summary="Ile bitów jest niezbędne?"}
+{panel type="challenge" summary="Ile bitów jest niezbędnych?"}
 Czymś bardzo użytecznym jest oszacowanie liczby bitów niezbędnych do zapamiętania pewnych wartości. Zastanów się, jaka byłaby odpowiedź dla sytuacji przedstawionych poniżej. Pamiętaj, że chcesz mieć możliwość zapamiętania największej z potencjalnych wartości, ale nie chcesz marnować pamięci komputera.
 
 1. Informacja o dniu tygodnia
-  - a) 1 bit
-  - b) 4 bity
-  - c) 8 bitów
-  - d) 32 bity
+a) 1 bit
+b) 4 bity
+c) 8 bitów
+d) 32 bity
 2. Informacja o liczbie ludzi na świecie
-  - a) 16 bitów
-  - b) 32 bity
-  - c) 64 bity
-  - d) 128 bitów
+a) 16 bitów
+b) 32 bity
+c) 64 bity
+d) 128 bitów
 3. Informacja o liczbie dróg w Nowej Zelandii
-  - a) 16 bitów
-  - b) 32 bity
-  - c) 64 bity
-  - d) 128 bitów
+a) 16 bitów
+b) 32 bity
+c) 64 bity
+d) 128 bitów
 4. Informacja o liczbie gwiazd we wszechświecie
-  - a) 16 bitów
-  - b) 32 bity
-  - c) 64 bity
-  - d) 128 bitów
+a) 16 bitów
+b) 32 bity
+c) 64 bity
+d) 128 bitów
 {panel end}
 
 {panel type="spoiler" summary="Odpowiedzi"}
-1. b (właściwie to już 3 bity pozwolą na zapis 8 różnych wartości; ale technicznie lepszym rozwiązaniem są 4 bity ze względu na to, że na 8 bitach można by łatwo zapisać informacje o dwóch dniach tygodnia)
-2. c (32 bity to za mało)
-3. c (ciekawe wyzwanie dla projektującego bazę danych: w Nowej Zelandii jest łącznie ok. 94 000 km dróg i założenie, że średnia długość drogi to 1 km prowadzi do wniosku, że 16 bitów to za mało)
-4. d (64 bity do za mało, a 128 bitów to o wiele za dużo! Trzeba pamiętać, że 128 bitów to nie dwa razy więcej niż 64 bity.)
+1. b
+Właściwie to już 3 bity pozwolą na zapis 8 różnych wartości; ale technicznie lepszym rozwiązaniem są 4 bity ze względu na to, że na 8 bitach można by łatwo zapisać informacje o dwóch dniach tygodnia.
+2. c 
+32 bity to za mało.
+3. c 
+To było trudne pytanie, ale projektujący bazę danych musi i o takich rzeczach myśleć. W Nowej Zelandii jest łącznie ok. 94 000 km dróg i założenie, że średnia długość drogi to przynajmniej 1 km prowadzi do wniosku, że 16 bitów to za mało. Bezpieczniejszą opcją wydają się 32 bity.
+4. d 
+64 bity to za mało, a 128 bitów to o wiele za dużo! Trzeba pamiętać, że największa liczba 128-bitowa nie jest dwa razy większa niż największa liczba 64-bitowa.
 {panel end}
 
 ### Zapis binarny liczb ujemnych
 
-Sposób zapisu liczb przedstawiony do tej pory pozwalał na zapis tylko liczb nieujemnych. W praktyce często potrzebujemy również zapisywać informacje o wartościach ujemnych (np. o obciążeniu rachunku bankowego, czy temperaturze powietrza zimą!). Kiedy posługujemy się zapisem dziesiętnym, to liczbę ujemną uzyskujemy poprzez dopisanie znaku minus przed liczbą. W komputerze nie ma takiej możliwości.
+Sposób zapisu liczb przedstawiony do tej pory pozwalał na zapis tylko liczb nieujemnych. W praktyce często potrzebujemy również zapisywać informacje o wartościach ujemnych (np. o obciążeniu rachunku bankowego czy temperaturze powietrza zimą!). Kiedy posługujemy się zapisem dziesiętnym, liczbę ujemną uzyskujemy poprzez dopisanie znaku minus przed liczbą. W komputerze nie ma takiej możliwości.
 
-We will look at two possible approaches: Adding a simple sign bit, much like we do for decimal, and then a more useful system called Two's Complement.
 Przyjrzymy się dwum możliwym rozwiązaniom: dodanie bitu znaku (metoda podobna do używanej przez człowieka w zapisie dziesiętnym) i tzw. uzupełnienie do 2 (metoda o wiele bardziej użyteczna w przypadku komputerów).
 
 #### Stosowanie bitu znaku
 
-W komputerze nie ma możliwości dopisania znaku - (minus) przed liczbą, ale możemy przydzielić jeden dodatkowy bit, zwany bitem *znaku*. To może być skrajny lewy bit bajtu – gdy ustawimy go na „0”, to uznamy liczbę za dodatnią, a w przypadku „1” liczba będzie ujemna (analogia do znaku minus). 
+W komputerze nie ma możliwości dopisania znaku - (minus) przed liczbą, ale możemy przydzielić jeden dodatkowy bit, zwany *bitem znaku*. To może być skrajny lewy bit bajtu – gdy ustawimy go na „0”, to uznamy liczbę za dodatnią, a w przypadku „1” liczba będzie ujemna (jest to analogia do znaku minus). 
 
 
 Przykład: W reprezentacji 8-bitowej ze znakiem liczba **41** będzie zapisana jako **00101001**, gdzie pierwszy bit (0) to bit znaku, a kolejne bity to zapis binarny liczby **41** na 7 bitach. Podobnie liczba **-59** będzie mieć reprezentację **01111011**, gdzie pierwszy bit (1) jest bitem znaku, a kolejne bity to liczba **59** zapisana binarnie.
 
 {panel type="challenge" summary="Zapis liczb ujemnych (metoda bit-znak)"}
 Znajdź 8-bitową reprezentację binarną liczb:  1, -1, -8, 34, -37, -88 i 102.
-Jakie liczby będą reprezentowane jako 10000110, 01111111i  10000000 w przypadku systemu 8-bitowego?
+Jakie liczby będą reprezentowane jako 10000110, 01111111 i 10000000 w przypadku systemu 8-bitowego?
 {panel end}
 
 {panel type="spoiler" summary="Odpowiedzi"}
+W poniższych odpowiedziach dodaliśmy odstępy dla ułatwienia czytania liczb binarnych.
 -   1  to 0000 0001
 -  -1  to 1000 0001
 -  -8  to 1000 1000
@@ -438,7 +442,7 @@ Jakie liczby będą reprezentowane jako 10000110, 01111111i  10000000 w przypadk
 
 Dekodowanie, czyli określenie wartości dziesiętnej na podstawie zapisu binarnego jest proste. Liczba zapisana jako **1001 0111** to na pewno liczba ujemna. Po bicie znaku (1) mamy 7 bitów **001 0111** reprezentujących **23**. Stąd wartość szukana to **-23**.
 
-{panel type="challenge" summary="Converting binary with sign bit to decimal"}
+{panel type="challenge" summary="Zapis dziesiętny liczb biarnych ze znakiem"}
 Jakie liczby będą reprezentowane jako 0001 0011, 1000 0110, 10100011, 0111 1111 i 11111111 w przypadku systemu 8-bitowego?
 - 00010011
 - 10000110
@@ -460,7 +464,7 @@ Przykład  1000 0000 jest dobrą ilustracją jednej z wad, jaką ma wyżej opisa
 
 #### Kod U2 (uzupełniania do 2)
 
-Istnieje inny sposób zapisu liczb ujemnych zwany *kodem uzupełnienia do 2*, która nie tylko pozbawiona jest wyżej opisanej wady, ale znacznie ułatwia operacje arytmetyczne na liczbach ujemnych. Jedną z jego zalet jest ujednolicenie arytmetyki (działania wykonywane z liczbą ujemną nie muszą być traktowane jako odrębny przypadek), co daje zysk szybkości oraz upraszcza projekt cyfrowych obwodów elektronicznych. 
+Istnieje inny sposób zapisu liczb ujemnych zwany *kodem uzupełnienia do 2*, który nie tylko pozbawiony jest wyżej opisanej wady, ale znacznie ułatwia operacje arytmetyczne na liczbach ujemnych. Jedną z jego zalet jest ujednolicenie arytmetyki (działania wykonywane z liczbą ujemną nie muszą być traktowane jako odrębny przypadek), co daje zysk szybkości oraz upraszcza projektowanie cyfrowych układów arymetycznych (sumatorów). 
 
 ***Zapis liczb dodatnich w kodzie U2***
 
@@ -468,9 +472,9 @@ Liczby dodatnie zapisuje się dokładnie w ten sam sposób, jak to było przedst
 
 ***Zapis liczb ujemnych w kodzie U2***
 
-Ten przypadek jest trudniejszy. Proces konwersji (zamiany z systemu dziesiętnego na binarny) można opisać listą kroków:
-1. Znajdź zapis binarny wartości bezwzględnej liczby (czyli bez znaku minus).
-2. Zmień wartości wszystkich bitów na przeciwne (tj. zmień 0 na 1, a 1 na to 0).
+Ten przypadek jest trudniejszy. Proces konwersji (zamiany z systemu dziesiętnego na binarny) można opisać taką listą kroków:
+1. Zapisz binarnie wartość bezwzględną liczby (czyli bez znaku minus).
+2. Zmień wartości wszystkich bitów na przeciwne (tj. zmień 0 na 1, a 1 na 0).
 3. Powiększ liczbę o 1 (dodanie 1 w arytmetyce binarnej jest dość proste; poniżej znajdzisz pewne wskazówki).
 
 Na przykład dla **-118** kolejne kroki będą wyglądać tak:
@@ -482,27 +486,27 @@ Stąd zapis liczby **-118** w kodzie uzupełnieniowym (U2) to: **10001010**.
 
 {panel type="challenge" summary="Dodanie 1 w arytmetyce binarnej"}
 Reguła rządząca dodaniem 1 w arytmetyce binarnej jest bardzo prosta, więc warto ją odkryć samodzielnie.
-Po pierwsze: Jeśli zapis binarny kiczby kończy się 0 (np. 1101010), to jaki będzie efekt zamiany ostatniego 0 na 1?
+Po pierwsze: Jeśli zapis binarny liczby kończy się 0 (np. 1101010), to jaki będzie efekt zamiany ostatniego 0 na 1?
 Rozpatrz inne przypadki: Jeśli zapis kończy się bitami 01, to o ile większa będzie liczba jeśli w tych miejscach wpiszemy 10?
 Co w przypadku zapisów kończących się 011 czy 011111?
 
-Te proste reguły oznaczają w prkatyce, że upraszcza się projektowanie sumatorów (cyfrowych układów elektronicznych). 
+Te proste reguły oznaczają w praktyce, że upraszcza się projektowanie sumatorów (cyfrowych układów elektronicznych, wykonujących dodawanie). 
 {panel end}
 
 {panel type="teacher-note" summary="Dodanie 1 w arytmetyce binarnej"}
-Uczniowie powinno samodzielnie, przez wykonanie kilku przykładów, odkryć regułę dodawania 1 do liczby zapisanej binarnie. 
+Uczniowie powinni samodzielnie, przez wykonanie kilku przykładów, odkryć regułę dodawania 1 do liczby zapisanej binarnie. 
 
 Istnieją różne sposoby mówienia o tym procesie.
-Regułę można wyrazić takimi słowami: Zacznij od skrajnej prawy cyfry. Zmień wartości kolejnych bitów na przeciwne tak długo aż pierwszy raz nie zmienisz 0 na 1.
+Regułę można wyrazić takimi słowami: Zacznij od skrajnej prawej cyfry. Zmień wartości kolejnych bitów na przeciwne tak długo aż pierwszy raz zmienisz 0 na 1.
 
 Reguła może być sformułowana inaczej: Znajdź cyfrę 0 położoną najbardziej na prawo, zmień ją na 1, a wszystkie jedynki po prawej zmień na 0. Jak to będzie działać dla przykładu 1001**0**111? Otrzymamy 10011000.
 
-W szczególnym przypadku (np. 1111111), można dopisać 0 na początku (01111111). Zastosowanie reguły da odpowiedź: 10000000.
+Gdy w liczbie zera nie występują (np. 1111111), można dopisać 0 na początku (01111111). Zastosowanie reguły da odpowiedź: 10000000.
 
-Być może warto, aby uczniowie poszukali analogicznej reguły dotyczącej zapisu dziesiętnego: jak dodać 1 to 284394? To 38999? 9999799?
+Być może warto, aby uczniowie poszukali analogicznej reguły dotyczącej zapisu dziesiętnego: jak dodać 1 do 284 394? To 38 999? 9 999 799?
 {panel end}
 
-{panel type="challenge" summary="Determining the Two's Complement"}
+{panel type="challenge" summary="Zapisywanie liczb w kodzie U2"}
 Zapisz poniższe liczby w kodzie U2, używając 8 bitów.
 1. 19
 2. -19
@@ -513,7 +517,7 @@ Zapisz poniższe liczby w kodzie U2, używając 8 bitów.
 
 {panel type="spoiler" summary="Odpowiedzi"}
 1. 19 ma kod **0001 0011**.
-2. Dla -19, zaczynamy od zapisania kodu dla 19 = 0001 0011, po zamianie bitów mamy 1110 1100, a po dodaniu 1 otrzymujemy poszukiwany kod: **1110 1101**.
+2. Dla -19, zaczynamy od zapisania kodu dla 19, czyli 0001 0011, po zamianie bitów mamy 1110 1100, a po dodaniu 1 otrzymujemy poszukiwany kod: **1110 1101**.
 3. 107 ma kod **0110 1011**.
 4. Dla -107 mamy kolejno (jako etapy pośrednie): 0110 1011 i 1001 0100, a ostatecznie: **1001 0101**.
 5. Dla -92 mamy: 0101 1100, 1010 0011 i w końcu **1010 0100**. 
@@ -521,26 +525,26 @@ Zapisz poniższe liczby w kodzie U2, używając 8 bitów.
 
 ***Konwersja liczby binarnej z kodu U2 na zapis dziesiętny***
 
-Aby dokonać konwersji w odwrotną stronę (z reprezentacji binarnej na dziesiętną) trzeba najpierw określić, czy liczba jest dodatnia (lub równa 0), czy ujemna. Jeśli liczba jest nieujemna, to jej wartości dziesiętnej szukamy w znany już sposób. W przeciwnym wypadku zaczynamy od konwersji liczby z kodu U2 do naturalnej postaci binarnej wartości bezwględnej liczby (bez znaku).
+Aby dokonać konwersji w odwrotną stronę (z reprezentacji binarnej na dziesiętną) trzeba najpierw określić, czy liczba jest dodatnia (lub równa 0), czy ujemna. Jeśli liczba jest nieujemna, to jej reprezentacji dziesiętnej szukamy w znany już sposób. W przeciwnym wypadku zaczynamy od konwersji liczby z kodu U2 do naturalnej postaci binarnej wartości bezwględnej liczby (bez znaku).
 
 Skąd wiadomo, czy liczba jest ujemna czy nie? Wystarczy sprawdzić, czy skrajny lewy bit jest ustawiony na 1, czy 0. W pierwszym przypadku liczba jest ujemna. To wynika z opisu kodu U2 zawartego w poprzednim podrozdziale.
 
-Jeśli zapis binarny liczby zaczyna się od 1, to proces konwersji na postać dziesiętną można przedstawić jako listę kroków:
+Jeśli zapis binarny liczby zaczyna się od 1, to proces konwersji na postać dziesiętną można przedstawić jako taką listę kroków:
 
 1. Odejmij 1 (w arytmetyce binarnej).
 2. Zmień wartości wszystkich bitów na przeciwne.
-3. Znajdź wartość dziesiętną liczby uzyskanej w kroku 3.
+3. Znajdź postać dziesiętną liczby uzyskanej w kroku 3.
 4. Dopisz znak - (minus) przed wartością wyznaczoną w kroku 4.
 
 Na przykład dla liczby 11100010 kolejne kroki dają takie efekty:
 
 1. **11100001**
-2. **00011110**.
-3. **30**.
-4. **-30**.
+2. **00011110**
+3. **30**
+4. **-30**
 
 {panel type="challenge" summary="Ćwiczenie"}
-Wyznacz wartości dziesiętne liczb zapisanych w kodzie U2:
+Zapisz w postaci dziesiętnej liczby zapisane w kodzie U2:
 1. 00001100
 2. 10001100
 3. 10111111
@@ -565,18 +569,18 @@ W kodzie uzupełnienowym (U2) wygląda to inaczej: 10000000 (kod najmniejszej li
 
 |      liczba bitów     |        zakres liczb w kodzie naturalnym           |               zakres liczb w kodzie U2                    |
 |-----------------|---------------------------------|----------------------------------------------------------|
-| 8 bit		  | 0 to 255                        | od -128 do 127                                              |
-| 16 bit	  | 0 to 65 535                     | od -32 768 do 32 767                                        |
-| 32 bit	  | 0 to 4 294 967 295              | od −2 147 483 648 do 2 147 483 647                          |
-| 64 bit	  | 0 to 18 446 744 073 709 551 615 | od −9 223 372 036 854 775 808 do 9,223,372,036,854,775,807  |
+| 8 bit		  | od 0 do 255                        | od -128 do 127                                              |
+| 16 bit	  | od 0 do 65 535                     | od -32 768 do 32 767                                        |
+| 32 bit	  | od 0 do 4 294 967 295              | od -2 147 483 648 do 2 147 483 647                          |
+| 64 bit	  | od 0 do 18 446 744 073 709 551 615 | od -9 223 372 036 854 775 808 do 9 223 372 036 854 775 807  |
 
 
 #### Dodawanie liczb ujemnych
 
 Spójrzmy najpierw na dodawanie liczb dodatnich.
-Reguły są analogiczne do tych znanych z pisemnego sposobu dodowania liczb w systemie dziesiętnym. Jest przy tym prościej: są tylko dwa rodziaje cyfr, więc upraszcza się tabliczna dodawania!
+Reguły są analogiczne do tych znanych z pisemnego sposobu dodowania liczb w systemie dziesiętnym. Jest przy tym prościej: są tylko dwa rodziaje cyfr, więc upraszcza się tabliczka dodawania!
 
-Sposób pisemnego dodawania przypomniemy na przykładzie **128 + 255**.
+Sposób pisemnego dodawania przypomnimy na przykładzie **128 + 255**.
 
 ```
   1   (przeniesienie)
@@ -619,7 +623,7 @@ W przypadku liczb ujemnych zapisanych w kodzie bit-znak (czyli z lewym skrajnym 
 
 Wynikiem jest jednak liczba **-2**.
 
-Jak można ten problem rozwiązać? Okazuje się, że zamiast dodawnia kolumn można by użyć odejmowania kolumn. To w konkretnej realizacji sprzętowej wymagałoby użycia specjalnego układu elektronicznego.
+Jak można ten problem rozwiązać? Okazuje się, że zamiast dodawnia kolumn można by użyć odejmowania kolumn. Jednak w praktyce wymagałoby to użycia specjalnego układu elektronicznego.
 Na szczęście jest inne rozwiązanie: z pomocą przychodzi kod uzupełnieniowy (U2)!
 
 ***Dodawanie liczb ujemnych w kodzie U2***
@@ -636,13 +640,13 @@ Dodawanie w kolumnach zapiszemy tak:
 
 Dodatkowy szósty bit (po lewej) powstały z przeniesienia należy zignorować. Pozostałe 5 bitów to **00100**, czyli **4**. Takiego wyniku oczekiwaliśmy.
 
-Opisaną wyżej metodę można zaadaptować do odejmowania: zaimast działania 5 - 2, należy wykonać wykonać działanie 5 + (-2) = 3.
+Opisaną wyżej metodę można zaadaptować do odejmowania: zamiast działania 5 - 2, należy wykonać wykonać działanie 5 + (-2) = 3.
 
-Własności kodowania U2 są bardzo użyteczne. Dlatego, że zarówno liczby ujemne, jak i nieujemne można działają z tymi samymi elektornicznymi układami arytmetycznymi, a dodawanie i odejmowanie można potraktować jako ten sam typ operacji arytmetycznej.
+Własności kodowania U2 są bardzo użyteczne. Dzięki temu można wykonywać działania zarówno na liczbach ujemnych, jak i nieujemnych za pomocą tych samych elektronicznych układów arytmetycznych, a dodawanie i odejmowanie można potraktować jako ten sam typ operacji arytmetycznej.
 
-{panel type="curiosity" summary="What's going on with Two's complement?"}
+{panel type="curiosity" summary="O co chodzi z kodeum U2?"}
 
-Pomysł wykonywania dodawania na tzw. dopełnieniu liczby zamast odejmowania liczby można zastosować w obliczeniach na liczbach dziesiętnych. Dopełnieniem dziesiętnym x jest 10-x, np. dla 4 to 6, a dla 8 to 2. 
+Pomysł wykonywania dodawania na tzw. dopełnieniu liczby zamast odejmowania liczby można zastosować w obliczeniach na liczbach dziesiętnych. Dopełnieniem dziesiętnym *x* jest 10-*x*, np. dla 4 to 6, a dla 8 to 2. 
 (Słowo "dopełnić" ma ten sam rdzeń, co słowo pełnia. Liczba 10 jest w tym przypadku taką pełną, ,,okrągłą'' liczbą.)
 
 Odejmowanie 2 od 6 jest tożsame z dodawaniem 8 do 6 (6 + 8 = 14) i ignorowaniem 1 z przeniesienia (po lewej).
