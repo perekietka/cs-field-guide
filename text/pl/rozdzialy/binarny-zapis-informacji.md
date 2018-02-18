@@ -4,11 +4,11 @@
 Ćwiczenia w tym rozdziale wymagają wykonywania prostych obliczeń. Można je wykonać ręcznie lub w arkuszu kalkulacyjnym.
 {panel end}
 
-## Widok z lotu ptaka
+## Z lotu ptaka
 
 Komputery to narzędzia do przetwarzania informacji. Użytkownik komputera może tworzyć, modyfikować, czy po prostu przeglądać (oglądać, słuchać itd.) informacje, zapisane w dokumentach tekstowych, plikach graficznych czy wideo, skoroszytach arkusza kalkulacyjnego czy zbiorach baz danych. Gry komputerowe i inne programy-symulacje to przykłady tzw. wirtualnej rzeczywistości, która istnieje tylko w postaci informacji zapisanej pamięci komputera i wyświetlonej (po jej interpretacji) na ekranie monitora. Komputery pozwalają na wykonywanie obliczeń liczbowych, jak i na przesyłanie informacji przez sieć komputerową. To wszystko byłoby niemożliwe, gdyby nie wymyślono jakiegoś sposobu na zapis (reprezentację) różnego rodzaju informacji w pamięci operacyjnej komputera, na dysku twardym i ich przesyłania przez sieć komputerową.   
 
-Kluczową koncepcją, która pozwoliła uprościć trudności związane z projektowaniem i produkcją komputerów, ale również wpłynęła na niezawodność ich działania, jest koncepcja dwuwartościowego (dwustanowego) zapisu wszelkiego rodzaju informacji. Czasami mówi się o reprezentacji zerojedynkowej (0-1), choć w praktyce (w realizacji fizycznej) możemy mieć do czynienia z czymkolwiek, co może przyjmować dwa stany. Na przykład dla pamięci elektronicznej będzie to oznaczać wysoką lub niską wartość napięcia prądu elektrycznego, a dla tradycyjnego dysku twardego – namagnesowanie małych fragmentów warstw magnetycznych (północ – południe).
+Kluczową koncepcją, która pozwoliła uprościć trudności związane z projektowaniem i produkcją komputerów, ale również wpłynęła na niezawodność ich działania, jest koncepcja dwuwartościowego (dwustanowego) zapisu wszelkiego rodzaju informacji. Czasami mówi się o reprezentacji zero-jedynkowej (0-1), choć w praktyce (w realizacji fizycznej) możemy mieć do czynienia z czymkolwiek, co może przyjmować dwa stany. Na przykład dla pamięci elektronicznej będzie to oznaczać wysoką lub niską wartość napięcia prądu elektrycznego, a dla tradycyjnego dysku twardego -- namagnesowanie małych fragmentów warstw magnetycznych (północ -- południe).
 
 Pomysł, by *wszystko* w naszym cyfrowym świecie zapisywać z użyciem tylko dwóch wartości może wydawać się nieco fantastyczny. Oto ćwiczenie, które ukaże, jak zapisywać liczby, używając zestawu kart, które z jednej strony mają białe tło, a z drugiej strony -- czarne.  
 Zacznij od wskazania ostatniej karty (po prawej). Wtedy zobaczysz, że na stronie z białym tłem znajduje się pojedyncza czarna kropka.
@@ -22,10 +22,10 @@ Kolejne wyzwanie brzmi: Które karty należy odwrócić, aby łączna liczba kro
 
 W czasie zajęć szkolnych zamiast interaktywnego apletu, można użyć papierowych kart.
 
-Jeśli uczniowie napotykają trudności w znalezieniu odpowiedzi na powyższe pytania, nauczyciel powinien wskazywać kolejne karty z lewej i stawiać pytania: "Czy karta z 16 kropkami jest porzebna? A karta z 8 kropkami?" itd.
+Jeśli uczniowie napotykają trudności w znalezieniu odpowiedzi na powyższe pytania, nauczyciel powinien wskazywać kolejne karty z lewej i stawiać pytania: „Czy karta z 16 kropkami jest porzebna? A karta z 8 kropkami?” itd.
 Uczniowie szybko przekonają się, że skuteczna jest metoda zachłanna: albo liczba kropek na karcie jest za duża, albo karty należy użyć.
 
-Podczas pracy z ćwiczeniem uczniowie powinni dostrzeć pewne prawidłowości.  
+Podczas pracy uczniowie powinni dostrzeć pewne prawidłowości.  
 Na przykład: Karta z jedną kropką jest odwracana, gdy pytanie dotyczy liczby nieparzystej.
 
 {panel end}
@@ -35,10 +35,10 @@ Na przykład: Karta z jedną kropką jest odwracana, gdy pytanie dotyczy liczby 
 Można zauważyć, że liczba kropek na kolejnej karcie jest dwa razy większa niż na sąsiedniej (po prawej).
 Dostrzeżenie tej prawidłowości jest istotne dla zrozumienia cyfrowego zapisu danych w komputerze.
 
-Aby usyskać liczbę kropek równą 22 potrzebujemy układu kart: "białe, czarne, białe, białe, czarne".
-Liczbę 11 przedstawimy jako: "czarny, biały, czarny, biały, biały".
-Liczbę 29 jako: "biały, biały, biały, czarny, biały".
-Liczbę 19 jako: "biały, czarny, czarny, czarny, biały".
+Aby uzyskać liczbę kropek równą 22 potrzebujemy układu kart: „białe, czarne, białe, białe, czarne”.
+Liczbę 11 przedstawimy jako: „czarny, biały, czarny, biały, biały”.
+Liczbę 29 jako: „biały, biały, biały, czarny, biały”.
+Liczbę 19 jako: „biały, czarny, czarny, czarny, biały”.
 {panel end}
 
 Nietrudno odkryć, że dowolną liczbę z zakresu od 0 do 31 można przedstawić z użyciem 5 kart.
@@ -46,12 +46,12 @@ Informację o liczbie, przedstawioną na karcie, można odczytać używając tyl
 Na przykład informacja o liczbie 22 to ciąg słów: "biała, czarna, biała, biała, czarna"
 Każdy ciąg złożony ze ciągu słów czarne lub białe można zaś jednoznacznie przypisać pewnej liczbie.
 Np. "czarne, czarne, białe, białe, białe" odpowiada liczbie 7.
-Idea dwustanowego (binanrego) zapisu informacji stanowi podstawę zapisu danych w jakimkolwiek użądzeniu cyfrowym.
+Idea dwustanowego (binanrego) zapisu informacji stanowi podstawę zapisu danych w jakimkolwiek urządzeniu cyfrowym.
 
-Gdy chcemy przedstawić na papierze to, co zapisano w komputerze, to zazwyczaj uzywamy „0” dla ilustracji jednego ze stanów i „1” – dla drugiego z nich. Oznacza to np., że fragment pamięci elektronicznej komputera, dla którego wartości napięcia elektrycznego to:   
+Gdy chcemy przedstawić na papierze to, co zapisano w komputerze, to zazwyczaj używamy „0” dla ilustracji jednego ze stanów i „1” – dla drugiego z nich. Oznacza to na przykład, że fragment pamięci elektronicznej komputera, dla którego wartości napięcia elektrycznego to:   
 
 ```
-„niska”, „niska”, „wysoka”, „niska”, „wysoka”, „wysoka”, „wysoka”, „wysoka”, „niska”, „wysoka”, „niska”, „niska”
+niska, niska, wysoka, niska, wysoka, wysoka, wysoka, wysoka, niska, wysoka, niska, niska
 ```
 
 będziemy przedstawiać jako ciąg cyfr
@@ -60,7 +60,7 @@ będziemy przedstawiać jako ciąg cyfr
 0 0 1 0 1 1 1 1 0 1 0 0
 ```
 
-Taka notacja jest powszechnie używana. Należy jednak pamiętać, że sformułowanie typu „komputer zapisuje informacje w postaci ciągu 0 i 1” jest skrótem myślowym. Nie ma sposobu, żeby zrobić to bezpośrednio – komputery posługują się własnościami fizycznymi takimi jak wysokie i niskie napięcie, namagnesowanie północ/południe, czy ciemne i jasne materiały.
+Taka notacja jest powszechnie używana. Należy jednak pamiętać, że sformułowanie typu „komputer zapisuje informacje w postaci ciągu zer i jedynek” jest skrótem myślowym. Nie ma sposobu, żeby zrobić to bezpośrednio – komputery posługują się własnościami fizycznymi takimi jak wysokie i niskie napięcie, namagnesowanie północ/południe, czy ciemne i jasne materiały.
 
 {panel type="jargon-buster" summary="bity"}
 
@@ -68,7 +68,7 @@ Ponieważ używa się tylko dwóch cyfr: 0 i 1, więc mówi się też o systemie
 
 {panel end}
 
-Każdy utworzony przez Ciebie plik, każde zdjęcie zapisane na dysku komputera, każdy dokument pobrany z Internetu to po prostu krótszy lub dłuższy ciąg bitów, czyli cyfr dwókowych. Dlatego mówi się o technologiach *cyfrowych*!
+Każdy utworzony przez Ciebie plik, każde zdjęcie zapisane na dysku komputera, każdy dokument pobrany z Internetu to po prostu krótszy lub dłuższy ciąg bitów, czyli cyfr dwókowych. Dlatego mówi się o technologiach *cyfrowych*.
 
 Choć informatycy na co dzień nie zajmują się bezpośrednio analizowaniem tych ciągów bitów, to wiedza na temat zasad binarnego zapisu informacji jest naprawdę istotna, gdyż pozwala np. na oszacowanie przestrzeni na dysku, potrzebnej do zapisu danych z odpowiednią jakością. Podczas lektury tekstów z różnych dziedzin informatyki możesz napotkać określenia typu „24-bitowy kolor”, „128-bitowe szyfrowanie”, „32-bitowy adres IP” czy „8-bitowy kod ASCII”. Wiedza na temat zapisu binarnego jest niezbędna informatykowi do oszacowania ilości miejsca na dysku potrzebnego do zapisania wysokiej jakości informacji o kolorze, określenia bezpieczeństwa wybranej metody szyfrowania, do wyboru odpowiedniej długości klucza podczas projektowania bazy danych, czy zastosowania kodowania odpowiedniego dla teksów języka, w których występują znaki spoza alfabetu języka angielskiego.
 
@@ -76,7 +76,7 @@ Ten rozdział przedstawia różne metody, jakie są używane w systemach kompute
 
 ## Zaczynamy
 
-Na początek przyjrzymy się kodowi (alfabetowi) Braille'a, który umożliwia zapisywanie i odczytywanie tekstów osobom niewidomym i niedowidzącym. Mimo, że system brajlowski nie ma nic wspólnego z komputerami, to stanowi znakomite wprowadzenie do tematu tego rozdziału przewodnika po informatyce.
+Na początek przyjrzymy się kodowi (alfabetowi) Braille'a, który umożliwia zapisywanie i odczytywanie tekstów osobom niewidomym i niedowidzącym. Mimo że system brajlowski nie ma nic wspólnego z komputerami, to stanowi znakomite wprowadzenie do tematu tego rozdziału przewodnika po informatyce.
 
 {panel type="additional-information" summary="Zapis znaków Braille'a"}
 Dla uproszczenia ideę tzw. sześciopunku można zilustrować używając sześciu małych kół ułożonych w dwóch kolumnach po trzy punkty w każdej.
@@ -85,13 +85,13 @@ Koła z zamalowanym wnętrzem będą ilustracją punktów wypukłych.
 
 ### Czym jest kod Braille'a?
 
-Ponad 200 lat temu 15-letni Francuz wymyślił system zapisu tekstu (liter, cyfr, znaków przestankowych itd.) z użyciem tzw. sześciopunktów jako kombinację sześciu wypukłych punktów ułożonych w dwóch kolumnach po trzy punkty w każdej. System stał się bardzo popularny wśród osób niewidomych, gdyż umożliwił względnie szybki i niezawodny sposób „czytania” tekstu. 
+Ponad 200 lat temu 15-letni Francuz wymyślił system zapisu tekstu (liter, cyfr, znaków przestankowych itd.) z użyciem tzw. sześciopunktów jako kombinacje sześciu wypukłych punktów ułożonych w dwóch kolumnach po trzy punkty w każdej. System stał się bardzo popularny wśród osób niewidomych, gdyż umożliwił względnie szybki i niezawodny sposób „czytania” tekstu. 
 Alfabet Louisa Braille'a można uznać za jeden z pierwszych przykładów „binarnego” zapisu informacji – używa się w nim bowiem tylko dwóch znaków (wypukły punkt lub jego brak), a mimo to odpowiednie ich kombinacje pozwalają na wydawanie całych książek, zarówno fachowych, jak i literatury pięknej. 
 
 {image filename="braille-alphabet-diagram.jpg" alt="Alfabet Braille'a"}
 
 Sprawdźmy, ile różnych wzorców (znaków) w alfabecie Braille's można uzyskać, używając sześciopunktu. 
-Gdyby system Braille'a używał kombinacji tylko dwóch (pary) punktów, to wzorców (znaków) byłyby cztery. 
+Gdyby system Braille'a używał kombinacji tylko dwóch (pary) punktów, to wzorców byłyby cztery. 
 Gdyby używał kombinacji trzech punktów, to byłoby ich osiem.
 
 {image filename="two-and-three-dot-combinations-diagram.png" alt="Combinations of both two and three dots"}
@@ -101,22 +101,22 @@ Można było zauważyć, że w przypadku użycia trzech punktów liczba wzorców
 {panel type="spoiler" summary="Wyjaśnienie"}
 Po dodaniu czwartego punktu liczba wzorców podawaja się, bo nowy punkt można dołączyć do każdego wzorca 3-punktowego na dwa sposoby: jako punkt wypukły lub niewypukły.
 Podobnie można objaśnić przyczynę podwojenia się liczby wzorców po dodaniu czwartego punktu.
-To rozumowanie można uogólnić dla dowlnej liczby punktów.
+To rozumowanie można uogólnić dla dowolnej liczby punktów.
 {panel end}
 
 {panel type="teacher-note" summary="O znaczeniu zrozumienia idei podawajania")}
 Ta koncepcja (podwajanie się liczby wzorców) ma zasadnicze znaczenie dla zrozumienia istoty zapisu binarnego: każdy dodatkowy bit pozwala dwukrotnie zwiększyć liczbę wartości, które da się zapisać. Wybór odpowiedniej liczby bitów dla zapisu danych w konkretnej sytuacji jest bardzo ważny. Na przykład: 101-bitowy klucz szyfrowania jest dwa razy trudniej złamać, choć liczba użytych bitów jest większa tylko o 1%! 
 {panel end}
 
-W obrębie sześciopunktu można uzyskać 64 wzorce (znaki). To wystarcza na oznaczenie liter alfabetu i innych znaków, takich jak np. cyfry czy znaki interpunkcyjne.
+W obrębie sześciopunktu można uzyskać 64 wzorce. To wystarcza na oznaczenie liter alfabetu i innych znaków, takich jak np. cyfry czy znaki interpunkcyjne.
 
 ### Kod Braille'a a binarny zapis informacji
 
 Kod Braille'a jest ilustracją zapisu z użyciem bitów. Istotnie, rozróżnia się dwa stany punktu (wypukły lub niewypukły), a każdy z wzorców tzw. sześciopunktu odpowiada innemu znakowi alfabetu.
 Na przykład litera m może być zapisana jako 110010, gdzie "1" oznacza punkt wypukły, a "0" niewypukły (przy założeniu, że czytamy od lewej do prawej i z góry na dół). 
-W informatyce takich ciągów "1" i "0" używa się w analogiczny sposób do ukazania sposobu zapisu informacji w komputerze.
+W informatyce takich ciągów zer i jedynek używa się w analogiczny sposób do ukazania sposobu zapisu informacji w komputerze.
 
-Alfabet Braille'a jest dobrą ilustracją przyczyn użyteczności zapisu binarnego. Można sobie wyobrazić system używający trzech rodzajów kropek: niewypukłych, półwypukłych i wypukłych. Z pewnością wprawny czytelnik potrafiłby je rozróżnić, a wtedy do uzyskania 64 znaków wystarczyłaby kombinacja czterech kropek. Kłopot w tym, że potrzebne byłyby bardziej dokładne (precyzyjne) urządzenia do tworzenia kropek, a ludzie musieliby więcej uwagi poświęcać rozróżnianiu kropek podczas „czytania”. Wystarczyłoby wtedy, że kartka zostałaby przygnieciona, nawet bardzo nieznacznie, a informacja stałby się nieczytelna.
+Alfabet Braille'a jest dobrą ilustracją przyczyn użyteczności zapisu binarnego. Można sobie wyobrazić system używający trzech rodzajów kropek: niewypukłych, półwypukłych i wypukłych. Z pewnością wprawny czytelnik potrafiłby je rozróżnić, a wtedy do uzyskania 64 znaków wystarczyłaby kombinacja czterech kropek. Kłopot w tym, że potrzebne byłyby bardziej dokładne urządzenia do tworzenia kropek, a ludzie musieliby więcej uwagi poświęcać rozróżnianiu kropek podczas „czytania”. Wystarczyłoby wtedy, że kartka zostałaby przygnieciona, nawet bardzo nieznacznie, a informacja stałby się nieczytelna.
 
 Współczesne urządzenia cyfrowe prawie zawsze używają systemu dwustanowego (binarnego) do zapisu informacji. Przyczyny są podobne: dyski komputerowe i pamięć elektroniczna jest po prostu tańsza i mniejszych rozmiarów, jeśli wystarczy rozróżnić między dwoma skrajnymi wartościami (jak np. wysokie i niskie napięcie), a nie trzeba mierzyć subtelnych różnic w wartościach (np. między wartościami napięcia). 
 Stosowanie systemu dziesiętnego byłoby niezwykle kosztowne.
@@ -134,12 +134,12 @@ Bardziej pogłębione objaśnienie zalet praktycznych systemu binarnego znajduje
 ## Liczby
 
 {panel type="teacher-note" summary="Rozgrzewka bez komputera"}
-W ramach rozgrzewki można użyć ćwiczenia opisanego w scenariuszu zajęć projektu CS Unplugged [http://csunplugged.org/binary-numbers](http://csunplugged.org/binary-numbers). Pojęcie systemu dwójkowego (binarnego) jest tam wprowadzone krok po kroku z użyciem wyłączniem prostych operacji zliczania i dodawania. 
+W ramach rozgrzewki można użyć ćwiczenia opisanego w scenariuszu zajęć (w języku angielskim) projektu CS Unplugged [http://csunplugged.org/binary-numbers](http://csunplugged.org/binary-numbers). Pojęcie systemu dwójkowego (binarnego) jest tam wprowadzone krok po kroku z użyciem wyłączniem prostych operacji zliczania i dodawania. 
 
-Dostępne jest interaktyne narzędzie online, w którym odwzorowano tradycyjne karty czarno-białe.
+Oto interaktyne narzędzie, w którym odwzorowano tradycyjne karty czarno-białe:
 {interactive name="binary-cards" type="whole-page" text="Binary Cards"}
 
-Zdecydowaliśmy, że ten rozdział rozpocznie się od przypomnienia, czym jest system liczbowy. Ktoś mógłby sądzić, że takie matematyczne podejście "odstraszy" młodego czytelnika. Tymczasem większość uczniów powinna być dobrze obeznana z używaną w tekście terminologią, gdyż była wprowadzona w początkowych klasach szkoły podstawowej. Na lekcjach matematyki w pierwszej klasie szkoły średniej młodzież uczy się o notacji wykłądniczej, więc zapis {math}541 = 5 \times 10^2 + 4 \times 10^1 + 1 \times 10^0{math end} jest im dobrze znany. Tekst poniżej jest przypomnieniem, a nie objaśnianiem pojęcia systemu liczbowego po raz pierwszy.
+Zdecydowaliśmy, że ten rozdział rozpocznie się od przypomnienia, czym jest system liczbowy. Ktoś mógłby sądzić, że takie matematyczne podejście "odstraszy" młodego czytelnika. Tymczasem większość uczniów powinna być dobrze obeznana z używaną w tekście terminologią, gdyż była wprowadzona w początkowych klasach szkoły podstawowej. Na lekcjach matematyki młodzież uczy się o notacji wykładniczej, więc zapis {math}541 = 5 \times 10^2 + 4 \times 10^1 + 1 \times 10^0{math end} jest im dobrze znany. Tekst poniżej jest przypomnieniem, a nie objaśnianiem pojęcia systemu liczbowego po raz pierwszy.
 System dwójkowy (binarny) jest system liczbowym o podstawie 2. Zestawienie go z dobrze znanym młodziezy systemem o podstawie 10 powinno ułatawić zrozumienie istoty zagadnienia.
 {panel end}
 
@@ -149,7 +149,7 @@ W tym rozdziale przyjrzymy się temu, jak w komputerach zapisuje się liczby. Za
 
 Człowiek posługuje się zwykle pozycyjnym systemem liczbowym o podstawie 10 (zwanym też dziesiętnym). Warto przypomnieć sobie koncepcję zapisu **pozycyjnego**, gdyż system dwójkowy (binarny) jest również systemem pozycyjnym, choć używa się w nim mniejszej liczby cyfr! 
 
-Przykład: W liczbie $123 cyfra 3 odpowiada liczbie $3, ale już cyfra 1 odpowiada liczbie $100. 
+Przykład: W kwocie 123 zł cyfra 3 odpowiada liczbie 3 zł, ale już cyfra 1 odpowiada kwocie 100 zł. 
 Wartość (mnożnik) każdej z cyfr zależy od jej pozycji w zapisie. Mnożnik cyfry na danej pozycji jest 10 razy większy niż mnożnik cyfry na pozycji po prawej. W konsekwencji możemy mówić o jednościach, dziesiątkach, setkach, tysiącach, dziesiątkach tysięcy, setkach tysięcy, milionach itd. Na każdej z pozycji może wystąpić jedna z dziesięciu cyfr (0, 1, 2, 3, 4, 5, 6, 7, 8, 9).
 
 Np. liczba 90 328 może być zapisana w postaci sumy: 
@@ -165,17 +165,16 @@ Bardziej formalnie można napisać tak:
 {math}90328 = (9 \times 10^4) + (0 \times 10^3) + (3 \times 10^2) + (2 \times 10^1) + (8 \times 10^0){math end}
 
 
-The key ideas to notice from this are:
+Oto kluczowe własności systemu dziesiętnego:
 
-- System dzięsiętny używa 10 **cyfr** (ang. digits) -- 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.
+- System używa 10 **cyfr** -- 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.
 - Liczby to ciągi cyfr.
 - O cyfrach tworzących zapis liczby mówimy, że znajdują się na odpowiednich **pozycjach** odpowiednio: jedności, dziesiątek, setek, tysięcy itd. Na przykład w liczbie 90 328 cyfra 3 jest na pozycji setek, a cyfra 2 na pozycji dziesiątek.
 - Cyfra pierwsza po prawej (na pozycji jedności) ma najmniejszą wartość, jest najmniej znacząca.
 - Cyfra pierwsza po lewej ma największą wartość, jest najbardziej znacząca.
-- Gdy stosujemy 10 cyfr, to wartość cyfry na danej pozycji w liczbie jest 10 razy większa od wartości cyfry na pozycji po jej prawej stronie.
+- Gdy stosujemy 10 cyfr, wtedy wartość cyfry na danej pozycji w liczbie jest 10 razy większa od wartości cyfry na pozycji po jej prawej stronie.
 
-All this probably sounds really obvious, but it is worth thinking about consciously, because binary numbers have the same properties.
-To, co zapisano powyżej, może brzmieć jako coś oczywistego. Warto to jednak przeanalizować dokładniej, gdyż pełną analogię dostrzeżemy w własnościach zapisu binarnego.
+To, co zapisano powyżej, może brzmieć jako coś oczywistego. Warto to jednak przeanalizować dokładniej, gdyż pełną analogię dostrzeżemy we własnościach zapisu binarnego.
 
 ### Zapis liczb całkowitych w systemie binarnym
 
