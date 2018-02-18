@@ -179,62 +179,60 @@ To, co zapisano powyżej, może brzmieć jako coś oczywistego. Warto to jednak 
 ### Zapis liczb całkowitych w systemie binarnym
 
 {panel type="teacher-note" summary="Jak uczyć o liczbach binarnych?"}
-Ten podrozdział jest niezbędny do zrozumiwania rozdziału o cyfrowym zapisie informacji o kolorach.
+Ten podrozdział jest niezbędny do zrozumienia rozdziału o cyfrowym zapisie informacji o kolorach.
 
-Zaskakująco częstwo w podręcznikach informatyki poświęca się wiele miejsca ilorazowej metodzie konwersji między systemami liczbowymi: binanrym i dziesiętnym. W praktyce informatycy prawie nigdy się nią nie posługują. Wydaje się, że ważniejsze jest rozumienie istoty zapisu binarnego i jego własności. Dla uczącego się kluczowe jest spostrzeżenie, że dodanie do binarnego zapisu liczby kolejnej cyfry oznacza *podwojenie* zakresu liczb, które da się zapisać z użyciem tylu cyfr. Poznanie pewnych prawidłowości właściwych zapisowi binarnemu i sprawne korzystanie z tej wiedzy przydaje się w wielu dziedzinach informatyki.
+Zaskakująco często w podręcznikach informatyki poświęca się wiele miejsca ilorazowej metodzie konwersji między systemami liczbowymi: binarnym i dziesiętnym. W praktyce informatycy prawie nigdy się nią nie posługują. Wydaje się, że ważniejsze jest rozumienie istoty zapisu binarnego i jego własności. Dla uczącego się kluczowe jest spostrzeżenie, że dodanie do binarnego zapisu liczby kolejnej cyfry oznacza *podwojenie* zakresu liczb, które da się zapisać z użyciem tylu cyfr. Poznanie pewnych prawidłowości właściwych zapisowi binarnemu i sprawne korzystanie z tej wiedzy przydaje się w wielu dziedzinach informatyki.
 {panel end}
 
 {panel type="teacher-note" summary="Binarne pianino"}
-The "binary piano" is a simple binary conversion device that can be printed on paper, and enables students to experiment with these concepts physically.
 Binarne pianino to prosty środek dydaktyczny do nauki pewnej metody konwersji między systemami liczbowymi. Po wydrukowaniu uczniowie mogą wykonać samodzielne eksperymenty, które pozwolą zrozumieć istotę konwersji.
 Można je [pobrać stąd](files/binary-piano-UC.pdf)
 Wersja szablonu z czterema kopiami pianina [jest tutaj](files/binary-piano-UC-4up.pdf).
-Stosuje się zapis 9-bitowy. W sytuacji, gdy wprowadzamy pojęcie bajta, uczniowie mogą 9. bit ustawić na 0 (zignortować).
+W obu wersjach stosuje się zapis 9-bitowy. W sytuacji, gdy wprowadzamy pojęcie bajta, uczniowie mogą 9. bit zignortować (ustawić na 0).
 Obecność 9. bitu na wydruku ma następujące uzasadnienie dydaktyczne: łatwo znaleźć największą liczbę 8-bitową: od wartości dziesiętnej 9. bitu wystarczy odjąć 1.
 {panel end}
 
-Jak wspomniano wcześniej, komputery zapisują informacje używając bitów, czyli rozróżniając tylko dwa możliwe stany (dwustanowo). To oznacza, że w komputerze nie jest możliwe zapisanie liczby w systemie dziesiętnym, używając cyfr od 0 do 9, jak to czyni człowiek. Używany jest system o podstawie 2, zwany dwójkowym (binarnym).
+Jak wspomniano wcześniej, komputery zapisują informacje używając bitów, czyli rozróżniając tylko dwa możliwe stany. To oznacza, że w komputerze nie jest możliwe zapisanie liczby w systemie dziesiętnym, używając cyfr od 0 do 9, jak to czyni człowiek. Używany jest system o podstawie 2, zwany dwójkowym (binarnym).
 
-W systemie binarnym (systemie o podstawie 2), można stosować wyłącznie dwie cyfry (0 i 1). W zapisie pozycyjnym mnożnik (wartość) każdej z cyfr jest więc dwa razy większy niż mnożnik cyfry po prawej stronie (inaczej niż w systemie dziesiętnym, gdzie tym czynnikiem jest 10).
+W systemie binarnym, można stosować wyłącznie dwie cyfry (0 i 1). W zapisie pozycyjnym mnożnik (wartość) każdej z cyfr jest więc dwa razy większy niż mnożnik cyfry po prawej stronie (inaczej niż w systemie dziesiętnym, gdzie tym czynnikiem jest 10).
 
 {panel type="curiosity" summary="The Denary number system"}
 System liczbowy o podstawie 10 (dziesiętny) w języku angielskim określa się słowami decimal lub denary. To drugie określenie, używane najczęściej w Wielkiej Brytanii, ma formę gramatyczną analogiczną do angielskiego binary (dwójkowy, binarny). Słowo "denary" ma ścisły związek z nazwą rzymskiej monety (denarius, po polsku: denar), która miała wartość 10 asów (wybijanych z miedzi lub brązu). 
 {panel end}
 
-Interaktywne narzędzie poniżej ma pomóc w zrozumieniu zasady zapisu binarnego. Warto wykonać kilka prób (ćwiczeń). Wartość dziesiętna liczby jest wyświetlana na końcu po prawej stronie.
+Interaktywne narzędzie poniżej ma pomóc w zrozumieniu zasady zapisu binarnego. Warto wykonać kilka prób. Wartość dziesiętna liczby jest wyświetlana na końcu po prawej stronie.
 
 {interactive name="base-calculator" type="whole-page" text="Binary Number Calculator"}
 
-**Aby upewnić się, że właściwe posługujesz się narzędziem, sprawdź, czy po wpisaniu 101101 widzisz odpowiedź 45, po wpisaniu 100000 – 32, a po wpisaniu 001010 – 10 (dziesięć).**
+**Aby upewnić się, że właściwe posługujesz się narzędziem, sprawdź, czy po wpisaniu 101101 widzisz odpowiedź 45, po wpisaniu 100000 widzisz 32, a po wpisaniu 001010 jako reprezentacja dziesiętna pojawia się 10 dziesięć.**
 
 {panel type="teacher-note" summary="Using the binary number interactive"}
 Uczniowie powinni odkryć, że zapis binarny liczby zapisanej w systemie dziesiętnym mogą uzyskać cyfra po cyfrze (od lewej do prawej) postepując zachłannie w następujący sposób: cyfrę binarną ustawia się na 0 tylko i wyłącznie wówczas, gdy wartość dziesiętna odpowiednich pozycji w zapisie binarnym jest większa niż wartość dziesiętna, którą chcemy w tym momencie poddać konwersji.
-Po wykonaniu kilku prób stanie się dla uczących oczywiste, co należy robić. Z pewnością nawet młdosi uczniowie mogą istotę algorytmu odkryć samodzielnie. W konsekwencji pozwoli im to zdobyć pewność siebie i sprawność w zadaniach konwersji. 
-Jeśli pomoc nauczyciela okaże się konieczna, to warto posłużyć się konkretnym przykładem. Np. dla liczby 37 nauczyciel zaczyna od ustawienia wszystkich bitów na 0 za wyjątkiem liczby na pozycji 32 (która jest pierwszą nie przekraczającą 37) i nakierowuje ucznia na szukanie odpowiedzi o wartość bitu na pozycji odpowiadającej liczbie 16: ustawienie bitu na 1 oznaczałoby, że liczba jest niemniejsza niż 48, więc bit trzeba ustawić na 0. Podobnie jest dla bitu na pozycji o wartości 8. Kolejny bit (odpowiadający składnikowi 4) należy ustawić na 1 (dostajemy sumę: 36), następny na 0, a ostatni na 1 (suma: 37). Uzyskujemy zapis binarny: 100101.
-Opis metody jest w podręczniku podany uczącym się. Lepiej jednak, jeśli wcześniej samodzielnie odkryją metodę drogą eksperymentów z binanrym pianinem.
+Po wykonaniu kilku prób stanie się dla uczniów oczywiste, co należy robić. Z pewnością nawet młdosi uczniowie mogą istotę algorytmu odkryć samodzielnie. W konsekwencji pozwoli im to zdobyć pewność siebie i sprawność w zadaniach konwersji. 
+Jeśli pomoc nauczyciela okaże się konieczna, to warto posłużyć się konkretnym przykładem. Na przykład dla liczby 37 nauczyciel zaczyna od ustawienia wszystkich bitów na 0 za wyjątkiem liczby na pozycji odpowiadającej liczbie 32 (która jest pierwszą nie przekraczającą 37). Następnie zachęca ucznia do odganięcia wartości bitu na pozycji odpowiadającej liczbie 16: ustawienie bitu na 1 oznaczałoby, że liczba jest nie mniejsza niż 48, więc bit trzeba ustawić na 0. Podobnie jest dla bitu na pozycji o wartości 8. Kolejny bit (odpowiadający składnikowi 4) należy ustawić na 1 (dostajemy sumę 36), następny na 0, a ostatni na 1 (suma: 37). Uzyskujemy zapis binarny: 100101.
+W podręczniku metoda jest wyjaśniona, lecz lepiej byłoby, gdyby uczniowie odkryli ją samodzielnie, drogą eksperymentów z binanrym pianinem.
 
-W internecie można znaleźć wiele gier, które mogą pomóć zgłębić temat liczb binarnych. Jedna z nich to [Cisco Binary game](http://forums.cisco.com/CertCom/game/binary_game_page.htm).
-Motywująco dla poznających prawidłowości właściwe zapisowi binarnemu może działać fakt ograniczenia liczby prób konwersji w grze.
+W internecie można znaleźć wiele gier, które pomagają zgłębić temat liczb binarnych. Jedna z nich to [Cisco Binary game](http://forums.cisco.com/CertCom/game/binary_game_page.htm).
 
 Istnieje inny algorytm konwersji, zwany metodą ilorazową, który często pojawia się w podręcznikach, zwłaszcza w podręcznikach programowania. Ma tę własność, że dość łatwo można go zapisać w języku programowania, ale trudniej zrozumieć jego poprawność. 
 Prezentacja tego algorytmu nie jest niezbędna do zrozumienia dalszej części rozdziału.
-Cyfry binartne uzyskane w czasie działania algorytmu zapisuje się od prawej do lewej. Działa w następujący sposób: najmniej znaczący (skrajny prawy bit) ustawia się na 1, jeśli liczba zapisane dziesiętnie jest nieparzysta; w przeciwnym przypadku wartośc bitu jest równa 0. Następnie dzieli się liczbę przez 2 (w razie potrzeby zaokrąglając w dół do części całkowitej). Opisaną wyżej procedurę powtarza się dla kolejnych liczb uzyskanych w wyniku połowienia. Aż do momentu uzyskania 0 jako wyniku dzielenia przez 2.
+Cyfry binarne uzyskane w czasie działania algorytmu zapisuje się od prawej do lewej. Działa w następujący sposób: najmniej znaczący (skrajny prawy bit) ustawia się na 1, jeśli liczba zapisane dziesiętnie jest nieparzysta; w przeciwnym przypadku wartośc bitu jest równa 0. Następnie dzieli się liczbę przez 2 (w razie potrzeby zaokrąglając w dół do części całkowitej). Opisaną wyżej procedurę powtarza się dla kolejnych liczb uzyskanych w wyniku połowienia, aż do momentu uzyskania 0 jako wyniku dzielenia przez 2.
 {panel end}
 
-Znajdź zapis biarny liczb 4, 7, 12 i 57.
+Znajdź zapis biarny liczb 4, 7, 12 i 57, używajac narzędzia interaktywnego.
 
 Jaka jest największa liczba, jaką można uzyskać, posługując się tym narzędziem? Jaka jest najmniejsza? Czy jest jakaś liczba pomiędzy nimi, której nie jesteś w stanie uzyskać? Czy są liczby, które można zapisać w systemie binarnym na dwa różne sposoby? Odpowiedzi uzasadnij.
 
 {panel type="spoiler" summary="Największe i najmniejsze liczby"}
-- 000000, czyl 0 (dziesiętnie) to najmniejsza liczba.
+- 000000, czyli 0 (dziesiętnie) to najmniejsza liczba.
 - 111111, czyli 63 (dziesiętnie) to największa liczba.
-- Wszystkie liczby całkowite z zakresu (0, 1, 2... 63) da się zapisać binarnie (każdą wyłącznie w jeden sposób). Dokładnie tak samo, jak w systemie dziesiętnym.
+- Wszystkie liczby całkowite z zakresu od 0 do 63 da się zapisać binarnie (każdą wyłącznie w jeden sposób). Dokładnie tak samo, jak w systemie dziesiętnym.
 {panel end}
 
 {panel type="teacher-note" summary="Zrozumienie jednoznaczności zapisu binarnego"}
-Pytanie o jednoznaczność może być ciekawym wyzwaniem dla niektórych uczniów. Chodzi o to, że każdą liczbę można zapisać binarnym wyłącznie w jeden sposób; gdyby uczniowie mieli trudność w zrozumieniu uzasadnienia, to powinni przyjąć, że jednoznaczność zapisu istotnie ma miejsce. Proces formułowania przekonującego rozumowania może wyglądać tak: Uczeń otrzymuje zadanie zapisania pewnej liczby, np. 12, w systemie binarnym z użyciem 5 bitów. Skrajny lewy bit odpowiada wartości 16 (>12), więc należy ustawić go na 0 (ustawienie bitu na 1 na pewno nie pozwoli rozwiązać zadania). Dalej mamy bit o wartości 8. Nie jest możliwe zapisanie liczby 12 bez ustawienia tego bitu na 1 (suma wartości pozostałych bitów to 7). To oznacza, że 12 *musi* być zapisane jako 01100.
+Pytanie o jednoznaczność może być ciekawym wyzwaniem dla niektórych uczniów. Chodzi o to, że każdą liczbę można zapisać binarnym wyłącznie w jeden sposób; gdyby uczniowie mieli trudność w zrozumieniu uzasadnienia, to powinni przyjąć jednoznaczność zapisu na wiarę. Jednak można im pomóc zrozumieć ideę, proponując takie ćwiczenie: Uczeń otrzymuje zadanie zapisania pewnej liczby, np. 12, w systemie binarnym z użyciem 5 bitów. Skrajny lewy bit odpowiada wartości 16 (który jest większy od 12), więc należy ustawić go na 0 (ustawienie bitu na 1 na pewno nie pozwoli rozwiązać zadania). Dalej mamy bit o wartości 8. Nie jest możliwe zapisanie liczby 12 bez ustawienia tego bitu na 1 (suma wartości pozostałych bitów to 7). To oznacza, że 12 *musi* być zapisane jako 01100.
 
-Innym sposobem na wykazanie jednoznczaności zapisu binarnego jest wyznaczenie liczby wszystkich ciągów 0 lub 1. Dla przypadku 5 bitów mamy 2x2x2x2x2 (tj. 32) różnych ciągów odpowiadających 32 liczbom z zakresu od 0 do 31 (przyporządkowanie jeden-do-jednego).
+Innym sposobem na wykazanie jednoznaczaności zapisu binarnego jest wyznaczenie liczby wszystkich ciągów zero-jednykowych ustalonej długości. Dla przypadku 5 bitów mamy 2x2x2x2x2 (tj. 32) różnych ciągów odpowiadających 32 liczbom z zakresu od 0 do 31, co oznacza, że przyporządkowanie musi być jeden-do-jednego.
 {panel end}
 
 Prawdopodobnie jest już dla Ciebie jasne, że gdy lewy skrajny („najbardziej znaczący”) bit ustawiasz na 1, to wartość dziesiętną powiększasz o 32. Podobnie ustawiając bity położone dalej na prawo dodajesz odpowiednio 16, 8, 4, 2 i 1. Gdy bit ustawiasz na 0, wartość dziesiętna nie zwiększa się. Szukanie zapisu binarnego liczby jest więc związane z przedstawieniem liczby jako sumy niektórych lub wszystkich liczb ze zbioru: 32, 16, 8, 4, 2, 1, przy czym każda z liczb może wystąpić tylko raz.
@@ -244,22 +242,22 @@ Prawdopodobnie jest już dla Ciebie jasne, że gdy lewy skrajny („najbardziej 
 Wybierz liczbę mniejszą niż 61 (np. numer Twojego domu przy ulicy, wiek kolegi czy koleżanki, dzień miesiąca Twojego urodzenia).  Ustaw wszystkie cyfry binarne na 0, a następnie zacznij wybierać właściwe cyfry zaczynając od skrajnej lewej cyfry (32). Za każdym razem zdecyduj, czy wybrać 0 czy 1.
 Czy stosujesz metodę prób i błędów? Na czym polega Twoja metoda zamiany (konwersji) liczb?
 
-Czy potrafisz znaleźć zapis binarny liczby 23 **bez posługiwania** się narzędziem? A liczby 4, 0 i 32? Sprawdź teraz , czy dobrze myślisz, używając narzędzia. 
+Czy potrafisz znaleźć zapis binarny liczby 23 **bez posługiwania** się narzędziem? A liczby 4, 0 i 32? Sprawdź teraz, czy dobrze myślisz, używając narzędzia. 
 
 {panel type="challenge" summary="Counting in binary"}
-Pomyśl, jak w sposób systematyczny liczyć w systemie binarnym, począwszy od 0. Tj. 0, 1, 2, 3 itd. aż do największej liczby możliwej do zapisania z użyciem sześciu bitów. 
-Zacznij od odliczenia od 0 do 16 i spróbuj dostrzec jakąś zasadę. Wskazówka: Wyobraź sobie, że dodajesz 1 do liczby zapisanej dziesiątkowo, np. 7 + 1, 38 + 1, 19 +1, 99 + 1, 230 899 999 + 1 itd. Czy możesz ten sam pomysł zastosować dla liczb dwójkowych?
+Pomyśl, jak w sposób systematyczny liczyć w systemie binarnym, począwszy od 0, tj. 0, 1, 2, 3 itd. aż do największej liczby możliwej do zapisania z użyciem sześciu bitów. 
+Zacznij od odliczenia od 0 do 16 i spróbuj dostrzec jakąś zasadę. Wskazówka: Wyobraź sobie, że dodajesz 1 do liczby zapisanej dziesiętnie, np. 7 + 1, 38 + 1, 19 +1, 99 + 1, 230 899 999 + 1 itd. Czy możesz ten sam pomysł zastosować dla liczb dwójkowych?
 
-Pomyśl o tym, jak zastosować wiedzę o systemie dwójkowym (binarnym) do liczenia na palcach powyżej liczby 10. Jaką największą liczbę można „zapisać” używając dziesięciu palców? Wyobraź sobie, że będziesz używać też palców u nóg. Jaka wówczas będzie odpowiedź?
+Pomyśl, jak zastosować wiedzę o systemie binarnym do liczenia na palcach powyżej liczby 10. Jaką największą liczbę można „zapisać” używając dziesięciu palców? Wyobraź sobie, że będziesz używać też palców u nóg. Jaka wówczas będzie odpowiedź?
 {panel end}
 
 {panel type="spoiler" summary="Zliczanie binarne"}
-Aby liczbę zapisaną binarnie powiększyć o 1 wystarczy w jej zapisie biarnym odnaleźć pierwszy od prawej bit ustawiony na 0, następnie ustawić go na 1, a wszytkie bity po jego prawej stronie ustawić na 0. (W połowie przypadków tym poszukiwanym bitem 0 będzie skrajny lewy bit.)
-Używając pięciu palców można policzyć do 31. W przypadku 10 palców najwięszka liczba to 1023.
-Na YouTube zobaczyć wiele przykładów wideo, na których ktoś liczby na palcach. Podczas prezentacji niektórzy posługują się rękawiczkami, na których odpowiednie palce są opisane liczbami: 16, 8, 4, 2, 1.
+Aby liczbę zapisaną binarnie powiększyć o 1 wystarczy w jej zapisie biarnym odnaleźć pierwszy od prawej bit ustawiony na 0, następnie ustawić go na 1, a wszytkie bity po jego prawej stronie ustawić na 0. (W połowie przypadków tym poszukiwanym bitem 0 będzie skrajny prawy bit.)
+Używając pięciu palców można policzyć do 31. W przypadku 10 palców największa liczba to 1023.
+Na YouTube można zobaczyć wiele przykładów wideo, na których ktoś liczby binarnie na palcach. Podczas prezentacji niektórzy posługują się rękawiczkami, na których odpowiednie palce są opisane liczbami: 16, 8, 4, 2, 1.
 {panel end}
 
-Co stałoby się, gdybyśmy mieli mniej niż sześć bitów? Przykład: Dla pięciu bitów, wartości na kolejnych pozycjach byłyby równe odpowiednio: 16, 8, 4, 2 i 1. Więc największą liczbą byłaby 11111, czyli 31 (dziesiętnie). Liczba 14 zapisana na pięciu bitach to 01110.
+Co stałoby się, gdybyśmy mieli mniej niż sześć bitów? Przykład: Dla pięciu bitów, wartości na kolejnych pozycjach byłyby równe odpowiednio: 16, 8, 4, 2 i 1, więc największą liczbą byłaby 11111, czyli 31 (dziesiętnie). Liczba 14 zapisana na pięciu bitach to 01110.
 
 {panel type="Challenge" summary="Binarny zapis liczb"}
 Zapisz podane liczby z użyciem odpowiedniej liczby bitów (o ile to możliwe).
@@ -270,8 +268,8 @@ Zapisz podane liczby z użyciem odpowiedniej liczby bitów (o ile to możliwe).
 - **28 232** na **16 bitach**
 {panel end}
 
-{panel type="spoiler" summary="Answers for above challenge"}
-Odpowiedzi (dla zwiększenia czytelności cyfry pogrupowano po cztery od prawej)
+{panel type="spoiler" summary="Odpowiedzi"}
+Odpowiedzi (dla zwiększenia czytelności cyfry pogrupowano po cztery od prawej):
 - 101: **110 0101**
 - 28: **00 0001 1100**
 - 7: **111**
@@ -279,23 +277,23 @@ Odpowiedzi (dla zwiększenia czytelności cyfry pogrupowano po cztery od prawej)
 - 28 232: 0110 1110 0100 1000
 {panel end}
 
-Ważnym pojęciem związanym z liczbami binarnymi jest zakres wartości, którą można zapisać przy użyciu danej liczby bitów (cyfr). Pojedynczy bit wydaje się mało użyteczny, ale wystarczy do zapisania informacji np. o stanie pola wyboru tak/nie. Grupa ośmiu bitów jest już bardziej użyteczna – pozwala na zapis wartości od 0 do 255, a więc wystarczy do przechowania informacji o czyimś wieku, dniu miesiąca itd.
+Ważnym pojęciem związanym z liczbami binarnymi jest zakres wartości, które można zapisać przy użyciu danej liczby bitów (cyfr). Pojedynczy bit wydaje się mało użyteczny, ale wystarczy do zapisania informacji np. o tym, co ktoś zaznaczył w formularzu internetowym dla pola wyboru tak/nie. Grupa ośmiu bitów jest już bardziej użyteczna – pozwala na zapis wartości od 0 do 255, a więc wystarczy do przechowania informacji o czyimś wieku, dniu miesiąca itd.
 
 {panel type="jargon-buster" summary="Co to jest bajt?"}
-Grupa ośmiu bitów (oktet) jest tak użyteczna, że ma swoją nazwę: **bajt** (ang. byte). Pamięć elektroniczna i przestrzeń dyskowa jest zwykle podzielona na bajty. Większe liczby są zapisywane z użyciem większej liczby bajtów. Przykład: Dwa bajty (16 bitów) pozwalają na przechowywanie liczb z zakresu od 0 do 65 535. Cztery bajty (32 bity) umożliwiają na zapis liczb aż do 4 294 967 295. Możesz sprawdzić, czy te liczby są poprawne, badając mnożniki odpowiadające bitom. Każdy kolejny bit oznacza podwojenie zakresu liczb.
+Grupa ośmiu bitów jest tak użyteczna, że ma swoją nazwę: **bajt** (ang. byte). Pamięć elektroniczna i przestrzeń dyskowa jest zwykle podzielona na bajty. Większe liczby są zapisywane z użyciem większej liczby bajtów. Przykład: Dwa bajty (16 bitów) pozwalają na przechowywanie liczb z zakresu od 0 do 65 535. Cztery bajty (32 bity) umożliwiają zapis liczb aż do 4 294 967 295. Możesz sprawdzić, czy te liczby są poprawne, badając mnożniki odpowiadające bitom. Każdy kolejny bit oznacza podwojenie zakresu liczb.
 {panel end}
 
-W praktyce, architektura dzisiejszych komputerów wymusza zapis liczb z użyciem 16, 32 lub 64 bitów. To wielokrotności bajtów (oktetów bitów).
+Architektura dzisiejszych komputerów wymusza zapis liczb z użyciem 16, 32 lub 64 bitów. To wielokrotności bajtów (bajt to osiem bitów).
 
-{panel type="curiosity" summary="Binary cakes -- preventing fires"}
+{panel type="curiosity" summary="Binarny tort, czyli jak uchronić się od pożaru"}
 Świeczki na torcie urodzinowym to przykład zastosowania systemu jedynkowego (unarnego).  Kolejne liczby tworzy się przez powtarzanie  znaku 1 tyle razy, ile wynika to z wartości danej liczby (można więc powiedzieć, że mnożnik dla każdej pozycji jest równy 1). Przykład: 3 to 111, a 10 to 1111111111. 
 Wraz z wiekiem pojawi się problem – stulatek powinien uważać, aby nie wywołać pożaru, gdy będzie zdmuchiwać zapalone świeczki. 
 
 {image filename="binary-cakes.png" alt="Tort ze 100 świeczkami kula ognia!"}
 
-Na szczęście dla świeczek na torcie urodzinowym zamiast systemu jedynkowego, można użyć dwójkowego: świeczka świeci się lub nie. Przykład: Na przyjęcie z okazji osiemnastych urodzin wystarczy pięć świeczek (i tylko dwie będą się świecić!), gdyż zapis binarny tej liczby to 10010.
+Na szczęście na torcie urodzinowym zamiast systemu jedynkowego można użyć dwójkowego: świeczka świeci się lub nie. Przykład: Na przyjęcie z okazji osiemnastych urodzin wystarczy pięć świeczek (i tylko dwie będą się świecić!), gdyż zapis binarny tej liczby to 10010.
 
-Tutaj możesz zobaczyć [wideo, na którym ktoś liczby na palcach do 1023, a ktoś innym otrzymuje „binarny” tort urodzinowy. ](https://www.youtube.com/watch?v=GUqle9RE3Y8)
+Tutaj możesz zobaczyć [wideo, na którym ktoś liczy na palcach do 1023, a ktoś innym otrzymuje „binarny” tort urodzinowy. ](https://www.youtube.com/watch?v=GUqle9RE3Y8)
 
 {image filename="binary-cake.png" alt="Im ktoś jest starszy, tym chętniej powinien używać zapisu binarnego dla świeczek na torcie urodzinowym. Liczba potrzebnych świeczek nie będzie wcale duża." caption="Im ktoś jest starszy, tym chętniej powinien używać zapisu binarnego dla świeczek na torcie urodzinowym. Liczba potrzebnych świeczek nie będzie wcale duża."}
 {panel end}
