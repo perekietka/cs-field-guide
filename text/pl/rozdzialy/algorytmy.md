@@ -1,24 +1,22 @@
 # Algorytmy
 
-{comment explain different views of algorithm (programming context) and Algorithm (that have interesting complexity); use https://www.youtube.com/watch?v=6hfOvs8pY1k for the former?}
-
 {video url="https://www.youtube.com/embed/FOwCCvHEfY0"}
 
-## Z perspektywy
+## Z lotu ptaka
 
 Działanie każdego z urządzeń komputerowych, jakie znasz, nawet prosty kalkulator szkolny, bazuje na algorytmach. To pojęcie jest bardzo ważnym pojęciem w informatyce. Trudno wyobrazić sobie tworzenie sprawnego, efektywnego i bezbłędnie działającego oprogramowania bez korzystania z algorytmów. Już na początku trzeba podkreślić, że może być wiele algorytmów rozwiązujących dany problem, ale niektóre są o wiele lepsze od pozostałych!
 
 {interactive name="sorting-algorithm-comparison" type="in-page"}
 
 Komputery z niesamowitą szybkością przetwarzają informacje. Okazuje się, że ich moc może okazać się jednak niewystarczająca, jeśli chcielibyśmy ogromne zbiory danych przetwarzać (choćby przeszukiwać) w sposób mało przemyślany. Czas reakcji komputera na zadanie czy pytanie użytkownika nie może być zbyt długi. To byłoby frustrujące, niezależnie od tego, jak atrakcyjna jest szata graficzna programu. Z pewnością firmy takie jak Google, Facebook czy Twitter nie mogłyby sobie na to pozwolić! 
-Tutaj jest miejsce na pomysłowe efektywne algorytmy, które w rozsądnym czasie poradzą sobie w przetwarzaniem nawet ogromnych zbiorów danych.
+Dlatego od informatyków oczekuje się pomysłów na efektywne algorytmy, które w rozsądnym czasie poradzą sobie w przetwarzaniem nawet ogromnych zbiorów danych.
 
 ### Algorytmy, programy komputerowe i inne sposoby zapisu algorytmów
 
 Być może ktoś myśli, że algorytmy i programy komputerowe to jedno i to samo. Takie twierdzenie jest nieuprawnione. 
 Istnieją różne sposoby opisu instrukcji do wykonania, o bardzo różnych poziomach szczegółowości:
 
-Człowiek zrozumie instrukcję wypowiedzianą w języku naturalnym, np. ,,Proszę podać mi szklankę wody''. Komputery prawdopodobnie nie!
+Człowiek zrozumie instrukcję wypowiedzianą w języku naturalnym, np. „Proszę podać mi szklankę wody”. Komputery prawdopodobnie nie!
 
 {interactive name="high-score-boxes" type="whole-page" text="High Score Boxes"}
 
