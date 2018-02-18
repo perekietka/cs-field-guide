@@ -350,3 +350,4 @@ Trzeba podkreślić, że komputerowe realizacje algorytmów korzystają z rejest
 - [Przeszukiwanie liniowe](https://en.wikipedia.org/wiki/Linear_search), [Przeszukiwanie binarne](https://en.wikipedia.org/wiki/Binary_search), [Sortowanie przez wybór](https://en.wikipedia.org/wiki/Selection_sort), [Sortowanie przez wstawianie](https://en.wikipedia.org/wiki/Insertion_sort) i  [Quicksort](https://en.wikipedia.org/wiki/Quicksort) w artykułach Wikipedii.
 - [Sortowanie cegieł (gra)](http://mathsite.math.berkeley.edu/sorting/brick.html) do nauki algorytmów sortowania (wymaga obługi Javy przez przeglądarkę).
 - [Wizualizacja algorytmów sortowania](http://www.sorting-algorithms.com/) przedstawiająca różne algorytmy sortowania, zapisane w pseudokodzie.
+- [Notacja asymptotyczna](http://pl.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/asymptotic-notation)
