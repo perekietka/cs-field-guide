@@ -1087,14 +1087,14 @@ Oto kilka pomysłów, które można wykorzystać do zbadania wyrażeń regularny
 {glossary-definition term="Dopasowywanie do wzorców" definition="W językach formalnych znajdowanie tekstu pasującego do konkretnej reguły, zwykle przy użyciu wyrażenia regularnego."}
 {glossary-link term="dopasowywanie do wzorców" reference-text="Języki formalne"}dopasowywania do wzorców{glossary-link end} i napisz wyrażenia regularne do wyszukiwania słów takich jak:
 
-- Słowa zawierające „aa”.
-- Wszystkie słowa z 3 literami.
-- Wszystkie słowa z 8 literami.
-- Wszystkie wyrazy zawierające więcej niż 8 liter.
-- Słowa zawierające litery twojego imienia.
-- Słowa, które składają się z liter które występują w twoim imieniu.
-- Słowa zawierające wszystkie samogłoski w odwrotnej kolejności.
-- Słowa, które można stworzyć za pomocą tylko nut na pianinie (tj. liter od A do G i od a do g).
+  - Słowa zawierające „aa”.
+  - Wszystkie słowa z 3 literami.
+  - Wszystkie słowa z 8 literami.
+  - Wszystkie wyrazy zawierające więcej niż 8 liter.
+  - Słowa zawierające litery twojego imienia.
+  - Słowa, które składają się z liter które występują w twoim imieniu.
+  - Słowa zawierające wszystkie samogłoski w odwrotnej kolejności.
+  - Słowa, które można stworzyć za pomocą tylko nut na pianinie (tj. liter od A do G i od a do g).
 
 - Komenda *Znajdź* w Microsoft Word używa wyrażeń regularnych po wybraniu opcji „Użyj symboli wieloznacznych”. Aby uzyskać więcej informacji, przeczytaj artykuł (po angielsku) [Grahama Mayora](http://word.mvps.org/AboutMVPs/graham_mayor.htm) [„Znajdowanie i zastępowanie znaków za pomocą symboli wieloznacznych”](http://word.mvps.org/FAQs/General/UsingWildcards.htm).
 
