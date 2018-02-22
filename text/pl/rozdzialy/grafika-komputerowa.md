@@ -97,7 +97,9 @@ Co się stanie, gdy zamienimy miejscami wartości *x* i *y* wspólrzędnych punk
 {comment}{include interactive computer-graphics-arrow parameters="&quiz=0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 1 &hidetarget=true &zoom=-5.0"}{comment end}
 {button link="http://csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-points.html?info=Next,%20see%20what%20happens%20if%20you%20swap%20the%20%3Cem%3Ex%3C/em%3E%20and%20%3Cem%3Ey%3C/em%3E%20value%20for%20each%20coordinate.&quiz=0%201%200%200%201%200%200%200%200%200%201%200%200%200%200%201%20&hidetarget=true%20&zoom=-5.0" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
-Efektem jest prosty *obrót* wokół punktu (0,0) o 90 stopni (zgodnie z ruchem wskazówek zegara). Takie przekształcenie może służyć również do określenia takich parametrów jak kąt widzenia kamery (obserwatora).
+Efektem jest prosty *obrót* wokół punktu (0,0) o 90 stopni w prawo (zgodnie z ruchem wskazówek zegara). 
+\[Taki obrót to właściwie odbicie obiektu w symetrii względem prostej y = x. (Przypis tłumacza.)\]
+Takie przekształcenie może służyć również do określenia takich parametrów jak kąt widzenia kamery (obserwatora).
 
 Oczywiście ręczna zmiana wartości współrzędnych punktów, jednego po drugim, jest nieefektywna. Na szczęście jest na to sposób. 
 O tym przeczytasz poniżej!
@@ -134,7 +136,7 @@ Aby lepiej to zrozumieć, otwórz interaktywne narzędzie, które jest poniżej:
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix.html?info=You%20can%20type%20the%20scaling%20matrix%20into%20this%20interactive%20to%20see%20what%20it%20does%20(replace%20the%20ones%20with%20twos).%20The%20top%20left-hand%20value%20just%20means%20multiply%20all%20the%20%3Cem%3Ex%3C/em%3E%20values%20by%202,%20and%20the%20bottom%20right%20one%20means%20multiply%20all%20the%20%3Cem%3Ey%3C/em%3E%20values%20by%202.%20For%20the%20meantime,%20leave%20the%20translate%20values%20as%200.&quiz=2%200%200%200%200%202%200%200%200%200%202%200%200%200%200%201" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
-(Na tym etapie czytania przewodnika warto pracować z dwoma okanmi przeglądarki: w jednym czytasz tekst, a w drugim pracujesz z narzędziem.)
+(Na tym etapie czytania przewodnika warto pracować z dwoma oknami przeglądarki: w jednym czytasz tekst, a w drugim pracujesz z narzędziem.)
 
 Zmień liczby w macierzy na takie:
 
@@ -149,21 +151,21 @@ lub
 
 {math-block}
 \begin{bmatrix}
-0.2 & 0 \\  
-0 & 0.2 \\  
+0{,}2 & 0 \\  
+0 & 0{,}2 \\  
 \end{bmatrix}
 {math-block end}
 
 {panel type="teacher-note" summary="Wyjaśnienie"}
 
-Efektem powinno być odpowiednio: strzałka powiększona trzy razy (w każdym z wymiarów) i strzałka pomniejszona do 1/5 wielkości (w każdym wymiarze).
+Efekty powinny być odpowiednio takie: strzałka powiększona trzy razy (w każdym z wymiarów) i strzałka pomniejszona do 1/5 wielkości (w każdym wymiarze).
 {panel end}
 
-Wartości wpisane do pola opisanego jako "add translate" są dodawane do współrzędnych *x* i *y*;sprawdź, jak to dziala. Następnie postaraj się znaleźć takie wartości w tym polu (i w polu macierzy), aby w efekcie nałożyć strzałkę na strzałkę czerwoną.
+Wartości wpisane do pola opisanego jako "add translate" są dodawane do współrzędnych *x* i *y*; sprawdź, jak to działa. Następnie postaraj się znaleźć takie wartości w tym polu (i w polu macierzy), aby w efekcie nałożyć strzałkę na strzałkę czerwoną.
 
 {panel type="teacher-note" summary="Wyjaśnienie"}
 
-Macierze powinna mieć postać {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end} a współrzędne x i y odpowiednio 5 i 4 (rozmiar strzałki dwa razy powiększony i przesuniecie 5 w prawo i 4 w gorę).
+Macierz powinna mieć postać {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end}, a współrzędne x i y odpowiednio 5 i 4 (rozmiar strzałki dwa razy powiększony i przesunięcie 5 w prawo i 4 w górę).
 {panel end}
 
 Co stanie się, gdy użyjesz takiej macierzy, jak poniżej?
@@ -177,7 +179,7 @@ Co stanie się, gdy użyjesz takiej macierzy, jak poniżej?
 
 {panel type="teacher-note" summary="Wyjaśnienie"}
 
-Wartość x jest dwa razy większa, ale wartość y jest powiększona cztery razy, więc to w efekcie strzałka jest powiększona w pionie dwa razy bardziej niż w poziomie.
+Wartość *x* jest dwa razy większa, ale wartość *y* jest powiększona cztery razy, więc w efekcie strzałka jest powiększona w pionie dwa razy bardziej niż w poziomie.
 {panel end}
 
 Teraz sprawdź efekt dla macierzy:
@@ -189,9 +191,9 @@ Teraz sprawdź efekt dla macierzy:
 \end{bmatrix}
 {math-block end}
 
-Efektem powinien być obrot strzałki w prawo.
+Efektem powinien być obrót strzałki w prawo.
 
-Góry wiersz macierzy ma wpływ na zmianę wartości współrzędnych *x* w taki sposób, że określa udział (wkład) początkowych wartości *x* i *y* w wartości *x* po przekształceniu. W przykładzie:
+Górny wiersz macierzy ma wpływ na zmianę współrzędnych *x* w taki sposób, że określa udział początkowych wartości *x* i *y* w wartości *x* po przekształceniu. W przykładzie:
 
 {math-block}
 \begin{bmatrix}
@@ -200,22 +202,23 @@ Góry wiersz macierzy ma wpływ na zmianę wartości współrzędnych *x* w taki
 \end{bmatrix}
 {math-block end}
 
-góry wiersz macierzy zawiera następującą informację: w skład wartości *x* podwojona wartość początkowej wartości *x*, i nic więcej, bo wpływ *y* jest opisany w macierzy liczbą 0. Krótko mówiąc: wartość *x* zostaje podwojona. Drugi wiersz macierzy ma wpływ na wartość *y*: na nową wartość *y* nie ma wpływu wartość początkowa *x* (bo w macierzy jest 0), a tylko początkowa wartość *y*, którą należy pomnożyć przez 4.
+Górny wiersz macierzy zawiera następującą informację: w skład wartości *x* wchodzi podwojona wartość początkowej wartości *x*, i nic więcej, bo wpływ *y* jest opisany w macierzy liczbą 0. Krótko mówiąc: wartość *x* zostaje podwojona. Drugi wiersz macierzy ma wpływ na wartość *y*: na nową wartość *y* nie ma wpływu wartość początkowa *x* (bo w macierzy jest 0), a tylko początkowa wartość *y*, którą należy pomnożyć przez 4.
 
-W tym momencie jasny powinien być sens macierzy {math}\begin{bmatrix}  0 & 1 \\   1 & 0 \\   \end{bmatrix}{math end}. Nowa wartość *x* jest równa początkowej wartości *y* i vice versa. Przekształcenie opsiane przez macierz, w którym nastąpiła zamiana wartości przypisywanych współrzednym *x* i *y* jest tym samym, co obrót w prawo.  
+W tym momencie jasny powinien być sens macierzy {math}\begin{bmatrix}  0 & 1 \\   1 & 0 \\   \end{bmatrix}{math end}. Nowa wartość *x* jest równa początkowej wartości *y* i vice versa. Przekształcenie opsiane przez macierz, w którym nastąpiła zamiana wartości przypisywanych współrzednym *x* i *y* jest tym samym, co obrót w prawo wokół punktu (0,0).  
+\[Taki obrót to właściwie odbicie obiektu w symetrii względem prostej y = x. (Przypis tłumacza.)\]
 
-Interesuje może być przeanalizowanie sytuacji, w której przekształcenie opisane jest np. taką macierzą:
+Interesująca jest sytuacja, w której przekształcenie opisane jest np. taką macierzą:
 
 {math-block}
 \begin{bmatrix}
-0.7 & 0.7 \\  
--0.7 & 0.7 \\  
+0{,}7 & 0{,}7 \\  
+-0{,}7 & 0{,}7 \\  
 \end{bmatrix}
 {math-block end}
 
-This is called a *rotation*. Teraz wartość *x* jest efektem jakby zmieszania 0,7 początkowych wartości *x* i *y*. 
+Efektem będzie pewien obrót. Teraz wartość *x* jest efektem jakby zmieszania 0,7 początkowych wartości *x* i *y*. 
 
-W ogólnym przypadku do zapisu macierzy obrotu obiektu o konkretny kąt należy użyć funkcji trygonomtrycznych sinus (skrót: sin) i cosinus (skrót: cos):
+W ogólnym przypadku do zapisu macierzy obrotu obiektu o kąt {math-block}\theta{math-block end} w lewo (przecwinie do ruchu wskazówek zegara), należy użyć funkcji trygonometrycznych sinus (skrót: sin) i cosinus (skrót: cos):
 
 {math-block}
 \begin{bmatrix}
@@ -226,23 +229,23 @@ W ogólnym przypadku do zapisu macierzy obrotu obiektu o konkretny kąt należy 
 
 {panel type="teacher-note" summary="Wyjaśnienie"}
 
-Jeśli uczący się nie mają wiedzy o funkcjach trygnometrycznych, można poprzestać na przedstawieniu koncepcji: kąt mierzymy w stopniach, a wartości funkcji sinus i cosinus przyjmują wartości między 0 i 1.
+Jeśli uczniowieę nie mają wiedzy o funkcjach trygnometrycznych, można poprzestać na przedstawieniu koncepcji: kąt mierzymy w stopniach, a wartości funkcji sinus i cosinus przyjmują wartości między -1 i 1.
 
 {panel end}
 
-{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix.html?info=You%20can%20type%20calculations%20directly%20into%20the%20interactive%20-%20if%20you%20type%20cos(60)%20it%20will%20work%20out%20the%20cosine%20of%2060%20degrees%20for%20you,%20which%20happens%20to%20be%20exactly%200.5.%20Or%20you%20can%20just%20type%20in%20the%20sin%20and%20cosine%20values;%20the%200.7%20numbers%20in%20the%20rotation%20matrix%20are%20just%20the%20values%20for%20sin(45)%20and%20so%20on%20(or%20at%20least,%20they%20approximately%20the%20value;%20it%27s%20actually%200.70710678...,%20which%20happens%20to%20be%20the%20square%20root%20of%200.5,%20but%200.7%20is%20close%20enough%20for%20our%20example).&quiz=0.7%200.7%200%205%20-0.7%200.7%200%204%200%200%201%200%200%200%200%201" text="Click for interactive: matrix rotation"}
+{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix.html?info=You%20can%20type%20calculations%20directly%20into%20the%20interactive%20-%20if%20you%20type%20cos(60)%20it%20will%20work%20out%20the%20cosine%20of%2060%20degrees%20for%20you,%20which%20happens%20to%20be%20exactly%200.5.%20Or%20you%20can%20just%20type%20in%20the%20sin%20and%20cosine%20values;%20the%200.7%20numbers%20in%20the%20rotation%20matrix%20are%20just%20the%20values%20for%20sin(45)%20and%20so%20on%20(or%20at%20least,%20they%20approximately%20the%20value;%20it%27s%20actually%200.70710678...,%20which%20happens%20to%20be%20the%20square%20root%20of%200.5,%20but%200.7%20is%20close%20enough%20for%20our%20example).&quiz=0.7%200.7%200%205%20-0.7%200.7%200%204%200%200%201%200%200%200%200%201" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
 Jaką postać ma macierz obrotu o 360 stopni?
 
 {panel type="teacher-note" summary="Wyjaśnienie"}
-Dla kąta 360 stopni {math}\Theta{math end} otrzymamy macierz {math}\begin{bmatrix}  0 & 1 \\   1 & 0 \\   \end{bmatrix}{math end},
+Dla kąta 360 stopni otrzymamy macierz {math}\begin{bmatrix}  1 & 0 \\   0 & 1 \\   \end{bmatrix}{math end},
 ponieważ
 {math}\cos(360)=1{math end} i
-{math}\sin(360)=1{math end}.
-Taką macierz nazywa się czasami rożsamościową (identycznościową), gdyż przekształcenie nią opisane nie zmienia niczego w położeniu obiektu. Taka macież opisuje każdy z obrotów o kąt wielokrotności 360 stopni (również 0 stopni).
+{math}\sin(360)=0{math end}.
+Taką macierz nazywa się tożsamościową (identycznościową), gdyż przekształcenie nią opisane nie zmienia niczego w położeniu obiektu. Taka macierz opisuje każdy z obrotów o kąt wielokrotności 360 stopni (również 0 stopni).
 {panel end}
 
-Macierz dla *skalowania* w ogólnej postaci jest trochę prostsza niż dla obrotu; jeśli chcesz, aby współczynnik zmiany rozmiaru obiketu był opisany liczbą *s*, to macierz ma postać: 
+Macierz dla *skalowania* w ogólnej postaci jest trochę prostsza niż dla obrotu; jeśli chcesz, aby współczynnik zmiany rozmiaru obiektu był opisany liczbą *s*, to macierz ma postać: 
 
 {math-block}
 \begin{bmatrix}
@@ -251,7 +254,7 @@ s & 0 \\
 \end{bmatrix}
 {math-block end}
 
-Przeksztacłcenia, jakim jest przesunięcie (translacja) nie można opisać macierzą tego typu. Dlatego narzędzie interaktywne zawiera dodatkowe pole do określenia wartości *x* i *y* przesunięcia obiektu.
+Przekształcenia, jakim jest przesunięcie (translacja) nie można opisać macierzą tego typu. Dlatego narzędzie interaktywne zawiera dodatkowe pole do określenia wartości *x* i *y* przesunięcia obiektu.
 Sprawdź działanie innego narzędzia:
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix.html?info=Try%20translating%20the%20original%20arrow%20so%20that%20it%20matches%20up%20with%20the%20red%20arrow.&quiz=1%200%200%205%200%201%200%204%200%200%201%200%200%200%200%201" text="Click for interactive: translation challenge"}
