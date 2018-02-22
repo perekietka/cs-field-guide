@@ -578,7 +578,7 @@ End of WebGL project
 
 Podstawową operacją w grafice komputerowej jest rysowanie odcinków i okręgów.
 Na przykład kształt czcionki na ekranie jest opisany m.in. przez odcinki i łuki okręgów.
-Litera ,,g'' jest zbiorem odcinków i fragmentów krzywych. Gdy wyświetlamy ją w powiększeniu na ekranie, to kształt litery jest rysowany od nowa. Możemy ją powiększać bez obawy o utratę jakości, gdyż obraz litery nie jest skończonym zbiorem pikseli, bo nie ma stałej rozdzielczości rozdzielczości, a jest tzw. grafiką wektorową.
+Litera *g* jest zbiorem odcinków i fragmentów krzywych. Gdy wyświetlamy ją w powiększeniu na ekranie, wtedy kształt litery jest rysowany od nowa. Możemy ją powiększać bez obawy o utratę jakości, gdyż obraz litery nie jest skończonym zbiorem pikseli, nie ma stałej rozdzielczości rozdzielczości, a jest tzw. grafiką wektorową.
 
 {comment}
 
@@ -595,17 +595,17 @@ W przypadku grafiki 3D kształty obiektow są często zbiorem ocinkow i krzywych
 Public domain image: https://en.wikipedia.org/wiki/Triangle_mesh#/media/File:Dolphin_triangle_mesh.png
 {comment end}
 
-Odcinki i okręgu, które są składowymi obiektów, są zwykle w pamięci komputera zapisane jako liczby (np. odcinek łączący dwa punkty, okrąg o danym środku i promieniu). Program graficzny musi umieć określić piksele, które będą reprezentować odcinki i okręgi na ekraniu monitora. Czasem program powinien umieć określić położenie odcinka bez rysowania go.
+Odcinki i okręgi, które są składowymi obiektów, są zwykle w pamięci komputera zapisane jako liczby (np. dla odcinka zapisuje się punkty będące jego końcami, dla okręgu -- jego środek i promień). Program graficzny musi na tej podstawie określić piksele, które będą reprezentować odcinki i okręgi na ekraniu monitora. Czasem program musi określić położenie odcinka bez rysowania go.
 
 Poniżej widzisz powiększoną siatkę pikseli binarnego obrazu, na której znajduje się 5 odcinków.
-Wiersze i kolumny są ponumerowane. Więc można powiedzieć, że odcinek pionowy ma początek w punkcie (2,9|) i koniec w punkcie (2,16).
+Wiersze i kolumny są ponumerowane. Odcinek pionowy ma początek w punkcie (2,9) i koniec w punkcie (2,16).
 Oczywiście taka grafika przedstawia tylko mały fragment ekranu. Monitory komputerowe wyświetlają zwykle ponad 1000 pikseli, zarówno w poziomie, jak i w pionie. Również na ekranach smarfonów odcinki składają się z setek pikseli.
 
-{image filename="grid-20x20-example.png" alt="An example of 5 lines drawn on a grid of pixels"}
+{image filename="grid-20x20-example.png" alt="Przykład z 5 odcinkami na siatce pikseli."}
 
-Na papierze, używając linijki i cyrkla można łatwo rysować figury geometryczne. Wyświetlenie takiej figury na ekranie komputera wymaga wykonania obliczeń dla wyznaczenia współrzędnych każdego z pikseli tworzących obraz figury. Wybór kiepskiej metody do wykonania takich obliczeń wpływnie na czas potrzebny na wyświetlenie zbioru pikseli i będzie miał fatalne skutki np. w przypadku animacji.
+Na papierze, używając linijki i cyrkla, można łatwo rysować figury geometryczne. Wyświetlenie takiej figury na ekranie komputera wymaga wykonania obliczeń dla wyznaczenia współrzędnych każdego z pikseli tworzących obraz figury. Wybór kiepskiej metody do wykonania takich obliczeń wpłynie na czas potrzebny na wyświetlenie zbioru pikseli i będzie miał fatalne skutki np. w przypadku animacji.
 
-W tym podrozdziale przyjrzymy się bardzo prostym, ale sprytnym algorytmom, które pozwalają komputerowu szybkie wykonanie niezbędnych obliczeń.
+W tym podrozdziale przyjrzymy się bardzo prostym, ale sprytnym algorytmom, które pozwalają komputerowi szybko wykonać niezbędne obliczenia.
 
 ### Rysowanie odcinków
 
@@ -639,46 +639,43 @@ Te odcinki było łatwo narysować, gdyż tworzące je piksele są równoległe 
 
 {panel end}
 
-Rysowanie linii równoległych do krawędzi ekranu lub leżących na głównej przekątnej ekranu łatwo narysować; do narysowania odcinków, które tworzą z krawędzią ekranu inne kąty jest trudniej, gdyż trzeba wykonać odpowiednie obliczenia.
+Rysowanie linii równoległych do krawędzi ekranu lub leżących na głównej przekątnej ekranu jest łatwe; z narysowaniem odcinków, które tworzą z krawędzią ekranu inne kąty jest trudniej, gdyż trzeba wykonać odpowiednie obliczenia.
 
-Potrafisz, bez użycia linijki, wybrać i zamalować odpowiednie plikselie tak, aby tworzyły odcinek z A do B? Spróbuj.
+Potrafisz, bez użycia linijki, wybrać i zamalować odpowiednie pliksele tak, aby tworzyły odcinek z A do B? Spróbuj.
 
 {image filename="grid-20x20-diagonal-question.png" alt="Grid for drawing line from A to B"}
 
-Sprawdź efekt, przykłądając linijkę do rysunku. Umieść ją tak, aby krawędź linijki przechodziła przez środki małych kwadratów A i B. Czy linijka przechodzi przez wszystkie zamalowane piksele.
+Sprawdź efekt, przykładając linijkę do rysunku. Umieść ją tak, aby krawędź linijki przechodziła przez środki małych kwadratów A i B. Czy linijka przechodzi przez wszystkie zamalowane piksele?
 
 ### Rysowanie odcinka z użyciem równania prostej
 
-{glossary-definition term="Slope" definition="This is a way of expressing the angle or gradient of a line. The slope is simply how far up the line goes for every unit we move to the right. For example, if we have a line with a slope of 2, then after moving 3 units to the right, it will have gone up 6 units. A line with a slope of 0 is horizontal.
-Normally the slope of a line is represented using the symbol {math}m{math end}."}
 Prostą w układzie współrzędnych XY można opisać równaniem {math}y = mx + c{math end}.
-Używając tego równania możemy wyznaczyć wartość współrzędnej *y* dla wartości współrzednej *x*.
+Używając tego równania, możemy wyznaczyć wartość współrzędnej *y* dla wartości współrzednej *x*.
 Wcześniej trzeba określić wartość współczynnika opisującego
-{glossary-link term="slope" reference-text="computer graphics"}nachylenie prostej{glossary-link end} of the line,
-którym jest {math}m{math end},
+{glossary-link term="slope" reference-text="computer graphics"}nachylenie prostej{glossary-link end}, którym jest {math}m{math end},
 oraz punkt, w którym prosta przecina oś Y, czyli (0, *y*). Współrzędna *y* tego punktu w równaniu jest oznaczona jako {math}c{math end}.
 Innymi słowy, rysując linię prostą wybieramy piksele o współrzędnych ({math}x{math end}, {math}mx + c{math end}) dla kolejnych wartości *x*.
 
 Na przykład, wybierając {math}m=2{math end} and {math}c=3{math end} otrzymujemy prostą przechodzącą przez punkty (0,3), (1,5), (2,7), (3,9) itd.
-Przesunięciu o 1 jednostkę w poziomie odpowiada przesunięcie o dwie jednostki w pionie ({math}m=2{math end}). Pierwszy piksel jest położony 3 jednostki powyżej brzegu siatki ({math}c=3{math end}).
+Zauważ, że dla kolejnych punktów współrzędne *x*  rosną o 1, a współrzędne *y* -- o 2 (bo {math}m=2{math end}). Pierwszy piksel jest położony 3 jednostki powyżej brzegu siatki (bo {math}c=3{math end}).
 
-Poćwicz na innych przykładach dla różnych wartości  {math}m{math end} i {math}c{math end} (na przykład, zacznij od {math}c=0{math end}, i sprawdź trzy przypadki m: {math}m=1{math end}, {math}m=0.5{math end} i {math}m=0{math end}).
+Poćwicz na innych przykładach, dla różnych wartości  {math}m{math end} i {math}c{math end} (na przykład zacznij od {math}c=0{math end} i sprawdź trzy przypadki *m*: {math}m=1{math end}, {math}m=0{,}5{math end} i {math}m=0{math end}).
 Jakie są kąty nachylenia prostych?
 
 {panel type="teacher-note" summary="Rozwiązanie"}
-Wartość m = 0 odpowiada prostej równoległej do dolnej krawędzi, wartość {math}m=1{math end} to przypadek prostej o kącie nachylenia 45 stopni (przesunięciu o 1 piksel w poziomie odpowiada przesunięcie o jeden piksel w pionie).
-Wartość ({math}m=0.5{math end}) opisuje prostą o kącie nachylenia mniejszym niż 27 stopni.
-Narzędzie [interaktywne](http://www.mathopenref.com/coordslope.html) może być pomocne w zrozumieniu związku wartości m z kątem pochylenia.)
+Wartość {math}m=0{math end} odpowiada prostej równoległej do dolnej krawędzi, wartość {math}m=1{math end} to przypadek prostej o kącie nachylenia 45 stopni (przesunięciu o 1 piksel w poziomie odpowiada przesunięcie o jeden piksel w pionie).
+Wartość {math}m=0.5{math end} opisuje prostą o kącie nachylenia mniejszym niż 27 stopni.
+[Narzędzie interaktywne](http://www.mathopenref.com/coordslope.html) może być pomocne w zrozumieniu związku wartości *m* z kątem nachylenia.)
 {panel end}
 
-Równanie {math}mx + c{math end} może być użyte w celu określenia pikseli, które należy wybrać dla cyfrowej reprezentacji odcinka łączącego punkty {math}(x_1, y_1){math end} i {math}(x_2, y_2){math end}.
+Równanie {math}mx + c{math end} może być użyte do wybrania pikseli dla cyfrowej reprezentacji odcinka łączącego punkty {math}(x_1, y_1){math end} i {math}(x_2, y_2){math end}.
 Jakie wartości mają współrzędne {math}(x_1, y_1){math end} i {math}(x_2, y_2){math end} w przykładzie poniżej?
 
 {panel type="teacher-note" summary="Rozwiązanie"}
-Końce odcinka to punkty: A = (3,4) i B = (16,9). To znaczy, że {math}x_1 = 3, y_1 = 4, x_2=16{math end} i {math}y_2 = 9{math end}.
+Końce odcinka to punkty: {math}A = (3,4){math end} i {math}B = (16,9){math end}. To znaczy, że {math}x_1 = 3, y_1 = 4, x_2=16{math end} i {math}y_2 = 9{math end}.
 {panel end}
 
-Potrafisz wyznaczyć wartości {math}m{math end} i {math}b{math end} dla równania prostej przechodzącej przez punkty A  B? Możesz użyć następujących wzorów:
+Potrafisz wyznaczyć wartości {math}m{math end} i {math}b{math end} dla równania prostej przechodzącej przez punkty *A* i *B*? Możesz użyć następujących wzorów:
 
 {math-block}
 
@@ -719,7 +716,7 @@ W kolejnym ćwiczeniu warto użyć arkusza kalkulacyjnego do określenia wartoś
 
 {panel end}
 
-Teraz do narysowania odcinka między punktami A i B (z poprzedniego ćwiczenia) wykonaj obliczenia, używając równania {math}y = mx + c{math end}. Wyznacz odpowiednie wartości {math}y{math end} dla kolejnych wartości {math}x{math end} z zakresu od {math}x_1{math end} do {math}x_2{math end}. Dla wskazania odpowiednich pikseli wartości *y* trzeba będzie zaokrąglić do najbliższej liczby całkowitej.
+Teraz w celu narysowania odcinka między punktami A i B (z poprzedniego ćwiczenia) wykonaj obliczenia, używając równania {math}y = mx + c{math end}. Wyznacz odpowiednie wartości {math}y{math end} dla kolejnych wartości {math}x{math end} z zakresu od {math}x_1{math end} do {math}x_2{math end}. Dla wskazania odpowiednich pikseli wartości *y* trzeba będzie zaokrąglić do najbliższej liczby całkowitej.
 Wartości {math}y{math end} powinny być liczbami pomiędzy:  {math}y_1{math end} i {math}y_2{math end}.
 
 {image filename="grid-20x20-diagonal-question.png" alt="Grid for drawing line from A to B"}
