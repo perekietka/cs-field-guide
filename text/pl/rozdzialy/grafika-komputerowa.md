@@ -257,52 +257,52 @@ s & 0 \\
 Przekształcenia, jakim jest przesunięcie (translacja) nie można opisać macierzą tego typu. Dlatego narzędzie interaktywne zawiera dodatkowe pole do określenia wartości *x* i *y* przesunięcia obiektu.
 Sprawdź działanie innego narzędzia:
 
-{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix.html?info=Try%20translating%20the%20original%20arrow%20so%20that%20it%20matches%20up%20with%20the%20red%20arrow.&quiz=1%200%200%205%200%201%200%204%200%200%201%200%200%200%200%201" text="Click for interactive: translation challenge"}
+{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix.html?info=Try%20translating%20the%20original%20arrow%20so%20that%20it%20matches%20up%20with%20the%20red%20arrow.&quiz=1%200%200%205%200%201%200%204%200%200%201%200%200%200%200%201" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
 {panel type="teacher-note" summary="Rozwiązanie"}
-Przesunięcie x 5, a y to 4 (5 w prawo i 4 w górę). Macierz ma postać: {math}\begin{bmatrix}  1 & 0 \\   0 & 1 \\   \end{bmatrix}{math end}
+Przesunięcie *x* o 5, a y o 4 (5 w prawo i 4 w górę). Macierz skalowania ma postać: {math}\begin{bmatrix}  1 & 0 \\   0 & 1 \\   \end{bmatrix}{math end}
 {panel end}
 
 Kolejne narzędzie pozwala na składanie dwóch przekształceń: przesunięcia i skalowania.
 
-{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix.html?info=Now%20try%20to%20scale%20the%20original%20arrow%20in%20the%20following,%20and%20translate%20it%20to%20match%20the%20red%20arrow.&quiz=2%200%200%204%200%202%200%203%200%200%202%200%200%200%200%201" text="Click for interactive: scaling and translation challenge"}
+{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix.html?info=Now%20try%20to%20scale%20the%20original%20arrow%20in%20the%20following,%20and%20translate%20it%20to%20match%20the%20red%20arrow.&quiz=2%200%200%204%200%202%200%203%200%200%202%200%200%200%200%201" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
 {panel type="teacher-note" summary="Rozwiązanie"}
-Macierz ma postać: {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end} (podwojenie rozmiaru). Przesunięcie x to 4, a y to 3..
+Macierz ma postać: {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end} (podwojenie rozmiaru). Przesunięcie dla *x* to 4, a dla *y* to 3..
 {panel end}
 
 Kolejnośc składania przekształceń (przesunięcia i skalowania) ma znaczenie. 
 Sprawdź!
 
-{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix-reversed.html?info=The%20following%20interactive%20has%20the%20translation%20and%20scaling%20the%20other%20way%20around.%20Use%20this%20one%20to%20transform%20the%20blue%20arrow%20to%20the%20red%20arrow.%20The%20order%20in%20which%20the%20operations%20happen%20makes%20a%20difference!%20&quiz=2%200%200%205%200%202%200%204%200%200%202%200%200%200%200%201" text="Click for interactive: translation before scaling"}
+{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix-reversed.html?info=The%20following%20interactive%20has%20the%20translation%20and%20scaling%20the%20other%20way%20around.%20Use%20this%20one%20to%20transform%20the%20blue%20arrow%20to%20the%20red%20arrow.%20The%20order%20in%20which%20the%20operations%20happen%20makes%20a%20difference!%20&quiz=2%200%200%205%200%202%200%204%200%200%202%200%200%200%200%201" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
 {panel type="teacher-note" summary="Rozwiązanie"}
-Macierz ma postać:e {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end} (znów podwojenie rozmiaru). Tym razem wartości opisujące przesunięcie są dwa razy mniejsze: dla x to 2,5, a dla y to 2. Wynika to z tego, że skalowanie będzie wykonane po przesunięciu.
+Macierz ma postać: {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end} (znów podwojenie rozmiaru). Tym razem wartości opisujące przesunięcie są dwa razy mniejsze niż potrzebujemy, ponieważ po przesunięciu będzie jeszcze skalowanie. Dlatego dla *x* należy wpisać 2,5 a dla *y* -- 2.
 {panel end}
 
-Moża było zauważyć, że wartości opisujące przekształcenia zależą od odległości obiektu od punktu o współrzędnych (0,0) . 
-Rozwiązaniem może być przesunięcie obiektu tak, aby punkt 0 (*początek układu współrzędnych*) należał do obiektu, zmiana rozmiaru obiektu i przesunięcie go z powrotem.
+Moża było zauważyć, że wartości opisujące przekształcenia zależą od odległości obiektu od punktu o współrzędnych (0,0), zwanym początkiem układu współrzędnych. 
+Jeżeli chcesz, by obiekt się powiększył, ale jego środek pozostał w miejscu, najwygodniej zacząć od przesunięcia obiektu tak, by jego środek znalazł się w punkcie (0,0), potem przeskalować obiekt, a na końcu przesunąć z powrotem.  
 
-{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-transmatrix.html?info=The%20tip%20is%20at%20(-8,7),%20so%20you%20should%20translate%20it%20to%20(0,0),%20scale%20by%202,%20and%20translate%20back%20to%20(-8,%207).&zoom=-15.0%20&quiz=2%200%200%20-8%200%202%200%203%200%200%202%200%200%200%200%201%20&start=1%200%200%20-8%200%201%200%205%200%200%201%200%200%200%200%201%20&allPrize=5" text="Click for interactive: using translation to simplify scaling"}
+{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-transmatrix.html?info=The%20tip%20is%20at%20(-8,7),%20so%20you%20should%20translate%20it%20to%20(0,0),%20scale%20by%202,%20and%20translate%20back%20to%20(-8,%207).&zoom=-15.0%20&quiz=2%200%200%20-8%200%202%200%203%200%200%202%200%200%200%200%201%20&start=1%200%200%20-8%200%201%200%205%200%200%201%200%200%200%200%201%20&allPrize=5" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
 {panel type="teacher-note" summary="Rozwiązanie"}
-Wartości dla przesunięcia to: x=8 i y=-7. W efekcie wierzchołek strzałki leży w punkcie 0 i podwojenie rozmiaru nie zmieni położenia tego wierzchołka. Macierz ma postać: {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end}. Wartości dla przesunięcia strzałki z powrotem to: -8,7.
+Wartości dla przesunięcia to: 8 dla *x* i -7 dla *y*. W efekcie wierzchołek strzałki leży w punkcie 0 i podwojenie rozmiaru nie zmieni położenia tego wierzchołka. Macierz ma postać: {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end}. Wartości dla przesunięcia strzałki z powrotem to: -8, 7.
 {panel end}
 
 Podobny problem pojawia się w przypadku obrotu.
 Poniżej znajduje się interaktyne narzędzie, które pozwala poprzedzić skalowanie przesunięciem obiektu.
 
-{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-transmatrix.html?info=Try%20rotating%20this%20image%20by%2045%20degrees.You%27ll%20need%20to%20translate%20the%20tip%20to%20the%20origin,%20apply%20the%20rotation,%20and%20translate%20it%20back.&zoom=-10.0%20&quiz=0.699999988079071%200.699999988079071%200%20-4.400000095367432%20-0.699999988079071%200.699999988079071%200%204.599999904632568%200%200%201%200%200%200%200%201%20&start=1%200%200%20-3%200%201%200%204%200%200%201%200%200%200%200%201%20&allPrize=5" text="Click for interactive: using translation to simpilfy rotation"}
+{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-transmatrix.html?info=Try%20rotating%20this%20image%20by%2045%20degrees.You%27ll%20need%20to%20translate%20the%20tip%20to%20the%20origin,%20apply%20the%20rotation,%20and%20translate%20it%20back.&zoom=-10.0%20&quiz=0.699999988079071%200.699999988079071%200%20-4.400000095367432%20-0.699999988079071%200.699999988079071%200%204.599999904632568%200%200%201%200%200%200%200%201%20&start=1%200%200%20-3%200%201%200%204%200%200%201%200%200%200%200%201%20&allPrize=5" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
-Kolejne dwa przykłady pozwalają na skłądanie trzech przekształceń: obrotu, skalowania i przesunięcia. Możesz używać wielu macierzy, aby dopasować efekt końcowy: wynik działania jednej macierzy staje się danymi wejściowymi dla następnej. Przy okazji: szerokość strzałki jest podwojona, ale wysokość się zmieniła. 
+Kolejne dwa przykłady pozwalają na składanie trzech przekształceń: obrotu, skalowania i przesunięcia. Możesz używać wielu macierzy, aby osiągnać cel: wynik działania jednej macierzy staje się danymi wejściowymi dla następnej. Przy okazji: szerokość strzałki jest podwojona, ale wysokość się zmieniła. 
 
-{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-doublematrix.html?info=Try%20matching%20the%20blue%20arrow%20to%20the%20red%20one%20using%20two%20matrices%20(one%20to%20scale%20and%20one%20to%20rotate),%20and%20adding%20a%20vector.&zoom=-10.0%20&quiz=0%201%200%204%202%200%200%20-2%200%200%201%200%200%200%200%201%20&allPrize=5" text="Click for interactive: combining translation, scaling and rotation"}
+{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-doublematrix.html?info=Try%20matching%20the%20blue%20arrow%20to%20the%20red%20one%20using%20two%20matrices%20(one%20to%20scale%20and%20one%20to%20rotate),%20and%20adding%20a%20vector.&zoom=-10.0%20&quiz=0%201%200%204%202%200%200%20-2%200%200%201%200%200%200%200%201%20&allPrize=5" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
 {panel type="teacher-note" summary="Rozwiązanie"}
 
-Istnieją dwa rozwiązania, w zależności od wyboru pierwszego przekształcenia: skalowania lub obrotu. W pierwszym przypadku macierz ma postać: {math}\begin{bmatrix}  2 & 0 \\   0 & 1 \\   \end{bmatrix}{math end}. Macierz obrotu to: {math}\begin{bmatrix}  0 & 1 \\   1 & 0 \\   \end{bmatrix}{math end}. Wektor przesunięcia ma współrzedne 4, -2.
+Istnieją dwa rozwiązania, w zależności od wyboru pierwszego przekształcenia: skalowania lub obrotu. W pierwszym przypadku macierz skalowania ma postać: {math}\begin{bmatrix}  2 & 0 \\   0 & 1 \\   \end{bmatrix}{math end}. Macierz obrotu to: {math}\begin{bmatrix}  0 & 1 \\   -1 & 0 \\   \end{bmatrix}{math end}. Wektor przesunięcia ma współrzedne 4, -2.
 
-W drugim przypasku macierz obrotu ma postać: {math}\begin{bmatrix}  0 & 1 \\   1 & 0 \\   \end{bmatrix}{math end} (90 stopni zgodnie z ruchem wskazówek zegara), ale macierz skalowanie jest inna: {math}\begin{bmatrix}  1 & 0 \\   0 & 2 \\   \end{bmatrix}{math end}, gdyż skalowanie musi tym razem być w kierunku y. Wektor przesunięcia ma współrzedne 4, -2.
+W drugim przypadku macierz obrotu ma postać: {math}\begin{bmatrix}  0 & 1 \\   -1 & 0 \\   \end{bmatrix}{math end} (90 stopni zgodnie z ruchem wskazówek zegara), ale macierz skalowanie jest inna: {math}\begin{bmatrix}  1 & 0 \\   0 & 2 \\   \end{bmatrix}{math end}, gdyż skalowanie musi tym razem być w kierunku *y*. Wektor przesunięcia ma współrzedne 4, -2.
 
 Istnieje też rozwiązanie z jedną macierzą (opisującą obrót i skalowanie); to może być ciekawe wyzwanie dla zainteresowanych. Macierz będzie mieć postać: {math}\begin{bmatrix}  0 & 1 \\   2 & 0 \\   \end{bmatrix}{math end}. Wektor przesunięcia ma współrzedne 4, -2.
 
@@ -310,20 +310,20 @@ Istnieje też rozwiązanie z jedną macierzą (opisującą obrót i skalowanie);
 
 Oto jeszcze jedno ćwiczenie, grupujące wszystkie przekształcenia:
 
-{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-doublematrix.html?info=You%20will%20need%20to%20use%20all%20three%20operations%20to%20do%20this%20next%20one.&zoom=-6.0%20&quiz=0.3499999940395355%20-0.3499999940395355%200%20-1%200.3499999940395355%200.3499999940395355%200%20-2%200%200%201%200%200%200%200%201%20&allPrize=5" text="Click for interactive: multiple transformation challenge"}
+{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-doublematrix.html?info=You%20will%20need%20to%20use%20all%20three%20operations%20to%20do%20this%20next%20one.&zoom=-6.0%20&quiz=0.3499999940395355%20-0.3499999940395355%200%20-1%200.3499999940395355%200.3499999940395355%200%20-2%200%200%201%200%200%200%200%201%20&allPrize=5" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
 {panel type="teacher-note" summary="Rozwiązanie"}
 
-Rozwiązań może być wiele. Najprostsze to: {math}\begin{bmatrix}  0.7 & -0.7 \\   0.7 & 0.7 \\   \end{bmatrix}{math end}, {math}\begin{bmatrix}  0.5 & 0 \\   0 & 0.5 \\   \end{bmatrix}{math end}, i -1,-2 jako wartości przesunięcia. 
+Rozwiązań może być wiele. Najprostsze to: {math}\begin{bmatrix}  0{,}7 & -0{,}7 \\   0{,}7 & 0{,}7 \\   \end{bmatrix}{math end} jako (przybliżona) macierz obrotu, {math}\begin{bmatrix}  0{,}5 & 0 \\   0 & 0{,}5 \\   \end{bmatrix}{math end} jako macierz skalowania i -1, -2 jako wartości przesunięcia. 
 {panel end}
 
-Może się wydawać, że stosowanie grupy przekształceń jest żmudne, bo każdy punkt należący do obiektu należy poddać przekształceniom. Strzałka z przykładu to był wielokąt o 7 wierchołkach, a złożone obrazy składają się z tysięcy, czy nawet milionów punktów. Na szczęście operacje macierzowe można składać w jedną operację, która wykonanywana jest na każdym punkcie obiektu.
+Może się wydawać, że stosowanie wielu przekształceń jest żmudne, bo każdy punkt należący do obiektu należy poddać przekształceniom. Strzałka z przykładu to był wielokąt o 7 wierchołkach, a złożone obrazy składają się z tysięcy, czy nawet milionów punktów. Na szczęście operacje macierzowe można na początku złożyć w jedną operację i wykonać tylko tę jedną na każdym punkcie obiektu.
 
 ### Składanie przekształceń
 
-Jeśli obraz ma zostać poddany kilku przekształceniom jedno po drugim, to wówczas ten zbiór przekształceń należy opisać jedną macierzą, gdyż prowadzi to zmniejszenia liczby obliczeń, a więc wpływ na efektywność. Taką macierz wypadkową uzyskuje się przez ,,wymnożenie'' macierzy opisujących każde ze składowych przekształceń. 
+Jeśli obraz ma zostać poddany kilku przekształceniom jedno po drugim, to wówczas ten zbiór przekształceń należy opisać jedną macierzą, gdyż prowadzi to zmniejszenia liczby obliczeń. Taką macierz wypadkową uzyskuje się przez „wymnożenie” macierzy opisujących każde ze składowych przekształceń. 
 
-Wynikiem mnożenia dwóch macierzy nie jest macierz złożona z iloczynów wartości odpowiadająch sobie nawzajem elementow macierzy; poniżej przedstawiono przykład ilustrujący zasadę mnożenia dwóch macierzy:
+Wynikiem mnożenia dwóch macierzy nie jest macierz złożona z iloczynów wartości odpowiadająch sobie nawzajem elementów macierzy; poniżej przedstawiono przykład ilustrujący zasadę mnożenia dwóch macierzy:
 
 {math-block}
 
@@ -346,7 +346,7 @@ a_{12}b_{11}+a_{22}b_{12} &  a_{12}b_{21}+a_{22}b_{22} \\
 
 To może wydawać się trochę skomplikowane, ale trud zrozumienia opłaca się w praktyce: otrzymujemy jedną macierz, która opisuje złożenie dwóch przekształceń.
 
-Rozważmy prosty przykład. Chcemy złożyć dwa przekształcenia: skalowanie (zmiana rozmiaru) przez 2 i obrót o 45 stopni? Jak będzie wyglądać macierz opisująca złożenie tych przekształceń?
+Rozważmy prosty przykład. Chcemy złożyć dwa przekształcenia: skalowanie (zmiana rozmiaru) przez 2 i obrót o (prawie) 45 stopni. Jak będzie wyglądać macierz opisująca złożenie tych przekształceń?
 
 {math-block}
 
@@ -356,8 +356,8 @@ Rozważmy prosty przykład. Chcemy złożyć dwa przekształcenia: skalowanie (z
 \end{bmatrix}
 \times
 \begin{bmatrix}
-0.7 & 0.7 \\  
--0.7 & 0.7 \\  
+0{,}7 & 0{,}7 \\  
+-0{,}7 & 0{,}7 \\  
 \end{bmatrix}
 =
 \begin{bmatrix}
@@ -366,8 +366,8 @@ Rozważmy prosty przykład. Chcemy złożyć dwa przekształcenia: skalowanie (z
 \end{bmatrix}
 =
 \begin{bmatrix}
-1.4 &  1.4  \\  
--1.4 &  1.4  \\  
+1{,}4 &  1{,}4  \\  
+-1{,}4 &  1{,}4  \\  
 \end{bmatrix}
 
 {math-block end}
@@ -375,15 +375,15 @@ Rozważmy prosty przykład. Chcemy złożyć dwa przekształcenia: skalowanie (z
 Możesz sprawdzić działanie takiej macierzy, korzystając z interaktynego narzędzia poniżej:
 
 
-{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-singlematrix.html?info=Try%20putting%20in%20the%20final%20matrix%20here%20and%20see%20if%20it%20does%20scale%20by%202%20and%20rotate%20by%2045%20degrees.&zoom=-10.0%20&quiz=1.4%201.4%200%200%20-1.4%201.4%200%200%200%200%201%200%200%200%200%201%20&allPrize=5" text="Click for interactive: check a single matrix"}
+{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-singlematrix.html?info=Try%20putting%20in%20the%20final%20matrix%20here%20and%20see%20if%20it%20does%20scale%20by%202%20and%20rotate%20by%2045%20degrees.&zoom=-10.0%20&quiz=1.4%201.4%200%200%20-1.4%201.4%200%200%200%200%201%200%200%200%200%201%20&allPrize=5" text="Kliknij, aby uruchomić interaktywne narzędzie"}
 
 Warto sprawdzić inne przykłady, aby lepiej zrozumieć temat. Możesz posłużyć się narzędziem udostępnionym poniżej.
 Zwróć uwagę na to, że narzędzie pozwala na zmianę kolejności czynników (macierzy). Wystarczy przciągnąć pola np. myszką.
 
-{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-multiply2matrix.html?info=Now%20try%20multiplying%20two%20other%20transform%20matrices%20that%20you%20make%20up%20yourself,%20and%20see%20if%20they%20produce%20the%20expected%20result.&zoom=-10.0%20&quiz=1.4%201.4%200%200%20-1.4%201.4%200%200%200%200%201%200%200%200%200%201%20&allPrize=5" text="Click for interactive: multiple matrices"}
+{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-multiply2matrix.html?info=Now%20try%20multiplying%20two%20other%20transform%20matrices%20that%20you%20make%20up%20yourself,%20and%20see%20if%20they%20produce%20the%20expected%20result.&zoom=-10.0%20&quiz=1.4%201.4%200%200%20-1.4%201.4%200%200%200%200%201%200%200%200%200%201%20&allPrize=5" text="Kliknij, aby uruchomić interaktywne narzędzie"}
 
-Systemy grafiki komputerowej zwykle wymagają wykonania złożonych przekształceń, które można przedstawić jako matematyczne złożenie wielu prostych przekształceń. Obliczeń nie wykonuje się etapami (efekt działania poprzedniego przekształcenia stowi zbiór danych do wykonania kolejnego przekształcenia). Projektanci systemu do opisu przekształcenia złożonego, jeśli to tylko możliwe, używają jednej macierzy, która jest iloczynem macierzy opisujących składowe przekształcenia. 
-Trzeba pamiętać, że złożone przekształcenie stosuje się czasem i dla miliona punktów naraz. Koszt znalezienia znalezienia macierzy wypadkowej dla grupy przekształceń jest niewielki w porównaniu z kosztem obliczeń dla nieefektywnego rozwiązania.
+Systemy grafiki komputerowej zwykle wymagają wykonania złożonych przekształceń, które można przedstawić jako matematyczne złożenie wielu prostych przekształceń. Obliczeń nie wykonuje się etapami (efekt działania poprzedniego przekształcenia stanowi dane do wykonania kolejnego przekształcenia). Projektanci systemu, do opisu przekształcenia złożonego, jeśli to tylko możliwe, używają jednej macierzy, która jest iloczynem macierzy opisujących składowe przekształcenia. 
+Trzeba pamiętać, że złożone przekształcenie stosuje się czasem i dla miliona punktów naraz. Koszt znalezienia macierzy wypadkowej dla grupy przekształceń jest niewielki w porównaniu z kosztem obliczeń dla nieefektywnego rozwiązania.
 
 Poniej opisano projekt, który ma służyć pogłębieniu tego tematu. Podano tam link do interaktywnego narzędzia do ćwieczń.
 
@@ -391,7 +391,7 @@ Poniej opisano projekt, który ma służyć pogłębieniu tego tematu. Podano ta
 ### Przekształcenia 3D 
 
 Do tej pory wykonywaliśmy tylko przekształcenia w dwóch wymiarach (na płaszczyźnie). Do opisu przekształceń w 3D potrzebujemy współrzędnej *z*, która opisuje trzeci wymiar, jakby głębość przestrzeni. 
-Macierz dla operacji w 3D, gdzie każdy punkt ma przypisane trzy współrzędne, jest rozmiaru 3 na 3. Na przykład, macierz opisująca podwojenie rozmiaru obiektu jest zapisana poniżej; każdą ze współrzędnych *x*, *y* i *z* trzeba pomnożyć przez 2.
+Macierz dla operacji w 3D, gdzie każdy punkt ma przypisane trzy współrzędne, jest rozmiaru 3 na 3. Oto macierz opisująca podwojenie rozmiaru obiektu; każdą ze współrzędnych *x*, *y* i *z* mnożymy przez 2.
 
 
 {math-block}
@@ -406,16 +406,16 @@ Macierz dla operacji w 3D, gdzie każdy punkt ma przypisane trzy współrzędne,
 
 Poniżej narzędzie do ćwiczeń.
 
-{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-mini-editor/main%20(cutdown).html?info=%0AIn%20this%20interactive,%20try%20changing%20the%20scaling%20on%20the%20image%20(it%20starts%20with%20a%20scaling%20factor%20of%2010%20in%20all%20three%20dimensions)." text="Click for interactive: 3D transform matrix"}
+{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-mini-editor/main%20(cutdown).html?info=%0AIn%20this%20interactive,%20try%20changing%20the%20scaling%20on%20the%20image%20(it%20starts%20with%20a%20scaling%20factor%20of%2010%20in%20all%20three%20dimensions)." text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
 Obraz czajniczka składa się z 3644 punktów. Przekształcenie opisane macierzą jest wykonywane na każdym z nich.
 
-Kolejne narzędzie pozwola na przesuwanie obiektu (z użyciem wektora).
+Kolejne narzędzie pozwala na przesuwanie obiektu (z użyciem wektora).
 Zachęcamy do wykonania ćwiczeń. 
 
-{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-mini-editor/main%20(cutdown).html?info=%0ATranslation%20requires%203%20values,%20which%20are%20added%20to%20the%20*x*,%20*y*%20and%20*z*%20coordinates%20of%20each%20point%20in%20an%20object.%3Cp%3EIn%20the%20following%20interactive,%20try%20moving%20the%20teapot%20left%20and%20right%20(%20%3Cem%3Ex%3C/em%3E%20),%20up%20and%20down%20(%20%3Cem%3Ey%3C/em%3E%20),%20and%20in%20and%20out%20of%20the%20screen%20(%20%3Cem%3Ez%3C/em%3E%20)%20by%20adding%20a%20%E2%80%9Cvector%E2%80%9D%20to%20the%20operations.%20Then%20try%20combining%20all%20three.%3C/p%3E%0A" text="Click for interactive: 3D translation"}
+{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-mini-editor/main%20(cutdown).html?info=%0ATranslation%20requires%203%20values,%20which%20are%20added%20to%20the%20*x*,%20*y*%20and%20*z*%20coordinates%20of%20each%20point%20in%20an%20object.%3Cp%3EIn%20the%20following%20interactive,%20try%20moving%20the%20teapot%20left%20and%20right%20(%20%3Cem%3Ex%3C/em%3E%20),%20up%20and%20down%20(%20%3Cem%3Ey%3C/em%3E%20),%20and%20in%20and%20out%20of%20the%20screen%20(%20%3Cem%3Ez%3C/em%3E%20)%20by%20adding%20a%20%E2%80%9Cvector%E2%80%9D%20to%20the%20operations.%20Then%20try%20combining%20all%20three.%3C/p%3E%0A" text="Kliknij, aby uruchomić interaktywne narzędzie"}
 
-Obrót jest trudniej opisać, gdyż w przestrzeni jest trzy stopnie swobody. Na płaszczyźnie obraca się wokół punktu (0,0), a w przestrzeni obroty są wokół prostej (albo osi x, albo osi y, albo osi z, skierowanej jakby ,,w głąb'' ekranu!).
+Obrót jest trudniej opisać, gdyż w przestrzeni są trzy stopnie swobody. Na płaszczyźnie obroty wykonywane są wokół punktu (0,0), a w przestrzeni obroty wykonuje się wokół prostej (albo osi *X*, albo osi *Y*, albo osi *Z*, skierowanej jakby „w głąb” ekranu).
 
 Do obracania w trzech kierunkach używa się takiej macierzy:
 
@@ -429,11 +429,11 @@ Do obracania w trzech kierunkach używa się takiej macierzy:
 
 {math-block end}
 
-Spróbuj zastosować tę macierz do obrazu wyżej przedstawionymi.
-Ta macierz stanowi opis obrotu wokół osi z (prostej skierowanej ,,w głąb'' ekranu); w istocie ten przykład to obrót w płaszczyźnie.
-Ten sam, który był wcześniej. Ostatni wiersz macierzy (0, 0, 1) pozostawia wartość z bez zmian.
+Spróbuj zastosować tę macierz do obrazu z ćwiczenia interaktywnego.
+Ta macierz stanowi opis obrotu wokół osi *Z* (prostej skierowanej „w głąb” ekranu); w istocie ten przykład to obrót w płaszczyźnie.
+Ostatni wiersz macierzy (0, 0, 1) pozostawia wartość bez zmian.
 
-Poniżej znajduje się macierz opisującą obrót wokół osi x (współrzędna x pozostaje bez zmian: w pierwszym wierszu macierzy jest 1, 0, 0):
+Poniżej znajduje się macierz opisującą obrót wokół osi *X* (współrzędna *x* pozostaje bez zmian: w pierwszym wierszu macierzy jest 1, 0, 0):
 
 {math-block}
 
@@ -465,18 +465,18 @@ Poniżej znajduje się interaktyne narzędzie, które pozwala na składanie maci
 
 {comment end}
 
-{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-mini-editor/main%20(cutdown).html?info=%0AYou%20can%20experiment%20with%20moving%20the%20teapot%20around%20in%20space,%20changing%20its%20size,%20and%20angle.%3Cdl%20class=%22docutils%22%3E%0A%3Cdt%3EThink%20about%20the%20order%20in%20which%20you%20need%20to%20combine%20the%20transforms%20to%20get%20a%20particular%20image%20that%20you%20want.%3C/dt%3E%0A%3Cdd%3EFor%20example,%20if%20you%20translate%20an%20image%20and%20then%20scale%20it,%20you%E2%80%99ll%20get%20a%20different%20effect%20to%20scaling%20it%20then%20translating%20it.%0AIf%20you%20want%20to%20rotate%20or%20scale%20around%20a%20particular%20point,%20you%20can%20do%20this%20in%20three%20steps%20(as%20with%20the%202D%20case%20above):%20(1)%20translate%20the%20object%20so%20that%20the%20point%20you%20want%20to%20scale%20or%20rotate%20around%20is%20the%20origin%20(where%20the%20x,%20y%20and%20z%20axes%20meet),%20(2)%20do%20the%20scaling/rotation,%20(3)%20translate%20the%20object%20back%20to%20where%20it%20was.%20If%20you%20just%20scale%20an%20object%20where%20it%20is,%20its%20distance%20from%20the%20origin%20will%20also%20be%20scaled%20up.%3C/dd%3E%0A%3C/dl%3E%0A" text="Click for interactive: 3D with multiple matrices and vectors"}
+{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-mini-editor/main%20(cutdown).html?info=%0AYou%20can%20experiment%20with%20moving%20the%20teapot%20around%20in%20space,%20changing%20its%20size,%20and%20angle.%3Cdl%20class=%22docutils%22%3E%0A%3Cdt%3EThink%20about%20the%20order%20in%20which%20you%20need%20to%20combine%20the%20transforms%20to%20get%20a%20particular%20image%20that%20you%20want.%3C/dt%3E%0A%3Cdd%3EFor%20example,%20if%20you%20translate%20an%20image%20and%20then%20scale%20it,%20you%E2%80%99ll%20get%20a%20different%20effect%20to%20scaling%20it%20then%20translating%20it.%0AIf%20you%20want%20to%20rotate%20or%20scale%20around%20a%20particular%20point,%20you%20can%20do%20this%20in%20three%20steps%20(as%20with%20the%202D%20case%20above):%20(1)%20translate%20the%20object%20so%20that%20the%20point%20you%20want%20to%20scale%20or%20rotate%20around%20is%20the%20origin%20(where%20the%20x,%20y%20and%20z%20axes%20meet),%20(2)%20do%20the%20scaling/rotation,%20(3)%20translate%20the%20object%20back%20to%20where%20it%20was.%20If%20you%20just%20scale%20an%20object%20where%20it%20is,%20its%20distance%20from%20the%20origin%20will%20also%20be%20scaled%20up.%3C/dd%3E%0A%3C/dl%3E%0A" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
-W tych przykładach, gdy dla pojedynczego punktu nalezało by użyć kilku macierzy kolejnych przekształceń, można zaoszczędzić dużo czasu przez zastąpienie kilku macierzy jedną, która opisuje złożenie tych przekształceń. Poniżej znajdziesz narzędzie do ćwiczeń.
+W tych przykładach, gdy dla pojedynczego punktu nalezałoby użyć kilku macierzy kolejnych przekształceń, można zaoszczędzić dużo czasu przez zastąpienie kilku macierzy jedną, która opisuje złożenie tych przekształceń. Poniżej znajdziesz narzędzie do ćwiczeń.
 
-Na przykład, zapisz macierz skalowania x2 (zmiany rozmiaru), zmieniając 1 na przekątnej na 2, a następnie inną macierz skalowania x3 (na przekątnej liczby 3).
-Narzędzie interaktywne pozwala zobaczyć po prawej stronie macierz, które jest opisem złożenia tych dwóch przekształceń. Co można zauważyć?
+Na przykład, zapisz macierz skalowania razy 2, zmieniając 1 na przekątnej na 2, a następnie inną macierz, skalowania razy 3 (na przekątnej liczby 3).
+Narzędzie interaktywne pozwala zobaczyć po prawej stronie macierz, będącą opisem złożenia tych dwóch przekształceń. Co można zauważyć?
 
-{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-matrix-simplifier/CG-matrix-simplifier.html?info=Multiple%20transforms" text="Click for interactive: matrix simplifier"}
+{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-matrix-simplifier/CG-matrix-simplifier.html?info=Multiple%20transforms" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
 {panel type="teacher-note" summary="Wyjaśnienie"}
 
-Efekt złożenia przekształceń skalowania x2 i x3 jest identyczny z efektem skalowania x6. 
+Efekt złożenia przekształceń skalowania razy 2 i razy 3 jest identyczny z efektem skalowania razy 6. 
 
 {panel end}
 {comment}
@@ -484,11 +484,10 @@ Efekt złożenia przekształceń skalowania x2 i x3 jest identyczny z efektem sk
 {comment end}
 
 Narzędzie pozwala też dodać przekształcenie, jakim jest przesunięcie.
-Sprawdź, jak działa składanie skalowania i przesunięcia. Co będzie, jeśli dodasz obrót --- czy kolejność przekształceń ma znaczenie?
+Sprawdź, jak działa składanie skalowania i przesunięcia. Co będzie, jeśli dodasz obrót -- czy kolejność przekształceń ma znaczenie?
 
 {panel type="curiosity" summary="Mnożenie macierzy w 3D"}
-Ktoś może być ciekaw, jak wygląda macierz przekształcenia wypadkowego. Poniżej ją zapiszano. 
-Możliwość zapisania macierzy wypadkowej jest bardzo użyteczna w grafice komputerowej, ponieważ grupa przekształceń jest wówczas opisana jedną macierzą, która jest stosowania dla każdego punktu obiektu. To redukuje w znaczący sposób liczbę obliczeń.  
+Ktoś może być ciekaw, jak powstała macierz przekształcenia wypadkowego. Jest ona wynikiem mnożenia macierzy. Sposób, w jaki mnoży się macierze, jest opisany poniżej. Wydaje się skomplikowany, ale takie mnożenie jest bardzo użyteczne w grafice komputerowej, ponieważ pozwala wiele kolejno wykonywanych przekształceń opisać jedną macierzą, która jest stosowania dla każdego punktu obiektu. To redukuje w znaczący sposób liczbę obliczeń.  
 
 {comment}
 .. xTCB give an example for the following one day?
@@ -522,24 +521,22 @@ a_{13}b_{31}+a_{23}b_{32}+a_{33}b_{33} \\
 {panel end}
 
 {panel type="project" summary="przekształcenia 3D"}
-Wykonujący projekt będzie miał okazję pokazać w praktyce, czego się nauczył. Zadanie będzie polegać wyjasnieniu przekształcenia 3D. 
-Należy pamiętać o wykonaniu zrzutów ekranu, które będą elementem dokumentacji pracy.
+A teraz proponujemy wykonanie projektu, pozwalającego pokazać efekty nauki. Zadanie będzie polegać na zaprentowaniu i opisie przekształceń 3D kilku obiektów. 
+Należy pamiętać o wykonaniu zrzutów ekranu po każdym kroku, bo interaktywne narzędzia, których będziesz uzywał, nie pozwalają na zapis grafiki.
 
 
-Poniższe narzędzie pozwala na wybór obiektów (i ich kolorów etc.), i zastosowaniu jednego z przekształceń.
-Wyzwaniem będzie zaproponowanie grupy przekształceń (np. skalowanie, potem obrót, a następnie przesunięcie) i w końcu znalezienie ,,uproszczenia'' w postaci jednego wypadkowego przekształcenia.
+Poniższe narzędzie pozwala na wybór obiektów (i ich kolorów etc.) i zastosowanie jednego z przekształceń.
+Wyzwaniem będzie zastosowanie całej serii przekształceń (np. skalowanie, potem obrót, a następnie przesunięcie) i w końcu znalezienie „uproszczenia” w postaci jednego wypadkowego przekształcenia.
 
-Projektowanie należy zacząć od narzędzia zamieszczonego niżej. Podczas pracy należy robić notatki i zrzuty ekranu, które później można wykorzystać do udokumentowania etapów projektu.
+{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-mini-editor/main.html?info=Multiple%20transforms" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
-{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-mini-editor/main.html?info=Multiple%20transforms" text="Click for interactive: scene creation"}
+To narzędzie pomoże znaleźć przekształcenie wypadkowe:
 
-Kolejne narzędzie będzie pomocą w znalezeniu wypadkowego przekształcenia.
+{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-matrix-simplifier/CG-matrix-simplifier.html?info=Multiple%20transforms" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
-{button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-matrix-simplifier/CG-matrix-simplifier.html?info=Multiple%20transforms" text="Click for interactive: matrix simplifier"}
+Prezentację wyników swojej pracy poprzedź przykładami obrazów 3D, na przykład pochodzących z filmów nagrodzonych za grafikę. Opowiedz, co w nich innowacyjnego.
 
-We wprowadzeniu do projektu użyj kilku przykładów obrazów 3D. Opisz, co jest twórcze, autorskie w tych obrazach.
-
-Aby wykazać się rozumieniem podstaw grafiki komputerowej, spróbuj umieścić kilka obiektów w konkretnym kontekście (np. czajniczek obok kilku filiżanek), i wyjaśnij istotę zastosowanych przekształceń, pokazując macierze opisujące przekształcenia.
+Aby wykazać się rozumieniem podstaw grafiki komputerowej, zaplanuj rozmieszczenie kilku obiektów na obrazku (np. czajniczek obok kilku filiżanek)  i spróbuj je odzwierciedlić w narzędziu interaktywnym. Wyjaśnij istotę zastosowanych przekształceń, pokazując macierze opisujące przekształcenia.
 
 Podaj proste przykłady różnych przekształceń, również złożenia kilku przekształceń.
 
@@ -552,10 +549,10 @@ End of 3D transform project
 
 {panel type="project" summary="WebGL and OpenGL"}
 Biegli w programowaniu, chcący zgłębiać temat przekształceń graficznych w praktyce, mogą wykonać projekt używając jednego z systemów programowania grafiki:
-[WebGL](https://en.wikipedia.org/wiki/WebGL) (użyty do przygotowania narzędzi wyżej udostępnionych),
+[WebGL](https://en.wikipedia.org/wiki/WebGL) (użyty do przygotowania narzędzi wyżej udostępnionych)
 lub powszechnie stosowany system
 [OpenGL](https://en.wikipedia.org/wiki/OpenGL).
-Interaktywny samouczek OpenGl można znaleźć tutaj:
+Interaktywny samouczek OpenGL można znaleźć tutaj:
 [JPOT](http://www.cs.uwm.edu/%7Egrafix2/).
 
 Wykonanie projektu w jednym z tych systemów może być bardzo czasochłonne. Trzeba się wiele nauczyć, zanim uda się uzyskać ciekawe efekty.
