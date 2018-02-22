@@ -2,35 +2,35 @@
 
 {video url="https://www.youtube.com/embed/5kuoRjgfCls"}
 
-## Z perspektywy
+## Z lotu ptaka
 
 Grafika komputerowa kojarzy się z grami, filmami i obrazami oraz niezwykłym oprogramowaniem do tworzenia i przetwarzania obrazów. Warto jednak zapytać: Jak to się dzieje, że to oprogramowanie tak świetnie działa? Jaką rolę mają informatycy? Oni nie są wyłącznie *użytkownikami* systemów graficznych, ale zajmują się *tworzeniem*, zwłaszcza obmyślaniem nowych technik.
 
-Rozwój narzędzi do tworzenia grafiki komputerowej jest pochodną przemysłu rozrywkowego. Granice możliwości takiego oprogramowania nieustannie się poszerzają. Na początku były proste filmy animowane, zwane dziś 2D, a dziś na ekranach kin możemy oglądać postaci i obiekty w wersji 3D wygenrowane komputerowe, które momentami trudno odróżnych od tych istniejących w świecie rzeczywistym.
-Wśród napisów końcowych filmów, w których używano komputerowo wygenerowanych animacji, można by odnaleźć liczne nazwiska informatyków. [Kilku z nich otrzymało nawet Nagrody Akademii Filmowej(Oscary)] (http://www.oscars.org/news/11-scientific-and-technical-achievements-be-honored-academy-awardsr)! 
+Rozwój narzędzi do tworzenia grafiki komputerowej jest pochodną przemysłu rozrywkowego. Granice możliwości takiego oprogramowania nieustannie się poszerzają. Na początku były proste filmy animowane, zwane dziś 2D, a dziś na ekranach kin możemy oglądać postaci i obiekty w wersji 3D wygenerowane komputerowo, które momentami trudno odróżnych od tych istniejących w świecie rzeczywistym.
+Wśród napisów końcowych filmów, w których używano komputerowo wygenerowanych animacji, można by odnaleźć liczne nazwiska informatyków. [Kilku z nich otrzymało nawet Nagrody Akademii Filmowej (Oscary)] (http://www.oscars.org/news/11-scientific-and-technical-achievements-be-honored-academy-awardsr)! 
 
-{comment} Consider showing e.g. animated files Lion King - Shrek - Toy Story - Avatar sequence of improvements. {comment end}
+
 
 Firmy z braży filmowej czy producenci gier komputerowych nie ograniczają się do korzystania z istniejącego oprogrogramowania graficznego. Czasami niezbędni są informatycy, którzy tworzą nowe, lepsze algorytmy i oprogramowanie, dzięki którym uzyskuje się nowatorskie efekty. Możliwości rozwoju w tej dziedzinie wydają się nieskończone!
 
-Grafika komputerowa znajduje zastosowanie w wielu różnych sytuacjach: tworzenie gier i filmów animowanych to ważne przykłady, ale jest ich znacznie więcej: wizualizacja informacji zawartych w wielkich zbiorach danych (np. dotyczących połączeń telefonicznych w konkretnym dniu albo relacji znajomości użytkowników sieci społecznościowej), graficzna realizacja interfejsów komunikacji człowieka z komputerem, modelowanie tzw. rzeczywistości wirtualnej czy rozszerzonej oraz wiele innych. 
+Grafika komputerowa znajduje zastosowanie w wielu różnych sytuacjach; Tworzenie gier i filmów animowanych to ważne przykłady, ale jest ich znacznie więcej: wizualizacja informacji zawartych w wielkich zbiorach danych (np. dotyczących połączeń telefonicznych w konkretnym dniu albo relacji znajomości użytkowników sieci społecznościowej), graficzna strona interfejsów komunikacji człowieka z komputerem, modelowanie tzw. rzeczywistości wirtualnej czy rozszerzonej oraz wiele innych. 
 
-{comment} Talk about visualisation of data - any nice examples?{comment end}
+
 
 {panel type="jargon-buster" summary="Piksele"}
-{glossary-definition term="Pixel" definition="TTo słowo to spolszczona wersja słowa pixel, który powstał jako skrót od *picture element* (dosł. element obrazu), na oznaczenie małych kwadratów tworzacych jakby siatkę (ang. grid) komputerowej realizacji obrazu."}
+{glossary-definition term="Piksel" definition="To słowo to spolszczona wersja słowa pixel, który powstał jako skrót od *picture element* (dosł. element obrazu), na oznaczenie małych kwadratów tworzacych jakby siatkę (ang. grid) komputerowej realizacji obrazu."}
 Obraz cyfrowy wyświetlany na ekranie monitora lub wydrukowany na domowej drukarce jest skończonym zbiorem elementów, które łącznie tworzą jakby siatkę kwadratów bardzo małych rozmiarów, zwanych 
-{glossary-link term="pixel" reference-text="definition"}pikselami{glossary-link end}.
-Zazwyczaj nie da się ich dostrzec gołym okiem (inaczej obraz wyglądały topornie).
+{glossary-link term="piksel" reference-text="definition"}pikselami{glossary-link end}.
+Zazwyczaj nie da się ich dostrzec gołym okiem (inaczej obraz wyglądałby topornie).
 Na zdjęciach liczba pikseli jest liczona w milionach (megapiksel to milion pikseli; np. ekran o 1080 pikselach w poziomie i 720 w pionie składa się z 777 600 pikseli, czyli ok. 0,78 megepikseli).
 
-Pojęcie piksela jest podstawowym w grafice komputerowej, praca programistów w dziedzinie grafiki komputerowej to w dużej części praca nad abstrakcyjnymi modelami obiektów graficznych złożonych z pikseli i algorytmami działajacych na nich.
+Pojęcie piksela jest podstawowe w grafice komputerowej, praca programistów w dziedzinie grafiki komputerowej to w dużej części praca nad abstrakcyjnymi modelami obiektów graficznych złożonych z pikseli i algorytmami działajacymi na nich.
 Efektem działania aparatu cyfrowego jest zapisanie informacji o zarejestorwanych na elementach światłoczułych kolorach jako zbioru pikseli, które później będą wyświetlone na takim lub innym ekranie.
 {panel end}
 
-W tym rozdziale przyjrzymy się wybranym podstawowym technikom, które są używane w dziedzinie grafiki komputerowej. Celem jest zdobycie wyobrażenia na temat niektórych wymagań, jakie ta dziedzina stawia programistom. 
+W tym rozdziale przyjrzymy się wybranym podstawowym technikom, które są używane w grafice komputerowej. Dzięki temu zorientujesz się z grubsza, z jakimi wyzwaniami mierzą się programiści grafiki.
 
-Używamy systemu o nazwie WebGL, która pozwala na uzyskanie grafiki 3D w przeglądarce internetowej. Gdyby pojawił się problem z wydajnością lub inny, to pomocne mogą się okazać informacje zamieszczone [tutaj](further-information/interactives.html).
+W tym rozdziale będziemy używać systemu o nazwie WebGL, który pozwala na uzyskanie grafiki 3D w przeglądarce internetowej. Gdyby pojawił się problem z wydajnością lub inny, to pomocne mogą się okazać informacje zamieszczone [tutaj](further-information/interactives.html).
 
 ## Przekształcenia graficzne
 
