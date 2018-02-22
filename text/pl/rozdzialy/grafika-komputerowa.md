@@ -716,31 +716,31 @@ W kolejnym ćwiczeniu warto użyć arkusza kalkulacyjnego do określenia wartoś
 
 {panel end}
 
-Teraz w celu narysowania odcinka między punktami A i B (z poprzedniego ćwiczenia) wykonaj obliczenia, używając równania {math}y = mx + c{math end}. Wyznacz odpowiednie wartości {math}y{math end} dla kolejnych wartości {math}x{math end} z zakresu od {math}x_1{math end} do {math}x_2{math end}. Dla wskazania odpowiednich pikseli wartości *y* trzeba będzie zaokrąglić do najbliższej liczby całkowitej.
-Wartości {math}y{math end} powinny być liczbami pomiędzy:  {math}y_1{math end} i {math}y_2{math end}.
+Teraz w celu narysowania odcinka między punktami *A* i *B* (z poprzedniego ćwiczenia) wykonaj obliczenia, używając równania {math}y = mx + c{math end}. Wyznacz odpowiednie wartości {math}y{math end} dla kolejnych wartości {math}x{math end} z zakresu od {math}x_1{math end} do {math}x_2{math end}. Dla wskazania (jakby zapalenia na ekranie) odpowiednich pikseli, wartości *y* trzeba będzie zaokrąglić do najbliższej liczby całkowitej.
+Wartości {math}y{math end} powinny być liczbami pomiędzy  {math}y_1{math end} i {math}y_2{math end}.
 
-{image filename="grid-20x20-diagonal-question.png" alt="Grid for drawing line from A to B"}
+{image filename="grid-20x20-diagonal-question.png" alt="Siatka pikseli dla odcinka"}
 
 {panel type="teacher-note" summary="Rozwiązanie"}
 
 Efekt końcowy jest pokazany na rysunku:
-{image filename="grid-20x20-diagonal-answer.png" alt="Grid for drawing line from A to B"}
+{image filename="grid-20x20-diagonal-answer.png" alt="Siatka pikseli dla odcinka"}
 
 {panel end}
 
 Po wykonaniu ćwiczenia sprawdź linijką, czy wynik jest lepszy od tego z pierwszej próby.
 
-Zastanów się nad tym, ile obliczeń było niezbędnych do wyznaczenia każdego punktu (i dalej wyboru piksela). Może wydawać się, że niewiele. Pamiętaj jednak, że obliczenia mogą w praktyce dotyczyć tysięcy odcinków składających się z setek punktów. 
+Zastanów się nad tym, ile obliczeń było niezbędnych do wyznaczenia każdego punktu (i wyboru piksela). Może wydawać się, że niewiele. Pamiętaj jednak, że obliczenia mogą w praktyce dotyczyć tysięcy odcinków składających się z setek punktów. 
 
 Okazuje się, że rozwiązanie wykorzystujące opisane wyżej równanie nie jest zbyt szybkie i w praktyce może być nieprzydatne (np. dla animacji i w grach komputerowych). W praktyce korzysta się ze znacznie bardziej efektywnej metody.
 
 {panel type="teacher-note" summary="Rozwiązanie"}
-Wyznaczenie każdego punktu wymaga wykonania mnożenia, dodwawania i także operacji zaokrąglania. Operacja mnożenia jest obliczeniowo dość kosztowną operacją (zwłaszcza, gdy obraz składa się z tysięcy czy nawet milionów pikseli!). Co gorsze, metoda opisana wyżej wymaga wykonywania obliczeń w tzw. arytmetyce zmiennoprzecinkowej, co jest o wiele bardziej czasochłonne niż operacje wykonywane na liczbach całkowitych.
+Wyznaczenie każdego punktu wymaga wykonania mnożenia, dodwawania i także operacji zaokrąglania. Operacja mnożenia jest obliczeniowo dość kosztowną operacją (zwłaszcza gdy obraz składa się z tysięcy czy nawet milionów pikseli!). Co gorsza, metoda opisana wyżej wymaga wykonywania obliczeń w tzw. arytmetyce zmiennoprzecinkowej, co jest o wiele bardziej czasochłonne niż operacje wykonywane na liczbach całkowitych.
 {panel end}
 
 ### Algorytm Bresenhama rysowania ocinka
 
-Szybszy sposób na wyznaczenie współrzędnych punktów tworzących odcinek na ekranie jest algorytm zaproponowany prze Bresenhama.  Składa się z kilku etapów. Najpierw wyznacza się trzy wartości:
+Szybszym sposobem na wyznaczenie współrzędnych punktów tworzących odcinek na ekranie jest algorytm zaproponowany przez Jacka Bresenhama.  Składa się z kilku etapów. Najpierw wyznacza się trzy wartości:
 
 {math-block}
 A = 2 \times (y_2 - y_1)
@@ -751,15 +751,15 @@ P = A - (x_2 - x_1)
 {math-block end}
 
 Oto kolejne kroki algorytmu.
-- Wybierz piksel początkowy. 
+- Zapal piksel początkowy. 
 
-Następnie dopóki nie napotkasz punktu końcowego, to dla kolejnych wartości x wykonuj:
-- Jeśli {math}P < 0{math end}, to wybierz piksel położony bezpośrednio po prawej stronie wcześniej wybranego i dodaj {math}A{math end} do {math}P{math end}.
-- W przeciwnym przypadku wybierz piksel po prawej położony wiersz wyżej niż wcześniej wybrany i dodaj {math}B{math end} do {math}P{math end}.
+Następnie dopóki nie napotkasz punktu końcowego, dla kolejnych wartości *x*, poruszając się wzdłuż osi *X* wykonuj:
+- Jeśli {math}P < 0{math end}, to zapal piksel położony bezpośrednio po prawej stronie wcześniej zapalonego i dodaj {math}A{math end} do {math}P{math end}.
+- W przeciwnym przypadku zapal piksel po prawej, położony wiersz wyżej niż wcześniej wybrany i dodaj {math}B{math end} do {math}P{math end}.
 
-Sprawdź działanie algorytmu Bresenhama, rysując ponownie odcinek z A do B:
+Sprawdź działanie algorytmu Bresenhama, rysując ponownie odcinek z *A* do *B*:
 
-{image filename="grid-20x20-diagonal-question.png" alt="Grid for drawing line from A to B"}
+{image filename="grid-20x20-diagonal-question.png" alt="Siatka do narysowania odcinka AB"}
 
 Sprawdź efekt przy pomocy linijki. Jak wyszło w porównaniu do wcześniejszych prób?
 
@@ -768,8 +768,8 @@ Poniżej zapisano obliczenia wykonane z użyciem algorytmu Bresenhama:
 
 | Etap obliczeń | Wybór piksela |
 |-------------|--------------------|
-| {math}A = 10,  B = -16{math end} | Zaznaczenie piksela początkowego. |
-| {math}P_0 = -3{math end} | Kolejny wybrany piksel jest bezpośrednio po prawej stronie poprzedniego. |
+| {math}A = 10,  B = -16{math end} | Zapalenie piksela początkowego. |
+| {math}P_0 = -3{math end} | Kolejny zapalony piksel jest bezpośrednio po prawej stronie poprzedniego. |
 | {math}P_1 = 7{math end} | Kolejny piksel to piksel po prawej w wierszu wyżej. |
 | {math}P_2 = -9{math end} | Kolejny piksel jest bezpośrednio po prawej stronie poprzedniego. |
 | {math}P_3 = 1{math end} | Kolejny piksel to piksel po prawej w wierszu wyżej. |
@@ -787,37 +787,37 @@ Poniżej zapisano obliczenia wykonane z użyciem algorytmu Bresenhama:
 
 ### Odcinki o innych kątach nachylenia
 
-Przedstawiona powyżej wersja algorytmu Bresenhama była wersją niepełną, gdyż działała poprawnie tylko dla odcinków o nachylonych do poziomu o kąt między 0 a 45 stopni (co odpowiada wartościom współczynnika m: od 0 do 1). Aby algorytm był uniwersalny, trzeba listę kroków algorytmu uzupełnić:
+Przedstawiona powyżej wersja algorytmu Bresenhama była wersją niepełną, gdyż działała poprawnie tylko dla odcinków nachylonych do poziomu o kąt między 0 a 45 stopni (co odpowiada wartościom współczynnika nachylenia *m* od 0 do 1). Aby algorytm był uniwersalny, trzeba listę kroków algorytmu uzupełnić:
 
-- W przypadku, gdy odcinek jest nachylony nie w górę, ale w dół, to wówczas, gdy P >= 0, jako kolejny piksel należy wybrać ten położony po prawej w wierszu niżej.
-- Jeśli wartość {math}y{math end} rośnie szybciej niż wartość {math}x{math end} (co odpowiada kątowi większemu niż 45 stopni), to podczas obliczania wartości A, B, i początkowej wartości P, w miejscu X we wzorze należy wstawić Y, i vice versa. Podczas wybierania kolejnych pikseli do rysunku odcinka, zamiast dopasowywać wartość Y do X należy zrobić odwrotnie, co oznacza, że w jednym wierszu nie może być dwóch pikseli.
+- W przypadku, gdy odcinek jest nachylony nie w górę, ale w dół, wówczas, gdy {math}P >= 0{math end}, jako kolejny piksel należy zapalić ten położony po prawej w wierszu niżej.
+- Jeśli wartość {math}y{math end} rośnie szybciej niż wartość {math}x{math end} (co odpowiada kątowi nachylenia większemu niż 45 stopni), to podczas obliczania wartości *A*, *B* i początkowej wartości *P*, zamień w algorytmie rolę osi *X* i *X* rolami. Oznacza to, że zamiast poruszać się wzdłuż osi *X*, poruszasz się wzdłuż *X*, a zamiast zapalać po jednym pikselu w każdej kolumnie, zapalasz po jednym pikselu w każdym wierszu.
 
-{image filename="grid-20x20-blank.png" alt="Grid for drawing line"}
+{image filename="grid-20x20-blank.png" alt="Siatka pikseli dla odcinka"}
 
 Zaznacz na siatce kwadratowej dowolne dwa punkty. 
 Wybierz je tak, aby nie łączył ich odcinek poziomy, pionowy, ani po przekątnej!
 
 Użyj algorytmu Bresenhama do narysowania odcinka. Sprawdź, że w efekcie otrzymujesz te same piksele, które uzyskać można z użyciem linijki lub równania prostej {math}y = mx+b{math end}.
-Ile operacji arytmetycznych (mnożenia i dodawania) były niezbędne do wyznaczenia zbioru pikseli metodą Bresenhama?
+Ile operacji arytmetycznych (mnożenia i dodawania) było wykonanych przy wyznaczaniu zbioru pikseli metodą Bresenhama?
 Ile byłoby ich w przypadku posługowania się równaniem {math}y = mx+b{math end}?
 Który sposób jest szybszy? (Pamiętaj, że w większości przypadków koszt dodawania jest o wiele mniejszy niż koszt mnożenia.)
 
 {panel type="teacher-note" summary="Szybkość metody Bresenhama"}
-Ta metoda dla wskazania kolejnego piksela wymaga wyłącznie: porównania z 0 i jednego dodawania. Jest o wiele szybsza od metody z równaniem.
+Ta metoda dla wskazania kolejnego piksela wymaga wyłącznie porównania jednej liczby całkowitej z zerem i jednego dodawania. Jest o wiele szybsza od metody z równaniem.
 {panel end}
 
 Możesz napisać program komputerowy lub użyć narzędzi arkusza kalkulacyjnego do wykonania obliczeń --- tego wymaga się od programistów zajmujących się grafiką komputerową.
 
 ### Okręgi
 
-Oprócz odcinków prostej, często komputery muszą tworzyć rysunki okręgów.
+Oprócz odcinków prostej, często komputery muszą rysować okręgi.
 Algorytm Bresenhama rysowania odcinków przystosowano do rysowania okręgów.
 
-Dany okrąg jest jednoznacznie określony przez środek okręgu i promień okręgu. Punkty na okręgu tworzą zbiór punktów równooddalonych od punktu zwanego środkiem okręgu.
+Dany okrąg jest jednoznacznie określony przez jego środek i promień. Przypomnijmy, że okrąg jest zbiorem punków oddalonych o promień od środka.
 
-{image filename="grid-20x20-circle-question.png" alt="Grid for drawing a circle"}
+{image filename="grid-20x20-circle-question.png" alt="Siatka pikseli dla okręgu"}
 
-Spróbuj narysować okrąg ,,na oko'', bez posługiwania się cyrklem. Dlaczego nie jest to takie proste?
+Spróbuj narysować okrąg „na oko”, bez posługiwania się cyrklem. Dlaczego nie jest to takie proste?
 
 Do określenia pikseli tworzących rysunek okręgu można by użyć twierdzenia Pitagorasa, ale to wymagałoby wielokrotnego obliczania pierwiastka kwadratowego, a tego nie da się zrobić zbyt szybko.
 Poniżej opisany algorytm jest o wiele szybszy. Poza tym posługuje się wyłącznie prostymi operacjami arytmetycznymi.
@@ -834,41 +834,41 @@ Oto kolejne kroki algorytmu dla okręgu o środku ({math}c_{x}{math end}, {math}
 {math-block}
 
 E = -R\\
-X = R\\
-Y = 0
+x = R\\
+y = 0
 
 {math-block end}
 
-Powtarzaj kolejne kroki aż {math}Y{math end} będzie mieć większą wartość niż {math}X{math end}:
+Powtarzaj kolejne kroki aż {math}y{math end} będzie mieć większą wartość niż {math}x{math end}:
 
-- Wybierz piksel o współrzędnych ({math}c_{x} + X{math end}, {math}c_{y} + Y{math end})
-- Zwiększ {math}E{math end} o wartość wyrażenia {math}2 \times Y + 1{math end}
-- Zwiększ {math}Y{math end} o 1
-- Jeśli {math}E >=0{math end} ,  to odejmij wartość {math}2 \times X - 1{math end} od {math}E{math end}, a następnie odejmij 1 od {math}X{math end}.
+- Zapal piksel o współrzędnych ({math}c_{x} + x{math end}, {math}c_{y} + y{math end}).
+- Zwiększ {math}E{math end} o wartość wyrażenia {math}2 \times y + 1{math end}.
+- Zwiększ {math}y{math end} o 1.
+- Jeśli {math}E >=0{math end},  to odejmij wartość {math}2 \times x - 1{math end} od {math}E{math end}, a następnie odejmij 1 od {math}x{math end}.
 
-Zastosuj algorytm, by stworzyć rysnek okręgu na siatce kwadratowej. Piksel opisany literą C ({math}c_{x}{math end}, {math}c_{y}{math end}) niech będzie środkiem okręgu, a piksel {math}R{math end} jednym z punktów na okręgu.
-Zwróć uwagę na to, że zgodnie z algorytmem rysowanie należy przerwać, gdy {math}Y{math end} będzie {math}X{math end}! 
+Zastosuj algorytm, by stworzyć rysunek okręgu na siatce kwadratowej. Piksel opisany literą *C* ({math}c_{x}{math end}, {math}c_{y}{math end}) niech będzie środkiem okręgu, a piksel {math}R{math end} jednym z punktów na okręgu.
+Zwróć uwagę na to, że zgodnie z algorytmem rysowanie należy przerwać, gdy {math}y{math end} będzie większe niż {math}x{math end}! 
 
-{image filename="grid-20x20-circle-question.png" alt="Grid for drawing a circle"}
+{image filename="grid-20x20-circle-question.png" alt="Siatka pikseli dla okręgu"}
 
 {panel type="teacher-note" summary="Rozwiązanie"}
-Na rysunku poniżej piksele uzyskane po wykonaniu algorytmu (ośma część okręgu) są zaznaczone kolorem czarnym. Ciemnym szarym kolorem zaznaczono piksele uzyskane kolejno jako efekt symetrii osiowej (jakby odbicia lustrzane) względem prostych równoległych do osi X i osi Y. Jasnym szarym kolorem zaznaczono piksele, które są obrazem pikseli w symetrii względem przekątnej kwadratu (siatki). 
-Warto, aby uczniowie samodzielnie poszukali odpowiednich przekształceń. (Dla przekątnej będą osiami symetrii będą proste o współczynnikach kierunkowych 1 i -1.)
+Na rysunku poniżej zaczerniono piksele uzyskane po wykonaniu algorytmu (jest to ośma część okręgu). Ciemnym szarym kolorem zaznaczono piksele uzyskane kolejno jako efekt symetrii osiowej (odbicia lustrzane) względem prostych równoległych do osi *X* i osi *Y*. Jasnym szarym kolorem zaznaczono piksele, które są obrazem pikseli w symetrii względem przekątnej siatki. 
+Warto, aby uczniowie samodzielnie poszukali odpowiednich przekształceń. (Dla symetrii względem przekątnych osiami symetrii są proste o współczynnikach kierunkowych 1 i -1.)
 
-{image filename="grid-20x20-circle-answer.png" alt="Solution for drawing a circle"}
+{image filename="grid-20x20-circle-answer.png" alt="Rozwiązanie dla okręgu"}
 
 Oto etapy obliczeń:
 
 | Etap obliczń | Wybrany piksel |
 |-------------|--------------------|
-| {math}E_0 = -7, X_0 = 7, Y_0 = 0{math end} | Wybór piksela (16, 9) |
-| {math}E_1 = -6, Y_1 = 1{math end} | Wybór piksela (16, 10) |
-| {math}E_2 = -3, Y_2 = 2{math end} | Wybór piksela (16, 11) |
+| {math}E_0 = -7, X_0 = 7, Y_0 = 0{math end} | Zapalenie piksela (16, 9) |
+| {math}E_1 = -6, Y_1 = 1{math end} | Zapalenie piksela (16, 10) |
+| {math}E_2 = -3, Y_2 = 2{math end} | Zapalenie piksela (16, 11) |
 | {math}E_3 = 2, Y_3 = 3{math end} | -  |
-| {math}E_4 = -11, X_4 = 6{math end} | Wybór piksela (15, 12) |
-| {math}E_5 = -4, Y_5 = 4{math end} | Wybór pikselal (15, 13) |
+| {math}E_4 = -11, X_4 = 6{math end} | Zapalenie (15, 12) |
+| {math}E_5 = -4, Y_5 = 4{math end} | Zapalenie (15, 13) |
 | {math}E_6 = 5, Y_6 = 5{math end} | - |
-| {math}E_7 = -6, X_7 = 5{math end} | Wybór piksela (14, 14) |
+| {math}E_7 = -6, X_7 = 5{math end} | Zapalenie (14, 14) |
 | {math}E_8 = 5, Y_8 = 6{math end} | *y* > *x*, co oznacza, że mamy ośmą część okręgu narysowaną |
 
 {panel end}
@@ -877,44 +877,44 @@ Oto etapy obliczeń:
 *Kwadrant* to ćwiartka jakiegoś obszaru. *Oktant* to óśma część jakiegoś obszaru.
 {panel end}
 
-W istocie komputer nie wykonuje wielu dodatkowych obliczeń w celu narysowania 7/8 okręgu. Algorytm wyznacza w każdej iteracji dwie liczby (x, y), które określają położenie piksela względem środka okręgu. Z łatwością wówczas wskazać 7 par liczb odpowiadających (x,y) w odpowiedniej symetrii: (x,-y), (-x,y), (-x,-y), (y,x), (y,-x), (-y,x) i (-y,-x). W sumie jest ich 8!
+W istocie komputer nie wykonuje wielu dodatkowych obliczeń w celu narysowania 7/8 okręgu. Algorytm wyznacza w każdej iteracji dwie liczby {math}(x, y){math end}, które określają położenie piksela względem środka okręgu. Z łatwością wówczas wskazać 7 par liczb odpowiadających {math}(x, y){math end} w odpowiedniej symetrii:{math}(x, -y){math end}, {math}(-x, y){math end}, {math}(-x, -y){math end}, {math}(y, x){math end}, {math}(y, -x){math end}, {math}(-y, x){math end} i {math}(-y, -x){math end}. W sumie mamy 8 pikseli w każdej iteracji.
 
-Warto dodać, że algorytm można dostosować do rysowania elips. Wówczas bazą jest wskazanie pikseli tworzących rysunek 1/4 elipsy.
+Warto dodać, że algorytm można dostosować do rysowania elips. Wówczas bazą dla rysunku jest 1/4 elipsy.
 
 ### Zastosowania praktyczne
 
-Komputery rysują odcinki prostych, okręgi i elipsy na potrzeby różnych zastosowań praktycznych: grafika w grach komputerowych, grafika w programach do architektów etc. Nawet kropka nad ,,i'' w dokumencie tekstowym musi być narysowana jako okrąg, gdy jest wyświetlana na ekranie. Przez składanie rysunków odcinków i okręgów oraz rózne techniki wypełniania krzywych i antyaliasingu można uzyskać efektowne gładkie krawędzie obiektów wyświetlanych na ekranie. W przypadku takich grafik nie ma ograniczenia stałej rozdzielczości. 
+Komputery rysują odcinki prostych, okręgi i elipsy na potrzeby różnych zastosowań praktycznych: grafiki w grach komputerowych, grafiki w programach dla architektów etc. Nawet kropka nad „i” w dokumencie tekstowym musi być narysowana jako okrąg, gdy jest wyświetlana na ekranie. Przez wzbogacenie metod rysowania odcinków i okręgów różnymi technikami wypełniania krzywych i wygładzania, można uzyskać efektowne gładkie krawędzie obiektów wyświetlanych na ekranie. W przypadku takich grafik nie ma ograniczenia rozdzielczości. 
 
-Taką grafikę nazywa się grafiką wektorową. Ma tę własność, że podczas powiększania wyświetlania obiektu unikniemy efektu pikselizacji. Powiększanie oznacza zwiększenie szczęgółowości obrazu, więc element obrazu jest rysowany wówczas na nowo, liczba pikseli tworzących obraz jest dopasowywana do rozmiaru ekranu. Koszt to obliczenia, które trzeba wykonać. Dlatego używa się szybkich algorytmów.
+Taką grafikę nazywa się grafiką wektorową. Ma tę własność, że podczas powiększania rysunku unikniemy efektu pikselizacji. Powiększanie oznacza zwiększenie szczęgółowości obrazu, więc element obrazu jest rysowany wówczas na nowo, liczba pikseli tworzących obraz jest dopasowywana do rozmiaru ekranu. Koszt to obliczenia, które trzeba wykonać. Dlatego używa się szybkich algorytmów.
 
-Najbardziej powszechne rysunki wektorowe to rysunki konturów czcionek (fontów) wyświetlanych na ekranie.
+Najbardziej powszechne rysunki wektorowe to rysunki konturów czcionek wyświetlanych na ekranie.
 
-Informatycy zajmują się projektowaniem szybkich algorytmy dla grafiki komputerowej. Nie chodzi tu wyłącznie o szybkość wyświetlania. Dzięki postępowi w tej dziedzinie oszczędza się również na żywotności np. baterii smartfonów, gdyż nie obarcza się ich procesorów zbędnymi obliczeniami.
+Informatycy zajmują się projektowaniem szybkich algorytmów dla grafiki komputerowej. Nie chodzi tu wyłącznie o szybkość wyświetlania. Dzięki postępowi w tej dziedzinie oszczędza się również na żywotności np. baterii smartfonów, gdyż nie obarcza się ich procesorów zbędnymi obliczeniami.
 
 Jak zwykle, szczegóły są bardziej skomplikowane. Na przykład, wyobraźmy sobie odcinek łączący punkty (0,0) i (10,0), złożony z 11 pikseli. Następnie porównajmy go z odcinkiem pochylonym pod kątem 45 stopni, łączącym punkty (0,0) i (10,10). Jego rysunek składa się z 11 pikseli, ale odcinek jest dłuższy (o ok. 41%).
 
-Jako skutek otrzymujemy więc efekt różnej grubości odcinków na ekranie. Tak postrzega je nasze oko. Aby zredukować to wrażenie, stosuje się różne techniki (przede wszystkim antyaliasing). 
+Jako skutek uboczny otrzymujemy więc różnej grubości odcinki na ekranie. Tak postrzega je nasze oko. Aby zredukować to wrażenie, stosuje się różne techniki, przede wszystkim wygładzanie (ang. anty-aliasing). 
 
 
 ## Podsumowanie
 
 Powyżej ukazany jest tylko mały wycinek dziedziny, jaką jest grafika komputerowa.
 Informatycy projektują algorytmy dla wielu obszarów grafiki komputerowej:
- - oświetlenie (np. w celu uzyskania efektu cienia w scenie 3D)
- - teksturowanie (np. w celu uzyskania możliwie realistycznego obrazu trawy, skóry, wody, frewana itd.),
- - antyaliasing (np. w celu zredukowania efektu ostrych krawędzi na obrazie)
- - rzutowanie (np. w celu odwzorowania obiektów 3D na płaszczyźnie),
+ - oświetlenia (np. w celu uzyskania efektu cienia w scenie 3D),
+ - teksturowania (np. w celu uzyskania możliwie realistycznego obrazu trawy, skóry, wody, drewana itd.),
+ - wygładzania (np. w celu zredukowania efektu ostrych krawędzi na obrazie),
+ - rzutowania (np. w celu odwzorowania obiektów 3D na płaszczyźnie),
  - ukrywania obiektów (np. w celu określenia fragmentów obiektu niwidocznych dla obserwatora),
- - renderowanie fotorealistyczne (tworzenie obrazów, które wyglądają jak obrazy pochodzące z rzeczywistości), jak i renderowanie nierealistyczne, taki jak ,,renderowanie malarskie'' (np. w celu uzyskania obrazu na wzór obrazów malarskich, czyli efekt pociągnienia pędzlem), and
- - symulowanie zajwisk takich, jak ogień, fale morskie, ruch człowieka itd. 
+ - renderowania fotorealistycznego (przy tworzeniu obrazów, które wyglądają jak obrazy pochodzące z rzeczywistości), jak i renderowania nierealistycznego, taki jak „renderowanie malarskie” (np. w celu uzyskania obrazu na wzór obrazów malarskich, czyli efektu pociągnienia pędzlem), and
+ - symulowania zajwisk takich jak ogień, fale morskie, ruch człowieka itd. 
 
-Mnożenie macierzy przedstawione w tym rozdziale to uproszczona wersja jednego z systemów, który oparty jest o [współrzedne jednorodne](https://en.wikipedia.org/wiki/Homogeneous_coordinates). Używa się w nim macierzy 4 x 4.
-Jego zaletą jest to, że wszystkie operacje można realizować wyłącznie przez mnożenienie (również przesunięcie). System pozwala też na uproszczenie innych operacji graficznych. Współczesne karty graficzne sprzętowo, a więc bardzo szybko, realizują operacje na współrzędnych jednorodnych.
+System oparty na mnożeniu macierzy 3 x 3, przedstawiony w tym rozdziale to uproszczona wersja jednego z systemów, który oparty jest o [współrzedne jednorodne](https://en.wikipedia.org/wiki/Homogeneous_coordinates). Używa się w nim macierzy 4 x 4.
+Jego zaletą jest to, że wszystkie operacje można realizować wyłącznie przez mnożenie (również przesunięcie). System pozwala też na uproszczenie innych operacji graficznych. Współczesne karty graficzne sprzętowo, a więc bardzo szybko, realizują operacje na współrzędnych jednorodnych.
 
 {panel type="Curiosity" summary="Moebius i jego odkrycia"}
 System współrzędnych jednorodnych wprowadził w 1827 roku niemiecki matematyk
 [August Ferdinand Möbius](https://en.wikipedia.org/wiki/August_Ferdinand_M%C3%B6bius), ponad 100 lat przed erą komputerów.
-Möbius jest prawodopoodbnie bardziej znany jako twórca matematycznego opisu powierzchni jednostronnej, okreslanej jako [wstęga Möbiusa](https://en.wikipedia.org/wiki/M%C3%B6bius_strip)!
+Möbius jest prawodopoodbnie bardziej znany jako odkrywca pewnej matematycznej powierzchni jednostronnej, określanej jako [wstęga Möbiusa](https://en.wikipedia.org/wiki/M%C3%B6bius_strip)!
 
 
 
