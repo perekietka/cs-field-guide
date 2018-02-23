@@ -14,13 +14,13 @@ Pomysł, by *wszystko* w naszym cyfrowym świecie zapisywać z użyciem tylko dw
 Zacznij od wskazania ostatniej karty (po prawej). Wtedy zobaczysz, że na stronie z białym tłem znajduje się pojedyncza czarna kropka.
 Następnie wskaż na sąsiednią kartę, by na odwrocie zobaczyć dwie czarne kropki. Ile kropek kropek zobaczysz po odwróceniu kolejnej karty? Sprawdź! Staraj się odgadnąć liczbę kropek znajdujących się na kolejnych kartach.
 
-{interactive name="binary-cards" type="whole-page" text="Binary Cards" parameters="digits=5&start=BBBBB"}
+{interactive name="binary-cards" type="whole-page" text="Karty binarne" parameters="digits=5&start=BBBBB"}
 
 Kolejne wyzwanie brzmi: Które karty należy odwrócić, aby łączna liczba kropek była równa 22? Jaka będzie odpowiedź dla liczby kropek równej: 11, 29 lub 19? Czy jakiejś liczby kropek nie sa się uzyskać? Możesz zacząć zliczanie od 0, jeśli chcesz.
 
 {panel type="teacher-note" summary="Wskazówki dla nauczyciela"}
 
-W czasie zajęć szkolnych zamiast interaktywnego apletu, można użyć papierowych kart.
+W czasie zajęć szkolnych zamiast narzędzia interaktywnego, można użyć papierowych kart.
 
 Jeśli uczniowie napotykają trudności w znalezieniu odpowiedzi na powyższe pytania, nauczyciel powinien wskazywać kolejne karty z lewej i stawiać pytania: „Czy karta z 16 kropkami jest porzebna? A karta z 8 kropkami?” itd.
 Uczniowie szybko przekonają się, że skuteczna jest metoda zachłanna: albo liczba kropek na karcie jest za duża, albo karty należy użyć.
@@ -79,7 +79,7 @@ Ten rozdział przedstawia różne metody, jakie są używane w systemach kompute
 Na początek przyjrzymy się kodowi (alfabetowi) Braille'a, który umożliwia zapisywanie i odczytywanie tekstów osobom niewidomym i niedowidzącym. Mimo że system brajlowski nie ma nic wspólnego z komputerami, to stanowi znakomite wprowadzenie do tematu tego rozdziału przewodnika po informatyce.
 
 {panel type="additional-information" summary="Zapis znaków Braille'a"}
-Dla uproszczenia ideę tzw. sześciopunku można zilustrować używając sześciu małych kół ułożonych w dwóch kolumnach po trzy punkty w każdej.
+Dla uproszczenia ideę tzw. \opunku można zilustrować używając sześciu małych kół ułożonych w dwóch kolumnach po trzy punkty w każdej.
 Koła z zamalowanym wnętrzem będą ilustracją punktów wypukłych. 
 {panel end}
 
@@ -113,7 +113,7 @@ W obrębie sześciopunktu można uzyskać 64 wzorce. To wystarcza na oznaczenie 
 ### Kod Braille'a a binarny zapis informacji
 
 Kod Braille'a jest ilustracją zapisu z użyciem bitów. Istotnie, rozróżnia się dwa stany punktu (wypukły lub niewypukły), a każdy z wzorców tzw. sześciopunktu odpowiada innemu znakowi alfabetu.
-Na przykład litera m może być zapisana jako 110010, gdzie "1" oznacza punkt wypukły, a "0" niewypukły (przy założeniu, że czytamy od lewej do prawej i z góry na dół). 
+Na przykład litera m może być zapisana jako 110010, gdzie „1” oznacza punkt wypukły, a „0” niewypukły (przy założeniu, że czytamy od lewej do prawej i z góry na dół). 
 W informatyce takich ciągów zer i jedynek używa się w analogiczny sposób do ukazania sposobu zapisu informacji w komputerze.
 
 Alfabet Braille'a jest dobrą ilustracją przyczyn użyteczności zapisu binarnego. Można sobie wyobrazić system używający trzech rodzajów kropek: niewypukłych, półwypukłych i wypukłych. Z pewnością wprawny czytelnik potrafiłby je rozróżnić, a wtedy do uzyskania 64 znaków wystarczyłaby kombinacja czterech kropek. Kłopot w tym, że potrzebne byłyby bardziej dokładne urządzenia do tworzenia kropek, a ludzie musieliby więcej uwagi poświęcać rozróżnianiu kropek podczas „czytania”. Wystarczyłoby wtedy, że kartka zostałaby przygnieciona, nawet bardzo nieznacznie, a informacja stałby się nieczytelna.
@@ -134,7 +134,7 @@ Bardziej pogłębione objaśnienie zalet praktycznych systemu binarnego znajduje
 ## Liczby
 
 {panel type="teacher-note" summary="Rozgrzewka bez komputera"}
-W ramach rozgrzewki można użyć ćwiczenia opisanego w scenariuszu zajęć (w języku angielskim) projektu CS Unplugged [http://csunplugged.org/binary-numbers](http://csunplugged.org/binary-numbers). Pojęcie systemu dwójkowego (binarnego) jest tam wprowadzone krok po kroku z użyciem wyłączniem prostych operacji zliczania i dodawania. 
+W ramach rozgrzewki można użyć ćwiczenia opisanego w scenariuszu zajęć projektu [CS Unplugged](http://jasijoasia.edu.pl/csu1.pdf). Pojęcie systemu dwójkowego (binarnego) jest tam wprowadzone krok po kroku z użyciem wyłączniem prostych operacji zliczania i dodawania. 
 
 Oto interaktyne narzędzie, w którym odwzorowano tradycyjne karty czarno-białe:
 {interactive name="binary-cards" type="whole-page" text="Binary Cards"}
@@ -186,7 +186,7 @@ Zaskakująco często w podręcznikach informatyki poświęca się wiele miejsca 
 
 {panel type="teacher-note" summary="Binarne pianino"}
 Binarne pianino to prosty środek dydaktyczny do nauki pewnej metody konwersji między systemami liczbowymi. Po wydrukowaniu uczniowie mogą wykonać samodzielne eksperymenty, które pozwolą zrozumieć istotę konwersji.
-Można je [pobrać stąd](files/binary-piano-UC.pdf)
+Można je [pobrać stąd](files/binary-piano-UC.pdf).
 Wersja szablonu z czterema kopiami pianina [jest tutaj](files/binary-piano-UC-4up.pdf).
 W obu wersjach stosuje się zapis 9-bitowy. W sytuacji, gdy wprowadzamy pojęcie bajta, uczniowie mogą 9. bit zignortować (ustawić na 0).
 Obecność 9. bitu na wydruku ma następujące uzasadnienie dydaktyczne: łatwo znaleźć największą liczbę 8-bitową: od wartości dziesiętnej 9. bitu wystarczy odjąć 1.
@@ -212,7 +212,7 @@ Po wykonaniu kilku prób stanie się dla uczniów oczywiste, co należy robić. 
 Jeśli pomoc nauczyciela okaże się konieczna, to warto posłużyć się konkretnym przykładem. Na przykład dla liczby 37 nauczyciel zaczyna od ustawienia wszystkich bitów na 0 za wyjątkiem liczby na pozycji odpowiadającej liczbie 32 (która jest pierwszą nie przekraczającą 37). Następnie zachęca ucznia do odganięcia wartości bitu na pozycji odpowiadającej liczbie 16: ustawienie bitu na 1 oznaczałoby, że liczba jest nie mniejsza niż 48, więc bit trzeba ustawić na 0. Podobnie jest dla bitu na pozycji o wartości 8. Kolejny bit (odpowiadający składnikowi 4) należy ustawić na 1 (dostajemy sumę 36), następny na 0, a ostatni na 1 (suma: 37). Uzyskujemy zapis binarny: 100101.
 W podręczniku metoda jest wyjaśniona, lecz lepiej byłoby, gdyby uczniowie odkryli ją samodzielnie, drogą eksperymentów z binanrym pianinem.
 
-W internecie można znaleźć wiele gier, które pomagają zgłębić temat liczb binarnych. Jedna z nich to [Cisco Binary game](http://forums.cisco.com/CertCom/game/binary_game_page.htm).
+W internecie można znaleźć wiele gier, które pomagają zgłębić temat liczb binarnych. 
 
 Istnieje inny algorytm konwersji, zwany metodą ilorazową, który często pojawia się w podręcznikach, zwłaszcza w podręcznikach programowania. Ma tę własność, że dość łatwo można go zapisać w języku programowania, ale trudniej zrozumieć jego poprawność. 
 Prezentacja tego algorytmu nie jest niezbędna do zrozumienia dalszej części rozdziału.
@@ -378,37 +378,17 @@ Narzędzia takie jak Google Maps przetwarzają astronomiczne ilości danych. Mar
 {panel type="challenge" summary="Ile bitów jest niezbędnych?"}
 Czymś bardzo użytecznym jest oszacowanie liczby bitów niezbędnych do zapamiętania pewnych wartości. Zastanów się, jaka byłaby odpowiedź dla sytuacji przedstawionych poniżej. Pamiętaj, że chcesz mieć możliwość zapamiętania największej z potencjalnych wartości, ale nie chcesz marnować pamięci komputera.
 
-1. Informacja o dniu tygodnia
-a) 1 bit
-b) 4 bity
-c) 8 bitów
-d) 32 bity
-2. Informacja o liczbie ludzi na świecie
-a) 16 bitów
-b) 32 bity
-c) 64 bity
-d) 128 bitów
-3. Informacja o liczbie dróg w Nowej Zelandii
-a) 16 bitów
-b) 32 bity
-c) 64 bity
-d) 128 bitów
-4. Informacja o liczbie gwiazd we wszechświecie
-a) 16 bitów
-b) 32 bity
-c) 64 bity
-d) 128 bitów
+1. Informacja o dniu tygodnia: a) 1 bit? b) 4 bity? c) 8 bitów? d) 32 bity?
+2. Informacja o liczbie ludzi na świecie: a) 16 bitów? b) 32 bity? c) 64 bity? d) 128 bitów?
+3. Informacja o liczbie dróg w Nowej Zelandii: a) 16 bitów? b) 32 bity? c) 64 bity? d) 128 bitów?
+4. Informacja o liczbie gwiazd we wszechświecie: a) 16 bitów? b) 32 bity? c) 64 bity? d) 128 bitów?
 {panel end}
 
 {panel type="spoiler" summary="Odpowiedzi"}
-1. b
-Właściwie to już 3 bity pozwolą na zapis 8 różnych wartości; ale technicznie lepszym rozwiązaniem są 4 bity ze względu na to, że na 8 bitach można by łatwo zapisać informacje o dwóch dniach tygodnia.
-2. c 
-32 bity to za mało.
-3. c 
-To było trudne pytanie, ale projektujący bazę danych musi i o takich rzeczach myśleć. W Nowej Zelandii jest łącznie ok. 94 000 km dróg i założenie, że średnia długość drogi to przynajmniej 1 km prowadzi do wniosku, że 16 bitów to za mało. Bezpieczniejszą opcją wydają się 32 bity.
-4. d 
-64 bity to za mało, a 128 bitów to o wiele za dużo! Trzeba pamiętać, że największa liczba 128-bitowa nie jest dwa razy większa niż największa liczba 64-bitowa.
+1. b) Właściwie to już 3 bity pozwolą na zapis 8 różnych wartości; ale technicznie lepszym rozwiązaniem są 4 bity ze względu na to, że na 8 bitach można by łatwo zapisać informacje o dwóch dniach tygodnia.
+2. c) 32 bity to za mało.
+3. c) To było trudne pytanie, ale projektujący bazę danych musi i o takich rzeczach myśleć. W Nowej Zelandii jest łącznie ok. 94 000 km dróg i założenie, że średnia długość drogi to przynajmniej 1 km prowadzi do wniosku, że 16 bitów to za mało. Bezpieczniejszą opcją wydają się 32 bity.
+4. d) 64 bity to za mało, a 128 bitów to o wiele za dużo! Trzeba pamiętać, że największa liczba 128-bitowa nie jest dwa razy większa niż największa liczba 64-bitowa.
 {panel end}
 
 ### Zapis binarny liczb ujemnych
@@ -681,7 +661,7 @@ Wspólną nazwą dla dużych i małych liter, liczb i symboli jest *znak* (ang. 
 Należy podkreślić, że spacja (odstęp) jest również znakiem.
 {panel end}
 
-Jeśli ktoś dokładnie policzył, to wie, że znaków jest więcej niż 64, bo ponad 90! Użycie 6 bitów nie wystarczy, by zapisać wszystkie znaki. Okazuje się, że potrzeba przynajmniej 7 bitów. Dokładnie tyle zastosowano w oryginalnej wersji kodowania **ASCII**.
+Jeśli ktoś dokładnie policzył, to wie, że znaków jest więcej niż 64, bo ponad 90. Użycie 6 bitów nie wystarczy, by zapisać wszystkie znaki. Okazuje się, że potrzeba przynajmniej 7 bitów. Dokładnie tyle zastosowano w oryginalnej wersji kodowania **ASCII**.
 
 {panel type="challenge" summary="Dlaczego 7 bitów?"}
 Przy omawianiu kodu Braille'a wyjaśniliśmy, co dzieje się po zwiększeniu liczby punktów o 1 (pamiętaj, że kod Braille'a jest kodem binarnym). Możesz wyjaśnić, skąd wiadomo, że 6 bitów wystarczy do zapisu 64 znaków, a 7 bitów pozwala na zapis nawet 128 znaków?
@@ -693,7 +673,7 @@ W tabeli przedstawiono zestawienie znaków i odpowiadajacych im wzorców 7-bitow
 
 | postać binarna  | znak  | postać binarna  | znak | postać binarna  | znak  |
 |---------|-------|---------|------|---------|-------|
-| 0100000 | spacja (odstęp) | 1000000 | @    | 1100000 | `     |
+| 0100000 | spacja (odstęp) | 1000000 | @    | 1100000 | \`     |
 | 0100001 | !     | 1000001 | A    | 1100001 | a     |
 | 0100010 | "     | 1000010 | B    | 1100010 | b     |
 | 0100011 | #     | 1000011 | C    | 1100011 | c     |
@@ -758,7 +738,7 @@ Oto odpowiedzi:
 - „Wellington” to 01010111 01100101 01101100 01101100 01101001 01101110 01100111 01110100 01101111 01101110
 - „358” to 00110011 00110101 00111000
 
-Zauważ, że ciąg znaków „358” (w kodzie ASCII) można pomylić z liczbą 358! Z taką sytuacją możesz spotkać się np. w arkuszu kalkulacyjnym. Warto wiedzieć, że poprzedzenie pierwszej cyfry znakiem ' niejako wymusza, by arkusz traktował cyfry jako znaki tekstu, a nie liczby. To jest istotne np. gdy chcemy zapisać numer telefonu. Domyślnie 061555555 przez artkusz będzie potraktowane jako 61555555 (pominięte będzie 0).
+Zauważ, że ciąg znaków „358” (w kodzie ASCII) można pomylić z liczbą 358. Z taką sytuacją możesz spotkać się np. w arkuszu kalkulacyjnym. Warto wiedzieć, że poprzedzenie pierwszej cyfry znakiem ' niejako wymusza, by arkusz traktował cyfry jako znaki tekstu, a nie liczby. To jest istotne np. gdy chcemy zapisać numer telefonu. Domyślnie 061555555 przez artkusz będzie potraktowane jako 61555555 (pominięte będzie 0).
 {panel end}
 
 #### ASCII w praktyce
@@ -769,7 +749,7 @@ Dla tekstów w języku angielskim kod ASCII jest wystarczającym rozwiązaniem. 
 
 {panel type="curiosity" summary="Co było przed ASCII?"}
 Warto wspomnieć, że zanim pojawił się standard ASCII w usługach telegraficznych stosowano inne standardy: kod Baudota i EBCDIC. 
-Powszechnie stosowana była odmiana kodu o nazwie "Baudot-Murray code". Jej autorem był Donald Murray, urodzony w Nowej Zelandii. Jednym z elementów kodu było wprowadzenie "kodów kontrolnych", takich jak kod powrotu karerki i nowej linii. Zauważ, że przycisk "control" nadal jest elementem klawiatury.
+Powszechnie stosowana była odmiana kodu o nazwie o nazwie kod Baudota-Murraya. Jej autorem był Donald Murray, urodzony w Nowej Zelandii. Jednym z elementów kodu było wprowadzenie „kodów kontrolnych”, takich jak kod powrotu karerki i nowej linii. Zauważ, że przycisk „control (ctrl)” nadal jest elementem klawiatury.
 {panel end}
 
 ### Wprowadzenie do Unicode
@@ -914,7 +894,7 @@ kod | typ schematu | liczba bitów na znak | powszechność użycia
 *UTF-16* | zmiennej długości | 16 lub 32 bity | często używany
 *UTF-32* |stałej długości | 32 bity | rzadko używany
 
-Celem porównania metod kodowania, trzeba określić kryteria uznania kodowania za "dobre". Oto dwa kryteria:
+Celem porównania metod kodowania, trzeba określić kryteria uznania kodowania za „dobre”. Oto dwa kryteria:
 
 1. Pozwala na zapis wszystkich znaków, niezależnie od języka.
 2. Do zapisu używa jak najmniejszej liczby bitów.
@@ -941,7 +921,7 @@ W nagraniu wideo udostępnionym poniżej ukryte są wiadomości zapisane z użyc
 
 Jeśli założyć, że chcemy zapisywać 26 liter angielskiego alfabetu (bez rozróżniania małych i dużych liter), to okazuje się, że 5 bitów wystarczy. 
 
-Niech 1 odpowiada literze *a*, 2 -- literze *b*, 3 --*c*, a 26 -- *z*. (Możesz się sam przekonać, że jeśli kody ASCII liter „obciąć” do 5 bitów mniej znaczących, to otrzymamy kody odpowiadające 1, 2, ..., 26.)
+Niech 1 odpowiada literze *a*, 2 -- literze *b*, 3 -- *c*, a 26 -- *z*. (Możesz się sam przekonać, że jeśli kody ASCII liter „obciąć” do 5 bitów mniej znaczących, to otrzymamy kody odpowiadające 1, 2, ..., 26.)
 
 Zapisz słowo „water” używając opisanego wyżej schematu 5-bitowego kodowania.
 
@@ -990,16 +970,14 @@ Kolory wyświetlane na ekranach telewizorów też uzyskuje się przez zmieszanie
 Poniżej znajduje się interaktywne narzędzie, które pozwala na lepsze zrozumienie modelu kolorów RGB.
 
 {interactive name="rgb-mixer" type="in-page"}
-
-Możesz sprawdzić, jak to działa, używając małej aplikacji, zamieszczonej poniżej.
-•    Zmieniaj ustawienia każdego z suwaków.
-•    Jak uzyskać kolor żółty?
-•    Jaki będzie efekt, gdy wszystkie suwaki ustawisz na 0? Jaki, jeśli wszystkie będą mieć wartość 255?
-•    Co zobaczysz, gdy suwaki ustawisz w połowie?
-•    Co się stanie, gdy jeden z suwaków będzie ustawiony do prawej, a dwa inne w połowie?
-•    Jak uzyskać kolory: purpurowy, pomarańczowy i różowy?
-•    Co się stanie, gdy wszystkie suwaki będą ustawione na tę samą wartość?
-•    Jak uzyskać kolor czarny? A biały?
+1. Zmieniaj ustawienia każdego z suwaków.
+2. Jak uzyskać kolor żółty?
+3. Jaki będzie efekt, gdy wszystkie suwaki ustawisz na 0? Jaki, jeśli wszystkie będą mieć wartość 255?
+4. Co zobaczysz, gdy suwaki ustawisz w połowie?
+5. Co się stanie, gdy jeden z suwaków będzie ustawiony do prawej, a dwa inne w połowie?
+6. Jak uzyskać kolory: purpurowy, pomarańczowy i różowy?
+7. Co się stanie, gdy wszystkie suwaki będą ustawione na tę samą wartość?
+8. Jak uzyskać kolor czarny? A biały?
 
 {panel type="spoiler" summary="Wskazówki"}
 Ustawienie wszystkich suwaków w skrajnych pozycjach (na jednym z końców) da kolor biały lub czarny, a ustawienie ich w równej odległości od końców da odciecie szarości (tj. przejście między czarnym a białym).
@@ -1083,7 +1061,7 @@ Osoba, która rozumie, na czym polega tworzenie kodów szesnastkowych, potrafi z
 
 Poniżej znajduje się narzędzie, które pozwala na eksperymentowanie z szesnastkowymi kodami koloru.
 
-{interactive name="hex-background-colour" type="in-page"}
+\interactive name="hex-background-colour" type="in-page"
 
 {panel end}
 
@@ -1154,7 +1132,7 @@ Więcej informacji znajdziesz w rozdziale poświęconym kompresji danych!
 ## Zapis binarny instrukcji w komputrze
 
 {panel type="caution" expanded="True"}
-Lekturę tego podrozdziału warto poprzedzić zapoznaniem się opisem języków programowania niskiego poziomu w rozdziale „Języki programowania”. (chapters/programming-languages.html#machine-code-low-level-languages).
+Lekturę tego podrozdziału warto poprzedzić zapoznaniem się opisem języków programowania niskiego poziomu w rozdziale [„Języki programowania”](chapters/programming-languages.html#machine-code-low-level-languages).
 {panel end}
 
 W pamięci komputera zapisuje się binarnie również ciąg instrukcji tworzących program komputerowy.
@@ -1209,12 +1187,14 @@ Ten rozdział nie zwierał informacji na temat zapisu binarnego innego typu dany
 
 ## Dalsza lektura
 
-Warto zapoznać się łamigłówkami, w których rozwiązaniu przydaje się znajomość zapisu binarnego: [http://www.cs4fn.org/binary/lock/](http://www.cs4fn.org/binary/lock/)
+Warto zapoznać się łamigłówkami, w których rozwiązaniu przydaje się znajomość zapisu binarnego: [http://www.cs4fn.org/binary/lock/](http://www.cs4fn.org/binary/lock/) (w języku angielskim).
 
-[Ta strona](http://courses.cs.vt.edu/~csonline/NumberSystems/Lessons/index.html) zawiera wiele informacji i ćwiczeń na temat arytmetyki komputerowej.
+[Ta strona](http://courses.cs.vt.edu/~csonline/NumberSystems/Lessons/index.html) zawiera wiele informacji i ćwiczeń na temat arytmetyki komputerowej (w języku angielskim).
 
 
 ### Ciekawe odnośniki
+
+Wszystkie materiały edukacyjne są w języku angielskim.
 
 - [Podstawy zapisu binarnego](http://csunplugged.org/binary-numbers)
 - [Zapis bitów z użyciem dźwieku](http://csunplugged.org/modem)
