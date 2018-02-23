@@ -482,7 +482,7 @@ Typowe zadania, takie jak kopiowanie i wklejanie, zwykle mają dodane do nich kl
 Ważnym obszarem badań w HCI jest wypracowywanie sposobów łatwego uczenia się na skróty.
 Nie chcesz, aby przeszkadzały one początkującym, ale nie chcesz, aby doświadczeni użytkownicy byli ich pozbawieni.
 Prostym sposobem na to jest posiadanie w menu skrótów klawiszowych (akceleratorów) dla poszczególnych pozycji menu. Wyświetlone menu pokazuje, że SHIFT-COMMAND-O otworzy nowy projekt, aby użytkownik mógł nauczyć się tej sekwencji, jeśli często używa tego polecenia.
-{image filename = "menu-keystroke-equivalent.png" alt = "Menu ze skrótami klawiszowymi" wrap = "left"}
+{image filename="menu-keystroke-equivalent.png" alt ="Menu ze skrótami klawiszowymi" wrap ="left"}
 Elastyczny system pozwoliłby użytkownikowi dodać skrót klawiszowy np. dla polecenia „Zamknij panel”, gdyby okazało się, że jest często używany.
 System może nawet podpowiadać uzytkownikowi utworzenie skrótu, jeśli zauważy, że czynność jest wykonywana często.
 Innym rozwiązaniem jest przesuwanie przez system do góry menu opcji najczęściej używanych.
