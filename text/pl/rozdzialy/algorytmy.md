@@ -54,7 +54,7 @@ Taka wiedza ma ogromne znaczenie: algorytm jest wystarczająco szybki dla małyc
 
 Najbardziej precyzjnym sposobem zapisu listy instrukcji algorytmu jest kod źródłowy programu komputerowego, zapisany w konkretnym języku programowania. Taka forma zapisu algorytmu stanowi kod zrozumiały dla komputera.
 
-Algorytm rzyniesienia szklanki wody z kuchni można by zapisać w formie programu komputerowego, który wykonałby robot. Oczywiście programista musiałby użyć języka programowania, który rozumie komputer wbudowany w robota.
+Algorytm przyniesienia szklanki wody z kuchni można by zapisać w formie programu komputerowego, który wykonałby robot. Oczywiście programista musiałby użyć języka programowania, który rozumie komputer wbudowany w robota.
 
 Poniżej zapisano algorytm znajdowania największej wartości w tablicy. Użyto języka Python.
 Trzeba podkreślić, że nawet w tym jednym konkretnym języku programowania można by na wiele sposobów zapisać ten sam algorytm. Różni programiści mogliby zapisać pewne szczegóły techniczne w trochę inny sposób.
@@ -94,7 +94,7 @@ Warto, aby programista potrafił określić szybkość algorytmu, zanim zdecyduj
 {panel type="extra-for-experts" "Złożoność obliczeniowa algorytmów"}
 Szacowanie kosztów algorytmu znane jest w informatyce pod nazwa [analiza algorytmu](https://en.wikipedia.org/wiki/Analysis_of_algorithms). Taka analiza powinna prowadzić do wyznaczenia *złożoności obliczeniowej* algorytmu (dotyczącej czasu działania komputerowej realizacji algorytmu), ale czasami dodatkowo i *złożoności pamięciowej* algorytmu (dotyczącej wymagań co do pamięci potrzebnej do działania).
 
-Więcej informacji na temat określania kosztu algorytmu, m.in. o notacji „duże Θ”, znajduje się w podrozdziale ["Podsumowanie"](chapters/algorithms.html#the-whole-story) .
+Więcej informacji na temat określania kosztu algorytmu, m.in. o notacji „duże Θ”, znajduje się w podrozdziale [„Podsumowanie”](chapters/algorithms.html#the-whole-story) .
 {panel end}
 
 Trzeba podkreślić, że czas potrzebny różnym komputerom do realizacji tego samego algorytmu i tych samych danych może być różny. Zależy to od parametrów komputerów, ilości zasobów przydzielonych do wykonania zadania, ale i od języka programowania, w którym algorytm został zakodowany. Dlatego trzeba być ostrożnym w wyciąganiu pochopnych wniosków o koszcie algorytmu tylko na podstawie czasu wykonania programu. 
@@ -114,7 +114,7 @@ Na przykładach tych typów algorytmów można w ciekawy sposób przedstawić kl
 
 {panel type="teacher-note" summary="Prezentacja tematu w klasie"}
 
-Gry zaproponowane w tym podrozdziale są wzorowane na scenariuszu [Gra w statki](http://csunplugged.com/searching-algorithms). Pierwsza dotyczy algorytmu przeszukiawnia liniowego (zwanego też sekwencyjnym), a druga -- algorytmu przeszukiwania binarnego (zwanego też dwudzielnym).
+Gry zaproponowane w tym podrozdziale są wzorowane na scenariuszu [Gra w statki](http://jasijoasia.edu.pl/csu1.pdf), opisanej w scenariuszu 6 w zbiorze scenariuszy lekcji bez komputera. Pierwsza dotyczy algorytmu przeszukiawnia liniowego (zwanego też sekwencyjnym), a druga -- algorytmu przeszukiwania binarnego (zwanego też dwudzielnym).
 
 Wszyscy uczniowie w klasie powinni w tym samym czasie zagrać w każdą z gier. Po zakończeniu pierwszej gry (obu części) nauczyciel powinien poprowadzić krótką dyskusję. Może zacząć od pytań: „Komu udało się zakończyć grę z sukcesem już w pierwszej próbie?”, „Kto potrzebował sprawdzić wszystkie pudełka?”. Warto wyznaczyć średnią liczby prób.
 
@@ -148,13 +148,13 @@ W pierwszej z gier pudełka ustawione były w przypadkowej kolejności. Trudno w
 
 W przypadku przeszukiwania listy 10 elementów, średnia liczba prób prowadzących do sukcesu to 5. Dla listy 10 000 elementów tych prób będzie średnio 5000. Oczywiście w konkretnym przypadku liczba prób może być mniejsza od średniej, nawet znacznie mniejsza, albo i większa.
 
-{panel type="curiosity" summary="Przeszukiwanie metodą Bozo-Search?"}
+{panel type="curiosity" summary="Przeszukiwanie metodą Bozo?"}
 W filmie na początku rozdziału pojawił się zabawny przykład przeszukiwania, zwany po angielsku Bozo-Search. Od przeszukiwania liniowego różni się tym, że wielokrotnie może być sprawdzany ten sam element zbioru (np. zawartość pudełka), gdyż element raz sprawdzony nie jest odrzucany (po prostu wraca do zbioru elementów).
 {panel end}
 
 ### Przeszukiwanie binarne
 
-{glossary-definition term="Binary Search" definition="Searching a sorted list by looking at the middle item, and then searching the appropriate half recursively (used for phone books, dictionaries and computer algorithms)."}
+{glossary-definition term="przeszukiwanie binarne" definition="Searching a sorted list by looking at the middle item, and then searching the appropriate half recursively (used for phone books, dictionaries and computer algorithms)."}
 
 W drugiej z gier pudełka były uporządkowane, co umożliwiło podejmowanie kolejnych prób w sposób przemyślany. Być może nieświadomie ktoś stosował algorytm zwany w informatyce przeszukiwaniem binarnym (dwudzielnym).
 
@@ -186,7 +186,7 @@ Trzeba pamiętać, że przeszukiwanie binarne można stosować tylko dla zbioró
 
 
 {panel type="project" summary="Zakodowane algorytmy przeszukiwania"}
-Poniżej znajdują się odnośniki do komputerowych realizacji algorytmów przeszukiwania zapisanych w różnych językach; możesz się nimi posłużyć do przygotowania list losowych wartości i porównania kosztów wykonania programów.
+Poniżej znajdują się odnośniki do komputerowych realizacji algorytmów przeszukiwania, zapisanych w różnych językach; możesz się nimi posłużyć do przygotowania list losowych wartości i porównania kosztów wykonania programów.
 Twoje zadanie polega na wykonaniu pomiarów czasu działania programów dla coraz większych wartości (*n*); wyniki spróbuj przedstawić na wykresie.
 - [Scratch](files/linear-binary-search-scratch.zip) - [Download Scratch here](https://scratch.mit.edu/scratch2download/)
 - [Python (Version 2)](files/linear-binary-search-python2.py) - [Download Python 2 here](https://www.python.org/downloads/)
@@ -208,9 +208,9 @@ Jak zwykle uporządkowane są informacje w książce telefonicznej? Według nazw
 
 Wymyślono wiele algorytmów porządkowania. W tym podrozdziale przedstawione będą trzy: dwa mniej efektywne i jeden bardzo szybki.
 
-### Waga szalkowa (online)
+### Interaktywna waga szalkowa
 
-Udostępniamy interaktywne narzędzie z wirtualną wagą szalkową do testowania algorytmów opisanych poniżej. U dołu ekranu pojawia się informacja o liczbie porównań (ważeń): każde ważenie to jedno porównanie. Koszt algorytmu będzie określony liczbą porównań użytych do uporządkowania 8 pudełek. Zakładamy, że na każdej szalce wagi kładzie się jedno pudełko.
+Poniżej udostępniamy interaktywne narzędzie z wirtualną wagą szalkową do testowania algorytmów opisanych poniżej. U dołu ekranu pojawia się informacja o liczbie porównań (ważeń): każde ważenie to jedno porównanie. Koszt algorytmu będzie określony liczbą porównań użytych do uporządkowania 8 pudełek. Zakładamy, że na każdej szalce wagi kładzie się jedno pudełko.
 
 Pudełka należy uporządkować od najlżejszego po lewej do najcięższego po prawej. Do sprawdzenia użyj przycisku „Sprawdź porządek”.
 
@@ -246,10 +246,10 @@ Dla przykładu wyznaczmy liczbę porównań dla 20 pudełek (*n* = 20):
 
 = 190 porównań
 
-Niektórzy uczniowie mogą znać anegdotę o Gaussie (zobacz artykuł w [Wikipedii](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss#Anecdotes). 
+Niektórzy uczniowie mogą znać anegdotę o Gaussie (zobacz artykuł (ang.) w [Wikipedii](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss#Anecdotes). 
 W wersji dla 20 pudełek obliczenia przypisywane młodemu Gaussowi wyglądałyby tak: 
 Sumę 1+2+3+...+17+18+19 zapisujemy wspak (19+18+17+...3+2+1) w taki sposób, aby 19 znalazło się pod 1, 18 pod 2, 17 pod 3 itd. Otrzymuejmy 19 par: (1+19)+(2+18)+(3+17)+...+(17+3)+(18+2)+(19+1). Ta suma jest równa: 20\*19. Liczba porównań jest więc równa 20\*19/2 = 190 (każdy składnik sumy występuje dwa razy).  
-Warto obejrzeć [trik Gaussa na wideo](http://www.numberphile.com/videos/one_to_million.html) i zapoznać się z innymi przykładami [na tej stronie](http://nzmaths.co.nz/gauss-trick-staff-seminar).
+Warto obejrzeć [trik Gaussa na wideo (ang.)](http://www.numberphile.com/videos/one_to_million.html) i zapoznać się z innymi przykładami [na tej stronie](http://nzmaths.co.nz/gauss-trick-staff-seminar), w języku angielskim.
 {panel end}
 
 Przedstawiony wyżej algorytm nazywa się porządkowaniem przez wybór (selekcję).
@@ -286,13 +286,13 @@ Ten algorytm można tak opisać listą kroków:
 
 W przypadku dużych zbiorów danych algorytmy porządkowania przedstawione wcześniej wymagają wykonania stosunkowo dużej liczby porównań.
 
-O wiele lepszym algorytmem porządkowania jest metoda zwana po angielsku {glossary-link term="quicksort"}Quicksort!{glossary-link end} 
+O wiele lepszym algorytmem porządkowania jest metoda zwana po angielsku {glossary-link term="quicksort"}Quicksort{glossary-link end} 
 
 {interactive name="sorting-algorithms" type="whole-page" text="Quicksort interactive" parameters="method=quick" thumbnail="thumbnail-quick.png"}
 
 Ten algorytm jest trochę bardziej skomplikowany, ale bardzo efektowny. Przekonaj się o tym, wykonując eksperyment z wykorzystaniem wirtualnej lub prawdziwej wagi szalkowej. Wybierz pudełko losowo i umieść je na jednej z szalek wagi. Następnie porównaj je z każdym z pozostałych pudełek; cięższe powinny być odkładane po prawej stronie, a lżejsze po lewej. Na końcu tego etapu wybrane początku pudełko umieść pomiędzy dwa zbiory lżejszych i cięższych, w rzędzie poniżej. Ile było porównań? Zauważ, że to pudełko jest już na właściwym miejscu docelowego zbioru uporządkowanego.
 
-{image filename="quicksort-interactive-step-1.png" alt="Quicksort interactive in progress"}
+{image filename="quicksort-interactive-step-1.png" alt="Przebieg sortowania"}
 
 Kolejny etap to powtórzenie opisanej wyżej procedury dla każego z dwóch ustalonych wcześniej zbiorów pudełek (lżejszych i cięższych).
 Następnie procedurę należy powtarzaj wielokrotnie dla nowo ustalonych zbiorów. Aż wszystkie pudełka są we właściwej kolejności!
@@ -305,12 +305,12 @@ Ten algorytm można tak opisać listą kroków:
 - Wybierz jedną z nieposortowanych podgrup i powtórz proces opisany w krokach powyżej. 
 Proces jest przerywany, gdy wszystkie powstałe podgrupy są już jednoelementowe.
 
-{panel type="project" summary="Zakodowane algorytmy porządkowania"}
+{panel type="project" summary="Programowanie. Algorytmy porządkowania"}
 Poniżej znajdują się odnośniki do komputerowych realizacji algorytmów porządkowania zapisanych w różnych językach; możesz się nimi posłużyć do przygotowania list losowych wartości i porównania kosztów wykonania programów.
 Twoje zadanie polega na wykonaniu pomiarów czasu działania programów dla coraz większych wartości (*n*); wyniki spróbuj przedstawić na wykresie.
-- [Scratch](files/selection-quicksort-scratch.zip) - [Pobierz Scratch here](https://scratch.mit.edu/scratch2download/)
-- [Python (Version 2)](files/selection-quicksort-python2.py) - [Pobierz Python 2 here](https://www.python.org/downloads/)
-- [Python (Version 3)](files/selection-quicksort-python3.py) - [Pobierz Python 3 here](https://www.python.org/downloads/)
+- [Przeszukiwanie w Scratch](files/selection-quicksort-scratch.zip) (program Scratch można ściągnąć [stąd](https://scratch.mit.edu/scratch2download/)) 
+- [Przeszukiwanie w Python 2](files/selection-quicksort-python2.py) (program Python 2 można ściągnąć [stąd](https://www.python.org/downloads/))
+- [Przeszukiwanie w Python 3](files/selection-quicksort-python3.py) - (program Python 3 można ściągnąć [stąd](https://www.python.org/downloads/)
 {panel end}
 
 Istnieją krocie różnych algorytmów porzadkowania. Większość tych istotnie praktycznych jest oparta na dwóch algorytmach: porządkowaniu szybkim (quicksort) i porządkowaniu przez łączenie (mergesort). Te, oraz wiele innych, może zobaczyć oglądając wideo (link poniżej).
@@ -335,18 +335,20 @@ Do pełnego zrozumienia notacji dużego Θ potrzebna jest znajomość elementów
 
 Trzeba podkreślić, że komputerowe realizacje algorytmów korzystają z rejestrów procesora (pamięci cache), ale też czasem z tzw. wirtualnej pamięci (dysku komputerowego), a więc czas dostępu do konkretnej wartości może być bardzo krótki, ale też bardzo długi. Te różne uwarunkowania wymagają od projektantów systemów komputerowych stosowania algorytmów, które w danej sytuacji są najbardziej efektywne.
 
-## Do dalszej lektury
+## Dalsza lektura
 
 ### Inne zagadnienia algorytmiczne
 
-- Istnieje metoda przeszukiwania zbiorów danych, lepsza od przeszukiwania binarnego. Nazywa się haszowaniem (ang. to hash oznacza posiekać). Łagodne wprowadzenie do tematu znajdziesz w materiałach pt. [Gra w statki](http://csunplugged.org/searching-algorithms).
+- Istnieje metoda przeszukiwania zbiorów danych, lepsza od przeszukiwania binarnego. Nazywa się haszowaniem (ang. to hash oznacza posiekać). Łagodne wprowadzenie do tematu znajdziesz w materiałach [Gra w statki](http://jasijoasia.edu.pl/csu1.pdf), opisanej w scenariuszu 6 w zbiorze scenariuszy lekcji bez komputera.
 - Istnieją problemy, dla których nie znaleziono dobrych algorytmów, a nawet takie, których prawdopoodbnie nigdy nie da się rozwiązać w efektywny sposób. Więcej na ten temat piszemy w rozdziale o złożoności obliczenionej algorytmów i praktycznej wykonalności algorymów.
 
-### Ciekawe linki
+### Ciekawe odnośniki
+
+Wszystkie materiały edukacyjne, poza ostatnim, są w języku angielskim.
 
 - [CS Unplugged i algorytmy przeszukiwania](http://csunplugged.org/searching-algorithms)
-- CS Unplugged [i algorymy sortowania](http://csunplugged.org/sorting-algorithms)
-- [Gra na temat przeszukiwania (http://csunplugged.org/divideAndConquer)
+- [CS Unplugged i algorymy sortowania](http://csunplugged.org/sorting-algorithms)
+- Ćwiczenie na temat przeszukiwania metodą „Dziel i rządź” (*Divide and Conquer*) na stronie [CS Unplugged](https://classic.csunplugged.org/divideandconquer/)
 - [Przeszukiwanie liniowe](https://en.wikipedia.org/wiki/Linear_search), [Przeszukiwanie binarne](https://en.wikipedia.org/wiki/Binary_search), [Sortowanie przez wybór](https://en.wikipedia.org/wiki/Selection_sort), [Sortowanie przez wstawianie](https://en.wikipedia.org/wiki/Insertion_sort) i  [Quicksort](https://en.wikipedia.org/wiki/Quicksort) w artykułach Wikipedii.
 - [Sortowanie cegieł (gra)](http://mathsite.math.berkeley.edu/sorting/brick.html) do nauki algorytmów sortowania (wymaga obługi Javy przez przeglądarkę).
 - [Wizualizacja algorytmów sortowania](http://www.sorting-algorithms.com/) przedstawiająca różne algorytmy sortowania, zapisane w pseudokodzie.
