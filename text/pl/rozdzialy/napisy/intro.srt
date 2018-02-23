@@ -1,210 +1,149 @@
 1
-00:00:00,5 --> 00:00:03,5
-Sztuczna inteligencja
+00:00:00,300 --> 00:00:02,500
+Witam na stronach przewodnika po informatyce.
 
 2
-00:00:03,0 --> 00:00:06,0
-Niektórzy sądzą, że pewnego dnia komputery
-
-3
-00:00:06,0 --> 00:00:09,0
-dorównają ludziom inteligencją.
+00:00:03,000 --> 00:00:05,500
+Jedną z głównych przyczyn jego stworzenia
+było następujące spostrzeżenie:
 
 4
-00:00:09,0 --> 00:00:12,0
-Ty też tak sądzisz?
+00:00:06,000 --> 00:00:09,500
+Mimo wszechobecności komputerów 
+w świecie nas otaczającym,
 
 5
-00:00:12,0 --> 00:00:15,0
-Nie. Sądzę, że nie.
+00:00:09,500 --> 00:00:13,000
+wielu z nas ma małe pojęcie 
+o istocie informatyki.
 
 6
-00:00:17,0 --> 00:00:20,0
-A Ty? Myślisz, że tak się stanie?
+00:00:13,500 --> 00:00:15,500
+Zastanawiałam się, czy zapisać się 
+na zajęcia z informatyki.
 
 7
-00:00:20,0 --> 00:00:23,0
-Oczywiście. Jestem bardziej inteligentny
+00:00:15,500 --> 00:00:17,500
+Stwierdziłam jednak, że już umiem 
+posługiwać się Word-em i Excel-em.
 
 8
-00:00:23,0 --> 00:00:26,0
-niż jakikolwiek prezenter telewizyjny.
-
-9
-00:00:27,0 --> 00:00:29,0
-Ała! To boli!
-
-10
-00:00:29,0 --> 00:00:32,0
-Tak naprawdę nie boli... Jestem robotem:-)
-
-11
-00:00:32,0 --> 00:00:35,0
-OK. Jakie miasto jest stolicą Nowej Zelandii?
-
-12
-00:00:35,0 --> 00:00:38,0
-Co za pytanie!
-
-13
-00:00:38,0 --> 00:00:41,0
-Każdy wie, że stolicą Nowej Zelandii jest Wellington.
-
-14
-00:00:42,0 --> 00:00:45,0
-OK. Ile to jest 4 x 5?
-
-15
-00:00:45,0 --> 00:00:48,0
-Nie jestem kalkulatorem!
-
-16
-00:00:48,0 --> 00:00:50,0
-Jestem robotem!
-
-17
-00:00:50,0 --> 00:00:53,0
-Stworzono mnie to większych rzeczy!
-
-18
-00:00:53,0 --> 00:00:56,0
-Odpowiem na Twoje pytanie tylko dlatego, 
-
-19
-00:00:56,0 --> 00:00:59,0
-że wiem, że jako człowiek nie potrafisz 
+00:00:18,000 --> 00:00:22,500
+Z informatyką jest tak, jak z czymś oczywistym:
+nie dostrzegamy tego dopóki tego nie zabraknie.
 
 20
-00:00:59,0 --> 00:01:02,0
-odpowiadać na takie pytania...
+00:00:23,500 --> 00:00:26,500
+Dostrzeżemy ją na przykład, gdy zetkniemy się... 
 
 21
-00:01:02,0 --> 00:01:04,0
-Odpowiedź to: 20
+00:00:26,500 --> 00:00:31,500
+z wyjątkowo powolnym programem komputerowym. 
 
 22
-00:01:05,0 --> 00:01:08,0
-Jak ma na imię Twój ojciec?
+00:00:37,000 --> 00:00:44,500
+Lub ze strasznie denerwującym interfejsem.
 
 23
-00:01:12,0 --> 00:01:15,0
-Powiedz mi coś więcej na temat Twojej rodziny.
+00:00:50,500 --> 00:00:53,000
+Albo z systemem, który nie radzi sobie 
 
 24
-00:01:16,0 --> 00:01:19,0
-Nie. To ja pytam Ciebie: Jak ma na imię Twój ojciec?
+00:00:53,500 --> 00:00:56,000
+z przetwarzaniem dużej ilości informacji.
 
 25
-00:01:19,0 --> 00:01:22,0
-Powiedz mi coś więcej na temat Twojej rodziny.
+00:00:56,500 --> 00:00:59,000
+W krótkim czasie liczba klientów firmy internetowej 
+(użytkowników systemu) może gwałtownie wzrosnąć.
 
 26
-00:01:22,0 --> 00:01:24,0
-Co?!
+00:00:59,500 --> 00:01:03,000
+Dlatego tak ważne jest umieć radzić sobie
+z przetwarzaniem dużej ilości informacji.
 
 27
-00:01:24,0 --> 00:01:27,0
-Obecnie komputery nie dorównują ludziom inteligencją.
+00:01:03,500 --> 00:01:06,000
+Przyjrzymy się np. zagadnieniu bezpieczeństwa informatycznego,
 
 28
-00:01:27,0 --> 00:01:30,0
-Potrafią jednak wykonywać pewne zadania, 
+00:01:06,500 --> 00:01:10,000
+w szczególności bezpieczeństwa 
+prywatnych danych przed dostępem hakerów.
 
 29
-00:01:30,0 --> 00:01:33,0
-które wymagają konkretnego "inteligentnego" zachowania.
+00:01:10,500 --> 00:01:12,000
+I tematowi sztucznej integencji, której osiągnięcia 
 
 30
-00:01:33,0 --> 00:01:35,0
-Grają w szachy.
-
-31
-00:01:35,0 --> 00:01:38,0
-Rozpoznają głos telefonującej osoby...
+00:01:12,000 --> 00:01:14,500
+mogą być pomocne w planowaniu 
+i podejmowaniu decyzji.
 
 32
-00:01:38,0 --> 00:01:41,0
-Analizują wzorce zakupowe
+00:01:15,000 --> 00:01:17,500
+Zajmiemy się grafiką komputerową, 
+zastosowaniami rozrywkowymi, 
 
 33
-00:01:41,0 --> 00:01:44,0
-i podpowiadają zakupy on-line.
+00:01:18,000 --> 00:01:20,500
+jak i dotyczącymi wizualizacji 
+dużych zbiorów danych.
 
 34
-00:01:44,0 --> 00:01:46,0
-są przeciwnikiem w grach wideo...
+00:01:20,500 --> 00:01:22,500
+I tematem komputerowego rozpoznawania obrazów, 
 
 35
-00:01:46,0 --> 00:01:49,0
-Są pomocne w planowaniu logistycznym i harmonogramach
+00:01:22,500 --> 00:01:25,500
+czyli wyodrębniania z obrazu przedmiotów, a nawet ludzi.
 
 36
-00:01:49,0 --> 00:01:51,0
-Rozpoznają kształty na zdjęciach...
+00:01:26,000 --> 00:01:29,000
+Zaprezentujemy zagadnienia, których w rozsądnym czasie 
 
 37
-00:01:51,0 --> 00:01:54,0
-Stają się "inteligentnymi" elementami do prowadzenia samochodu
-
-38
-00:01:54,0 --> 00:01:57,0
-W tym rodziale przyjrzyjmy się kilku zastosowaniom, a także zastanowimy się 
-
-39
-00:01:58,0 --> 00:02:01,0
-co miałoby znaczyć "Inteligentnte oprogramowanie"?
-
-40
-00:02:01,0 --> 00:02:04,0
-Powiemy też o kwestiach etycznych.
-
-41
-00:02:04,0 --> 00:02:06,0
-Czy naprawdę chcemy zbudować coś,
-
-42
-00:02:04,0 --> 00:02:06,0
-co dorównywałoby nam inteligencją?
-
-43
-00:02:08,0 --> 00:02:11,0
-Czy chcemy, aby roboty zabierały nam miejsca pracy?
-
-44
-00:02:11,0 --> 00:02:14,0
-Czy roboty powinny być traktowane jako równe nam?
-
-45
-00:02:15,0 --> 00:02:17,0
--- Mary!
--- Tak?
+00:01:29,000 --> 00:01:32,500
+nie rozwiąże nawet najszybszy z istniejących komputerów.
 
 46
-00:02:18,0 --> 00:02:21,0
-Zostaniesz moją przyjaciółką?
-
-47
-00:02:20,0 --> 00:02:22,0
-Oczywiście!
+00:01:33,000 --> 00:01:35,500
+Będziemy szukać odpowiedzi na pytanie:
+kiedy komputer można nazwać inteligentnym?
 
 48
-00:02:22,0 --> 00:02:25,0
-Tak czy owak... Przyjrzyjmy się kilku...
-
-49
-00:02:25,0 --> 00:02:28,0
--- Mary!
--- Tak...
+00:01:36,000 --> 00:01:37,500
+Przyjrzymy się zagadnieniu kompresji danych.
 
 50
-00:02:37,0 --> 00:02:40,0
-Zostaniesz moją dziewczyną?
+00:01:37,500 --> 00:01:39,500
+Aby zrozumieć, jak to możliwe, 
+że tysiące utworów muzycznych
 
-52
-00:03:46,0 --> 00:03:49,0
-Łoo... Odpowiem ci później!
+51
+00:01:39,500 --> 00:01:42,500
+można zapisać na nośniku mieszczącym się w kieszeni.
 
 53
-00:03:50,0 --> 00:03:53,0
-Zacznijmy od przedstawienia zastosowań praktycznych...
+00:01:43,000 --> 00:01:45,500
+Informatyka ma różne oblicza.
+Różni ludzie postrzegają informatykę różnie.
+
+55
+00:01:45,500 --> 00:01:47,500
+W zależności od zastosowań informatyki, z których korzystają.
+
+57
+00:01:48,500 --> 00:01:50,500
+Zapoznanie się z naszym przewodnikiem 
+
+58
+00:01:50,500 --> 00:01:52,500
+da Ci lepsze wyobrażenie o istocie informatyki.
+
+59
+00:01:52,500 --> 00:01:57,000
+W szczególności wobrażenie o tym, co jest istotnie 
+przy projektowaniu narzędzi użytecznych w codziennym życiu.
+
 
