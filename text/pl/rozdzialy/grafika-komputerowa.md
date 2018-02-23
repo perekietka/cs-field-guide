@@ -111,13 +111,13 @@ O tym przeczytasz poniżej!
 {panel type="teacher-note" summary="Wymagania co do wiedzy uczących się"}
 
 Ten podrozdział jest wprowadzeniem do zastosowania macierzy w grafice komputerowej. Nie jest konieczne, aby uczący się znali pojęcie macierzy wcześniej. Gdyby wyjaśnienia zawarte w tekście były niewystarczające do zrozumienia tematu przez uczniów, to można im wskazać inne zasoby edukacyjne, np. nagrania wideo i zadania pochodzące z 
-[Khan academy](https://www.khanacademy.org/math/precalculus/precalc-matrices).
+[Khan academy](https://pl.khanacademy.org/math/precalculus/precalc-matrices).
 
 Oto inne odnośniki do materiałów edukacyjnych (w języku angielskim):
 - [Math is Fun - Mnożenie macierzy](http://www.mathsisfun.com/algebra/matrix-multiplying.html)
 - [Math in Sight - Mnożenie macierzy](http://mathinsight.org/matrix_vector_multiplication)
 - [Math Planet - Przekształcenia z użyciem macierzy](http://www.mathplanet.com/education/geometry/transformations/transformation-using-matrices)
-- [Wikipedia o przekształceniach macierzowych](https://en.wikipedia.org/wiki/Transformation_matrix) - w tym artykule poziom szczegółowości jest już znaczący
+- [Wikipedia o przekształceniach macierzowych](https://en.wikipedia.org/wiki/Transformation_matrix) -- w tym artykule poziom szczegółowości jest już znaczący
 {panel end}  
 
 
@@ -190,7 +190,7 @@ Teraz sprawdź efekt dla macierzy:
 \end{bmatrix}
 {math-block end}
 
-Efektem powinien być obrót strzałki w prawo.
+Teraz strzałka leży na osi *X*.
 
 Górny wiersz macierzy ma wpływ na zmianę współrzędnych *x* w taki sposób, że określa udział początkowych wartości *x* i *y* w wartości *x* po przekształceniu. W przykładzie:
 
@@ -203,8 +203,7 @@ Górny wiersz macierzy ma wpływ na zmianę współrzędnych *x* w taki sposób,
 
 Górny wiersz macierzy zawiera następującą informację: w skład wartości *x* wchodzi podwojona wartość początkowej wartości *x*, i nic więcej, bo wpływ *y* jest opisany w macierzy liczbą 0. Krótko mówiąc: wartość *x* zostaje podwojona. Drugi wiersz macierzy ma wpływ na wartość *y*: na nową wartość *y* nie ma wpływu wartość początkowa *x* (bo w macierzy jest 0), a tylko początkowa wartość *y*, którą należy pomnożyć przez 4.
 
-W tym momencie jasny powinien być sens macierzy {math}\begin{bmatrix}  0 & 1 \\   1 & 0 \\   \end{bmatrix}{math end}. Nowa wartość *x* jest równa początkowej wartości *y* i vice versa. Przekształcenie opsiane przez macierz, w którym nastąpiła zamiana wartości przypisywanych współrzednym *x* i *y* jest tym samym, co obrót w prawo wokół punktu (0,0).  
-\[Taki obrót to właściwie odbicie obiektu w symetrii względem prostej y = x. (Przypis tłumacza.)\]
+W tym momencie jasny powinien być sens macierzy {math}\begin{bmatrix}  0 & 1 \\   1 & 0 \\   \end{bmatrix}{math end}. Nowa wartość *x* jest równa początkowej wartości *y* i vice versa. 
 
 Interesująca jest sytuacja, w której przekształcenie opisane jest np. taką macierzą:
 
@@ -215,9 +214,9 @@ Interesująca jest sytuacja, w której przekształcenie opisane jest np. taką m
 \end{bmatrix}
 {math-block end}
 
-Efektem będzie pewien obrót. Teraz wartość *x* jest efektem jakby zmieszania 0,7 początkowych wartości *x* i *y*. 
+Efektem będzie pewien obrót w prawo. Teraz wartość *x* jest efektem jakby zmieszania 0,7 początkowych wartości *x* i *y*. 
 
-W ogólnym przypadku do zapisu macierzy obrotu obiektu o kąt {math-block}\theta{math-block end} w lewo (przecwinie do ruchu wskazówek zegara), należy użyć funkcji trygonometrycznych sinus (skrót: sin) i cosinus (skrót: cos):
+W ogólnym przypadku do zapisu macierzy obrotu obiektu o kąt {math-block}\theta{math-block end} w lewo (przeciwnie do ruchu wskazówek zegara), należy użyć funkcji trygonometrycznych sinus (skrót: sin) i cosinus (skrót: cos):
 
 {math-block}
 \begin{bmatrix}
@@ -228,7 +227,7 @@ W ogólnym przypadku do zapisu macierzy obrotu obiektu o kąt {math-block}\theta
 
 {panel type="teacher-note" summary="Wyjaśnienie"}
 
-Jeśli uczniowieę nie mają wiedzy o funkcjach trygnometrycznych, można poprzestać na przedstawieniu koncepcji: kąt mierzymy w stopniach, a wartości funkcji sinus i cosinus przyjmują wartości między -1 i 1.
+Jeśli uczniowie nie mają wiedzy o funkcjach trygnometrycznych, można poprzestać na przedstawieniu koncepcji: kąt mierzymy w stopniach, a wartości funkcji sinus i cosinus przyjmują wartości między -1 i 1.
 
 {panel end}
 
@@ -259,7 +258,7 @@ Sprawdź działanie innego narzędzia:
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix.html?info=Try%20translating%20the%20original%20arrow%20so%20that%20it%20matches%20up%20with%20the%20red%20arrow.&quiz=1%200%200%205%200%201%200%204%200%200%201%200%200%200%200%201" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
 {panel type="teacher-note" summary="Rozwiązanie"}
-Przesunięcie *x* o 5, a y o 4 (5 w prawo i 4 w górę). Macierz skalowania ma postać: {math}\begin{bmatrix}  1 & 0 \\   0 & 1 \\   \end{bmatrix}{math end}
+Przesunięcie *x* o 5, a *y* o 4 (5 w prawo i 4 w górę). Macierz skalowania ma postać: {math}\begin{bmatrix}  1 & 0 \\   0 & 1 \\   \end{bmatrix}{math end}
 {panel end}
 
 Kolejne narzędzie pozwala na składanie dwóch przekształceń: przesunięcia i skalowania.
@@ -316,7 +315,7 @@ Oto jeszcze jedno ćwiczenie, grupujące wszystkie przekształcenia:
 Rozwiązań może być wiele. Najprostsze to: {math}\begin{bmatrix}  0{,}7 & -0{,}7 \\   0{,}7 & 0{,}7 \\   \end{bmatrix}{math end} jako (przybliżona) macierz obrotu, {math}\begin{bmatrix}  0{,}5 & 0 \\   0 & 0{,}5 \\   \end{bmatrix}{math end} jako macierz skalowania i -1, -2 jako wartości przesunięcia. 
 {panel end}
 
-Może się wydawać, że stosowanie wielu przekształceń jest żmudne, bo każdy punkt należący do obiektu należy poddać przekształceniom. Strzałka z przykładu to był wielokąt o 7 wierchołkach, a złożone obrazy składają się z tysięcy, czy nawet milionów punktów. Na szczęście operacje macierzowe można na początku złożyć w jedną operację i wykonać tylko tę jedną na każdym punkcie obiektu.
+Może się wydawać, że stosowanie wielu przekształceń jest żmudne, bo każdy punkt należący do obiektu należy poddać przekształceniom. Strzałka z przykładu to był wielokąt o 7 wierzchołkach, a złożone obrazy składają się z tysięcy, czy nawet milionów punktów. Na szczęście operacje macierzowe można na początku złożyć w jedną operację i wykonać tylko tę jedną na każdym punkcie obiektu.
 
 ### Składanie przekształceń
 
@@ -384,7 +383,7 @@ Zwróć uwagę na to, że narzędzie pozwala na zmianę kolejności czynników (
 Systemy grafiki komputerowej zwykle wymagają wykonania złożonych przekształceń, które można przedstawić jako matematyczne złożenie wielu prostych przekształceń. Obliczeń nie wykonuje się etapami (efekt działania poprzedniego przekształcenia stanowi dane do wykonania kolejnego przekształcenia). Projektanci systemu, do opisu przekształcenia złożonego, jeśli to tylko możliwe, używają jednej macierzy, która jest iloczynem macierzy opisujących składowe przekształcenia. 
 Trzeba pamiętać, że złożone przekształcenie stosuje się czasem i dla miliona punktów naraz. Koszt znalezienia macierzy wypadkowej dla grupy przekształceń jest niewielki w porównaniu z kosztem obliczeń dla nieefektywnego rozwiązania.
 
-Poniej opisano projekt, który ma służyć pogłębieniu tego tematu. Podano tam link do interaktywnego narzędzia do ćwieczń.
+Poniżej proponujemy projekt, który ma służyć pogłębieniu tego tematu. Podajemy tam odnośnik do interaktywnego narzędzia do ćwiczeń.
 
 
 ### Przekształcenia 3D 
@@ -551,7 +550,7 @@ Biegli w programowaniu, chcący zgłębiać temat przekształceń graficznych w 
 [WebGL](https://en.wikipedia.org/wiki/WebGL) (użyty do przygotowania narzędzi wyżej udostępnionych)
 lub powszechnie stosowany system
 [OpenGL](https://en.wikipedia.org/wiki/OpenGL).
-Interaktywny samouczek OpenGL można znaleźć tutaj:
+Interaktywny samouczek (po angielsku) OpenGL można znaleźć tutaj:
 [JPOT](http://www.cs.uwm.edu/%7Egrafix2/).
 
 Wykonanie projektu w jednym z tych systemów może być bardzo czasochłonne. Trzeba się wiele nauczyć, zanim uda się uzyskać ciekawe efekty.
@@ -622,7 +621,7 @@ Na siatce kwadratowej 19 x 19 spróbuj narysować odcinki (jako zbiory zamalowan
 - (18, 2) i (18, 14)
 - (1, 5) i (8, 12)
 
-{image filename="grid-20x20-blank.png" alt="Grid for drawing line from A to B"}
+{image filename="grid-20x20-blank.png" alt="Siatka dla odcinka AB"}
 
 {comment}
 
@@ -634,21 +633,21 @@ Na siatce kwadratowej 19 x 19 spróbuj narysować odcinki (jako zbiory zamalowan
 
 Te odcinki było łatwo narysować, gdyż tworzące je piksele są równoległe do brzegów siatki lub leżą na przekątnej kwadratu (siatki).
 
-{image filename="grid-20x20-answer-1.png" alt="Answer for previous question on grid"}
+{image filename="grid-20x20-answer-1.png" alt="Odpowiedź"}
 
 {panel end}
 
 Rysowanie linii równoległych do krawędzi ekranu lub leżących na głównej przekątnej ekranu jest łatwe; z narysowaniem odcinków, które tworzą z krawędzią ekranu inne kąty jest trudniej, gdyż trzeba wykonać odpowiednie obliczenia.
 
-Potrafisz, bez użycia linijki, wybrać i zamalować odpowiednie pliksele tak, aby tworzyły odcinek z A do B? Spróbuj.
+Potrafisz, bez użycia linijki, wybrać i zamalować odpowiednie pliksele tak, aby tworzyły odcinek z *A* do *B*? Spróbuj.
 
-{image filename="grid-20x20-diagonal-question.png" alt="Grid for drawing line from A to B"}
+{image filename="grid-20x20-diagonal-question.png" alt="Siatka dla odcinka AB"}
 
-Sprawdź efekt, przykładając linijkę do rysunku. Umieść ją tak, aby krawędź linijki przechodziła przez środki małych kwadratów A i B. Czy linijka przechodzi przez wszystkie zamalowane piksele?
+Sprawdź efekt, przykładając linijkę do rysunku. Umieść ją tak, aby krawędź linijki przechodziła przez środki małych kwadratów *A* i *B*. Czy linijka przechodzi przez wszystkie zamalowane piksele?
 
 ### Rysowanie odcinka z użyciem równania prostej
 
-Prostą w układzie współrzędnych XY można opisać równaniem {math}y = mx + c{math end}.
+Prostą w układzie współrzędnych *XY* można opisać równaniem {math}y = mx + c{math end}.
 Używając tego równania, możemy wyznaczyć wartość współrzędnej *y* dla wartości współrzednej *x*.
 Wcześniej trzeba określić wartość współczynnika opisującego
 {glossary-link term="slope" reference-text="computer graphics"}nachylenie prostej{glossary-link end}, którym jest {math}m{math end},
@@ -687,8 +686,8 @@ b = \frac{(y_1x_2 - y_2x_1)}{(x_2-x_1)}
 Oto wyniki obliczeń:
 
 \\[
-m = \frac{(9 - 4)}{(16 - 3)}  = 5/13 \approx 0.384615
-b = \frac{(4 \times 16 - 9 \times 3)}{(16-3)} = 37/13 \approx 2.846154
+m = \frac{(9 - 4)}{(16 - 3)}  = 5/13 \approx 0,384615
+b = \frac{(4 \times 16 - 9 \times 3)}{(16-3)} = 37/13 \approx 2,846154
 \\]
 
 
@@ -698,20 +697,20 @@ W kolejnym ćwiczeniu warto użyć arkusza kalkulacyjnego do określenia wartoś
 
 | *x* | *y* |
 |-----|-----|
-| 3  |  4.000 |
-| 4  |  4.385 |
-| 5  |  4.769 |
-| 6  |  5.154 |
-| 7  |  5.538 |
-| 8  |  5.923 |
-| 9  |  6.308 |
-| 10 |  6.692 |
-| 11 |  7.077 |
-| 12 |  7.462 |
-| 13 |  7.846 |
-| 14 |  8.231 |
-| 15 |  8.615 |
-| 16 |  9.000 |
+| 3  |  4,000 |
+| 4  |  4,385 |
+| 5  |  4,769 |
+| 6  |  5,154 |
+| 7  |  5,538 |
+| 8  |  5,923 |
+| 9  |  6,308 |
+| 10 |  6,692 |
+| 11 |  7,077 |
+| 12 |  7,462 |
+| 13 |  7,846 |
+| 14 |  8,231 |
+| 15 |  8,615 |
+| 16 |  9,000 |
 
 {panel end}
 
@@ -789,7 +788,7 @@ Poniżej zapisano obliczenia wykonane z użyciem algorytmu Bresenhama:
 Przedstawiona powyżej wersja algorytmu Bresenhama była wersją niepełną, gdyż działała poprawnie tylko dla odcinków nachylonych do poziomu o kąt między 0 a 45 stopni (co odpowiada wartościom współczynnika nachylenia *m* od 0 do 1). Aby algorytm był uniwersalny, trzeba listę kroków algorytmu uzupełnić:
 
 - W przypadku, gdy odcinek jest nachylony nie w górę, ale w dół, wówczas, gdy {math}P >= 0{math end}, jako kolejny piksel należy zapalić ten położony po prawej w wierszu niżej.
-- Jeśli wartość {math}y{math end} rośnie szybciej niż wartość {math}x{math end} (co odpowiada kątowi nachylenia większemu niż 45 stopni), to podczas obliczania wartości *A*, *B* i początkowej wartości *P*, zamień w algorytmie rolę osi *X* i *X* rolami. Oznacza to, że zamiast poruszać się wzdłuż osi *X*, poruszasz się wzdłuż *X*, a zamiast zapalać po jednym pikselu w każdej kolumnie, zapalasz po jednym pikselu w każdym wierszu.
+- Jeśli wartość {math}y{math end} rośnie szybciej niż wartość {math}x{math end} (co odpowiada kątowi nachylenia większemu niż 45 stopni), to podczas obliczania wartości *A*, *B* i początkowej wartości *P*, zamień w algorytmie rolę osi *X* i *Y* rolami. Oznacza to, że zamiast poruszać się wzdłuż osi *X*, poruszasz się wzdłuż *Y*, a zamiast zapalać po jednym pikselu w każdej kolumnie, zapalasz po jednym pikselu w każdym wierszu.
 
 {image filename="grid-20x20-blank.png" alt="Siatka pikseli dla odcinka"}
 
@@ -798,7 +797,7 @@ Wybierz je tak, aby nie łączył ich odcinek poziomy, pionowy, ani po przekątn
 
 Użyj algorytmu Bresenhama do narysowania odcinka. Sprawdź, że w efekcie otrzymujesz te same piksele, które uzyskać można z użyciem linijki lub równania prostej {math}y = mx+b{math end}.
 Ile operacji arytmetycznych (mnożenia i dodawania) było wykonanych przy wyznaczaniu zbioru pikseli metodą Bresenhama?
-Ile byłoby ich w przypadku posługowania się równaniem {math}y = mx+b{math end}?
+Ile byłoby ich w przypadku posługiwania się równaniem {math}y = mx+b{math end}?
 Który sposób jest szybszy? (Pamiętaj, że w większości przypadków koszt dodawania jest o wiele mniejszy niż koszt mnożenia.)
 
 {panel type="teacher-note" summary="Szybkość metody Bresenhama"}
@@ -851,7 +850,7 @@ Zwróć uwagę na to, że zgodnie z algorytmem rysowanie należy przerwać, gdy 
 {image filename="grid-20x20-circle-question.png" alt="Siatka pikseli dla okręgu"}
 
 {panel type="teacher-note" summary="Rozwiązanie"}
-Na rysunku poniżej zaczerniono piksele uzyskane po wykonaniu algorytmu (jest to ośma część okręgu). Ciemnym szarym kolorem zaznaczono piksele uzyskane kolejno jako efekt symetrii osiowej (odbicia lustrzane) względem prostych równoległych do osi *X* i osi *Y*. Jasnym szarym kolorem zaznaczono piksele, które są obrazem pikseli w symetrii względem przekątnej siatki. 
+Na rysunku poniżej zaczerniono piksele uzyskane po wykonaniu algorytmu (jest to ośma część okręgu). Ciemnym szarym kolorem zaznaczono piksele uzyskane kolejno jako efekt symetrii osiowych (odbić lustrzanych) względem prostych równoległych do osi *X* i osi *Y*. Jasnym szarym kolorem zaznaczono piksele, które są obrazem pikseli w symetrii względem przekątnej siatki. 
 Warto, aby uczniowie samodzielnie poszukali odpowiednich przekształceń. (Dla symetrii względem przekątnych osiami symetrii są proste o współczynnikach kierunkowych 1 i -1.)
 
 {image filename="grid-20x20-circle-answer.png" alt="Rozwiązanie dla okręgu"}
@@ -904,7 +903,7 @@ Informatycy projektują algorytmy dla wielu obszarów grafiki komputerowej:
  - wygładzania (np. w celu zredukowania efektu ostrych krawędzi na obrazie),
  - rzutowania (np. w celu odwzorowania obiektów 3D na płaszczyźnie),
  - ukrywania obiektów (np. w celu określenia fragmentów obiektu niwidocznych dla obserwatora),
- - renderowania fotorealistycznego (przy tworzeniu obrazów, które wyglądają jak obrazy pochodzące z rzeczywistości), jak i renderowania nierealistycznego, taki jak „renderowanie malarskie” (np. w celu uzyskania obrazu na wzór obrazów malarskich, czyli efektu pociągnienia pędzlem), and
+ - renderowania fotorealistycznego (przy tworzeniu obrazów, które wyglądają jak obrazy pochodzące z rzeczywistości), jak i renderowania nierealistycznego, taki jak „renderowanie malarskie” (np. w celu uzyskania obrazu na wzór obrazów malarskich, czyli efektu pociągnienia pędzlem),
  - symulowania zajwisk takich jak ogień, fale morskie, ruch człowieka itd. 
 
 System oparty na mnożeniu macierzy 3 x 3, przedstawiony w tym rozdziale to uproszczona wersja jednego z systemów, który oparty jest o [współrzedne jednorodne](https://en.wikipedia.org/wiki/Homogeneous_coordinates). Używa się w nim macierzy 4 x 4.
@@ -917,7 +916,7 @@ Möbius jest prawodopoodbnie bardziej znany jako odkrywca pewnej matematycznej p
 
 
 
-### Ciekawe linki
+### Ciekawe odnośniki
 
 - [https://en.wikipedia.org/wiki/Computer_graphics](https://en.wikipedia.org/wiki/Computer_graphics)
 - [https://en.wikipedia.org/wiki/Transformation_matrix](https://en.wikipedia.org/wiki/Transformation_matrix)
