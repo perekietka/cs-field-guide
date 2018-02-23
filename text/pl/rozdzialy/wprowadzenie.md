@@ -24,12 +24,12 @@ Oto przykład: Komputery potrafią wykonywać miliardy operacji w ciągu sekundy
 
 Oto rada pochodząca od Freda Wilsona, który zainwestował wiele w firmy z branży komputerowej:
 
-> Po pierwsze i najważniejsze, wierzymy, że szybkość to coś więcej niż zwykła cecha. Szybkość jest najważniejszą cechą. Jeśli twoje oprogramowanie działa powoli, ludzie nie będą go używać. Dotyczy to zwłaszcza zwykłych użytkowników. Myślę, że użytkownicy, którzy korzystają z zaawansowanych funkcji danego oprogramowania, są czasami bardziej wyrozumiali, ale według mnie typowy użytkownik jest jak moją żona i dzieci: jeśli coś działa powoli, to oni po prostu odchodzą&hellip;. Szybkość to coś więcej niż cecha. To jest niezbędne wymaganie.
+> Po pierwsze i najważniejsze, wierzymy, że szybkość to coś więcej niż zwykła cecha. Szybkość jest najważniejszą cechą. Jeśli twoje oprogramowanie działa powoli, ludzie nie będą go używać. Dotyczy to zwłaszcza zwykłych użytkowników. Myślę, że użytkownicy, którzy korzystają z zaawansowanych funkcji danego oprogramowania, są czasami bardziej wyrozumiali, ale według mnie typowy użytkownik jest jak moja żona i dzieci: jeśli coś działa powoli, to oni po prostu odchodzą&hellip;. Szybkość to coś więcej niż cecha. To jest niezbędne wymaganie.
 
 > -- [Fred Wilson](https://en.wikipedia.org/wiki/Fred_Wilson_(financier\)) ([Source](http://triple-networks.com/2011/12/06/10-golden-principles-of-successful-web-apps/))
 
 Kluczowym wyzwaniem w informatyce jest stworzyć oprogramowanie działające szybko! Zwłaszcza jeśli ma działać na urządzeniach (np. smartfonach) starszej generacji lub ma być uruchamiane w jakimś centrum obliczeniowym, gdzie użytkownik ma płacić za każdą minutę czasu dostępu do komputerów. 
-Nie można powiedzieć klientom, by kupili szybsze urządzenia --- trzeba dostarczyć efektywne oprogramowanie.
+Nie można powiedzieć klientom, by kupili szybsze urządzenia -- trzeba dostarczyć efektywne oprogramowanie.
 
 ## Szybkość to nie wszystko
 
@@ -44,7 +44,7 @@ Drugi kalkulator działa wolniej i to może być frustrujące. Ale ma bardziej e
 
 Projektowanie przyjaznych w użyciu interfejsów jest istotne w informatyce. Estetyka (wygląd i grafika) interfejsu jest ważna, ale ważniejsze jest uwzględnienie w nim psychologii zachowań użytkownika.  Oto przykład: Wyobraź sobie, że przyciski „OK” i „Anuluj” od czasu do czasu w oknach dialogowych będą zamienione miejscami. W konsekwencji użytkownik musi zachować szczególną ostrożność, zamiast działać instynktownie, nauczony wcześniejszymi doświadczeniami.
 
-Problem skalowalności oprogramowania to inny ważny temat. Wyobraź sobie, że jesteś twórcą witryny internetowej, którą odwiedzają tysiące użytkowników. Wszystko idzie dobrze, aż do chwili, gdy gwałtownie zwiększa się liczba użytkowników i są ich miliony. Jeśli twój serwis okaże się przeciążony, ludzie będą się irytować czekaniem na odpowiedź serwera i kolejnego dnia możesz stracić wszystkich użytkowników -– przeniosą się do serwisu stworzonego przez kogoś innego. Ale jeśli twoje programy są tak zaprojektowane, że nigdy nie dojdzie do przeciążenia, to  możesz się spodziewać, że  pojawią się zainteresowani kupnem twojej firmy!
+Problem skalowalności oprogramowania to inny ważny temat. Wyobraź sobie, że jesteś twórcą witryny internetowej, którą odwiedzają tysiące użytkowników. Wszystko idzie dobrze, aż do chwili, gdy gwałtownie zwiększa się liczba użytkowników i są ich miliony. Jeśli twój serwis okaże się przeciążony, ludzie będą się irytować czekaniem na odpowiedź serwera i kolejnego dnia możesz stracić wszystkich użytkowników -- przeniosą się do serwisu stworzonego przez kogoś innego. Ale jeśli twoje programy są tak zaprojektowane, że nigdy nie dojdzie do przeciążenia, to  możesz się spodziewać, że  pojawią się zainteresowani kupnem twojej firmy!
 
 Niektóre z problemów można rozwiązać przez zakup większej ilości sprzętu komputerowego (serwerów), ale to może być kosztowna i rozrzutna opcja. Do tego takie rozwiązanie ma niekorzystny wpływ na środowisko, gdyż wiąże się ze zwiększeniem zapotrzebowania na energię elektryczną (potrzebną m.in. do chłodzenia urządzeń). W przypadku urządzeń przenośnych wymagania, aby oprogramowanie działało szybko i wykorzystywało zasoby w sposób ekonomiczny (energooszczędny) mają jeszcze większe znaczenie. Nieefektywne przetwarzanie oznacza nie tylko większe zużycie baterii, ale i większe zapotrzebowanie oprogramowania na pamięć, czyli w konsekwencji zwiększenie rozmiaru i wagi urządzenia, a więc i kosztów związanych np. z chłodzeniem. 
 
@@ -60,7 +60,7 @@ Przewodnik ma wystarczający poziom szczegółowości, by zorientować się, czy
 
 ## Programowanie
 
-Co z programowaniem? Nie wymagamy umiejętności programowania od korzystających z przewodnika. W niektórych miejscach będziemy zachęcać jednak potrafiących programować do wykonania pewnych zadań programistycznych. Nie można zapominać, że wszystkie koncepcje przedstawione w przewodniku mają zastosowanie praktyczne i zostały kiedyś zastosowane w takim, czy innym oprogramowaniu. Dlatego zachęcamy, aby równolegle z poszerzaniem wiedzy na temat różnych zagadnień informatycznych, uczyć się programowania. W Internecie jest wiele kursów programowania, również darmowych. Jest też wiele książek na ten temat. Warto zacząć od strony [code.org](http://www.code.org/) lub działu informatycznego projektu [Khan Academy](http://www.khanacademy.org/cs/)
+Co z programowaniem? Nie wymagamy umiejętności programowania od korzystających z przewodnika. W niektórych miejscach będziemy zachęcać jednak potrafiących programować do wykonania pewnych zadań programistycznych. Nie można zapominać, że wszystkie koncepcje przedstawione w przewodniku mają zastosowanie praktyczne i zostały kiedyś zastosowane w takim, czy innym oprogramowaniu. Dlatego zachęcamy, aby równolegle z poszerzaniem wiedzy na temat różnych zagadnień informatycznych, uczyć się programowania. W Internecie jest wiele kursów programowania, również darmowych. Jest też wiele książek na ten temat. Warto zacząć od strony [code.org](http://www.code.org/) lub działu informatycznego projektu [Khan Academy](http://pl.khanacademy.org//cs/).
 
 Programowanie to jedna z wielu umiejętności wymaganych od informatyka. Ten przewodnik da ci wyobrażenie na temat innych kompetencji ważnych w informatyce, np. matematycznych czy tych z zakresu psychologii i komunikacji interpersonalnej.
 
@@ -80,10 +80,13 @@ Przewodnik jest udostępniany za darmo. Dostęp do wersji źródłowej materiał
 
 Zasady licencji *Creative Commons Attribution-NonCommercial-ShareAlike licence* pozwalają na wprowadzanie zmian i udoskonaleń. W takim przypadku prosimy o zachowanie informacji o lokalizacji oryginalnej wersji przewodnika. Zmodyfikowana wersja musi pozostać dostępna za darmo.
 
-Powstanie przewodnika było możliwe dzięki wsparciu Google Inc. oraz University of Canterbury.
+Oryginalna, angielska wersja przewodnika znajduje się na http://www.csfieldguide.org.nz/". Polska wersja powstała w ramach projektu CS4HS firmy Google, przy wsparciu Uniwersytetu im. Adama Mickiewicza w Poznaniu.
+
+Niektóre fragmenty w wersji polskiej różnią się od oryginału, aby były bardziej zrozumiałe dla polskiego czytelnika. Przewodnik zawiera wiele odnośników do źródeł w języku angielskim (dla czytelników pragnących poszerzyć wiedzę), zatem znajomość języka angielskiego będzie przydatna. Jednak nie jest ona konieczna i nawet bez znajomości angielskiego czytelnik może bez przeszkód z przewodnika korzystać.
 
 ## Dalsze lektury
-Każdy rozdział kończy się propozycjami lektur, które pozwolą na pogłębienie wiedzy. Jest wiele książek o szerokiej tematyce informatycznej, napisanych z myślą o ukazaniu w miarę pełnego obrazu tej dziedziny. Autorzy przewodnika polecają szczególnie:
+Każdy rozdział kończy się propozycjami lektur, które pozwolą na pogłębienie wiedzy. Często są to odnośniki do stron internetowych.
+Jest wiele książek o szerokiej tematyce informatycznej, napisanych z myślą o ukazaniu w miarę pełnego obrazu tej dziedziny. Autorzy przewodnika polecają szczególnie:
 
 - Dawid Harel, *Algorithmics. The spirit of computing* (tłumaczenie polskie: *Algorytmika. Rzecz o istocie informatyki*)
 - Jeremy Kubica, [Computational fairy tales](http://computationaltales.blogspot.co.nz) 
