@@ -13,7 +13,7 @@ Wśród napisów końcowych filmów, w których używano komputerowo wygenerowan
 
 Firmy z braży filmowej czy producenci gier komputerowych nie ograniczają się do korzystania z istniejącego oprogrogramowania graficznego. Czasami niezbędni są informatycy, którzy tworzą nowe, lepsze algorytmy i oprogramowanie, dzięki którym uzyskuje się nowatorskie efekty. Możliwości rozwoju w tej dziedzinie wydają się nieskończone!
 
-Grafika komputerowa znajduje zastosowanie w wielu różnych sytuacjach; Tworzenie gier i filmów animowanych to ważne przykłady, ale jest ich znacznie więcej: wizualizacja informacji zawartych w wielkich zbiorach danych (np. dotyczących połączeń telefonicznych w konkretnym dniu albo relacji znajomości użytkowników sieci społecznościowej), graficzna strona interfejsów komunikacji człowieka z komputerem, modelowanie tzw. rzeczywistości wirtualnej czy rozszerzonej oraz wiele innych. 
+Grafika komputerowa znajduje zastosowanie w wielu różnych sytuacjach. Tworzenie gier i filmów animowanych to ważne przykłady, ale jest ich znacznie więcej: wizualizacja informacji zawartych w wielkich zbiorach danych (np. dotyczących połączeń telefonicznych w konkretnym dniu albo relacji znajomości użytkowników sieci społecznościowej), graficzna strona interfejsów komunikacji człowieka z komputerem, modelowanie tzw. rzeczywistości wirtualnej czy rozszerzonej oraz wiele innych. 
 
 
 
@@ -44,7 +44,7 @@ Wpisując współrzędne 3D, możesz oglądać ściany w poszukiwaniu symboli.
 {comment}{include interactive computer-graphics-box-translation}{comment end}
 {button link="http://csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-box/CG-box-translation.html?info=In%20this%20example%20the%20only%20transforms%20we%27ve%20supplied%20are%20to%20%3Cem%3Etranslate%3C/em%3E%20it%20in%20three%20dimensions.%20The%20dimensions%20are%20%3Cem%3Ex%3C/em%3E%20(left%20and%20right),%20%3Cem%3Ey%3C/em%3E%20(up%20and%20down)%20and%20%3Cem%3Ez%3C/em%3E%20(in%20and%20out%20of%20the%20screen).%20Your%20goal%20is%20to%20type%20in%20how%20far%20it%20should%20be%20transformed%20in%20each%20of%20these%20directions%20so%20that%20you%20can%20see%20the%20symbol%20on%20each%20face,%20and%20put%20those%20symbols%20on%20the%20spinner%20wheels%20shown.%20(The%20order%20of%20the%20symbols%20doesn%27t%20matter)." text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
-W tej zabawie stosowano przekształcenie zwane *przesunięciem (translacją)*, oznacza przemieszczenie obiektu w trzech wymiarach: w górę i w dół, do tyłu i do przodu oraz na boki.
+W tej zabawie stosowano przekształcenie zwane *przesunięciem (translacją)*, co oznacza przemieszczenie obiektu w trzech wymiarach: w górę i w dół, do tyłu i do przodu oraz na boki.
 
 Następne ćwiczenie wymaga obracania pudełkiem. Ponownie twoim zadaniem jest odnaleźć symbole na ściankach.
 
@@ -54,7 +54,7 @@ Następne ćwiczenie wymaga obracania pudełkiem. Ponownie twoim zadaniem jest o
 Różnych typów przekształceń jest wiele, ale najczęściej stosowane to przesunięcie (translacja), obrót i skalowanie (zmiana rozmiaru).
 Przekształcenia w grafice komputerowej dotyczą nie tylko obiektów tworzących obraz, ale również położenia tzw. kamery jak i źródeł oświetlenia.
 
-W tym podrozdziale będziesz przekształcać obrazy. Zaczniemy od wprowadzenia zmian ręcznie, po jednym punkcie naraz, ale potem przejdziemy do szybszej metody, która korzysta z matematycznego pojęcia *macierzy*. Na początek przyjrzymy się działaniu przekształcenia w dwóch wymiarach, by łatwiej było temat zrozumieć.
+W tym podrozdziale będziesz przekształcać obrazy. Zaczniemy od wprowadzenia zmian ręcznie, po jednym punkcie, ale potem przejdziemy do szybszej metody, która korzysta z matematycznego pojęcia *macierzy*. Na początek przyjrzymy się działaniu przekształcenia w dwóch wymiarach, by łatwiej było temat zrozumieć.
 
 W interaktywnym narzędziu (poniżej) widzisz siedmiokąt tworzący jakby strzałkę, umieszczony w centralnej części układu współrzędnych, zwanego *kartezjańskim*. Po prawej stronie znajduje się m.in. lista par liczb (*x*,*y*), współrzędnych wierzchołków siedmiokąta (strzałki). Wartość *x* określa położenie punktu w poziomie (względem początku układu współrzędnych), a wartość *y* określa położenie punktu w pionie. Na przykład: pierwszy punkt na liście jest opisany parą liczb (0,2) i jest to punkt położony dwie jednostki powyżej punktu (0,0). Jakiemu punktowi odpowiada para liczb (2,0)? Co się dzieje, gdy wartość współrzędnej *x* jest liczbą ujemną?
 
@@ -82,10 +82,10 @@ W następnym ćwiczeniu będziesz zmieniać rozmiar obrazu.
 
 
 {panel type="teacher-note" summary="Rozwiązanie"}
-Pomnożenie przez 2 skutkuje dwukrotnym powiększeniem strzałki w każdym z wymiarów (układu współrzędnych). Pomnożenie przez 10 zmiania rozmiar 10 razy i obiekt nie zmieści się w polu widzenia. Pomnożenie przez 0,5 zmniejszy strzałkę dwukrotnie. Pomnożenie tylko watości *x* skutkuje wyłącznie zmianą strzałki w poziomie.
+Pomnożenie przez 2 skutkuje dwukrotnym powiększeniem strzałki w każdym z wymiarów. Pomnożenie przez 10 większa rozmiar 10 razy i obiekt nie zmieści się w polu widzenia. Pomnożenie przez 0,5 zmniejszy strzałkę dwukrotnie. Pomnożenie tylko watości *x* skutkuje wyłącznie zmianą strzałki w poziomie.
 {panel end}
 
-To przykształcenie nosi nazwę *skalowanie* i służy do ustalania rozmiaru obiektu. Wykorzystane w odpowiedni sposób pozwala na tworzenie efektów takich jak przybliżanie obiektu lub jego oddalanie (od punktu obserwacyjnego).
+To przykształcenie nosi nazwę *skalowania* i służy do ustalania rozmiaru obiektu. Wykorzystane w odpowiedni sposób pozwala na tworzenie efektów takich jak przybliżanie obiektu lub jego oddalanie (od punktu obserwacyjnego).
 
 Poniżej znajduje się interaktywne narzędzie, które pozwala na nakładanie strzałek jedna na drugą. Należy zastosować zarówno operację skalowania, jak i przesunięcia.
 
@@ -97,9 +97,8 @@ Co się stanie, gdy zamienimy miejscami wartości *x* i *y* wspólrzędnych punk
 {comment}{include interactive computer-graphics-arrow parameters="&quiz=0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 1 &hidetarget=true &zoom=-5.0"}{comment end}
 {button link="http://csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-points.html?info=Next,%20see%20what%20happens%20if%20you%20swap%20the%20%3Cem%3Ex%3C/em%3E%20and%20%3Cem%3Ey%3C/em%3E%20value%20for%20each%20coordinate.&quiz=0%201%200%200%201%200%200%200%200%200%201%200%200%200%200%201%20&hidetarget=true%20&zoom=-5.0" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
-Efektem jest prosty *obrót* wokół punktu (0,0) o 90 stopni w prawo (zgodnie z ruchem wskazówek zegara). 
-\[Taki obrót to właściwie odbicie obiektu w symetrii względem prostej y = x. (Przypis tłumacza.)\]
-Takie przekształcenie może służyć również do określenia takich parametrów jak kąt widzenia kamery (obserwatora).
+Efekt wygląda jak obrót wokół punktu (0,0) o 90 stopni w prawo (zgodnie z ruchem wskazówek zegara). \[Gdyby nasza figura nie była taka „regularna”, na przykład przypominała literę L, zauważyłbyś, że efekt obrotem nie jest (przyp. tłum.).\] 
+Takie przekształcenie może służyć również do symulacji zmiany ustawienia kamery (obserwatora).
 
 Oczywiście ręczna zmiana wartości współrzędnych punktów, jednego po drugim, jest nieefektywna. Na szczęście jest na to sposób. 
 O tym przeczytasz poniżej!
