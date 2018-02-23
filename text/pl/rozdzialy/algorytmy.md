@@ -324,12 +324,13 @@ Ten rozdział to tylko wprowadzenie do tematu algorytmów. Istnieją z pewności
 Warto podkreślić, że istnieją inne metody przeszukiwania (np. z haszowaniem, drzewa przeszukiwań) i porządkowania (np. przez łączenie), które w konkretnej sytuacji mogą być bardziej efektywne od przedstawionych w tym rozdziale. Informatyk powinien je poznać, by szukając rozwiązania rzeczywistego problemu nie „wywarzał otwartych drzwi”, a dostosowywał do konkretnej sytuacji algorytmy o utrwalonej renomie.
 
 {panel type="extra-for-experts" summary="Przykłady notacji duże Θ"}
-Oto przykłady zapisów dotyczących kosztów algorytmów, jakie można spotkać w podręcznikach akademickich z dziedziny algorytmów:
+Oto przykłady zapisów dotyczących kosztów algorytmów, jakie można spotkać w podręcznikach akademickich z dziedziny algorytmów.
 - {math}Θ(1){math end} -- Czas działania takiego algorytmu nie zależy od rozmiaru danych. Przykład: Znajdowanie wartości najmniejszej na liście uporządkowanej.
 - {math}Θ(n){math end} -- Czas działania takiego algorytmu można opisać funkcją liniową (względem rozmiaru danych). Można powiedzić, że czas rośnie wprost proporcjonalnie do rozmiaru danych. Przykład: przeszukiwanie liniowe.
 - {math}Θ(n^{2}){math end} -- Czas działania takiego algorytmu można opisać funkcją kwadratową (względem rozmiaru danych). Można powiedzić, że czas rośnie mniej więcej wprost proporcjonalnie do kwadratu rozmiaru danych. Przykład: porządkowanie przez wybór, porzadkowanie przez wstawianie. Co to znaczy w praktyce? Zwiększenie liczby danych 10 razy skutkuje zwiększeniem liczby obliczeń ok. 100 razy!
 - {math}Θ(2^{n}){math end} -- Czas działania takiego algorytmu podwaja się po zwiększeniu liczby danych o 1! Nawet dla stosunkowo niewielkich rozmiarów danych algorytmy te są praktycznie niewykonalne w rozsądnym czasie!
 {panel end}
+Trzeba podkreślić, że przez czas działania algorytmu rozumiemy czas działania *w najgorszym przypadku*, czyli dla takich danych wejściowych spośród wszystkich możliwych, dla których algorytm zużywa najwięcej czasu.
 
 Do pełnego zrozumienia notacji dużego Θ potrzebna jest znajomość elementów matematyki wyższej. Do tematu wrócimy w rozdziale o złożoności obliczeniowej i problemach praktycznie niewykonalnych.
 
