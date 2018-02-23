@@ -51,7 +51,18 @@ Idea dwustanowego (binanrego) zapisu informacji stanowi podstawę zapisu danych 
 Gdy chcemy przedstawić na papierze to, co zapisano w komputerze, to zazwyczaj używamy „0” dla ilustracji jednego ze stanów i „1” – dla drugiego z nich. Oznacza to na przykład, że fragment pamięci elektronicznej komputera, dla którego wartości napięcia elektrycznego to:   
 
 ```
-niska, niska, wysoka, niska, wysoka, wysoka, wysoka, wysoka, niska, wysoka, niska, niska
+niska, 
+niska, 
+wysoka, 
+niska, 
+wysoka, 
+wysoka, 
+wysoka, 
+wysoka, 
+niska, 
+wysoka, 
+niska, 
+niska
 ```
 
 będziemy przedstawiać jako ciąg cyfr
