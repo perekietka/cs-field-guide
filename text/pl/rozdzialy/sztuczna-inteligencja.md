@@ -43,11 +43,17 @@ Prawdopodobnie zgodzisz się, że chociaż Eliza brzmi czasami trochę inteligen
 
 
 **Eliza**: Cześć, Jestem Eliza.
+
 **Człowiek**: Cześć, jestem człowiekiem.
+
 **Eliza**: Czy wierzysz to, że to normalne być człowiekiem?
+
 **Człowiek**: Tak.
+
 **Eliza**: Jesteś pewny?
+
 **Człowiek**: Tak.
+
 **Eliza**: Dlaczego powtarzasz się?
 
 
