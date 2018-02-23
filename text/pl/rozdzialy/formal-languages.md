@@ -1200,7 +1200,7 @@ Uwaga: pozostała część tego podrozdziału nie została jeszcze opracowana.
 
 {panel end}
 
-{panel type="projekt" summary="Gramatyki w sztuce i muzyce"}
+{panel type="project" summary="Gramatyki w sztuce i muzyce"}
 
 
 {image filename="context-free-tree-screenshot.png" alt="Drzewo narysowane za pomocą oprogramowania z contextfreeart.org" source="http://contextfreeart.org/"}
