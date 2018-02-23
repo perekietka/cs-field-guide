@@ -49,7 +49,7 @@ Obszar siatkówki oka, w którym nerw wzrokowy opuszcza gałkę oczną i biegnie
 
 **Aparaty cyfrowe**, inaczej niż oczy, są jednakowej czułości na światło dla całego pola widzenia. Intensywność światła i kolor są rejestrowane przez elementy receptorów RGB wdrukowane w krzemowym układzie scalonym. Te receptory nie mają jednak takiej zdolności jak oczy jeśli chodzi o zakres poziomów światła podczas przechwytywania informacji. Zwykle, współczesne aparaty cyfrowe potrafią automatycznie dopasować ustawienia w zależności od jasności otoczenia, ale ma to swoją cenę: bardziej szczegółowe informacje o obiektach będą stracone (np. jasne objekty będą na zdjęciu widoczne jako białe plamy).
 
-Jest ważne, by zrozumieć, że ani ludzkie oko, ani cyfrowy aparat fotograficzny --- nawet bardzo drogi --- nie są w stanie zapisać wszystkich informacji o obiektach znajdujących się w polu widzenia. Prowadzone są badania, wspólnie przez inżynierów elektroników i informatyków, których celem jest stworzenie urządzeń, które będą pozwalać na jeszcze bardziej dokładne rejestrowanie informacji oraz jej szybkie przetwarzanie.
+Jest ważne, by zrozumieć, że ani ludzkie oko, ani cyfrowy aparat fotograficzny -- nawet bardzo drogi -- nie są w stanie zapisać wszystkich informacji o obiektach znajdujących się w polu widzenia. Prowadzone są badania, wspólnie przez inżynierów elektroników i informatyków, których celem jest stworzenie urządzeń, które będą pozwalać na jeszcze bardziej dokładne rejestrowanie informacji oraz jej szybkie przetwarzanie.
 
 {panel type="Ciekawostka" summary="Do dalszej lektury"}
 
@@ -68,7 +68,7 @@ Efekt szumu jest widoczny głównie jako przypadkowe zmiany pikseli. W przykład
 Rozpoznawanie obiektów na obrazach, które zawierają szum jest trudniejsze. Dlatego ważne jest, by szukać coraz lepszych metod redukowania szumu na obrazie. 
 Przy projektowaniu takich metod należy zachować ostrożność. Efektem ubocznym usunięcia szumu nie może być bowiem utrata istotnych informacji o obrazie. Trzeba podkreślić, że stosowane metody są zawsze metodami przybliżonymi rozwiązania problemu, co oznacza, że decyzja o zachowaniu wartości liczbowej lub zmianie wartości dla konkretnego piksela jest efektem domysłu, uzasadnionego domniemania.
 
-{panel type="teacher-note" summary="Szumy w fotografii na Wikipedii"}
+{panel type="teacher-note" summary="Szumy w fotografii w Wikipedii"}
 
 Warto zapoznać się z artykułem o szumach w języku angielskim: [Image noise](https://en.wikipedia.org/wiki/Image_noise).
 
@@ -100,8 +100,8 @@ Otwórz interaktywne narzędzie [używając tego odnośnika](http://www.csfieldg
 Bazą matematyczną przetwarzania obrazu jest w tym przypadku specjalny rodzaj macierzy zwany *jądrem splotu* (ang. convolution kernel). Każdy z pikseli tworzących obraz jest przetwarzany: wartość mu przypisana jest uśredniania na podstawie wartości sąsiednich pikseli. Zbiór pikseli uśrednionych wartości tworzy nowy obraz. W tym przypadku średnia jest średnią ważoną, tzn. wpływ na średnią wartości pikseli sąsiadujących bezpośrednio z analizowanym pikselem jest większy niż wartości pikseli bardziej oddalonych. Im większe ma być rozmycie, tym większa macierz jest używana, co oznacza większą liczbę obliczeń do wykonania podczas przetwarzania.
 
 Ćwiczenie polega na zbadaniu wpływu różnych ustawień dla filtrów usuwania szumu i określeniu:
-- jak radzą sobie z różnymi rodzajami i poziomami szumu
-- jak dużo czasu trwa przetwarzanie (narzędzie wyświetla informację o liczbie ramek przewarzanych w ciągu sekundy)
+- jak radzą sobie z różnymi rodzajami i poziomami szumu,
+- jak dużo czasu trwa przetwarzanie (narzędzie wyświetla informację o liczbie ramek przewarzanych w ciągu sekundy),
 - jaki mają wpływ na jakość obrazu.
 
 
@@ -123,15 +123,15 @@ Artykuły edukacyjne dotyczące tego zagadnienia znajdują się również [na st
 
 ### Projekt: Rozpoznawanie twarzy
 
-{panel type="teacher-note" summary="NCEA"}
+{panel type="teacher-note" summary="Zadania projektowe"}
 
 Poniższe zadanie może być ciekawą propozycją na projekt szkolny.
 Dotyczy zagadnień:
-- Rozpoznwanie twarzy na zdjęciu cyfrowym
-- zastosowania praktyczne: bezpieczeństwo, znakowanie treści albumów zdjęć
-- algorytm: detektor twarzy Haar'a
-- kryteria oceny: dokładność rozpoznawania twarzy, fałszywe alarmy, szybkość działania
-- autorskie przykłady: zastosowanie metody do własnych zdjęć
+-- rozpoznwanie twarzy na zdjęciu cyfrowym,
+-- zastosowania praktyczne: bezpieczeństwo, znakowanie treści albumów zdjęć,
+-- algorytm: detektor twarzy Haar'a,
+-- kryteria oceny: dokładność rozpoznawania twarzy, fałszywe alarmy, szybkość działania,
+-- autorskie przykłady: zastosowanie metody do własnych zdjęć.
 
 {panel end}
 
@@ -158,20 +158,20 @@ Oto efekt przetwarzania obrazu przez algorytm wykrywania krawędzi:
 
 Można zauważyć, że algorytm przetwarzał również fragment obrazu ukazujący stół; lepiej, aby właściwy proces wykrywania krawędzi poprzedzić innym wstępnym filtrowaniem!
 
-Warto poeksperymentować z wykrywaczem krawędzi na stronie  [Canny detektor](https://inspirit.github.io/jsfeat/sample_canny_edge.html) (więcej informacji o [detektorze Canny'ego](https://pl.wikipedia.org/wiki/Canny)).
+Warto poeksperymentować z wykrywaczem krawędzi na stronie wykorzystującej [detektor Canny'ego](https://inspirit.github.io/jsfeat/sample_canny_edge.html) (więcej informacji o [detektorze Canny'ego](https://pl.wikipedia.org/wiki/Canny)).
 Algorytm został zaprojektowany w 1986 roku przez Johna F. Canny'ego.
 
 ### Projekt: Wykrywanie krawędzi
 
-{panel type="teacher-note" summary="NCEA"}
+{panel type="teacher-note" summary="Zadanie projektowe"}
 
 Poniższe zadanie może być ciekawą propozycją na projekt szkolny.
 Dotyczy zagadnień:
-- Wykrywanie krawędzi na zdjęciu cyfrowym
-- zastosowania praktyczne: segmentacja obrazu (podział obrazu na części)
-- algorytm: detektor krawędzi Canny'ego
-- kryteria oceny: dokładność rozpoznawania krawędzi, fałszywe alarmy, szybkość działania
-- autorskie przykłady: zastosowanie metody do własnych zdjęć
+-- wykrywanie krawędzi na zdjęciu cyfrowym,
+-- zastosowania praktyczne: segmentacja obrazu (podział obrazu na części),
+-- algorytm: detektor krawędzi Canny'ego,
+-- kryteria oceny: dokładność rozpoznawania krawędzi, fałszywe alarmy, szybkość działania,
+-- autorskie przykłady: zastosowanie metody do własnych zdjęć.
 
 {panel end}
 
@@ -193,7 +193,7 @@ Trzeba podkreślić, że fundamentalne koncepcje tej dziedziny wymyślone zosta�
 
 (W przyszłość rozdział zostanie uzupełniony.)
 
-## Do dalszej lektury
+## Dalsza lektura
 
 - [https://en.wikipedia.org/wiki/Computer_vision](https://en.wikipedia.org/wiki/Computer_vision)
 - [https://en.wikipedia.org/wiki/Mri](https://en.wikipedia.org/wiki/Mri)
