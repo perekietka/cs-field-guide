@@ -52,12 +52,12 @@ Mimo że inżynieria oprogramowania przeszła długą drogę w ostatnich dziesi�
 W tym rozdziale przyjrzymy się podstawom inżynierii oprogramowania. Wprowadzony zostanie temat *analizy* problemu, który pozwoli poznać rodzaj oprogramowania, jaki należy zbudować; omówimy pokrótce, jak *zaprojektować* i zbudować oprogramowanie, a następnie poświęcimy nieco czasu *testowaniu* oprogramowania, które jest jednym z najważniejszych kroków, w celu uniknięcia błędów. Jak widać poniżej, analiza, projektowanie i testowanie to ważne kroki przy tworzeniu oprogramowania. Właściwe programowanie zajmuje zwykle tylko 20% czasu w projekcie (w tym rozdziale prawie nie będziemy o tym wspominać)!
 
 {panel type="curiosity" summary="Więcej informacji o błędach w oprogramowaniu"}
-O ile każdy chce aby jego projekt się powiódł, na błędach można się wiele nauczyć! Oto niektóre strony, które dostarczają dalszych materiałów na ten temat.
+O ile każdy chce aby jego projekt się powiódł, na błędach można się wiele nauczyć! Oto niektóre strony, które dostarczają dalszych materiałów (po angielsku) na ten temat.
 
 - [Z powrotem do tablicy projektowej -- CS4FN](http://www.cs4fn.org/softwareengineering/backtodrawingboard.php)
 - [Dlaczego oprogramowanie zawodzi -- IEEE](http://spectrum.ieee.org/computing/software/why-software-fails)
 - [Uczenie się na błędach oprogramowania -- IEEE](http://spectrum.ieee.org/computing/software/learning-from-software-failure)
-- [Katastrofy inżynieryjne 13: Błędy w oprogramowaniu](http://youtu.be/EMVBLg2MrLs) jest fragmentem odcinka 13 cyklu Katastrofy inżynieryjne tłumaczącego błędy w oprogramowaniu rakiety Ariane 5 i pocisków Patriot
+- [Katastrofy inżynieryjne 13: Błędy w oprogramowaniu](http://youtu.be/EMVBLg2MrLs) jest fragmentem odcinka 13 cyklu „Katastrofy inżynieryjne” tłumaczącego błędy w oprogramowaniu rakiety Ariane 5 i pocisków Patriot.
 {panel end}
 
 ## Analiza: Co budujemy?
@@ -99,7 +99,7 @@ Klienci są zwykle ekspertami w swojej dziedzinie i dlatego mogą pominąć info
 {image filename="xkcd-tasks.png" hover-text="W latach sześćdziesiątych Marvin Minsky wyznaczył kilku studentów do spędzenia wakacji na programowaniu komputera w celu użycia kamery do identyfikacji obiektów. Wydawało mu się, że problem zostanie rozwiązany pod koniec wakacji. Pół wieku później wciąż nad tym pracujemy." alt="Rysunek xkcd na temat zadań programistycznych" source="https://xkcd.com/1425/"}
 
 {panel type="curiosity" summary="Łatwe dla komputerów i trudne dla ludzi, a trudne dla komputerów i łatwe dla ludzi"}
-Tekst z powyższego rysunku (trzeba go faktycznie obejrzeć na [stronie xkcd](https://xkcd.com/1425/)) jest również wart przeczytania. Rozpoznawanie obrazów to problem, który początkowo wydawał się prosty, prawdopodobnie dlatego, że ludzie uważają to za łatwe. Interesujące jest to, że wiele problemów jest łatwych dla komputerów, chociaż wydają się trudne dla ludzi. Na przykład pomnożenie dwóch dużych liczb. Z drugiej strony, istnieje wiele innych problemów, których komputery nie potrafią rozwiązać, natomiast dla ludzi nie stanowią one problemu, na przykład rozpoznanie, że zdjęcie przedstawia kota.
+Tekst ukazujący się po najechaniu myszką na powyższy rysunek (wygodniej przeczytać go na [stronie xkcd](https://xkcd.com/1425/)) jest również wart przeczytania. Rozpoznawanie obrazów to problem, który początkowo wydawał się prosty, prawdopodobnie dlatego, że ludzie uważają to za łatwe. Interesujące jest to, że wiele problemów jest łatwych dla komputerów, chociaż wydają się trudne dla ludzi. Na przykład pomnożenie dwóch dużych liczb. Z drugiej strony, istnieje wiele innych problemów, których komputery nie potrafią rozwiązać, natomiast dla ludzi nie stanowią one problemu, na przykład rozpoznanie, że zdjęcie przedstawia kota.
 {panel end} 
 
 Jeśli projekt dotyczy wielu interesariuszy, mogą pojawić się sprzeczne punkty widzenia. Na przykład, gdy rozmawiasz z ludźmi ze stołówki o aplikacji do zamawiania produktów spożywczych, mogą zażądać, by maksymalna wartość zamówienia wynosiła 20 zł. W ten sposób mogą uniknąć niepoważnych zamówień. Nauczyciele mogą zgodzić się z tą sugestią. Nie chcą, aby jakiś uczeń był zastraszany przez kolegów i zmuszany do kupowania im (zdalnie) jedzenia. Uczniowie z kolei będą twierdzić, że chcą zamówić jedzenie dla swoich przyjaciół. Ich zdaniem limit 20 zł nie wystarcza nawet dla jednego ucznia.
@@ -156,7 +156,7 @@ Możemy zastosować podobne „warstwowe” podejście w ramach jednego programu
 
 {image filename="facebook-three-tier-system.png" alt="Facebook można rozpatrywać jako system trzywarstwowy składający się z warstwy prezentacji, warstwy logicznej oraz warstwy danych." caption="Facebook można rozpatrywać jako system trzywarstwowy, składający się z warstwy prezentacji, warstwy logicznej oraz warstwy danych."}
 
-{panel type="curiosity" summary="Ponowne użycie - kangury i helikoptery"}
+{panel type="curiosity" summary="Ponowne użycie -- kangury i helikoptery"}
 
 Ponieważ budowanie oprogramowania jest tak trudne i czasochłonne, popularnym rozwiązaniem stało się ponowne wykorzystanie istniejącego oprogramowania. Nie będzie zaskoczeniem, że tę praktykę będziemy nazywać *ponownym użyciem* oprogramowania. Teoretycznie jest to świetny sposób postępowania (dlaczego tworzyć coś od nowa, skoro już istnieje?), lecz okazuje się trudny do zastosowania w praktyce. Wynika to z faktu, że istniejące oprogramowanie jest również ogromne i skomplikowane. Zwykle, gdy ponownie używasz oprogramowania, potrzebujesz tylko niewielkiej części funkcjonalności istniejącego oprogramowania, a nie wszystkiego.
 
@@ -240,7 +240,7 @@ Challenge the students to try to find the problem(s) using as few test inputs as
 A complete solution with all test cases that the interactive is looking for, with their equivalence classes, can be [obtained here](http://www.cosc.canterbury.ac.nz/csfieldguide/dev/teacher/_static/software_engineering/SE-triangle-test-cases-answers.pdf)
 {comment end}
 
-Testowanie metodą czarnej skrzynki („black-box”) jest łatwe, ale nie zawsze wystarczające. Wynika to faktu, że czasami znalezienie klas równoważności może być trudne, szczególnie jeśli nie znasz wewnętrznej struktury programu. Kiedy wykonujemy testowanie w trybie białej skrzynki (ang. „white-box”), przyglądamy się kodowi, który testujemy, i wymyślamy testy, które spowodują wykonanie jak największej liczby linii kodu. Jeśli wykonamy każdą linię przynajmniej raz, powinniśmy być w stanie odkryć wiele błędów. Podejście to nazywamy *pokryciem kodu* i dążymy do 100% pokrycia, tak aby każdy wiersz kodu był uruchamiany co najmniej raz. Ponieważ jedna linia kodu może działać inaczej w zależności od danych wejściowych, to nawet 100% pokrycie kodu niekoniecznie wyeliminuje wszystkie błędy. Mimo wszystko jest to całkiem dobry początek zapewniania niezawodności.
+Testowanie metodą *czarnej skrzynki* (ang. black-box) jest łatwe, ale nie zawsze wystarczające. Wynika to faktu, że czasami znalezienie klas równoważności może być trudne, szczególnie jeśli nie znasz wewnętrznej struktury programu. Kiedy wykonujemy testowanie w trybie *białej skrzynki* (ang. white-box), przyglądamy się kodowi, który testujemy, i wymyślamy testy, które spowodują wykonanie jak największej liczby linii kodu. Jeśli wykonamy każdą linię przynajmniej raz, powinniśmy być w stanie odkryć wiele błędów. Podejście to nazywamy *pokryciem kodu* i dążymy do 100% pokrycia, tak aby każdy wiersz kodu był uruchamiany co najmniej raz. Ponieważ jedna linia kodu może działać inaczej w zależności od danych wejściowych, to nawet 100% pokrycie kodu niekoniecznie wyeliminuje wszystkie błędy. Mimo wszystko jest to całkiem dobry początek zapewniania niezawodności.
 
 {comment}
 
@@ -332,8 +332,8 @@ Poza pytaniem o to, co robimy w danym momencie realizacji projektu, kolejną int
 
 Po zakończeniu opracowywania programu i przekazaniu go klientowi, główna część projektu oprogramowania dobiegła końca. Jednak ważne jest, abyś nie przestawał nad nim pracować. Kolejna część projektu, która często trwa przez lata, nazywa się *utrzymaniem*. Podczas tej fazy naprawiasz błędy, zapewniasz obsługę klienta, a być może nawet dodajesz nowe funkcje, których potrzebują klienci.
 
-{panel type="curiosity" summary="Prawo Booksa"}
-{glossary-definition term="Prawo Booksa" definition="Obserwacja, mowiąca że dodanie większej liczby osób do projektu, który jest spóźniony, może spowolnić projekt jeszcze bardziej."}
+{panel type="curiosity" summary="Prawo Brooksa"}
+{glossary-definition term="Prawo Brooksa" definition="Obserwacja, mowiąca że dodanie większej liczby osób do projektu, który jest spóźniony, może spowolnić projekt jeszcze bardziej."}
 
 Wyobraź sobie, że twój projekt jest spóźniony, a klient zaczyna się niecierpliwić. Twoim pierwszym odruchem może być poproszenie znajomych o pomoc, a tym samym zwiększenie liczby osób pracujących nad projektem. Prawo Brooksa sugeruje jednak, że to jest zły pomysł!
 
@@ -398,7 +398,7 @@ Procesy zwinne działają podobnie do procesów iteracyjnych, ponieważ wykonuj�
 
 W wielu innych procesach ważnym elementem jest dokumentacja. Zawiera ona wymagania oraz opis projektu, tak abyśmy mogli się do nich odwoływać, gdy programujemy system. Zwinne procesy programowe zakładają, że rzeczy będą się zmieniać przez cały czas. Dlatego też bardzo mało planują i dokumentują. Wynika to z faktu, że dokumentowanie rzeczy, które i tak ulegną zmianie, jest raczej stratą czasu.
 
-Zwinne programowanie postuluje wiele interesujących zasad, które odróżniają to podejście od standardowego tworzenia oprogramowania. Poniżej znajduje się ich przegląd. Jeśli chcesz dowiedzieć się więcej, zajrzyj do [Agile Academy na Youtube](https://www.youtube.com/user/AgileAcademyAus), gdzie znajdziesz wiele filmów o ciekawych zwinnych praktykach! Jest także [inny film tutaj](https://www.youtube.com/watch?v=kqz_jDS0RWY), który wyjaśnia różnice pomiędzy zwinnym programowaniem a modelem kaskadowym.
+Zwinne programowanie postuluje wiele interesujących zasad, które odróżniają to podejście od standardowego tworzenia oprogramowania. Poniżej znajduje się ich przegląd. Jeśli chcesz dowiedzieć się więcej, zajrzyj do [Agile Academy na Youtube](https://www.youtube.com/user/AgileAcademyAus), gdzie znajdziesz wiele filmów o ciekawych zwinnych praktykach!
 
 Oto kilka ogólnych zasad stosowanych w programowaniu zwinnym:
 
@@ -482,10 +482,11 @@ Zrozumienie znaczenia niektórych problemów i technik, które tutaj opisaliśmy
 ## Dalsza lektura
 
 ### Ciekawe odnośniki
+Wszystie materiały w języku angielskim.
 - [Wikipedia -- Inżynieria oprogramowania](https://en.wikipedia.org/wiki/Software_engineering)
 - [CS4FN -- Inżynieria oprogramowania](http://www.cs4fn.org/fundamentals/softwareeng.php)
 - [Nauka ICT -- Cykl życia systemów](http://www.teach-ict.com/as_a2_ict_new/ocr/A2_G063/331_systems_cycle/slc_stages/home_slc.html)
-- [Wikipedia -- Kryszys oprogramowania](https://en.wikipedia.org/wiki/Software_crisis)
+- [Wikipedia -- Kryzys oprogramowania](https://en.wikipedia.org/wiki/Software_crisis)
 - [IEEE -- Dlaczego oprogramowanie zawodzi](http://spectrum.ieee.org/computing/software/why-software-fails)
 - [Wikipedia -- Projektowanie oprogramowania](https://en.wikipedia.org/wiki/Software_design)
 - [Wikipedia -- Abstrakcja](https://en.wikipedia.org/wiki/Abstraction_(computer_science\))

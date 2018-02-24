@@ -1,4 +1,4 @@
-# Kodowanie -- Kompresja
+# Kodowanie -- kompresja
 
 ## Z lotu ptaka
 
@@ -18,7 +18,7 @@ W tym rozdziale przyjrzymy się temu jak można uzyskać kompresję, jakie są k
 Zaczniemy od prostego przykładu – kodowania długości serii (RLE od ang. Run Length Encoding) – które daje pewien wgląd w zalety i wady kompresji.
 
 {panel type="teacher-note" summary="Zadanie: uwięziony w ciele"}
-Przykładem intrygującego zadania związanego z kompresją jest [zadanie „uwięziony w ciele”](http://www.cs4fn.org/lockedin.html) z CS4FN.
+Przykładem intrygującego zadania związanego z kompresją jest [zadanie „uwięziony w ciele”](http://www.cs4fn.org/lockedin.html) z CS4FN (po angielsku).
 W tym zadaniu uczniowie symulują pisanie tekstu metodą używaną przez Jean’a-Dominique’a Bauby, który był całkowicie sparaliżowany i mógł poruszać jedynie powieką. Przy pomocy prostego binarnego interfejsu (miga lub nie miga) był w stanie podyktować całą książkę. Warto dobrać uczniów w pary i kazać im spróbować porozumiewać się jedynie mrugając. Zadanie to sprowokuje uczniów do zastanowienia się, jak robić to w najkrótszym czasie i przy najmniejszym wysiłku. Oczywiście, w pierwszym kroku będą musieli ustalić jak przekazać jakąkolwiek treść w ten sposób.
 {panel end}
 
@@ -103,7 +103,7 @@ Można skopiować i wkleić tę reprezentację (wraz z nagłówkiem) do pliku te
 Jeśli posiadasz program, który obsługuje pliki PBM, może zobaczyć obraz. Mógłbyś również napisać program, który będzie pozwalał tworzyć tego typu pliki oraz wyświetlać je jako obrazy.
 
 Z tego względu, iż cyfry są reprezentowane przez znaki ASCII, nie jest to najbardziej efektywny sposób zapisu. Jednakże pozwala nam przeczytać zawartość pliku.
-Istnieją inne warianty tego formatu, które zapisują kolory w pojedynczych bitach zamiast w znakach ASCII, oraz takie, które pozwalają zapisywać odcienie szarości lub kolory. Więcej [informacji na temat tego formatu dostępnych jest na Wikipedii](https://en.wikipedia.org/wiki/Netpbm_format).
+Istnieją inne warianty tego formatu, które zapisują kolory w pojedynczych bitach zamiast w znakach ASCII, oraz takie, które pozwalają zapisywać odcienie szarości lub kolory. Więcej [informacji na temat tego formatu dostępnych jest w angielskiej Wikipedii](https://en.wikipedia.org/wiki/Netpbm_format).
 {panel end}
 
 Kluczowym pytaniem w przypadku kompresji jest czy możemy zapisać obraz przy pomocy mniejszej ilości bitów i nadal być w stanie go odtworzyć.
@@ -200,7 +200,7 @@ Aby upewnić się, że możemy odwrócić proces kompresji, spróbuj znaleźć o
 Co zawiera obraz? Z jak wielu pikseli się składa? Ile liczb użyto do reprezentacji tego obrazu?
 
 {panel type="spoiler" summary="Odpowiedź dla powyższego obrazu"}
-Przykładowy obrazek pochodzi z [ćwiczenia interaktywnego „Reprezentacja obrazów”](http://csunplugged.org/image-representation), a rozwiązanie jest dostępne w treści zadanie (jest nim filiżanka i tależyk).
+Przykładowy obrazek pochodzi z [ćwiczenia interaktywnego „Reprezentacja obrazów”](http://csunplugged.org/image-representation) (po ang.), a rozwiązanie jest dostępne w treści zadania (jest nim filiżanka i talerzyk).
 {panel end}
 
 Poniższe ćwiczenie interaktywne pozwala na dalsze eksperymentowanie z kodowaniem długości serii.
@@ -304,7 +304,7 @@ Zauważmy, że kolory sąsiednich pikseli są często bardzo podobne, nawet w te
 
 Kodowanie długości serii nie działa w tym przypadku. Można by skorzystać z wariantu, który określa kolor piksela, a następnie mówi, ile kolejnych pikseli ma ten sam kolor. Chociaż większość sąsiednich pikseli jest prawie taka sama, to szanse na to, że są identyczne, są bardzo niskie, a serie identycznych kolorów prawie nie występują.
 
-Istnieje jednak sposób, aby wykorzystać stopniowo zmieniające się kolory. W przypadku pikseli w czerwonym polu powyżej, możesz wygenerować przybliżoną wersję tych kolorów, określając tylko pierwszy i ostatni w serii. Na tej podstawie komputer będzie obliczać pośrednie, zakładając, że kolor zmienia się stopniowo. Zamiast zapisywania 5-pikselowych wartości potrzebne są tylko 2, aby oglądający nie zauważył żadnej różnicy. Jest to *stratne*, ponieważ nie można dokładnie odtworzyć oryginału, ale wystarczająco dobre dla wielu zastosowań i pozwalające zaoszczędzić dużo miejsca.
+Istnieje jednak sposób, aby wykorzystać stopniowo zmieniające się kolory. W przypadku pikseli w czerwonym polu powyżej, możesz wygenerować przybliżoną wersję tych kolorów, określając tylko pierwszy i ostatni w serii. Na tej podstawie komputer będzie obliczać pośrednie, zakładając, że kolor zmienia się stopniowo. Zamiast zapisywania wartości dla 5 pikseli otoczonych na powyższym rysunku czerwoną ramką, wystarczy zapisać tylko dwie wartości, aby oglądający nie zauważył żadnej różnicy. Jest to *stratne*, ponieważ nie można dokładnie odtworzyć oryginału, ale wystarczająco dobre dla wielu zastosowań i pozwalające zaoszczędzić dużo miejsca.
 
 {panel type="jargon-buster" summary="Interpolacja"}
 {glossary-definition term="Interpolacja" definition="Wyliczenie wartości pośrednich pomiędzy pewnymi wartościami brzegowymi;
@@ -332,7 +332,7 @@ Poniższy wykres pokazuje wartości funkcji {math}\sin(x){math end} oraz {math}\
 
 {panel type="curiosity" summary="Dodawanie sinusa i cosinusa w celu uzyskania dowolnego kształtu fali"}
 Metody JPEG (i MP3) bazują na technice, pozwalającej falę dowolnego kształtu przedstawić jako sumę wielu fal.
-Przekształcenie kształtu fali dla bloku pikseli lub próbki muzyki w sumę prostych fal można wykonać za pomocą techniki zwanej [transformacją Fourier'a](https://en.wikipedia.org/wiki/Fourier_transform), która jest powszechnie wykorzystywana przy przetwarzaniu obrazu.
+Przekształcenie kształtu fali dla bloku pikseli lub próbki muzyki w sumę prostych fal można wykonać za pomocą techniki zwanej [transformacją Fouriera](https://en.wikipedia.org/wiki/Fourier_transform), która jest powszechnie wykorzystywana przy przetwarzaniu obrazu.
 
 Możesz poeksperymentować z dodawaniem fal, aby uzyskać inne kształty za pomocą
 [udostępnionego arkusza kalkulacyjnego](files/Adding-Sine-Waves.xls).
@@ -356,12 +356,12 @@ Daje to „przedobrzenia” widoczne na powyższym obrazku; w obrazie JPEG pojaw
 
 {image filename="jpeg-word-zoomed.jpg"}
 
-Możesz eksperymentować z różnymi kombinacjami fal uzyskując różne kształty.
+Możesz eksperymentować z różnymi kombinacjami fal, uzyskując różne kształty.
 Być może trzeba mieć więcej niż cztery, aby uzyskać dobre przybliżenia kształtu, który chcesz osiągnąć; to jest właśnie kompromis, z którym stara sobie radzić algorytm JPEG.
 Na drugiej zakładce arkusza kalkulacyjnego zamieszczone zostały pewne sugestie dotyczące parametrów.
 
-przekształceniami Fouriera za pomocą darmowego oprogramowania Wolfram Alpha; będzie to wymagało instalacji wtyczki w przeglądarce.
-Demonstracje Wolfram obejmują:
+Możesz zapoznać się z przekształceniami Fouriera za pomocą darmowego oprogramowania Wolfram Alpha; będzie to wymagało instalacji wtyczki w przeglądarce.
+Oto przykładowe prezentacje Wolfram (po ang.):
 [interaktywna demonstracja JPEG](http://demonstrations.wolfram.com/JPEGCompressionAlgorithm/),
 [prezentacja związków między sinusoidami a innymi formami falowymi](http://demonstrations.wolfram.com/RecoveringTheFourierCoefficients/), oraz
 [prezentacja tego jak sinusoidy można zsumować, aby otrzymać inne kształty](http://demonstrations.wolfram.com/SumsOfSineWavesWithSeveralStepSizesSawtoothOrSquareApproxima/).
@@ -440,7 +440,7 @@ appearing soon!
 
 ## Kompresja ogólnego przeznaczenia
 
-Metody kompresji ogólnego przeznaczenia muszą być bezstratne, ponieważ nie można założyć, że użytkownik zgodzi się na utratę danych. Najbardziej popularne algorytmy tego typu (takie jak ZIP, gzip i rar) oparte są na metodzie zwanej „kodowaniem Ziva-Lempela”, wymyślonej przez Jacoba Ziva i Abrahama Lempela w latach siedemdziesiątych.
+Metody kompresji ogólnego przeznaczenia muszą być bezstratne, ponieważ nie można założyć, że użytkownik zgodzi się na utratę danych. Najbardziej popularne algorytmy tego typu (takie jak ZIP, gzip i rar) oparte są na metodzie zwanej *kodowaniem Ziva-Lempela*, wymyślonej przez Jacoba Ziva i Abrahama Lempela w latach siedemdziesiątych.
 
 Przyjrzymy się temu zagadnieniu na przykładzie pliku tekstowego.
 Główną ideą kodowania Ziva-Lempela jest zastępowanie sekwencji znaków często występujących w plikach (na przykład sekwencja znaków „obraz” pojawia się często w tym rozdziale) odnośnikami do miejsca, w którym ostatnio się pojawił. Pod warunkiem, że odniesienie jest mniejsze niż zastępowana fraza, oszczędzamy miejsce. Zwykle systemy oparte na tym podejściu można wykorzystać do zredukowania plików tekstowych do zaledwie jednej czwartej ich oryginalnego rozmiaru, co nie ustepuje prawie żadnej znanej metodzie kompresowania tekstu.
@@ -494,13 +494,13 @@ Powyższy przykład dobrze ilustruje, co dzieje się z obrazami podczas zapisu w
 {comment end}
 
 {panel type="teacher-note" summary="Ćwiczenie metody Ziva-Lempela"}
-[Na strone CS Unplugged znajduje się ćwiczenie oraz informacje na temat metody Ziva-Lempela](http://csunplugged.org/text-compression),
-również [strona „Computing Science Inside” zawiera ćwiczenia dotyczące tego zagadnienia](https://web.archive.org/web/20150311225517/http://csi.dcs.gla.ac.uk/workshop-view.php?workshopID=1).
+Na stronie CS Unplugged znajduje się [ćwiczenie oraz informacje na temat metody Ziva-Lempela](http://csunplugged.org/text-compression),
+również strona „Computing Science Inside” zawiera [ćwiczenia dotyczące tego zagadnienia](https://web.archive.org/web/20150311225517/http://csi.dcs.gla.ac.uk/workshop-view.php?workshopID=1).
 Strona CS4FN omawia [podobną, nieco prostszą metodę, która nie jest zbyt praktyczna](http://www.cs4fn.org/internet/crushed.php).
 {panel end}
 
 {panel type="curiosity" summary="Kompresja ZL lub LZ?"}
-Opisany powyżej algorytm został nazwany kompresją „Ziva-Lempela” od nazwisk dwóch informatyków, Jacoba Ziva i Abrahama Lempela, którzy wymyślili go w latach siedemdziesiątych. Niestety ktoś pomieszał kolejność ich nazwisk, kiedy opisywał ten pomysł i nazwał go kompresją „LZ” zamiast kompresji „ZL”. Wielu naukowców skopiowało błąd, przez co metoda Ziva i Lempela jest obecnie zwana „kompresją LZ”!
+Opisany powyżej algorytm został nazwany kompresją Ziva-Lempela od nazwisk dwóch informatyków, Jacoba Ziva i Abrahama Lempela, którzy wymyślili go w latach siedemdziesiątych. Niestety ktoś pomieszał kolejność ich nazwisk, kiedy opisywał ten pomysł i nazwał go kompresją „LZ” zamiast kompresji „ZL”. Wielu naukowców skopiowało błąd, przez co metoda Ziva i Lempela jest obecnie zwana „kompresją LZ”!
 {panel end}
 
 ## Kompresja audio
@@ -532,7 +532,7 @@ Nie będziemy dokładnie prezentować zasad działania tych algorytmów, ale og�
 .. xtcb sometime could put in an expert section on this, perhaps with recordings or a filter showing the waveforms and adding them. Here are some links in the meantime:
 {comment end}
 
-Na stronie CS4FN znajdziesz [więcej informacji na temat mp3](http://www.cs4fn.org/mathemagic/sonic.html), ak również w artykule na [tej stronie](http://www.i-programmer.info/babbages-bag/1222-mp3.html).
+Na stronie CS4FN znajdziesz [więcej informacji na temat mp3](http://www.cs4fn.org/mathemagic/sonic.html), jak również w artykule na [tej stronie (po angielsku)](http://www.i-programmer.info/babbages-bag/1222-mp3.html).
 
 Inne dostępne systemy kompresji dźwięku to: AAC, ALAC, Ogg Vorbis i WMA. Każda z tych metod ma pewne zalety w stosunku do innych, niektóre są bardziej kompatybilne z urządzeniami lub nie wymagają licencji.
 
@@ -549,21 +549,21 @@ Skompresuj każde z przygotowanych nagrań przy użyciu różnych metod, po upew
 .. xtcb could have a section on Huffman coding sometime (remove from "the whole story")
 {comment end}
 
-## Cała opowieść!
+## Podsumowanie
 
 W rozdziale tym przedstawione zostały podstawowe informacje dotyczące kompresji, wiele szczegółów zostało jedynie wspomnianych. Sporo miejsca zostało poświęcone rozmiarom plików i szybkości algorytmów kompresji.
-Większość systemów kompresji to warianty pomysłów, które zostały tutaj omówione. Istnieje algorytm, o którym nie wspomnieliśmy, choć jest jednym z najważniejszych algorytmów kompresji. Chodzi o kodowanie Huffmana, które okazuje się przydatne jako ostatni etap *wszystkich* powyższych metod i często jest jednym z pierwszych tematów wymienionych w podręcznikach omawiających kompresję (krótkie [wyjaśnienie tutaj](http://www.cimt.org.uk/resources/codes/codes_u17_text.pdf)).
-Nie wspomnieliśmy też o kodowaniu artymetycznym (krótkie [wyjaśnienie tutaj](http://www.cimt.org.uk/resources/codes/codes_u18_text.pdf)).
+Większość systemów kompresji to warianty pomysłów, które zostały tutaj omówione. Istnieje algorytm, o którym nie wspomnieliśmy, choć jest jednym z najważniejszych algorytmów kompresji. Chodzi o kodowanie Huffmana, które okazuje się przydatne jako ostatni etap *wszystkich* powyższych metod i często jest jednym z pierwszych tematów wymienionych w podręcznikach omawiających kompresję (krótkie [wyjaśnienie (po ang.) tutaj](http://www.cimt.org.uk/resources/codes/codes_u17_text.pdf)).
+Nie wspomnieliśmy też o kodowaniu artymetycznym (krótkie [wyjaśnienie (po ang.) tutaj](http://www.cimt.org.uk/resources/codes/codes_u18_text.pdf)).
 Kompresja wideo została również pominięta, mimo iż to właśnie ten typ kompresji daje największe oszczędności przestrzeni dyskowej.
 Większość metod kompresji wideo jest oparta na standardzie „MPEG” (ang. Moving Pictures Experts Group). Nieco więcej informacji na ten tamat zawiera [artykuł CS4FN o „filmowej magii”](http://www.cs4fn.org/films/mpegit.php).
 
-{panel type="teacher-note" summary="Teacher guides for Plymouth resources"}
-Access to teacher guides for the Plymouth resources (linked in the previous paragraph) above are [available here](http://www.cimt.plymouth.ac.uk/resources/codes/).
+{panel type="teacher-note" summary="Podręczniki dla nauczycieli z zasobów Plymouth"}
+Dostęp do podręczników z zasobów Plymouth (odnośniki do nich są w poprzednim akapicie) są [dotępne tu](http://www.cimt.plymouth.ac.uk/resources/codes/).
 {panel end}
 
 Zaprezentowana metoda Ziva-Lempela jest odmianą metody zwanej „LZ77”. Wiele algorytmów kompresji bezstratnej bazuje na tych metodach. Innym popularnym algorytmem o podobnym działaniu jest „LZW”. Inną efektywną metodą kompresji ogólnego przeznaczenia jest bzip, oparty na bardzo sprytnej metodzie zwanej transformacją Burrowsa-Wheelera.
 
-Pytania typu „jaki jest najwyższy możliwy stopień kompresji” są przedmiotem badań [teorii informacji](https://en.wikipedia.org/wiki/Information_theory). Na stronie CS Unplugged zamieszczone jest [ćwiczenie poświęcone teorii informacji](http://csunplugged.org/information-theory), oraz [ćwiczenie interaktywne ilustrujące teorię informacji](http://www.math.ucsd.edu/~crypto/java/ENTROPY/). Z tej teorii wynika, że tekst w języku angielskim nie może być skompresowany do mniej niż 12% oryginalnego rozmiaru. Zdjęcia, dźwięki i materiały wideo mogę być kompresowane z większą skutecznością, gdyż możemy stosować kompresję stratną.
+Pytania typu „jaki jest najwyższy możliwy stopień kompresji” są przedmiotem badań [teorii informacji](https://en.wikipedia.org/wiki/Information_theory). Na stronie CS Unplugged zamieszczone jest [ćwiczenie poświęcone teorii informacji](http://csunplugged.org/information-theory) (po angielsku, ale zawierające polską instrukcję),  a na stronie uniwersytetu W San Diego -- [ćwiczenie interaktywne ilustrujące teorię informacji](http://www.math.ucsd.edu/~crypto/java/ENTROPY/). Z tej teorii wynika, że tekst w języku angielskim nie może być skompresowany do mniej niż 12% oryginalnego rozmiaru. Zdjęcia, dźwięki i materiały wideo mogę być kompresowane z większą skutecznością, gdyż możemy stosować kompresję stratną.
 
 {comment}
 .. xtcb jargon uncompressed are typically BMP or RAW. TIFF files Tagged Image File Format can contain many formats, including uncompressed, runlength and JPEG.
@@ -571,13 +571,13 @@ Pytania typu „jaki jest najwyższy możliwy stopień kompresji” są przedmio
 
 ## Dalsza lektura
 
-- „The Data Compression Book” Marka Nelsona i Jeana-Loupa Gailly zawiera solidny przegląd zagadnienia kompresji
+- „The Data Compression Book” Marka Nelsona i Jeana-Loupa Gailly zawiera solidny przegląd zagadnienia kompresji.
 - Listę książek poruszających temat kompresji można znaleźć na stronie [The Data Compression Site](http://www.data-compression.info/Books/).
-- Książka Gleicka „The Information” jest dobrym podręcznikiem na temat kompresji i kodowania.
+- Książka Jamesa Gleicka „Informacja. Bit, wszechświat, rewolucja” jest dobrym podręcznikiem na temat kompresji i kodowania.
 
 
 ### Ciekawe odnośniki
 
-- Obrazy, kodowanie długości serii [http://csunplugged.org/image-representation](http://csunplugged.org/image-representation).
-- Wykipedia zawiera [szczegółowy opis metoody kodowania JPEG](https://en.wikipedia.org/wiki/Jpeg).
-- Kompresja tekstu [http://csunplugged.org/text-compression](http://csunplugged.org/text-compression)
+- [Obrazy, kodowanie długości serii](http://csunplugged.org/image-representation).
+- Angielska wikipedia zawiera [szczegółowy opis metoody kodowania JPEG](https://en.wikipedia.org/wiki/Jpeg).
+- [Kompresja tekstu](http://csunplugged.org/text-compression)
