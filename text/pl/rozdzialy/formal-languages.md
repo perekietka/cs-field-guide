@@ -105,8 +105,8 @@ Dla zabawnej dyskusji, możesz poprosić uczniów o wykonanie [ćwiczenia pod na
 
 {panel type="teacher-note" summary="Poszukiwanie skarbów (alternatywne wprowadzenie)"}
 
-Na początku tego podrozdziału jest proponujemy zabawę, która obejmuje bieganie po placu zabaw. Jest ona opisana jako ćwiczenie „Poszukiwanie skarbów” w scenariuszu 12, w zbiorze [scenariuszy lekcji] (http://jasijoasia.edu.pl/csu1.pdf)."
-Może to być zbyt dziecinne dla niektórych uczniów, ale jeśli możesz im to sprzedać, będzie to świetny sposób, aby wykonać trochę ćwiczeń fizycznych z dala od komputerów i poznać większość koncepcji z tego rozdziału poprzez aktywność fizyczną. Możliwych jest wiele wariantów; na przykład to może być wykonane jako gra karciana, w której karta A/B dla każdej wyspy jest na żądanie odwracana. Spójrz też na angielską wersję tych ćwiczeń [Finite State Automata] (https://classic.csunplugged.org/finite-state-automata) w poszukiwaniu innych pomysłów.
+Na początku tego podrozdziału jest proponujemy zabawę, która obejmuje bieganie po placu zabaw. Jest ona opisana jako ćwiczenie „Poszukiwanie skarbów” w scenariuszu 12, w zbiorze [scenariuszy lekcji](http://jasijoasia.edu.pl/csu1.pdf)."
+Może to być zbyt dziecinne dla niektórych uczniów, ale jeśli możesz im to sprzedać, będzie to świetny sposób, aby wykonać trochę ćwiczeń fizycznych z dala od komputerów i poznać większość koncepcji z tego rozdziału poprzez aktywność fizyczną. Możliwych jest wiele wariantów; na przykład to może być wykonane jako gra karciana, w której karta A/B dla każdej wyspy jest na żądanie odwracana. Spójrz też na angielską wersję tych ćwiczeń [Finite State Automata](https://classic.csunplugged.org/finite-state-automata) w poszukiwaniu innych pomysłów.
 
 {panel end}
 
@@ -169,7 +169,7 @@ Nazwa
 
 {glossary-definition term="Automat skończenie stanowy" definition="Alternatywna nazwa dla automatu skończenie stanowego."}
 Czasami FSA jest nazywany
-{glossary-link term="Maszyna skończenie stanowa" reference-text="Języki formalne"}Maszyną skończenie stanową{glossary-link end} (w skrócie FSM, ang. Finite State Machine)
+{glossary-link term="Maszyna skończenie stanowa" reference-text="Języki formalne"}maszyną skończenie stanową{glossary-link end} (w skrócie FSM, ang. Finite State Machine)
 lub w skrócie „maszyną stanową”.
 {panel end}
 
@@ -288,7 +288,7 @@ Zauważ, że „r” zawsze wraca do stanu 1 — jeśli kiedykolwiek wystąpi na
 Czasami zobaczysz FSA nazywane skończoną maszyną stanową lub FSM (z angielskiego „Finite State Machine”). Istnieją także inne ściśle powiązane systemy o podobnych nazwach. Później, wspomnimy o niektórych z nich w tym rozdziale.
 
 {panel type="teacher-note" summary="Terminologia języków formalnych"}
-Poniższa strona zawiera obszerną listę terminów angielskich odnoszących się do języków formalnych i dużo głębsza i bardziej formalna niż nasza: [http://www.csee.umbc.edu/portal/help/theory/lang_def.shtml](http://www.csee.umbc.edu/portal/help/theory/lang_def.shtml)
+Poniższa strona zawiera obszerną listę terminów angielskich odnoszących się do języków formalnych i jest dużo głębsza i bardziej formalna niż nasza: [http://www.csee.umbc.edu/portal/help/theory/lang_def.shtml](http://www.csee.umbc.edu/portal/help/theory/lang_def.shtml)
 {panel end}
 
 Teraz musimy coś wyjaśnić, zanim pójdziemy dalej. Jeśli rozważamy FSA, w którym stan początkowy jest jednocześcnie stanem akceptującym, to *pusty łańcuch* — czyli ciąg bez żadnych liter — jest jednym z rozwiązań!
@@ -399,7 +399,7 @@ Ale Internet to tylko automat skończenie stanowy. Abyś mógł korzystać z wyn
 
 {panel type="teacher-note" summary="Wybór pomiędzy Exorciser i JFLAP"}
 
-Ten podrozdział wykorzystuje bezpłatne oprogramowanie edukacyjne, które ułatwia uczniom tworzenie i eksperymentowanie z FSA. To oprogramowanie będzie również przydatne w następnym podrozdziale dotyczącym wyrażeń regularnych, więc warto się z tym zapoznać. Możesz wybrać pomiędzy „Exorciser” lub „JFLAP” (patrz dalej). System Exorciser zrobiony przez [SwissEduc] (http://www.swisseduc.ch/compscience/) jest bardziej przejrzysty i prostszy, ale JFLAP zawiera kilka funkcji przydatnych w podrozdziałach dotyczących wyrażeń regularnych i gramatyk. (Materiał Exorciser dla gramatyk jest zbyt zaawansowany, a jego funkcje dotyczące wyrażeń regularnych są nieco bardziej nużące w użyciu.) Oba systemy mają rozbudowane funkcje, które nie mają związku z tym rozdziałem, więc uczniowie będą musieli ignorować wiele z tego, co zobaczą!
+Ten podrozdział wykorzystuje bezpłatne oprogramowanie edukacyjne, które ułatwia uczniom tworzenie i eksperymentowanie z FSA. To oprogramowanie będzie również przydatne w następnym podrozdziale dotyczącym wyrażeń regularnych, więc warto się z tym zapoznać. Możesz wybrać pomiędzy „Exorciser” lub „JFLAP” (patrz dalej). System Exorciser zrobiony przez [SwissEduc](http://www.swisseduc.ch/compscience/) jest bardziej przejrzysty i prostszy, ale JFLAP zawiera kilka funkcji przydatnych w podrozdziałach dotyczących wyrażeń regularnych i gramatyk. (Materiał Exorciser dla gramatyk jest zbyt zaawansowany, a jego funkcje dotyczące wyrażeń regularnych są nieco bardziej nużące w użyciu.) Oba systemy mają rozbudowane funkcje, które nie mają związku z tym rozdziałem, więc uczniowie będą musieli ignorować wiele z tego, co zobaczą!
 
 Zalecamy rozpoczęcie nauki od Exorcisera, a gdy uczniowie będą chcieli wykonać bardziej zaawansowane maszyny, wtedy mogą zapoznać się z JFLAP.
 
@@ -633,7 +633,7 @@ Gra Manufactoria zasadniczo dotyczy konstruowania automatu skończenie stanowego
 
 Jeśli używasz graficznego systemu edukacyjnego [Greenfoot](http://www.greenfoot.org/door) operatego na Javie jako środowisku programistycznym, [możesz wykorzystać grę w poszukiwanie skarbów, która jest oparta na ćwiczeniu „Poszukiwanie skarbów” ze strony CS Unplugged]( https://classic.csunplugged.org/finite-state-automata/). Nauczyciele mogą zarejestrować się w obszarze zasobów [Greenroom](http://greenroom.greenfoot.org/door) i pobrać [oprogramowanie](http://greenroom.greenfoot.org/resources/5). Uczniowie mogą wykonać ćwiczenie bez uzyskiwania dostępu do kodu źródłowego poprzez: http://www.greenfoot.org/scenarios/1678
 
-Jeśli używasz [Scratcha](http://scratch.mit.edu/), to wspomniane wyżej ćwiczenie „Poszukiwanie skarbów” ze strony CS Unplugged znajdziesz zaimplementowane w Scratchu w katalogu finite-automata [pliku zip] (http://code.google.com/p/scratch-unplugged/downloads/detail?name=scratch-unplugged-1-0.zip&can=2&q=). Plik zawiera zestaw aktywności Unplugged, zaimplementowanych przez Mordechaja Ben-Ariego z Instytutu Naukowego Weizmanna w Izraelu. Dokumentacja dla zestawu znajduje się w pliku [ReadMe.txt](http://code.google.com/p/scratch-unplugged/downloads/detail?name=readme.txt&can=2&q=) posiada dokumentację. Został opracowany przez [Mordechaja (Moti) Ben-Ariego](http://www.weizmann.ac.il/sci-tea/benari/home) z Instytutu Naukowego Weizmanna w Izraelu.
+Jeśli używasz [Scratcha](http://scratch.mit.edu/), to wspomniane wyżej ćwiczenie „Poszukiwanie skarbów” ze strony CS Unplugged znajdziesz zaimplementowane w Scratchu w katalogu finite-automata [pliku zip](http://code.google.com/p/scratch-unplugged/downloads/detail?name=scratch-unplugged-1-0.zip&can=2&q=). Plik zawiera zestaw aktywności Unplugged, zaimplementowanych przez Mordechaja Ben-Ariego z Instytutu Naukowego Weizmanna w Izraelu. Dokumentacja dla zestawu znajduje się w pliku [ReadMe.txt](http://code.google.com/p/scratch-unplugged/downloads/detail?name=readme.txt&can=2&q=) posiada dokumentację. Został opracowany przez [Mordechaja (Moti) Ben-Ariego](http://www.weizmann.ac.il/sci-tea/benari/home) z Instytutu Naukowego Weizmanna w Izraelu.
 
 Jeśli chcesz utworzyć schematy FSA, możesz użyć programu JFLAP lub programu graphviz, który ma wiele opcji do rysowania tego rodzaju diagramów: [http://www.graphviz.org/](http://www.graphviz.org/)
 
@@ -709,7 +709,7 @@ Możliwe, że uczniowie używali już wyrażeń regularnych, ponieważ są one w
 
 Jeśli masz czas, następujące ćwiczenie („odwrócone kalambury”) można wykonać przed lub po nauczeniu wyrażeń regularnych. Zalecamy wykonać je wcześniej, ponieważ takie konstruktywistyczne podejściem zachęca uczniów do projektowania własnych notacji dla języków regularnych i motywuje do nauki precyzyjnej notacji.
 
-Przydatnym ćwiczeniem pomagającym uczniom zrozumieć FSA i wyrażenia regularne jest gra „odwrócone kalambury” dla automatów skończonych, opracowana przez Lindę Pettigrew. Korzysta z [tego pliku] (files/reverse-pictionary-worksheet.pdf) (możesz też stworzyć własne proste FSA).
+Przydatnym ćwiczeniem pomagającym uczniom zrozumieć FSA i wyrażenia regularne jest gra „odwrócone kalambury” dla automatów skończonych, opracowana przez Lindę Pettigrew. Korzysta z [tego pliku](files/reverse-pictionary-worksheet.pdf) (możesz też stworzyć własne proste FSA).
 
 Podziel klasę na dwie grupy: A i B. Rozdaj jedną kopię FSM-A każdej parze uczniów w grupie A a kopie FSM-B — każdej parze w grupie B. Każda para dostaje również arkusz językowy. Będą pisać tylko w górnej połowie arkusza. Uczniowie muszą teraz opisać wszystkie akceptowalne dane wejściowe dla danego FSM (używając dowolnej notacji, którą mogą wymyślić, lub wyrażeń regularnych, jeśli już je napotkali). Kiedy są zadowoleni z ich opisu (lub minęło pięć minut), zapisują to w arkuszu językowym. Poniżej podajemy przykłady poprawnych opisów. Użyliśmy standardowej notacji dla wyrażeń regularnych, ale uczniowie mogą wymyślić coś innego.
 
@@ -884,7 +884,7 @@ Szczególna forma wyrażen regularnych, których używaliśmy, została zaczerpn
 {comment end}
 
 Wyrażenia regularne mają swoje ograniczenia — na przykład, nie będziesz w stanie stworzyć takiego, który wyszukuje palindromom (słowa i frazy, które są takie same czytane zarówno od przodu jak i od tyłu, takie jak „kajak”, „oko” i „atak kata”). Nie można użyć jednego wyrażenia do wykrycia łańcuchów składających się z *n* powtórzeń litery „a”, po których następuje *n* powtórzeń litery „b”.
-Do tego typu wzorców potrzebny jest mocniejszy system, zwany gramatyką (zobacz [rozdział o gramatyce] ((rozdzialy/jezyki-formalne.html#gramatyki-i-parsowanie)).
+Do tego typu wzorców potrzebny jest mocniejszy system, zwany gramatyką (zobacz [rozdział o gramatyce]((rozdzialy/jezyki-formalne.html#gramatyki-i-parsowanie)).
 Niemniej jednak wyrażenia regularne są bardzo przydatne w w typowym wyszukiwaniu wzorców.
 
 {comment}
@@ -1011,7 +1011,7 @@ Twój raport z projektu powinien: pokazywać wyrażenia regularne, wyjaśniać, 
 
 **Konwertowanie z JFLAP**
 
-W [JFLAP] (http://www.jflap.org) możesz używać prawie dowolnego znaku jako danych wejściowych.
+W [JFLAP](http://www.jflap.org) możesz używać prawie dowolnego znaku jako danych wejściowych.
 Głównymi wyjątkami są „\*”, „+” (mylące: „+” jest używany zamiast „|” dla alternatywy) i „!” (który jest pustym łańcuchem — w preferencjach, które możesz wybrać, ustaw, czy ma być pokazywany jako {math}\lambda{math end} lub {math}\epsilon{math end}).
 
 Głównymi operatorami dostępnymi w JFLAP są:
@@ -1205,7 +1205,7 @@ Uwaga: pozostała część tego podrozdziału nie została jeszcze opracowana.
 
 {image filename="context-free-tree-screenshot.png" alt="Drzewo narysowane za pomocą oprogramowania z contextfreeart.org" source="http://contextfreeart.org/"}
 
-Program *Context free art* [http://www.contextfreeart.org/](http://www.contextfreeart.org/)) umożliwia identyfikowanie obrazów za pomocą gramatyki bezkontekstowej. Na przykład poniższe zdjęcia drzew są zdefiniowane przez kilka zasad, które opierają się na tym, że las składa się z drzew, drzewo składa się z gałęzi, a gałęzie z kolei składają się z samych gałęzi! Te proste definicje mogą tworzyć obrazy z dużą ilością szczegółów, ponieważ proces rysowania może rozkładać gramatykę na tyle poziomów, ile jest wymagane. Możesz definiować swoje własne gramatyki, aby generować obrazy, a nawet tworzyć film, jak są one tworzone, jak ten poniżej. Oczywiście, jeśli robisz to jako projekt, upewnij się, że rozumiesz, jak działa system i jesteś w stanie wyjaśnić język formalny, stojący za twoim dziełem.
+Program [Context free art](http://www.contextfreeart.org/) umożliwia identyfikowanie obrazów za pomocą gramatyki bezkontekstowej. Na przykład poniższe zdjęcia drzew są zdefiniowane przez kilka zasad, które opierają się na tym, że las składa się z drzew, drzewo składa się z gałęzi, a gałęzie z kolei składają się z samych gałęzi! Te proste definicje mogą tworzyć obrazy z dużą ilością szczegółów, ponieważ proces rysowania może rozkładać gramatykę na tyle poziomów, ile jest wymagane. Możesz definiować swoje własne gramatyki, aby generować obrazy, a nawet tworzyć film, jak są one tworzone, jak ten poniżej. Oczywiście, jeśli robisz to jako projekt, upewnij się, że rozumiesz, jak działa system i jesteś w stanie wyjaśnić język formalny, stojący za twoim dziełem.
 
 
 {video url="http://player.vimeo.com/video/52320658"}
@@ -1216,10 +1216,9 @@ Program *Context free art* [http://www.contextfreeart.org/](http://www.contextfr
 
 {comment end}
 
-Program JFLAP ma również funkcję renderowania *systemów Lindenmayera* ([https://pl.wikipedia.org/wiki/L-system](https://pl.wikipedia.org/wiki/L-system)), które są innym sposobem korzystania z gramatyk w celu tworzenia uporządkowanych obrazów.
-Przeczytaj o ich działaniu w samouczku JFLAP
-([http://www.jflap.org/tutorial/index.html](http://www.jflap.org/tutorial/index.html)),
-a [tutaj] (http://www.cs.duke.edu/csed/pltl/exercises/lessons/20/L-system.zip) jest bardziej szczegółowy samouczek.
+Program JFLAP ma również funkcję renderowania [systemów Lindenmayera](https://pl.wikipedia.org/wiki/L-system), które są innym sposobem korzystania z gramatyk w celu tworzenia uporządkowanych obrazów.
+Przeczytaj o ich działaniu [w samouczku JFLAP](http://www.jflap.org/tutorial/index.html),
+a [tutaj](http://www.cs.duke.edu/csed/pltl/exercises/lessons/20/L-system.zip) jest bardziej szczegółowy samouczek.
 Oto kilka [przykładowych plików](http://www.cs.duke.edu/csed/jflap/jflapbook/files/), które mogą cię zainspirować (te zaczynające się „ex10...”), a to przykład obrazu, który można w ten sposób uzyskać:
 
 {image filename="jflap-tree-leaves-l-systems-screenshot.png" alt="Narysowane drzewo przy użyciu L-systems w JFLAP"}
@@ -1290,7 +1289,7 @@ W zasadzie każdy komputer jest rodzajem ograniczonej maszyny, więc te wszystki
 .. TCB, jeśli zdecydujemy się opisać niedeterministyczne automaty - może zastosować humorystyczne podejście - np. trasa pociągu jest częściowo losowa lub kilku pasażerów wypróbowuje wszystkie trasy?
 {comment end}
 
-Maszyna Turinga została tak nazwana na cześć Alana Turinga, który pracował nad podstawami informatyki teoretycznej na początku XX wieku. (Prace Turinga pojawiają się w wielu dziedzinach informatyki!) Jeśli chcesz poznać ideę maszyny Turinga i lubisz czekoladę, zrób [ćwiczenie na stronie CS4FN] (http://www.cs4fn.org/turing/turingmachines.php), które ilustruje, jak ona działa.
+Maszyna Turinga została tak nazwana na cześć Alana Turinga, który pracował nad podstawami informatyki teoretycznej na początku XX wieku. (Prace Turinga pojawiają się w wielu dziedzinach informatyki!) Jeśli chcesz poznać ideę maszyny Turinga i lubisz czekoladę, zrób [ćwiczenie na stronie CS4FN](http://www.cs4fn.org/turing/turingmachines.php), które ilustruje, jak ona działa.
 
 Środowisko programowania Kara również oferuje przykłady działania [maszyny Turinga](http://www.swisseduc.ch/compscience/karatojava/turingkara/)
 
