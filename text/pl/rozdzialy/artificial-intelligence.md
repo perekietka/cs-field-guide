@@ -77,7 +77,7 @@ Jak już wspomnieliśmy, Eliza jest czatbotem, który pracuje w specjalistycznej
 
 Spróbuj przeprowadzić rozmowę z kolejnym czatbotem — Mitsuku.
 
-Pierwowzorem czabota Mitsuku była [ALICE] (https://pl.wikipedia.org/wiki/ALICE_(sztuczna_inteligencja)). Mitsuku zawiera całą bazę wiedzy AIML czatbota Alice (w angielskiej wersji przewodnika autorzy proponują rozmowę z Alice, lecz podany odnośnik jest nieaktualny [przyp. tłum.]).
+Pierwowzorem czabota Mitsuku była [ALICE](https://pl.wikipedia.org/wiki/ALICE_(sztuczna_inteligencja)). Mitsuku zawiera całą bazę wiedzy AIML czatbota Alice (w angielskiej wersji przewodnika autorzy proponują rozmowę z Alice, lecz podany odnośnik jest nieaktualny [przyp. tłum.]).
 
 [Naciśnij tutaj, aby przejść do Mitsuku na stronie pandorabots.com](https://pandorabots.com/mitsuku/)
 
@@ -216,7 +216,7 @@ W przyszłości ten rozdział będzie rozbudowany.
 ## Dalsza lektura
 
 - [O sztucznej inteligencji na stronie i-Programmer](http://www.i-programmer.info/babbages-bag/297-artificial-intelligence.html)
-- [Paradoks sztucznej inteligencji i-Programmer](http://www.i-programmer.info/programming/artificial-intelligence/2437-the-paradox-of-artificial-intelligence.html)
+- [Paradoks sztucznej inteligencji (i-Programmer)](http://www.i-programmer.info/programming/artificial-intelligence/2437-the-paradox-of-artificial-intelligence.html)
 
 ### Ciekawe odnośniki
 Wszystkie materiały są po angielsku.
