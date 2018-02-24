@@ -1,4 +1,4 @@
-# Coding -- Encryption
+# Kodowanie. Szyfrowanie
 
 ## Z lotu ptaka
 
