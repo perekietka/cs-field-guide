@@ -88,7 +88,7 @@ Kod, którego użyłeś powyżej, jest częścią języka formalnego zwanego „
 Przyjrzymy się im bardziej szczegółowo w podrozdziale na temat [wyrażeń regularnych](rozdzialy/jezyki-formalne.html#wyrażenia-regularne).
 
 Następnie zbadamy prosty system do odczytu danych wejściowych, o nazwie
-{glossary-link term="automat skończenie stanowy" reference-text="Jęzki formalne"}automat skończenie stanowy{glossary-link end},
+{glossary-link term="automat skończenie stanowy"}automat skończenie stanowy{glossary-link end},
 który — jak przekonamy się później — jest blisko związany z 
 {glossary-link term="wyrażenie regularne"}wyrażeniami regularnymi{glossary-link end}.
 Później przyjrzymy się idei
@@ -162,12 +162,12 @@ Umiejętność korzystania z takich automatów jest bardzo przydatna dla informa
 
 {panel type="jargon-buster" summary="Automat skończenie stanowy"}
 
-{glossary-definition term="Automat skończenie stanowy" definition="W językach formalnych, prosta „maszyna”, która posiada stany i przejścia z jednego stanu do drugiego w oparciu o ciąg wejściowych symboli. Po angielsku „Finite State Automaton”"}
+{glossary-definition term="Automat skończenie stanowy" definition="W językach formalnych: prosta „maszyna”, która posiada stany i przejścia z jednego stanu do drugiego w oparciu o ciąg wejściowych symboli. Po angielsku „Finite State Automaton”."}
 Nazwa
 {glossary-link term="Automat skończenie stanowy" reference-text="Języki formalne"}automat skończenie stanowy{glossary-link end} (w skrócie FSA) może wydawać się dziwna, ale każde słowo jest w zasadzie proste.
 „Skończony” oznacza po prostu, że jest ograniczona liczba stanów (takich jak stacje kolejowe na mapie). „Stan” jest po prostu inną nazwą dla stacji kolejowych, z których korzystaliśmy. „Automat” to stare słowo, oznaczające maszynę działającą samodzielnie, zgodnie z prostymi zasadami (takimi jak kukułka w zegarze z kukułką).
 
-{glossary-definition term="Automat skończenie stanowy" definition="Alternatywna nazwa dla automatu skończenie stanowego."}
+{glossary-definition term="Maszyna skończenie stanowa" definition="Alternatywna nazwa dla automatu skończenie stanowego."}
 Czasami FSA jest nazywany
 {glossary-link term="Maszyna skończenie stanowa" reference-text="Języki formalne"}maszyną skończenie stanową{glossary-link end} (w skrócie FSM, ang. Finite State Machine)
 lub w skrócie „maszyną stanową”.
@@ -242,7 +242,7 @@ Ogólną zasadą tego automatu jest to, że dane wejściowe muszą zawierać nie
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/fsa-2state-v3.html?map=two" text="Zobacz kolejne interaktywne narzędzie stanów"}
 
-{glossary-definition term="Alfabet" definition="W językach formalnych, lista znaków, które mogą wystąpić w języku, lub bardziej ogólnie lista wszystkich możliwych wejść, które mogą wystąpić."}
+{glossary-definition term="Alfabet" definition="W językach formalnych: lista znaków, które mogą wystąpić w języku."}
 Aby zachować precyzję, zdefiniujemy dwa kolejne terminy.
 Jednym z nich jest 
 {glossary-link term="alfabet" reference-text="Języki formalne"}alfabet{glossary-link end},
@@ -252,9 +252,9 @@ ale w przypadku FSA, który przetwarza tekst wpisany na komputerze, alfabet będ
 
 {glossary-definition term="Przejście" definition="W automacie skończenie stanowym, połączenie pomiędzy dwoma stanami."}
 {glossary-definition term="Łańcuch" definition="Ciąg znaków."}
-{glossary-definition term="Język" definition="W językach formalnych, to zbiór wszystkich łańcuchów, które język akceptuje. To znaczy, które są poprawne."}
+{glossary-definition term="Język" definition="W językach formalnych: to zbiór wszystkich łańcuchów, które język akceptuje, czyli takich, które są poprawne."}
 Połaczenia pomiędzy stanami nazywane są
-{glossary-link term="przejścia" reference-text="Języki formalne"}przejściami{glossary-link end},
+{glossary-link term="przejście" reference-text="Języki formalne"}przejściami{glossary-link end},
 ponieważ następuje zmiana stanu.
 Ciąg znaków, które wprowadzamy do FSA, jest często nazywany 
 {glossary-link term="łańcuch" reference-text="Języki formalne"}łańcuchem{glossary-link end},
@@ -729,12 +729,12 @@ Dalsza dyskusja może dotyczyć tego, czy niektóre opisynie były zbyt długie 
 {panel end}
 
 Już posmakowaliśmy
-{glossary-link term="Wyrażenie regularne" reference-text="wprowadzenie"}wyrażeń regularnych{glossary-link end}
+{glossary-link term="wyrażenie regularne" reference-text="Języki formalne"}wyrażeń regularnych{glossary-link end}
 w podrozdziale [wprowadzającym](rozdzialy/jezyki-formalne.html#zaczynamy). Są one po prostu prostym sposobem wyszukiwania rzeczy w danych wejściowych lub określenia, jaki rodzaj danych wejściowych zostanie zaakceptowany jako poprawny.
 Na przykład wiele programów do obsługi skryptów internetowych używa ich do sprawdzania danych wejściowych dla wzorców, takich jak daty, adresy email i adresy URL. Stały się tak popularne, że są teraz wbudowane w większość języków programowania.
 
 Być może podejrzewasz, że wyrażeniania regularne związane są z 
-{glossary-link term="automaty skończenie stanowe" reference-text="związane z wyrażeniami regularnymi"}automatami skończenie stanowymi{glossary-link end}.
+{glossary-link term="automat skończenie stanowy" reference-text="związany z wyrażeniami regularnymi"}automatami skończenie stanowymi{glossary-link end}.
 I masz rację, ponieważ okazuje się, że każde wyrażenie regularne ma automat skończony, który może sprawdzić dopasowania, a każdy automat skończony może zostać przekonwertowany na wyrażenie regularne, które pokazuje dokładnie to, co akceptuje automat. Wyrażenia regularne są zwykle łatwiejsze do odczytania przez ludzi. W przypadku komputerów jest przeciwnie, dlatego program komputerowy konwertuje dowolne wyrażenie regularne na FSA, a następnie komputer może bez problemu sprawdzić dane wejściowe.
 
 Najprostszym ćwiczeniem jest dopasowanie tekstu do wpisanego ciągu liter. Otwórz interaktywne narzędzie poniżej i wpisz tekst „cat” w polu oznaczonym „Regular expression” (Wyrażenie regularne):
@@ -812,9 +812,9 @@ f(ff)+
 Zwróć uwagę na użycie nawiasów w celu grupowania części wyrażenia regularnego. Przydaje się to, jeśli chcesz zastosować „+” lub „\*” do więcej niż jednego znaku.
 
 {panel type="jargon-buster" summary="Wyrażenie regularne"}
-{glossary-definition term="wyrażenie regularne" definition="Formuła używana do opisu wzorca w tekście, który ma być dopasowany lub wyszukiwany. Są one zwykle używane do znajdowania elementów programu (takich jak nazwy zmiennych) i sprawdzania danych wejściowych w formularzach (np. sprawdzanie, czy adres email ma odpowiedni format)."}
+{glossary-definition term="Wyrażenie regularne" definition="Formuła używana do opisu wzorca w tekście, który ma być wyszukiwany. Zwykle używane jest do znajdowania elementów programu (takich jak nazwy zmiennych) i sprawdzania danych wejściowych w formularzach (np. sprawdzanie, czy adres email ma odpowiedni format)."}
 Termin
-{glossary-link term="wyrażenie regularne reference-text="skróty"}wyrażenie regularne{glossary-link end}
+{glossary-link term="wyrażenie regularne" reference-text="skróty dla wyrażeń regularnych"}wyrażenie regularne{glossary-link end}
 jest czasami zapisywany skrótowo jako *regex*, *regexp*, lub *RE*. Jest ono „regularne”, ponieważ można je używać do definiowania łańcuchów znaków z bardzo prostej klasy języków, zwanych „językami regularnymi”. Jest „wyrażeniem”, ponieważ jest kombinacją symboli, zgodną z pewnymi zasadami.
 
 {panel end}
@@ -911,7 +911,7 @@ Być może zauważyłeś, że q2 jest „stanem pułapki”. Ten sam efekt może
 Tak jak FSA, każde wyrażenie regularne reprezentuje 
 {glossary-link term="język" reference-text="wyrażenie regularne"}język{glossary-link end},
 które jest po prostu zbiorem wszystkich 
-{glossary-link term="łańcuch" reference-text="regular expression"}łańcuchów{glossary-link end},
+{glossary-link term="łańcuch" reference-text="wyrażenie regularne"}łańcuchów{glossary-link end},
 które pasują do tego wyrażenia regularnego.
 W powyższym przykładzie najkrótszym łańcuchem w języku jest „aabb”, potem są „aaaabb”, „aabbbb” i tak dalej w nieskończoność.
 Istnieje również nieskończona liczba łańcuchów, które *nie są* w tym języku, jak „a”, „aaa”, „aaaaaa” i tak dalej.
@@ -1084,7 +1084,7 @@ Jeśli konwersja wyrażeń regularnych na FSA jest częścią projektu, to powin
 Oto kilka pomysłów, które można wykorzystać do zbadania wyrażeń regularnych:
 
 - Na [stronie regexdict](http://www.visca.com/regexdict/) przeczytaj instrukcję (po angielsku) na temat 
-{glossary-definition term="Dopasowywanie do wzorców" definition="W językach formalnych znajdowanie tekstu pasującego do konkretnej reguły, zwykle przy użyciu wyrażenia regularnego."}
+{glossary-definition term="Dopasowywanie do wzorców" definition="W językach formalnych: znajdowanie tekstu pasującego do konkretnej reguły, zwykle przy użyciu wyrażenia regularnego."}
 {glossary-link term="dopasowywanie do wzorców" reference-text="Języki formalne"}dopasowywania do wzorców{glossary-link end} i napisz wyrażenia regularne do wyszukiwania słów takich jak:
 
   - Słowa zawierające „aa”.
@@ -1160,7 +1160,7 @@ Elastyczność reguł gramatyki angielskiej (jak i polskiej) oznacza, że zazwyc
 Gramatyki w językach formalnych są znacznie bardziej przewidywalne niż gramatyki w językach naturalnych. Dlatego nazywa się je językami *formalnymi*!
 Kiedy mówisz po angielsku, gramatyka moze sprawiać ci wiele trudności. Istnieje wiele reguł i wiele wyjatków od tych reguł — na przykład potrzebujesz apostrofu, jeśli piszesz „the computer's USB port”, ale musisz go pominąć, jeśli powiesz „its USB port”.
 
-{glossary-definition term="gramatyka" definition="W językach formalnych: zestaw reguł dla określania języka, na przykład w celu określenia składni języków programowania."}
+{glossary-definition term="Gramatyka" definition="W językach formalnych: zestaw reguł dla określania języka, na przykład w celu określenia składni języków programowania."}
 {glossary-link term="gramatyka" reference-text="Języki formalne"}Gramatyki{glossary-link end}
 w informatyce są używane głównie do określania języków programowania i formatów plików. Przez nie kompilatory robią problemy, nawet jeśli pominiesz tylko jeden nawias lub przecinek!
 Równocześnie są one bardzo przewidywalne. 
@@ -1308,7 +1308,7 @@ xAy {math}\to{math end} aBb,
 co jest bardziej elastyczne, ale o wiele trudniejsze w obsłudze.
 Relacje między głównymi rodzajami gramatyk opisał językoznawca Noam Chomsky. Na jego cześć klasyfikację języków formalnych nazwano
 {glossary-definition term="Hierarchia Chomsky’ego" definition="Hierarchia czterech klasyfikacji języków formalnych, od prostych wyrażeń regularnych do bardzo elastycznych (ale trudnych obliczeniowo) gramatyk."}
-{glossary-link term="Hierarchia Chomsky’ego" reference-text="Formal languages"}hierarchią Chomsky’ego{glossary-link end}.
+{glossary-link term="Hierarchia Chomsky’ego" reference-text="Języki formalne"}hierarchią Chomsky’ego{glossary-link end}.
 
 Istnieje bezpośrednia zależność między „maszynami” (takimi jak FSA) i językami (takimi jak wyrażenie regularne), ponieważ każdy coraz bardziej złożony język potrzebuje odpowiednio złożonej maszyny do jego przetworzenia.
 Na przykład, FSA może być użyty do określenia, czy dane wejściowe pasują do danego wyrażenia regularnego, ale PDA jest potrzebne, aby do CFG dopasowany został ciąg.
