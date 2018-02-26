@@ -3,7 +3,7 @@
 ## Z lotu ptaka
 
 {panel type="teacher-note" summary="Pokazanie sztuczki z parzystością w klasie"}
-Magiczna sztuczka z użyciem parzystości może stanowić ciekawy wstęp do idei korekcji błędów i zalecamy jej użycie na początku uczenia tego tematu. Trzeba ją wypróbować zawczasu, a dla uczniów szkół średnich zalecamy siatkę o wymiarach około 7x7 lub 8x8, żeby wywarła odpowiednie wrażenie. Szczegóły znajdują się w podrozdziale [Magia przewracania kart](http://csunplugged.org/error-detection) [strony CS Unplugged](http://csunplugged.org/).
+Magiczna sztuczka z użyciem parzystości może stanowić ciekawy wstęp do idei korekcji błędów i zalecamy jej użycie na początku uczenia tego tematu. Trzeba ją wypróbować zawczasu, a dla uczniów szkół średnich zalecamy siatkę o wymiarach około 7x7 lub 8x8, żeby wywarła odpowiednie wrażenie. Szczegóły znajdują się w podrozdziale w scenariuszu 4 [,,Magia obracanych kart''](http://jasijoasia.edu.pl/csu1.pdf) zbioru scenariuszy lekcji bez komputera.
 {panel end}
 
 {video url="https://www.youtube.com/embed/OXz64qCjZ6k?rel=0"}
@@ -19,7 +19,7 @@ W tym rozdziale chodzi o ochronę przed błędami w danych w różnych postaciac
 
 Jeśli nie wykryjemy, że dane zostały zmienione przez jakiś problem fizyczny (na przykład małą rysę na płycie CD lub uszkodzony obwód w pamięci flash), niepoprawna informacja zostanie po prostu użyta. Bardzo źle napisany system bankowy może potencjalnie doprowadzić do zmiany salda twojego rachunku, gdyby tylko jeden z bitów w liczbie został zmieniony przez promień kosmiczny, wpływając na wartość w pamięci komputera! Jeśli kod paskowy na paczce czipsów zakupionej w sklepie zostanie zeskanowany nieprawidłowo, może zostać naliczona opłata za szampon. Jeśli prześlesz plik muzyczny z laptopa do odtwarzacza mp3, a kilka bitów zostało przesłanych nieprawidłowo, odtwarzacz mp3 może odtworzyć muzykę z irytującymi usterkami. Kody kontroli błędów chronią przed tym wszystkim, więc (zwykle) wszystko po prostu działa i nie musimy się obawiać takich błędów.
 
-Dane mogą zostać przypadkowo zmienione z wielu przyczyn. Niektóre sieci mają dużo "szumu" (spowodowanego złą jakością okablowania, zakłóceniami elektrycznymi lub -- w przypadku sieci bezprzewodowych -- zakłóceniami z innych sieci). Bity na dyskach są bardzo małe, a niedoskonałości na powierzchni mogą w końcu spowodować uszkodzenie pamięci. Powierzchnie na dyskach kompaktowych i DVD są odsłonięte i mogą być łatwo uszkodzone podczas przechowywania (na przykład w wysokiej temperaturze lub wilgotności) lub używania (na przykład przez zadrapania albo kurz). Błędy mogą również wystąpić przy wpisywaniu liczb, na przykład przy wprowadzaniu numeru konta bankowego w celu dokonania płatności lub numeru kontenera, który jest ładowany na statek. Kody kreskowe na produktach mogą być lekko zarysowane lub poplamione na czarno, albo opakowanie może być zgięte lub nie można go prawidłowo odczytać, ponieważ zbyt szybko przesunięto nad nim skaner. Zmiana bitów w pamięci trwałej (takiej jak dyski twarde, dyski optyczne i dyski półprzewodnikowe) jest czasami nazywana gniciem danych, a [strona Wikipedii o gniciu danych](https://en.wikipedia.org/wiki/ Data_degradation) zawiera listę innych sposobów, w jakie mogą wystąpić te błędy.
+Dane mogą zostać przypadkowo zmienione z wielu przyczyn. Niektóre sieci mają dużo ,,szumu'' (spowodowanego złą jakością okablowania, zakłóceniami elektrycznymi lub -- w przypadku sieci bezprzewodowych -- zakłóceniami z innych sieci). Bity na dyskach są bardzo małe, a niedoskonałości na powierzchni mogą w końcu spowodować uszkodzenie pamięci. Powierzchnie na dyskach kompaktowych i DVD są odsłonięte i mogą być łatwo uszkodzone podczas przechowywania (na przykład w wysokiej temperaturze lub wilgotności) lub używania (na przykład przez zadrapania albo kurz). Błędy mogą również wystąpić przy wpisywaniu liczb, na przykład przy wprowadzaniu numeru konta bankowego w celu dokonania płatności lub numeru kontenera, który jest ładowany na statek. Kody kreskowe na produktach mogą być lekko zarysowane lub poplamione na czarno, albo opakowanie może być zgięte lub nie można go prawidłowo odczytać, ponieważ zbyt szybko przesunięto nad nim skaner. Zmiana bitów w pamięci trwałej (takiej jak dyski twarde, dyski optyczne i dyski półprzewodnikowe) jest czasami nazywana gniciem danych, a angielska [strona Wikipedii o gniciu danych](https://en.wikipedia.org/wiki/Data_degradation) zawiera listę innych sposobów, w jakie mogą wystąpić te błędy.
 
 Nikt nie chce komputera, który nie jest wiarygodny i nie robi tego, co powinien robić z powodu zmian bitów! Jak więc poradzić sobie z tymi problemami?
 
@@ -35,7 +35,7 @@ Po przeczytaniu tego rozdziału powinieneś rozumieć: podstawową ideę kodowan
 
 ## Sztuczka z parzystością
 
-Jeśli nigdy wcześniej nie widziałeś sztuczki z parzystością, obejrzyj wideo w podrozdziale "z lotu ptaka" powyżej. Zakładamy w tym podrozdziale, że wiesz, co to znaczy sztuczka z parzystością, ale teraz wyjaśnimy, jak ona działa!
+Jeśli nigdy wcześniej nie widziałeś sztuczki z parzystością, obejrzyj wideo w podrozdziale ,,z lotu ptaka'' powyżej. Zakładamy w tym podrozdziale, że wiesz, co to znaczy sztuczka z parzystością, ale teraz wyjaśnimy, jak ona działa!
 
 {image filename="parity-trick-cartoon.jpg" alt="Sztuczka z parzystością"}
 
@@ -50,7 +50,7 @@ Kartę w prawym dolnym rogu można wybrać na podstawie jej wiersza lub kolumny;
 
 Kiedy uznasz, że wszystko jest dobrze, powinieneś powiedzieć komputerowi, aby odwrócił kartę. Przez kilka sekund będzie pokazywana animacja, a następnie karty pojawią się ponownie, z jedną odwróconą kartą (cała reszta będzie taka sama jak poprzednio). Twoim zadaniem jest zidentyfikowanie odwróconej karty. Powinieneś być w stanie to zrobić *bez* zapamiętania układu kart. Pamiętasz wzorzec, według którego dodawałeś dodatkowe karty? To on jest kluczem. Gdy uznasz, że zidentyfikowałeś kartę, kliknij ją, aby sprawdzić, czy masz rację. Program interaktywny poprowadzi cię krok po kroku. Jeśli całkowicie utknąłeś podczas identyfikacji odwróconej karty, w programie interaktywnym pojawi się podpowiedź, chociaż powinieneś najpierw spróbować ją znaleźć sam. Upewnij się, że dodajesz dodatkowe karty poprawnie; komputer nie powie ci, jeśli źle je ustawisz i prawdopodobnie nie będziesz w stanie zidentyfikować odwróconej karty, jeśli dodatkowe karty nie zostaną ustawione poprawnie.
 
-{interactive name="parzystość" type="cała strona" text="Program interaktywny sztuczki z parzystością"}
+{interactive name="parity" type="cała strona" text="Program interaktywny sztuczki z parzystością"}
 
 Pamiętasz, jak ustawiałeś karty tak, aby każda kolumna miała parzystą liczbę czarnych kart? Kiedy karta zostaje odwrócona, powoduje to, że w wierszu i kolumnie znajduje się nieparzysta liczba czarnych kart. Wszystko, co musisz zrobić, to zidentyfikować rząd i kolumnę, które mają nieparzystą liczbę czarnych kart, a wtedy karta, która znajduje się na ich przecięciu, musi być tą, która została odwrócona!
 
@@ -58,11 +58,11 @@ To, co zobaczyliśmy powyżej, to prosty algorytm korekcji błędów, znany jako
 
 ### Jaki jest związek sztuczki z parzystością z kodami korekcji błędów?
 
-Karty reprezentują bity, przy czym ich dwa stany to czerń i biel (w rozdziale "prezentacja danych" analizowaliśmy, jak bit może być przechowywany przez cokolwiek, co może być w jednym z dwóch stanów: błyszczący/matowy, namagnesowany/nienamagnesowany , wysokie napięcie/niskie napięcie, czerń/biel itp.). Karty w kracie 7x7, które komputer dla ciebie przygotował, mogą być jakimiś danymi, na przykład tekstem reprezentowanym za pomocą bitów, obrazem lub jakimiś liczbami.
+Karty reprezentują bity, przy czym ich dwa stany to czerń i biel (w rozdziale ,,prezentacja danych'' analizowaliśmy, jak bit może być przechowywany przez cokolwiek, co może być w jednym z dwóch stanów: błyszczący/matowy, namagnesowany/nienamagnesowany , wysokie napięcie/niskie napięcie, czerń/biel itp.). Karty w kracie 7x7, które komputer dla ciebie przygotował, mogą być jakimiś danymi, na przykład tekstem reprezentowanym za pomocą bitów, obrazem lub jakimiś liczbami.
 Chociaż są one rozmieszczone na kracie, na komputerze wiersze bitów będą przechowywane i przesyłane jeden po drugim (jako 8 partii po 8 bitów każda).
 
 Dodatkowe, dodane przez ciebie karty są nazywane *bitami parzystości*. [Parzystość](https://pl.wikipedia.org/wiki/Parzysto%C5%9B%C4%87_liczb)
-oznacza po prostu, czy liczba jest parzysta czy nieparzysta (słowo pochodzi od tego samego rdzenia co "para"). Dodając dodatkowe karty w taki sposób, aby zapewnić parzystą liczbę czarnych kart w każdym rzędzie i kolumnie, zapewniłeś, aby wiersze i kolumny miały tzw. własność *parzystości*.
+oznacza po prostu, czy liczba jest parzysta czy nieparzysta (słowo pochodzi od tego samego rdzenia co ,,para''). Dodając dodatkowe karty w taki sposób, aby zapewnić parzystą liczbę czarnych kart w każdym rzędzie i kolumnie, zapewniłeś, aby wiersze i kolumny miały tzw. własność *parzystości*.
 
 Odwrócenie karty symulowało błąd w danych (np. kawałek kurzu lądujący na dysku CD lub promień kosmiczny zmieniający bit na dysku twardym, lub zakłócenia elektryczne zmieniające bit wysyłany przez kabel sieciowy). Ponieważ wiedziałeś, że w każdym wierszu i kolumnie powinna znajdować się parzysta liczba białych i czarnych kart, byłeś w stanie stwierdzić, że wystąpił błąd na podstawie faktu, że w kolumnie i szeregu była nieparzysta liczba czarnych kart. Oznacza to, że algorytm jest w stanie wykryć błędy, czyli była to **detekcja błędów**. Konkretna karta, która została odwrócona, znajdowała się na przecięciu wiersza i kolumny z nieparzystą liczbą czarnych kart, a ponieważ byłeś w stanie dokładnie określić, która karta została przewrócona, byłeś w stanie poprawić błąd, czyli był to też algorytm **korekcji błędów**.
 
@@ -72,7 +72,7 @@ A co by było, gdyby odwrócono więcej niż jedną kartę? Rozważymy to późn
 {panel type="project" summary="Bycie magikiem czyli używanie sztuczki z parzystością jako sztuczki magicznej!"}
 Teraz, gdy już nauczyłeś się, jak działa sztuczka z parzystością, możesz wypróbować ją z fizycznym zestawem kart, jak magik w filmie, albo możesz użyć dowolnych obiektów z dwoma różnymi stronami, takimi jak monety lub kubki. Możesz używać kart do gry, ale oznaczenia mogą rozpraszać, a karty z dwoma kolorami są najłatwiejsze (możesz je wykonać, tnąc dwukolorowe arkusze tektury, albo jednokolorowy arkusz z naklejkami, albo zamalowany na jednej stronie).
 
-Możesz znaleźć szczegóły i wiele pomysłów związanych ze sztuczką [tutaj](http://csunplugged.org/error-detection) lub postępować zgodnie z tymi instrukcjami:
+Możesz znaleźć szczegóły i wiele pomysłów związanych ze sztuczką [tutaj](http://csunplugged.org/error-detection) (w języku angielskim) lub postępować zgodnie z tymi instrukcjami:
 
 1. Poproś przyjaciela, aby rozłożył 25 kart w siatce 5 na 5, starając się mieć w miarę losową mieszankę czarnych i białych (to mniej niż w programie interaktywnym, ale łatwiej jest zaczynać z mniejszą liczbą kart, aby uniknąć błędów w następnym kroku!).
 2. Weź wszystkie pozostałe karty, a następnie powiedz, że w sumie 5 na 5 jest zbyt łatwe, więc zamierzasz przerobić je na 6 na 6. Zamiast dodawać losowo nowy wiersz i kolumnę, dodajesz je w taki sposób, w jaki robiłeś to w programie interaktywnym (z parzystością). Zrób to tak szybko, jak tylko potrafisz, nie popełniając błędów (może to wyglądać bardzo naturalnie, jeśli to poćwiczysz, mimo że karty są starannie dobierane).
@@ -126,11 +126,11 @@ Prawdopodobnie nie byłbyś zadowolony, gdybyś kupił książkę przez Internet
 
 Numery kodów kreskowych, numery kart kredytowych, numery kont bankowych, numery ISBN, numery PESEL, etykiety wysyłkowe (kody kontenerów wysyłkowych -- SSCC) i numery podatkowe zawierają kody korekcji błędów, aby zmniejszyć ryzyko ich wystąpienia. Niektóre cyfry w takich numerach to cyfry kontrolne, które uzyskuje się, wykonując specjalne obliczenia na wszystkich pozostałych cyfrach w numerze. Jeśli na przykład wpiszesz numer karty kredytowej w formularzu internetowym, aby coś kupić, zostanie obliczone, jaka powinna być 16. cyfra, przy użyciu pierwszych 15 cyfr i specjalnego sposobu (w numerach kart kredytowych jest 16 cyfr). Jeśli oczekiwana 16. cyfra nie jest cyfrą, którą wprowadziłeś, można stwierdzić, że wystąpił błąd przy wprowadzeniu numeru i zostaniesz powiadomiony, że numer karty kredytowej jest nieprawidłowy.
 
-W następnym podrozdziale najpierw przyjrzymy się jednemu z najczęściej używanych formatów kodów kreskowych, używanych w większości produktów kupowanych w supermarketach i innych sklepach. Później rozpatrzymy numery kart kredytowych. Nie musisz rozumieć *dlaczego* obliczenia działają tak dobrze (jest to zaawansowana matematyka i nie jest to ważne dla zrozumienia ogólnej idei) i chociaż dobrze jest wiedzieć, jakie są obliczenia, nie jest to niezbędne. Więc jeśli matematyka jest dla ciebie wyzwaniem i cię niepokoi, nie panikuj za bardzo, ponieważ to, co oglądamy w tym podrozdziale, nie jest wcale tak trudne, jak mogłoby się początkowo wydawać!
+W następnym podrozdziale najpierw przyjrzymy się jednemu z najczęściej używanych formatów kodów kreskowych, używanych w większości produktów kupowanych w sklepach. Później rozpatrzymy numery kart kredytowych. Nie musisz rozumieć *dlaczego* obliczenia działają tak dobrze (jest to zaawansowana matematyka i nie jest to ważne dla zrozumienia ogólnej idei) i chociaż dobrze jest wiedzieć, jakie są obliczenia, nie jest to niezbędne. Więc jeśli matematyka jest dla ciebie wyzwaniem i cię niepokoi, nie panikuj za bardzo, ponieważ to, co oglądamy w tym podrozdziale, nie jest wcale tak trudne, jak mogłoby się początkowo wydawać!
 
 ### Cyfry kontrolne na kodach kreskowych produktów
 
-Większość produktów, które można kupić w sklepie, ma kod kreskowy z 13-cyfrowym "globalnym numerem handlowym" (zwanym GTIN-13).
+Większość produktów, które można kupić w sklepie, ma kod kreskowy z 13-cyfrowym ,,globalnym numerem handlowym'' (zwanym GTIN-13).
 Pierwsze 12 cyfr to rzeczywisty numer identyfikacyjny produktu, 13. to cyfra kontrolna wyliczana z pozostałych 12.
 Nie wszystkie kody kreskowe to GTIN-13, istnieje kilka innych typów.
 Jeśli jednak kod kreskowy zawiera 13 liczb, to prawie na pewno jest to GTIN-13.
@@ -138,11 +138,11 @@ Jeśli jednak kod kreskowy zawiera 13 liczb, to prawie na pewno jest to GTIN-13.
 {image filename="isbn-barcode.png" alt="Obraz 13-cyfrowego kodu kreskowego"}
 
 Ostatnia cyfra tych liczb jest wyliczana z pierwszych 12.
-Jest to bardzo ściśle związane z bitem parzystości, który rozważaliśmy powyżej, gdzie ostatni bit rzędu jest "wyliczany" z wcześniejszych bitów.
+Jest to bardzo ściśle związane z bitem parzystości, który rozważaliśmy powyżej, gdzie ostatni bit rzędu jest ,,wyliczany'' z wcześniejszych bitów.
 Kod GTIN-13 pozwala nam wykryć, czy jedna z cyfr nie została wprowadzona niepoprawnie.
 
 Następujący program interaktywny sprawdza kody kreskowe GTIN-13. Wprowadź pierwsze 12 cyfr kodu kreskowego do programu interaktywnego, a on powie ci, jaka powinna być ostatnia cyfra!
-Możesz zacząć używając numeru kodu kreskowego "9 300675 036009".
+Możesz zacząć używając numeru kodu kreskowego ,,9 300675 036009''.
 
 {interactive name="checksum-calculator-gtin-13" type="in-page"}
 
@@ -153,12 +153,12 @@ Możesz przynieść różne opakowania, które mają kody kreskowe, żeby klasa 
 Co się stanie, jeśli popełnisz błąd podczas wpisywania 12 cyfr (spróbuj zmienić jedną cyfrę)?
 Czy można wykryć, że popełniono błąd?
 
-{panel type="teacher-note" summary="Solution"}
+{panel type="teacher-note" summary="Rozwiązanie"}
 Jeśli zmieni się tylko jedna cyfra, cyfra kontrolna będzie zawsze nieprawidłowa, a błąd zostanie wykryty.
 {panel end}
 
 Znajdź inny produkt z kodem kreskowym, np. artykuł spożywczy lub przedmiot papierniczy.
-Zauważ, że niektóre kody kreskowe są trochę inne --- upewnij się, że kody kreskowe, których używasz, mają 13 cyfr (chociaż możesz też dowiedzieć się, jak działa cyfra kontrolna na innych kodach).
+Zauważ, że niektóre kody kreskowe są trochę inne -- upewnij się, że kody kreskowe, których używasz, mają 13 cyfr (chociaż możesz też dowiedzieć się, jak działa cyfra kontrolna na innych kodach).
 Czy program interaktywny zawsze jest w stanie określić, czy poprawnie wpisałeś kod kreskowy?
 
 Jeden z następujących numerów produktów zawiera jedną niepoprawną cyfrę. Czy możesz stwierdzić, przy pomocy programu interaktywnego, który z produktów miał nieprawidłowo wpisany numer?
@@ -167,26 +167,26 @@ Jeden z następujących numerów produktów zawiera jedną niepoprawną cyfrę. 
 - 9 400559 001014
 - 9 300617 013199
 
-{panel type="teacher-note" summary="Solution"}
+{panel type="teacher-note" summary="Rozwiązanie"}
 Ostatni kod zawiera literówkę; powinno być 9 300617 003199. Uczniowie powinni być w stanie wykryć, że jest nieprawidłowy, ale nie da się ustalić, jaka jest właściwa wartość.
 {panel end}
 
-Gdybyś skanował powyższe kody kreskowe w supermarkecie, niepoprawny musiałby zostać ponownie przeskanowany, a system może stwierdzić, że jest to zła liczba, bez konieczności wyszukiwania w spisie.
+Gdybyś skanował powyższe kody kreskowe w sklepie, niepoprawny musiałby zostać ponownie przeskanowany, a system może stwierdzić, że jest to zła liczba, bez konieczności wyszukiwania w spisie.
 Zwykle błędy są spowodowane uszkodzeniem samego kodu kreskowego (np. trochę lodu na zamrożonym produkcie, powodujące nieprawidłowy odczyt).
 Jeśli zostanie wykryty błąd, skaner zwykle wydaje dźwięk ostrzegawczy, aby ostrzec kasjera.
 
 Możesz spróbować wymienić się numerami kodów kreskowych z kolegami z klasy, ale przed podaniem numeru rzuć monetą i jeśli wyjdzie orzeł, zmień jedną z cyfr kodu kreskowego, zanim go podasz.
 Czy uda im się ustalić, że dostali błędny kod kreskowy?
 
-Jeśli jedna cyfra jest niepoprawna, to wyliczona cyfra kontrolna da inną wartość niż ma cyfra w kodzie, co zasygnalizuje błąd. Tak więc błędy jednocyfrowe *zawsze* zostaną wykryte, ale co jeśli dwie cyfry ulegną zmianie --- czy zawsze błąd zostanie wykryty?
+Jeśli jedna cyfra jest niepoprawna, to wyliczona cyfra kontrolna da inną wartość niż ma cyfra w kodzie, co zasygnalizuje błąd. Tak więc błędy jednocyfrowe *zawsze* zostaną wykryte, ale co jeśli dwie cyfry ulegną zmianie -- czy zawsze błąd zostanie wykryty?
 
-{panel type="teacher-note" summary="Solution"}
+{panel type="teacher-note" summary="Rozwiązanie"}
 Jeśli zostaną zmienione dwie cyfry, błąd może pozostać niewykryty; na przykład zmiana 9 400559 001014 na 6 500559 001014 nadal będzie generować sumę kontrolną 4, która wydaje się być zgodna. Jednak jest mało prawdopodobne, że dwa błędy tak się zniosą (uczniowie mogą zbadać, jak często to się dzieje).
 {panel end}
 
 Co jeśli błąd występuje w samej sumie kontrolnej, ale nie w innych cyfrach -- czy zostanie wykryty?
 
-{panel type="teacher-note" summary="Solution"}
+{panel type="teacher-note" summary="Rozwiązanie"}
 Niektórzy uczniowie mogą się martwić, że wystąpi problem, jeśli to suma kontrolna zostanie zmieniona, ale oczywiście jeśli zostanie ona wpisana niepoprawnie, to nie będzie ona pasować do sumy innych cyfr, a błąd zostanie wykryty.
 {panel end}
 
@@ -200,7 +200,7 @@ Niektóre z ludzkich, typowych błędów to:
 - nieprawidłowa jedna cyfra (podstawienie),
 - zamiana dwóch sąsiadujących cyfr (transpozycja),
 - brakująca cyfra,
-- dodana cyfra,
+- dodana cyfra.
 
 Dwa ostatnie zostaną zauważone przez niezgodność z oczekiwaną długością liczby; na przykład GTIN-13 ma 13 cyfr, więc jeśli wprowadzono 12 lub 14, komputer natychmiast wie, że coś jest nie w porządku. Wykrycie pierwszych  dwóch polega na cyfrze kontrolnej. Co ciekawe, wszystkie jednocyfrowe błędy zostaną wykryte przez popularne systemy sum kontrolnych, a *większość* transpozycji też zostanie wykryta (czy możesz znaleźć przykłady transpozycji, które nie zostały wykryte, korzystając z powyższego programu interaktywnego?).
 
@@ -209,7 +209,7 @@ Istnieją również mniej powszechne błędy, popełniane przez ludzi:
 - nieprawidłowa cyfra w dwóch lub więcej miejscach,
 - podwojenie błędnej cyfry, np. umieszczenie 3481120 zamiast 3481220,
 - pomieszanie 3 cyfr, np. 14829 zamiast 12489,
-- błędy fonetyczne są możliwe, gdy numer został odczytany i wpisany przez kogoś słuchającego (lub czytającego sobie głośno ten numer podczas wpisywania); na przykład "trzydzieści" (30) może być usłyszane jako "trzynaście" (13).
+- błędy fonetyczne są możliwe, gdy numer został odczytany i wpisany przez kogoś słuchającego (lub czytającego sobie głośno ten numer podczas wpisywania); na przykład ,,trzydzieści'' (30) może być usłyszane jako ,,trzynaście'' (13).
 
 Eksperymentuj dalej z programem interaktywnym. Jakie błędy zostały wykryte? Jakie znajdziesz błędy, które nie zostaną wykryte? Czy typowe błędy prawie zawsze zostają wykryte? Czy potrafisz znaleźć sytuacje, w których nie zostają? Spróbuj znaleźć przykłady tylu różnych rodzajów wykrywalnych i niewykrywalnych błędów, ile tylko możesz.
 
@@ -243,8 +243,8 @@ Spójrzmy na przykład ilustrujący ten algorytm. Chcemy potwierdzić, że cyfra
 
 Poniższy program interaktywny może być używany do wykonywania za ciebie obliczeń.
 Aby upewnić się, że rozumiesz proces, sam musisz wykonać niektóre czynności; ten program interaktywny może być używany do szerokiej gamy systemów z cyfrą kontrolną.
-Aby sprawdzić numer GTIN-13, wprowadź pierwsze 12 cyfr w miejsce przy którym jest napisane "Enter the number here".
-Mnożniki dla GTIN-13 można wprowadzić jako "131313131313" (co druga cyfra pomnożona przez 3).
+Aby sprawdzić numer GTIN-13, wprowadź pierwsze 12 cyfr w miejsce przy którym jest napisane ,,Enter the number here''.
+Mnożniki dla GTIN-13 można wprowadzić jako ,,131313131313'' (co druga cyfra pomnożona przez 3).
 To da iloczyny każdej z 12 cyfr pomnożonych przez odpowiednią liczbę.
 Powinieneś samodzielnie obliczyć sumę iloczynów (liczby w okienkach) i ją wpisać.
 Następnie otrzymasz resztę z dzielenia przez 10.
@@ -304,7 +304,7 @@ Spójrzmy na kilka mniejszych przykładów z 5 cyframi (4 cyfry normalne i cyfra
 
 Jeśli potrzebujemy cyfry kontrolnej dla 8954, obliczalibyśmy (8x1)+(9x3)+(5x1)+(4x3)=52, a aby zwiększyć tę wartość do 60, musimy dodać 8. Czyli pełnym numerem będzie 89548.
 
-Pierwszą rzeczą, którą powinniśmy zauważyć jest to, że tylko cyfra jedności (ostatnia cyfra) każdej dodanej liczby ma wpływ na cyfrę kontrolną. 8+27+5+12=52 i 8+7+5+2=22 (patrzymy tylko na ostatnią cyfrę każdej dodawanej liczby). Obie liczby kończą się na 2, a zatem potrzebują 8, aby utworzyły najbliższą wielokrotność 10. Możesz dostrzec, dlaczego tak jest, jeśli zauważysz, że "2" i "1", które zostały wycięte z kolumny dziesiątek, dają 10+20=30, co jest wielokrotnością 10. Odejmowanie ich wpływa tylko na kolumnę dziesiątek i wyżej. Tak jest zawsze i dlatego możemy uprościć problem, dodając do sumy tylko cyfrę jedności każdej liczby. (Może to również służyć jako skrót do obliczania sumy kontrolnej w pamięci).
+Pierwszą rzeczą, którą powinniśmy zauważyć jest to, że tylko cyfra jedności (ostatnia cyfra) każdej dodanej liczby ma wpływ na cyfrę kontrolną. 8+27+5+12=52 i 8+7+5+2=22 (patrzymy tylko na ostatnią cyfrę każdej dodawanej liczby). Obie liczby kończą się na 2, a zatem potrzebują 8, aby utworzyły najbliższą wielokrotność 10. Możesz dostrzec, dlaczego tak jest, jeśli zauważysz, że ,,2'' i ,,1'', które zostały wycięte z kolumny dziesiątek, dają 10+20=30, co jest wielokrotnością 10. Odejmowanie ich wpływa tylko na kolumnę dziesiątek i wyżej. Tak jest zawsze i dlatego możemy uprościć problem, dodając do sumy tylko cyfrę jedności każdej liczby. (Może to również służyć jako skrót do obliczania sumy kontrolnej w pamięci).
 
 *Ochrona przed pojedynczymi błędami*
 
@@ -342,7 +342,7 @@ Ale czy są przypadki, w których cyfry jedności sum będą takie same? Innym s
 
 Pamiętaj, że pierwsza kolumna określa, ile wniosą do sumy cyfry pomnożone przez 1, a druga kolumna -- cyfry pomnożone przez 3. Ponieważ sąsiednie cyfry są pomnożone przez inną wartość (jedna przez 3, a druga przez 1), zostaną dodane liczby leżące po przekątnej w wybranej parze.
 
-Jeśli na przykład pierwsze 2 cyfry w liczbie to "28", dodamy 2+4=6 do sumy. Jeśli zostaną zamienione miejscami, dodamy 8+6=14, co odpowiada 4, ponieważ wielokrotności "10" nie mają wpływu na sumę. 8+6 i 2+4 leżą na przekątnej pary!
+Jeśli na przykład pierwsze 2 cyfry w liczbie to ,,28'', dodamy 2+4=6 do sumy. Jeśli zostaną zamienione miejscami, dodamy 8+6=14, co odpowiada 4, ponieważ wielokrotności ,,10'' nie mają wpływu na sumę. 8+6 i 2+4 leżą na przekątnej pary!
 
 - *8* -> **4**
 - **2** -> *6*
@@ -351,25 +351,25 @@ Zatem pytanie brzmi: czy widzisz jakieś pary, w których suma przekątnych dawa
 
 *Ochrona przed błędami podwojenia*
 
-Błąd podwojenia polega na tym, że cyfra, która powtarza się dwukrotnie w liczbie, zmienia się na inną cyfrę, która powtarza się dwukrotnie. Na przykład, jeśli mamy liczbę "22" w numerze, ktoś może jakoś ją zmienić na "88".
+Błąd podwojenia polega na tym, że cyfra, która powtarza się dwukrotnie w liczbie, zmienia się na inną cyfrę, która powtarza się dwukrotnie. Na przykład, jeśli mamy liczbę ,,22'' w numerze, ktoś może jakoś ją zmienić na ,,88''.
 
 Gdy dwie liczby są obok siebie, jedna jest pomnożona przez 3, a druga przez 1. Wartość wniesiona do sumy jest sumą wiersza danej liczby na powyższej liście.
-Na przykład 2 ma wiersz "2->6". Oznacza to, że 2+6=8 zostanie dodane do sumy z powodu tych dwóch cyfr.
+Na przykład 2 ma wiersz ,,2->6''. Oznacza to, że 2+6=8 zostanie dodane do sumy z powodu tych dwóch cyfr.
 
 Jeśli jakieś wiersze sumują się do tej samej liczby, może to stanowić problem. Gdy suma przekracza 10, kolumna dziesiątek została usunięta.
 
-- 1 -> 3 sumuje się do "4"
-- 2 -> 6 sumuje się do "8"
-- 3 -> 9 sumuje się do "2"
-- 4 -> 2 sumuje się do "6"
-- 5 -> 5 sumuje się do "0"
-- 6 -> 8 sumuje się do "4"
-- 7 -> 1 sumuje się do "8"
-- 8 -> 4 sumuje się do "2"
-- 9 -> 7 sumuje się do "6"
-- 0 -> 0 sumuje się do "0"
+- 1 -> 3 sumuje się do ,,4''
+- 2 -> 6 sumuje się do ,,8''
+- 3 -> 9 sumuje się do ,,2''
+- 4 -> 2 sumuje się do ,,6''
+- 5 -> 5 sumuje się do ,,0''
+- 6 -> 8 sumuje się do ,,4''
+- 7 -> 1 sumuje się do ,,8''
+- 8 -> 4 sumuje się do ,,2''
+- 9 -> 7 sumuje się do ,,6''
+- 0 -> 0 sumuje się do ,,0''
 
-Niektóre wiersze sumują się do tej samej liczby! Ponieważ zarówno czwarty, jak i dziewiąty wiersz dają sumę 6, błąd nie zostanie wykryty, jeśli w badanym numerze "44" zostanie zamienione na "99"!
+Niektóre wiersze sumują się do tej samej liczby! Ponieważ zarówno czwarty, jak i dziewiąty wiersz dają sumę 6, błąd nie zostanie wykryty, jeśli w badanym numerze ,,44'' zostanie zamienione na ,,99''!
 
 Błędy dotyczące wierszy, które nie sumują się do tej samej liczby, zostaną wykryte. Z powyższego przykładu wynika, że jeśli 22 zmieni się na 88, zostanie to wykryte, ponieważ 22 sumuje się do 8, a 88 sumuje się do 2.
 
@@ -438,9 +438,11 @@ Metoda parzystości jest rodzajem [kodu Hamminga](https://pl.wikipedia.org/wiki/
 
 ## Dalsza lektura
 
+(Wszystkie poniższe materiały są w języku angielskim.)
+
 ###Ciekawe odnośniki
-- [Materiały multimedialne na temat sztuczki z parzystością w angielskiej wersji przewodnika](http://csunplugged.org/error-detection)
+- [Materiały multimedialne na temat sztuczki z parzystością na stronie CS Unplugged](http://csunplugged.org/error-detection)
 - [CS4FN](http://www.cs4fn.org/) udostępnia [darmową książkę](http://www.cs4fn.org/magic/) ze sztuczką z parzystością i kilkoma innymi sztuczkami związanymi z informatyką.
-- Techradar ma [więcej informacji na temat wykrywania i korekcji błędów](http://www.techradar.com/news/computing/how-error-detection-and-correction-works-1080736)
+- Techradar ma [więcej informacji na temat wykrywania i korekcji błędów](http://www.techradar.com/news/computing/how-error-detection-and-correction-works-1080736).
 - [Wyjaśnienie kodów korekcji błędów](http://www.multiwingspan.co.uk/as1.php?page=error)
 - [Kalkulator wyliczający cyfry kontrolne w popularnych kodach kreskowych](http://www.gs1.org/barcodes/support/check_digit_calculator)
