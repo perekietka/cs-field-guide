@@ -4,7 +4,7 @@
 
 ## Z lotu ptaka
 
-Przypomnij sobie jak to było, kiedy ktoś przysłał Wam list pocztą. Pewnie napisał Wam coś na papierze, włożył go w kopertę, napisał na niej adres i wrzucił do skrzynki. Stamtąd list pewnie powędrował do sortowni, a po sortowaniu wylądował w worku. Następnie worek został załadowany do jakiegoś pojazdu, np. ciężarówki, samolotu albo statku. Pojazd przewiózł list -- przez wodę, powietrze, albo drogą. System pocztowy jest skomplikowany, zaprojektowany żeby umożliwić komunikację między ludźmi, ale jednocześnie by wydajnie grupował wiele listów w jedną przesyłkę. Te same pomysły mają zastosowanie do przesyłania wiadomości przez Internet. Niezależnie od tego czy chodzi o "polubienie" na Facebooku, film, czy email -- protokoły stosowane w Internecie pilnują, żeby wszystko zostało dostarczone do adresata na czas i w całości.
+Przypomnij sobie, jak to było, kiedy ktoś przysłał Wam list pocztą. Pewnie napisał Wam coś na papierze, włożył go w kopertę, napisał na niej adres i wrzucił do skrzynki. Stamtąd list pewnie powędrował do sortowni, a po sortowaniu wylądował w worku. Następnie worek został załadowany do jakiegoś pojazdu, np. ciężarówki, samolotu albo statku. Pojazd przewiózł list -- przez wodę, powietrze, albo drogą. System pocztowy jest skomplikowany, zaprojektowany żeby umożliwić komunikację między ludźmi, ale jednocześnie by wydajnie grupował wiele listów w jedną przesyłkę. Te same pomysły mają zastosowanie do przesyłania wiadomości przez Internet. Niezależnie od tego czy chodzi o ,,polubienie'' na Facebooku, film, czy email -- protokoły stosowane w Internecie pilnują, żeby wszystko zostało dostarczone do adresata na czas i w całości.
 
 Poniżej przedstawimy pojęcia, algorytmy, techniki, zastosowania i problemy mające związek z protokołami sieciowymi; nie jest to kompletna lista pomysłów z tej dziedziny, ale powinna wystarczyć do wyrobienia sobie pojęcia czym się zajmuje ten obszar informatyki.
 
@@ -14,7 +14,7 @@ Niepotrzebny rozdział?
 {comment end}
 ## Co to jest protokół?
 
-"Protokół" to wymyślne słowo oznaczające po prostu "uzgodniony sposób robienia czegoś". Być może słyszeliście to słowo w kiepskim programie o policjantach -- "ależ Mietku, to sprzeczne z protokołem!!!", albo w sensie proceduralnym, np. gdy była mowa o zachowaniu dyplomatów na oficjalnych wizytach. Wszyscy używamy protokołów każdego dnia. Pomyślcie o tym, kiedy będziecie w klasie. *Protokół* zadawania pytań może wyglądać następująco: podnieś rękę, poczekaj na gest nauczyciela, a następnie zacznij zadawać pytanie.
+,,Protokół'' to wymyślne słowo oznaczające po prostu ,,uzgodniony sposób robienia czegoś''. Być może słyszeliście to słowo w kiepskim programie o policjantach -- ,,ależ Mietku, to sprzeczne z protokołem!!!'', albo w sensie proceduralnym, np. gdy była mowa o zachowaniu dyplomatów na oficjalnych wizytach. Wszyscy używamy protokołów każdego dnia. Pomyślcie o tym, kiedy będziecie w klasie. *Protokół* zadawania pytań może wyglądać następująco: podnieś rękę, poczekaj na gest nauczyciela, a następnie zacznij zadawać pytanie.
 
 Proste zadania wymagają prostych protokołów, takich jak ten powyżej; jednak bardziej skomplikowane procesy mogą wymagać bardziej skomplikowanych protokołów. Piloci i załogi samolotów mają (prawie) własny język -- podzbiór normalnego języka, używany do przekazywania informacji takich jak wysokość, kurs, kto jest na pokładzie, status itd.
 
@@ -22,7 +22,7 @@ W Internecie robimy bardzo różne rzeczy (obsługujemy pocztę elektroniczną, 
 
 ## Protokoły warstwy aplikacji -- HTTP, IRC
 
-Adres URL strony głównej tej książki to http://csfieldguide.org.nz. Zapytajcie kilku znajomych, co oznacza "http" -- prawdopodobnie widzieli to tysiące razy... Czy wiedzą, co to jest? W tym rozdziale opowiemy o protokołach wysokiego poziomu, takich jak HTTP i IRC, co potrafią zrobić i jak z nich korzystać (podpowiedź: w tej chwili już korzystasz z protokołu HTTP).
+Adres URL strony głównej angielskiej wersji tej książki to http://csfieldguide.org.nz. Zapytajcie kilku znajomych, co oznacza ,,http'' -- prawdopodobnie widzieli to tysiące razy... Czy wiedzą, co to jest? W tym rozdziale opowiemy o protokołach wysokiego poziomu, takich jak HTTP i IRC, co potrafią zrobić i jak z nich korzystać (podpowiedź: w tej chwili już korzystasz z protokołu HTTP).
 
 ### HyperText Transfer Protocol (HTTP)
 
@@ -30,27 +30,27 @@ Adres URL strony głównej tej książki to http://csfieldguide.org.nz. Zapytajc
 Do ćwiczeń z tego rozdziału zalecane są szkolne komputery wyposażone w nowoczesną przeglądarkę z rozszerzeniami deweloperskimi. [Chrome](https://www.google.com/chrome/browser/) można pobrać za darmo i jest to polecana przez nas przeglądarka. Postępuj zgodnie z instrukcjami [tutaj](http://debugbrowser.com/), aby uzyskać więcej informacji. Przeglądarka dla programistów nie może wyrządzić żadnej szkody, a może zachęcić do dalszego majsterkowania. Jednak znajomość HTML, JavaScript czy innych aspektów projektowania stron WWW nie będzie pomocna w zabawie z protokołami. Jeśli szkoła nie pozwala na zainstalowanie przeglądarki ze wspomnianymi rozszerzeniami, trzeba po prostu zachęcić uczniów, aby spróbowali w domu. To całkowicie bezpieczne zadanie. Uwaga: Szczegóły dotyczące ładowania stron pojawiają się tylko wtedy, gdy panel konsoli deweloperskiej jest otwarty; konieczne może być odświeżenie bieżącej strony. 
 {panel end}
 
-Protokół HTTP (HyperText Transfer Protocol) jest najpopularniejszym protokołem używanym w Internecie. Zadaniem protokołu jest przesłanie [hipertekstu](https://pl.wikipedia.org/wiki/Hipertekst) (takiego jak HTML) z serwera na Twój komputer. Robi to w tej chwili. Właśnie załadowałeś nasz przewodnik z serwerów, na których został on umieszczony. Odśwież stronę, a zobaczysz go w działaniu.
+Protokół HTTP (HyperText Transfer Protocol)[https://pl.wikipedia.org/wiki/Hypertext_Transfer_Protocol] jest najpopularniejszym protokołem używanym w Internecie. Zadaniem protokołu jest przesłanie [hipertekstu](https://pl.wikipedia.org/wiki/Hipertekst) (takiego jak HTML) z serwera na Twój komputer. Robi to w tej chwili. Właśnie załadowałeś nasz przewodnik z serwerów, na których został on umieszczony. Odśwież stronę, a zobaczysz go w działaniu.
 
 HTTP działa jak prosta rozmowa między klientem a serwerem. Wyobraź sobie, że jesteś w sklepie:
 
-> Ty: "Czy mogę prosić o napój gazowany?" 
-> Sprzedawca: "Jasne, oto puszka napoju."
+> Ty: ,,Czy mogę prosić o napój gazowany?'' 
+> Sprzedawca: ,,Jasne, oto puszka napoju.''
 
-{image filename = "ask-for-a-soda-cartoon.png" alt = "Prośba o napój gazowany"}
+{image filename="ask-for-a-soda-cartoon.png" alt="Prośba o napój gazowany"}
 
-HTTP używa wzorca zapytania -- odpowiedzi w celu zapewnienia niezawodnej komunikacji między klientem a serwerem. "Zapytaj o" to *zapytanie*, a odpowiedź serwera to po prostu *odpowiedź*. Zarówno zapytania, jak i odpowiedzi mogą również zawierać inne dane lub *zasoby*.
+HTTP używa wzorca zapytania -- odpowiedzi w celu zapewnienia niezawodnej komunikacji między klientem a serwerem. ,,Zapytaj o'' to *zapytanie*, a odpowiedź serwera to po prostu *odpowiedź*. Zarówno zapytania, jak i odpowiedzi mogą również zawierać inne dane lub *zasoby*.
 
-{panel type = "jargon-buster" summary = "Co to jest zasób?"} 
+{panel type="jargon-buster" summary="Co to jest zasób?"} 
 *Zasób* to dowolne dane na serwerze. Na przykład wpis na blogu, dane klienta, artykuł lub notka prasowa. Firmy lub witryny internetowe tworzą je, czytają, aktualizują i usuwają w ramach normalnej działalności. HTTP dobrze się do tego nadaje. Na przykład, w przypadku strony z wiadomościami, każdego dnia autorzy dodają historie, można je aktualizować lub usuwać, jeśli są przestarzałe, itd. Metody tego rodzaju są potrzebne do zarządzania zawartością na serwerze, a protokół HTTP jest sposobem na zrobienie tego. 
 {panel end}
 
 Dzieje się to zawsze, gdy przeglądasz sieć; każda przeglądana strona jest dostarczana za pomocą protokołu zwanego po angielsku HyperText Transfer Protocol. Wracając do analogii ze sklepem, rozważmy ten sam przykład, tym razem z większą ilością zasobów pokazanych w gwiazdkach (*).
 
-> Ty: "Czy mogę prosić o napój gazowany?" \*Podajesz posiadaczowi sklepu 5 PLN.\* 
-> Sprzedawca: "Jasne, oto puszka napoju gazowanego." \*Podaje paragon i resztę.\*
+> Ty: ,,Czy mogę prosić o napój gazowany?'' \*Podajesz posiadaczowi sklepu 5 PLN.\* 
+> Sprzedawca: ,,Jasne, oto puszka napoju gazowanego.'' \*Podaje paragon i resztę.\*
 
-{image filename = "asking-for-a-soda-cartoon-with-cash.png" alt = "Zapłata gotówką za napój gazowany"}
+{image filename="asking-for-a-soda-cartoon-with-cash.png" alt="Zapłata gotówką za napój gazowany"}
 
 Istnieje dziewięć *typów* zapytań obsługiwanych przez protokół HTTP, które zostały opisane poniżej.
 
@@ -58,31 +58,31 @@ Istnieje dziewięć *typów* zapytań obsługiwanych przez protokół HTTP, któ
 
 Żądanie HEAD zwraca to, co otrzymasz, gdy wykonasz zapytanie GET. Wygląda to tak:
 
-> Ty: "Czy mogę prosić o napój gazowany?" 
-> Sprzedawca: "Jasne, oto puszka napoju gazowanego, którą otrzymasz." \*Podnosi puszkę napoju gazowanego.\*
+> Ty: ,,Czy mogę prosić o napój gazowany?'' 
+> Sprzedawca: ,,Jasne, oto puszka napoju gazowanego, którą otrzymasz.'' \*Podnosi puszkę napoju gazowanego.\*
 
 Miłą cechą protokołu HTTP jest też to, że pozwala on również na modyfikację zawartości serwera. Powiedzmy, że jesteś teraz przedstawicielem firmy produkującej napoje gazowane i chcesz zaopatrzyć sklep.
 
 Żądanie POST umożliwia wysłanie informacji w drugą stronę. To zapytanie umożliwia zastąpienie zasobu na serwerze zasobem, który dostarczasz. Używają one tak zwanego Uniform Resource Identifier (jednolitego identyfikatora zasobu) czyli URI. Identyfikator URI to unikalny kod lub numer zasobu. Za dużo na raz? Wróćmy do sklepu:
 
-> Przedstawiciel handlowy: "Chciałbym zastąpić tę zniszczoną puszkę napoju gazowanego o kodzie paskowym 123-111-221 tą, która nie jest wgnieciona." 
-> Sprzedawca: "Jasne, została właśnie zastąpiona."
+> Przedstawiciel handlowy: ,,Chciałbym zastąpić tę zniszczoną puszkę napoju gazowanego o kodzie paskowym 123-111-221 tą, która nie jest wgnieciona.'' 
+> Sprzedawca: ,,Jasne, została właśnie zastąpiona.''
 
 Żądanie PUT dodaje nowy zasób do serwera, jednak jeśli już istnieje zasób o takim identyfikatorze URI, to zostaje zastąpiony nowym.
 
-> Przedstawiciel handlowy: "Masz tu jeszcze 10 puszek lemoniady na tę półkę." 
-> Sprzedawca: "Dzięki, włożyłem je na półkę."
+> Przedstawiciel handlowy: ,,Masz tu jeszcze 10 puszek lemoniady na tę półkę.'' 
+> Sprzedawca: ,,Dzięki, włożyłem je na półkę.''
 
 Żądanie DELETE, zgodnie z nazwą, kasuje zasób.
 
-> Przedstawiciel handlowy: "Nie sprzedajemy już lemoniady z dodatkiem warzyw -- nikt jej nie lubi! Usuń ją!" 
-> Sprzedawca: "W porządku, już jej nie ma."
+> Przedstawiciel handlowy: ,,Nie sprzedajemy już lemoniady z dodatkiem warzyw -- nikt jej nie lubi! Usuń ją!'' 
+> Sprzedawca: ,,W porządku, już jej nie ma.''
 
-Istnieją również inne typy zapytań (czyli inne *metody HTTP*), ale są one rzadziej używane; są to TRACE, OPTIONS, CONNECT i PATCH. Możesz [dowiedzieć się więcej na ten temat](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) na własną rękę, jeśli jesteś zainteresowany.
+Istnieją również inne typy zapytań (czyli inne *metody HTTP*), ale są one rzadziej używane; są to TRACE, OPTIONS, CONNECT i PATCH. Możesz [dowiedzieć się więcej na ten temat](https://pl.wikipedia.org/wiki/Hypertext_Transfer_Protocol) na własną rękę, jeśli jesteś zainteresowany.
 
-W protokole HTTP pierwsza linia odpowiedzi nazywa się linią *statusu* i ma liczbowy kod statusu, na przykład **404**, i tekstową *przyczynę* taką jak np. "nie znaleziono". Najczęściej występuje 200, co oznacza sukces lub "OK". Kody statusu HTTP są podzielone na pięć głównych grup które różnią się pierwszą cyfrą: informacje 1XX, pomyślne 2XX, przekierowania 3XX, błędy klienta 4XX i błędy serwera 5XX. Istnieje wiele [kodów statusu](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) odpowiadających konkretnym przypadkom błędu lub powodzenia. W Google jest nawet ciekawy błąd 418: Czajnik: [https://www.google.com/teapot](https://www.google.com/teapot).
+W protokole HTTP pierwsza linia odpowiedzi nazywa się linią *statusu* i ma liczbowy kod statusu, na przykład **404**, i tekstową *przyczynę* taką jak np. ,,nie znaleziono''. Najczęściej występuje 200, co oznacza sukces lub ,,OK''. Kody statusu HTTP są podzielone na pięć głównych grup które różnią się pierwszą cyfrą: informacje 1XX, pomyślne 2XX, przekierowania 3XX, błędy klienta 4XX i błędy serwera 5XX. Istnieje wiele [kodów statusu](https://pl.wikipedia.org/wiki/Kod_odpowiedzi_HTTP) odpowiadających konkretnym przypadkom błędu lub powodzenia. W Google jest nawet ciekawy błąd 418: Czajnik: [https://www.google.com/teapot](https://www.google.com/teapot).
 
-Co się właściwie dzieje? Przekonajmy się. Otwórz nową kartę w przeglądarce i otwórz stronę główną [Przewodnika po CS](index.html). Jeśli używasz przeglądarki Chrome lub Safari, naciśnij Ctrl + Shift + I w systemie Windows lub Command + Option + I na komputerze Mac, aby otworzyć tzw. inspektora sieci (inaczej konsolę deweloperską). Wybierz kartę *Network*. Odśwież stronę. Teraz widzisz listę zapytań HTTP, które twoja przeglądarka wysyła do serwera, aby sprowadzić stronę, którą właśnie przeglądasz. U góry pojawi się zapytanie do "index.html". Kliknij je, a zobaczysz szczegóły nagłówków, podglądu, odpowiedzi, plików cookie i czasu. Te dwa ostatnie na razie zignoruj.
+Co się właściwie dzieje? Przekonajmy się. Otwórz nową kartę w przeglądarce i otwórz stronę główną [Przewodnika po CS](index.html). Jeśli używasz przeglądarki Chrome lub Safari, naciśnij Ctrl + Shift + I w systemie Windows lub Command + Option + I na komputerze Mac, aby otworzyć tzw. inspektora sieci (inaczej konsolę deweloperską). Wybierz kartę *Network*. Odśwież stronę. Teraz widzisz listę zapytań HTTP, które twoja przeglądarka wysyła do serwera, aby sprowadzić stronę, którą właśnie przeglądasz. U góry pojawi się zapytanie do ,,index.html''. Kliknij je, a zobaczysz szczegóły nagłówków, podglądu, odpowiedzi, plików cookie i czasu. Te dwa ostatnie na razie zignoruj.
 
 Spójrzmy na kilka pierwszych linii nagłówków:
 
@@ -93,7 +93,7 @@ Request Method: GET
 Status Code: 200 OK
 ```
 
-*Remote Address* to adres serwera, na którym trzymana jest strona. *Request URL* jest pierwotnym, żądanym adresem URL. Metoda zapytania powinna być już znana z powyższego tekstu. Jest to zapytanie typu GET, mówiące "czy mogę prosić o stronę internetową?", a odpowiedź to treść strony w języku HTML. Nie wierzysz mi? Kliknij kartę *Response*. *Status Code* jest kodem, który strona może zwrócić.
+*Remote Address* to adres serwera, na którym trzymana jest strona. *Request URL* jest pierwotnym, żądanym adresem URL. Metoda zapytania powinna być już znana z powyższego tekstu. Jest to zapytanie typu GET, mówiące ,,czy mogę prosić o stronę internetową?'', a odpowiedź to treść strony w języku HTML. Nie wierzysz mi? Kliknij kartę *Response*. *Status Code* jest kodem, który strona może zwrócić.
 
 Spójrzmy teraz na nagłówki zapytań (ang. *Request Headers*). Kliknij *view source*, aby zobaczyć oryginalne zapytanie.
 
@@ -129,7 +129,7 @@ Content-Encoding: gzip
 ```
 
 Jak widać, komunikat odpowiedzi składa się z następujących elementów:
-- Linia statusu, "200 OK" oznacza, że wszystko poszło dobrze.
+- Linia statusu, ,,200 OK'' oznacza, że wszystko poszło dobrze.
 - Nagłówki odpowiedzi (długość treści, typ zawartości itp.).
 - Pusty wiersz.
 - Opcjonalna treść wiadomości.
@@ -150,7 +150,7 @@ W tym podrozdziale sugerujemy skorzystanie z [klienta WWW freenode](http://webch
 Uczniowie mogą również pobierać i instalować klienty IRC, ale ich konfiguracja bywa skomplikowana, więc najlepiej na początku korzystać z wersji WWW. Wtedy wystarczy powiedzieć uczniom do którego kanału dołączyć.
 {panel end}
 
-Internet Relay Chat (IRC) to system umożliwiający przesyłanie wiadomości w formie tekstu. W gruncie rzeczy jest to protokół czatu. Używa modelu klient -- serwer. Klienty to programy do czatu zainstalowane na komputerze użytkownika, które łączą się z centralnym serwerem. Klienty przesyłają wiadomości do centralnego serwera, który z kolei przekazuje je do innych klientów. Protokół został pierwotnie zaprojektowany do komunikacji grupowej na forum dyskusyjnym, zwanym *kanałem*. IRC obsługuje również komunikację w trybie "jeden do jednego" za pośrednictwem *prywatnych wiadomości*. Może również przesyłać pliki i dane.
+Internet Relay Chat (IRC) to system umożliwiający przesyłanie wiadomości w formie tekstu. W gruncie rzeczy jest to protokół czatu. Używa modelu klient -- serwer. Klienty to programy do czatu zainstalowane na komputerze użytkownika, które łączą się z centralnym serwerem. Klienty przesyłają wiadomości do centralnego serwera, który z kolei przekazuje je do innych klientów. Protokół został pierwotnie zaprojektowany do komunikacji grupowej na forum dyskusyjnym, zwanym *kanałem*. IRC obsługuje również komunikację w trybie ,,jeden do jednego'' za pośrednictwem *prywatnych wiadomości*. Może również przesyłać pliki i dane.
 
 Ciekawą cechą IRC jest to, że użytkownicy mogą używać komend do interakcji z serwerem, klientem lub innymi użytkownikami. Na przykład /DIE powie serwerowi, aby się wyłączył (ale zadziała to tylko wtedy, gdy jesteś jego administratorem!), a /ADMIN powie Ci, kto jest administratorem.
 
@@ -160,7 +160,7 @@ Kanały zwykle tworzą się wokół określonego tematu, takiego jak Python, muz
 
 Aby rozpocząć korzystanie z IRC, najpierw powinieneś zdobyć *klienta*. Klient to program, który pozwala ci się połączyć. Zapytaj swojego nauczyciela, którego z nich użyć. W tym rozdziale użyjemy [klienta WWW freenode](http://webchat.freenode.net/). Sprawdź u swojego nauczyciela, do którego kanału się przyłączyć, ponieważ nauczyciel mógł już założyć kanał specjalnie dla ciebie.
 
-Wypróbuj kilka rzeczy, skoro już tam jesteś. Spójrz na tę [listę poleceń](https://en.wikipedia.org/wiki/List_of_Internet_Relay_Chat_commands) i spróbuj użyć niektórych z nich. Jaką odpowiedź otrzymasz? Czy ma ona sens?
+Wypróbuj kilka rzeczy, skoro już tam jesteś. Spójrz na tę [listę poleceń](https://en.wikipedia.org/wiki/List_of_Internet_Relay_Chat_commands) (po angielsku) i spróbuj użyć niektórych z nich. Jaką odpowiedź otrzymasz? Czy ma ona sens?
 
 Wypróbuj rozmowę w trybie jeden-na-jeden z przyjacielem. Gdy używa poleceń, widzisz je? Czy działa to w drugą stronę?
 
@@ -172,7 +172,7 @@ Do tej pory rozmawialiśmy o HTTP i IRC. Te protokoły są na poziomie, który z
 
 TCP (Transmission Control Protocol) jest jednym z najważniejszych protokołów w Internecie. Rozbija duże wiadomości na *pakiety*. Co to jest pakiet? Pakiet to segment danych, który w połączeniu z innymi pakietami tworzy kompletny komunikat (coś w rodzaju zapytania HTTP, wiadomości email, wiadomości IRC lub pliku takiego jak pobierany obrazek lub utwór muzyczny). W dalszej części tego podrozdziału przyjrzymy się, w jaki sposób pakiety są wykorzystywane do sprowadzania obrazka ze strony internetowej.
 
-Komputer A wyszukuje plik i dzieli go na pakiety. Następnie przesyła pakiety przez Internet, a komputer B składa je ponownie i przedstawia tobie jako obraz, [co zostało pokazane w tym wideo.](https://www.youtube.com/watch?v=WwyJGzZmBe8)
+Komputer A wyszukuje plik i dzieli go na pakiety. Następnie przesyła pakiety przez Internet, a komputer B składa je ponownie i przedstawia tobie jako obraz, [co zostało pokazane w tym wideo](https://www.youtube.com/watch?v=ewrBalT_eBM) (po angielsku).
 
 Zastanawiasz się pewnie, po co w ogóle dzielimy na pakiety... Czy nie byłoby łatwiej wysłać cały plik? Cóż, to rozwiązuje problem zatorów. Wyobraź sobie, że jesteś w autobusie, w godzinach szczytu i musisz być w domu o piątej. Droga jest zablokowana i nie ma mowy, żebyś wraz z przyjaciółmi dotarł do domu na czas. Decydujecie się wyjść z autobusu i każdy idzie własną drogą. Strony internetowe też tak robią. Są zbyt duże, by podróżować razem, więc są rozdzielane i wysyłane w małych kawałkach, a następnie składane po drugiej stronie.
 
@@ -184,13 +184,13 @@ Dlaczego wszystkie pakiety po prostu nie przechodzą z komputera A do komputera 
 
 Jeśli więc nie spróbujemy tego naprawić, obraz nie zostanie załadowany, jakieś bity zostaną zgubione lub uszkodzone, a komputer B może nawet nie rozpoznać, co otrzymał!
 
-{image filename = "corrupted-image.jpg" alt = "Popsuty obraz"}
+{image filename="corrupted-image.jpg" alt="Popsuty obraz"}
 
 Protokół TCP rozwiązuje te problemy. Aby oswoić się z TCP, zagraj w poniższą grę, zatytułowaną *Atak pakietów*. W grze *Ty* grasz rolę problemów (utraty, opóźnienia, zepsucia) i podczas przechodzenia przez kolejne poziomy, zwróć uwagę na sposób, w jaki komputer próbuje je zwalczać. Powodzenia w próbach powstrzymania poprawnego przekazywania wiadomości!
 
 *Atak pakietów* jest bezpośrednią analogią TCP i został pomyślany jako jego interaktywna symulacja. Stwory pakietowe to segmenty TCP, które podróżują między dwoma komputerami. Strefa żółto-szara jest zawodnym kanałem, podatnym na zakłócenia. Te zakłócenia to użytkownik grający w grę. Pamiętaj, że mamy kluczowe dla tego podrozdziału o mechanizmach na poziomie protokołów transportu problemy -- opóźnienia, uszkodzone i utracone pakiety, a w grze są to ataki: *opóźnienie*, *uszkodzenie*, *zabicie*. Rozwiązania mają postać mechanizmów TCP, które są stopniowo dodawane na kolejnych poziomach. Podobnie jak w TCP, w grze występuje porządkowanie pakietów, sumy kontrolne (tarcze), komunikaty ACK i NACK (powracające stwory) i limity czasu.
 
-{panel type="teacher-note" summary="Opis gry packet attack"}
+{panel type="teacher-note" summary="Opis gry w atak pakietów"}
 **Opis poziomów**
 
 - *Poziom 1*: Bez obrony. Jeden pakiet. Uczniowie mogą go pokonać za pomocą uszkodzenia lub zabicia.
@@ -202,10 +202,10 @@ Protokół TCP rozwiązuje te problemy. Aby oswoić się z TCP, zagraj w poniżs
 - *Poziom 7*: Numery, tarcze, limity czasu i potwierdzenia. Pakiety zostaną odesłane i wysłane ponownie. Tego poziomu nie da się przejść.
 {panel end}
 
-{interactive name="packet-attack" type="whole-page" text="Packet Attack interactive"}
+{interactive name="packet-attack" type="whole-page" text="Gra w atak pakietów"}
 
-{panel type="curiosity" summary="Tworzenie własnych poziomów w grze packet attack"}
-Możesz również tworzyć własne poziomy w grze Packet Attack. W podrozdziale projektów poniżej umieściliśmy narzędzie do tworzenia poziomów, abyś mógł eksperymentować z różnymi mechanizmami niezawodności lub kombinacjami zabezpieczeń.
+{panel type="curiosity" summary="Tworzenie własnych poziomów w grze w atak pakietów"}
+Możesz również tworzyć własne poziomy w grze w atak pakietów. W podrozdziale projektów poniżej umieściliśmy narzędzie do tworzenia poziomów, abyś mógł eksperymentować z różnymi mechanizmami niezawodności lub kombinacjami zabezpieczeń.
 
 Dostosuj wartości prawda i fałsz oraz liczby aby ustawić różne zdolności obronne. Zwiększanie liczb jest właściwie równoważne zastosowaniu bardziej zawodnego kanału komunikacji. Dodanie większej ilości zdolności obronnych (poprzez ustawienie tarczy itp. na wartość *true*) spowoduje, że trudniej będzie przejść poziom.
 {panel end}
@@ -213,13 +213,13 @@ Dostosuj wartości prawda i fałsz oraz liczby aby ustawić różne zdolności o
 
 Porozmawiajmy o tym, co było widać w grze. Co robiły poziomy, aby rozwiązać problem utraty pakietów, opóźnień (zmiany kolejności) i uszkodzenia? TCP ma kilka mechanizmów radzenia sobie z problemami z pakietami.
 
-{panel type = "curiosity" summary = "Co powoduje opóźnienia, straty i uszkodzenie?"}
+{panel type="curiosity" summary="Co powoduje opóźnienia, straty i uszkodzenie?"}
 Dlaczego pakiety mają opóźnienia, straty i uszkodzenia? Dzieje się tak dlatego, że gdy pakiety są wysyłane przez sieć, przechodzą przez różne *węzły*. Te węzły to różne routery lub komputery. Na jednej trasie może być więcej zakłóceń niż na innej (co powoduje utratę pakietów), któraś może być szybsza lub krótsza (co powoduje zmianę kolejności pakietów). Uszkodzenia mogą wystąpić w każdej chwili poprzez zakłócenia elektroniczne.
 {panel end}
 
-Po pierwsze, TCP zaczyna się od procedury *handshake*. Oznacza to w zasadzie, że dwa komputery mówią sobie nawzajem: "Hej, będziemy używać TCP do tego obrazka. Rekonstruuj go tak, jak chcesz."
+Po pierwsze, TCP zaczyna się od procedury *handshake*. Oznacza to w zasadzie, że dwa komputery mówią sobie nawzajem: ,,Hej, będziemy używać TCP do tego obrazka. Rekonstruuj go tak, jak chcesz.''
 
-Dalej mamy **uporządkowanie**. Ponieważ komputer nie może oglądać danych i układać ich tak, jak możemy my (np. kiedy układamy puzzle albo gramy w Scrabble™), potrzebuje sposobu na "zszycie" pakietów z powrotem. Jak widzieliśmy w *Ataku Pakietów*, jeśli opóźniłeś wiadomość, która nie miała liczb porządkowych, wiadomość może wyglądać jak "HELOLWOLRD". Tak więc TCP umieszcza numer w każdym pakiecie (zwanym numerem sekwencji), który oznacza jego kolejność. Dzięki temu może je ponownie połączyć. To trochę tak jak wtedy, kiedy drukujesz kilka stron z drukarki i widzisz "*Strona 2 z 11*" na dole. Jeśli porządek pakietów zostanie zakłócony, TCP zaczeka na wszystkie pakiety, a następnie połączy wiadomość.
+Dalej mamy **uporządkowanie**. Ponieważ komputer nie może oglądać danych i układać ich tak, jak możemy my (np. kiedy układamy puzzle albo gramy w Scrabble™), potrzebuje sposobu na ,,zszycie'' pakietów z powrotem. Jak widzieliśmy w grze w *atak pakietów*, jeśli opóźniłeś wiadomość, która nie miała liczb porządkowych, wiadomość może wyglądać jak ,,HELOLWOLRD''. Tak więc TCP umieszcza numer w każdym pakiecie (zwanym numerem sekwencji), który oznacza jego kolejność. Dzięki temu może je ponownie połączyć. To trochę tak jak wtedy, kiedy drukujesz kilka stron z drukarki i widzisz ,,*Strona 2 z 11*'' na dole. Jeśli porządek pakietów zostanie zakłócony, TCP zaczeka na wszystkie pakiety, a następnie połączy wiadomość.
 
 Innym pomysłem są **sumy kontrolne**. Ten pomysł polegający na przechowywaniu dodatkowej informacji na temat danych może ci być znany z [rozdziału o kodowaniu błędów](chapters/coding-error-control.html#check-digits-on-product-barcodes). Chodzi o to, że dzięki sumie kontrolnej można wykryć błędy, a czasami przy pomocy schematów kodowania można je skorygować. W przypadku pakietu, który można skorygować, jest on poprawiany. Jeśli nie, pakiet jest bezużyteczny i musi zostać wysłany ponownie. W grze tarcze reprezentują sumy kontrolne. Jeśli się uszkodzi sumę kontrolną raz, to może ona usunąć błąd za pomocą korekcji błędów. Jeśli się ją uszkodzi po raz kolejny -- nie będzie w stanie.
 
@@ -245,7 +245,7 @@ Protokoły internetowe istnieją w warstwach. Mamy cztery takie warstwy w inform
 
 W każdej warstwie dane składają się ze wszystkich danych z poprzednich warstw, a następnie dodawane są *nagłówki* i przekazywane dalej. W dolnej warstwie -- warstwie łącza danych -- dodawana jest także *stopka*. Poniżej znajduje się przykład tego, jak wygląda pakiet UDP, gdy jest przygotowany do transportu.
 
-{panel type = "jargon-buster" summary = "Nagłówki i stopki"}
+{panel type="jargon-buster" summary="Nagłówki i stopki"}
 Stopki i nagłówki to w zasadzie *metadane* pakietu. Informacje o informacji. Podobnie jak nagłówek listu lub przypis, nie są częścią treści, ale znajdują się na stronie. Nagłówki i stopki dokłada się do pakietów żeby przechowywać szczególne dane. Nagłówki są przed danymi a stopki -- po.
 {panel end}
 
@@ -257,25 +257,25 @@ https://commons.wikimedia.org/wiki/File:UDP_encapsulation.svg
 
 Można myśleć o tych protokołach jako o zabawie w przesyłanie paczki. Kiedy wiadomość jest wysyłana przez HTTP, zostaje zapakowana w nagłówek TCP, który następnie jest owijany w nagłówek IPv6, który następnie jest owijany w nagłówek i stopkę sieci Ethernet i wysyłany przez Ethernet. Po drugiej stronie jest ponownie rozpakowany z *ramki* Ethernet, do *pakietu* IP, do *datagramu* TCP, do *zapytania* HTTP.
 
-{panel type = "curiosity" summary = "Co to jest pakiet?"}
-Nazwa "pakiet" jest ogólnym określeniem jednostki danych. W warstwie aplikacji jednostki danych są nazywane *danymi* lub *zapytaniami*, w warstwie transportowej -- *datagramami* lub *segmentami*, w warstwie sieci/IP -- *pakietami*, a w warstwie fizycznej -- *ramkami*. Każdy poziom ma własną nazwę jednostki danych (segment, pakiet, ramka, zapytanie itd.), ale zamiast tego często używana jest bardziej ogólna nazwa "pakiet", niezależnie od warstwy.
+{panel type="curiosity" summary="Co to jest pakiet?"}
+Nazwa ,,pakiet'' jest ogólnym określeniem jednostki danych. W warstwie aplikacji jednostki danych są nazywane *danymi* lub *zapytaniami*, w warstwie transportowej -- *datagramami* lub *segmentami*, w warstwie sieci/IP -- *pakietami*, a w warstwie fizycznej -- *ramkami*. Każdy poziom ma własną nazwę jednostki danych (segment, pakiet, ramka, zapytanie itd.), ale zamiast tego często używana jest bardziej ogólna nazwa ,,pakiet'', niezależnie od warstwy.
 {panel end}
 
 To zgrabny system, ponieważ każda warstwa może założyć, że warstwy powyżej i poniżej dają odpowiednie gwarancje na temat informacji, a każda warstwa (i protokół używany w tej warstwie) ma własną rolę. Jeśli więc tworzysz stronę internetową, możesz po prostu zaprogramować kod strony i nie martwić się o pisanie kodu, żeby strona działała zarówno przez wifi, jak i przez kabel ethernetowy. Podobnym systemem jest system pocztowy... Nie umieszczasz numeru furgonetki kuriera na kopercie! Zajmuje się tym przewoźnik, który potem używa systemu do sortowania poczty i przydzielania jej kierowcom, a potem kierowców do ciężarówek, a potem kierowców do tras... Nie musisz się tym martwić kiedy wysyłasz lub odbierasz list albo korzystasz z usług kuriera.
 
-{panel type = "curiosity" summary = "Model OSI a model TCP/IP"}
+{panel type="curiosity" summary="Model OSI a model TCP/IP"}
 Model Internetu OSI różni się od modelu Internetu TCP/IP, którego używają informatycy do projektowania protokołów. OSI jest brane pod uwagę i prawdopodobnie opisane w standardach sieciowych, ale ten przewodnik użyje podejścia informatycznego, ponieważ jest prostsze, a najważniejsze jest przekazanie idei poziomów abstrakcji. Możesz przeczytać więcej o różnicach [tutaj](https://en.wikipedia.org/wiki/Internet_protocol_suite#Comparison_of_TCP.2FIP_and_OSI_layering).
 {panel end}
 
 Jak wygląda *segment* TCP?
 
-{image filename = "packet-structure-diagram.png" alt = "Struktura pakietu TCP"}
+{image filename="packet-structure-diagram.png" alt="Struktura pakietu TCP"}
 
 Jak widać, pakiet jest podzielony na cztery główne części: adresy (źródło, cel), numery (numer sekwencji, numer ACK, jeśli jest to potwierdzenie), znaczniki (*pilne*, *suma kontrolna*) w nagłówku, a potem rzeczywiste dane. Na każdym poziomie segment staje się danymi dla następnej jednostki danych i ponownie otrzymuje swój własny nagłówek.
 
 Pakiety TCP i UDP mają zapisaną liczbę określającą jakie są duże. Ta liczba oznacza, że pakiet mógłby być prawie dowolnie duży. Czy możesz wymyślić jakieś zalety tworzenia małych pakietów? A dużych? Pomyśl o stosunku danych do informacji dodatkowych (takich jak w nagłówku i stopce).
 
-{panel type = "curiosity" summary = "Jak wygląda pakiet?"}
+{panel type="curiosity" summary="Jak wygląda pakiet?"}
 Oto przykład pakietu z sieci autorów... [(otrzymany przy użyciu tcpdump na komputerze Mac)](http://support.apple.com/kb/HT3994)
 
 ```
@@ -317,8 +317,8 @@ Jak działa Internet w 5 minut
 ### Dodatkowe zajęcia
 
 - [Informatyka bez komputera -- czemu pakiety się spóźniają?](/routing-and-deadlock)
-- [Ślimacza poczta](http://www.cs4fn.org/internet/realsnailmail.php)
-- [Code.org  -- Internet ](https://studio.code.org/s/course3/stage/18/puzzle/1)
+- [Ślimacza poczta](http://www.cs4fn.org/internet/realsnailmail.php) (ang.)
+- [Code.org  -- Internet](https://studio.code.org/s/course3/stage/18/puzzle/1) (ang.)
 
 ### Ciekawe odnośniki
 
