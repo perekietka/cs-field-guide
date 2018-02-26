@@ -2,7 +2,7 @@
 
 ## Z lotu ptaka
 
-Szyfrowanie służy do zachowania poufności danych. Najprościej rzecz ujmując, plik lub przesyłane dane są zniekształcane tak, że tylko właściwe osoby posiadające tajny "klucz" mogą odtworzyć oryginalny tekst.
+Szyfrowanie służy do zachowania poufności danych. Najprościej rzecz ujmując, plik lub przesyłane dane są zniekształcane tak, że tylko właściwe osoby posiadające tajny ,,klucz'' mogą odtworzyć oryginalny tekst.
 Gdy korzystasz z urządzeń cyfrowych, cały czas używasz systemów opartych na szyfrowaniu: kiedy korzystasz z bankowości internetowej, łączysz się z siecią Wi-Fi, płacisz kartą płatniczą (wkładając ją do czytnika, przesuwając pasek magnetyczny, albo dotykając czytnika); naprawdę wokół prawie każdej czynności pojawi się szyfrowanie.
 Bez szyfrowania twoje informacje byłyby dostępne dla całego świata - każdy mógłby podjechać pod Twój dom i odczytać wszystkie dane przechodzące przez Twoją sieć Wi-Fi, a skradzione laptopy, dyski twarde i karty SIM byłyby źródłem wielu informacji o Tobie - więc szyfrowanie ma kluczowe znaczenie dla użyteczności systemów komputerowych.
 
@@ -16,10 +16,10 @@ Interesującym przykładem pokazującym, że należy używać szyfrowania nie ty
 
 Dużym problemem związanym z systemami szyfrowania są ludzie, którzy chcą się do nich włamać i odszyfrować wiadomości bez klucza (który jest jakąś tajną wartością, która może być użyta do odblokowania zaszyfrowanego pliku). Niektóre systemy, używane wiele lat temu, okazały się być niewystarczająco zabezpieczone przed takimi atakami, więc nie można ich już używać. Możliwe, że ktoś kiedyś znajdzie skuteczny sposób włamywania się do systemów powszechnie używanych obecnie, co spowodowałoby wiele problemów.
 
-Jak każdą technologię, szyfrowanie można wykorzystać do dobrych i złych celów. Organizacja broniąca praw człowieka może użyć szyfrowania, aby potajemnie wysłać zdjęcia nadużyć w zakresie praw człowieka do mediów, a handlarze narkotyków mogą go użyć, aby zabezpieczyć swoje plany przed śledczymi. Zrozumienie w jaki sposób szyfrowanie działa i co jest możliwe przy jego użyciu, może pomóc w podejmowaniu świadomych decyzji dotyczących takich rzeczy jak wolność słowa, prawa człowieka, śledzenie działalności przestępczej, prywatność, kradzież tożsamości, bankowość i płatności internetowe oraz bezpieczeństwo systemów, które mogą zostać przejęte, jeśli zostały "zhakowane".
+Jak każdą technologię, szyfrowanie można wykorzystać do dobrych i złych celów. Organizacja broniąca praw człowieka może użyć szyfrowania, aby potajemnie wysłać zdjęcia nadużyć w zakresie praw człowieka do mediów, a handlarze narkotyków mogą go użyć, aby zabezpieczyć swoje plany przed śledczymi. Zrozumienie w jaki sposób szyfrowanie działa i co jest możliwe przy jego użyciu, może pomóc w podejmowaniu świadomych decyzji dotyczących takich rzeczy jak wolność słowa, prawa człowieka, śledzenie działalności przestępczej, prywatność, kradzież tożsamości, bankowość i płatności internetowe oraz bezpieczeństwo systemów, które mogą zostać przejęte, jeśli zostały ,,zhakowane''.
 
 {panel type="jargon-buster" summary="Rozszyfrowywanie, deszyfrowanie, atakowanie, łamanie, hakowanie, kryptoanaliza, hakerzy i crackerzy"}
-Istnieje wiele słów, którymi można określić próbę uzyskania tekstu jawnego z zaszyfrowanego tekstu, w tym: rozszyfrowanie, zdeszyfrowanie, złamanie i kryptoanaliza. Często próbę złamania mechanizmów kryptograficznych nazywamy "atakiem". Terminu "hakowanie" też się czasem używa, ale ma on też inne konotacje i jest używany tylko nieformalnie.
+Istnieje wiele słów, którymi można określić próbę uzyskania tekstu jawnego z zaszyfrowanego tekstu, w tym: rozszyfrowanie, zdeszyfrowanie, złamanie i kryptoanaliza. Często próbę złamania mechanizmów kryptograficznych nazywamy ,,atakiem''. Terminu ,,hakowanie'' też się czasem używa, ale ma on też inne konotacje i jest używany tylko nieformalnie.
 
 Ci, którzy próbują odszyfrować wiadomości, to kryptoanalitycy; czasem używa się mniej formalnych terminów, takich jak hakerzy i crackerzy, co zwykle sugeruje, że mają oni złe intencje.
 Bycie kryptoanalitykiem jest jednak na ogół dobrą rzeczą -- używający systemów szyfrowania chcą wiedzieć, czy mają one słabe strony i nie chcą żeby pierwsi odkryli je ludzie o złych zamiarach.
@@ -66,7 +66,7 @@ BEDE MIAL CZERWONA OPASKE NA RECE.
 Niektóre techniki, których uczniowie mogli użyć do jego odszyfrowania, to:
 
 - Szukanie ciekawych kombinacji liter. Na przykład niewiele jest w języku polskim słów dwuliterowych takich jak YN i NY w zaszyfrowanym tekście, które składają się z tych samych liter w różnej kolejności. 
-- Szukanie słów jednoliterowych -- tu jedyne takie słowo występuje w "wyliczance", co można zauważyć dostrzegając przecinek, a co wskazuje na to, że jest to "i".
+- Szukanie słów jednoliterowych -- tu jedyne takie słowo występuje w ,,wyliczance'', co można zauważyć dostrzegając przecinek, a co wskazuje na to, że jest to ,,i''.
 - Po domyśleniu się, które litery w zaszyfrowanym tekście odpowiadają literom w tekście jawnym, powinno się sporządzić ich listę i spojrzeć na inne słowa w zaszyfrowanym tekście używające tych samych liter.
 - Szukanie liter w zaszyfrowanym tekście, które często występują; najprawdopodobniej odpowiadają one często występującym literom w języku polskim.
 - Szukanie liter, które się NIE pojawiły (być może odpowiadają literom takim jak Q i X).
@@ -82,7 +82,7 @@ Celem tego ćwiczenia było, aby uczniowie myśleli jak kryptoanalitycy i aby zo
 
 ### Jak działa szyfr Cezara?
 
-Kiedy poznałeś szyfr Cezara w poprzednim podrozdziale i (miejmy nadzieję) złamałeś go, i odkryłeś, co mówi wiadomość, prawdopodobnie zauważyłeś jakie było powiązanie liter pierwotnej wiadomości z literami w odszyfrowanej wiadomości. Każda litera w pierwotnej wiadomości została zdekodowana do litery, która znajdowała się 10 miejsc przed nią w alfabecie. Sporządzona tabela powinna to pokazać. Oto tabela powiązań liter, w której litera "K" oznacza "A". Jeśli Twoja tabela jest odwrotna, czyli pokazuje zmianę "A" na "K" zamiast "K" na "A", to też wszystko w porządku. Jeśli nie byłeś w stanie złamać szyfru Cezara w poprzednim podrozdziale, wróć do niego teraz i zdekoduj przy użyciu tabeli.
+Kiedy poznałeś szyfr Cezara w poprzednim podrozdziale i (miejmy nadzieję) złamałeś go, i odkryłeś, co mówi wiadomość, prawdopodobnie zauważyłeś jakie było powiązanie liter pierwotnej wiadomości z literami w odszyfrowanej wiadomości. Każda litera w pierwotnej wiadomości została zdekodowana do litery, która znajdowała się 10 miejsc przed nią w alfabecie. Sporządzona tabela powinna to pokazać. Oto tabela powiązań liter, w której litera ,,K'' oznacza ,,A''. Jeśli Twoja tabela jest odwrotna, czyli pokazuje zmianę ,,A'' na ,,K'' zamiast ,,K'' na ,,A'', to też wszystko w porządku. Jeśli nie byłeś w stanie złamać szyfru Cezara w poprzednim podrozdziale, wróć do niego teraz i zdekoduj przy użyciu tabeli.
 
 {image filename="caesar-cipher-table-2.png"}
 
@@ -91,7 +91,7 @@ W tym przykładzie mówimy, że kluczem jest *10*, ponieważ klucze w szyfrze Ce
 {image filename="caesar-cipher-table-3.png"}
 
 {panel type="jargon-buster" summary="Co to jest klucz?"}
-W szyfrze Cezara klucz reprezentuje liczbę miejsc o które należy obrócić alfabet. W powyższych przykładach użyliśmy kluczy "8" i "10". Bardziej ogólnie rzecz ujmując, klucz jest po prostu wartością wymaganą do wykonania operacji matematycznych do szyfrowania i deszyfrowania. Podczas gdy szyfr Cezara ma tylko 25 możliwych kluczy, prawdziwe systemy szyfrowania mają niewyobrażalnie dużą liczbę możliwych kluczy -- czasem klucze te zawierają setki lub nawet tysiące cyfr binarnych. Posiadanie ogromnej liczby różnych możliwych kluczy jest ważne, ponieważ sprawdzenie wszystkich 25 kluczy szyfru Cezara zajęłoby komputerowi mniej niż sekundę.
+W szyfrze Cezara klucz reprezentuje liczbę miejsc o które należy obrócić alfabet. W powyższych przykładach użyliśmy kluczy ,,8'' i ,,10''. Bardziej ogólnie rzecz ujmując, klucz jest po prostu wartością wymaganą do wykonania operacji matematycznych do szyfrowania i deszyfrowania. Podczas gdy szyfr Cezara ma tylko 25 możliwych kluczy, prawdziwe systemy szyfrowania mają niewyobrażalnie dużą liczbę możliwych kluczy -- czasem klucze te zawierają setki lub nawet tysiące cyfr binarnych. Posiadanie ogromnej liczby różnych możliwych kluczy jest ważne, ponieważ sprawdzenie wszystkich 25 kluczy szyfru Cezara zajęłoby komputerowi mniej niż sekundę.
 
 W świecie fizycznym zamek szyfrowy jest dokładną analogią szyfru (można wręcz wysłać tajną wiadomość w skrzynce zablokowanej za pomocą zamka szyfrowego).
 Zakładamy, że jedyny sposób na otworzenie pudełka to odgadnięcie kombinacji zamka.
@@ -115,7 +115,7 @@ Jako przykład *deszyfrowania* za pomocą szyfru Cezara, załóżmy, że mamy na
 GRG SG QUZG O JAFKMU VYG
 ```
 
-Ponieważ wiemy, że klucz to 6, możemy odjąć 6 miejsc od każdej litery w zaszyfrowanym tekście. Na przykład litera 6 umieszczona przed "G" to "A", 6 miejsc przed "R" to "L", a 6 miejsc przed "S" to "M". Z tego wiemy, że pierwsze słowa to "ALA MA". Przechodząc przez cały tekst zaszyfrowany, uzyskamy w ten sposób tekst jawny:
+Ponieważ wiemy, że klucz to 6, możemy odjąć 6 miejsc od każdej litery w zaszyfrowanym tekście. Na przykład litera 6 umieszczona przed ,,G'' to ,,A'', 6 miejsc przed ,,R'' to ,,L'', a 6 miejsc przed ,,S'' to ,,M''. Z tego wiemy, że pierwsze słowa to ,,ALA MA''. Przechodząc przez cały tekst zaszyfrowany, uzyskamy w ten sposób tekst jawny:
 
 ```
 ALA MA KOTA I DUZEGO PSA
@@ -162,7 +162,7 @@ Szyfrowanie jest równie proste. Zamiast obracać się do tyłu (odejmowanie), t
 JAK SIE MASZ
 ```
 
-Zaczęlibyśmy od ustalenia, że literą o 7 miejsc za "J" jest "Q", 7 miejsc za "A" znajduje się "H", a 7 miejsc za "K" mamy "R". Oznacza to, że pierwsze słowo tekstu jawnego zaszyfrujemy do "QHR" w zaszyfrowanym tekście. Przechodząc przez cały tekst jawny, uzyskamy w ten sposób tekst zaszyfrowany:
+Zaczęlibyśmy od ustalenia, że literą o 7 miejsc za ,,J'' jest ,,Q'', 7 miejsc za ,,A'' znajduje się ,,H'', a 7 miejsc za ,,K'' mamy ,,R''. Oznacza to, że pierwsze słowo tekstu jawnego zaszyfrujemy do ,,QHR'' w zaszyfrowanym tekście. Przechodząc przez cały tekst jawny, uzyskamy w ten sposób tekst zaszyfrowany:
 
 ```
 QHR ZPL THZG
@@ -201,16 +201,16 @@ W przypadku drugiego wyzwania odpowiedź jest dla uczniów oczywista. Użycie kl
 
 
 {panel type="curiosity" summary="Szyfr Cezara ROT13"}
-Szyfr Cezara z kluczem 13 jest taki sam, jak operacja zwana [ROT13 (obróć o 13 znaków)] (https://pl.wikipedia.org/wiki/ROT13), które jest czasem używane do zakrywania rzeczy takich jak puenta żartu, szczegóły fabuły opowiadania, odpowiedź na pytanie lub tekst, który może być obraźliwy. Łatwo jest ją odkodować (a do tego jest mnóstwo automatycznych systemów), ale użytkownik musi świadomie poprosić o odczytanie wersji odkodowanej. Klucz 13 dla szyfru Cezara ma interesującą właściwość polegającą na tym, że metoda szyfrowania jest identyczna z metodą odszyfrowywania, tj. ten sam program może być użyty w obu przypadkach. Wiele silnych metod szyfrowania próbuje uczynić procesy szyfrowania i odszyfrowywania jak najbardziej zbliżonymi, tak aby to samo oprogramowanie lub sprzęt mogły być użyte do obu tych zadań, zazwyczaj z niewielkimi tylko adaptacjami.
+Szyfr Cezara z kluczem 13 jest taki sam, jak operacja zwana [ROT13 (obróć o 13 znaków)](https://pl.wikipedia.org/wiki/ROT13), które jest czasem używane do zakrywania rzeczy takich jak puenta żartu, szczegóły fabuły opowiadania, odpowiedź na pytanie lub tekst, który może być obraźliwy. Łatwo jest ją odkodować (a do tego jest mnóstwo automatycznych systemów), ale użytkownik musi świadomie poprosić o odczytanie wersji odkodowanej. Klucz 13 dla szyfru Cezara ma interesującą właściwość polegającą na tym, że metoda szyfrowania jest identyczna z metodą odszyfrowywania, tj. ten sam program może być użyty w obu przypadkach. Wiele silnych metod szyfrowania próbuje uczynić procesy szyfrowania i odszyfrowywania jak najbardziej zbliżonymi, tak aby to samo oprogramowanie lub sprzęt mogły być użyte do obu tych zadań, zazwyczaj z niewielkimi tylko adaptacjami.
 {panel end}
 
 ### Problemy z szyframi podstawieniowymi
 
 {panel type="jargon-buster" summary="Co to jest szyfr podstawieniowy?"}
-Szyfr podstawieniowy oznacza po prostu, że każda litera w tekście jawnym zastępowana jest inną literą w celu utworzenia zaszyfrowanego tekstu. Jeśli ta sama litera pojawia się więcej niż jeden raz w tekście jawnym, to ma tę samą postać przy każdym wystąpieniu w zaszyfrowanym tekście. Na przykład wyrażenie "ALA MA KOTA" ma wiele liter A. Wszystkie A w tekście jawnym mogą na przykład zmienić się na "C" w zaszyfrowanym tekście. Szyfr Cezara jest przykładem szyfru podstawieniowego. Inne szyfry podstawieniowe są lepsze od szyfru Cezara, ponieważ litery nie są w nich uporządkowane, a niektóre starsze szyfry używają różnych symboli dla każdego symbolu. Jednak szyfry podstawieniowe łatwo się atakuje, ponieważ atak statystyczny jest prosty: wystarczy wyszukać kilka wspólnych liter i ciągów liter, a następnie dopasować je do typowych dla danego języka wzorców.
+Szyfr podstawieniowy oznacza po prostu, że każda litera w tekście jawnym zastępowana jest inną literą w celu utworzenia zaszyfrowanego tekstu. Jeśli ta sama litera pojawia się więcej niż jeden raz w tekście jawnym, to ma tę samą postać przy każdym wystąpieniu w zaszyfrowanym tekście. Na przykład wyrażenie ,,ALA MA KOTA'' ma wiele liter A. Wszystkie A w tekście jawnym mogą na przykład zmienić się na ,,C'' w zaszyfrowanym tekście. Szyfr Cezara jest przykładem szyfru podstawieniowego. Inne szyfry podstawieniowe są lepsze od szyfru Cezara, ponieważ litery nie są w nich uporządkowane, a niektóre starsze szyfry używają różnych symboli dla każdego symbolu. Jednak szyfry podstawieniowe łatwo się atakuje, ponieważ atak statystyczny jest prosty: wystarczy wyszukać kilka wspólnych liter i ciągów liter, a następnie dopasować je do typowych dla danego języka wzorców.
 {panel end}
 
-Do tej pory rozważaliśmy jeden sposób złamania szyfru Cezara: używanie wzorców w tekście. Poszukując charakterystycznych wzorców, takich jak jednoliterowe słowa, inne krótkie słowa, podwójne litery i znając reguły, takie jak to, że wszystkie słowa muszą zawierać co najmniej jedną samogłoskę (z wyjątkiem niektórych skrótów czy słów pisanych "po SMSowemu"), łatwo złamać  szyfr Cezara. Żadnego dobrego kryptosystemu nie powinno dać się analizować w ten sposób, tzn. system powinien być *semantycznie bezpieczny*.
+Do tej pory rozważaliśmy jeden sposób złamania szyfru Cezara: używanie wzorców w tekście. Poszukując charakterystycznych wzorców, takich jak jednoliterowe słowa, inne krótkie słowa, podwójne litery i znając reguły, takie jak to, że wszystkie słowa muszą zawierać co najmniej jedną samogłoskę (z wyjątkiem niektórych skrótów czy słów pisanych ,,po SMSowemu''), łatwo złamać  szyfr Cezara. Żadnego dobrego kryptosystemu nie powinno dać się analizować w ten sposób, tzn. system powinien być *semantycznie bezpieczny*.
 
 {panel type="jargon-buster" summary="Co rozumiemy pod pojęciem semantycznie bezpieczny?"}
 Semantycznie bezpieczeństwo oznacza, że nie jest znany skuteczny algorytm, który mógłby użyć zaszyfrowanego tekstu, aby uzyskać jakiekolwiek informacje na temat tekstu jawnego, inne niż długość wiadomości. Jest bardzo ważne, aby stosowane w praktyce kryptosystemy były semantycznie bezpieczne.
@@ -222,7 +222,7 @@ Istnieje wiele innych sposobów na złamanie szyfru Cezara, którym przyjrzymy s
 
 #### Analiza częstotliwościowa
 
-Analiza częstotliwościowa polega na sprawdzaniu, ile razy każda litera pojawia się w zaszyfrowanej wiadomości, i wykorzystaniu tej informacji do złamania kodu. Jeśli litera pojawia się wiele razy w wiadomości, to jest o wiele bardziej prawdopodobne, że jest to "A" niż na przykład "F".
+Analiza częstotliwościowa polega na sprawdzaniu, ile razy każda litera pojawia się w zaszyfrowanej wiadomości, i wykorzystaniu tej informacji do złamania kodu. Jeśli litera pojawia się wiele razy w wiadomości, to jest o wiele bardziej prawdopodobne, że jest to ,,A'' niż na przykład ,,F''.
 
 Poniższy program interaktywny ułatwia analizę fragmentu tekstu poprzez zliczanie częstotliwości liter.
 Możesz wkleić tekst, aby zobaczyć, które litery występują najczęściej i najrzadziej. 
@@ -243,7 +243,7 @@ SFOHEJXYXEJ UFWD QZG YWTOPN QNYJW
 ```
 
 {panel type="teacher-note" summary="Alternatywny system analizy"}
-Dostępne są również analizatory tekstu online, takie jak na [tej stronie] (http://www.richkni.co.uk/php/crypta/freq.php).
+Dostępne są również analizatory tekstu online, takie jak na [tej stronie](http://www.richkni.co.uk/php/crypta/freq.php).
 Dla podanego tekstu podaje on wynik jak w poniższej tabeli:
 
 ```
@@ -259,7 +259,7 @@ D : 10       Q : 7        U : 3
 {panel end}
 
 
-"A" jest najczęstszą literą alfabetu polskiego. Rozsądnym byłoby więc przypuszczenie, że "F" w zaszyfrowanym tekście odpowiada "A" w tekście jawnym. Ponieważ "F" jest o 5 liter po literze "A" w alfabecie, możemy się domyślić, że kluczem jest 5. Jeśli umieścisz tekst zaszyfrowany w powyższym programie interaktywnym i ustawisz klucz o wartości 5, przekonasz się, że jest to rzeczywiście poprawny klucz.
+,,A'' jest najczęstszą literą alfabetu polskiego. Rozsądnym byłoby więc przypuszczenie, że ,,F'' w zaszyfrowanym tekście odpowiada ,,A'' w tekście jawnym. Ponieważ ,,F'' jest o 5 liter po literze ,,A'' w alfabecie, możemy się domyślić, że kluczem jest 5. Jeśli umieścisz tekst zaszyfrowany w powyższym programie interaktywnym i ustawisz klucz o wartości 5, przekonasz się, że jest to rzeczywiście poprawny klucz.
 
 {interactive name="caesar-cipher" type="iframe"}
 
@@ -278,7 +278,7 @@ NAJCZESTSZE PARY LUB TROJKI LITER
 {panel end}
 
 
-Jak głosi komunikat, długie wiadomości zawierają wiele wskazówek statystycznych. Bardzo krótkie wiadomości (np. tylko kilka słów) prawdopodobnie nie będą miały oczywistych trendów statystycznych. W bardzo długich wiadomościach (np. w całych książkach) *prawie* zawsze litera "A" występuje najczęściej. Wikipedia ma [listę częstotliwości liter] (https://pl.wikipedia.org/wiki/Alfabet_polski#Cz%C4%99sto%C5%9B%C4%87_wyst%C4%99powania_liter), które mogą ci się przydać.
+Jak głosi komunikat, długie wiadomości zawierają wiele wskazówek statystycznych. Bardzo krótkie wiadomości (np. tylko kilka słów) prawdopodobnie nie będą miały oczywistych trendów statystycznych. W bardzo długich wiadomościach (np. w całych książkach) *prawie* zawsze litera ,,A'' występuje najczęściej. Wikipedia ma [listę częstotliwości liter](https://pl.wikipedia.org/wiki/Alfabet_polski#Cz%C4%99sto%C5%9B%C4%87_wyst%C4%99powania_liter), które mogą ci się przydać.
 
 {panel type="challenge" summary="Analiza częstotliwości"}
 
@@ -303,19 +303,19 @@ RGYPGIQ RKGMPGIQ RQRQNWFPKC RGYPC RCPK RQOCBCNC RGYPGOW RCPW RQNKEBMK RQOCFMC
 {panel end}
 
 {panel type="teacher-note" summary="Odpowiedzi do analizy częstotliwości"}
-W pierwszym wyzwaniu najczęstszą literą jest "A", a klucz to 15.
+W pierwszym wyzwaniu najczęstszą literą jest ,,A'', a klucz to 15.
 
 '''
 TO KOLEJNA WIADOMOSC KTORA MOZNA BEZ PROBLEMU ZLAMAC UZYWAJAC ANALIZY CZESTOTLIWOSCI
 '''
 
-W pierwszym wyzwaniu najczęstszą literą jest "I", a klucz to 21.
+W pierwszym wyzwaniu najczęstszą literą jest ,,I'', a klucz to 21.
 
 '''
 W TEJ WIADOMOSCI WIDAC DUZO LITER I KTORA ZAJMUJE DRUGIE MIEJSCE CZESTOSCI W JEZYKU POLSKIM
 '''
 
-W trzecim wyzwaniu najczęstszą literą jest "P", a klucz to 2. Oczywiście było to dużo trudniejsze niż dwa poprzednie!
+W trzecim wyzwaniu najczęstszą literą jest ,,P'', a klucz to 2. Oczywiście było to dużo trudniejsze niż dwa poprzednie!
 
 '''
 PEWNEGO PIEKNEGO POPOLUDNIA PEWNA PANI POMAZALA PEWNEMU PANU POLICZKI POMADKA
@@ -324,14 +324,14 @@ PEWNEGO PIEKNEGO POPOLUDNIA PEWNA PANI POMAZALA PEWNEMU PANU POLICZKI POMADKA
 {panel end}
 
 {panel type="curiosity" summary="Litera A nie zawsze jest najczęstszą literą..."}
-Chociaż w prawie wszystkich tekstach polskich litera A jest najczęstszą literą, to jednak nie jest tak zawsze. Niektóre utwory literackie (nazywane [lipogramami](https://pl.wikipedia.org/wiki/Lipogram)) są celowo pisane tak, żeby nie zawierać niektórych liter. Na przykład najbardziej znany polski lipogram, pochodzący z książki Juliana Tuwima [Pegaz dęba](https://pl.wikipedia.org/wiki/Pegaz_d%C4%99ba,_czyli_panopticum_poetyckie), nie zawiera w ogóle litery "R". Ponadto tekst, który atakujesz, może nie być polski. Podczas pierwszej i drugiej wojny światowej w armii amerykańskiej s wielu Indian [Code talkers] (https://pl.wikipedia.org/wiki/Code_talker) którzy tłumaczyli wiadomości na ich własny język, co w tamtych czasach zapewniało silną warstwę bezpieczeństwa.
+Chociaż w prawie wszystkich tekstach polskich litera A jest najczęstszą literą, to jednak nie jest tak zawsze. Niektóre utwory literackie (nazywane [lipogramami](https://pl.wikipedia.org/wiki/Lipogram)) są celowo pisane tak, żeby nie zawierać niektórych liter. Na przykład najbardziej znany polski lipogram, pochodzący z książki Juliana Tuwima [Pegaz dęba](https://pl.wikipedia.org/wiki/Pegaz_d%C4%99ba,_czyli_panopticum_poetyckie), nie zawiera w ogóle litery ,,R''. Ponadto tekst, który atakujesz, może nie być polski. Podczas pierwszej i drugiej wojny światowej w armii amerykańskiej służyło wielu Indian [Code talkers](https://pl.wikipedia.org/wiki/Code_talker), którzy tłumaczyli wiadomości na ich własny język, co w tamtych czasach zapewniało silną warstwę bezpieczeństwa.
 {panel end}
 
 
 {panel type="curiosity" summary="Szyfr Vigenere'a"}
-Nieco silniejszym szyfrem niż szyfr Cezara jest [Szyfr Vigenere'a] (https://pl.wikipedia.org/wiki/Szyfr_Vigen%C3%A8re%E2%80%99a), który jest tworzony przy użyciu wielu szyfrów Cezara, w którym występuje klucz w postaci frazy (np. "acb"), a każda litera w kluczu daje przesunięcie (w tym przykładzie będzie to 1, 3, 2). Przesunięcia te są powtarzane w celu uzyskania przesunięcia którym koduje się każdy znak w tekście jawnym.
+Nieco silniejszym szyfrem niż szyfr Cezara jest [Szyfr Vigenere'a](https://pl.wikipedia.org/wiki/Szyfr_Vigen%C3%A8re%E2%80%99a), który jest tworzony przy użyciu wielu szyfrów Cezara, w którym występuje klucz w postaci frazy (np. ,,acb''), a każda litera w kluczu daje przesunięcie (w tym przykładzie będzie to 1, 3, 2). Przesunięcia te są powtarzane w celu uzyskania przesunięcia którym koduje się każdy znak w tekście jawnym.
 
-Gdy mamy wiele szyfrów Cezara, często występujące litery, takie jak E, nie będą już się tak bardzo wyróżniać, czyniąc analizę częstotliwości o wiele trudniejszą. Poniższa strona internetowa pokazuje wpływ tego rozwiązania na dystrybucję liter.
+Gdy mamy wiele szyfrów Cezara, często występujące litery, takie jak E, nie będą już się tak bardzo wyróżniać, czyniąc analizę częstotliwości o wiele trudniejszą. Poniższa strona internetowa (po angielsku) pokazuje wpływ tego rozwiązania na dystrybucję liter.
 [http://www.simonsingh.net/The_Black_Chamber/vigenere_strength.html](http://www.simonsingh.net/The_Black_Chamber/vigenere_strength.html)
 
 Jednakże, chociaż czyni to szyfr Vigenere'a trudniejszym do złamania niż szyfr Cezara, odkryto sposoby jego szybkiego złamania. W rzeczywistości, kiedy już znasz długość klucza, sprowadza się to po prostu do złamania kilku szyfrów Cezara (co, jak widzisz, jest proste i możesz nawet użyć analizy częstotliwości na poszczególnych szyfrach Cezara!). Opracowano kilka metod statystycznych do odkrycia długość klucza.
@@ -343,7 +343,7 @@ Szyfr Vigenere'a znany jest jako *polialfabetyczny szyfr podstawieniowy*, poniew
 
 #### Ataki ze znanym tekstem jawnym
 
-Innym rodzajem ataku jest *atak ze znanym tekstem jawnym*, w którym znasz część lub całe rozwiązanie. Na przykład, jeśli wiesz, że wszystkie moje wiadomości zaczynam od "DZIEN DOBRY", możesz łatwo znaleźć klucz dla następującej wiadomości.
+Innym rodzajem ataku jest *atak ze znanym tekstem jawnym*, w którym znasz część lub całe rozwiązanie. Na przykład, jeśli wiesz, że wszystkie moje wiadomości zaczynam od ,,DZIEN DOBRY'', możesz łatwo znaleźć klucz dla następującej wiadomości.
 
 ```
 WSBXG WHUKR MTCGX LIHMDTGBX HWUXWSBX LBX P LHUHMX H ZHWSBGBX WKNZBXC
@@ -365,12 +365,12 @@ DZIEN DOBRY TAJNE SPOTKANIE ODBEDZIE SIE W SOBOTE O GODZINIE DRUGIEJ
 ```
 {panel end}
 
-Atak ze znanym tekstem jawnym od razu łamie szyfr Cezara, ale dobry kryptosystem nie powinien mieć takiej luki, ponieważ ktoś może zaskakująco łatwo domyślić się, że dana wiadomość została wysłana. Na przykład typową wiadomością może być "nic do zgłoszenia". W bankowości internetowej najprawdopodobniej pojawią się typowe komunikaty, takie jak nagłówki na rachunku bankowym lub części strony internetowej, które zawsze są wyświetlane. Jeszcze gorszy jest *atak z wybranym tekstem jawnym*, w którym ktoś skłania użytkownika, żeby wysłał wybraną wiadomość za pośrednictwem swojego systemu, żeby atakujący mógł zobaczyć, jaki jest odpowiadający jej szyfrogram.
+Atak ze znanym tekstem jawnym od razu łamie szyfr Cezara, ale dobry kryptosystem nie powinien mieć takiej luki, ponieważ ktoś może zaskakująco łatwo domyślić się, że dana wiadomość została wysłana. Na przykład typową wiadomością może być ,,nic do zgłoszenia''. W bankowości internetowej najprawdopodobniej pojawią się typowe komunikaty, takie jak nagłówki na rachunku bankowym lub części strony internetowej, które zawsze są wyświetlane. Jeszcze gorszy jest *atak z wybranym tekstem jawnym*, w którym ktoś skłania użytkownika, żeby wysłał wybraną wiadomość za pośrednictwem swojego systemu, żeby atakujący mógł zobaczyć, jaki jest odpowiadający jej szyfrogram.
 
 Z tego powodu istotne jest, aby dobry kryptosystem nie był możliwy do złamania, nawet jeśli atakujący posiada fragmenty tekstu jawnego wraz z odpowiadającym im szyfrogramem. W tym celu kryptosystem powinien dawać inny zaszyfrowany tekst za każdym razem, gdy zaszyfrowana jest ta sama wiadomość. Początkowo może wydawać się to niemożliwe, chociaż istnieje kilka sprytnych technik stosowanych w prawdziwych systemach kryptograficznych.
 
 {panel type="curiosity" summary="Bardziej ogólne szyfry podstawieniowe"}
-Podczas gdy szyfr Cezara ma klucz określający obrót, bardziej ogólny szyfr podstawieniowy może losowo wymieszać cały alfabet. Wymaga to klucza składającego się z sekwencji 26 liter lub cyfr, określających które litery będą sobie odpowiadały. Na przykład pierwszą częścią klucza mogłoby być "D, Z, E", co oznaczałoby D:A, Z:B, E:C. Klucz musiałby mieć kolejne 23 litery, aby określić resztę przyporządkowania.
+Podczas gdy szyfr Cezara ma klucz określający obrót, bardziej ogólny szyfr podstawieniowy może losowo wymieszać cały alfabet. Wymaga to klucza składającego się z sekwencji 26 liter lub cyfr, określających które litery będą sobie odpowiadały. Na przykład pierwszą częścią klucza mogłoby być ,,D, Z, E'', co oznaczałoby D:A, Z:B, E:C. Klucz musiałby mieć kolejne 23 litery, aby określić resztę przyporządkowania.
 
 Zwiększa to liczbę możliwych kluczy, a tym samym zmniejsza ryzyko ataku brutalnego. Literę A można zastąpić dowolną z 26 liter w alfabecie, następnie B może być zastąpione dowolną z pozostałych 25 liter (26 oprócz litery już zastępującej A), C może zostać zastąpiona dowolną z pozostałych 24 liter...
 
@@ -396,7 +396,7 @@ EIJUDJQSOZDYU
 ```
 
 {panel type="teacher-note" summary="Odpowiedz na powyższe pytanie"}
-Słowem tym jest "ostentacyjnie" i zostało ono zakodowane poprzez przesunięcie 16 liter w prawo (lub 10 w lewo).
+Słowem tym jest ,,ostentacyjnie'' i zostało ono zakodowane poprzez przesunięcie 16 liter w prawo (lub 10 w lewo).
 {panel end}
 
 Obecnie klucze szyfrowania są zwykle liczbami o długości 128 bitów lub więcej. Można obliczyć, ile czasu zajęłoby wypróbowanie wszystkich możliwych 128-bitowych liczb, jeśli komputer mógłby przetestować milion na sekundę (w tym testując, czy każdy zdekodowany tekst zawiera polskie słowa). W końcu to odkryje wiadomość, ale po upływie czasu, którego to będzie wymagało, będzie mało prawdopodobne, aby jeszcze się to do czegokolwiek przydało -- a użytkownik klucza prawdopodobnie go zmienił!
@@ -411,7 +411,7 @@ Poniższy kalkulator obsługuje naprawdę wielkie liczby. Jeśli chcesz, możesz
 Tu trzeba wstawić kalkulator działający na wielkich liczbach
 {comment end}
 
-{panel type="curiosity" summary="Obliczalność -- problemy, których rozwiązanie zajmuje zbyt wiele czasu}}
+{panel type="curiosity" summary="Obliczalność -- problemy, których rozwiązanie zajmuje zbyt wiele czasu"}
 Ataki brutalne wypróbowują każdy możliwy klucz, a liczba możliwych kluczy rośnie *wykładniczo* ze wzrostem długości klucza.
 Jak widzieliśmy powyżej, żaden nowoczesny system komputerowy nie mógłby przetestować wszystkich możliwych wartości klucza 128-bitowego w rozsądnym czasie, a nawet gdyby było to możliwe, dodanie tylko jednego bitu podwajałoby czas jego działania.
 
@@ -421,7 +421,7 @@ W informatyce problemy wymagające wykładniczego czasu na rozwiązanie nie są 
 Ustalenie, które problemy są obliczalne a które nie, jest dużym obszarem badań w dziedzinie informatyki -- wiele innych problemów, na których rozwiązaniu nam zależy, wydaje się nie być obliczalnymi, co jest bardzo frustrujące.
 Dziedzina szyfrowania to jedna z niewielu sytuacji, w których cieszymy się, że algorytm nie jest obliczalny!
 
-Niniejszy przewodnik zawiera [cały rozdział dotyczący obliczalności] (chapters/complexity-tractability.html), w którym możesz dowiedzieć się więcej o tej problematyce.
+Niniejszy przewodnik zawiera [cały rozdział dotyczący obliczalności](chapters/complexity-tractability.html), w którym możesz dowiedzieć się więcej o tej problematyce.
 {panel end}
 
 {panel type="jargon-buster" summary="Terminologia, którą powinieneś już znać"}
@@ -446,17 +446,17 @@ Zaczniemy od spojrzenia na systemy, które umożliwiają odkodowywanie tajnych w
 ## Problem dystrybucji kluczy
 
 {panel type="curiosity" summary="Kim są Alicja, Bob i Ewa?"}
-Podczas opisywania scenariusza szyfrowania kryptolodzy często używają wymyślonych postaci -- "Alicji" i "Boba", przy czym wiadomość jest wysyłana od Alicji do Boba (od A do B).
+Podczas opisywania scenariusza szyfrowania kryptolodzy często używają wymyślonych postaci -- ,,Alicji'' i ,,Boba'', przy czym wiadomość jest wysyłana od Alicji do Boba (od A do B).
 Zawsze zakładamy, że ktoś podsłuchuje rozmowę (w rzeczywistości, jeśli korzystasz z połączenia bezprzewodowego, podsłuchanie transmisji między Alicją i Bobem jest trywialne, dopóki jesteś w zasięgu sieci bezprzewodowej, której jedno z nich używa).
 Wymyślone imię podsłuchującego to zwykle Ewa.
 
 {image filename="xkcd-protocol.png" alt="Komiks xkcd o protokołach" hover-text="Zmiana imion byłaby łatwiejsza, ale jeśli kłamanie nie idzie ci dobrze, spróbuj przyjaźnić się tylko z ludźmi o imionach Alicja, Bob, Carol, itp." source="https://xkcd.com/1323/"}
 
-Istnieje kilka innych postaci używanych do opisywania czynności związanych z protokołami szyfrowania: na przykład Mallory (złośliwy atakujący) i Trudy (intruz). Wikipedia ma [listę przyjaciół Alicji i Boba] (https://en.wikipedia.org/wiki/Alice_and_Bob)
+Istnieje kilka innych postaci używanych do opisywania czynności związanych z protokołami szyfrowania: na przykład Mallory (złośliwy atakujący) i Trudy (intruz). Wikipedia ma [listę przyjaciół Alicji i Boba](https://pl.wikipedia.org/wiki/Alicja_i_Bob)
 {panel end}
 
 Jeśli Alicja wysyła zaszyfrowaną wiadomość do Boba, powoduje to interesujący problem w szyfrowaniu.
-Sam szyfrogram może być bezpiecznie wysłany przez "niebezpieczną" sieć (podsłuchiwaną przez Ewę), ale klucz -- nie. Jak Alicja może dostarczyć klucz Bobowi? Pamiętaj, że klucz to jest to, co mówi Bobowi, jak przekształcić szyfrogram z powrotem w tekst jawny. Zatem Alicja nie może umieścić go w zaszyfrowanej wiadomości, ponieważ wtedy Bob nie mógłby uzyskać do niego dostępu. Alicja nie może po prostu włączyć go do wiadomości jako zwykły tekst, ponieważ wtedy Ewa będzie mogła go pobrać i użyć go do odszyfrowania wiadomości, które będą nim zaszyfrowane. Możesz zapytać, dlaczego Alicja nie zaszyfruje klucza za pomocą innego schematu szyfrowania, ale skąd Bob miałby znać ten nowy klucz? Alicja musiałaby przekazać Bobowi klucz, który został użyty do jego zaszyfrowania... i tak dalej... Ten pomysł nie zadziała!
+Sam szyfrogram może być bezpiecznie wysłany przez ,,niebezpieczną'' sieć (podsłuchiwaną przez Ewę), ale klucz -- nie. Jak Alicja może dostarczyć klucz Bobowi? Pamiętaj, że klucz to jest to, co mówi Bobowi, jak przekształcić szyfrogram z powrotem w tekst jawny. Zatem Alicja nie może umieścić go w zaszyfrowanej wiadomości, ponieważ wtedy Bob nie mógłby uzyskać do niego dostępu. Alicja nie może po prostu włączyć go do wiadomości jako zwykły tekst, ponieważ wtedy Ewa będzie mogła go pobrać i użyć go do odszyfrowania wiadomości, które będą nim zaszyfrowane. Możesz zapytać, dlaczego Alicja nie zaszyfruje klucza za pomocą innego schematu szyfrowania, ale skąd Bob miałby znać ten nowy klucz? Alicja musiałaby przekazać Bobowi klucz, który został użyty do jego zaszyfrowania... i tak dalej... Ten pomysł nie zadziała!
 
 Pamiętaj, że Alicja i Bob mogą być w różnych krajach i mogą komunikować się tylko przez Internet. To również wyklucza przekazanie klucza Bobowi osobiście przez Alicję.
 
@@ -475,15 +475,15 @@ Założenie, że ktoś może obserwować każdy bit wysyłany i odbierany przez 
 Fizyczna dystrybucja kluczy jest bardzo kosztowna, a do lat 70. XX wieku wydawano duże sumy na fizyczne wysyłanie kluczy za granicę. Takie systemy są nazywane szyfrowaniem *symetrycznym*, ponieważ Alicja i Bob potrzebują identycznej kopii klucza. Przełomem było odkrycie, że można stworzyć system wykorzystujący różne klucze do kodowania i dekodowania. Przyjrzymy się temu bliżej w następnym podrozdziale.
 
 {panel type="curiosity" summary="Garść dodatkowych informacji"}
-[Wideo Simona Singha] (http://simonsingh.net/media/online-videos/cryptography/the-science-of-secrecy-going-public/) dobrze wyjaśnia dystrybucję kluczy.
+[Wideo Simona Singha](http://simonsingh.net/media/online-videos/cryptography/the-science-of-secrecy-going-public/) dobrze wyjaśnia (po angielsku) dystrybucję kluczy.
 
-Poza tym, jest film ilustrujący działanie systemów kluczy publicznych przy użyciu analogii kłódki.
+Poniższy film (również po angielsku) ilustruje działanie systemów kluczy publicznych przy użyciu analogii kłódki.
 
 {video url="https://www.youtube.com/watch?v=a72fHRr6MRU"}
 {panel end}
 
 {panel type="teacher-note" summary="Jeszcze więcej o Alicji i Bobie"}
-Jest piosenka o Alicji i Bobie (http://www.catonmat.net/blog/musical-geek-friday-alice-and-bob/) w wykonaniu rapera MC ++ (tak, specjalizuje się w informatyce). Niektóre użyte wyrażenia mogą być zbyt niestosowne żeby puścić piosenkę w klasie, więc zanim to zrobisz -- zastanów się.
+Jest [angielska piosenka o Alicji i Bobie](http://www.catonmat.net/blog/musical-geek-friday-alice-and-bob/) w wykonaniu rapera MC Plus+ (tak, specjalizuje się w informatyce). Niektóre użyte wyrażenia mogą być zbyt niestosowne żeby puścić piosenkę w klasie, więc zanim to zrobisz -- zastanów się.
 
 {image filename="xkcd-alice-and-bob.png" hover-text="Jeszcze jeden powód, dla którego nie pozwalają mi jeździć na konferencje kryptologiczne." alt="Komiks xkcd o Alicji i Bobie" źródło="https://xkcd.com/177/"}
 {panel end}
@@ -548,9 +548,9 @@ Ale z drugiej strony, jeśli zostałeś zapytany, jakie dwie liczby pierwsze zos
 Utworzenie kodu RSA wymaga wykonania powyższego mnożenia, co jest łatwe dla komputerów.
 Gdybyśmy mogli rozwiązać drugi problem i znaleźć czynniki dużej liczby, moglibyśmy złamać kod RSA.
 Jednak nikt nie zna szybkiego sposobu, aby to zrobić.
-Nazywa się to jednokierunkową funkcja z zapadką -- łatwo jest ją zrobić w jednym kierunku (pomnożyć dwie liczby), ale jest prawie niemożliwe jej odwrócenie (znalezienie czynników), chyba że się zna jakąś tajną informację pozwalającą przejść "zapadkę" (np. jeden z czynników).
+Nazywa się to jednokierunkową funkcja z zapadką -- łatwo jest ją zrobić w jednym kierunku (pomnożyć dwie liczby), ale jest prawie niemożliwe jej odwrócenie (znalezienie czynników), chyba że się zna jakąś tajną informację pozwalającą przejść ,,zapadkę'' (np. jeden z czynników).
 
-Dlaczego więc, pomimo że te dwa problemy są podobne, jeden z nich jest "łatwy", a drugi "trudny"? Cóż, sprowadza się to do znanych nam algorytmów rozwiązania każdego z problemów.
+Dlaczego więc, pomimo że te dwa problemy są podobne, jeden z nich jest ,,łatwy'', a drugi ,,trudny''? Cóż, sprowadza się to do znanych nam algorytmów rozwiązania każdego z problemów.
 
 Prawdopodobnie robiłeś mnożenia w słupku w szkole, pisząc jeden wiersz dla każdej cyfry drugiej liczby, a następnie dodając wszystkie wiersze. Możemy analizować szybkość tego algorytmu, podobnie jak to robiliśmy w rozdziale dotyczącym algorytmów sortowania i wyszukiwania.
 Zakładając, że każdy z tych dwóch numerów ma taką samą liczbę cyfr, którą nazwiemy *n*, musimy napisać *n* wierszy.
@@ -570,7 +570,7 @@ Ale w tym przypadku my znamy *tylko* dużą liczbę. Wcale nie jest to prosty pr
 Okazuje się, że nie jest znany szybki algorytm, który rozwiązałby ten problem. Jednym ze sposobów jest po prostu próba dzielenia przez każdą liczbę, która jest mniejsza niż dana liczba (cóż, właściwie musimy dojść tylko do pierwiastka kwadratowego, ale to niewiele pomoże!). Istnieją miliardy miliardów miliardów liczb, które musielibyśmy sprawdzić. Nie pomoże nam w tym nawet komputer, który mógłby sprawdzić 1 miliard możliwości na sekundę! Jeśli znasz notację Landaua, to jest to {math}algorytm o złożoności O(10^n){koniec matematyki}, gdzie n to liczba cyfr -- nawet mała liczba cyfr to zbyt wiele, by sobie z tym poradzić!
 Są nieco lepsze rozwiązania, ale żadne z nich nie pozwala oszczędzić wystarczająco dużo czasu, aby było użyteczne dla problemów o wielkości takiej jak powyżej!
 
-Rozdział poświęcony [złożoności i obliczalności] (chapters/ complexity-tractability.html) przedstawia więcej problemów informatycznych, które są zaskakująco trudne do rozwiązania. Jeśli uważasz, że jest to interesujące, przeczytaj o złożoności i obliczalności, gdy skończysz ten rozdział.
+Rozdział poświęcony [złożoności i obliczalności](chapters/ complexity-tractability.html) przedstawia więcej problemów informatycznych, które są zaskakująco trudne do rozwiązania. Jeśli uważasz, że jest to interesujące, przeczytaj o złożoności i obliczalności, gdy skończysz ten rozdział.
 {panel end}
 
 {panel type="curiosity" summary="Szyfrowanie za pomocą klucza prywatnego zamiast klucza publicznego -- podpisy cyfrowe!"}
@@ -626,7 +626,7 @@ W tym podrozdziale przyjrzymy się kilku szeroko stosowanym algorytmom bezpieczn
 - Za każdym razem, gdy dane hasło jest haszowane, powinno ono dawać ten sam skrót.
 - Mając dany konkretny **hasz**, nie powinno być możliwe szybkie wyliczenie oryginalnego hasła.
 
-Matematycznie algorytm skrótu nazywany jest "funkcją jednokierunkową". Oznacza to po prostu, że bardzo łatwo jest obliczyć hasz danego hasła, ale próba odzyskania hasła z danego hasza może być wykonana tylko przez brutalną siłę. Innymi słowy, łatwo jest robić w jedną stronę, ale prawie niemożliwe jest odwrócenie. Popularny algorytm haszowania nazywa się SHA-256. Pozostała część tego rozdziału skupi się na SHA-256.
+Matematycznie algorytm skrótu nazywany jest ,,funkcją jednokierunkową''. Oznacza to po prostu, że bardzo łatwo jest obliczyć hasz danego hasła, ale próba odzyskania hasła z danego hasza może być wykonana tylko przez brutalną siłę. Innymi słowy, łatwo jest robić w jedną stronę, ale prawie niemożliwe jest odwrócenie. Popularny algorytm haszowania nazywa się SHA-256. Pozostała część tego rozdziału skupi się na SHA-256.
 
 {panel type="jargon-buster" summary="Co oznacza brutalna siła?"}
 W podrozdziale o szyfrowaniu szyfrem Cezara krótko mówiliśmy o atakach brutalnych. Atak brutalną siłą w tym kontekście oznaczał próbowanie każdego możliwego klucza, aż do znalezienia właściwego.
@@ -648,7 +648,7 @@ To może początkowo brzmieć tak, jakbyśmy mieli doskonały system. Ale nieste
 Możesz znaleźć w sieci *tęczowe tablice*, które są zawczasu przeliczonymi listami popularnych haseł z wartościami, do których się haszują. Nie jest trudno wygenerować tęczowe tabele zawierające wszystkie hasła do określonej wielkości (jest to jeden z powodów, dla których zdecydowanie zaleca się używanie długich haseł!).
 Tego problemu można uniknąć, wybierając hasło, które nie jest często spotykanym słowem lub kombinacją słów.
 
-Haszowanie to dobry początek, ale musimy jeszcze ulepszyć nasz system, żeby dwaj użytkownicy wybierający to samo hasło mieli różne hasze, zapewniając jednocześnie możliwość sprawdzenia, czy użytkownik wprowadził poprawne hasło. Następny pomysł, "solenie", rozwiązuje ten problem.
+Haszowanie to dobry początek, ale musimy jeszcze ulepszyć nasz system, żeby dwaj użytkownicy wybierający to samo hasło mieli różne hasze, zapewniając jednocześnie możliwość sprawdzenia, czy użytkownik wprowadził poprawne hasło. Następny pomysł, ,,solenie'', rozwiązuje ten problem.
 
 {panel type="curiosity" summary="Hasła, które mają taki sam skrót"}
 Mówiąc, że jeśli haszowane hasło pasuje do tego w bazie danych, to użytkownik musiał wprowadzić poprawne hasło, nie mówiliśmy całej prawdy. Analizując problem matematycznie, wiemy że muszą istnieć hasła, które dawałyby taki sam skrót. Wynika to z tego, że długość hasza wyjściowego ma ustaloną maksymalną długość, podczas gdy długość hasła (lub innych danych których skrót obliczamy) może być znacznie większa. Dlatego istnieje więcej możliwych wejść niż wyjść, a zatem niektóre wejścia muszą dawać to samo wyjście. Gdy dwa różne wejścia dają ten sam skrót na wyjściu, nazywamy to *kolizją*.
@@ -662,7 +662,7 @@ W przypadku przechowywania haseł kolizje nie stanowią problemu. Prawdopodobnie
 Ale haszowanie służy nie tylko do przechowywania haseł. Jest również używane do podpisów cyfrowych, w których skróty muszą być unikatowe. W przypadku tych zastosowań ważne jest, aby nie można było znaleźć kolizji.
 {panel end}
 
-### Haszowanie haseł z "soleniem"
+### Haszowanie haseł z ,,soleniem''
 
 Naprawdę sprytną techniką, która rozwiązuje niektóre problemy z używaniem zwykłego skrótu, jest solenie. Solenie oznacza po prostu dołączenie dodatkowych danych, zwanych *solą*, na końcu hasła, a następnie haszowanie hasła i soli. Zwykle sól jest dość duża (na przykład 128 bitów). Kiedy użytkownik próbuje się zalogować, musimy znać sól jego hasła, aby można było ją dodać do hasła przed haszowaniem i sprawdzeniem. Początkowo może się to wydawać trudne, ale sól nie powinna być trzymana w sekrecie. Znajomość soli nie pomaga atakującemu w matematycznym odwróceniu hasza i odzyskaniu hasła. Dlatego powszechnie praktykuje się przechowywanie jej w postaci tekstu jawnego w bazie danych.
 
@@ -726,19 +726,19 @@ Pierwsze przykłady w tym rozdziale wykorzystują bardzo słabe metody szyfrowan
 
 Istnieje wiele aspektów bezpieczeństwa komputera poza szyfrowaniem. Na przykład kontrola dostępu (m.in. systemy haseł i bezpieczeństwo kart inteligentnych) ma kluczowe znaczenie dla zabezpieczenia systemu.
 Innym poważnym problemem jest pisanie bezpiecznego oprogramowania, które nie daje użytkownikowi możliwości uzyskania dostępu do informacji, których nie powinien poznać (np. przez wpisanie polecenia bazy danych do kwerendy w witrynie, które system przypadkiem uruchomi lub przepełnienie bufora dużą ilością danych wejściowych, które mogą przypadkowo zastąpić części programu).
-Ponadto, systemy muszą być chronione przed atakami typu "zablokowanie usługi" ("Denial Of Service" -- DOS), gdzie są tak przeładowane żądaniami (np. prośbami o wysłanie strony internetowej, jak przy przeglądaniu), że serwer nie może sobie z nimi poradzić, a uprawnieni użytkownicy otrzymują odpowiedzi bardzo powoli, albo system może nawet całkowicie zawieść.
+Ponadto, systemy muszą być chronione przed atakami typu ,,zablokowanie usługi'' ("Denial Of Service" -- DOS), gdzie są tak przeładowane żądaniami (np. prośbami o wysłanie strony internetowej, jak przy przeglądaniu), że serwer nie może sobie z nimi poradzić, a uprawnieni użytkownicy otrzymują odpowiedzi bardzo powoli, albo system może nawet całkowicie zawieść.
 
-Jeśli chodzi o inne rodzaje ataków związanych z bezpieczeństwem komputerowym, patrz [wpis w Wikipedii na temat hakerów] (https://en.wikipedia.org/wiki/Security_hacker#Attacks).
+Jeśli chodzi o inne rodzaje ataków związanych z bezpieczeństwem komputerowym, patrz [wpis w angielskiej Wikipedii na temat hakerów](https://en.wikipedia.org/wiki/Security_hacker#Attacks).
 
 Nad bezpieczeństwem wszystkich obecnych metod szyfrowania wiszą ciemne chmury: [komputery kwantowe](https://pl.wikipedia.org/wiki/Komputer_kwantowy).
 Komputery kwantowe są w powijakach, ale jeśli to podejście do obliczeń okaże się udane, może umożliwić działanie bardzo szybkich algorytmy atakowania naszych najbezpieczniejszych systemów szyfrujących (na przykład mogłoby być użyte do bardzo szybkiego wyznaczania dzielników liczb). W rzeczywistości algorytmy kwantowe zostały już wynalezione, ale nie wiemy, czy można zbudować komputery kwantowe, na których mogłyby one działać. 
 Takie komputery najprawdopodobniej nie pojawią się z dnia na dzień, a jeśli ich budowa stanie się możliwa, otworzą również możliwość stosowania nowych algorytmów szyfrowania. Jest to kolejna zagadka w informatyce -- nie wiemy, co przyniesie przyszłość i gdzie mogą nastąpić poważne zmiany. Ale będziemy potrzebować bardzo zdolnych informatyków do radzenia sobie z takimi zmianami!
 
-Ale jest też dobra strona -- [kwantowe protokoły dystrybucji kluczy] (https://pl.wikipedia.org/wiki/Kwantowa_dystrybucja_klucza) i są one stosowane w praktyce (przy użyciu specjalistycznego sprzętu do generowania bitów kwantowych); zapewniają one teoretycznie doskonały system szyfrowania i nie polegają na tym, że atakujący nie jest w stanie rozwiązać określonego problemu obliczeniowego. Ze względu na konieczność użycia specjalistycznego sprzętu są one wykorzystywane tylko w środowiskach o wysokim poziomie bezpieczeństwa, takich jak bankowość.
+Ale jest też dobra strona -- [kwantowe protokoły dystrybucji kluczy](https://pl.wikipedia.org/wiki/Kwantowa_dystrybucja_klucza) i są one stosowane w praktyce (przy użyciu specjalistycznego sprzętu do generowania bitów kwantowych); zapewniają one teoretycznie doskonały system szyfrowania i nie polegają na tym, że atakujący nie jest w stanie rozwiązać określonego problemu obliczeniowego. Ze względu na konieczność użycia specjalistycznego sprzętu są one wykorzystywane tylko w środowiskach o wysokim poziomie bezpieczeństwa, takich jak bankowość.
 
 Oczywiście szyfrowanie nie rozwiązuje wszystkich naszych problemów związanych z bezpieczeństwem, a ponieważ są dostępne dobre systemy szyfrowania, złodzieje informacji muszą zastosować inne podejścia, w szczególności inżynierię społeczną. Najłatwiejszym sposobem uzyskania hasła użytkownika jest spytanie go o nie! [Atak phishingowy](https://pl.wikipedia.org/wiki/Phishing) robi właśnie coś takiego, a istnieją szacunki, że aż 1 na 20 użytkowników komputera zdradził kiedyś w ten sposób tajne informacje.
 
-Inne stosowane metody inżynierii społecznej, to przekupywanie lub szantażowanie osób mających dostęp do systemu lub po prostu szukanie hasła zapisanego na karteczce przyklejonej do czyjegoś monitora! Uzyskanie dostępu do czyjegoś konta email jest szczególnie łatwym sposobem na uzyskanie wielu haseł, ponieważ wiele systemów przywracania "zgubionego hasła" wysyła nowe hasło na konto email.
+Inne stosowane metody inżynierii społecznej, to przekupywanie lub szantażowanie osób mających dostęp do systemu lub po prostu szukanie hasła zapisanego na karteczce przyklejonej do czyjegoś monitora! Uzyskanie dostępu do czyjegoś konta email jest szczególnie łatwym sposobem na uzyskanie wielu haseł, ponieważ wiele systemów przywracania ,,zgubionego hasła'' wysyła nowe hasło na konto email.
 
 {comment}
 .. xtcb prawdopodobnie odnośnik do http://nsf.gov/cise/csbytes/newsletter/vol3/pdf/csbb-vol3-i2.pdf i https://www.youtube.com/watch?v=T2DXrs0OpHU
@@ -755,16 +755,16 @@ Inne stosowane metody inżynierii społecznej, to przekupywanie lub szantażowan
 {panel type="curiosity" summary="Steganografia"}
 
 Kryptografia polega na ukryciu treści wiadomości, ale czasami ważne jest ukrycie *istnienia* wiadomości. W przeciwnym razie wróg może zorientować się, że coś jest w trakcie planowania właśnie dlatego, że wysyłanych jest znacznie więcej wiadomości, nawet jeśli nie jest w stanie ich odczytać.
-Jednym ze sposobów osiągnięcia tego jest *steganografia*, gdzie tajna wiadomość jest ukryta w innej wiadomości, która wydaje się niewinna. Klasycznym scenariuszem byłoby opublikowanie wiadomości w drobnych ogłoszeniach w gazecie lub wysłanie listu z więzienia, gdzie liczba liter w każdym słowie stanowi kod. Dla zwykłego czytelnika komunikat może wydawać się nieistotny (a nawet mówić coś przeciwnego do ukrytego), ale ktoś, kto zna kod, może go odkryć. Wiadomości mogą być ukryte w obrazach cyfrowych przez wprowadzanie niezauważalnych zmian w pikselach tak, żeby przechowywały pewne informacje. Możesz dowiedzieć się [więcej o steganografii na Wikipedii] (https://pl.wikipedia.org/wiki/Steganografia) lub w tym [wykładzie na temat steganografii] (https://www.youtube.com/watch?v=Py-qu9KWXhk#t=29).
+Jednym ze sposobów osiągnięcia tego jest *steganografia*, gdzie tajna wiadomość jest ukryta w innej wiadomości, która wydaje się niewinna. Klasycznym scenariuszem byłoby opublikowanie wiadomości w drobnych ogłoszeniach w gazecie lub wysłanie listu z więzienia, gdzie liczba liter w każdym słowie stanowi kod. Dla zwykłego czytelnika komunikat może wydawać się nieistotny (a nawet mówić coś przeciwnego do ukrytego), ale ktoś, kto zna kod, może go odkryć. Wiadomości mogą być ukryte w obrazach cyfrowych przez wprowadzanie niezauważalnych zmian w pikselach tak, żeby przechowywały pewne informacje. Możesz dowiedzieć się [więcej o steganografii na Wikipedii](https://pl.wikipedia.org/wiki/Steganografia) lub w tym [wykładzie (po angielsku) na temat steganografii](https://www.youtube.com/watch?v=Py-qu9KWXhk#t=29).
 
-Dwa zabawne zastosowania steganografii, które możesz sam spróbować zdekodować, to [film o szyfrach zawierających ukryte szyfry (nazywany "The Thomas Beale Cipher")](http://www.thomasbealecipher.com/), a także przykład ćwiczenia z [pięciobitowymi kodami tekstowymi ukrytymi w muzyce] (http://csunplugged.org/modem).
+Dwa zabawne zastosowania steganografii, które możesz sam spróbować zdekodować, to [film ,,The Thomas Beale Cipher'', o szyfrach zawierających steganografię](http://www.thomasbealecipher.com/), a także przykład ćwiczenia (po angielsku) z [pięciobitowymi kodami tekstowymi ukrytymi w muzyce](http://csunplugged.org/modem).
 
 {panel end}
 
 
 ## Dalsza lektura
 
-[Artykuł o kryptologii na Wikipedii](https://pl.wikipedia.org/wiki/Kryptologia) ma dość przystępny wpis dotyczący najważniejszej terminologii użytej w tym rozdziale.
+[Artykuł o kryptologii na Wikipedii](https://pl.wikipedia.org/wiki/Kryptologia) dość przystępnie wyjaśnia terminologię użytą w tym rozdziale.
 
 Obecnie stosowane metody szyfrowania opierają się na dość zaawansowanej matematyce; z tego powodu książki o szyfrowaniu zwykle albo wymagają większej wiedzy niż na poziomie liceum, albo opisują kody, które nie są używane w praktyce.
 
@@ -776,15 +776,17 @@ Obecnie stosowane metody szyfrowania opierają się na dość zaawansowanej mate
 
 Istnieje wiele intrygujących historii dotyczących szyfrowania, w tym jego wykorzystania w czasie wojny i do szpiegowania. Oto kilka książek na ten temat:
 
-- David Kahn "How I Discovered World War II's Greatest Spy and Other Stories of Intelligence and Code"
+- David Kahn ,,How I Discovered World War II's Greatest Spy and Other Stories of Intelligence and Code''
 
-- Friedrich L. Bauer "Decrypted Secrets: Methods and Maxims of Cryptology"
+- Friedrich L. Bauer ,,Sekrety kryptografii''
 
-- Craig Bauer "Secret History: The Story of Cryptology"
+- Craig Bauer ,,Secret History: The Story of Cryptology''
 
-- David Kahn "The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet" -- ta książka jest starszą wersją jego nowej książki i może być trudna do zdobycia.
+- David Kahn ,,Łamacze kodów. Historia kryptologii''
 
-Poniższe ćwiczenia interaktywne pozwalają pobawić się protokołami kryptograficznymi za pomocą metody Unplugged; metody te nie są wystarczająco mocne, aby można je było wykorzystać w praktyce, ale zapewniają pewien wgląd w to, co jest możliwe:
+- Marek Grajek ,,Enigma. Bliżej prawdy''
+
+Poniższe ćwiczenia na stronie CS Unplugged pozwalają pobawić się protokołami kryptograficznymi. Są po angielsku, ale pierwsze dwa posiadają polską instrukcję. Metody szyfrowania w nich użyte nie są wystarczająco mocne, aby można je było wykorzystać w praktyce, ale zapewniają pewien wgląd w to, co jest możliwe:
 
 - [Ukrywanie informacji](http://csunplugged.org/information-hiding)
 
@@ -796,14 +798,14 @@ Artykuł [War in the fifth domain](http://www.economist.com/node/16478792) o woj
 
 Istnieje wiele [artykułów w CS4FN na temat kryptografii](http://www.cs4fn.org/security/crypto/), w tym o [ataku statystycznym który doprowadził do... ścięcia głowy](http://www.cs4fn.org/security/beheading/secrets1.html).
 
-Książka "Hacking Secret Ciphers with Python: A beginner's guide to cryptography and computer programming with Python" (autor: Al Sweigart) omawia niektóre proste szyfry, w tym te omówione w tym rozdziale, a także jak można je programować (i atakować) za pomocą programów w języku Python.
+Książka ,,Hacking Secret Ciphers with Python: A beginner's guide to cryptography and computer programming with Python'' (autor: Al Sweigart) omawia niektóre proste szyfry, w tym te omówione w tym rozdziale, a także jak można je programować (i atakować) za pomocą programów w języku Python.
 
 
 ### Przydatne odnośniki
 
-- [Wpis na How Stuff Works dotyczący szyfrowania](http://www.howstuffworks.com/encryption.htm)
+- [How Stuff Works -- o szyfrowaniu (po angielsku)](http://www.howstuffworks.com/encryption.htm)
 - [Cryptool](http://www.cryptool.org/) to darmowy system pozwalający wypróbowywać klasyczne i nowoczesne metody szyfrowania. Niektóre z nich wykraczają poza zakres tego rozdziału, ale wiele z nich może się przydać do eksperymentowania z kryptografią i prowadzenia demonstracji.
-- [Wpis na Wikipedii o kluczach kryptograficznych](https://pl.wikipedia.org/wiki/Klucz_(kryptografia))
-- [Wpis na Wikipedii o szyfrze Cezara](https://pl.wikipedia.org/wiki/Szyfr_Cezara)
-- [Filmy o nowoczesnych metodach szyfrowania](http://simonsingh.net/media/online-videos/cryptography/the-science-of-secrecy-going-public/)
-- [Programy interaktywne z prostymi szyframi](http://www.braingle.com/brainteasers/codes/index.php)
+- [Wikipedia -- klucze kryptograficzne](https://pl.wikipedia.org/wiki/Klucz_%28kryptografia%29)
+- [Wikipedia -- szyfr Cezara](https://pl.wikipedia.org/wiki/Szyfr_Cezara)
+- [Filmy o nowoczesnych metodach szyfrowania (po angielsku)](http://simonsingh.net/media/online-videos/cryptography/the-science-of-secrecy-going-public/)
+- [Programy interaktywne z prostymi szyframi (po angielsku)](http://www.braingle.com/brainteasers/codes/index.php)
