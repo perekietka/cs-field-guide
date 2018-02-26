@@ -7,7 +7,7 @@
 Grafika komputerowa kojarzy się z grami, filmami i obrazami oraz niezwykłym oprogramowaniem do tworzenia i przetwarzania obrazów. Warto jednak zapytać: Jak to się dzieje, że to oprogramowanie tak świetnie działa? Jaką rolę mają informatycy? Oni nie są wyłącznie *użytkownikami* systemów graficznych, ale zajmują się *tworzeniem*, zwłaszcza obmyślaniem nowych technik.
 
 Rozwój narzędzi do tworzenia grafiki komputerowej jest pochodną przemysłu rozrywkowego. Granice możliwości takiego oprogramowania nieustannie się poszerzają. Na początku były proste filmy animowane, zwane dziś 2D, a dziś na ekranach kin możemy oglądać postaci i obiekty w wersji 3D wygenerowane komputerowo, które momentami trudno odróżnych od tych istniejących w świecie rzeczywistym.
-Wśród napisów końcowych filmów, w których używano komputerowo wygenerowanych animacji, można by odnaleźć liczne nazwiska informatyków. [Kilku z nich otrzymało nawet Nagrody Akademii Filmowej (Oscary)] (http://www.oscars.org/news/11-scientific-and-technical-achievements-be-honored-academy-awardsr)! 
+Wśród napisów końcowych filmów, w których używano komputerowo wygenerowanych animacji, można by odnaleźć liczne nazwiska informatyków. [Kilku z nich otrzymało nawet Nagrody Akademii Filmowej (Oscary)](http://www.oscars.org/news/11-scientific-and-technical-achievements-be-honored-academy-awardsr)! 
 
 
 
@@ -92,7 +92,7 @@ Poniżej znajduje się interaktywne narzędzie, które pozwala na nakładanie st
 {comment}{include interactive computer-graphics-arrow parameters="&quiz=2 0 0 5 0 2 0 4 0 0 2 0 0 0 0 1"}{comment end}
 {button link="http://csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-points.html?info=%20Try%20to%20get%20the%20blue%20arrow%20to%20match%20up%20with%20the%20red%20one.%20It%20will%20require%20a%20mixture%20of%20scaling%20and%20translation.&quiz=2%200%200%205%200%202%200%204%200%200%202%200%200%200%200%201" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
-Co się stanie, gdy zamienimy miejscami wartości *x* i *y* wspólrzędnych punktu?
+Co się stanie, gdy zamienimy miejscami wartości *x* i *y* współwspólrzędnychrzędnych punktu?
 
 {comment}{include interactive computer-graphics-arrow parameters="&quiz=0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 1 &hidetarget=true &zoom=-5.0"}{comment end}
 {button link="http://csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-points.html?info=Next,%20see%20what%20happens%20if%20you%20swap%20the%20%3Cem%3Ex%3C/em%3E%20and%20%3Cem%3Ey%3C/em%3E%20value%20for%20each%20coordinate.&quiz=0%201%200%200%201%200%200%200%200%200%201%200%200%200%200%201%20&hidetarget=true%20&zoom=-5.0" text="Kliknij, aby uruchomić interaktywne narzędzie."}
@@ -108,16 +108,16 @@ O tym przeczytasz poniżej!
 
 ### Przekształcenia macierzowe
 
-{panel type="teacher-note" summary="Wymagania co do wiedzy uczących się"}
+{panel type="teacher-note" summary="Wymagania co do wiedzy uczniów"}
 
-Ten podrozdział jest wprowadzeniem do zastosowania macierzy w grafice komputerowej. Nie jest konieczne, aby uczący się znali pojęcie macierzy wcześniej. Gdyby wyjaśnienia zawarte w tekście były niewystarczające do zrozumienia tematu przez uczniów, to można im wskazać inne zasoby edukacyjne, np. nagrania wideo i zadania pochodzące z 
+Ten podrozdział jest wprowadzeniem do zastosowania macierzy w grafice komputerowej. Nie jest konieczne, aby uczniowie znali pojęcie macierzy wcześniej. Gdyby wyjaśnienia zawarte w tekście były niewystarczające do zrozumienia tematu przez uczniów, to można im wskazać inne zasoby edukacyjne, np. nagrania wideo i zadania pochodzące z 
 [Khan academy](https://pl.khanacademy.org/math/precalculus/precalc-matrices).
 
 Oto inne odnośniki do materiałów edukacyjnych (w języku angielskim):
 - [Math is Fun - Mnożenie macierzy](http://www.mathsisfun.com/algebra/matrix-multiplying.html)
-- [Math in Sight - Mnożenie macierzy](http://mathinsight.org/matrix_vector_multiplication)
+- [Math in Sight - Mnożenie macierzy](https://mathinsight.org/matrix_vector_multiplication)
 - [Math Planet - Przekształcenia z użyciem macierzy](http://www.mathplanet.com/education/geometry/transformations/transformation-using-matrices)
-- [Wikipedia o przekształceniach macierzowych](https://en.wikipedia.org/wiki/Transformation_matrix) -- w tym artykule poziom szczegółowości jest już znaczący
+- [Wikipedia o przekształceniach macierzowych](https://en.wikipedia.org/wiki/Transformation_matrix) -- w tym artykule poziom szczegółowości jest już znaczący.
 {panel end}  
 
 
@@ -216,7 +216,7 @@ Interesująca jest sytuacja, w której przekształcenie opisane jest np. taką m
 
 Efektem będzie pewien obrót w prawo. Teraz wartość *x* jest efektem jakby zmieszania 0,7 początkowych wartości *x* i *y*. 
 
-W ogólnym przypadku do zapisu macierzy obrotu obiektu o kąt {math-block}\theta{math-block end} w lewo (przeciwnie do ruchu wskazówek zegara), należy użyć funkcji trygonometrycznych sinus (skrót: sin) i cosinus (skrót: cos):
+W ogólnym przypadku do zapisu macierzy obrotu obiektu o kąt {math}\theta{math end} w lewo (przeciwnie do ruchu wskazówek zegara), należy użyć funkcji trygonometrycznych sinus (skrót: sin) i cosinus (skrót: cos):
 
 {math-block}
 \begin{bmatrix}
@@ -275,7 +275,7 @@ Sprawdź!
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix-reversed.html?info=The%20following%20interactive%20has%20the%20translation%20and%20scaling%20the%20other%20way%20around.%20Use%20this%20one%20to%20transform%20the%20blue%20arrow%20to%20the%20red%20arrow.%20The%20order%20in%20which%20the%20operations%20happen%20makes%20a%20difference!%20&quiz=2%200%200%205%200%202%200%204%200%200%202%200%200%200%200%201" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
 {panel type="teacher-note" summary="Rozwiązanie"}
-Macierz ma postać: {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end} (znów podwojenie rozmiaru). Tym razem wartości opisujące przesunięcie są dwa razy mniejsze niż potrzebujemy, ponieważ po przesunięciu będzie jeszcze skalowanie. Dlatego dla *x* należy wpisać 2,5 a dla *y* -- 2.
+Macierz ma postać: {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end} (znów podwojenie rozmiaru). Tym razem wartości opisujące przesunięcie są dwa razy mniejsze niż potrzebujemy, ponieważ po przesunięciu będzie jeszcze skalowanie. Dlatego dla *x* należy wpisać 2,5 a dla *y* -- wpisać 2.
 {panel end}
 
 Moża było zauważyć, że wartości opisujące przekształcenia zależą od odległości obiektu od punktu o współrzędnych (0,0), zwanym początkiem układu współrzędnych. 
@@ -359,8 +359,8 @@ Rozważmy prosty przykład. Chcemy złożyć dwa przekształcenia: skalowanie (z
 \end{bmatrix}
 =
 \begin{bmatrix}
-2 \times 0.7+ 0 \times -0.7 &  2 \times 0.7+ 0 \times 0.7 \\  
-0 \times 0.7+ 2 \times -0.7 &  0 \times 0.7+ 2 \times 0.7 \\  
+2 \times 0{,}7 7+ 0 \times -0{,}7 7 &  2 \times 0{,}7 7+ 0 \times 0{,}7 7 \\  
+0 \times 0{,}7 7+ 2 \times -0{,}7 7 &  0 \times 0{,}7 7+ 2 \times 0{,}7 7 \\  
 \end{bmatrix}
 =
 \begin{bmatrix}
@@ -551,7 +551,7 @@ Biegli w programowaniu, chcący zgłębiać temat przekształceń graficznych w 
 lub powszechnie stosowany system
 [OpenGL](https://en.wikipedia.org/wiki/OpenGL).
 Interaktywny samouczek (po angielsku) OpenGL można znaleźć tutaj:
-[JPOT](http://www.cs.uwm.edu/%7Egrafix2/).
+[JPOT](https://web.archive.org/web/20170328182143/http://www.cs.uwm.edu/~grafix2/).
 
 Wykonanie projektu w jednym z tych systemów może być bardzo czasochłonne. Trzeba się wiele nauczyć, zanim uda się uzyskać ciekawe efekty.
 {panel end}
@@ -649,9 +649,8 @@ Sprawdź efekt, przykładając linijkę do rysunku. Umieść ją tak, aby krawę
 
 Prostą w układzie współrzędnych *XY* można opisać równaniem {math}y = mx + c{math end}.
 Używając tego równania, możemy wyznaczyć wartość współrzędnej *y* dla wartości współrzednej *x*.
-Wcześniej trzeba określić wartość współczynnika opisującego
-{glossary-link term="slope" reference-text="computer graphics"}nachylenie prostej{glossary-link end}, którym jest {math}m{math end},
-oraz punkt, w którym prosta przecina oś Y, czyli (0, *y*). Współrzędna *y* tego punktu w równaniu jest oznaczona jako {math}c{math end}.
+Wcześniej trzeba określić wartość współczynnika opisującego nachylenie prostej, którym jest {math}m{math end},
+oraz punkt, w którym prosta przecina oś *Y*, czyli (0, *y*). Współrzędna *y* tego punktu w równaniu jest oznaczona jako {math}c{math end}.
 Innymi słowy, rysując linię prostą wybieramy piksele o współrzędnych ({math}x{math end}, {math}mx + c{math end}) dla kolejnych wartości *x*.
 
 Na przykład, wybierając {math}m=2{math end} and {math}c=3{math end} otrzymujemy prostą przechodzącą przez punkty (0,3), (1,5), (2,7), (3,9) itd.
@@ -662,8 +661,8 @@ Jakie są kąty nachylenia prostych?
 
 {panel type="teacher-note" summary="Rozwiązanie"}
 Wartość {math}m=0{math end} odpowiada prostej równoległej do dolnej krawędzi, wartość {math}m=1{math end} to przypadek prostej o kącie nachylenia 45 stopni (przesunięciu o 1 piksel w poziomie odpowiada przesunięcie o jeden piksel w pionie).
-Wartość {math}m=0.5{math end} opisuje prostą o kącie nachylenia mniejszym niż 27 stopni.
-[Narzędzie interaktywne](http://www.mathopenref.com/coordslope.html) może być pomocne w zrozumieniu związku wartości *m* z kątem nachylenia.)
+Wartość {math}m=0{,}5{math end} opisuje prostą o kącie nachylenia mniejszym niż 27 stopni.
+[Narzędzie interaktywne](http://www.mathopenref.com/coordslope.html) (ang.) może być pomocne w zrozumieniu związku wartości *m* z kątem nachylenia.)
 {panel end}
 
 Równanie {math}mx + c{math end} może być użyte do wybrania pikseli dla cyfrowej reprezentacji odcinka łączącego punkty {math}(x_1, y_1){math end} i {math}(x_2, y_2){math end}.
@@ -673,7 +672,7 @@ Jakie wartości mają współrzędne {math}(x_1, y_1){math end} i {math}(x_2, y_
 Końce odcinka to punkty: {math}A = (3,4){math end} i {math}B = (16,9){math end}. To znaczy, że {math}x_1 = 3, y_1 = 4, x_2=16{math end} i {math}y_2 = 9{math end}.
 {panel end}
 
-Potrafisz wyznaczyć wartości {math}m{math end} i {math}b{math end} dla równania prostej przechodzącej przez punkty *A* i *B*? Możesz użyć następujących wzorów:
+Potrafisz wyznaczyć wartości {math}m{math end} i {math}b{math end} dla równania prostej przechodzącej przez punkty *A* i {math}B\,{math end}? Możesz użyć następujących wzorów:
 
 {math-block}
 
@@ -685,10 +684,12 @@ b = \frac{(y_1x_2 - y_2x_1)}{(x_2-x_1)}
 {panel type="teacher-note" summary="Rozwiązanie"}
 Oto wyniki obliczeń:
 
-\\[
-m = \frac{(9 - 4)}{(16 - 3)}  = 5/13 \approx 0,384615
+{math-block}
+
+m = \frac{(9 - 4)}{(16 - 3)}  = 5/13 \approx 0,384615\\
 b = \frac{(4 \times 16 - 9 \times 3)}{(16-3)} = 37/13 \approx 2,846154
-\\]
+
+{math-block end}
 
 
 Równanie ma więc postać {math}y \approx 0.384615x + 2.846154{math end}.
@@ -787,7 +788,7 @@ Poniżej zapisano obliczenia wykonane z użyciem algorytmu Bresenhama:
 
 Przedstawiona powyżej wersja algorytmu Bresenhama była wersją niepełną, gdyż działała poprawnie tylko dla odcinków nachylonych do poziomu o kąt między 0 a 45 stopni (co odpowiada wartościom współczynnika nachylenia *m* od 0 do 1). Aby algorytm był uniwersalny, trzeba listę kroków algorytmu uzupełnić:
 
-- W przypadku, gdy odcinek jest nachylony nie w górę, ale w dół, wówczas, gdy {math}P >= 0{math end}, jako kolejny piksel należy zapalić ten położony po prawej w wierszu niżej.
+- W przypadku, gdy odcinek jest nachylony nie w górę, ale w dół, wówczas, gdy {math}P \geq 0{math end}, jako kolejny piksel należy zapalić ten położony po prawej w wierszu niżej.
 - Jeśli wartość {math}y{math end} rośnie szybciej niż wartość {math}x{math end} (co odpowiada kątowi nachylenia większemu niż 45 stopni), to podczas obliczania wartości *A*, *B* i początkowej wartości *P*, zamień w algorytmie rolę osi *X* i *Y* rolami. Oznacza to, że zamiast poruszać się wzdłuż osi *X*, poruszasz się wzdłuż *Y*, a zamiast zapalać po jednym pikselu w każdej kolumnie, zapalasz po jednym pikselu w każdym wierszu.
 
 {image filename="grid-20x20-blank.png" alt="Siatka pikseli dla odcinka"}
@@ -842,9 +843,9 @@ Powtarzaj kolejne kroki aż {math}y{math end} będzie mieć większą wartość 
 - Zapal piksel o współrzędnych ({math}c_{x} + x{math end}, {math}c_{y} + y{math end}).
 - Zwiększ {math}E{math end} o wartość wyrażenia {math}2 \times y + 1{math end}.
 - Zwiększ {math}y{math end} o 1.
-- Jeśli {math}E >=0{math end},  to odejmij wartość {math}2 \times x - 1{math end} od {math}E{math end}, a następnie odejmij 1 od {math}x{math end}.
+- Jeśli {math}E \geq 0{math end},  to odejmij wartość {math}2 \times x - 1{math end} od {math}E{math end}, a następnie odejmij 1 od {math}x{math end}.
 
-Zastosuj algorytm, by stworzyć rysunek okręgu na siatce kwadratowej. Piksel opisany literą *C* ({math}c_{x}{math end}, {math}c_{y}{math end}) niech będzie środkiem okręgu, a piksel {math}R{math end} jednym z punktów na okręgu.
+Zastosuj algorytm, by stworzyć rysunek okręgu na siatce kwadratowej. Piksel opisany literą C, o współrzędnych ({math}c_{x}{math end}, {math}c_{y}{math end}) niech będzie środkiem okręgu, a piksel {math}R{math end} -- jednym z punktów na okręgu.
 Zwróć uwagę na to, że zgodnie z algorytmem rysowanie należy przerwać, gdy {math}y{math end} będzie większe niż {math}x{math end}! 
 
 {image filename="grid-20x20-circle-question.png" alt="Siatka pikseli dla okręgu"}
@@ -911,8 +912,9 @@ Jego zaletą jest to, że wszystkie operacje można realizować wyłącznie prze
 
 {panel type="Curiosity" summary="Moebius i jego odkrycia"}
 System współrzędnych jednorodnych wprowadził w 1827 roku niemiecki matematyk
-[August Ferdinand Möbius](https://en.wikipedia.org/wiki/August_Ferdinand_M%C3%B6bius), ponad 100 lat przed erą komputerów.
-Möbius jest prawodopoodbnie bardziej znany jako odkrywca pewnej matematycznej powierzchni jednostronnej, określanej jako [wstęga Möbiusa](https://en.wikipedia.org/wiki/M%C3%B6bius_strip)!
+[August Ferdinand Möbius](https://pl.wikipedia.org/wiki/August_Ferdinand_M%C3%B6bius), ponad 100 lat przed erą komputerów.
+Möbius jest prawodopoodbnie bardziej znany jako odkrywca pewnej matematycznej powierzchni jednostronnej, określanej jako [wstęga Möbiusa](https://pl.wikipedia.org/wiki/Wst%C4%99ga_M%C3%B6biusa)!
+{panel end}
 
 
 
@@ -922,8 +924,6 @@ Möbius jest prawodopoodbnie bardziej znany jako odkrywca pewnej matematycznej p
 - [https://en.wikipedia.org/wiki/Transformation_matrix](https://en.wikipedia.org/wiki/Transformation_matrix)
 - [https://en.wikipedia.org/wiki/Bresenham’s_line_algorithm](https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm)
 - [https://en.wikipedia.org/wiki/Ray_trace](https://en.wikipedia.org/wiki/Ray_trace)
-- [http://www.cosc.canterbury.ac.nz/mukundan/cogr/applcogr.html](http://www.cosc.canterbury.ac.nz/mukundan/cogr/applcogr.html)
-- [http://www.cosc.canterbury.ac.nz/mukundan/covn/applcovn.html](http://www.cosc.canterbury.ac.nz/mukundan/covn/applcovn.html)
 - [http://www.povray.org/resources/links/3D_Tutorials/POV-Ray_Tutorials/](http://www.povray.org/resources/links/3D_Tutorials/POV-Ray_Tutorials/)
 
 
