@@ -4,7 +4,7 @@
 W tym rozdziale pojawiają się bardzo duże liczby, zwłaszcza w kontekście problemu wykładniczej eksplozji czasu. Wiele zasobów ilustruje te koncepcje. Można pobrać wideo [The Power of Exponentials, Big and Small](http://blossoms.mit.edu/videos/lessons/power_exponentials_big_and_small) z MIT, które ilustruje wykładniczy wzrost za pomocą zabawnych przykładów.
 {panel end}
 
-## What's the big picture?
+## Z lotu ptaka
 
 {comment}
 
@@ -28,10 +28,10 @@ Jednym z ważnych przykładów trudnego problemu, którym zajmie się ten rozdzi
 Łatwo go opisać; jeśli masz listę miast, które musisz odwiedzić, i znasz odległość między każdą parą miast, jaka jest najkrótsza trasa, która odwiedza wszystkie miasta dokładnie raz?
 Jest to bardzo praktyczny problem, który pojawia się, gdy pojazdy kurierskie wybierają trasy dostarczania paczek, zespoły rockowe planują trasy koncertowe, a nawet gdy wyznaczony, trzeźwy kierowca, rozwozi przyjaciół po imprezie.
 W rzeczywistości miara między miastami nie musi być odległością. Może to być koszt podróży między każdą parą miast. Na przykład, jeśli chcesz odwiedzić Queenstown, Christchurch, Auckland i Wellington, minimalizując koszty biletów lotniczych, a znasz koszt przelotu między każdą parą tych 4 miast, to możesz wyliczyć jak je oblecieć najtaniej. Jest to nadal przykład TSP.
-Można go również zastosować do problemów, które nie dotyczą podróży; na przykład został użyty do [opracowania sposobu wydajnej syntezy DNA](http://www.i-programmer.info/news/181/9340.html).
+Można go również zastosować do problemów, które nie dotyczą podróży; na przykład został użyty do [opracowania sposobu wydajnej syntezy DNA](http://www.i-programmer.info/news/181/9340.html) (artykuł w języku angielskim).
 
 Poniższy program interaktywny rozwiązuje problem dla tylu miast, ile tylko wybierzesz, próbując wszystkich możliwych tras i pamiętając najlepszą do tej pory znalezioną. Możesz poczuć jak wygląda trudny problem, sprawdzając jak długo program rozwiązuje zadanie na mapach o różnych rozmiarach.
-Spróbuj wygenerować mapę z około 5 miastami i naciśnij "Start", aby rozwiązać zadanie.
+Spróbuj wygenerować mapę z około 5 miastami i naciśnij ,,Start'', aby rozwiązać zadanie.
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/tract-tsp-basic-v2.html" text="Wyświetl interaktywną wycieczkę"}
 
@@ -68,7 +68,7 @@ Zacznijmy jednak od znanego problemu, który możemy rozwiązać.
 {glossary-definition term="Złożoność" definition="Złożoność określa ile czasu potrzeba na rozwiązanie problemu. Każdy problem ma immanentną złożoność (minimalny czas potrzebny na jego rozwiązanie); każdy algorytm rozwiązania problemu będzie miał większą złożoność (będzie potrzebował przynajmniej tyle czasu)."}
 
 {glossary-link term="Złożoność" reference-text="problems and algorithms"}Złożoność{glossary-link end} to ważne pojęcie dotyczące problemów i algorytmów, które je rozwiązują.
-Zwykle złożoność to po prostu czas potrzebny do rozwiązania problemu, ale istnieje kilka sposobów mierzenia "czasu".
+Zwykle złożoność to po prostu czas potrzebny do rozwiązania problemu, ale istnieje kilka sposobów mierzenia ,,czasu''.
 Mierzenie rzeczywistego czasu na danym komputerze może być przydatne, ale aby uzyskać przybliżone pojęcie o zachowaniu właściwemu danemu algorytmowi, informatycy często zaczynają od oszacowania liczby kroków, jakie algorytm wykona dla *n* elementów.
 Na przykład wyszukiwanie liniowe może wymagać sprawdzania każdego z *n* elementów, więc algorytm wykona *n* kroków.
 Algorytm, który porównuje każdą parę wartości z listy *n* elementów, będzie musiał dokonać {math}n^2{math end} porównań, więc możemy scharakteryzować go jako wymagającego około {math}n^2{math end} kroków.
@@ -85,8 +85,8 @@ Zgrubne pojęcie o złożoności problemu pomaga oszacować, ile czasu zajmie je
 
 {panel type="jargon-buster" summary="Asymptotyczna złożoność"}
 
-Gdy będziesz czytać o złożoności, możesz natknąć się na terminologię taką jak np. notacja "duże O" i "asymptotyczna złożoność", wedle której algorytm, który zajmuje około {math}n^2{math end} kroków jest określany jako {math}O(n^2){math end}. Nie zajmiemy się nimi w tym rozdziale, ale poniżej jest garść informacji na wypadek, gdybyś zetknął się z tymi pojęciami gdzie indziej. 
-Notacja "duże O" pozwala precyzyjnie mówić o złożoności i jest używana z "asymptotyczną złożonością", która po prostu oznacza, jak algorytm działa dla dużych wartości *n*. "Asymptotyczna" oznacza, że *n* staje się naprawdę duże -- kiedy tak się dzieje, mniej się martwimy drobnymi szczegółami, jeśli chodzi o czas pracy. Jeśli algorytm kończy działanie po siedmiu dniach, to zupełnie nie jest interesujące, że w rzeczywistości jest to 7 dni, 1 godzina, 3 minuty i 4,33 sekundy, i nie warto tracić czasu na dokładne badanie.
+Gdy będziesz czytać o złożoności, możesz natknąć się na terminologię taką jak np. notacja ,,duże O'' i ,,asymptotyczna złożoność'', wedle której algorytm, który zajmuje około {math}n^2{math end} kroków jest określany jako {math}O(n^2){math end}. Nie zajmiemy się nimi w tym rozdziale, ale poniżej jest garść informacji na wypadek, gdybyś zetknął się z tymi pojęciami gdzie indziej. 
+Notacja ,,duże O'' pozwala precyzyjnie mówić o złożoności i jest używana z ,,asymptotyczną złożonością'', która po prostu oznacza, jak algorytm działa dla dużych wartości *n*. ,,Asymptotyczna'' oznacza, że *n* staje się naprawdę duże -- kiedy tak się dzieje, mniej się martwimy drobnymi szczegółami, jeśli chodzi o czas pracy. Jeśli algorytm kończy działanie po siedmiu dniach, to zupełnie nie jest interesujące, że w rzeczywistości jest to 7 dni, 1 godzina, 3 minuty i 4,33 sekundy, i nie warto tracić czasu na dokładne badanie.
 
 Nie użyjemy precyzyjnej notacji asymptotycznej złożoności (która mówi, którą część obliczeń prędkości można bezpiecznie zignorować), ale dokonamy przybliżonych oszacowań liczby operacji, które wykona algorytm. Nie trzeba się zbytnio przejmować precyzją, ponieważ informatykom wystarczy prosta charakterystyka, która daje ogólne pojęcie o prędkości.
 
@@ -116,7 +116,7 @@ W tym rozdziale będziemy posługiwać się podobnymi, zgrubnymi charakterystyka
 
 Jeśli analizowałeś algorytmy, dowiedziałeś się, że niektóre algorytmy sortowania, takie jak sortowanie przez scalanie i sortowanie szybkie (ang. *quicksort*), są z natury szybsze niż inne algorytmy, takie jak sortowanie przez wstawianie, sortowanie przez wybór, czy sortowanie bąbelkowe. Oczywiście lepiej jest używać szybszych. Pierwsze dwa mają złożoność {math}nlog(n){math end} (to znaczy liczba kroków, które robią jest w przybliżeniu proporcjonalna do {math}nlog(n){math end}), podczas gdy ostatnie trzy mają złożoność {math}n^2{math end}. Zasadniczo konsekwencją zastosowania niewłaściwego algorytmu sortowania będzie to, że użytkownik będzie czekać wiele minut (a może godzin), a nie kilka sekund lub minut.
 
-Tutaj rozważymy inny algorytm sortowania, nazywany *sortowaniem przez permutacje*. Przebiega on tak: "Wymieńmy wszystkie możliwe porządki ("permutacje") elementów, które mają zostać posortowane, i sprawdzajmy każdy z nich po kolei, aż znajdziemy ten, w którym elementy są posortowane". Ten algorytm prosto opisać, ale czy jest on dobry?
+Tutaj rozważymy inny algorytm sortowania, nazywany *sortowaniem przez permutacje*. Przebiega on tak: ,,Wymieńmy wszystkie możliwe porządki (,,permutacje'') elementów, które mają zostać posortowane, i sprawdzajmy każdy z nich po kolei, aż znajdziemy ten, w którym elementy są posortowane''. Ten algorytm prosto opisać, ale czy jest on dobry?
 
 {panel type="teacher-note" summary="Sortowanie przez permutacje nie jest w praktyce użyteczne!"}
 
@@ -146,7 +146,7 @@ Na przykład, jeśli sortujesz liczby 45, 21 i 84, wtedy wszystkie możliwe kole
 84, 45, 21
 
 Patrząc na powyższą listę widzimy, że jedyna linijka, która jest uporządkowana to 21, 45, 84, więc to jest rozwiązanie.
-Jest to bardzo nieefektywne podejście, ale pomoże zilustrować, co rozumiemy pod pojęciem "obliczalności".
+Jest to bardzo nieefektywne podejście, ale pomoże zilustrować, co rozumiemy pod pojęciem ,,obliczalności''.
 
 Aby zrozumieć, jak to działa i jakie są tego konsekwencje, wybierz cztery różne słowa (w poniższym przykładzie użyliśmy kolorów) i wypisz wszystkie możliwe uporządkowania tych czterech słów. Każde słowo powinno pojawić się dokładnie raz w każdym uporządkowaniu. Możesz to zrobić samodzielnie lub użyć internetowego generatora permutacji, takiego jak [JavaScriptPermutations](http://users.telenet.be/vdmoortel/dirk/Maths/permutations.html) lub [Text Mechanic](http://textmechanic.com/Permutation-Generator.html).
 
@@ -167,7 +167,7 @@ Nie muszą być w żadnej określonej kolejności, chociaż zalecamy podejście 
 
 {panel type="teacher-note" summary="Rozwiązanie"}
 
-Dla czterech różnych słów, będzie 4x3x2x1=24 różnych uporządkowań. Na przykład, sześć z nich zaczyna się od "czerwony", sześć zaczyna się od "niebieski" i tak dalej.
+Dla czterech różnych słów, będzie 4x3x2x1=24 różnych uporządkowań. Na przykład, sześć z nich zaczyna się od ,,czerwony'', sześć zaczyna się od ,,niebieski'' i tak dalej.
 
 {panel end}
 
@@ -181,7 +181,7 @@ Liczba uporządkowań (permutacji) *n* słów to *n* silnia; jest to wyjaśnione
 
 Silnię liczby można obliczyć za pomocą arkusza kalkulacyjnego (w Excelu formuła dla {math}15!{math end} to =FACT(15). Wiele kalkulatorów ma przycisk z silnią ("!"). Można nawet wpisać {math}15!{math end} do wyszukiwarki Google i uzyskać odpowiedź. Ale dla bardzo dużych liczb ten przewodnik ma prosty kalkulator, który działa na wielkich liczbach; znajduje się on w tekście poniżej;  możesz go też otworzyć tutaj:
 
-{interactive name="big-number-calculator" type="whole-page" text="Big Number Calculator"}
+{interactive name="big-number-calculator" type="whole-page" text="Kalkulator dużych liczb"}
 
 Jeśli chodzi o powyższe pytania, liczba permutacji to:
 
@@ -192,7 +192,7 @@ Jeśli chodzi o powyższe pytania, liczba permutacji to:
 
 {panel end}
 
-Jeśli nie znalazłeś wzoru liczby uporządkowań, pomyśl o użyciu silni. W przypadku 3 słów istnieje {math}3!{math end} ("3 silnia") uporządkowań. Dla 5 słów istnieje {math}5!{math end} uporządkowań. Spójrz na niszczyciela żargonu poniżej, jeśli nie wiesz, czym jest "silnia", lub jeśli zapomniałeś!
+Jeśli nie znalazłeś wzoru liczby uporządkowań, pomyśl o użyciu silni. W przypadku 3 słów istnieje {math}3!{math end} ("3 silnia") uporządkowań. Dla 5 słów istnieje {math}5!{math end} uporządkowań. Spójrz na niszczyciela żargonu poniżej, jeśli nie wiesz, czym jest ,,silnia'', lub jeśli zapomniałeś!
 
 {panel type="jargon-buster" summary="Silnie"}
 
@@ -200,17 +200,17 @@ Silnie są bardzo łatwe do obliczenia; po prostu pomnóż wszystkie liczby cał
 
 Jak wspomniano powyżej, silnia liczby określa, ile permutacji (uporządkowań) byłoby dla tej liczby słów (zakładając, że wszystkie są różne). Oznacza to, że jeśli układasz 8 słów, będzie 40 320 sposobów ich ułożenia (dlatego nie prosiliśmy o wypróbowanie tego w pierwszym ćwiczeniu!!)
 
-Twój kalkulator może mieć przycisk "!" do obliczania silni, a arkusze kalkulacyjne mają zwykle funkcję "FACT", chociaż w przypadku silni poniżej 10 w tym rozdziale, zalecamy obliczyć je "na piechotę", a następnie użyć kalkulatora do sprawdzenia. Zrozumienie sposobu obliczania silni jest niezbędne do zrozumienia reszty tego rozdziału!
+Twój kalkulator może mieć przycisk ,,!'' do obliczania silni, a arkusze kalkulacyjne mają zwykle funkcję ,,FACT'', chociaż w przypadku silni poniżej 10 w tym rozdziale, zalecamy obliczyć je ,,na piechotę'', a następnie użyć kalkulatora do sprawdzenia. Zrozumienie sposobu obliczania silni jest niezbędne do zrozumienia reszty tego rozdziału!
 
 {panel end}
 
 W przypadku silni większych liczb większość kalkulatorów nie działa zbyt dobrze; na przykład 100! ma 158 cyfr. Możesz użyć poniższego kalkulatora do pracy z dużymi liczbami (szczególnie podczas korzystania z silni i wykładników).
 
-{interactive name="big-number-calculator" type="whole-page" text="Big Number Calculator"}
+{interactive name="big-number-calculator" type="whole-page" text="Kalkulator dużych liczb"}
 
 Spróbuj obliczyć 100! za pomocą tego kalkulatora -- jest to liczba różnych tras, którymi sprzedawca podróżujący może odwiedzić 100 miejsc (nie licząc miejsca startowego). Za pomocą tego kalkulatora możesz skopiować i wkleić wynik z powrotem do wejścia, jeśli chcesz wykonać dalsze obliczenia na tej liczbie. Jeśli wykonujesz te obliczenia jako zadanie, powinieneś również skopiować każdy krok obliczeń do swojego rozwiązania, aby pokazać, w jaki sposób uzyskałeś wynik.
 
-W Internecie dostępne są inne kalkulatory dużych liczb; na przykład [Big Integer Calculator] (http://www.javascripter.net/math/calculators/100digitbigintcalculator.htm). Można też znaleźć w Internecie wersje do sprowadzenia na komputer stacjonarny lub smartfon.
+W Internecie dostępne są inne kalkulatory dużych liczb; na przykład [Big Integer Calculator](http://www.javascripter.net/math/calculators/100digitbigintcalculator.htm). Można też znaleźć w Internecie wersje do sprowadzenia na komputer stacjonarny lub smartfon.
 
 Jako ostatnie ćwiczenie dotyczące sortowania przez permutacje, oblicz, ile czasu zajmie komputerowi sortowanie 100 liczb przy użyciu sortowania przez permutacje. Pamiętaj, że możesz użyć powyższego kalkulatora. Załóżmy, że nie musisz się martwić, ile czasu zajmie wygenerowanie permutacji, tylko ile czasu zajmie ich sprawdzenie. Załóżmy, że masz komputer, który tworzy i sprawdza jedno uporządkowanie co nanosekundę.
 
@@ -251,8 +251,8 @@ Powinniście już być w pełni świadomi tego, co się dzieje. Sortowanie przez
 
 Musimy teraz rozróżnić algorytmy, które są w praktyce użyteczne, i algorytmy, które będą potrzebowały miliardów lat, aby zakończyć działanie, nawet przy niewielkich ilościach danych wejściowych, takich jak 100 elementów.
 
-Informatycy mówią, że algorytm nie jest "obliczalny", jeśli jego działanie przy danych wejściowych o rozsądnej wielkości zajmie całkowicie nierozsądną ilość czasu. Sortowanie przez permutacje jest dobrym przykładem algorytmu który nie jest obliczalny.
-Pojęcie "obliczalności" jest nieco bardziej formalnie używane w informatyce; wyjaśniono to w następnym rozdziale.
+Informatycy mówią, że algorytm nie jest ,,obliczalny'', jeśli jego działanie przy danych wejściowych o rozsądnej wielkości zajmie całkowicie nierozsądną ilość czasu. Sortowanie przez permutacje jest dobrym przykładem algorytmu który nie jest obliczalny.
+Pojęcie ,,obliczalności'' jest nieco bardziej formalnie używane w informatyce; wyjaśniono to w następnym rozdziale.
 
 Ale *problem* sortowania elementów nie jest trudny do rozwiązania -- mimo że algorytm sortowania przez permutacje nie jest obliczalny, istnieje wiele innych wydajnych i mniej wydajnych algorytmów, które można wykorzystać do rozwiązania problemu sortowania w rozsądnej ilości czasu: sortowanie szybkie (ang. *quicksort*), sortowanie przez scalanie (ang. *mergesort*), sortowanie przez wybór, a nawet sortowanie bąbelkowe! Istnieją jednak pewne problemy, dla których JEDYNE znane algorytmy są trudne do obliczenia. Problemy tej kategorii są znane jako *problemy trudne*.
 
@@ -296,7 +296,7 @@ Kalkulator pokaże dużą liczbę sekund, które program będzie potrzebował do
 
 {panel type="teacher-note" summary="Rozwiązanie"}
 
-Przy początkowych ustawieniach w programie interaktywnym, TSP dla 20 miast zajmie 2 432 902 008 176 640 000,00 sekund, co stanowi 773 056 638,51 wieków (zwróć uwagę, że kalkulator musi być ustawiony na n!, aby użyć go do TSP). Nb. podajemy bardzo dokładne liczby, aby sprawdzić, czy masz dobry wynik; w praktyce szacunek jest bardzo zgrubny, a zamiast 773,056,638.51 stuleci, równie trafne jest powiedzenie "około 770 milionów wieków", a nawet tylko "setki milionów stuleci". Przedstawienie tego w geologicznych ramach czasowych może lepiej to przybliżyć uczniom.
+Przy początkowych ustawieniach w programie interaktywnym, TSP dla 20 miast zajmie 2 432 902 008 176 640 000,00 sekund, co stanowi 773 056 638,51 wieków (zwróć uwagę, że kalkulator musi być ustawiony na n!, aby użyć go do TSP). Nb. podajemy bardzo dokładne liczby, aby sprawdzić, czy masz dobry wynik; w praktyce szacunek jest bardzo zgrubny, a zamiast 773,056,638.51 stuleci, równie trafne jest powiedzenie ,,około 770 milionów wieków'', a nawet tylko ,,setki milionów stuleci''. Przedstawienie tego w geologicznych ramach czasowych może lepiej to przybliżyć uczniom.
 
 {panel end}
 
@@ -370,7 +370,7 @@ Liczenie 10 razy szybciej zredukuje 384 stulecia do 38,4 stulecia -- znacznie sz
 
 {panel end}
 
-Wypróbowując te liczby, najprawdopodobniej natrafisz na barierę między problemami "obliczalnymi" i "nieobliczalnymi".
+Wypróbowując te liczby, najprawdopodobniej natrafisz na barierę między problemami ,,obliczalnymi'' i ,,nieobliczalnymi''.
 Algorytmy, które potrzebują {math}n^2{math end}, {math}n^3{math end} lub nawet {math}n^4{math end} kroków, aby rozwiązać problem (taki jak sortowanie listy), nie są może wspaniałe, ale z wystarczająco szybkim komputerem i przy wielkości danych wejściowych problemów, które napotykamy w typowych zastosowaniach, mamy szansę doczekać się wyniku w ciągu ludzkiego życia. Są one traktowane jako *obliczalne*.
 Jednak w przypadku algorytmów, które zajmują {math}2^n{math end}, {math}3^n{math end} lub więcej kroków, wymagany czas działania może przekroczyć miliardy lat nawet dla małej wielkości danych wejściowych, a używanie tysięcy razy szybszych komputerów nadal nie pomaga rozwiązać większych problemów. Takie problemy są uważane za *nieobliczalne*.
 Matematycznie, granica między obliczalnymi i nieobliczalnymi problemami przebiega między wielomianową liczbą kroków (wielomiany to na przykład {math}n^2{math end}, {math}n^3{math end}, {math}n^4{math end} i tak dalej), a wykładniczą liczbą kroków ({math}2^n{math end}, {math}3^n{math end}, {math}4^n{math end}, i tak dalej).
@@ -396,7 +396,7 @@ Musiałbyś być bardzo cierpliwy, by prawo Moore'a tutaj pomogło -- musisz by�
 
 Przypominamy, że jeśli chcesz wykonywać obliczenia na wielkich liczbach, możesz użyć kalkulatora:
 
-{interactive name="big-number-calculator" type="whole-page" text="Big Number Calculator"}
+{interactive name="big-number-calculator" type="whole-page" text="Kalkulator dużych liczb"}
 
 {comment}
 
@@ -429,7 +429,7 @@ Firmy kurierskie i dostawcze mają różne warianty tego problemu -- często z d
 
 {panel type="teacher-note" summary="Więcej informacji na temat TSP"}
 
-Istnieje obszerna strona internetowa o aktualnym stanie wiedzy na temat TSP na stronie [http://www.tsp.gatech.edu/](http://www.tsp.gatech.edu/). Obejmuje ona także gry i informacje o bieżącym największym rozwiązanym problemie komiwojażera (którego rozwiązanie zazwyczaj zajmuje miesiące lub lata na bardzo wydajnych komputerach).
+Istnieje obszerna strona internetowa w języku angielskim o aktualnym stanie wiedzy na temat TSP: [http://www.tsp.gatech.edu/](http://www.tsp.gatech.edu/). Obejmuje ona także gry i informacje o bieżącym największym rozwiązanym problemie komiwojażera (którego rozwiązanie zazwyczaj zajmuje miesiące lub lata na bardzo wydajnych komputerach).
 
 {panel end}
 
@@ -465,7 +465,7 @@ Wygeneruj mapę z 7 lub 8 pułapkami, używając opisanej powyżej metody genero
 
 Korzystając z intuicji, znajdź najkrótszą drogę między pułapkami.
 
-Teraz wygeneruj mapę (tą samą metodą co powyżej) z 15-25 pułapkami. *Zrób więcej niż jedną kopię tej mapy, ponieważ będziesz potrzebować jej później.*
+Teraz wygeneruj mapę (tą samą metodą co powyżej) z 15 -- 25 pułapkami. *Zrób więcej niż jedną kopię tej mapy, ponieważ będziesz potrzebować jej później.*
 
 Teraz na tej nowej mapie spróbuj użyć swojej intuicji, aby znaleźć najkrótszą ścieżkę pomiędzy pułapkami. Nie trać więcej niż 5 minut na to zadanie; nie musisz wpisywać rozwiązania w zadaniu domowym. Dlaczego to zadanie było bardzo trudne? Czy możesz mieć pewność, że znalazłeś optymalne rozwiązanie?
 
@@ -532,14 +532,14 @@ O wielu ciekawych problemach nieobliczalnych nie wspomnieliśmy w tym rozdziale,
 
 {panel end}
 
-Istnieją tysiące problemów, takich jak TSP, dla których nie jest znane obliczalne rozwiązanie. W przyszłości dopiszemy tu dodatkowe podrozdziały, aby wprowadzić niektóre z nich, ale w międzyczasie, jeśli jesteś zainteresowany, możesz zbadać niektóre z tych problemów:
+Istnieją tysiące problemów, takich jak TSP, dla których nie jest znane obliczalne rozwiązanie. W przyszłości dopiszemy tu dodatkowe podrozdziały, aby wprowadzić niektóre z nich, ale w międzyczasie, jeśli jesteś zainteresowany, możesz zbadać niektóre z tych problemów (większość materiałów jest w języku angielskim):
 
-- [kolorowanie mapy i grafu](http://csunplugged.org/graph-colouring) (można je zredukować do problemu planowania zajęć i na odwrót, pokazując, w jaki sposób problemy NP-zupełne mogą się ze sobą wiązać),
+- [kolorowanie mapy i grafu](http://jasijoasia.edu.pl/csu2.pdf) w rozdziale 13 zbioru scenariuszy lekcji bez komputera (problem kolorowania grafu można zredukować do problemu planowania zajęć i na odwrót, pokazując, w jaki sposób problemy NP-zupełne mogą się ze sobą wiązać),
 - [problem plecakowy](https://en.wikipedia.org/wiki/Knapsack_problem),
 - [problem pakowania pojemników](https://en.wikipedia.org/wiki/Bin_packing_problem),
 - [ścieżki Hamiltona](https://pl.wikipedia.org/wiki/Graf_hamiltonowski) (warto ten trudny problem skonfrontować z na pozór podobnym, lecz obliczalnym problemem istnienia szlaku Eulera, często przedstawianym jako problem siedmiu mostów),
-- [drzewa Steinera](http://www.csunplugged.org/steiner-trees),
-- [zbiory dominujące](http://www.csunplugged.org/dominating-sets),
+- [drzewa Steinera](http://jasijoasia.edu.pl/csu2.pdf) w rozdziale 15 zbioru scenariuszy,
+- [zbiory dominujące](http://jasijoasia.edu.pl/csu2.pdf) w rozdziale 14 zbioru scenariuszy,
 - [najdłuższa ścieżka](https://en.wikipedia.org/wiki/Longest_path) (Ten temat jest interesujący, ponieważ znalezienie najdłuższej ścieżki jest trudne, ale znalezienie najkrótszej ścieżki jest obliczalne -- najkrótsza ścieżka jest obliczana, gdy urządzenie GPS wyznacza najkrótszą drogę do celu. Problem ścieżki Hamiltonona można łatwo zredukować do problemu najdłuższej ścieżki. Przy okazji można zapoznać się z koncepcją redukcji, pozwalającej jeden problem NP-zupełny użyć do rozwiązania innego). [A oto piosenka na ten temat!](https://www.youtube.com/watch?feature=player_embedded&v=a3ww0gwEszo)
 - [problem gry w okręty](https://en.wikipedia.org/wiki/Battleship_ (puzzle \)).
 
@@ -553,7 +553,7 @@ Istnieją tysiące problemów, takich jak TSP, dla których nie jest znane oblic
 
 Problem obliczalności jest ważny w informatyce -- wiąże się z zagadką powszechnie uważaną za największy nierozwiązany problem w informatyce.
 Może pamiętasz, że wspomnieliśmy, że są tysiące problemów, których obliczalnego rozwiązania nie znamy, choć obliczalne rozwiązanie dowolnego z nich można by dostosować do wszystkich innych.
-Mówiąc bardzo nieformalnie, ta grupa problemów nosi nazwę "NP-zupełnych" (jeśli naprawdę cię to ciekawi, NP oznacza non-deterministic polynomial, a zupełność dotyczy tego, że wszystkie można przekształcić w siebie nawzajem!).
+Mówiąc bardzo nieformalnie, ta grupa problemów nosi nazwę ,,NP-zupełnych'' (jeśli naprawdę cię to ciekawi, NP oznacza non-deterministic polynomial, a zupełność dotyczy tego, że wszystkie można przekształcić w siebie nawzajem!).
 Najważniejszym pytaniem jest to, czy istnieje algorytm wielomianowy rozwiązujący dowolny z nich, bo w takim wypadku wszystkie problemy z klasy NP miałyby rozwiązanie o czasie wielomianowym (czyli w klasie P).
 Pytanie to jest często jest formułowane jako: Czy P równa się NP?
 
@@ -589,7 +589,7 @@ To także fascynująca dziedzina badań, gdzie można dokonać odkryć, które m
 
 ## Dalsza lektura
 
-Temat złożoności obliczeniowej jest bardzo dokładnie omawiany w sposób przystępny dla osób nie będących specjalistami, w popularnej książce Davida Harela pod tytułem "Computers Ltd.: What They Really Can't Do".
+Temat złożoności obliczeniowej jest bardzo dokładnie omawiany w sposób przystępny dla osób nie będących specjalistami, w popularnej książce Davida Harela pod tytułem ,,Komputery -- spółka z o.o. Czego komputery naprawdę nie umieją robić''.
 
 ### Ciekawe odnośniki
 
@@ -601,3 +601,5 @@ Temat złożoności obliczeniowej jest bardzo dokładnie omawiany w sposób przy
 - [https://en.wikipedia.org/wiki/Bin_packing_problem](https://en.wikipedia.org/wiki/Bin_packing_problem)
 - [https://pl.wikipedia.org/wiki/Graf_hamiltonowski](https://pl.wikipedia.org/wiki/Graf_hamiltonowski)
 - [https://en.wikipedia.org/wiki/Brute-force_search](https://en.wikipedia.org/wiki/Brute-force_search)
+- [drzewa Steinera](http://www.csunplugged.org/steiner-trees)
+- [zbiory dominujące](http://www.csunplugged.org/dominating-sets)
