@@ -79,13 +79,13 @@ Ten kod znajduje wyrażenia zawierające x, y oraz z (w tej kolejności), oddzie
 
 Aby znaleźć słowa ze wszystkimi samogłoskami w kolejności alfabetycznej, należy użyć kodu „a.\*e.\*i.\*o.\*u”; jest 47 dopasowań.
 
-Uczniowie mogą zapytać, jak wykonać bardziej skomplikowane wyszukiwania, takie jak litery w dowolnej kolejności. Jeśli są zainteresowani, mogą to zbadać samodzielnie, ale to tylko ćwiczenie rozgrzewkowe. Omówimy to dokładniej w podrozdziale na temat [wyrażeń regularnych](rozdzialy/jezyki-formalne.html#wyrażenia-regularne).
+Uczniowie mogą zapytać, jak wykonać bardziej skomplikowane wyszukiwania, takie jak litery w dowolnej kolejności. Jeśli są zainteresowani, mogą to zbadać samodzielnie, ale to tylko ćwiczenie rozgrzewkowe. Omówimy to dokładniej w podrozdziale na temat [wyrażeń regularnych](chapters/jezyki-formalne.html#wyraenia-regularne).
 
 {panel end}
 
 Kod, którego użyłeś powyżej, jest częścią języka formalnego zwanego „wyrażeniem regularnym”. Programy komputerowe, które mają za zadanie interpretowanie wpisanych danych wejściowych i ich akceptację, używają wyrażeń regularnych do sprawdzania elementów takich jak daty, numery kart kredytowych i kody produktów. Są szeroko używane przez kompilatory i interpretery języków programowania, aby zrozumieć tekst, który programista wpisuje.
 
-Przyjrzymy się im bardziej szczegółowo w podrozdziale na temat [wyrażeń regularnych](rozdzialy/jezyki-formalne.html#wyrażenia-regularne).
+Przyjrzymy się im bardziej szczegółowo w podrozdziale na temat [wyrażeń regularnych](chapters/jezyki-formalne.html#wyraenia-regularne).
 
 Następnie zbadamy prosty system do odczytu danych wejściowych, o nazwie
 {glossary-link term="automat skończenie stanowy"}automat skończenie stanowy{glossary-link end},
@@ -730,7 +730,7 @@ Dalsza dyskusja może dotyczyć tego, czy niektóre opisynie były zbyt długie 
 
 Już posmakowaliśmy
 {glossary-link term="wyrażenie regularne" reference-text="Języki formalne"}wyrażeń regularnych{glossary-link end}
-w podrozdziale [wprowadzającym](rozdzialy/jezyki-formalne.html#zaczynamy). Są one po prostu prostym sposobem wyszukiwania rzeczy w danych wejściowych lub określenia, jaki rodzaj danych wejściowych zostanie zaakceptowany jako poprawny.
+w podrozdziale [wprowadzającym](chapters/jezyki-formalne.html#zaczynamy). Są one po prostu prostym sposobem wyszukiwania rzeczy w danych wejściowych lub określenia, jaki rodzaj danych wejściowych zostanie zaakceptowany jako poprawny.
 Na przykład wiele programów do obsługi skryptów internetowych używa ich do sprawdzania danych wejściowych dla wzorców, takich jak daty, adresy email i adresy URL. Stały się tak popularne, że są teraz wbudowane w większość języków programowania.
 
 Być może podejrzewasz, że wyrażeniania regularne związane są z 
@@ -884,7 +884,7 @@ Szczególna forma wyrażen regularnych, których używaliśmy, została zaczerpn
 {comment end}
 
 Wyrażenia regularne mają swoje ograniczenia — na przykład, nie będziesz w stanie stworzyć takiego, który wyszukuje palindromom (słowa i frazy, które są takie same czytane zarówno od przodu jak i od tyłu, takie jak „kajak”, „oko” i „atak kata”). Nie można użyć jednego wyrażenia do wykrycia łańcuchów składających się z *n* powtórzeń litery „a”, po których następuje *n* powtórzeń litery „b”.
-Do tego typu wzorców potrzebny jest mocniejszy system, zwany gramatyką (zobacz [rozdział o gramatyce]((rozdzialy/jezyki-formalne.html#gramatyki-i-parsowanie)).
+Do tego typu wzorców potrzebny jest mocniejszy system, zwany gramatyką (zobacz [rozdział o gramatyce](chapters/jezyki-formalne.html#gramatyki-i-parsowanie)).
 Niemniej jednak wyrażenia regularne są bardzo przydatne w w typowym wyszukiwaniu wzorców.
 
 {comment}
@@ -1275,7 +1275,7 @@ Ten rozdział jest tylko zarysem tego, co można robić, wykorzystując języki 
 Języki formalne pojawiają się w różnych dziedzinach informatyki i są bardzo przydatnymi narzędziami dla naukowców zajmujących się komputerami. Redukują one niewiarygodnie złożone systemy do małego opisu i odwrotnie, pozwalają stworzyć bardzo złożone systemy z kilku prostych zasad.
 Są one niezbędne do pisania kompilatorów, a więc są aktywowane za każdym razem, gdy ktoś pisze program! Są one również związane z teorią automatów i teorią obliczalności, są też w pewnym stopniu wykorzystywane w komputerowym przetwarzaniu języka naturalnego.
 
-W podrozdziale [Wyrażenia regularne i automaty skończenie stanowe](rozdzialy/jezyki-formalne.html#wyrażenia-regularne-i-automaty-skońćzenie-stanowe) korzystaliśmy z FSA, które tak naprawdę są *deterministycznymi automatami skończonymi* (DFA), ponieważ decyzja o tym, którego przejścia należy dokonać, jest jednoznaczna na każdym etapie.
+W podrozdziale [Wyrażenia regularne i automaty skończenie stanowe](chapters/jezyki-formalne.html#wyraenia-regularne-i-automaty-skoczenie-stanowe) korzystaliśmy z FSA, które tak naprawdę są *deterministycznymi automatami skończonymi* (DFA), ponieważ decyzja o tym, którego przejścia należy dokonać, jest jednoznaczna na każdym etapie.
 
 Zdarza się także, że okresla się takie FSA jako *skończony akceptor stanowy*, ponieważ akceptuje i odrzuca dane wejściowe w zależności od tego, czy osiąga stan końcowy.
 Istnieją różne warianty automatów, o których nie wspominaliśmy, w tym maszyny Mealy'ego i Moore'a (które generują dane wyjściowe dla każdego dokonanego przejścia lub osiągniętego stanu), zagnieżdżona maszyna stanów (gdzie każdy stan może być FSA samym w sobie), niedeterministyczne automaty skończone (które mogą mieć tę samą etykietę na więcej niż jednym przejściu poza stan) i lambda-NFA (które mogą zawierać przejścia na pustym ciągu, {math}\lambda{math end}).
