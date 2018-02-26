@@ -311,7 +311,7 @@ Istnieje jednak sposób, aby wykorzystać stopniowo zmieniające się kolory. W 
 na przykład, jeśli sekwencja 5 liczb zaczyna się 3 i kończy 11, możemy wyznaczyć interpolację trzech pośrednich wartości jako: 5, 7, 9."}
 
 Proces zgadywania kolorów pikseli między dwoma, które są znane, jest przykładem
-{glossary-link term="interpolation" reference-text="kompresowanie obrazów"}interpolacji{glossary-link end}.
+{glossary-link term="interpolacja" reference-text="kompresowanie obrazów"}interpolacji{glossary-link end}.
 Interpolacja *liniowa* zakłada, że wartości rosną o stałą wielkość pomiędzy dwiema podanymi wartościami. Na przykład, dla pięciu powyższych pikseli załóżmy, że pierwszy piksel ma wartość koloru niebieskiego równą 124, a ostatni ma niebieską wartość 136. W takim przypadku  interpolacja liniowa domyślałaby się, że niebieskie wartości dla tych pośrednich wynoszą 127, 130 i 133, a dzięki temu nie trzeba ich zapisywać i można zaoszczędzić miejsce.
 W praktyce stosuje się bardziej złożone podejście do odgadywania pikseli, ale interpolacja liniowa daje dobre wyobrażenie o tym, jak to działa.
 {panel end}
