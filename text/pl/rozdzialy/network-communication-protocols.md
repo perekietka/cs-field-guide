@@ -37,7 +37,7 @@ HTTP działa jak prosta rozmowa między klientem a serwerem. Wyobraź sobie, że
 > Ty: ,,Czy mogę prosić o napój gazowany?'' 
 > Sprzedawca: ,,Jasne, oto puszka napoju.''
 
-{image filename="ask-for-a-soda-cartoon.png" alt="Prośba o napój gazowany"}
+{image filename="asking-for-a-soda-cartoon.png" alt="Prośba o napój gazowany"}
 
 HTTP używa wzorca zapytania -- odpowiedzi w celu zapewnienia niezawodnej komunikacji między klientem a serwerem. ,,Zapytaj o'' to *zapytanie*, a odpowiedź serwera to po prostu *odpowiedź*. Zarówno zapytania, jak i odpowiedzi mogą również zawierać inne dane lub *zasoby*.
 
