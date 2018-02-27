@@ -298,7 +298,7 @@ Ponieważ cyfra kontrolna została wybrana tak, aby ostatnia cyfra sumowała si�
 
 Aby być skutecznym, algorytm musi zapewnić, że pomnożone cyfry nie zsumują się do wielokrotności 10, gdyby zostały tylko nieznacznie zmienione. Wybór mnożników wpływa na prawdopodobieństwo wykrycia niewielkich zmian w danych wejściowych. Możliwe jest matematyczne przeanalizowanie tego, jakie rodzaje błędów da się wykryć.
 
-Cyfra kontrolna kodów kreskowych jest opisana w [rozdziale o korekcji błędów](chapters/code-error-control.html). Zasadniczo co druga cyfra jest mnożona przez 3, a suma tych wielokrotności jest dodawana do pozostałych cyfr.
+Cyfra kontrolna kodów kreskowych jest opisana w [rozdziale o korekcji błędów](chapters/coding-error-control.html). Zasadniczo co druga cyfra jest mnożona przez 3, a suma tych wielokrotności jest dodawana do pozostałych cyfr.
 
 Spójrzmy na kilka mniejszych przykładów z 5 cyframi (4 cyfry normalne i cyfra kontrolna), ponieważ te same pomysły będą miały zastosowanie do 13 cyfr.
 
