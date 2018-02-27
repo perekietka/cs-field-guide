@@ -1143,7 +1143,7 @@ Więcej informacji znajdziesz w rozdziale poświęconym kompresji danych!
 ## Zapis binarny instrukcji w komputrze
 
 {panel type="caution" expanded="True"}
-Lekturę tego podrozdziału warto poprzedzić zapoznaniem się opisem języków programowania niskiego poziomu w rozdziale [„Języki programowania”](chapters/programming-languages.html#machine-code-low-level-languages).
+Lekturę tego podrozdziału warto poprzedzić zapoznaniem się opisem języków programowania niskiego poziomu w rozdziale [„Języki programowania”](chapters/programming-languages.html#kod-maszynowy-jzyki-niskiego-poziomu).
 {panel end}
 
 W pamięci komputera zapisuje się binarnie również ciąg instrukcji tworzących program komputerowy.
