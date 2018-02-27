@@ -50,7 +50,7 @@ Kartę w prawym dolnym rogu można wybrać na podstawie jej wiersza lub kolumny;
 
 Kiedy uznasz, że wszystko jest dobrze, powinieneś powiedzieć komputerowi, aby odwrócił kartę. Przez kilka sekund będzie pokazywana animacja, a następnie karty pojawią się ponownie, z jedną odwróconą kartą (cała reszta będzie taka sama jak poprzednio). Twoim zadaniem jest zidentyfikowanie odwróconej karty. Powinieneś być w stanie to zrobić *bez* zapamiętania układu kart. Pamiętasz wzorzec, według którego dodawałeś dodatkowe karty? To on jest kluczem. Gdy uznasz, że zidentyfikowałeś kartę, kliknij ją, aby sprawdzić, czy masz rację. Program interaktywny poprowadzi cię krok po kroku. Jeśli całkowicie utknąłeś podczas identyfikacji odwróconej karty, w programie interaktywnym pojawi się podpowiedź, chociaż powinieneś najpierw spróbować ją znaleźć sam. Upewnij się, że dodajesz dodatkowe karty poprawnie; komputer nie powie ci, jeśli źle je ustawisz i prawdopodobnie nie będziesz w stanie zidentyfikować odwróconej karty, jeśli dodatkowe karty nie zostaną ustawione poprawnie.
 
-{interactive name="parity" type="cała strona" text="Program interaktywny sztuczki z parzystością"}
+{interactive name="parity" type="whole-page" text="Program interaktywny sztuczki z parzystością"}
 
 Pamiętasz, jak ustawiałeś karty tak, aby każda kolumna miała parzystą liczbę czarnych kart? Kiedy karta zostaje odwrócona, powoduje to, że w wierszu i kolumnie znajduje się nieparzysta liczba czarnych kart. Wszystko, co musisz zrobić, to zidentyfikować rząd i kolumnę, które mają nieparzystą liczbę czarnych kart, a wtedy karta, która znajduje się na ich przecięciu, musi być tą, która została odwrócona!
 
