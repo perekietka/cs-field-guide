@@ -91,7 +91,7 @@ Można więc powiedzieć, że liczba operacji jest proporcjonalna do *n*.
 Nie wszystkie algorytmy mają tę własność; niektóre algorytmy są o wiele bardziej kosztowne, a niektóre mniej;
 Warto, aby programista potrafił określić szybkość algorytmu, zanim zdecyduje się nim posłużyć np. w kodzie oprogramowania internetowego, z którego będzie korzystać wielu użytkowników jednocześnie. Gra komputerowa, którą programista stworzył, może okazać się bardzo popularna, więc algorytm znajdowania najlepszego wyniku musi być wystarczająco szybki.
 
-{panel type="extra-for-experts" "Złożoność obliczeniowa algorytmów"}
+{panel type="extra-for-experts" summary="Złożoność obliczeniowa algorytmów"}
 Szacowanie kosztów algorytmu znane jest w informatyce pod nazwa [analiza algorytmu](https://en.wikipedia.org/wiki/Analysis_of_algorithms). Taka analiza powinna prowadzić do wyznaczenia *złożoności obliczeniowej* algorytmu (dotyczącej czasu działania komputerowej realizacji algorytmu), ale czasami dodatkowo i *złożoności pamięciowej* algorytmu (dotyczącej wymagań co do pamięci potrzebnej do działania).
 
 Więcej informacji na temat określania kosztu algorytmu, m.in. o notacji „duże Θ”, znajduje się w podrozdziale [„Podsumowanie”](chapters/algorithms.html#the-whole-story) .
