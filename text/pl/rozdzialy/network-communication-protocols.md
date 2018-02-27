@@ -316,7 +316,7 @@ Jak działa Internet w 5 minut
 
 ### Dodatkowe zajęcia
 
-- [Informatyka bez komputera -- czemu pakiety się spóźniają?](/routing-and-deadlock)
+- [Informatyka bez komputera -- czemu pakiety się spóźniają?](https://classic.csunplugged.org/routing-and-deadlock/)
 - [Ślimacza poczta](http://www.cs4fn.org/internet/realsnailmail.php) (ang.)
 - [Code.org  -- Internet](https://studio.code.org/s/course3/stage/18/puzzle/1) (ang.)
 
