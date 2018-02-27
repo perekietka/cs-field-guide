@@ -22,7 +22,7 @@ Człowiek zrozumie instrukcję wypowiedzianą w języku naturalnym, np. „Prosz
 
 Oto prosty przykład: Chcesz znaleźć największą liczbę w tabeli, która nie jest uporządkowana. Rozwiązaniem jest sprawdzenie liczb jedna po drugiej i zapamiętywanie w każdym kroku największej znalezionej do tej pory. Co to jednak miałoby znaczyć konkretnie dla komputera? Taki zwięzły opis metody będzie być może zrozumiały dla człowieka, ale bezużyteczny dla maszyny.
 
-{glossary-definition term="Algorithm" definition="A step by step process that describes how to solve a problem and/or complete a task, which will always give a result."}
+{glossary-definition term="Algorytm" definition="Opis krok po kroku jak rozwiązać problem lub osiągnąć cel."}
 
 Algorytm to opis kolejnych kroków potrzebnych do poprawnego rozwiązania problemu (zadania).
 
@@ -79,7 +79,7 @@ Oba programy realizują ten sam algorytm.
 
 W tym rozdziale, w dalszej części, zajmiemy się tematem algorytmów bardziej szczegółowo. Koncepcja algorytmu jest fundamentalną koncepcją informatyki. Interesować będą nas algorymy same w sobie, a nie ich konkretne komputerowe realizacje.
 
-{glossary-link term="Algorithm" reference-text="algorithm cost"}{glossary-link end}
+{glossary-link term="algorytm" reference-text="Koszt algorytmu"}{glossary-link end}
 
 ### Koszt algorytmu
 
@@ -108,7 +108,7 @@ W tym rozdziale przyjrzymy się dokładniej dwu najważniejszym typom algorytmó
 
 Na przykładach tych typów algorytmów można w ciekawy sposób przedstawić kluczowe koncepcje projektowania i analizy algorytmów.
 
-{glossary-link term="Algorithm" reference-text="searching algorithms"}{glossary-link end}
+{glossary-link term="algorytm" reference-text="algorytmy przeszukiwania"}{glossary-link end}
 
 ## Przeszukiwanie
 
@@ -154,7 +154,7 @@ W filmie na początku rozdziału pojawił się zabawny przykład przeszukiwania,
 
 ### Przeszukiwanie binarne
 
-{glossary-definition term="przeszukiwanie binarne" definition="Searching a sorted list by looking at the middle item, and then searching the appropriate half recursively (used for phone books, dictionaries and computer algorithms)."}
+{glossary-definition term="Przeszukiwanie binarne" definition="Przeszukiwanie posortowanej listy metodą: spójrz na element środkowy, a potem rekurencyjnie przeszukaj odpowiednią połowę listy (używane do szykania w książkach telefonicznych, słownikach i algorytmach)."}
 
 W drugiej z gier pudełka były uporządkowane, co umożliwiło podejmowanie kolejnych prób w sposób przemyślany. Być może nieświadomie ktoś stosował algorytm zwany w informatyce przeszukiwaniem binarnym (dwudzielnym).
 
@@ -193,7 +193,7 @@ Twoje zadanie polega na wykonaniu pomiarów czasu działania programów dla cora
 - [Python (Version 3)](files/linear-binary-search-python3.py) - [Download Python 3 here](https://www.python.org/downloads/)
 {panel end}
 
-{glossary-link term="Algorithm" reference-text="sorting algorithms"}{glossary-link end}
+{glossary-link term="algorytm" reference-text="algorytmy sortowania"}{glossary-link end}
 
 ## Porządkowanie
 
@@ -280,7 +280,7 @@ Ten algorytm można tak opisać listą kroków:
 - Wybierz losowo element spośród pozostałych na liście. Umieść go na drugiej liście we właściwym miejscu.
 - Powtarzaj krok drugi, aż wszystkie elementy znajdą się na drugiej liście. Ta lista będzie uporządkowana.
 
-{glossary-definition term="Quicksort" definition="A process for achieving an outcome, normally for a general problem such as searching, sorting, finding an optimal path through a map and so on."}
+{glossary-definition term="Quicksort" definition="Szybkie sortowanie. Używane w algorytmach przeszukiwania, sortowania, szukania optymalnej drogi na mapie i innych."}
 
 ### Porządkowanie szybkie (Quicksort)
 
@@ -288,7 +288,7 @@ W przypadku dużych zbiorów danych algorytmy porządkowania przedstawione wcze�
 
 O wiele lepszym algorytmem porządkowania jest metoda zwana po angielsku {glossary-link term="quicksort"}Quicksort{glossary-link end} 
 
-{interactive name="sorting-algorithms" type="whole-page" text="Quicksort interactive" parameters="method=quick" thumbnail="thumbnail-quick.png"}
+{interactive name="sorting-algorithms" type="whole-page" text="Quicksort" parameters="method=quick" thumbnail="thumbnail-quick.png"}
 
 Ten algorytm jest trochę bardziej skomplikowany, ale bardzo efektowny. Przekonaj się o tym, wykonując eksperyment z wykorzystaniem wirtualnej lub prawdziwej wagi szalkowej. Wybierz pudełko losowo i umieść je na jednej z szalek wagi. Następnie porównaj je z każdym z pozostałych pudełek; cięższe powinny być odkładane po prawej stronie, a lżejsze po lewej. Na końcu tego etapu wybrane początku pudełko umieść pomiędzy dwa zbiory lżejszych i cięższych, w rzędzie poniżej. Ile było porównań? Zauważ, że to pudełko jest już na właściwym miejscu docelowego zbioru uporządkowanego.
 
