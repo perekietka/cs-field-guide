@@ -26,7 +26,7 @@ Oto rada pochodząca od Freda Wilsona, który zainwestował wiele w firmy z bran
 
 > Po pierwsze i najważniejsze, wierzymy, że szybkość to coś więcej niż zwykła cecha. Szybkość jest najważniejszą cechą. Jeśli twoje oprogramowanie działa powoli, ludzie nie będą go używać. Dotyczy to zwłaszcza zwykłych użytkowników. Myślę, że użytkownicy, którzy korzystają z zaawansowanych funkcji danego oprogramowania, są czasami bardziej wyrozumiali, ale według mnie typowy użytkownik jest jak moja żona i dzieci: jeśli coś działa powoli, to oni po prostu odchodzą&hellip;. Szybkość to coś więcej niż cecha. To jest niezbędne wymaganie.
 
-> -- [Fred Wilson](https://en.wikipedia.org/wiki/Fred_Wilson_(financier\)) ([Source](http://triple-networks.com/2011/12/06/10-golden-principles-of-successful-web-apps/))
+> -- [Fred Wilson](https://en.wikipedia.org/wiki/Fred_Wilson_(financier\)) ([artykuł źródłowy](http://triple-networks.com/2011/12/06/10-golden-principles-of-successful-web-apps/))
 
 Kluczowym wyzwaniem w informatyce jest stworzyć oprogramowanie działające szybko! Zwłaszcza jeśli ma działać na urządzeniach (np. smartfonach) starszej generacji lub ma być uruchamiane w jakimś centrum obliczeniowym, gdzie użytkownik ma płacić za każdą minutę czasu dostępu do komputerów. 
 Nie można powiedzieć klientom, by kupili szybsze urządzenia -- trzeba dostarczyć efektywne oprogramowanie.
@@ -80,18 +80,19 @@ Przewodnik jest udostępniany za darmo. Dostęp do wersji źródłowej materiał
 
 Zasady licencji *Creative Commons Attribution-NonCommercial-ShareAlike licence* pozwalają na wprowadzanie zmian i udoskonaleń. W takim przypadku prosimy o zachowanie informacji o lokalizacji oryginalnej wersji przewodnika. Zmodyfikowana wersja musi pozostać dostępna za darmo.
 
-Oryginalna, angielska wersja przewodnika znajduje się na http://www.csfieldguide.org.nz/". Polska wersja powstała w ramach projektu CS4HS firmy Google, przy wsparciu Uniwersytetu im. Adama Mickiewicza w Poznaniu.
+Oryginalna, angielska wersja przewodnika znajduje się na http://www.csfieldguide.org.nz/. Polska wersja powstała w ramach projektu CS4HS firmy Google, przy wsparciu Uniwersytetu im. Adama Mickiewicza w Poznaniu.
 
 Niektóre fragmenty w wersji polskiej różnią się od oryginału, aby były bardziej zrozumiałe dla polskiego czytelnika. Przewodnik zawiera wiele odnośników do źródeł w języku angielskim (dla czytelników pragnących poszerzyć wiedzę), zatem znajomość języka angielskiego będzie przydatna. Jednak nie jest ona konieczna i nawet bez znajomości angielskiego czytelnik może bez przeszkód z przewodnika korzystać.
 
-## Dalsze lektury
+## Dalsza lektura
 Każdy rozdział kończy się propozycjami lektur, które pozwolą na pogłębienie wiedzy. Często są to odnośniki do stron internetowych.
 Jest wiele książek o szerokiej tematyce informatycznej, napisanych z myślą o ukazaniu w miarę pełnego obrazu tej dziedziny. Autorzy przewodnika polecają szczególnie:
 
-- Dawid Harel, *Algorithmics. The spirit of computing* (tłumaczenie polskie: *Algorytmika. Rzecz o istocie informatyki*)
+- Dawid Harel,  „Algorithmics. The spirit of computing” (tłumaczenie polskie: „Algorytmika. Rzecz o istocie informatyki”)
+- Jerzy Mieścicki,  „Wstęp do informatyki nie tylko dla informatyków”
 - Jeremy Kubica, [Computational fairy tales](http://computationaltales.blogspot.co.nz) 
-- Jurag Hromkovic, *Algorithmic adventures: from knowledge to magic* 
-- A. K. Dewdney, *The Turing Omnibus*
+- Jurag Hromkovic, „Algorithmic adventures: from knowledge to magic” 
+- A. K. Dewdney, „The Turing Omnibus”
 
 Godne uwagi są też artykuły Wikipedii oraz wiele innych stron internetowych. Wśród tych w języku angielsku polecamy szczególnie:
 
