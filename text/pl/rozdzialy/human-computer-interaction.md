@@ -2,7 +2,7 @@
 
 ## Z lotu ptaka
 
-{panel type="teacher-note" summary="Zakres interfejsów użytkownika"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Zakres interfejsów użytkownika"}
 Materiał w tym rozdziale odnosi się do „urządzeń cyfrowych”. Chociaż zdecydowanie odnosi się to do konwencjonalnych komputerów, ma również zastosowanie do wszelkiego rodzaju innych gadżetów, takich jak budziki, klimatyzatory, kuchenki mikrofalowe, stopery, instrumenty elektroniczne, punkty kasowe, parkometry i alarmy przeciwwłamaniowe. W rzeczywistości większość ćwiczeń dla większości będzie o wiele łatwiejsza do wykonania na urządzeniu z zaledwie kilkoma funkcjami, ponieważ umożliwia to łatwiejsze zbadanie i ocenienie takich urządzeń. Ocena systemu Microsoft Windows lub urządzenia iPad jest zbyt trudna, ponieważ każdy z podsystemów zasługiwałby na osobną analizę (jak działa menu, jak znaleźć pliki, jak otworzyć program, może nawet jak go włączyć!)
 {panel end}
 
@@ -37,14 +37,14 @@ Jedyną sytuacją, w której może być to pożądane, jest celowe uczynienie gr
 Wyobraź sobie, że masz formularz internetowy, w którym przyciski „wyczyść” i „prześlij” często zmieniają się miejscami.
 Użytkownicy często czyściliby formularz, gdy zamierzaliby go przesłać, lub przesyłaliby formularz, gdyby chcieli go wyczyścić!
 
-{panel type="teacher-note" summary="Dokładność vs szybkość w powyższej interakcji"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Dokładność vs szybkość w powyższej interakcji"}
 Interaktywne narzędzie zmieniające parzysty / nieparzysty może nie oszukać wszystkich uczniów, ale dla niektórych będzie bardzo frustrujące. Jeśli zdecydują się użyć go powoli i ostrożnie, mogą uzyskać poprawnie wybory parzysty / nieparzysty. Jednocześnie uzyskają także niższe wyniki (tj. niższą produktywność, jeśli byłby to prawdziwy interfejs).
 {panel end}
 
 Badanie interakcji człowieka z komputerem wiąże się z wykorzystaniem wielu mechanizmów psychologicznych, ponieważ ma to wpływ na sposób korzystania z systemu. Prosty przykład: ludzka pamięć krótkotrwała przechowuje informacje tylko kilka sekund (nawet u młodych ludzi!).
 Jeśli urządzenie odpowiada po więcej niż około 10 sekundach, użytkownik musi podjąć wysiłek, aby pamiętać, co robił. To jest dodatkowa praca dla użytkownika (co z jego punktu widzenia powoduje, że system jest bardziej męczący w użyciu). Innym przykładem jest to, że ludzie nabierają nawyków — po pewnym czasie zaczynają robić coś automatycznie: jeśli zaczniesz jeździć na rowerze po trasie, którą pokonujesz każdego dnia, wkrótce osiągniesz cel bez myślenia o każdym zakręcie po drodze. Jest to normalne, chyba że masz wstąpić gdzieś po drodze lub jeśli niedawno przeprowadziłeś się do nowego domu, lub zmieniłeś miejsce pracy. Podobny efekt występuje w dialogowych okienkach potwierdzających; może często przypadkowo zamykasz plik bez zapisywania go, a system pyta się „Czy chcesz to zapisać?”, więc naciskasz „Tak”. Po wykonaniu tej czynności kilka razy zaczniesz ją wykonywać bez zastanowienia. Może się wtedy zdarzyć, że np. gdy nie chcesz zastąpić starego pliku, możesz przypadkowo kliknąć „Tak”.
 
-{panel type="curiosity" summary="Błędy nawyku"}
+{panel type="curiosity" title="Dla ciekawych" summary="Błędy nawyku"}
 Przyzwyczajenie się do standardowej trasy lub procedury, a co za tym idzie zapominanie czegoś innego, co trzeba było zrobić tego dnia, nazywa się *błędem nawyku* (ang. capture error).
 Na ogół nawyk jest dobrą rzeczą, ponieważ oszczędza ci ciężaru myślenia o codziennych czynnościach (co mogłoby być jeszcze bardziej męczące),
 ale może również skłonić cię do zrobienia czegoś, czego nie zamierzałeś.
@@ -75,7 +75,7 @@ Zastanów się, jakie kwestie należy rozważyć w przypadku następujących gru
 - zwykli użytkownicy
 - obcokrajowcy
 
-{panel type="spoiler" summary="Niektóre z możliwych odpowiedzi: Nie otwieraj, dopóki nie pomyślałeś o tym!"}
+{panel type="spoiler" title="Spojler" summary="Niektóre z możliwych odpowiedzi: Nie otwieraj, dopóki nie pomyślałeś o tym!"}
 - Seniorzy: wola dużą czcionkę, oprogramowanie powinno mieć tylko kilka funkcji i nie powinno wymagać pamiętania wielu rzeczy; przydadzą się ułatwienia w związku z gorszym wzrokiem i sprawnością ruchową użytkownika (np. duże przyciski pomocy), nie należy zakładać wcześniejszych doświadczeń z komputerami.
 - Gracze: mają wcześniejsze doświadczenia z typowymi interfejsami gier, są wymagajacy, prawdopodobnie mają urządzenia z najwyższej półki.
 - Zwykli użytkownicy: potrzebują interfejsu łatwego w obsłudze, być może opartego na powszechnie używanych systemach, wymagają jasnych wskazówek.
@@ -88,7 +88,7 @@ Kolejną ważną rzeczą podczas projektowania i oceniania interfejsu jest zasta
 
 Podczas oceny interfejsu ważne jest przemyślenie wszystkich części zadania, jako że jest ogromna różnica między używaniem interfejsu w rzeczywistej sytuacji w porównaniu z demonstrowanem niektórych funkcji urządzenia.
 
-{panel type="challenge" summary="Myślenie o kontekście zadań"}
+{panel type="challenge" title="Wyzwanie" summary="Myślenie o kontekście zadań"}
 Bardzo ważne jest, aby myśleć o całym kontekście podczas opisywania zadania. Jako ćwiczenie możesz podać szczegółowy opis wszystkich czynności, jakie człowiek musi wykonać (uwzględniając kontekst, czyli sytuację, w jakiej osoba się znajduje), aby wykonać takie zadania::
 
 - ustawienie budzika,
@@ -97,7 +97,7 @@ Bardzo ważne jest, aby myśleć o całym kontekście podczas opisywania zadania
 Przedyskutuj swoje odpowiedzi z kolegą z klasy lub znajomym. To powinno pomóc ci w ocenieniu twojej odpowiedzi i rozważeniu innych możliwych przykładów.
 {panel end}
 
-{panel type="teacher-note" summary="Możliwe odpowiedzi na powyższe wyzwania"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Możliwe odpowiedzi na powyższe wyzwania"}
 Celem edukacyjnym dla uczniów jest dostrzeżenie ogromnej przepaści między naiwnym widokiem „budzika” jako wystarczającym opisem zadania, a konkretnym scenariuszem, który nadaje temu zadaniu więcej sensu. Być może szczegółowe rozpracowanie zadania będzie wymagało trochę wysiłku; jeśli wcześniej uczniowie podobne zadanie robili, mogli już zapomnieć, jakie mieli trudności, a jeśli zadania nigdy nie robili, mogą uznać, że jest oczywiste. Możesz podsunąć im takie pomysły: 
 
 - Ustaw budzik: zadanie jest często wykonywane późno w nocy, a jeśli popełnisz błąd, użytkownik może przegapić ważne spotkanie lub samolot rano, więc zadanie jest bardzo ważne. W zależności od zegara (może to być na smartfonie lub fizyczny zegar), użytkownik musi ustawić czas alarmu (w tym prawidłowe ustawienie oznaczenia am/pm w przypadku zegarów dwunastogodzinowych), włączyć dźwięk alarmu (być może upewniając się, że urządzenie nie jest wyciszone) i upewnić się, że bateria nie wyczerpie się do rana. Wszystko to dzieje się, podczas gdy użytkownik jest zmęczony, a błąd może być kosztowny!
@@ -106,7 +106,7 @@ Celem edukacyjnym dla uczniów jest dostrzeżenie ogromnej przepaści między na
 Projektor zwykle wymaga czasu, aby się rozgrzać, i może być trudno określić, co dzieje się w tym czasie.
 {panel end}
 
-{panel type="curiosity" summary="Głupi użytkownicy czy głupie interfejsy?"}
+{panel type="curiosity" title="Ciekawostka" summary="Głupi użytkownicy czy głupie interfejsy?"}
 Systemy komputerowe często sprawiają, że ludzie czują się głupimi — w rzeczywistości dostępnych jest wiele książek „dla głupich”, takich jak „iPad dla głupich” (ang. „iPad for dummies”) lub „Przewodnik dla kompletnych idiotów po Microsoft Windows 8” (ang. „The Complete Idiot's Guide to Microsoft Windows 8”).
 Te książki sprzedają się w milionach egzemplarzy, ale są szanse, że ludzie, którzy je kupują, są całkiem inteligentni — po prostu interfejsy mogą sprawiać, że ludzie są tak sfrustrowani, że czują się jak głupki.
 Prawda jest taka, że ​jeśli interfejs powoduje, że ​​wielu ludzi czuje się jak idiota, istnieje poważny problem z interfejsem, a nie użytkownikiem.
@@ -116,7 +116,7 @@ Jeśli słyszysz ludzi używających obraźliwych terminów, takich jak użyszko
 
 {panel end}
 
-{panel type="project" summary="Wysyłanie emaila z wielu urządzeń"}
+{panel type="project" title="Projekt" summary="Wysyłanie emaila z wielu urządzeń"}
 W tym projekcie spróbuj wysłać wiadomość email z komputera oraz telefonu komórkowego. Zapamiętaj wszystkie kroki, które musiałeś wykonać, od momentu rozpoczęcia korzystania z urządzenia do wysłania wiadomości email.
 
 Prawdopodobnie zauważysz sporo różnic między tymi dwoma interfejsami.
@@ -124,7 +124,7 @@ Prawdopodobnie zauważysz sporo różnic między tymi dwoma interfejsami.
 Zachowaj swoje notatki na później, ponieważ możesz je dalej analizować po przeczytaniu dalszej części tego rozdziału.
 {panel end}
 
-{panel type="project" summary="Projektowanie płyt kuchennych i klamek do drzwi"}
+{panel type="project" title="Projekt" summary="Projektowanie płyt kuchennych i klamek do drzwi"}
 {image filename="poor-door-design-cartoon.jpg" alt="Konflikt użytkownika otwierającego drzwi." position="right"}
 
 W przypadku tego projektu zaprojektujesz górną część kuchenki lub uchwyty na drzwiach.
@@ -136,7 +136,7 @@ Zadanie to jest szczegółowo opisane w rozdziale 19 *Projektowanie interfejsu* 
 
 ## Użyteczność interfejsu
 
-{panel type="teacher-note" summary="Niektóre z kluczowych celów edukacyjnych tego rozdziału"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Niektóre z kluczowych celów edukacyjnych tego rozdziału"}
 Kluczowe idee, które powinni wyłowić uczniowie, obejmują:
 
 - „System”, który musi działać dobrze, to komputer i człowiek *razem*.
@@ -147,7 +147,7 @@ Kluczowe idee, które powinni wyłowić uczniowie, obejmują:
 
 Urządzenia są często reklamowane jako „przyjazne dla użytkownika” i „intuicyjne”, niestety są to niejasne terminy, które trudno sprecyzować. W tym podrozdziale wykorzystamy bardziej techniczny termin [użyteczność](https://pl.wikipedia.org/wiki/U%BFyteczno%B6%E6_(informatyka)), który jest dobrze rozumiany przez ekspertów HCI i daje nam kilka sposobów oceniania, jak bardzo odpowiedni jest interfejs do określonego zadania. Użyteczność nie polega tylko na tym, że interfejs jest przyjemny w użyciu: słaba użyteczność może prowadzić do poważnych problemów i jest przyczyną poważnych katastrof, takich jak wypadki samolotów, katastrofy finansowe i wypadki medyczne. Trzeba mieć na uwadze, że interfejs wymagający dużej zręczności, szybkich reakcji lub dobrej pamięci czyni go mniej dostępnym dla dużej części społeczeństwa, podczas gdy dostępność może być zarówno moralnym, jak i prawnym oczekiwaniem społecznym
 
-{panel type="curiosity" summary="Kiedy interfejs został źle wykonany"}
+{panel type="curiosity" title="Ciekawostka" summary="Kiedy interfejs został źle wykonany"}
 - 87 osób zginęło, gdy [lot lini Air Inter nr 148 rozbił się](https://pl.wikipedia.org/wiki/Katastrofa_lotu_Air_Inter_148), ponieważ piloci wpisali na pulpicie „33”, aby uzyskać kąt schodzenia 3,3 stopnia, ale autopilot zinterpretował to jako prędkość zniżania: „3300 stóp na minutę". Okazało się, że ten sam interfejs był używany do ustawiania zarówno kąta, jak i prędkości zniżania. Ten problem z interfejsem nazywany jest „błędem trybu” (opisany będzie poniżej). Więcej informacji [tutaj](http://blog.martindoms.com/2011/01/24/poor-ui-design-can-kill/).
 - 13 osób zginęło, a wiele innych zostało rannych, gdy piloci [lotu Varig 254](https://en.wikipedia.org/wiki/Varig_Flight_254) wpisali niepoprawny kierunek. Plan lotu określał kierunek 0270, co kapitan zinterpretował i wprowadził do komputera pokładowego jako 270 stopni. W rzeczywistości oznaczało to 027,0 stopni. To zamieszanie nastąpiło z powodu zmiany formatu kierunków i pozycji separatora dziesiętnego w planach lotów, a kapitan o tym nie wiedział. Niestety, drugi pilot bezmyślnie skopiował kierunek kapitana zamiast odczytać go z planu lotu, tak jak powinien. Samolot przeleciał przez kilka godzin na autopilocie. Niestety, [efekt potwierdzenia](https://pl.wikipedia.org/wiki/Efekt_potwierdzenia) wziął górę nad procedurami bezpieczeństwa. Piloci byli przekonani, że są blisko celu, podczas gdy w rzeczywistości byli setki kilometrów dalej. Samolotowi zabrakło paliwa i rozbił się w dżungli amazońskiej. Projektowanie systemów lotniczych, które są wykorzystywane przez ludzi, jest dużym wyzwaniem i jest częścią szerszego obszaru badań nad czynnikami ludzkimi.
 - Pracownik banku [przypadkowo udzielił klientowi pożyczki w wysokości 10 milionów dolarów zamiast 100 000 dolarów](http://edition.cnn.com/2012/08/24/world/asia/new-zealand-accidental-millionaire-sentenced/). Klient wypłacił większość pieniędzy i uciekł do Azji, bank stracił w tym czasie miliony dolarów, a kasjer bankowy miał traumatyczne przeżycia. Błąd był spowodowany tym, że pracownik wpisał dwa dodatkowe zera, prawdopodobnie dlatego, że niektóre interfejsy automatycznie wstawiały kropkę dziesiętną (można wpisać 524, aby wprowadzić 5,25 USD), a inne nie. Ten błąd można wytłumaczyć w kategoriach braku spójności interfejsu.
@@ -204,7 +204,7 @@ Kolejną ważną kwestią związaną z użytecznością jest *pamięć przestrze
 
 Innym miejscem, w którym rozmieszczenie elementów interfejsu szybko się zmienia, jest obrót tabletu lub smartfona. Niektóre urządzenia zmieniają kolejność ikon dla nowej orientacji, która zmienia układ przestrzenny, podczas gdy inne zachowują ją (choć ikonki mogą nie wyglądać dobrze w nowym ułożeniu). Wypróbuj kilka różnych urządzeń i zobacz, które zmieniają rozmieszczenie po obróceniu.
 
-{panel type="curiosity" summary="Typowe sytuacje, w których rozmieszczenia niespodziewanie się zmieniają"}
+{panel type="curiosity" title="Ciekawostka" summary="Typowe sytuacje, w których rozmieszczenia niespodziewanie się zmieniają"}
 Istnieje wiele innych sytuacji, w których rozmieszczenie może nagle zmienić się i spowodować zamieszanie. Oto kilka przykładów:
 - Rozmieszczenie może się zmienić, jeśli projektor jest podłączany do komputera, a rozdzielczość ekranu się zmienia (co jest szczególnie frustrujące, ponieważ użytkownik chce zaprezentować coś publiczności i nie może znaleźć ikonki, ludzie czekają).
 - Jeśli zmienisz rozmiar urządzenia (takie jak większy monitor lub inny smartfon), będziesz musiał ponownie nauczyć się, gdzie wszystko jest.
@@ -242,7 +242,7 @@ To tylko kilka pomysłów z HCI, które pomogą ci zdać sobie sprawę z tego, z
 W poniższym projekcie możesz zaobserwować tego typu problemy z pierwszej ręki, oglądając *kogoś innego* używającego interfejsu, zauważając wszelkie problemy, które ta osoba ma.
 O wiele łatwiej jest obserwować kogoś innego niż to zrobić samemu; częściowo dlatego, że ciężko jest skoncentrować się na interfejsie i robić notatki w tym samym czasie, a częściowo dlatego, że już znasz interfejs i nauczyłeś się pokonywać niektóre trudności.
 
-{panel type="project" summary="Myśl na głos"}
+{panel type="project" title="Projekt" summary="Myśl na głos"}
 W projekcie „Myśl na głos” obserwujesz kogoś, kto korzysta z interfejsu, który chcesz ocenić, i zachęcasz go do wyjaśnienia, co myśli na każdym kroku.
 Będziesz robić notatki na temat tego, co mówi, i na tej podstawie oceniać interfejs (nagranie całego zdarzenia może być pomocne).
 
@@ -282,7 +282,7 @@ Więcej informacji o metodzie myślenia na głos znajdziesz w artykułach po ang
 {panel end}
 
 
-{panel type="project" summary="Przejście poznawcze"}
+{panel type="project" title="Projekt" summary="Przejście poznawcze"}
 Innym sposobem oceny interfejsu jest *przejście poznawcze* (ang. *Cognitive Walkthrough*).
 Zwykle robi się to bez angażowania kogoś innego, ale my proponujemy dla uproszczenia włączyć w projekt innego użytkownika.
 *Przejście poznawcze* to technika, której używają eksperci HCI do szybkiej oceny interfejsu.
@@ -321,7 +321,7 @@ Informacje można też znaleźć [w angielskiej Wikipedii, pod hasłem Cognitive
 
 ## Heurystyki użyteczności
 
-{panel type="teacher-note" summary="Plakaty HCI dla twojej klasy!"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Plakaty HCI dla twojej klasy!"}
 Zestaw plakatów na tematy poruszone w tym rodziale opublikowała Jennifer Gottschalk. [Są one dostępne (w wersji angielskiej) formacie PDF tutaj](files/HCI-posters.pdf).
 {panel end}
 
@@ -369,7 +369,7 @@ Język, kolory i zapisy w interfejsie powinny pasować do świata użytkownika, 
 
 {interactive name="confused-buttons" type="in-page"}
 
-{panel type="teacher-note" summary="Odpowiedź na to, co jest nie tak z przyciskami"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Odpowiedź na to, co jest nie tak z przyciskami"}
 Przyciski mają zamienione kolory; kolor dla anulowania jest zielony (zwykle używany do przejścia dalej), a kolor potwierdzenia jest czerwony (zwykle używany do zatrzymania lub ostrzeżenia).
 {panel end}
 
@@ -381,7 +381,7 @@ Notacja „$1699.50” jest popularnym sposobem wyrażenia kwoty w dolarach, ale
 
 Spróbuj znaleźć inne kwoty, które są po ludzku prawidłowe, ale system je odrzuca. W idealnej sytuacji system powinien być elastyczny w stosunku do wprowadzanego tekstu, aby zapobiec błędom.
 
-{panel type="spoiler" summary="Odpowiedzi do powyższego, spróbuj sam przed przeczytaniem tego!"}
+{panel type="spoiler" title="Spojler" summary="Odpowiedzi do powyższego, spróbuj sam przed przeczytaniem tego!"}
 Okienko dialogowe odrzuca także przecinki (jako anglosaski separator tysięcy) w danych wejściowych, np. „1,000”, mimo że bywają stosowane, by łatwiej było przeczytać duże kwoty (w Polsce częściej używane są w tej roli odstępy [przyp. tłum.]) Nie pozwala także na spację przed lub po liczbie, ale jeśli liczba została skopiowana i wklejona z wiadomości email, może wyglądać zupełnie dobrze. Mniej leniwy programista pozwoliłby na takie sytuację; zamiast tego prawdopodobnie użył prostego systemu konwersji liczb, aby sobie oszczędzić dodatkowego programowania...
 {panel end}
 
@@ -397,7 +397,7 @@ Oto przykład przycisku, który nie zapewnia kontroli użytkownika; jeśli go na
 
 {interactive name="close-window" type="in-page"}
 
-{panel type="teacher-note" summary="OSTRZEGALIŚMY cię..."}
+{panel type="teacher-note" title="Dla nauczyciela" summary="OSTRZEGALIŚMY cię..."}
 Naciśnięcie przycisku „tak” może być bardzo frustrujące! Większość nowoczesnych przeglądarek internetowych zapewnia pewną kontrolę i swobodę w tym przypadku — jeśli twoi uczniowie są sfrustrowani naciśnięciem przycisku, strona prawdopodobnie znajdzie się w ich menu historii (a niektóre przeglądarki mają nawet funkcję przywracania ostatniej strony zamkniętej).
 {panel end}
 
@@ -427,7 +427,7 @@ Poniżej znajduje się selektor dat; czy widzisz, jakie błędy można przez nie
 
 {interactive name="date-picker" type="in-page"}
 
-{panel type="spoiler" summary="Niektóre z błędów, które mogłeś zaobserwować"}
+{panel type="spoiler" title="Spojler" summary="Niektóre z błędów, które mogłeś zaobserwować"}
 Selektor daty umożliwia użytkownikowi wybranie nieprawidłowych dat, np. 30 lutego lub 31 listopada. Trudno uzyskać poprawny trójelementowy selektor daty. Wprawdzie każdy element menu ogranicza to, co może być w innych, ale każdy może być zmieniony. Na przykład możesz wybrać 29 lutego 2008 r. (poprawna data), a następnie zmienić rok na 2009 (niepoprawna data), a następnie wrócić do 2008 r. Po wybraniu roku 2009 numer dnia musiałby zmienić się na 28, aby zapobiec błędom, ale jeśli to był tylko przypadek, a użytkownik zmienia z powrotem rok na 2008, zmieniony dzień mógłby zostać niezauważony. Lepiej jest użyć bardziej wyrafinowanego selektora dat, który pokazuje kalendarz, a użytkownik może klikać tylko poprawne daty (wiele stron to oferuje). Systemy do wyboru dat zwykle stanowią bogaty materiał do badań problemów z interfejsem!
 
 {panel end}
@@ -444,7 +444,7 @@ Dobrym przykładem do rozważenia jest bankomat, który może wydawać tylko ban
 Jeśli pozwala wprowadzić dowolną kwotę (np. 53,92 zł lub nawet 50 zł), wystąpi błąd.
 Jakiego rodzaju zabieczenia przed takimi błędami spotkałeś w bankomatach?
 
-{panel type="teacher-note" summary="Zapobieganie błędom bankomatów"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Zapobieganie błędom bankomatów"}
 Niektóre bankomaty uniemożliwiają wprowadzenie nieprawidłowej kwoty, oferując jedynie konkretne kwoty do wypłaty i / lub wyświetlając przyciski takie jak +20 zł i - 20 zł.
 Wyszukanie w Internecie obrazów „wpisywanie kwoty w bankomacie” może przypomnieć ci kilka różnych sposobów, jak interfejsy radzą sobie z tym problemem (lub powodują problem!). 
 Interfejs dotyczący wpłaty jest diametralnie inny, ale przez to zmniejsza spójność!
@@ -510,7 +510,7 @@ To trochę drastyczne, ale może zaoszczędzić użytkownikowi dostępu do tryb�
 Niektóre piloty starają się oferować najlepsze z obu światów, mając małą klapkę, którą można otworzyć, aby mieć dostęp do wszystkich funkcji.
 
 
-{panel type="curiosity" summary="Przerażające interfejsy"}
+{panel type="curiosity" title="Ciekawostka" summary="Przerażające interfejsy"}
 Oto witryna z listą „najbardziej przerażających” interfejsów, z których niektóre są świetnymi przykładami *nie*posiadania minimalistycznego wzornictwa: [najbardziej przerażające interfejsy](http://okcancel.com/archives/article/2005/11/the-scariest-interface-part-ii.html).
 
 Rysownik [Roz Chast](http://rozchast.com/) w swojej kreskówce [„Jak babcia widzi pilota”](http://www.art.com/products/p15063313199-sa-i6845922/roz-chast-how-grandma-sees-the-remote-new-yorker-cartoon.htm) ilustruje, jak przerażający może być pilot.
