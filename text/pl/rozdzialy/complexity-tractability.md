@@ -67,7 +67,7 @@ Zacznijmy jednak od znanego problemu, który możemy rozwiązać.
 
 {glossary-definition term="Złożoność" definition="Złożoność określa ile czasu potrzeba na rozwiązanie problemu. Każdy problem ma immanentną złożoność (minimalny czas potrzebny na jego rozwiązanie); każdy algorytm rozwiązania problemu będzie miał większą złożoność (będzie potrzebował przynajmniej tyle czasu)."}
 
-{glossary-link term="Złożoność" reference-text="problems and algorithms"}Złożoność{glossary-link end} to ważne pojęcie dotyczące problemów i algorytmów, które je rozwiązują.
+{glossary-link term="Złożoność" reference-text="Złożoność algorytmiczna"}Złożoność{glossary-link end} to ważne pojęcie dotyczące problemów i algorytmów, które je rozwiązują.
 Zwykle złożoność to po prostu czas potrzebny do rozwiązania problemu, ale istnieje kilka sposobów mierzenia ,,czasu''.
 Mierzenie rzeczywistego czasu na danym komputerze może być przydatne, ale aby uzyskać przybliżone pojęcie o zachowaniu właściwemu danemu algorytmowi, informatycy często zaczynają od oszacowania liczby kroków, jakie algorytm wykona dla *n* elementów.
 Na przykład wyszukiwanie liniowe może wymagać sprawdzania każdego z *n* elementów, więc algorytm wykona *n* kroków.
