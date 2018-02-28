@@ -20,7 +20,7 @@ Grafika komputerowa znajduje zastosowanie w wielu różnych sytuacjach. Tworzeni
 {panel type="jargon-buster" title="Co to znaczy?" summary="Piksele"}
 {glossary-definition term="Piksel" definition="To słowo to spolszczona wersja słowa pixel, który powstał jako skrót od *picture element* (dosł. element obrazu), na oznaczenie małych kwadratów tworzacych jakby siatkę (ang. grid) komputerowej realizacji obrazu."}
 Obraz cyfrowy wyświetlany na ekranie monitora lub wydrukowany na domowej drukarce jest skończonym zbiorem elementów, które łącznie tworzą jakby siatkę kwadratów bardzo małych rozmiarów, zwanych 
-{glossary-link term="piksel" reference-text="definition"}pikselami{glossary-link end}.
+{glossary-link term="piksel" reference-text="Grafika komputerowa"}pikselami{glossary-link end}.
 Zazwyczaj nie da się ich dostrzec gołym okiem (inaczej obraz wyglądałby topornie).
 Na zdjęciach liczba pikseli jest liczona w milionach (megapiksel to milion pikseli; np. ekran o 1080 pikselach w poziomie i 720 w pionie składa się z 777 600 pikseli, czyli ok. 0,78 megepikseli).
 
