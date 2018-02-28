@@ -66,7 +66,7 @@ Spróbuj wykonać następujące wyszukiwanie. Jakie ciągi znaków zostaną znal
 x.*y.*z
 ```
 
-{panel type="teacher-note" summary="Wyjaśnienie powyższego wyszukiwania"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Wyjaśnienie powyższego wyszukiwania"}
 
 Ten kod znajduje wyrażenia zawierające x, y oraz z (w tej kolejności), oddzielone przez zero lub więcej symboli. Jest 16 słów, które pasują do tego.
 {panel end}
@@ -75,7 +75,7 @@ Ten kod znajduje wyrażenia zawierające x, y oraz z (w tej kolejności), oddzie
 - Co z słowami zawierającymi litery twojego imienia w prawidłowej kolejności?
 - Czy są jakieś słowa, które zawierają wszystkie angielskie samogłoski w kolejności alfabetycznej (a, e, i, o, u)?
 
-{panel type="teacher-note" summary="Rozwiązanie problemu samogłosek"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie problemu samogłosek"}
 
 Aby znaleźć słowa ze wszystkimi samogłoskami w kolejności alfabetycznej, należy użyć kodu „a.\*e.\*i.\*o.\*u”; jest 47 dopasowań.
 
@@ -95,7 +95,7 @@ Później przyjrzymy się idei
 {glossary-link term="gramatyka"}gramatyki{glossary-link end},
 która jest innym rodzajem języka formalnego, a która radzi sobie z bardziej skomplikowanymi formami danych wejściowych.
 
-{panel type="teacher-note" summary="Ćwiczenie — językoznawstwo klingońskie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Ćwiczenie — językoznawstwo klingońskie"}
 
 Dla zabawnej dyskusji, możesz poprosić uczniów o wykonanie [ćwiczenia pod nazwą językoznawstwo klingońskie na stronie CS4FN](http://www.cs4fn.org/linguistics/klingon.html) (w języku angielskim). Ta strona przedstawia podstawy języków — słowa (alfabet) i {glossary-link term="gramatyka"}gramatykę{glossary-link end} (zasady składni). Omówiono tam, dlaczego języki są tłumaczone i jak można zmienić znaczenie poprzez tłumaczenie. Wyjaśnia również, dlaczego należy tłumaczyć języki komputerowe.
 
@@ -103,7 +103,7 @@ Dla zabawnej dyskusji, możesz poprosić uczniów o wykonanie [ćwiczenia pod na
 
 ## Automaty skończenie stanowe
 
-{panel type="teacher-note" summary="Poszukiwanie skarbów (alternatywne wprowadzenie)"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Poszukiwanie skarbów (alternatywne wprowadzenie)"}
 
 Na początku tego podrozdziału jest proponujemy zabawę, która obejmuje bieganie po placu zabaw. Jest ona opisana jako ćwiczenie „Poszukiwanie skarbów” w scenariuszu 12, w zbiorze [scenariuszy lekcji](http://jasijoasia.edu.pl/csu1.pdf)."
 Może to być zbyt dziecinne dla niektórych uczniów, ale jeśli możesz im to sprzedać, będzie to świetny sposób, aby wykonać trochę ćwiczeń fizycznych z dala od komputerów i poznać większość koncepcji z tego rozdziału poprzez aktywność fizyczną. Możliwych jest wiele wariantów; na przykład to może być wykonane jako gra karciana, w której karta A/B dla każdej wyspy jest na żądanie odwracana. Spójrz też na angielską wersję tych ćwiczeń [Finite State Automata](https://classic.csunplugged.org/finite-state-automata) w poszukiwaniu innych pomysłów.
@@ -121,7 +121,7 @@ Jeśli chcesz narysować szablon, możesz [wydrukować go stąd](files/trainsylv
 
 {interactive name="trainsylvania" type="in-page"}
 
-{panel type="teacher-note" summary="Użycie narzędzia interaktywnego i rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Użycie narzędzia interaktywnego i rozwiązanie"}
 
 Powinieneś pozwolić uczniom wymyślić ich własną notację do tego zadania. Wkrótce dowiedzą się (być może na swój sposób), że powinni zapisywać wszystkie trasy ze strzałką (ponieważ pociągi niekoniecznie wracają tą samą trasą) i oznaczać je strzałki z literami A lub B. Pełna mapa dla tego ćwiczenia znajduje się poniżej, ale nie psuj zabawy uczniom, pokazując mapę — przynajmniej jeszcze nie teraz.
 
@@ -146,7 +146,7 @@ Załóżmy, że zaczynasz od stacji 1 i musisz dostać się do stacji nr 3 (ma p
 - Gdzie skończysz, jeśli zaczynasz na stacji 1 i wykonujesz 20 przesiadek, zawsze naprzemiennie A, B, A, B, A, B,...?
 - Czy możesz podać łatwą do opisania sekwencję 100 lub więcej przesiadek, które doprowadzą cię do stacji nr 3?
 
-{panel type="teacher-note" summary="Rozwiązania"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązania"}
 
 Rozwiązania:
 
@@ -160,7 +160,7 @@ Rozwiązania:
 Używana przez nas mapa z okręgami i strzałkami jest tak naprawdę czymś, co w informatyce nazywa się automatem skończenie stanowym, lub w skrócie {glossary-link term="automat skończenie stanowy" reference-text="skrót FSA"}FSA{glossary-link end} (*Finite State Atomaton*).
 Umiejętność korzystania z takich automatów jest bardzo przydatna dla informatyków.
 
-{panel type="jargon-buster" summary="Automat skończenie stanowy"}
+{panel type="jargon-buster" title="Co to jest?" summary="Automat skończenie stanowy"}
 
 {glossary-definition term="Automat skończenie stanowy" definition="W językach formalnych: prosta „maszyna”, która posiada stany i przejścia z jednego stanu do drugiego w oparciu o ciąg wejściowych symboli. Po angielsku „Finite State Automaton”."}
 Nazwa
@@ -208,7 +208,7 @@ W jakim stanie znalazłbyś się, gdyby dane wejściowe były literą „a” po
 
 Oczywiście, nie wszystkie dane wejściowe umożliwiają dojście do stanu 2. Na przykład „aab” lub nawet „b” nie są akceptowane przez ten prosty system. Czy potrafisz scharakteryzować, które dane wejściowe są akceptowane?
 
-{panel type="teacher-note" summary="Rozwiązanie dla FSA"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie dla FSA"}
 
 Powyższy FSA akceptuje dowolny ciąg danych wejściowych, które kończą się na „a”, więc interaktywne narzędzie poniżej zachowuje się dość trywialnie: naciśnij „a”, aby zostać zaakceptowanym, a „b”, aby nie zostać zaakceptowanym. To działa jak dwuprzyciskowy przełącznik zasilania z przyciskiem włączania i wyłączania. Chociaż tego typu FSA wydają się bardzo trywialne, ważne jest, aby uczniowie dobrze je zrozumieli. Niektóre z FSA stosowane w praktyce mają tylko kilka takich stanów, ale nawet małe systemy mogą wykonywać dość złożone zadania.
 
@@ -234,7 +234,7 @@ Sprawdź, które z poniższych wejść są akceptowane. Pamiętaj, aby za każdy
 
 Czy możesz podać ogólną zasadę akceptacji danych wejściowych?
 
-{panel type="teacher-note" summary="Rozwiązania"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązania"}
 
 Ogólną zasadą tego automatu jest to, że dane wejściowe muszą zawierać nieparzystą liczbę liter „a”, liczba liter „b” jest nieistotna. Z tego wynika, że w powyższych przykładach akceptowane ciągi to „aaa”, „abb”, „bababab”, litera „a” powtórzona 1001 razy, i ostatni ciąg (litera „b” milion razy, a następnie „a”, następnie kolejny milion liter „b”).
 
@@ -287,7 +287,7 @@ Zauważ, że „r” zawsze wraca do stanu 1 — jeśli kiedykolwiek wystąpi na
 
 Czasami zobaczysz FSA nazywane skończoną maszyną stanową lub FSM (z angielskiego „Finite State Machine”). Istnieją także inne ściśle powiązane systemy o podobnych nazwach. Później, wspomnimy o niektórych z nich w tym rozdziale.
 
-{panel type="teacher-note" summary="Terminologia języków formalnych"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Terminologia języków formalnych"}
 Poniższa strona zawiera obszerną listę terminów angielskich odnoszących się do języków formalnych i jest dużo głębsza i bardziej formalna niż nasza: [http://www.csee.umbc.edu/portal/help/theory/lang_def.shtml](http://www.csee.umbc.edu/portal/help/theory/lang_def.shtml)
 {panel end}
 
@@ -298,7 +298,7 @@ Sprawdź, czy potrafisz określić, które wzorce wejścia zapalą światło:
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/fsa-strangelight-v3.html" text="Ćwiczenie interaktywne dotyczące światła"}
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 Światło włącza się co trzecim naciśnięciem przycisku (co jest celowo mylące — uczniowie będą prawdopodobnie oczekiwać, że co drugie naciśnięcie włącza, ale to ma na celu skłonienie ich do myślenia o tym, co się tutaj dzieje!). Sekwencjami, które włączają światło są „aaa”, „aaaaaa” itd. — dowolna liczba wciśnięć, która jest wielokrotnością trzech, włącznie z sytuacją gdy mamy zero wciśnięć.
 {panel end}
 
@@ -320,7 +320,7 @@ W informatyce bardzo ważne jest rozważanie skrajnych przypadków. Jednym z eks
 Nic więc dziwnego, że mamy symbol pustego łańcucha. 
 Dodajmy, że niektórzy informatycy używają greckiej litery lambda ({math}\lambda{math end}) zamiast {math}\epsilon{math end}, aby przedstawić pusty łańcuch znaków.
 
-{panel type="teacher-note" summary="Epsilon czy lambda?"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Epsilon czy lambda?"}
 
 Dwa główne rodzaje zalecanego oprogramowania w tym rozdziale (Exorciser i JFLAP) wykorzystują dwie notacje.
 JFLAP można zmienić tak, aby używał epsilon ({math}\epsilon{math end}) za pomocą menu Preferencje, więc będziemy używali epsilon w całym rozdziale.
@@ -380,7 +380,7 @@ Właśnie wkroczyliśmy w obszar interakcji człowiek — komputer! Nie jest to 
 Jak zobaczymy w następnym podrozdziale, jednym z najcenniejszych zastosowań FSA w informatyce jest sprawdzenie danych wejściowych na komputerach, niezależnie czy jest to wartość wpisana w okienko dialogowe, program analizowany przez kompilator, czy też coś do wyszukania w dużym dokumencie.
 Istnieją również metody kompresji danych, które wykorzystują FSA do przechwytywania wzorców w danych, które są kompresowane. Inne warianty FSA symulują duże systemy komputerowe, aby sprawdzić, jak najlepiej je skonfigurować, zanim zostaną wydane pieniądze na ich budowę.
 
-{panel type="curiosity" summary="Największy FSA na świecie"}
+{panel type="curiosity" title="Ciekawostka" summary="Największy FSA na świecie"}
 Jaki jest największy FSA na świecie, który jest używany przez wiele osób każdego dnia? To jest Internet. Każda strona internetowa przypomina stan, a odnośniki na jej stronie są przejściami między nimi. W 2000 roku sieć miała miliard stron. W 2008 r. Google oświadczyło, że znalazło bilion różnych adresów stron internetowych. To dużo. Książka o miliardach stron miałaby grubość 50 km. Z bilionem stron jej grubość przekroczyłaby obwód Ziemi.
 
 Ale Internet to tylko automat skończenie stanowy. Abyś mógł korzystać z wyników wyszukiwarki internetowej, firmy takie jak Google muszą sprawdzić wszystkie strony, aby zobaczyć, jakie zawierają słowa. Badając sieć, podążają za wszystkimi odnośnikami, tak jak w przypadku podróży pociągiem. Ponieważ Internet nazywa się siecią, badanie nazywa się po angielsku *crawling* — to właśnie robią pająki.
@@ -397,7 +397,7 @@ Ale Internet to tylko automat skończenie stanowy. Abyś mógł korzystać z wyn
 
 ### Ćwiczenie: Stwórz swój FSA
 
-{panel type="teacher-note" summary="Wybór pomiędzy Exorciser i JFLAP"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Wybór pomiędzy Exorciser i JFLAP"}
 
 Ten podrozdział wykorzystuje bezpłatne oprogramowanie edukacyjne, które ułatwia uczniom tworzenie i eksperymentowanie z FSA. To oprogramowanie będzie również przydatne w następnym podrozdziale dotyczącym wyrażeń regularnych, więc warto się z tym zapoznać. Możesz wybrać pomiędzy „Exorciser” lub „JFLAP” (patrz dalej). System Exorciser zrobiony przez [SwissEduc](http://www.swisseduc.ch/compscience/) jest bardziej przejrzysty i prostszy, ale JFLAP zawiera kilka funkcji przydatnych w podrozdziałach dotyczących wyrażeń regularnych i gramatyk. (Materiał Exorciser dla gramatyk jest zbyt zaawansowany, a jego funkcje dotyczące wyrażeń regularnych są nieco bardziej nużące w użyciu.) Oba systemy mają rozbudowane funkcje, które nie mają związku z tym rozdziałem, więc uczniowie będą musieli ignorować wiele z tego, co zobaczą!
 
@@ -474,7 +474,7 @@ Jeśli robisz to jako część projektu, zachowaj kopie automatów i testy, któ
 
 #### JFLAP
 
-{panel type="teacher-note" summary="JFLAP"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="JFLAP"}
 
 Program o nazwie JFLAP jest alternatywą dla Exorcisera dla uczniów w celu zaprojektowania i przetestowania własnego FSA. Można go pobrać za darmo i jest powszechnie używany do nauczania języków formalnych. Jest to potężne narzędzie, które można wykorzystać w większości ćwiczeń w tym rozdziale, co sprawia, że warto nauczyć się z niego korzystać. Niestety JFLAP ma o wiele więcej funkcji, niż potrzebujemy w tym rozdziale, a niektórzy nauczyciele uznali, że jest za trudny do wykorzystania w klasie w szkole średniej, więc zalecamy użycie Exorciser, jeśli jest dostępny.
 
@@ -537,7 +537,7 @@ Korzystając z Exorciser lub JFLAP, skonstruuj FSA, który pobiera dane wejścio
 
 {comment end}
 
-{panel type="teacher-note" summary="Rozwiązania"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązania"}
 
 [Rozwiązania do powyższego, podamy w przyszłości — skontaktuj się z Timem Bellem, jeśli ich potrzebujesz.]
 Uczniowie mogą wymyślić różne prawidłowe rozwiązania. Aby je sprawdzić, wypróbuj przykłady łańcuchów, które są akceptowane i nie są akceptowane.
@@ -552,7 +552,7 @@ Uczniowie mogą wymyślić różne prawidłowe rozwiązania. Aby je sprawdzić, 
 
 W przypadku FSA, które konstruujesz, sprawdź, czy akceptują prawidłowe dane wejściowe, ale również upewnij się, że odrzucają nieprawidłowe dane wejściowe.
 
-{panel type="teacher-note" summary="Wskazówka"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Wskazówka"}
 
 Sprawdzenie, czy nieprawidłowe dane wejściowe są nieakceptowane, jest ważne — w przeciwnym razie uczeń mógłby wykonać FSA, który akceptuje dowolne dane wejściowe i przejść wszystkie testy. Uczniowie będą musieli wymyślić przykłady, które testują różne części FSA, aby pokazać, że nie dają wyników fałszywie pozytywnych lub fałszywie negatywnych.
 
@@ -565,7 +565,7 @@ Oto kilka sekwencji znaków, dla których możesz zbudować FSA. Alfabet wejści
 - Poprawny numer miesiąca (1, 2, ... 12).
 - Prawidłowa angielska nazwa dnia tygodnia (Monday, Tuesday, ...).
 
-{panel type="teacher-note" summary="Rozwiązania"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązania"}
 
 Rozwiązania dla zadań zostaną dostarczone w późniejszej wersji tego przewodnika.
 
@@ -584,7 +584,7 @@ Na przykład, ZZZ wprowadzałby monety o sumie 3 zł, które byłyby akceptowane
 Czy możesz zaprojektować FSA, który akceptuje dane wejściowe, gdy 3 zł lub więcej zostanie wprowadzone do urządzenia?
 Możesz stworzyć własną wersję dla różnych nominałów monet i wymaganej sumy.
 
-{panel type="teacher-note" summary="Rozwiązania"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązania"}
 
 Rozwiązania dla zadań zostaną dostarczone w późniejszej wersji tego przewodnika.
 
@@ -602,13 +602,13 @@ Jeśli miałeś do czynienia z liczbami binarnymi, zastanów się co robi poniż
 
 Czy możesz ustalić, co to znaczy, gdy dla danej liczby FSA kończy się w stanie q1? Stanie q2?
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 
 Ten FSA wykrywa liczby binarne, które są wielokrotnościami 3 (tj. 0, 11, 110, 1001 ..., czyli 0, 3, 6, 9 ... w systemie dziesiętnym). Stan, w którym się znajduje, reprezentuje resztę z dzielenia przez 3, więc stan 0 (akceptacja) znaczy tyle, że liczba dzieli się bez reszty przez 3. Jako wyzwanie dla najlepszych uczniów zaproponuj zaprojektowanie maszyny, która znajdzie wielokrotności 5 (można to zrobić, korzystając z 5 stanów). Byłoby to typowe pytanie na rozmowę kwalifikacyjną dla firm, które chcą dowiedzieć się, czy absolwent informatyki naprawdę zna się na rzeczy! Odpowiedzi są dostępne w Internecie, ponieważ jest to dość znany problem, ale mam nadzieję, że niektórzy z twoich uczniów będą chcieli rozwiązać go samodzielnie.
 
 {panel end}
 
-{panel type="activity" summary="Automaty skończenie stanowe w życiu codziennym"}
+{panel type="activity" title="Dodatkowe ćwiczenia" summary="Automaty skończenie stanowe w życiu codziennym"}
 Istnieje wiele systemów wykorzystujących FSA. Mógłbyś wybrać jakiś system i wyjaśnić, jak można go reprezentować za pomocą FSA oraz pokazać przykłady sekwencji danych wejściowych, które są akceptowalne. Przykłady takich systemów to:
 
 - Gry planszowe. Proste gry planszowe są często po prostu FSA, gdzie następny ruch jest określony przez pewne dane wejściowe (np. liczbę z rzutu kostką), a stan końcowy oznacza, że ​​ukończyłeś grę — czyli pierwsza osoba, która dotrze do stanu końcowego wygrywa. Większość gier jest zbyt skomplikowana, aby narysować pełną wersję FSA, ale jako przykład można posłużyć się prostą grą, taką jak [węże i drabiny](https://en.wikipedia.org/wiki/Snakes_and_Ladders). Jakie przykładowe sekwencje rzutów kostką doprowadzą cię do końca gry? A które nie?
@@ -616,7 +616,7 @@ Istnieje wiele systemów wykorzystujących FSA. Mógłbyś wybrać jakiś system
 
 {panel end}
 
-{panel type="activity" summary="Biedronka Kara"}
+{panel type="activity" title="Dodatkowe ćwiczenia" summary="Biedronka Kara"}
 
 [SwissEduc](http://www.swisseduc.ch/compscience/) ma środowisko programistyczne zwane [Kara](http://www.swisseduc.ch/compscience/karatojava/kara/) (do instalacji wymaga Javy), która jest programowalną biedronką. Krąży ona (w swojej najprostszej wersji) w wyimaginowanym świecie kontrolowanym przez automat skończenie stanowy. Biedronka ma (symulowane) detektory, które wyczuwają jej bezpośrednie otoczenie; służą one jako dane wejściowe do FSA.
 {comment}
@@ -625,7 +625,7 @@ Istnieje wiele systemów wykorzystujących FSA. Mógłbyś wybrać jakiś system
 {comment end}
 {panel end}
 
-{panel type="teacher-note" summary="Inne źródła"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Inne źródła"}
 
 Istnieje wiele zasobów internetowych do eksperymentowania z FSA; opisaliśmy te, które naszym zdaniem są najbardziej dostępne. Jednak mogą istnieć wariacje, które mogą okazać się pomocne na różnych platformach komputerowych, przy omawianiu tematów odpowiednich dla uczniów. Oto kilka innych przykładów.
 
@@ -687,7 +687,7 @@ Jeśli chcesz utworzyć schematy FSA, możesz użyć programu JFLAP lub programu
 
 ## Wyrażenia regularne
 
-{panel type="teacher-note" summary="Wyrażenia regularne"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Wyrażenia regularne"}
 
 Wyrażenia regularne (ang. *regular expressions*, w skrócie *regex*) są blisko związane z FSA, jak zaraz się przekonamy. Duża część terminologii, która jest potrzebna, została już omówiona w poprzednich podrozdziałach: będziemy używać:
 {glossary-link term="alfabet"}aflabetów{glossary-link end} do
@@ -705,7 +705,7 @@ Możliwe, że uczniowie używali już wyrażeń regularnych, ponieważ są one w
 
 {panel end}
 
-{panel type="teacher-note" summary="Ćwiczenie — „Odwrócone kalambury”"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Ćwiczenie — „Odwrócone kalambury”"}
 
 Jeśli masz czas, następujące ćwiczenie („odwrócone kalambury”) można wykonać przed lub po nauczeniu wyrażeń regularnych. Zalecamy wykonać je wcześniej, ponieważ takie konstruktywistyczne podejściem zachęca uczniów do projektowania własnych notacji dla języków regularnych i motywuje do nauki precyzyjnej notacji.
 
@@ -746,7 +746,7 @@ Najprostszym ćwiczeniem jest dopasowanie tekstu do wpisanego ciągu liter. Otw�
 {interactive name="regular-expression-search" type="whole-page" text="Wyszukiwanie wyrażenia regularnego - ćwiczenie 1" parameters="text=Tłusty kot siedział na macie.%0AWindykacja była katastrofalna.%0ABilokacja zaćmy wymagała certyfikacji.%0A42 bawołó zaskoczyło ich dźwiękiem spoffffft.%0APennsylwania 6-5000.%0ARóżne wydechy: pfft pffft pft.%0ACzy to było dopasowanie, czy nie było?"}
 {comment end}
 
-{panel type="teacher-note" summary="Alternatywne strony internetowe do ćwiczenia wyrażeń regularnych"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Alternatywne strony internetowe do ćwiczenia wyrażeń regularnych"}
 
 Uczniowie mogą również przejrzeć przykłady w tym podrozdziale, używając narzędzi [Rubular](http://rubular.com/) lub [Regex101](https://regex101.com/).
 
@@ -773,7 +773,7 @@ Kolejny specjalny symbol to „\\d”, który pasuje do dowolnej cyfry. Spróbuj
 
 Aby wybrać literę z małego zestawu znaków, używamy nawiasów kwadratowych. Spróbuj „[ua]ff”. Każdy ze znaków w nawiasach kwadratowych będzie pasował. Spróbuj napisać wyrażenie regularne, które będzie wyszukiwało wyrazy zawierające „fat”, „sat” i „mat”, ale nie „cat”.
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 
 Odpowiednim wyrażeniem jest „[fsm]at”.
 
@@ -811,7 +811,7 @@ f(ff)+
 
 Zwróć uwagę na użycie nawiasów w celu grupowania części wyrażenia regularnego. Przydaje się to, jeśli chcesz zastosować „+” lub „\*” do więcej niż jednego znaku.
 
-{panel type="jargon-buster" summary="Wyrażenie regularne"}
+{panel type="jargon-buster" title="Co to jest?" summary="Wyrażenie regularne"}
 {glossary-definition term="Wyrażenie regularne" definition="Formuła używana do opisu wzorca w tekście, który ma być wyszukiwany. Zwykle używane jest do znajdowania elementów programu (takich jak nazwy zmiennych) i sprawdzania danych wejściowych w formularzach (np. sprawdzanie, czy adres email ma odpowiedni format)."}
 Termin
 {glossary-link term="wyrażenie regularne" reference-text="skróty dla wyrażeń regularnych"}wyrażenie regularne{glossary-link end}
@@ -823,7 +823,7 @@ Kliknij poniżej, aby wykonać kolejne ćwiczenie: Napisz krótkie wyrażenie re
 
 {interactive name="regular-expression-search" type="whole-page" text="Wyszukiwanie wyrażeniami regularnymi — ćwiczenie 2" parameters="text=meeeeeeeow%0Ameoooooooooooow%0A%0Awoof%0Amew%0Acluck"}
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 
 „me+o+w” jest dobrym rozwiązaniem.
 
@@ -839,7 +839,7 @@ Poniższe wyrażenie regularne znajdzie typowe tablice rejestracyjne Nowej Zelan
 [A-Z][A-Z][A-Z]\d\d\d
 ```
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 
 „[A-Z]{3}\\d{3}”
 
@@ -853,7 +853,7 @@ A jak znaleźć daty w tekście, przy zalożeniu, że miesiące są podane jako 
 
 Czy możesz to poprawić?
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 
 Wyrażenie „\\d\\d? (Sty|Lut|Mar|Kwi|Maj|Cze|Lip|Sie|Wrz|Paź|Lis|Gru) \\d\\d\\d\\d” jest bardziej precyzyjne, ale bardziej wyrafinowana wersja byłaby w praktyce stosowana w celu uwzględnienia różnych formatów.
 
@@ -862,7 +862,7 @@ Wyrażenie „\\d\\d? (Sty|Lut|Mar|Kwi|Maj|Cze|Lip|Sie|Wrz|Paź|Lis|Gru) \\d\\d\
 A co z numerami telefonów? Musisz zastanowić się, jakie odmiany numerów telefonów są częste!
 Jak znaleźć adresy email?
 
-{panel type="teacher-note" summary="Rozwiązania"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązania"}
 
 Oto dwa dość proste rozwiązania dla adresów email, ale możliwe są bardziej wyrafinowane:
 
@@ -924,7 +924,7 @@ Większość języków programowania potrafi konwertować wyrażenia regularne n
 Programiści zwykle używają wyrażeń regularnych, wywołując funkcje lub metody, którym przekazuje się wyrażenie regularne i szukany łańcuch.
 Kompilator konwertuje wyrażenie regularne na automat skończenie stanowy. Po tym zadanie sprawdzenia twojego wyrażenia regularnego jest bardzo łatwe.
 
-{panel type="project" summary="Tworzenie wyrażeń regularnych"}
+{panel type="project" title="Projekt" summary="Tworzenie wyrażeń regularnych"}
 
 Oto kilka pomysłów na wyrażenia regularne, które możesz testować. Możesz je sprawdzić za pomocą [wyszukuwania wyrażeń regularnych](interactives/regular-expression-search/index.html?reference=true), tak jak to zrobiliśmy wcześniej, ale musisz stworzyć własny tekst,w którym wyrażenie będzie szukane.
 Testując wyrażenia, upewnij się, że nie tylko akceptują one poprawne łańcuchy, ale odrzucają te niepasujące, nawet jeśli brakuje tylko jednego znaku.
@@ -952,7 +952,7 @@ Możesz stworzyć wyrażenia regularne dla następujacych problemów:
 
 {panel end}
 
-{panel type="project" summary="Konwertowanie wyrażeń regularnych na FSA"}
+{panel type="project" title="Projekt" summary="Konwertowanie wyrażeń regularnych na FSA"}
 
 {comment}
 
@@ -1079,7 +1079,7 @@ Jeśli konwersja wyrażeń regularnych na FSA jest częścią projektu, to powin
 
 {panel end}
 
-{panel type="project" summary="Inne pomysły na projekty i ćwiczenia"}
+{panel type="project" title="Projekt" summary="Inne pomysły na projekty i ćwiczenia"}
 
 Oto kilka pomysłów, które można wykorzystać do zbadania wyrażeń regularnych:
 
@@ -1112,7 +1112,7 @@ Oto kilka pomysłów, które można wykorzystać do zbadania wyrażeń regularny
 {comment end}
 {panel end}
 
-{panel type="teacher-note" summary="Więcej informacji na temat wyrażeń regularnych"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Więcej informacji na temat wyrażeń regularnych"}
 
 Wiele informacji (po angielsku) na temat wyrażeń regularnych można znaleźć na: [http://www.regular-expressions.info/](http://www.regular-expressions.info/)
 
@@ -1138,7 +1138,7 @@ Oto inne strony (w języku angielskim) do eksperymentów z wyrażeniami regularn
 .. ostrzeżenie:: ten podrozdział nie został jeszcze ukończony; poniższy materiał to tylko wstęp
 {comment end}
 
-{panel type="teacher-note" summary="Podrozdział jest niekompletny"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Podrozdział jest niekompletny"}
 Ten podrozdział jest tylko wprowadzeniem do tego tematu (który bardziej dotyczy gramatyki angielskiej) opisanego na stronie: [http://ozark.hendrix.edu/~burch/cs/150/reading/grammar/index.html](http://ozark.hendrix.edu/~burch/cs/150/reading/grammar/index.html). Można to wykorzystać do dyskusji w klasie.
 {panel end}
 
@@ -1184,7 +1184,7 @@ Uwaga: pozostała część tego podrozdziału nie została jeszcze opracowana.
 {comment end}
 
 
-{panel type="project" summary="Inne pomysły na projekty i ćwiczenia"}
+{panel type="project" title="Projekt" summary="Inne pomysły na projekty i ćwiczenia"}
 
 (Będą one miały większy sens po zakończeniu prac nad tym podrozdziałem)
 
@@ -1200,7 +1200,7 @@ Uwaga: pozostała część tego podrozdziału nie została jeszcze opracowana.
 
 {panel end}
 
-{panel type="project" summary="Gramatyki w sztuce i muzyce"}
+{panel type="project" title="Projekt" summary="Gramatyki w sztuce i muzyce"}
 
 
 {image filename="context-free-tree-screenshot.png" alt="Drzewo narysowane za pomocą oprogramowania z contextfreeart.org" source="http://contextfreeart.org/"}
@@ -1264,7 +1264,7 @@ Gramatyki zostały użyte w notacji muzycznej:
 
 ## Podsumowanie
 
-{panel type="teacher-note" summary="Zaawansowany materiał"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Zaawansowany materiał"}
 W tej części przedstawiamy kilka wskazówek dotyczących zaawansowanego materiału o językach formalnych, które wykraczają poza zakres tego rozdziału.
 Nie oczekujemy, że wszyscy uczniowie będą zajmowali się poniższymi tematami, ale może znajdzie się jeden lub dwóch, którzy uważają to pole za interesujące i chcą uzyskać wskazówki, gdzie szukać dalej. Chcemy jasno powiedzieć, że rozdział jest tylko początkiem tego, co jest bardzo bogatą częścią informatyki.
 
