@@ -94,7 +94,7 @@ Warto, aby programista potrafił określić szybkość algorytmu, zanim zdecyduj
 {panel type="extra-for-experts" title="Dla ekspertów" summary="Złożoność obliczeniowa algorytmów"}
 Szacowanie kosztów algorytmu znane jest w informatyce pod nazwa [analiza algorytmu](https://en.wikipedia.org/wiki/Analysis_of_algorithms). Taka analiza powinna prowadzić do wyznaczenia *złożoności obliczeniowej* algorytmu (dotyczącej czasu działania komputerowej realizacji algorytmu), ale czasami dodatkowo i *złożoności pamięciowej* algorytmu (dotyczącej wymagań co do pamięci potrzebnej do działania).
 
-Więcej informacji na temat określania kosztu algorytmu, m.in. o notacji „duże Θ”, znajduje się w podrozdziale [„Podsumowanie”](chapters/algorithms.html#the-whole-story) .
+Więcej informacji na temat określania kosztu algorytmu, m.in. o notacji „duże Θ”, znajduje się w podrozdziale [„Podsumowanie”](chapters/algorithms.html#podsumowanie) .
 {panel end}
 
 Trzeba podkreślić, że czas potrzebny różnym komputerom do realizacji tego samego algorytmu i tych samych danych może być różny. Zależy to od parametrów komputerów, ilości zasobów przydzielonych do wykonania zadania, ale i od języka programowania, w którym algorytm został zakodowany. Dlatego trzeba być ostrożnym w wyciąganiu pochopnych wniosków o koszcie algorytmu tylko na podstawie czasu wykonania programu. 
