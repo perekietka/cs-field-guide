@@ -2,7 +2,7 @@
 
 ## Z lotu ptaka
 
-{panel type="teacher-note" summary="Pokazanie sztuczki z parzystością w klasie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Pokazanie sztuczki z parzystością w klasie"}
 Magiczna sztuczka z użyciem parzystości może stanowić ciekawy wstęp do idei korekcji błędów i zalecamy jej użycie na początku uczenia tego tematu. Trzeba ją wypróbować zawczasu, a dla uczniów szkół średnich zalecamy siatkę o wymiarach około 7x7 lub 8x8, żeby wywarła odpowiednie wrażenie. Szczegóły znajdują się w podrozdziale w scenariuszu 4 [,,Magia obracanych kart''](http://jasijoasia.edu.pl/csu1.pdf) zbioru scenariuszy lekcji bez komputera.
 {panel end}
 
@@ -69,7 +69,7 @@ Odwrócenie karty symulowało błąd w danych (np. kawałek kurzu lądujący na 
 Gdybyś nie dodał bitów parzystości, nie byłbyś w stanie nawet stwierdzić, że wystąpił błąd, chyba że zapamiętałeś cały układ kart!
 A co by było, gdyby odwrócono więcej niż jedną kartę? Rozważymy to później.
 
-{panel type="project" summary="Bycie magikiem czyli używanie sztuczki z parzystością jako sztuczki magicznej!"}
+{panel type="project" title="Projekt" summary="Bycie magikiem czyli używanie sztuczki z parzystością jako sztuczki magicznej!"}
 Teraz, gdy już nauczyłeś się, jak działa sztuczka z parzystością, możesz wypróbować ją z fizycznym zestawem kart, jak magik w filmie, albo możesz użyć dowolnych obiektów z dwoma różnymi stronami, takimi jak monety lub kubki. Możesz używać kart do gry, ale oznaczenia mogą rozpraszać, a karty z dwoma kolorami są najłatwiejsze (możesz je wykonać, tnąc dwukolorowe arkusze tektury, albo jednokolorowy arkusz z naklejkami, albo zamalowany na jednej stronie).
 
 Możesz znaleźć szczegóły i wiele pomysłów związanych ze sztuczką [tutaj](http://csunplugged.org/error-detection) (w języku angielskim) lub postępować zgodnie z tymi instrukcjami:
@@ -86,7 +86,7 @@ Aby uczynić ją bardziej efektowną, możesz udawać, że czytasz w myślach, m
 
 ### Analizowanie sztuczki parzystości
 
-{panel type="teacher-note" summary="Ten podrozdział zawiera materiał rozszerzony"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Ten podrozdział zawiera materiał rozszerzony"}
 Ten podrozdział jest rozszerzeniem skierowanym do zapalonych uczniów. Dzieci w szkole podstawowej były w stanie zrozumieć wiele z tych pomysłów, choć tak naprawdę zależy to od zaangażowania uczniów w materiał.
 {panel end}
 
@@ -146,14 +146,14 @@ Możesz zacząć używając numeru kodu kreskowego ,,9 300675 036009''.
 
 {interactive name="checksum-calculator-gtin-13" type="in-page"}
 
-{panel type="teacher-note" summary="Pozyskiwanie większej ilości kodów kreskowych"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Pozyskiwanie większej ilości kodów kreskowych"}
 Możesz przynieść różne opakowania, które mają kody kreskowe, żeby klasa mogła je ocenić, albo przynieść zdjęcia kodów kreskowych.
 {panel end}
 
 Co się stanie, jeśli popełnisz błąd podczas wpisywania 12 cyfr (spróbuj zmienić jedną cyfrę)?
 Czy można wykryć, że popełniono błąd?
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 Jeśli zmieni się tylko jedna cyfra, cyfra kontrolna będzie zawsze nieprawidłowa, a błąd zostanie wykryty.
 {panel end}
 
@@ -167,7 +167,7 @@ Jeden z następujących numerów produktów zawiera jedną niepoprawną cyfrę. 
 - 9 400559 001014
 - 9 300617 013199
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 Ostatni kod zawiera literówkę; powinno być 9 300617 003199. Uczniowie powinni być w stanie wykryć, że jest nieprawidłowy, ale nie da się ustalić, jaka jest właściwa wartość.
 {panel end}
 
@@ -180,13 +180,13 @@ Czy uda im się ustalić, że dostali błędny kod kreskowy?
 
 Jeśli jedna cyfra jest niepoprawna, to wyliczona cyfra kontrolna da inną wartość niż ma cyfra w kodzie, co zasygnalizuje błąd. Tak więc błędy jednocyfrowe *zawsze* zostaną wykryte, ale co jeśli dwie cyfry ulegną zmianie -- czy zawsze błąd zostanie wykryty?
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 Jeśli zostaną zmienione dwie cyfry, błąd może pozostać niewykryty; na przykład zmiana 9 400559 001014 na 6 500559 001014 nadal będzie generować sumę kontrolną 4, która wydaje się być zgodna. Jednak jest mało prawdopodobne, że dwa błędy tak się zniosą (uczniowie mogą zbadać, jak często to się dzieje).
 {panel end}
 
 Co jeśli błąd występuje w samej sumie kontrolnej, ale nie w innych cyfrach -- czy zostanie wykryty?
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 Niektórzy uczniowie mogą się martwić, że wystąpi problem, jeśli to suma kontrolna zostanie zmieniona, ale oczywiście jeśli zostanie ona wpisana niepoprawnie, to nie będzie ona pasować do sumy innych cyfr, a błąd zostanie wykryty.
 {panel end}
 
@@ -213,7 +213,7 @@ Istnieją również mniej powszechne błędy, popełniane przez ludzi:
 
 Eksperymentuj dalej z programem interaktywnym. Jakie błędy zostały wykryte? Jakie znajdziesz błędy, które nie zostaną wykryte? Czy typowe błędy prawie zawsze zostają wykryte? Czy potrafisz znaleźć sytuacje, w których nie zostają? Spróbuj znaleźć przykłady tylu różnych rodzajów wykrywalnych i niewykrywalnych błędów, ile tylko możesz.
 
-{panel type="teacher-note" summary="Częste błędy"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Częste błędy"}
 
 Uczniowie mogą próbować odwrócić wszystkie cyfry lub całkowicie je zmienić i pokazać, że cyfra kontrolna pozostaje taka sama, a następnie twierdzić, że jest to ograniczenie algorytmu, ale nie jest to dobra ocena. Muszą myśleć o tym, jak algorytm jest normalnie używany, np. przez kasjera wprowadzającego numer kodu kreskowego do komputera, pielęgniarkę wprowadzającą numer identyfikacyjny pacjenta lub kogoś, kto kupuje coś online i podaje numer karty kredytowej, czyli rozważyć błędy, których realistycznie można się spodziewać. Błędy wymienione powyżej dobrze obejmują możliwe rodzaje błędów, chociaż uczniowie mogą wymyślić więcej. Oczywiście ważniejsze jest, żeby wykrywać błędy naprawdę powszechne, ale miło byłoby, gdyby wykrywane były też mniej popularne, choć nadal mogące wystąpić. Należy jednak pamiętać, że dla algorytmu byłoby większym problemem, gdyby nie mógł wykryć zmiany 1 cyfry, niż gdyby na przykład nie można było wykryć zmiany 3 cyfr.
 
@@ -224,7 +224,7 @@ Dysleksja i związane z nią problemy mogą być interesującą kwestią do rozw
 
 {panel end}
 
-{panel type="teacher-note" summary="Pisanie programu wykrywania błędów"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Pisanie programu wykrywania błędów"}
 
 Skłonienie uczniów do napisania programu do obliczania sum kontrolnych jest dobrym ćwiczeniem programistycznym. Można zadanie uprościć poprzez założenie, że użytkownik będzie wpisywał każdą cyfrę osobno, lub można rozdzielenie cyfr we wpisanym ciągu uczynić częścią ćwiczenia. Utworzenie arkusza kalkulacyjnego do tych obliczeń również nie jest trudne.
 
@@ -270,7 +270,7 @@ Dodaj wszystkie pomnożone liczby, aby otrzymać *sumę*.
 Jeśli ostatnia cyfra sumy wynosi 0, numer został wprowadzony poprawnie.
 (To oznacza, że reszta z dzielenia przez 10 wynosi 0).
 
-{panel type="curiosity" summary="Wyliczanie sumy kontrolnej w pamięci"}
+{panel type="curiosity" title="Ciekawostka" summary="Wyliczanie sumy kontrolnej w pamięci"}
 
 W przypadku 13-cyfrowych kodów kreskowych szybkim sposobem otrzymania sumy kontrolnej, dającym się wyliczyć w pamięci (przy pewnej wprawie), jest wzięcie osobno liczb, które mają być pomnożone przez 3, dodanie ich, a następnie pomnożenie przez 3. Dla przykładu powyżej (9300675032247) dwie grupy liczb to 9+0+6+5+3+2+7=32 i 3+0+7+0+2+4=16. Więc dodajemy 32 + 16x3, co daje sumę 80 łącznie z cyfrą kontrolną.
 
@@ -286,7 +286,7 @@ W powyższym przykładzie oznacza to, że kończymy wyliczając 6x3, co daje 8 (
 Wszystkie te skróty mogą bardzo ułatwić liczenie sumy w pamięci.
 {panel end}
 
-{panel type="teacher-note" summary="Sprawdzanie a obliczanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Sprawdzanie a obliczanie"}
 
 Uczniowie powinni być w stanie dostrzec związek między tymi dwoma algorytmami (wyznaczaniem cyfry kontrolnej w porównaniu z dodawaniem wszystkich 13 cyfr żeby je sprawdzić). Ponieważ 13. cyfra znajduje się na pozycji o nieparzystym numerze, zostaje pomnożona przez 1 w drugim algorytmie, zanim zostanie dodana do sumy.
 Ponieważ cyfra kontrolna została wybrana tak, aby ostatnia cyfra sumowała się do wielokrotności 10 (która zawsze kończy się na 0), to jeśli liczba w drugim algorytmie została poprawnie wprowadzona, suma też będzie kończyła się na 0.
@@ -294,7 +294,7 @@ Ponieważ cyfra kontrolna została wybrana tak, aby ostatnia cyfra sumowała si�
 {panel end}
 
 
-{panel type="extra-for-experts" summary="Dlaczego ten algorytm działa tak dobrze?"}
+{panel type="extra-for-experts" title="Dla ekspertów" summary="Dlaczego ten algorytm działa tak dobrze?"}
 
 Aby być skutecznym, algorytm musi zapewnić, że pomnożone cyfry nie zsumują się do wielokrotności 10, gdyby zostały tylko nieznacznie zmienione. Wybór mnożników wpływa na prawdopodobieństwo wykrycia niewielkich zmian w danych wejściowych. Możliwe jest matematyczne przeanalizowanie tego, jakie rodzaje błędów da się wykryć.
 
@@ -384,7 +384,7 @@ Para cyfr, które są od siebie oddzielone jedną cyfrą, będzie zawsze mnożon
 End of extra-for-experts
 {comment end}
 
-{panel type="project" summary="Projekt z sumą kontrolną"}
+{panel type="project" title="Projekt" summary="Projekt z sumą kontrolną"}
 
 Poniższy program interaktywny wygeneruje losowe numery wybranego typu (np. numery ISBN dla książek).
 Te numery są losowe i nie są oparte na numerach rzeczywistych książek (ani kont bankowych!).
