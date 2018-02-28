@@ -22,13 +22,13 @@ Zaczniemy od spojrzenia na kilka bardzo prostych czatbotów, które zostały zap
 
 ### Terapeutyczna sesja z Elizą
 
-{panel type="teacher-note" summary="Czatboty na lekcji"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Czatboty na lekcji"}
 Jeśli ten materiał jest używany w klasie i czas jest ograniczony, upewnij się, że uczniowie nie spędzają za dużo czasu, rozmawiając z każdym z czatbotów. 15 minut to maksymalny czas na rozmowę z każdym czatbotem — Elizą, Mitsuku i Cleverbotem (w sumie 45 minut) oraz dodatkowe 15 — 45 minut (w zależności od ograniczeń czasowych) dla uczniów na poszukanie innych czatbotów.
 {panel end}
 
 Jednym z takich czatbotów jest **Eliza**, która stara się naśladować psychoterapeutkę rogeriańską i brzmi najbardziej inteligentnie w rozmowach, które miałyby miejsce podczas sesji terapeutycznej. ([Psychoterapia rogeriańska](https://pl.wikipedia.org/wiki/Psychoterapia_zorientowana_na_klienta) – jest to technika, która polega na próbie zrozumienia pacjenta poprzez zadawanie pytań i przetwarzaniu fragmentów jego wypowiedzi w celu upewnienia go, że zostały one poprawnie zrozumiane). 
 
-{panel type="caution" summary="Czatboty i informacje osobiste!"}
+{panel type="caution" title="Ostrzeżenie"  summary="Czatboty i informacje osobiste!"}
 Eliza jest systemem, który został stworzony, aby pokazać ludziom świat SI i nie powinna być używana do prawdziwych sesji terapeutycznych. Nigdy nie powinieneś podawać osobistych informacji komputerowi, tzn. takich, które nie chciałbyś, aby inni przeczytali. Nigdy nie możesz być pewien, że strona internetowa nie zbiera informacji i nie przekazuje ich dalej. Nie pisz Elizie takich rzeczy, które prawdziwy pacjent powiedziałby na sesji terapeutycznej — w czasie rozmowy z nią zmyślaj. Z tego samego powodu nie przekazuj żadnemu czatbotowi żadnych innych osobistych informacji, w szczególności imienia i nazwiska, daty urodzenia lub adresu.
 {panel end}
 
@@ -42,24 +42,18 @@ Myślisz, że Eliza jest tak samo mądra jak człowiek? Czy uwierzyłbyś, że E
 Prawdopodobnie zgodzisz się, że chociaż Eliza brzmi czasami trochę inteligentnie, to zadaje ona bardzo niejasne i ogólnikowe pytania. Zapomina o wcześniejszej części rozmowy i czasami mówi rzeczy, które brzmią bardzo dziwnie! Jako przykład przeanalizuj poniższą rozmowę:
 
 
-**Eliza**: Cześć, Jestem Eliza.
-
-**Człowiek**: Cześć, jestem człowiekiem.
-
-**Eliza**: Czy wierzysz to, że to normalne być człowiekiem?
-
-**Człowiek**: Tak.
-
-**Eliza**: Jesteś pewny?
-
-**Człowiek**: Tak.
-
-**Eliza**: Dlaczego powtarzasz się?
+**Eliza**: Cześć, Jestem Eliza.  
+**Człowiek**: Cześć, jestem człowiekiem.  
+**Eliza**: Czy wierzysz to, że to normalne być człowiekiem?  
+**Człowiek**: Tak.  
+**Eliza**: Jesteś pewny?  
+**Człowiek**: Tak.  
+**Eliza**: Dlaczego powtarzasz się?  
 
 
 Wypowiedzi Elizy są bardzo ogólnikowe. Korzysta z wbudowanych wzorów wypowiedzi lub opiera się tylko na ostatniej wpisanej przez ciebie linijce tekstu. Prowadzi to często do bardzo dziwnych konwersacji, takich jak ta powyżej! W tym przypadku, gdy powiedziałem, że jestem człowiekiem, wtedy Eliza użyła dopasowania wzorców do słów kluczowych i zapytała „Czy wierzysz w to, że to normalne być człowiekiem?”. Jeśli powiedziałbym „Jestem bananem”, wtedy ta sama reguła wygenerowałaby pytanie „Czy wierzysz w to, że to normalne być bananem?”. Gdy odpowiedziałem „Tak”, to właściwie Eliza nie zrozumiała znaczenia mojej wypowiedzi, więc po prostu zapytała mnie, czy byłem tego pewny. Ma ona generalną zasadę, że gdy ktoś mówi „Tak”, to dobrze jest go zapytać czy na pewno. Eliza ma także wzorce, które są wywoływane, gdy ktoś powtarza się. Eliza tak naprawdę nie rozumie tego, co do niej piszesz (znaczenia tekstu), zamiast tego trzyma się reguł, które podpowiadają, co może być właściwą odpowiedzią. W żaden sposób nie jest w stanie stwierdzić, że dwukrotna odpowiedź „Tak” była dla mnie naprawdę ważna! To właściwie duża wskazówka, że Eliza nie jest tak naprawdę inteligentna i nie rozumie kontekstu rozmowy, a nawet tego, czy odpowiedź na jej pytanie jest lub nie jest sensowna.
 
-{panel type="teacher-note" summary="Odpowiedzi Elizy"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Odpowiedzi Elizy"}
 Te odpowiedzi, które daje Eliza, są nazywane *odpowiedziami predefiniowanymi* (ang. canned responses).
 {panel end}
 
@@ -95,12 +89,12 @@ Jakość tych reguł determinuje to, jak inteligentnie czatbot będzie brzmiał.
 
 Mitsuku jest bez wątpienia bardziej inteligentna od Elizy, jednak nadal ma ograniczenia. Czasami sama się do nich przyznaje!!
 
-**Człowiek**: Co wydarzy się w roku 2000?
-**Mitsuku**: Nie mogę przewidzieć przyszłości.
-**Człowiek**: To jest przeszłość.
-**Mitsuku**: Tak, to jest coś z przeszłości.
-**Człowiek**: Więc dlaczego powiedziałaś, że nie możesz przewidzieć przyszłości?
-**Mitsuku**: To była wstępnie zaprogramowana odpowiedź, całkowicie zdeterminowana przez twoje stwierdzenie.
+**Człowiek**: Co wydarzy się w roku 2000?  
+**Mitsuku**: Nie mogę przewidzieć przyszłości.  
+**Człowiek**: To jest przeszłość.  
+**Mitsuku**: Tak, to jest coś z przeszłości.  
+**Człowiek**: Więc dlaczego powiedziałaś, że nie możesz przewidzieć przyszłości?  
+**Mitsuku**: To była wstępnie zaprogramowana odpowiedź, całkowicie zdeterminowana przez twoje stwierdzenie.  
 
 
 Człowiek w tej rozmowie musiał być trochę złośliwy, oszukując ją i mówiąc „co wydarzy się”. Jej zasady nie przewidują, że człowiek może ją w taki sposób traktować. 
@@ -113,7 +107,7 @@ Istnieją innego rodzaju czatboty, które są w stanie uczyć się zasad od ludz
 
 Twórcy uczących się czatbotów przyjęli zasadę, że gdy próbujesz symulować ludzką inteligencję, wtedy prawdopodobnie uczenie się od ludzi jest drogą do celu.
 
-{panel type="caution" summary="Interakcja z czarbotami, które się uczą"}
+{panel type="caution" title="Ostrzeżenie"  summary="Interakcja z czarbotami, które się uczą"}
 Poniższe ćwiczenie wymaga interakcji z jednym z czatbotów, które się uczą. Ponieważ czatbot uczy się od ludzi, z dość dużym prawdopodobieństwem nauczył się mówić rzeczy, które dla ciebie mogą być bardzo obraźliwe. Mimo, że staraliśmy się wybrać czatboty, które nie wypowiadają się obraźliwie, nie możemy zagwarantować, że nie usłyszysz czegoś niepożądanego; zachowaj zatem dystans do tego, co się wydarzy. Możesz także pominąć to ćwiczenie i nadal zrozumieć główne założenia tego rozdziału. Ponieważ Eliza i Mitsuku nie uczą się od ludzi, nigdy nie powiedzą obraźliwych rzeczy, dopóki ty nie zrobisz tego pierwszy!
 
 Przypominamy znowu, nie używaj w konwersacji z czatbotami twoich danych personalnych (takich jak imię i nazwisko, data urodzenia, adres i żadnej innej informacji, której nie chciałbyś nikomu udostępnić). Gdy potrzeba, zmyślaj. Bardzo prawdopodobne, że czatbot, który uczy się od ludzi, przekaże, to co powiedziałeś, innym ludziom, żeby brzmieć inteligentnie w stosunku do *nich*.
@@ -135,7 +129,7 @@ Być może musimy dołączyć wykres, który pokazuje proces uczenia się, tak a
 
 Fundamentem dla Cleverbota jest założenie, że ludzie są rzeczywiście inteligentni i będą uczyli go mówienia inteligentnych rzeczy. Jeśli na przykład człowiek powie Cleverbotowi coś jak „szkoła jest nudna” w odpowiedzi na „hej”, Cleverbot może nauczyć się, że gdy osoba powie „hej”, to właściwą odpowiedzią Clverbota jest „Szkoła jest nudna”!
 
-{panel type="curiosity" summary="Krótki film stworzony przez Cleverbota"}
+{panel type="curiosity" title="Ciekawostka"  summary="Krótki film stworzony przez Cleverbota"}
 
 Obejrzyj krótki film ["Do You Love Me"](https://www.youtube.com/watch?v=QkNA7sy5M5s) (około 3 min), którego scenariusz napisał Cleverbot wraz z Chrisem R. Wilsonem.
 
@@ -163,11 +157,11 @@ Istnieją również inne formy testu Turinga. Gry akcji mają czasami postać st
 
 W rzeczywistości wiele aspektów ludzkiej inteligencji mogłoby zostać przetestowanych przed odmianę testu Turinga. Jeśli chciałbyś mieć komputerowego szachistę, który wyglądałby jak człowiek, a nie komputer (niektórzy ludzie woleliby grać przeciwko człowiekowi, a nie komputerowi), możesz również użyć do tego testu Turinga! Jakie inne możliwe testy Turinga możesz wymyślić?
 
-{panel type="curiosity" summary="Prawdziwy test Turinga"}
+{panel type="curiosity" title="Ciekawostka"  summary="Prawdziwy test Turinga"}
 Alan Turing zaczął od zaproponowania prostej gry towarzyskiej wymagającej trzech graczy, w której pierwszym graczem była kobieta, drugim graczem był mężczyzna, a trzecim graczem mógł być zarówno mężczyzna, jak i kobieta i przejmował on rolę „przesłuchującego”. Przesłuchujący znajdował się w innym pokoju niż pozostała dwójka graczy i mógł komunikować się z nimi tylko przekazując notatki (np. przez przekazywanie notatek pod drzwiami). Mężczyzna musiał spróbować przekonać przesłuchującego, że jest tak naprawdę kobietą, a kobieta — że jest kobietą. Na koniec przesłuchujący musiał powiedzieć, kto był mężczyzną, a kto kobietą i jeśli odgadł niepoprawnie, to mężczyzna „wygrywał”.
 {panel end}
 
-{panel type="project" summary="Uruchom swój własny test Turinga na czatbocie"}
+{panel type="project" title="Projekt"  summary="Uruchom swój własny test Turinga na czatbocie"}
 
 Ten projekt wymaga przeprowadzenia testu Turinga. Przeczytaj uważnie ten podrozdział (jak i poprzedni, jeśli jeszcze tego nie zrobiłeś) i upewnij się, że rozumiesz wszystko.
 
