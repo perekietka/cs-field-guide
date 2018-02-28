@@ -1,6 +1,6 @@
 # Inżynieria oprogramowania
 
-{panel type="teacher-note" summary="Wyzwania związanie z nauczaniem inżynierii oprogramowania"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Wyzwania związanie z nauczaniem inżynierii oprogramowania"}
 Inżynieria oprogramowania jest trudnym zagadnieniem do nauczenia z kilku powodów. Jednym z nich jest fakt, że wiele, jeśli nie większość, podręczników nie jest pisana przez praktyków i często zaczyna się nauczanie od modelu wodospadu (zwanego również modelem kaskadowym), które na dodatek są trudne do zrozumienia dla studentów (na przykład model wodospadu jest często nauczany na początku, chociaż nie sprawdza się w praktyce, a właściwie powinien służyć jako przykład tego, jak *nie* robić inżynierii oprogramowania).
 
 Ponadto zdobycie prawdziwego doświadczenia w dziedzinie inżynierii oprogramowania wymagałoby zaangażowania zespołu wykwalifikowanych inżynierów pracujących nad projektem o niejasnych i zmieniających się potrzebach. Jest to bardzo trudne w środowisku edukacyjnym, gdzie normą jest indywidualna praca wykonywana przez niedoświadczonych uczniów, którym podano jasne kryteria, na podstawie których będą oceniani.
@@ -39,7 +39,7 @@ Co więcej, systemy komputerowe są przydatne tylko wtedy, gdy ułatwiają nam �
 Z biegiem czasu, gdy komputery stają się mniejsze i tańsze (zgodnie z prawem Moore'a), odeszliśmy od współdzielenia komputerów, do których trzeba czekać w kolejce. Obecnie często posiadamy wiele urządzeń cyfrowych, i to urządzenia muszą czekać na człowieka.
 W systemie cyfrowym człowiek jest najważniejszym elementem!
 
-{panel type="curiosity" summary="Prawo Moore'a"}
+{panel type="curiosity" title="Ciekawostka" summary="Prawo Moore'a"}
 W 1965 roku Gordon Moore zauważył, że liczba tranzystorów na układach scalonych podwaja się mniej więcej co dwa lata. Oznacza to, że moc obliczeniowa komputerów również podwajała się co dwa lata (czasami podawane jest 18 miesięcy, gdyż przeważnie wzrostowi liczby tranzystorów towarzyszy zwiększenie ich wydajności). Moore powiedział, że spodziewa się kontynuacji tego trendu przez co najmniej 10 lat.
 
 Co ciekawe, prawo Moore'a sprawdzało nie tylko 10 lat, ale nadal działa (chociaż przewiduje się spowolnienie w ciągu najbliższych kilku lat). Oznacza to, że dzisiejsze komputery są ponad 100 milionów razy szybsze niż w 1965 roku! (W 2015 roku minęło 50 lat od 1965 roku, co oznacza, że według prawa Moore'a moc obliczeniowa podwoiła się około 25 razy, {math}2 ^{25}{math end} wynosi 16 777 216, więc jeśli komputery mogły uruchomić jedną instrukcję na sekundę w 1965 roku, to teraz mogą ich uruchomić 33 544 432). Oznacza to również, że jeśli kupisz dziś komputer, możesz żałować za dwa lata, gdy nowe komputery będą dwa razy szybsze. Prawo Moore'a odnosi się także do innych ulepszeń w urządzeniach cyfrowych, takich jak moc przetwarzania w telefonach komórkowych i liczba pikseli w matrycach aparatów cyfrowych.
@@ -51,7 +51,7 @@ Mimo że inżynieria oprogramowania przeszła długą drogę w ostatnich dziesi�
 
 W tym rozdziale przyjrzymy się podstawom inżynierii oprogramowania. Wprowadzony zostanie temat *analizy* problemu, który pozwoli poznać rodzaj oprogramowania, jaki należy zbudować; omówimy pokrótce, jak *zaprojektować* i zbudować oprogramowanie, a następnie poświęcimy nieco czasu *testowaniu* oprogramowania, które jest jednym z najważniejszych kroków, w celu uniknięcia błędów. Jak widać poniżej, analiza, projektowanie i testowanie to ważne kroki przy tworzeniu oprogramowania. Właściwe programowanie zajmuje zwykle tylko 20% czasu w projekcie (w tym rozdziale prawie nie będziemy o tym wspominać)!
 
-{panel type="curiosity" summary="Więcej informacji o błędach w oprogramowaniu"}
+{panel type="curiosity" title="Dla ciekawych" summary="Więcej informacji o błędach w oprogramowaniu"}
 O ile każdy chce aby jego projekt się powiódł, na błędach można się wiele nauczyć! Oto niektóre strony, które dostarczają dalszych materiałów (po angielsku) na ten temat.
 
 - [Z powrotem do tablicy projektowej -- CS4FN](http://www.cs4fn.org/softwareengineering/backtodrawingboard.php)
@@ -98,7 +98,7 @@ Klienci są zwykle ekspertami w swojej dziedzinie i dlatego mogą pominąć info
 
 {image filename="xkcd-tasks.png" hover-text="W latach sześćdziesiątych Marvin Minsky wyznaczył kilku studentów do spędzenia wakacji na programowaniu komputera w celu użycia kamery do identyfikacji obiektów. Wydawało mu się, że problem zostanie rozwiązany pod koniec wakacji. Pół wieku później wciąż nad tym pracujemy." alt="Rysunek xkcd na temat zadań programistycznych" source="https://xkcd.com/1425/"}
 
-{panel type="curiosity" summary="Łatwe dla komputerów i trudne dla ludzi, a trudne dla komputerów i łatwe dla ludzi"}
+{panel type="curiosity" title="Ciekawostka" summary="Łatwe dla komputerów i trudne dla ludzi, a trudne dla komputerów i łatwe dla ludzi"}
 Tekst ukazujący się po najechaniu myszką na powyższy rysunek (wygodniej przeczytać go na [stronie xkcd](https://xkcd.com/1425/)) jest również wart przeczytania. Rozpoznawanie obrazów to problem, który początkowo wydawał się prosty, prawdopodobnie dlatego, że ludzie uważają to za łatwe. Interesujące jest to, że wiele problemów jest łatwych dla komputerów, chociaż wydają się trudne dla ludzi. Na przykład pomnożenie dwóch dużych liczb. Z drugiej strony, istnieje wiele innych problemów, których komputery nie potrafią rozwiązać, natomiast dla ludzi nie stanowią one problemu, na przykład rozpoznanie, że zdjęcie przedstawia kota.
 {panel end} 
 
@@ -108,7 +108,7 @@ Co zrobisz z tymi sprzecznymi punktami widzenia? W tym przypadku potrzebujesz po
 
 Jednak, nawet jeśli zrobisz porządną analizę projektu, porozmawiasz ze wszystkimi interesariuszami i ustalisz wszystkie wymagania dotyczące oprogramowania, wymagania mogą ulec zmianie podczas tworzenia oprogramowania. Duże projekty mogą trwać latami. Wyobraź sobie, ile zmian w świecie technologii ma miejsce w ciągu roku! Podczas pracy nad projektem może pojawić się nowy sprzęt (telefony, komputery, tablety, …) lub konkurencja może wypuścić oprogramowanie bardzo podobne do tego, co robisz. Twoje oprogramowanie może również zmienić sytuację na rynku: po dostarczeniu oprogramowania klient spróbuje z nim pracować i może odkryć, że to nie jest to, czego naprawdę chciał. Dlatego nigdy nie powinieneś zakładać, że wymagania będą ustalone raz na zawsze. Najlepiej byłoby regularnie rozmawiać z klientami podczas całego projektu i zawsze być gotowym na zmianę wymagań!
 
-{panel type="project" summary="Ustalanie wymagań"}
+{panel type="project" title="Projekt" summary="Ustalanie wymagań"}
 W przypadku tego projektu musisz znaleźć kogoś, dla kogo mógłbyś wykonać oprogramowanie. Może to być ktoś z twojej rodziny lub przyjaciel. Mogą na przykład potrzebować oprogramowania do zarządzania informacjami o klientach swoich firm lub klubu szachowego, co może wymagać oprogramowania do planowania turniejów szachowych lub pomóc w ustalaniu harmonogramu treningów. (W przypadku tego projektu tak naprawdę nie będziesz tworzyć oprogramowania, tylko ustalać wymagania. Jeśli projekt jest na tyle mały, że możesz go samemu zaprogramować, prawdopodobnie nie jest wystarczająco duży, żeby być dobrym przykładem dla inżynierii oprogramowania!)
 
 Po znalezieniu tematu dla projektu zacznij od zidentyfikowania i opisania interesariuszy. (Projekt będzie najbardziej pouczający, jeśli masz co najmniej dwóch różnych interesariuszy.) Spróbuj ustalić wszystkich interesariuszy, pamiętając, że niektórzy z nich mogą być jedynie pośrednio zainteresowani twoim oprogramowaniem. Na przykład, jeśli tworzysz bazę danych do przechowywania informacji o klientach, klienci, których dane są przechowywane, mogą być zainteresowani twoim oprogramowaniem, nawet jeśli nigdy nie używają go bezpośrednio; będą chcieli, aby oprogramowanie było bezpieczne, aby ich dane nie mogły zostać skradzione. Stwórz opis każdego interesariusza, podając jak najwięcej szczegółów. Kim oni są? Jakie cele mogą uzyskać dzięki oprogramowaniu? Jaką mają wiedzę techniczną? …
@@ -118,7 +118,7 @@ Przepytaj *jednego* z interesariuszy, aby dowiedzieć się, jakie są jego oczek
 Spróbuj wyobrazić sobie, jakie byłyby ich wymagania dla pozostałych interesariuszy. W szczególności spróbuj ustalić, czym ich wymagania różnią się od wymagań innych interesariuszy. Możliwe, że dwóch interesariuszy ma te same wymagania, ale czy mogą mieć różne priorytety dla każdego z nich? Sprawdź, czy możesz wymienić potencjalne rozbieżności lub konflikty między zainteresowanymi stronami? Jeśli tak, to jak byś je rozwiązał?
 {panel end}
 
-{panel type="teacher-note" summary="Wybór dobrego tematu dla projektu"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Wybór dobrego tematu dla projektu"}
 Temat projekt będzie dobrze dobrany, jeśli będzie dość złożony, z wieloma różnymi interesariuszami i wymaganiami. Prosta baza danych klientów dla firmy prawdopodobnie nie wygeneruje wielu interesujących wymagań.
 {panel end}
 
@@ -156,7 +156,7 @@ Możemy zastosować podobne „warstwowe” podejście w ramach jednego programu
 
 {image filename="facebook-three-tier-system.png" alt="Facebook można rozpatrywać jako system trzywarstwowy składający się z warstwy prezentacji, warstwy logicznej oraz warstwy danych." caption="Facebook można rozpatrywać jako system trzywarstwowy, składający się z warstwy prezentacji, warstwy logicznej oraz warstwy danych."}
 
-{panel type="curiosity" summary="Ponowne użycie -- kangury i helikoptery"}
+{panel type="curiosity" title="Ciekawostka" summary="Ponowne użycie -- kangury i helikoptery"}
 
 Ponieważ budowanie oprogramowania jest tak trudne i czasochłonne, popularnym rozwiązaniem stało się ponowne wykorzystanie istniejącego oprogramowania. Nie będzie zaskoczeniem, że tę praktykę będziemy nazywać *ponownym użyciem* oprogramowania. Teoretycznie jest to świetny sposób postępowania (dlaczego tworzyć coś od nowa, skoro już istnieje?), lecz okazuje się trudny do zastosowania w praktyce. Wynika to z faktu, że istniejące oprogramowanie jest również ogromne i skomplikowane. Zwykle, gdy ponownie używasz oprogramowania, potrzebujesz tylko niewielkiej części funkcjonalności istniejącego oprogramowania, a nie wszystkiego.
 
@@ -170,7 +170,7 @@ We could include a cartoon kangaroo in this curiosity box
 
 {panel end}
 
-{panel type="project" summary ="Projektowanie oprogramowania"}
+{panel type="project" title="Projekt" summary ="Projektowanie oprogramowania"}
 Wróć do wymagań, które znalazłeś w opisanej powyżej analizie. W tym projekcie przyjrzymy się temu, jak projektowane jest oprogramowanie.
 
 Zacznij od zastanowienia się jak możesz podzielić oprogramowanie, które masz zamiar zbudować, na mniejsze części. Może zawiera bazę danych lub interfejs użytkownika, lub stronę internetową? Na przykład wyobraź sobie, że piszesz oprogramowanie do sterowania robotem. Robot musi używać czujników, aby podążać za czarną linią wyznaczoną na podłodze, aż dotrze do celu. Oprogramowanie twojego robota powinno mieć część, która współdziała z czujnikami, aby uzyskać informacje o tym, co „widzą”. Powinien następnie przekazać tę informację do innej części, która analizuje dane i decyduje, dokąd dalej się poruszać. Na koniec powinieneś mieć część oprogramowania, która współdziała z kołami robota, aby poruszać się w określonym kierunku.
@@ -195,7 +195,7 @@ Niestety, ze względu na rozmiar i złożoność oprogramowania, testowanie jest
 
 Kiedy testujemy oprogramowanie, wypróbowujemy wiele różnych danych wejściowych i widzimy, jakie jest zachowanie programu. Jeśli wynik jest niepoprawny, znaleźliśmy błąd.
 
-{panel type="curiosity" summary="Błędy i ćmy"}
+{panel type="curiosity" title="Ciekawostka" summary="Błędy i ćmy"}
 
 {image filename="harvard-mark-ii.jpg" alt="Komputer Mark II na Harvardzie" caption="Komputer Mark II na Harvardzie"}
 
@@ -252,7 +252,7 @@ Testy jednostkowe są bardzo użyteczne przy wyszukiwaniu błędów. Pomagają n
 Interesariusze mogą być bardzo zróżnicowani, na przykład pod względem umiejętności technicznych, a nawet mogą dostarczyć nam sprzeczne wymagania dotyczące oprogramowania. Możliwe jest zatem uzyskanie pozytywnych opinii od jednego z interesariuszy i negatywnych opinii od innych.
 
 
-{panel type="project" summary="Testy akceptacyjne"}
+{panel type="project" title="Projekt" summary="Testy akceptacyjne"}
 Jako projekt wybierz niewielki program, taki jak aplikacja systemu Windows lub widget pulpitu Apple.
 Wybierz coś, co uznasz za szczególnie interesujące lub przydatne (np. licznik czasu, słownik lub kalkulator). Zacznij od przeczytania opisu programu, aby dowiedzieć się, co robi *przed* jego wypróbowaniem.
 
@@ -263,7 +263,7 @@ Teraz możesz śmiało zainstalować program i pobawić się z nim. Spróbuj sob
 Sporządź krótki raport z testu akceptacyjnego o tym, co znalazłeś. Spróbuj znaleźć powiązania z wymaganiami zapisanymi wcześniej, zaznaczając, które zostały spełnione (lub częściowo spełnione), a które nie. Czy uważasz, że interesariusz byłby zadowolony z oprogramowania? Czy myślisz, że chętnie by  z niego korzystali? Jakie funkcje warto by dodać do programu?
 {panel end}
 
-{panel type="teacher-note" summary="Czytanie opisu"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Czytanie opisu"}
 
 Dla tego zadania ważne jest, aby uczniowie przeczytali opis programu i pomyśleli o interesariuszu i jego wymaganiach, zanim faktycznie wypróbują oprogramowanie. W przeciwnym, ich myślenie o interesariuszu i wymaganiach może być zniekształcone przez znajomość programu.
 
@@ -297,7 +297,7 @@ Proces ten nazywamy kaskadowym, ponieważ po „przeskoku” z jednej fazy proje
 
 Zaletą modelu kaskadowego jest to, że jest bardzo prosty i łatwy do przeprowadzenia. W dowolnym punkcie projektu bardzo jasne jest, na jakim etapie projektu się znajdujesz. Pomaga to również w planowaniu: jeśli jesteś na etapie testowania, wiesz, że jesteś już daleko w projekcie i wkrótce powinien się on zakończyć. Z tych powodów proces wodospadu jest bardzo popularny wśród menedżerów, którzy lubią poczucie kontroli nad tym, gdzie jest projekt i dokąd zmierza.
 
-{panel type="curiosity" summary="Prawo Hofstadtera"}
+{panel type="curiosity" title="Ciekawostka" summary="Prawo Hofstadtera"}
 Twój menadżer i klient prawdopodobnie często będą pytać, ile czasu zajmie tobie projekt i kiedy ostatecznie stworzysz gotowy program. Niestety, naprawdę trudno jest przewidzieć, jak długo projekt będzie jeszcze trwał. Zgodnie z prawem Hofstadtera: „Projekt zawsze trwa dłużej niż się spodziewasz, nawet jeśli weźmiesz pod uwagę prawo Hofstadtera”.
 Uczenie się dokonywania dobrych oszacowań jest ważną częścią inżynierii oprogramowania.
 {panel end}
@@ -332,7 +332,7 @@ Poza pytaniem o to, co robimy w danym momencie realizacji projektu, kolejną int
 
 Po zakończeniu opracowywania programu i przekazaniu go klientowi, główna część projektu oprogramowania dobiegła końca. Jednak ważne jest, abyś nie przestawał nad nim pracować. Kolejna część projektu, która często trwa przez lata, nazywa się *utrzymaniem*. Podczas tej fazy naprawiasz błędy, zapewniasz obsługę klienta, a być może nawet dodajesz nowe funkcje, których potrzebują klienci.
 
-{panel type="curiosity" summary="Prawo Brooksa"}
+{panel type="curiosity" title="Ciekawostka" summary="Prawo Brooksa"}
 {glossary-definition term="Prawo Brooksa" definition="Obserwacja, mowiąca że dodanie większej liczby osób do projektu, który jest spóźniony, może spowolnić projekt jeszcze bardziej."}
 
 Wyobraź sobie, że twój projekt jest spóźniony, a klient zaczyna się niecierpliwić. Twoim pierwszym odruchem może być poproszenie znajomych o pomoc, a tym samym zwiększenie liczby osób pracujących nad projektem. Prawo Brooksa sugeruje jednak, że to jest zły pomysł!
@@ -341,7 +341,7 @@ Wyobraź sobie, że twój projekt jest spóźniony, a klient zaczyna się niecie
 
 {panel end}
 
-{panel type="project" summary="Zabawa z kaskadą i zwinne procesy"}
+{panel type="project" title="Projekt" summary="Zabawa z kaskadą i zwinne procesy"}
 Model kaskadowy jest prosty i powszechnie stosowany, ale nie sprawdza się w praktyce informatycznej. W tym ćwiczeniu dowiesz się dlaczego tak jest. Najpierw utworzysz projekt, który następnie przekażesz innej grupie. Muszą go dokładnie zaimplementować i nie mogą wprowadzać żadnych zmian, nawet jeśli coś nie działa!
 
 Potrzebujesz talii kart i co najmniej 6 osób. Zacznij od podzielenia ich na grupy około 3 -- 4 osób. Musisz mieć co najmniej dwie grupy. Każda grupa powinna chwycić dwa krzesła i umieścić je w odległości około 30 cm. Zadanie polega na zbudowaniu mostu między dwoma krzesłami za pomocą kart z talii!
@@ -358,13 +358,13 @@ Które z tych podejść sprawdza się lepiej -- projektowanie wszystkiego na poc
 {panel end}
 
 
-{panel type="teacher-note" summary="Dalsze porady dotyczące powyższego projektu"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Dalsze porady dotyczące powyższego projektu"}
 Zwykle przewaga modelu zwinnego jest mocno widoczna; rzadko zdarza się, aby projektowany most działał od razu, ale zwykle można go wykonać stosując iteracyjne, zwinne podejście. Uczniowie mogą zwrócić uwagę to, że nie są przecież ekspertami od konstrukcji z kart, podczas gdy programista powinien być ekspertem od oprogramowania. Jednak prawdziwym problemem jest to, że programista prawdopodobnie nie jest ekspertem od systemu, który implementuje, ponieważ system taki prawdopodobnie nie został wcześniej zbudowany.
 
 Inną możliwością jest zachęcenie uczniów do budowania domów z kart (ważne jest, aby uczniowie pracowali w dziedzinie, której nie znają; jeśli budowali wcześniej dany obiekt z kart, to zadanie może nie zadziałać!) Dom z kart może być łatwiejszy dla młodszych uczniów; most jest sporym wyzwaniem! Możesz zadać jeszcze trudniejszy temat: zbudować jak najwyższą wieżę z kart. Alternatywą do kart mogą być klocki Lego, ale karty będą zdecydowanie trudniejszym materiałem budowlanym.
 {panel end}
 
-{panel type="project" summary="Język nawigacji"}
+{panel type="project" title="Projekt" summary="Język nawigacji"}
 W tym ćwiczeniu opracujesz język do poruszania się po swojej szkole. Wyobraź sobie, że musisz opisać swojemu koledze, jak dostać się do konkretnej sali lekcyjnej. Ten język pomoże ci podać dokładny opis, który pozwoli koledze dotrzeć do celu.
 
 Najpierw dowiedz się, co język ma pozwolić osiągnąć (znajdź *wymagania*). Czy twój język będzie przeznaczony dla całej szkoły czy tylko niewielkiej części? Jak dokładne będą opisy? Jak długie będą opisy? Jak łatwo będzie podążać za instrukcjami języka komuś, kto zna / nie zna twojego języka? Jak łatwo będzie można się go nauczyć? …
@@ -376,7 +376,7 @@ Na koniec *przetestuj* język, używając innego ucznia. Nie mów im, dokąd zmi
 Zwróć uwagę, ile czasu zabiera ci każda z różnych faz projektu. Kiedy skończysz, porozmawiaj o tym, ile czasu poświęciłeś danemu etapowi i porównaj z danymi innych uczniów. Która faza była najtrudniejsza? Która trwała najdłużej? Czy uważasz, że powinieneś mieć więcej czasu na niektóre fazy? Jakie problemy napotkaliście? Co zrobiłbyś inaczej następnym razem?
 {panel end}
 
-{panel type="project" summary="Budowanie z klocków (precyzyjna komunikacja)"}
+{panel type="project" title="Projekt" summary="Budowanie z klocków (precyzyjna komunikacja)"}
 Dobra komunikacja z innymi informatykami i klientami jest niezbędna dla programistów. W tym zadaniu możesz ćwiczyć precyzyjną komunikację!
 
 Dobierz uczniów w pary, z jednym *twórcą* i jednym *budowniczym*. Każda osoba potrzebuje zestawu co najmniej 10 kolorowych klocków (np. klocków lego). Upewnij się, że każda para ma taki sam zestaw bloków, inaczej to ćwiczenie nie zadziała!
@@ -449,7 +449,7 @@ Przedstawiciel klienta powinien być członkiem zespołu rozwijającego oprogram
 
 Chociaż posiadanie przedstawiciela klienta w zespole programistów jest świetnym pomysłem, w praktyce jest to dość trudne do osiągnięcia. Większość klientów po prostu chce przekazać wymaganie, zapłacić, a następnie odebrać oprogramowanie w ustalonym terminie. Rzadko zdarza się znaleźć klienta, który jest chętny i ma czas na większe zaangażowanie w projekt. Czasami firmy zatrudniają eksperta, który staje się częścią zespołu; na przykład firma zajmująca się oprogramowaniem dla opieki zdrowotnej może mieć w zespole lekarza lub jeśli pracuje nad oprogramowaniem edukacyjnym, może zatrudnić nauczyciela. Wydaje się to kosztownym rozwiązanie, ale ponieważ nieudane oprogramowanie może kosztować miliony, wypłacanie wynagrodzenia ekspertowi stanowi stosunkowo niewielką część całkowitych kosztów, a znacznie zwiększa prawdopodobieństwo sukcesu.
 
-{panel type="curiosity" summary="Christopher Alexander"}
+{panel type="curiosity" title="Ciekawostka" summary="Christopher Alexander"}
 Do tej pory porównywaliśmy rozwój oprogramowania głównie do inżynierii i budowania mostów, ale mogłeś zauważyć, że jest również bardzo podobny do architektury. W rzeczywistości rozwój oprogramowania (w szczególności zwinne tworzenie oprogramowania) zapożyczyło wiele koncepcji z architektury. Architekt Christopher Alexander zasugerował zaangażowanie klientów w proces projektowania. Brzmi znajomo? Kilka innych sugestii od Christophera Alexandra zostało również przejętych przez zwolenników zwinnego programowania. W rezultacie jego myślenie o architekturze ukształtowało nasz sposób myślenia o rozwoju oprogramowania. Dzieje się tak pomimo faktu, że Christopher Alexander nie wiedział nic o programowaniu. Okazało, że był bardzo zaskoczony, gdy dowiedział się, że jest dobrze znany wśród programistów!
 {panel end}
 
@@ -458,7 +458,7 @@ Do tej pory porównywaliśmy rozwój oprogramowania głównie do inżynierii i b
 „Odwaga” może wydawać się dziwny pojęciem w kontekście rozwoju oprogramowania. W procesach zwinnych rzeczy zmieniają się cały czas i dlatego programiści muszą mieć odwagę, aby wprowadzić zmiany w kodzie, naprawić problemy, poprawić projekt, wyrzucić kod, który nie działa, i tak dalej. To może nie wydawać się wielkim wyzwaniem, ale zmiana kodu może być dość przerażająca, szczególnie jeśli kod jest skomplikowany lub został napisany przez inną osobę. Testy jednostkowe naprawdę pomagają, dodając odwagi: będziesz mieć większą pewność, że zmieniając kod, nie popsujesz go.
 
 
-{panel type="project" summary="Procesy tworzenia oprogramowania"}
+{panel type="project" title="Projekt" summary="Procesy tworzenia oprogramowania"}
 To zadanie zapewni wgląd w prawdziwy proces inżynierii oprogramowania, ale musisz znaleźć inżyniera oprogramowania, który udzieli odpowiedzi na pytania dotyczące jego pracy. Najlepiej jeśli osoba ta pracuje w średniej lub dużej firmie, w której jest częścią zespołu inżynierii oprogramowania (tzn. nie jest samotnym programistą).
 
 Zadanie polega na przeprowadzeniu wywiadu z osobą doświadczoną w rozwijaniu oprogramowania. Pamiętaj, że takie osoby mogą niechętnie rozmawiać o projektach firmy i że należy zapewnić im poufność (wyniki zadania powinny być dostępne tylko uczestnikom oraz osobom zaangażowanym w jego nadzorowanie, powinieneś o tym poinformować wyraźnie na samym początku, aby zapobiec niepożądanym publikacjom).
