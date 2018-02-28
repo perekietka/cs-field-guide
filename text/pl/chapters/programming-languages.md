@@ -91,17 +91,17 @@ Zauważ, że symbol # mówi komputerowi, że powinien ignorować daną linię pr
 
 ```python3
 # Lista adresatow listu
-adresaci_spamu = ["Haniu", "Asiu", "Paulino", "Janino", "Celino", "Saro", "Doroto"]
+adresaci_spamu = ["Haniu", "Asiu", "Olu", "Alu", "Basiu", "Saro", "Doroto"]
 # Wybierz po kolei kazdego adresata z listy
 for imie in adresaci_spamu:
 # Napisz list do tego adresata
   print("Droga " + imie + ", \n")
   print("Zostalas wybrana losowo sposrod wszystkich ")
-  print("przechodzacych dzisiaj w odleglosci 2 metrow ")
-  print("od Wydzialu Matematyki i Informatyki uniwersytetu w Poznaniu.\n")
+  print("przechodzacych dzisiaj w odleglosci 2 metrow od")
+  print("Wydzialu Matematyki i Informatyki Uniwersytetu w Poznaniu.\n")
   print("W nagrode, " + imie + ", otrzymujesz ")
   print("10 milionow kilogramow czekolady!!!\n")
-  print("W dodatku, droga " + imie + ", jesli zadzwinisz do nas w czasie 10 minut ")
+  print("Do tego, droga " + imie + ", jesli zadzwinisz do nas w czasie 10 min")
   print("dostaniesz dodatkowe 5 milionow kilogramow czekolady!!! \n")
   print("\n\n\n") # Wstaw kilka pustych linii w wiadomosci
 ```
@@ -196,7 +196,7 @@ Program zaczyna się od zsumowania dwóch liczb (które zostały umieszczone w r
 
 ```
 .data          	 
-str:  .asciiz "\nWitaj Swiecie!\n"
+str:  .asciiz "\n Witaj Swiecie!\n"
 # Mozesz zmienic tekst miedzy cudzyslowami
 
 .text          	 
@@ -207,8 +207,8 @@ main:
 # W tym celu, musimy umiescic wartosci w rejestrach ($t0 oraz $t1)
 li $t0, 10 #Mozesz zmienic 10
 li $t1, 20 #Mozesz zmienic 20
-# Teraz mozemy dodac wartosc, umieszczajac wyniki w rejestrach $a0
-oraz $a0, $t0, $t1
+# Teraz mozemy dodac wartosc, umieszczajac wyniki w rejestrze $a0
+add $a0, $t0, $t1
 # Przygotowanie do wypisania wartości w $a0.
 # '1' w $v0 oznacza, ze chcemy wypisac typ int
 li $v0, 1
@@ -283,7 +283,7 @@ new_line: .asciiz "\n"
 .globl main
 
 main:
-  # Umiesc wartosc poczatkowa 5 w rejestrze $t0. Bedziemy ja zmieniac podczas dzialania programu
+  # Umiesc wartosc poczatkowa 5 w rejestrze $t0. Bedziemy ja potem zmieniac
   li $t0, 5
   # Umiesc wartosc koncowa 0 w rejestrze $t1
   li $t1, 0
@@ -381,23 +381,23 @@ W pewnym momencie nauczyciel zdaje sobie sprawę, że musi ustalić średnią (z
 Zrozumienie szczegółów poniższego kodu jest nieistotne dla tego rozdziału, szczególnie jeśli nie jesteś jeszcze programistą. Jeśli kod nie jest dla ciebie jasny, prostu przeczytaj komentarze (zaczynające się od „#”), dzięki czemu zrozumiesz z grubsza, jak problem został rozwiązany.
 
 ```python3
-# Open the raw score file for reading
+# Otworz plik z scores.txt
 raw_scores_file = open("scores.txt", "r")
-# Create and open a file for writing the processed scores into
+# Stworz i otworz plik roboczy do zapisu wynikow
 processed_scores_file = open("processed_scores.txt", "w")
 
-# For each line in the file
+# Dla kazdej linii w pliku roboczym
 for line in raw_scores_file.readlines():
-    # Get the name, which is in the first part of the line
+    # Przeczytaj imie, ktore jest na poczatku linii
     name = line.split()[0]
-    # Get a list of the scores, which are on the remainder of the lines
+    # Przeczytaj liste wynikow, ktore sa dalej w linii
     scores_on_line = [int(score) for score in line.split()[1:]]
-    # Calculate the average, which is the sum of the scores divided by 5
+    # Oblicz srednia, czyli sume wynikow podziel przez 5
     average = sum(scores_on_line) / 5
-    # Write the average to the processed scores output file
+    # Zapisz srednia do pliku wynikowego
     processed_scores_file.write(name + " " + str(average) + "\n")
 
-# Close both files
+# zamknij oba pliki
 raw_scores_file.close()
 processed_scores_file.close()
 ```
