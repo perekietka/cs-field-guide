@@ -17,7 +17,7 @@ W tym rozdziale przyjrzymy się temu jak można uzyskać kompresję, jakie są k
 
 Zaczniemy od prostego przykładu – kodowania długości serii (RLE od ang. Run Length Encoding) – które daje pewien wgląd w zalety i wady kompresji.
 
-{panel type="teacher-note" summary="Zadanie: uwięziony w ciele"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Zadanie: uwięziony w ciele"}
 Przykładem intrygującego zadania związanego z kompresją jest [zadanie „uwięziony w ciele”](http://www.cs4fn.org/lockedin.html) z CS4FN (po angielsku).
 W tym zadaniu uczniowie symulują pisanie tekstu metodą używaną przez Jean’a-Dominique’a Bauby, który był całkowicie sparaliżowany i mógł poruszać jedynie powieką. Przy pomocy prostego binarnego interfejsu (miga lub nie miga) był w stanie podyktować całą książkę. Warto dobrać uczniów w pary i kazać im spróbować porozumiewać się jedynie mrugając. Zadanie to sprowokuje uczniów do zastanowienia się, jak robić to w najkrótszym czasie i przy najmniejszym wysiłku. Oczywiście, w pierwszym kroku będą musieli ustalić jak przekazać jakąkolwiek treść w ten sposób.
 {panel end}
@@ -29,7 +29,7 @@ W tym zadaniu uczniowie symulują pisanie tekstu metodą używaną przez Jean’
 
 Kodowanie długości serii (RLE od ang. Run Length Encoding) nie jest techniką często używaną współcześnie, ale nadaje się świetnie jako wprowadzenie do problemów związanych z kompresją.
 
-{panel type="teacher-note" summary="Kto korzysta z kodowania długości serii?"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Kto korzysta z kodowania długości serii?"}
 [Kodowanie długości serii](https://en.wikipedia.org/wiki/Run-length_encoding) było w powszechnym użyciu kiedy normą były czarno-białe obrazy.
 To właśnie ten typ kompresji umożliwił standaryzację w 1980 r. transmisji danych za pomocą faksu.
 Piksele w przesyłanym faksem obrazie był jedynie czarne lub białe charakteryzowały się przeważnie długimi ciągami białych pikseli na marginesach, co sprawiało, że RLE było wyjątkowo skuteczne.
@@ -70,7 +70,7 @@ Interactive to make
 low priority; interactive for images. If we were going to put in the interactive that takes the 1’s and 0’s and converts it into an image for the students, I’d want to put that in here. This would mostly be a convenience thing that allows students to easily see what an image looks like. We would also provide an interactive that can take a number representation and show the image for that. We do NOT want to provide a tool that converts between the 2; we want students to do the converting by hand. The tool will allow them to see if the images they got are the same though.
 {comment end}
 
-{panel type="curiosity" summary="Format pliku PBM"}
+{panel type="curiosity" title="Ciekawostka" summary="Format pliku PBM"}
 Istnieje format obrazu, który wykorzystuje prostą reprezentację, w której jeden symbol odpowiada jednemu bitowi. Ten format nazywa się *przenośnym formatem mapy bitowej* PBM (ang. portable bitmap format).
 Pliki PBM są zapisywane z rozszerzeniem „.pbm”, i zawierają prosty nagłówek, za którym zapisane są dane obrazu.
 Dane w tym pliku można obejrzeć otwierając go w edytorze tekstowym, podobnie jak plik .txt, a sam obrazek możemy zobaczyć otwierając w programie graficznym, który wspiera format PBM
@@ -156,7 +156,7 @@ Zatem mamy następującą reprezentacją dla pierwszych trzech wierszy pikseli o
 
 Łatwo można się domyślić jak będą wyglądać kolejne wiersze w tym systemie reprezentacji.
 
-{panel type="spoiler" summary="Reprezentacja pozostałych wierszy"}
+{panel type="spoiler" title="Spojler" summary="Reprezentacja pozostałych wierszy"}
 Pozostałe wiersze to:
 
 ```
@@ -175,7 +175,7 @@ Pozostałe wiersze to:
 ```
 {panel end}
 
-{panel type="curiosity" summary="Kodowanie długości serii w programie „Informatyka bez prądu”"}
+{panel type="curiosity" title="Ciekawostka" summary="Kodowanie długości serii w programie „Informatyka bez prądu”"}
 W poniższym materiale wideo z programu „Informatyka bez prądu” zakodowany przy pomocy długości serii obraz jest odkodowany i zaprezentowany przez bardzo duże piksele (drukarką jest farba w sprayu!).
 
 {video url="https://www.youtube.com/watch?v=VsjpPs146d8"}
@@ -199,7 +199,7 @@ Aby upewnić się, że możemy odwrócić proces kompresji, spróbuj znaleźć o
 
 Co zawiera obraz? Z jak wielu pikseli się składa? Ile liczb użyto do reprezentacji tego obrazu?
 
-{panel type="spoiler" summary="Odpowiedź dla powyższego obrazu"}
+{panel type="spoiler" title="Spojler" summary="Odpowiedź dla powyższego obrazu"}
 Przykładowy obrazek pochodzi z [ćwiczenia interaktywnego „Reprezentacja obrazów”](http://csunplugged.org/image-representation) (po ang.), a rozwiązanie jest dostępne w treści zadania (jest nim filiżanka i talerzyk).
 {panel end}
 
@@ -215,7 +215,7 @@ Aby opisać obraz z naszego przykładu w postaci nieskompresowanej potrzebnych j
 
 Powinieneś otrzymać wynik 119 znaków (sprawdź, czy wszystko się zgadza). Oznacza to, że skompresowana postać wymaga jedynie 53% znaków reprezentacji oryginalnej (wynika to z proporcji 119/225). To znacząca redukcja w ilości przestrzeni potrzebnej do zapisania obrazu -- to prawie połowa rozmiaru. Nowa reprezentacja jest skompresowaną postacią poprzedniej.
 
-{panel type="curiosity" summary="Kodowanie długości serii w praktyce"}
+{panel type="curiosity" title="Dla ciekawych" summary="Kodowanie długości serii w praktyce"}
 W praktyce metoda ta (z pewnymi modyfikacjami) może być użyta do osiągnięcia kompresji na poziomie 15% oryginalnego rozmiaru. W prawdziwych systemach tylko jeden bit jest wykorzystywany do przechowywania wartości czarno/białe (w przeciwieństwie do jednego znaku z naszych obliczeń).
 Jednakże długości kodowanych serii są również przechowywane bardziej efektywnie, również przy pomocy bitów, których stosunkowo krótkie ciągi mogą reprezentować liczby.
 Wykorzystywane ciągi bitów są tworzone przy pomocy techniki zwanej kodowaniem Huffmana, lecz zagadnienie to wykracza poza zakres tego materiału.
@@ -226,7 +226,7 @@ Wykorzystywane ciągi bitów są tworzone przy pomocy techniki zwanej kodowaniem
 
 Współcześnie głównym zastosowaniem dla skanowanych czarno-białych obrazów są faksy, które wykorzystują RLE. Jednym z powodów, dla których działa to tak skutecznie dla skanowanych stron dokumentów jest fakt, iż w tym przypadku liczba kolejnych białych pikseli jest olbrzymia. Typowa strona przesyłana faksem ma 200 pikseli szerokości, więc zastąpienie tych 200 bitów liczbą jest znaczącą oszczędnością. Z kolei liczbę tę możemy wyrazić przy pomocy zaledwie kilku bitów. Choć może się zdarzyć, że liczbą zastępujemy krótką serię pikseli, to i tak w ostatecznym rozrachunku oszczędności są znaczące. W praktyce faksy, które nie korzystają z kompresji, przesyłają dokumenty 7 razy wolniej.
 
-{panel type="project" summary="Zastosuj kodowanie długości serii"}
+{panel type="project" title="Projekt" summary="Zastosuj kodowanie długości serii"}
 Teraz, gdy już znasz kodowanie długości serii, możesz sam stworzyć obraz czarno-biały, a następnie go skompresować, oraz zdekompresować obraz otrzymany od kogoś innego.
 
 Zacznij od narysowania obrazu przy pomocy zer i jedynek. (Upewnij się, że jest prostokątny, tzn. wszystkie wiersze mają tę samą długość.) Możesz go narysować na papierze lub przygotować na komputerze (korzystaj z czcionki o stałej szerokości, w przeciwnym wypadku może to okazać się frustrujące i kłopotliwe!) Ułatwieniem może być skorzystanie z kartki w kratkę (takiej jak w zeszycie do matematyki), zakreślenie kratek mających być czarnymi pikselami i pozostawienie pustych kratek jako pikseli białych. Po zakończeniu tej czynności możesz spisać zera i jedynki reprezentujące obraz.
@@ -249,18 +249,18 @@ Nie wszystkie algorytmy kompresji są jednak bezstratne. Dla niektórych typów 
 
 Co ciekawe, może się wyjątkowo zdarzyć, że skompresowany *stratnie* plik będzie miał większy rozmiar niż nieskompresowany! Co więcej, naukowcy zajmujący się kompresją udowodnili, iż niemożliwe jest stworzenie metody kompresji bezstratnej, która zmniejsza każdy plik. W zdecydowanej większości przypadków nie jest to problemem, gdyż stratne metody kompresji dostosowane są do pewnych rodzajów danych, posiadających pewną charakterystykę, dla których nieskuteczna kompresja jest wysoce nieprawdopodobna.
 
-{panel type="challenge" summary="Najlepsze i najgorsze przypadki dla kodowania długości serii"}
+{panel type="challenge" title="Wyzwanie" summary="Najlepsze i najgorsze przypadki dla kodowania długości serii"}
 Jaki obraz będzie miał największy stopień kompresji przy kodowaniu długości serii (chodzi o obraz, którego rozmiar po skompresowaniu będzie najmniejszy w stosunku do rozmiaru początkowego)? Jest to przypadek, w którym wydajność algorytmu jest najwyższa.
 
 Kiedy kompresja jest najgorsza? Czy potrafisz znaleźć obraz, który ma *większą* reprezentację skompresowaną? (Pamiętaj o przecinkach, którymi oddzielamy długości serii!) Jest to przypadek, w którym wydajność algorytmu jest najgorsza.
 {panel end}
 
-{panel type="spoiler" summary="Rozwiązanie zadania"}
+{panel type="spoiler" title="Spojler" summary="Rozwiązanie zadania"}
 Najlepszy przypadek jest wtedy, gdy obraz jest całkowicie biały (wystarczy jedna liczba na wiersz).
 Najgorszy przypadek ma miejsce, gdy na zmianę występują piksele białe i czarne.
 {panel end}
 
-{panel type="curiosity" summary="Kompresja może powiększać pliki"}
+{panel type="curiosity" title="Ciekawostka" summary="Kompresja może powiększać pliki"}
 W najgorszym przypadku (na zmianę piksele białe i czarne) kodowanie długości serii da nam plik skompresowany o rozmiarze większym niż plik oryginalny!
 Jak został wspomniane wcześniej, *każdy* bezstratny algorytm kompresji, który przynajmniej jeden plik zmniejsza, musi mieć kilka plików, które powiększa -- nie jest
 matematycznie możliwe, aby stworzyć algorytm kompresji bezstratnej, który zmniejsza każdy plik.
@@ -306,7 +306,7 @@ Kodowanie długości serii nie działa w tym przypadku. Można by skorzystać z 
 
 Istnieje jednak sposób, aby wykorzystać stopniowo zmieniające się kolory. W przypadku pikseli w czerwonym polu powyżej, możesz wygenerować przybliżoną wersję tych kolorów, określając tylko pierwszy i ostatni w serii. Na tej podstawie komputer będzie obliczać pośrednie, zakładając, że kolor zmienia się stopniowo. Zamiast zapisywania wartości dla 5 pikseli otoczonych na powyższym rysunku czerwoną ramką, wystarczy zapisać tylko dwie wartości, aby oglądający nie zauważył żadnej różnicy. Jest to *stratne*, ponieważ nie można dokładnie odtworzyć oryginału, ale wystarczająco dobre dla wielu zastosowań i pozwalające zaoszczędzić dużo miejsca.
 
-{panel type="jargon-buster" summary="Interpolacja"}
+{panel type="jargon-buster" title="Co to jest?" summary="Interpolacja"}
 {glossary-definition term="Interpolacja" definition="Wyliczenie wartości pośrednich pomiędzy pewnymi wartościami brzegowymi;
 na przykład, jeśli sekwencja 5 liczb zaczyna się 3 i kończy 11, możemy wyznaczyć interpolację trzech pośrednich wartości jako: 5, 7, 9."}
 
@@ -322,7 +322,7 @@ System JPEG, który jest szeroko stosowany do zdjęć, wykorzystuje bardziej wyr
 It would be good have a figure that shows a line of pixels, and the corresponding waveform.
 {comment end}
 
-{panel type="curiosity" summary="Czym jest funkcja consinus"}
+{panel type="curiosity" title="Dla ciekawych" summary="Czym jest funkcja consinus"}
 Funkcja cosinus jest jedną z funkcji trygonometrycznych, która jest często używana do obliczania długości boków trójkąta. Wykres wartość cosinusa od 0 do 180 stopni jest gładką krzywą o wartościach w przedziale 1 do -1, przypominającą falę. Wariacje tego wykresu można wykorzystać do przybliżenia wartości pikseli przechodzących z jednego koloru do drugiego. Jeśli dodasz dwie fale cosinusowe o różnych częstotliwościach, to możesz uzyskać interesujące kształty. Teoretycznie każdy wzór złożony z pikseli może zostać utworzony przez dodanie różnych fal cosinusowych!
 
 Poniższy wykres pokazuje wartości funkcji {math}\sin(x){math end} oraz {math}\cos(x){math end} dla {math}x{math end} z zakresu od 0 do 180 stopni.
@@ -330,7 +330,7 @@ Poniższy wykres pokazuje wartości funkcji {math}\sin(x){math end} oraz {math}\
 {image filename="cosine-graph.png" alt="Wykres krzywych cos(x) i sin(x)"}
 {panel end}
 
-{panel type="curiosity" summary="Dodawanie sinusa i cosinusa w celu uzyskania dowolnego kształtu fali"}
+{panel type="curiosity" title="Dla ciekawych" summary="Dodawanie sinusa i cosinusa w celu uzyskania dowolnego kształtu fali"}
 Metody JPEG (i MP3) bazują na technice, pozwalającej falę dowolnego kształtu przedstawić jako sumę wielu fal.
 Przekształcenie kształtu fali dla bloku pikseli lub próbki muzyki w sumę prostych fal można wykonać za pomocą techniki zwanej [transformacją Fouriera](https://en.wikipedia.org/wiki/Fourier_transform), która jest powszechnie wykorzystywana przy przetwarzaniu obrazu.
 
@@ -390,11 +390,11 @@ Pomimo tego, że jakość jest dość niska, to oszczędność w przestrzeni dys
 low priority : interactive that could load a photo, zoom in on pixels, and change it to different qualities of jpg coding
 {comment end}
 
-{panel type="jargon-buster" summary="Skąd pochodzi nazwa JPEG?"}
+{panel type="jargon-buster" title="Co to jest?" summary="Nazwa JPEG"}
 Nazwa „JPEG” jest skrótem od „Joint Photographic Experts Group”, komitetu utworzonego w latach 80. w celu wypracowania standardów umożliwiających zachowywanie fotografii cyfrowych i wyświetlanie ich na różnych urządzeniach. Ponieważ niektóre systemy operacyjne ograniczają rozszerzenia plików do trzech znaków, pliki skompresowane JPEG mają rozszerzenie „.jpg”.
 {panel end}
 
-{panel type="curiosity" summary="Więcej na temat fal cosinusowych"}
+{panel type="curiosity" title="Dla ciekawych" summary="Więcej na temat fal cosinusowych"}
 Fale cosinusowe wykorzystywane w metodzie JPEG oparte są na *dyskretnej transformacji cosinusowej*. „Dyskretna” oznacza, że opisujemy ją za pomocą zbioru skończonego. Fale w JPEG są reprezentowane jako wartości dla 8 x 8  punktów (dla kodowanego bloku), a każda z tych wartości pochodzi ze skończonego zbioru liczb binarnych.
 {panel end}
 
@@ -493,13 +493,13 @@ Powyższy przykład dobrze ilustruje, co dzieje się z obrazami podczas zapisu w
 .. What would happen if text compression was lossy? (I think this should be a part of their merit discussion)
 {comment end}
 
-{panel type="teacher-note" summary="Ćwiczenie metody Ziva-Lempela"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Ćwiczenie metody Ziva-Lempela"}
 Na stronie CS Unplugged znajduje się [ćwiczenie oraz informacje na temat metody Ziva-Lempela](http://csunplugged.org/text-compression),
 również strona „Computing Science Inside” zawiera [ćwiczenia dotyczące tego zagadnienia](https://web.archive.org/web/20150311225517/http://csi.dcs.gla.ac.uk/workshop-view.php?workshopID=1).
 Strona CS4FN omawia [podobną, nieco prostszą metodę, która nie jest zbyt praktyczna](http://www.cs4fn.org/internet/crushed.php).
 {panel end}
 
-{panel type="curiosity" summary="Kompresja ZL lub LZ?"}
+{panel type="curiosity" title="Ciekawostka" summary="Kompresja ZL lub LZ?"}
 Opisany powyżej algorytm został nazwany kompresją Ziva-Lempela od nazwisk dwóch informatyków, Jacoba Ziva i Abrahama Lempela, którzy wymyślili go w latach siedemdziesiątych. Niestety ktoś pomieszał kolejność ich nazwisk, kiedy opisywał ten pomysł i nazwał go kompresją „LZ” zamiast kompresji „ZL”. Wielu naukowców skopiowało błąd, przez co metoda Ziva i Lempela jest obecnie zwana „kompresją LZ”!
 {panel end}
 
@@ -508,7 +508,7 @@ Opisany powyżej algorytm został nazwany kompresją Ziva-Lempela od nazwisk dw�
 Jedną z najczęściej stosowanych metod kompresji muzyki jest MP3, który jest częścią standardu kompresji wideo o nazwie MPEG (Moving Picture Experts Group).
 
 
-{panel type="curiosity" summary="Nazwa mp3"}
+{panel type="curiosity" title="Ciekawostka" summary="Nazwa mp3"}
 Nazwa „mp3” nie jest zbyt oczywista. Pomimo tego, że „mp” oznacza „ruchomy obraz” (ang. „moving picture”), a 3 pojawiło się już w pierwszej wersji, to pliki mp3 są używane do zapisu muzyki!
 
 Pełna nazwa standardu, z którego pochodzi MP3, to MPEG, a brakujące „EG” oznacza „grupę ekspertów” (ang. „expert group”). Grupę tą stanowiło konsorcjum firm i naukowców, którego celem było ustalenie standardu pozwalającego odtwarzanie materiałów wideo na urządzeniach różnych marek (na przykład ta sama płyta DVD działała na dowolnym odtwarzaczu DVD).
@@ -557,7 +557,7 @@ Nie wspomnieliśmy też o kodowaniu artymetycznym (krótkie [wyjaśnienie (po an
 Kompresja wideo została również pominięta, mimo iż to właśnie ten typ kompresji daje największe oszczędności przestrzeni dyskowej.
 Większość metod kompresji wideo jest oparta na standardzie „MPEG” (ang. Moving Pictures Experts Group). Nieco więcej informacji na ten tamat zawiera [artykuł CS4FN o „filmowej magii”](http://www.cs4fn.org/films/mpegit.php).
 
-{panel type="teacher-note" summary="Podręczniki dla nauczycieli z zasobów Plymouth"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Podręczniki dla nauczycieli z zasobów Plymouth"}
 Dostęp do podręczników z zasobów Plymouth (odnośniki do nich są w poprzednim akapicie) są [dotępne tu](http://www.cimt.plymouth.ac.uk/resources/codes/).
 {panel end}
 
