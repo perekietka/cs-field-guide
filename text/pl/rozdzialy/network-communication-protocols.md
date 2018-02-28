@@ -26,7 +26,7 @@ Adres URL strony głównej angielskiej wersji tej książki to http://csfieldgui
 
 ### HyperText Transfer Protocol (HTTP)
 
-{panel type="teacher-note" summary="HTTP na lekcji"} 
+{panel type="teacher-note" title="Dla nauczyciela" summary="HTTP na lekcji"} 
 Do ćwiczeń z tego rozdziału zalecane są szkolne komputery wyposażone w nowoczesną przeglądarkę z rozszerzeniami deweloperskimi. [Chrome](https://www.google.com/chrome/browser/) można pobrać za darmo i jest to polecana przez nas przeglądarka. Postępuj zgodnie z instrukcjami [tutaj](http://debugbrowser.com/), aby uzyskać więcej informacji. Przeglądarka dla programistów nie może wyrządzić żadnej szkody, a może zachęcić do dalszego majsterkowania. Jednak znajomość HTML, JavaScript czy innych aspektów projektowania stron WWW nie będzie pomocna w zabawie z protokołami. Jeśli szkoła nie pozwala na zainstalowanie przeglądarki ze wspomnianymi rozszerzeniami, trzeba po prostu zachęcić uczniów, aby spróbowali w domu. To całkowicie bezpieczne zadanie. Uwaga: Szczegóły dotyczące ładowania stron pojawiają się tylko wtedy, gdy panel konsoli deweloperskiej jest otwarty; konieczne może być odświeżenie bieżącej strony. 
 {panel end}
 
@@ -41,7 +41,7 @@ HTTP działa jak prosta rozmowa między klientem a serwerem. Wyobraź sobie, że
 
 HTTP używa wzorca zapytania -- odpowiedzi w celu zapewnienia niezawodnej komunikacji między klientem a serwerem. ,,Zapytaj o'' to *zapytanie*, a odpowiedź serwera to po prostu *odpowiedź*. Zarówno zapytania, jak i odpowiedzi mogą również zawierać inne dane lub *zasoby*.
 
-{panel type="jargon-buster" summary="Co to jest zasób?"} 
+{panel type="jargon-buster" title="Co to jest?" summary="Co to jest zasób?"} 
 *Zasób* to dowolne dane na serwerze. Na przykład wpis na blogu, dane klienta, artykuł lub notka prasowa. Firmy lub witryny internetowe tworzą je, czytają, aktualizują i usuwają w ramach normalnej działalności. HTTP dobrze się do tego nadaje. Na przykład, w przypadku strony z wiadomościami, każdego dnia autorzy dodają historie, można je aktualizować lub usuwać, jeśli są przestarzałe, itd. Metody tego rodzaju są potrzebne do zarządzania zawartością na serwerze, a protokół HTTP jest sposobem na zrobienie tego. 
 {panel end}
 
@@ -139,13 +139,13 @@ Poćwicz to samo na kilku innych stronach. Na przykład wypróbuj te witryny:
 - Stronę, która [nie istnieje w Google](https://google.com/nope.html).
 - Twoją ulubioną stronę internetową
 
-{panel type="curiosity"" summary="Kto wymyślił HTTP?"}
+{panel type="curiosity" title="Ciekawostka"  summary="Kto wymyślił HTTP?"}
 Powszechnie uznaje się, żę Tim Berners-Lee stworzył HTTP w 1989 roku. Możesz przeczytać o nim więcej [tutaj](https://pl.wikipedia.org/wiki/Tim_Berners-Lee).
 {panel end}
 
 ### Internet Relay Chat (IRC)
 
-{panel type="teacher-note"" summary="IRC na lekcji"}
+{panel type="teacher-note" title="Dla nauczyciela"  summary="IRC na lekcji"}
 W tym podrozdziale sugerujemy skorzystanie z [klienta WWW freenode](http://webchat.freenode.net/). Pozwala to na skonfigurowanie własnego kanału, do którego później będą mogli dołączyć uczniowie. Ale jest to usługa publiczna, więc jeśli nazwa Twojego kanału będzie zbyt oczywista, może się zdarzyć, że dołączą do niego przypadkowe osoby. Najlepiej nie używać konwencjonalnych nazw kanałów i użyć ###irc-mojaszkola-aktualnadata czy czegoś podobnego.
 Uczniowie mogą również pobierać i instalować klienty IRC, ale ich konfiguracja bywa skomplikowana, więc najlepiej na początku korzystać z wersji WWW. Wtedy wystarczy powiedzieć uczniom do którego kanału dołączyć.
 {panel end}
@@ -190,7 +190,7 @@ Protokół TCP rozwiązuje te problemy. Aby oswoić się z TCP, zagraj w poniżs
 
 *Atak pakietów* jest bezpośrednią analogią TCP i został pomyślany jako jego interaktywna symulacja. Stwory pakietowe to segmenty TCP, które podróżują między dwoma komputerami. Strefa żółto-szara jest zawodnym kanałem, podatnym na zakłócenia. Te zakłócenia to użytkownik grający w grę. Pamiętaj, że mamy kluczowe dla tego podrozdziału o mechanizmach na poziomie protokołów transportu problemy -- opóźnienia, uszkodzone i utracone pakiety, a w grze są to ataki: *opóźnienie*, *uszkodzenie*, *zabicie*. Rozwiązania mają postać mechanizmów TCP, które są stopniowo dodawane na kolejnych poziomach. Podobnie jak w TCP, w grze występuje porządkowanie pakietów, sumy kontrolne (tarcze), komunikaty ACK i NACK (powracające stwory) i limity czasu.
 
-{panel type="teacher-note" summary="Opis gry w atak pakietów"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Opis gry w atak pakietów"}
 **Opis poziomów**
 
 - *Poziom 1*: Bez obrony. Jeden pakiet. Uczniowie mogą go pokonać za pomocą uszkodzenia lub zabicia.
@@ -204,7 +204,7 @@ Protokół TCP rozwiązuje te problemy. Aby oswoić się z TCP, zagraj w poniżs
 
 {interactive name="packet-attack" type="whole-page" text="Gra w atak pakietów"}
 
-{panel type="curiosity" summary="Tworzenie własnych poziomów w grze w atak pakietów"}
+{panel type="curiosity" title="Dla ciekawych" summary="Tworzenie własnych poziomów w grze w atak pakietów"}
 Możesz również tworzyć własne poziomy w grze w atak pakietów. W podrozdziale projektów poniżej umieściliśmy narzędzie do tworzenia poziomów, abyś mógł eksperymentować z różnymi mechanizmami niezawodności lub kombinacjami zabezpieczeń.
 
 Dostosuj wartości prawda i fałsz oraz liczby aby ustawić różne zdolności obronne. Zwiększanie liczb jest właściwie równoważne zastosowaniu bardziej zawodnego kanału komunikacji. Dodanie większej ilości zdolności obronnych (poprzez ustawienie tarczy itp. na wartość *true*) spowoduje, że trudniej będzie przejść poziom.
@@ -213,7 +213,7 @@ Dostosuj wartości prawda i fałsz oraz liczby aby ustawić różne zdolności o
 
 Porozmawiajmy o tym, co było widać w grze. Co robiły poziomy, aby rozwiązać problem utraty pakietów, opóźnień (zmiany kolejności) i uszkodzenia? TCP ma kilka mechanizmów radzenia sobie z problemami z pakietami.
 
-{panel type="curiosity" summary="Co powoduje opóźnienia, straty i uszkodzenie?"}
+{panel type="curiosity" title="Ciekawostka" summary="Co powoduje opóźnienia, straty i uszkodzenie?"}
 Dlaczego pakiety mają opóźnienia, straty i uszkodzenia? Dzieje się tak dlatego, że gdy pakiety są wysyłane przez sieć, przechodzą przez różne *węzły*. Te węzły to różne routery lub komputery. Na jednej trasie może być więcej zakłóceń niż na innej (co powoduje utratę pakietów), któraś może być szybsza lub krótsza (co powoduje zmianę kolejności pakietów). Uszkodzenia mogą wystąpić w każdej chwili poprzez zakłócenia elektroniczne.
 {panel end}
 
@@ -245,7 +245,7 @@ Protokoły internetowe istnieją w warstwach. Mamy cztery takie warstwy w inform
 
 W każdej warstwie dane składają się ze wszystkich danych z poprzednich warstw, a następnie dodawane są *nagłówki* i przekazywane dalej. W dolnej warstwie -- warstwie łącza danych -- dodawana jest także *stopka*. Poniżej znajduje się przykład tego, jak wygląda pakiet UDP, gdy jest przygotowany do transportu.
 
-{panel type="jargon-buster" summary="Nagłówki i stopki"}
+{panel type="jargon-buster" title="Co to jest?" summary="Nagłówki i stopki"}
 Stopki i nagłówki to w zasadzie *metadane* pakietu. Informacje o informacji. Podobnie jak nagłówek listu lub przypis, nie są częścią treści, ale znajdują się na stronie. Nagłówki i stopki dokłada się do pakietów żeby przechowywać szczególne dane. Nagłówki są przed danymi a stopki -- po.
 {panel end}
 
@@ -257,13 +257,13 @@ https://commons.wikimedia.org/wiki/File:UDP_encapsulation.svg
 
 Można myśleć o tych protokołach jako o zabawie w przesyłanie paczki. Kiedy wiadomość jest wysyłana przez HTTP, zostaje zapakowana w nagłówek TCP, który następnie jest owijany w nagłówek IPv6, który następnie jest owijany w nagłówek i stopkę sieci Ethernet i wysyłany przez Ethernet. Po drugiej stronie jest ponownie rozpakowany z *ramki* Ethernet, do *pakietu* IP, do *datagramu* TCP, do *zapytania* HTTP.
 
-{panel type="curiosity" summary="Co to jest pakiet?"}
+{panel type="curiosity" title="Co to jest?" summary="Co to jest pakiet?"}
 Nazwa ,,pakiet'' jest ogólnym określeniem jednostki danych. W warstwie aplikacji jednostki danych są nazywane *danymi* lub *zapytaniami*, w warstwie transportowej -- *datagramami* lub *segmentami*, w warstwie sieci/IP -- *pakietami*, a w warstwie fizycznej -- *ramkami*. Każdy poziom ma własną nazwę jednostki danych (segment, pakiet, ramka, zapytanie itd.), ale zamiast tego często używana jest bardziej ogólna nazwa ,,pakiet'', niezależnie od warstwy.
 {panel end}
 
 To zgrabny system, ponieważ każda warstwa może założyć, że warstwy powyżej i poniżej dają odpowiednie gwarancje na temat informacji, a każda warstwa (i protokół używany w tej warstwie) ma własną rolę. Jeśli więc tworzysz stronę internetową, możesz po prostu zaprogramować kod strony i nie martwić się o pisanie kodu, żeby strona działała zarówno przez wifi, jak i przez kabel ethernetowy. Podobnym systemem jest system pocztowy... Nie umieszczasz numeru furgonetki kuriera na kopercie! Zajmuje się tym przewoźnik, który potem używa systemu do sortowania poczty i przydzielania jej kierowcom, a potem kierowców do ciężarówek, a potem kierowców do tras... Nie musisz się tym martwić kiedy wysyłasz lub odbierasz list albo korzystasz z usług kuriera.
 
-{panel type="curiosity" summary="Model OSI a model TCP/IP"}
+{panel type="curiosity" title="Dla ciekawych" summary="Model OSI a model TCP/IP"}
 Model Internetu OSI różni się od modelu Internetu TCP/IP, którego używają informatycy do projektowania protokołów. OSI jest brane pod uwagę i prawdopodobnie opisane w standardach sieciowych, ale ten przewodnik użyje podejścia informatycznego, ponieważ jest prostsze, a najważniejsze jest przekazanie idei poziomów abstrakcji. Możesz przeczytać więcej o różnicach [tutaj](https://en.wikipedia.org/wiki/Internet_protocol_suite#Comparison_of_TCP.2FIP_and_OSI_layering).
 {panel end}
 
@@ -275,7 +275,7 @@ Jak widać, pakiet jest podzielony na cztery główne części: adresy (źródł
 
 Pakiety TCP i UDP mają zapisaną liczbę określającą jakie są duże. Ta liczba oznacza, że pakiet mógłby być prawie dowolnie duży. Czy możesz wymyślić jakieś zalety tworzenia małych pakietów? A dużych? Pomyśl o stosunku danych do informacji dodatkowych (takich jak w nagłówku i stopce).
 
-{panel type="curiosity" summary="Jak wygląda pakiet?"}
+{panel type="curiosity" title="Ciekawostka" summary="Jak wygląda pakiet?"}
 Oto przykład pakietu z sieci autorów... [(otrzymany przy użyciu tcpdump na komputerze Mac)](http://support.apple.com/kb/HT3994)
 
 ```
