@@ -416,7 +416,7 @@ Ataki brutalne wypróbowują każdy możliwy klucz, a liczba możliwych kluczy r
 Jak widzieliśmy powyżej, żaden nowoczesny system komputerowy nie mógłby przetestować wszystkich możliwych wartości klucza 128-bitowego w rozsądnym czasie, a nawet gdyby było to możliwe, dodanie tylko jednego bitu podwajałoby czas jego działania.
 
 W informatyce problemy wymagające wykładniczego czasu na rozwiązanie nie są generalnie uważane za
-{glossary-link term="obliczalny" reference-text="encryption"} obliczalne {glossary-link end}.
+{glossary-link term="obliczalny" reference-text="Kodowanie -- szyfrowanie"} obliczalne {glossary-link end}.
 
 Ustalenie, które problemy są obliczalne a które nie, jest dużym obszarem badań w dziedzinie informatyki -- wiele innych problemów, na których rozwiązaniu nam zależy, wydaje się nie być obliczalnymi, co jest bardzo frustrujące.
 Dziedzina szyfrowania to jedna z niewielu sytuacji, w których cieszymy się, że algorytm nie jest obliczalny!
