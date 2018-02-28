@@ -580,7 +580,7 @@ Początkowo może to brzmieć bezsensownie -- dlaczego miałbyś zaszyfrować wi
 
 Jedyną osobą, która może *zaszyfrować* wiadomość przy użyciu klucza *prywatnego*, jest osoba, która jest właścicielem klucza prywatnego. Klucz publiczny odszyfruje wiadomość tylko wtedy, gdy klucz prywatny użyty do jej zaszyfrowania jest kluczem prywatnym pasującym do klucza publicznego. Jeśli wiadomości nie można odszyfrować, to nie mogła być zaszyfrowana za pomocą tego klucza prywatnego.
 Dzięki temu nadawca może dowieść, że wiadomość faktycznie pochodzi od niego i jest to znane jako
-{glossary-definition term="podpis cyfrowy" definition="System szyfrowania, który umożliwia odbiorcy sprawdzenie, czy dokument został wysłany przez osobę, która twierdzi, że go wysłała."}
+{glossary-definition term="Podpis cyfrowy" definition="System szyfrowania, który umożliwia odbiorcy sprawdzenie, czy dokument został wysłany przez osobę, która twierdzi, że go wysłała."}
 {glossary-link term="Digital signature"}podpis cyfrowy{glossary-link end}.
 
 Możesz sprawdzić, czy ktoś jest autentycznym posiadaczem prywatnego klucza, podając mu frazę do zaszyfrowania kluczem prywatnym. Następnie odszyfrujesz ją za pomocą klucza publicznego, aby sprawdzić, czy rzeczywiście zaszyfrował frazę, którą mu dałeś.
