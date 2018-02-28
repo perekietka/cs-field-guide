@@ -18,7 +18,7 @@ Poniższa część rozdziału zawiera przegląd zagadnień opisanych w rozdziale
 
 ### Czym jest programowanie?
 
-{panel type="teacher-note" summary="Zadanie na rozgrzewkę"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Zadanie na rozgrzewkę"}
 
 Spójrz na [zadanie rozgrzewkowe z CSUnplugged](http://csunplugged.org/programming-languages) (po angielsku, ale z polską instrukcją), lub na [rozszerzoną wersję](http://csunplugged.org/wp-content/uploads/2014/12/tellAndDraw1.5.pdf) (po angielsku).
 
@@ -66,7 +66,7 @@ Jeśli zmienisz istotny symbol składni programu, prawdopodobnie zobaczysz, że 
 
 Języki programowania mogą jednak znacznie więcej niż wypisywanie tekstu. Poniższy program zwraca iloraz liczb. Spróbuj uruchomić program.
 
-{panel type="teacher-note" summary="Wersje języka Python"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Wersje języka Python"}
 
 Poniższy kod Pythona jest napisany dla wersji 3 języka Python, ale będzie również działać z wersją 2.
 
@@ -108,7 +108,7 @@ for imie in adresaci_spamu:
 
 Spróbuj zmienić odbiorców lub treść listu (pamiętaj, by nie używać polskich liter). Przyjrzyj się uważnie wszystkim symbolom, których użyto do umieszczenia imienia adresata w treści listu.
 
-{panel type="jargon-buster" summary="Składnia języka programowania"}
+{panel type="jargon-buster" title="Co to jest?" summary="Składnia języka programowania"}
 Szczegółowa specyfikacja wymagań języka programowania odnośnie tego, które znaki mogą być używane oraz w jakim miejscu, jest nazywana jego *składnią*. W powyższym przykładzie składnia listy nazw wymaga kwadratowych nawiasów na liście, cudzysłowów wokół nazw i przecinków między nimi. Jeśli popełnisz błąd, np. pominiesz jeden z nawiasów kwadratowych, system zakomunikuje *błąd składni* i nie będzie mógł uruchomić programu. Każdy znak jest istotny, a jeden mały błąd w programie może go zatrzymać lub sprawić, że będzie działał nieprawidłowo.
 {panel end}
 
@@ -140,7 +140,7 @@ Możesz się zastanawiać, dlaczego w ogóle potrzebujemy języków takich jak P
 
 Nie jest to jednak tak proste jak się może wydawać ponieważ komputer nie może uruchamiać instrukcji podawanych bezpośrednio w tych językach. Na najniższym poziomie komputer musi używać fizycznego sprzętu do uruchamiania instrukcji. Działania arytmetyczne, takie jak dodawanie, odejmowanie, mnożenie i dzielenie, lub proste porównania, takie jak mniejszy, większy lub równy, są wykonywane na liczbach reprezentowanych w systemie binarnym przez przepływ prądu przez fizyczne układy komputerowe składające się z tranzystorów. Wynik działania jest także liczbą reprezentowaną w postaci binarnej. Budowa szybkiego i taniego obwodu do wykonywania prostych działań arytmetycznych nie jest trudna, ale instrukcje, które ludzie chcą wydawać komputerom (np. „wypisz następujące zdanie” lub „powtórz coś 100 razy”) wymagają bardziej skomplikowanych obwodów elektrycznych.
 
-{panel type="jargon-buster" summary="System binarny"}
+{panel type="jargon-buster" title="Co to jest?" summary="System binarny"}
 
 Elektronika w komputerach wykorzystuje obwody, które działają głównie z dwiema wartościami (reprezentowanymi jako wysokie i niskie napięcie), aby zapewnić szybkość i niezawodność. Ten system reprezentacji liczb nazywa się *binarnym* i jest często zapisywany na papierze za pomocą zer i jedynek. Więcej informacji na temat reprezentacji binarnej zamieszczone jest w rozdziale [Binarny zapis informacji](chapters/data-representation.html). Warto tam zajrzeć wcześniej, szwłaszcza jeśli nie miałeś do czynienia z systemem binarnym.
 
@@ -162,7 +162,7 @@ Zaczniemy od zapoznania się z niskopoziomowymi językami i sposobem, w jaki kom
 
 ## Kod maszynowy (języki niskiego poziomu)
 
-{panel type="teacher-note" summary="Pisanie kodu maszynowego przez uczniów nie jest wymagane!"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Pisanie kodu maszynowego przez uczniów nie jest wymagane!"}
 
 Nie jest wymagane od uczniów (a nawet nie jest zalecane), aby pisali własny kod programu w języku maszynowym. Celem przykładów jest zachęcenie uczniów do ich modyfikacji w celu lepszego zrozumienia, dlaczego należy unikać programowania bezpośrednio w tych językach, a tym samym dlaczego należy stosować języki wysokiego poziomu.
 
@@ -564,7 +564,7 @@ Materiały w języku angielskim.
 - [Pisenka „99 butelek piwa” w wielu językach programowania](http://99-bottles-of-beer.net/).
 
 
-{panel type="teacher-note" summary="Ciekawe odnośniki"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Ciekawe odnośniki"}
 
 Poniższe strony internetowe (po angielsku) będą przydatne dla nauczycieli
 
