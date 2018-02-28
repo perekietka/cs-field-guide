@@ -1,6 +1,6 @@
 # Wprowadzenie
 
-{panel type="teacher-note" summary="Wprowadzenie dla nauczycieli"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Wprowadzenie dla nauczycieli"}
 
 Celem tego przewodnika (interaktywnego podręcznika) jest wsparcie procesu nauczania informatyki w szkołach średnich.
 Pierwotnie podręcznik był tworzony w związku z wprowadzeniem zajęć informatyki do szkół średnich w Nowej Zelandii w latach 2011-2013.
