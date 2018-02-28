@@ -25,7 +25,7 @@ Rozpoznawanie pisma chińskiego może być czasem niedoskonałe. Oto drogowy zna
 
 Przedstawiony na zdjęciu smartfon znalazł tłumaczenie dla znaków o znaczeniu ,,stromy'' i ,,ostrożnie'', ale nie rozpoznał ostatniego znaku w linii. Dlaczego?
 
-{panel type="teacher-note" summary="Znaczenie segmentacji obrazu"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Znaczenie segmentacji obrazu"}
 
 Ostatni znak trudniej było rozpoznać, gdyż rysunek postaci człowieka jest zbyt blisko znaku. Oprogramowanie smarfona nie potrafiło określić, gdzie kończy się znak pisma, a gdzie rozpoczyna się rysunek. Ten problem jest znany pod nazwą *segmentacji obrazu*. Wrócimy do niego później.
 
@@ -37,7 +37,7 @@ Celem tego rodziału jest zaznajomienie czytelnika nie tylko z tematem rozpoznaw
 
 Kamery cyfrowe i ludzkie oczy pełnią podobne funkcje: promienie światła przechodzą odpowiednio przez obiektyw kamery lub przez soczewkę oka, tam ulegają załamaniu i w końcu padają na powierzchnię (w oku to siatkówka) pokrytą fotoreceptorami, gdzie są przetwarzane na sygnały elektryczne, które później są przetwarzane przez komputer czy mózg. Oczywiście to tylko uproszczony schemat.
 
-{panel type="teacher-note" summary="Receptory cyfrowego aparatu fotograficznego"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Receptory cyfrowego aparatu fotograficznego"}
 
 Jest kilka różnych typów sensorów cyfrowego aparatu fotogrficznego. W tym rozdziale ograniczymy się do sensorów [CMOS](https://pl.wikipedia.org/wiki/Matryca_CMOS), najbardziej popularnych. Inny typ to [Charge-Coupled Device (CCD)](https://pl.wikipedia.org/wiki/Matryca_CCD), znany bardziej wśród fachowców zajmujących się astronomią.
 
@@ -51,7 +51,7 @@ Obszar siatkówki oka, w którym nerw wzrokowy opuszcza gałkę oczną i biegnie
 
 Jest ważne, by zrozumieć, że ani ludzkie oko, ani cyfrowy aparat fotograficzny -- nawet bardzo drogi -- nie są w stanie zapisać wszystkich informacji o obiektach znajdujących się w polu widzenia. Prowadzone są badania, wspólnie przez inżynierów elektroników i informatyków, których celem jest stworzenie urządzeń, które będą pozwalać na jeszcze bardziej dokładne rejestrowanie informacji oraz jej szybkie przetwarzanie.
 
-{panel type="Ciekawostka" summary="Do dalszej lektury"}
+{panel type="curiosity" title="Dla ciekawych" summary="Do dalszej lektury"}
 
 Więcej na ten temat (w języku angielskim) można przeczytać tutaj: [Cambridge in Colour](http://www.cambridgeincolour.com/tutorials/cameras-vs-human-eye.htm), [Pixiq](https://web.archive.org/web/20130309170941/http://www.pixiq.com/article/eyes-vs-cameras).
 
@@ -68,7 +68,7 @@ Efekt szumu jest widoczny głównie jako przypadkowe zmiany pikseli. W przykład
 Rozpoznawanie obiektów na obrazach, które zawierają szum jest trudniejsze. Dlatego ważne jest, by szukać coraz lepszych metod redukowania szumu na obrazie. 
 Przy projektowaniu takich metod należy zachować ostrożność. Efektem ubocznym usunięcia szumu nie może być bowiem utrata istotnych informacji o obrazie. Trzeba podkreślić, że stosowane metody są zawsze metodami przybliżonymi rozwiązania problemu, co oznacza, że decyzja o zachowaniu wartości liczbowej lub zmianie wartości dla konkretnego piksela jest efektem domysłu, uzasadnionego domniemania.
 
-{panel type="teacher-note" summary="Szumy w fotografii w Wikipedii"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Szumy w fotografii w Wikipedii"}
 
 Warto zapoznać się z artykułem o szumach w języku angielskim: [Image noise](https://en.wikipedia.org/wiki/Image_noise).
 
@@ -78,7 +78,7 @@ Ponieważ aparat fotograficzny zapisuje informacje o składowych (czerwonej, zie
 
 Dzieki temu można zmieniejszyć poziom szumu na obrazie. Dlaczego? I w jakim stoponiu to pomaga? (Aby się przekonać, można zrobić eksperyment: wykonać zdjęcie w miejscu słabo oświetlonym -- można wtedy dostrzec jakby małe łatki na obrazie. Następnie w programie graficznym można zapisać je jako czarno-białe -- czy to zmniejszy efekt szumu?)
 
-{panel type="teacher-note" summary="Zaszumione kanały"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Zaszumione kanały"}
 
 Każdy światłoczuły element fotoreceptora aparatu fotograficznego jest równie podatny na szum. To oznacza, że efekty szumu dla różnych składowych RGB są zjawiskami niezależnymi. Jeśli wartości RGB uśredni się (co oznacza jedną liczbę zamiast trzech), to wartość szumu zredukuje się do ok. 1/3. Dlaczego nie *dokładnie* 1/3? Dlatego, że jesli efekt szumu dotyczy dwóch czy nawet trzech składowych tego samego piksela, to wtedy wartość szumu dla piksela zredukuje się co najwyżej do 2/3.
 
@@ -123,7 +123,7 @@ Artykuły edukacyjne dotyczące tego zagadnienia znajdują się również [na st
 
 ### Projekt: Rozpoznawanie twarzy
 
-{panel type="teacher-note" summary="Zadania projektowe"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Zadania projektowe"}
 
 Poniższe zadanie może być ciekawą propozycją na projekt szkolny.
 Dotyczy zagadnień:
@@ -163,7 +163,7 @@ Algorytm został zaprojektowany w 1986 roku przez Johna F. Canny'ego.
 
 ### Projekt: Wykrywanie krawędzi
 
-{panel type="teacher-note" summary="Zadanie projektowe"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Zadanie projektowe"}
 
 Poniższe zadanie może być ciekawą propozycją na projekt szkolny.
 Dotyczy zagadnień:
