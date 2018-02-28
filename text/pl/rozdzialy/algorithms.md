@@ -91,7 +91,7 @@ Można więc powiedzieć, że liczba operacji jest proporcjonalna do *n*.
 Nie wszystkie algorytmy mają tę własność; niektóre algorytmy są o wiele bardziej kosztowne, a niektóre mniej;
 Warto, aby programista potrafił określić szybkość algorytmu, zanim zdecyduje się nim posłużyć np. w kodzie oprogramowania internetowego, z którego będzie korzystać wielu użytkowników jednocześnie. Gra komputerowa, którą programista stworzył, może okazać się bardzo popularna, więc algorytm znajdowania najlepszego wyniku musi być wystarczająco szybki.
 
-{panel type="extra-for-experts" summary="Złożoność obliczeniowa algorytmów"}
+{panel type="extra-for-experts" title="Dla ekspertów" summary="Złożoność obliczeniowa algorytmów"}
 Szacowanie kosztów algorytmu znane jest w informatyce pod nazwa [analiza algorytmu](https://en.wikipedia.org/wiki/Analysis_of_algorithms). Taka analiza powinna prowadzić do wyznaczenia *złożoności obliczeniowej* algorytmu (dotyczącej czasu działania komputerowej realizacji algorytmu), ale czasami dodatkowo i *złożoności pamięciowej* algorytmu (dotyczącej wymagań co do pamięci potrzebnej do działania).
 
 Więcej informacji na temat określania kosztu algorytmu, m.in. o notacji „duże Θ”, znajduje się w podrozdziale [„Podsumowanie”](chapters/algorithms.html#the-whole-story) .
@@ -112,7 +112,7 @@ Na przykładach tych typów algorytmów można w ciekawy sposób przedstawić kl
 
 ## Przeszukiwanie
 
-{panel type="teacher-note" summary="Prezentacja tematu w klasie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Prezentacja tematu w klasie"}
 
 Gry zaproponowane w tym podrozdziale są wzorowane na scenariuszu [Gra w statki](http://jasijoasia.edu.pl/csu1.pdf), opisanej w scenariuszu 6 w zbiorze scenariuszy lekcji bez komputera. Pierwsza dotyczy algorytmu przeszukiawnia liniowego (zwanego też sekwencyjnym), a druga -- algorytmu przeszukiwania binarnego (zwanego też dwudzielnym).
 
@@ -148,7 +148,7 @@ W pierwszej z gier pudełka ustawione były w przypadkowej kolejności. Trudno w
 
 W przypadku przeszukiwania listy 10 elementów, średnia liczba prób prowadzących do sukcesu to 5. Dla listy 10 000 elementów tych prób będzie średnio 5000. Oczywiście w konkretnym przypadku liczba prób może być mniejsza od średniej, nawet znacznie mniejsza, albo i większa.
 
-{panel type="curiosity" summary="Przeszukiwanie metodą Bozo?"}
+{panel type="curiosity" title="Ciekawostka" summary="Przeszukiwanie metodą Bozo?"}
 W filmie na początku rozdziału pojawił się zabawny przykład przeszukiwania, zwany po angielsku Bozo-Search. Od przeszukiwania liniowego różni się tym, że wielokrotnie może być sprawdzany ten sam element zbioru (np. zawartość pudełka), gdyż element raz sprawdzony nie jest odrzucany (po prostu wraca do zbioru elementów).
 {panel end}
 
@@ -158,7 +158,7 @@ W filmie na początku rozdziału pojawił się zabawny przykład przeszukiwania,
 
 W drugiej z gier pudełka były uporządkowane, co umożliwiło podejmowanie kolejnych prób w sposób przemyślany. Być może nieświadomie ktoś stosował algorytm zwany w informatyce przeszukiwaniem binarnym (dwudzielnym).
 
-{panel type="teacher-note" summary="O przeszukiwaniu binarnym z książką telefoniczną"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="O przeszukiwaniu binarnym z książką telefoniczną"}
 Ideę algorytmu przeszukiwania binarnego można zilustrować za pomocą książki telefonicznej lub słownika: wybierz nazwisko (lub jakieś słowo), otwórz książkę lub słownik mniej więcej w połowie i sprawdź pierwszy wyraz na stronie, najlepiej tej o numerze nieparzystym. (Jeśli książka jest przeznaczona na makulaturę, to warto dosłownie przedrzeć ją mniej więcej w połowie objętości.) Następnie uczniowie powinni wskazać tę część książki, którą należy przeszukiwać. 
 Odrzucenie połowy stron książki, czyli prawdopodobnie setek stron, było możliwe na podstawie tylko jednej decyzji.
 
@@ -178,14 +178,14 @@ Algorytm przeszukiwania binarnego można opisać listą kroków:
 Jeśli ten środkowy element ma wartość mniejszą od poszukiwanego, to w dalszych poszukiwaniach pomiń elementy mniejsze od środkowego.
 - Kontynuuj przeszukiwanie, aż znajdziesz element, który jest poszukiwany.
 
-{panel type="spoiler" summary="Jak podwojenie liczby pudełek wpływa na liczbę prób podczas przeszukiwania?"}
+{panel type="spoiler" title="Spojler" summary="Jak podwojenie liczby pudełek wpływa na liczbę prób podczas przeszukiwania?"}
 W przypadku przeszukiwania liniowego niezbędna liczba prób wzrośnie dwa razy. W przypadku przeszukiwania binarnego wzrośnie tylko o jeden! 
 {panel end}
 
 Trzeba pamiętać, że przeszukiwanie binarne można stosować tylko dla zbiorów uporządkowanych. To oznacza, że algorytmy porządkowania należy uznać za jeszcze ważniejsze!
 
 
-{panel type="project" summary="Zakodowane algorytmy przeszukiwania"}
+{panel type="project" title="Projekt" summary="Zakodowane algorytmy przeszukiwania"}
 Poniżej znajdują się odnośniki do komputerowych realizacji algorytmów przeszukiwania, zapisanych w różnych językach; możesz się nimi posłużyć do przygotowania list losowych wartości i porównania kosztów wykonania programów.
 Twoje zadanie polega na wykonaniu pomiarów czasu działania programów dla coraz większych wartości (*n*); wyniki spróbuj przedstawić na wykresie.
 - [Scratch](files/linear-binary-search-scratch.zip) - [Download Scratch here](https://scratch.mit.edu/scratch2download/)
@@ -197,7 +197,7 @@ Twoje zadanie polega na wykonaniu pomiarów czasu działania programów dla cora
 
 ## Porządkowanie
 
-{panel type="teacher-note" summary="Dlaczego o sortowaniu?"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Dlaczego o sortowaniu?"}
 Powyżej przedstawione zostały główne zagadnienia: pojęcie algorytmu, koszt algorytmu, przykłady algorytmów o kosztach proporcjonalnych do rozmiaru danych wejściowych, ale i inne.
 Teraz opowiemy o algorytmach porządkowania, które mają duże walory dydaktyczne, gdyż na ich przykładzie można ukazać kluczowe zagadnienia z dziedziny algorytmów. 
 {panel end}
@@ -231,7 +231,7 @@ Wskazówka: Zacznij od przeniesienia wszystkich pudełek na prawą stronę ekran
 
 Przeanalizuj notatki dotyczące liczby porównań. Dostrzegasz jakąś prawidłowość? Ile porównań było wykonywanych w kolejnych etapach wybierania najlżeszych pudełek? Ile porównań łącznie byłoby wykonanych, gdybyśmy porządkowali zbiór 9 pudełek? Ile dla 20 pudełek? Załóżmy, że wiesz, ile porównań potrzeba do uporządkowania 1000 pudełek tym algorytmem. O ile więcej byłoby potrzebnych, gdyby pudełek było 1001?
 
-{panel type="teacher-note" summary="Odpowiedzi"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Odpowiedzi"}
 Dla pudełek mamy kolejno: 7 porównań do znalezienia najlżejszego, 6 do znalezienia drugiego najlżejszego, 5 do znalezienia następnego, potem 4, potem 3, 2 i w końcu 1 porównanie (gdy zostaną dwa pudełka do porównania). W sumie mamy:  7+6+5+4+3+2+1 = 28 porównań. 
 Gdyby pudełek było 9, to porównań byłoby: 8+7+6+5+4+3+2+1 = 36. Dla 20 pudełek byłoby 190 porównań. Liczba porównań w algorytmie dla przypadku 1001 pudełek będzie o 1000 większa niż w przypadku 1000 pudełek. 
 Algorytm porządkowania przez wybór wymaga wykonania {math}(n\times(n-1))/2{math end} porównań do uporządkowania *n* elementów.
@@ -262,7 +262,7 @@ W powyższym opisie można zastąpić słowo „najmniejszy” słowem „najwi�
 
 ### Porządkowanie przez wstawianie
 
-{panel type="teacher-note" summary="Ten podrozdział można pominąć"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Ten podrozdział można pominąć"}
 Algorytm przedstawiony poniżej jest użyteczny zwłaszcza dla małych zbiorów danych i w wykładach akademickich jest tematem obowiązkowym, lecz w przypadku podstawowego szkolnego kursu o algorytmach, niewiele wnosi nowego, gdy uczniowie znają już porządkowanie przez wybór. Można go pominąć w pracy z uczniami, jeśli czasu jest mało.
 {panel end}
 
@@ -305,7 +305,7 @@ Ten algorytm można tak opisać listą kroków:
 - Wybierz jedną z nieposortowanych podgrup i powtórz proces opisany w krokach powyżej. 
 Proces jest przerywany, gdy wszystkie powstałe podgrupy są już jednoelementowe.
 
-{panel type="project" summary="Programowanie. Algorytmy porządkowania"}
+{panel type="project" title="Projekt" summary="Programowanie. Algorytmy porządkowania"}
 Poniżej znajdują się odnośniki do komputerowych realizacji algorytmów porządkowania zapisanych w różnych językach; możesz się nimi posłużyć do przygotowania list losowych wartości i porównania kosztów wykonania programów.
 Twoje zadanie polega na wykonaniu pomiarów czasu działania programów dla coraz większych wartości (*n*); wyniki spróbuj przedstawić na wykresie.
 - [Przeszukiwanie w Scratch](files/selection-quicksort-scratch.zip) (program Scratch można ściągnąć [stąd](https://scratch.mit.edu/scratch2download/)) 
@@ -323,7 +323,7 @@ Ten rozdział to tylko wprowadzenie do tematu algorytmów. Istnieją z pewności
 
 Warto podkreślić, że istnieją inne metody przeszukiwania (np. z haszowaniem, drzewa przeszukiwań) i porządkowania (np. przez łączenie), które w konkretnej sytuacji mogą być bardziej efektywne od przedstawionych w tym rozdziale. Informatyk powinien je poznać, by szukając rozwiązania rzeczywistego problemu nie „wywarzał otwartych drzwi”, a dostosowywał do konkretnej sytuacji algorytmy o utrwalonej renomie.
 
-{panel type="extra-for-experts" summary="Przykłady notacji duże Θ"}
+{panel type="extra-for-experts" title="Dla ekspertów" summary="Przykłady notacji duże Θ"}
 Oto przykłady zapisów dotyczących kosztów algorytmów, jakie można spotkać w podręcznikach akademickich z dziedziny algorytmów.
 - {math}Θ(1){math end} -- Czas działania takiego algorytmu nie zależy od rozmiaru danych. Przykład: Znajdowanie wartości najmniejszej na liście uporządkowanej.
 - {math}Θ(n){math end} -- Czas działania takiego algorytmu można opisać funkcją liniową (względem rozmiaru danych). Można powiedzić, że czas rośnie wprost proporcjonalnie do rozmiaru danych. Przykład: przeszukiwanie liniowe.
