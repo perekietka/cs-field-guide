@@ -337,7 +337,7 @@ Po zakończeniu opracowywania programu i przekazaniu go klientowi, główna czę
 
 Wyobraź sobie, że twój projekt jest spóźniony, a klient zaczyna się niecierpliwić. Twoim pierwszym odruchem może być poproszenie znajomych o pomoc, a tym samym zwiększenie liczby osób pracujących nad projektem. Prawo Brooksa sugeruje jednak, że to jest zły pomysł!
 
-{glossary-link term="Prawo Brooksa" reference-text="software engineering"}Prawo Brooksa{glossary-link end} stwierdza, że „dodanie siły roboczej do spóźniającego się projektu informatycznego opóźnia go jeszcze bardziej”. Na początku może się to wydawać sprzeczne z intuicją, która podpowiada, że więcej osób wykona więcej pracy. Jednak nakład pracy związany z wdrożeniem nowych osób w temat projektu (doprowadzenie do zrozumienia, co próbujemy zbudować, projektu struktury, istniejącego kodu itd.) oraz z zarządzaniem i koordynowaniem większego zespołu programistycznego sprawia, że w krótkiej perspektywie postęp staje się wolniejszy.
+{glossary-link term="Prawo Brooksa" reference-text="Inżynieria oprogramowania"}Prawo Brooksa{glossary-link end} stwierdza, że „dodanie siły roboczej do spóźniającego się projektu informatycznego opóźnia go jeszcze bardziej”. Na początku może się to wydawać sprzeczne z intuicją, która podpowiada, że więcej osób wykona więcej pracy. Jednak nakład pracy związany z wdrożeniem nowych osób w temat projektu (doprowadzenie do zrozumienia, co próbujemy zbudować, projektu struktury, istniejącego kodu itd.) oraz z zarządzaniem i koordynowaniem większego zespołu programistycznego sprawia, że w krótkiej perspektywie postęp staje się wolniejszy.
 
 {panel end}
 
@@ -359,7 +359,7 @@ Które z tych podejść sprawdza się lepiej -- projektowanie wszystkiego na poc
 
 
 {panel type="teacher-note" title="Dla nauczyciela" summary="Dalsze porady dotyczące powyższego projektu"}
-Zwykle przewaga modelu zwinnego jest mocno widoczna; rzadko zdarza się, aby projektowany most działał od razu, ale zwykle można go wykonać stosując iteracyjne, zwinne podejście. Uczniowie mogą zwrócić uwagę to, że nie są przecież ekspertami od konstrukcji z kart, podczas gdy programista powinien być ekspertem od oprogramowania. Jednak prawdziwym problemem jest to, że programista prawdopodobnie nie jest ekspertem od systemu, który implementuje, ponieważ system taki prawdopodobnie nie został wcześniej zbudowany.
+Zwykle przewaga modelu zwinnego jest mocno widoczna; rzadko zdarzPodpis a się, aby projektowany most działał od razu, ale zwykle można go wykonać stosując iteracyjne, zwinne podejście. Uczniowie mogą zwrócić uwagę to, że nie są przecież ekspertami od konstrukcji z kart, podczas gdy programista powinien być ekspertem od oprogramowania. Jednak prawdziwym problemem jest to, że programista prawdopodobnie nie jest ekspertem od systemu, który implementuje, ponieważ system taki prawdopodobnie nie został wcześniej zbudowany.
 
 Inną możliwością jest zachęcenie uczniów do budowania domów z kart (ważne jest, aby uczniowie pracowali w dziedzinie, której nie znają; jeśli budowali wcześniej dany obiekt z kart, to zadanie może nie zadziałać!) Dom z kart może być łatwiejszy dla młodszych uczniów; most jest sporym wyzwaniem! Możesz zadać jeszcze trudniejszy temat: zbudować jak najwyższą wieżę z kart. Alternatywą do kart mogą być klocki Lego, ale karty będą zdecydowanie trudniejszym materiałem budowlanym.
 {panel end}
