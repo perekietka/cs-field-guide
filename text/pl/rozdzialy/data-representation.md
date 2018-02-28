@@ -1,6 +1,6 @@
 # Binarny zapis informacji
 
-{panel type="teacher-note" summary="Math in Data Representation"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Math in Data Representation"}
 Ćwiczenia w tym rozdziale wymagają wykonywania prostych obliczeń. Można je wykonać ręcznie lub w arkuszu kalkulacyjnym.
 {panel end}
 
@@ -18,7 +18,7 @@ Następnie wskaż na sąsiednią kartę, by na odwrocie zobaczyć dwie czarne kr
 
 Kolejne wyzwanie brzmi: Które karty należy odwrócić, aby łączna liczba kropek była równa 22? Jaka będzie odpowiedź dla liczby kropek równej: 11, 29 lub 19? Czy jakiejś liczby kropek nie sa się uzyskać? Możesz zacząć zliczanie od 0, jeśli chcesz.
 
-{panel type="teacher-note" summary="Wskazówki dla nauczyciela"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Wskazówki dla nauczyciela"}
 
 W czasie zajęć szkolnych zamiast narzędzia interaktywnego, można użyć papierowych kart.
 
@@ -30,7 +30,7 @@ Na przykład: Karta z jedną kropką jest odwracana, gdy pytanie dotyczy liczby 
 
 {panel end}
 
-{panel type="spoiler" summary="Rozwiązanie"}
+{panel type="spoiler" title="Spojler" summary="Rozwiązanie"}
 
 Można zauważyć, że liczba kropek na kolejnej karcie jest dwa razy większa niż na sąsiedniej (po prawej).
 Dostrzeżenie tej prawidłowości jest istotne dla zrozumienia cyfrowego zapisu danych w komputerze.
@@ -73,7 +73,7 @@ będziemy przedstawiać jako ciąg cyfr
 
 Taka notacja jest powszechnie używana. Należy jednak pamiętać, że sformułowanie typu „komputer zapisuje informacje w postaci ciągu zer i jedynek” jest skrótem myślowym. Nie ma sposobu, żeby zrobić to bezpośrednio – komputery posługują się własnościami fizycznymi takimi jak wysokie i niskie napięcie, namagnesowanie północ/południe, czy ciemne i jasne materiały.
 
-{panel type="jargon-buster" summary="bity"}
+{panel type="jargon-buster" title="Co to jest?" summary="Bity"}
 
 Ponieważ używa się tylko dwóch cyfr: 0 i 1, więc mówi się też o systemie dwójkowym lub binarnym (ang. binary system) i cyfrach dwójkowych (binarnych), zwanych bitami (ang. bit to skrót od słów „binary digit”). Pojęcie bitu jest jednym z najbardziej podstawowych w języku informatyków. 
 
@@ -89,8 +89,8 @@ Ten rozdział przedstawia różne metody, jakie są używane w systemach kompute
 
 Na początek przyjrzymy się kodowi (alfabetowi) Braille'a, który umożliwia zapisywanie i odczytywanie tekstów osobom niewidomym i niedowidzącym. Mimo że system brajlowski nie ma nic wspólnego z komputerami, to stanowi znakomite wprowadzenie do tematu tego rozdziału przewodnika po informatyce.
 
-{panel type="additional-information" summary="Zapis znaków Braille'a"}
-Dla uproszczenia ideę tzw. \opunku można zilustrować używając sześciu małych kół ułożonych w dwóch kolumnach po trzy punkty w każdej.
+{panel type="additional-information" title="Informacja dodatkowa" summary="Zapis znaków Braille'a"}
+Dla uproszczenia ideę tzw. sześciopunktu można zilustrować używając sześciu małych kół ułożonych w dwóch kolumnach po trzy punkty w każdej.
 Koła z zamalowanym wnętrzem będą ilustracją punktów wypukłych. 
 {panel end}
 
@@ -109,13 +109,13 @@ Gdyby używał kombinacji trzech punktów, to byłoby ich osiem.
 
 Można było zauważyć, że w przypadku użycia trzech punktów liczba wzorców jest dwa razy większa niż dla przypadku dwóch punktów. Okazuje się, że dodanie każdego kolejnego punktu skutkuje podwojeniem liczby wzorców . To znaczy, że dla czterech punktów liczba wzorców będzie równa 16, dla pięciu – 32, a dla sześciu – 64. Dlaczego? Potrafisz to wyjaśnić?
 
-{panel type="spoiler" summary="Wyjaśnienie"}
+{panel type="spoiler" title="Spojler" summary="Wyjaśnienie"}
 Po dodaniu czwartego punktu liczba wzorców podawaja się, bo nowy punkt można dołączyć do każdego wzorca 3-punktowego na dwa sposoby: jako punkt wypukły lub niewypukły.
 Podobnie można objaśnić przyczynę podwojenia się liczby wzorców po dodaniu czwartego punktu.
 To rozumowanie można uogólnić dla dowolnej liczby punktów.
 {panel end}
 
-{panel type="teacher-note" summary="O znaczeniu zrozumienia idei podawajania")}
+{panel type="teacher-note" title="Dla nauczyciela" summary="O znaczeniu zrozumienia idei podawajania")}
 Ta koncepcja (podwajanie się liczby wzorców) ma zasadnicze znaczenie dla zrozumienia istoty zapisu binarnego: każdy dodatkowy bit pozwala dwukrotnie zwiększyć liczbę wartości, które da się zapisać. Wybór odpowiedniej liczby bitów dla zapisu danych w konkretnej sytuacji jest bardzo ważny. Na przykład: 101-bitowy klucz szyfrowania jest dwa razy trudniej złamać, choć liczba użytych bitów jest większa tylko o 1%! 
 {panel end}
 
@@ -132,7 +132,7 @@ Alfabet Braille'a jest dobrą ilustracją przyczyn użyteczności zapisu binarne
 Współczesne urządzenia cyfrowe prawie zawsze używają systemu dwustanowego (binarnego) do zapisu informacji. Przyczyny są podobne: dyski komputerowe i pamięć elektroniczna jest po prostu tańsza i mniejszych rozmiarów, jeśli wystarczy rozróżnić między dwoma skrajnymi wartościami (jak np. wysokie i niskie napięcie), a nie trzeba mierzyć subtelnych różnic w wartościach (np. między wartościami napięcia). 
 Stosowanie systemu dziesiętnego byłoby niezwykle kosztowne.
 
-{panel type="curiosity" summary="Komputery oparte o system dziesiętny"}
+{panel type="curiosity" title="Ciekawostka" summary="Komputery oparte o system dziesiętny"}
 Dlaczego w technice komputerowej używa się systemu dwójkowego? Czy nie można by używać systemu dziesiętnego?
 W przeszłości próbowano budować komputery oparte o system dziesiętny. Rozwiązania takie były wyjątkowo skomplikowane i kosztowne. Wymaganie, by rozróżniać 10 różnych stanów (wartości) oznacza większy stopień skomplikowania sprzętu do zapisu i odczytu (np. napięcia elektrycznego). O wiele łatwiej w praktyce realizować wymaganie, by rozróżniać dwa stany.
 
@@ -144,7 +144,7 @@ Bardziej pogłębione objaśnienie zalet praktycznych systemu binarnego znajduje
 
 ## Liczby
 
-{panel type="teacher-note" summary="Rozgrzewka bez komputera"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozgrzewka bez komputera"}
 W ramach rozgrzewki można użyć ćwiczenia opisanego w scenariuszu zajęć projektu [CS Unplugged](http://jasijoasia.edu.pl/csu1.pdf). Pojęcie systemu dwójkowego (binarnego) jest tam wprowadzone krok po kroku z użyciem wyłączniem prostych operacji zliczania i dodawania. 
 
 Oto interaktyne narzędzie, w którym odwzorowano tradycyjne karty czarno-białe:
@@ -189,13 +189,13 @@ To, co zapisano powyżej, może brzmieć jako coś oczywistego. Warto to jednak 
 
 ### Zapis liczb całkowitych w systemie binarnym
 
-{panel type="teacher-note" summary="Jak uczyć o liczbach binarnych?"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Jak uczyć o liczbach binarnych?"}
 Ten podrozdział jest niezbędny do zrozumienia rozdziału o cyfrowym zapisie informacji o kolorach.
 
 Zaskakująco często w podręcznikach informatyki poświęca się wiele miejsca ilorazowej metodzie konwersji między systemami liczbowymi: binarnym i dziesiętnym. W praktyce informatycy prawie nigdy się nią nie posługują. Wydaje się, że ważniejsze jest rozumienie istoty zapisu binarnego i jego własności. Dla uczącego się kluczowe jest spostrzeżenie, że dodanie do binarnego zapisu liczby kolejnej cyfry oznacza *podwojenie* zakresu liczb, które da się zapisać z użyciem tylu cyfr. Poznanie pewnych prawidłowości właściwych zapisowi binarnemu i sprawne korzystanie z tej wiedzy przydaje się w wielu dziedzinach informatyki.
 {panel end}
 
-{panel type="teacher-note" summary="Binarne pianino"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Binarne pianino"}
 Binarne pianino to prosty środek dydaktyczny do nauki pewnej metody konwersji między systemami liczbowymi. Po wydrukowaniu uczniowie mogą wykonać samodzielne eksperymenty, które pozwolą zrozumieć istotę konwersji.
 Można je [pobrać stąd](files/binary-piano-UC.pdf).
 Wersja szablonu z czterema kopiami pianina [jest tutaj](files/binary-piano-UC-4up.pdf).
@@ -207,7 +207,7 @@ Jak wspomniano wcześniej, komputery zapisują informacje używając bitów, czy
 
 W systemie binarnym, można stosować wyłącznie dwie cyfry (0 i 1). W zapisie pozycyjnym mnożnik (wartość) każdej z cyfr jest więc dwa razy większy niż mnożnik cyfry po prawej stronie (inaczej niż w systemie dziesiętnym, gdzie tym czynnikiem jest 10).
 
-{panel type="curiosity" summary="The Denary number system"}
+{panel type="curiosity" title="Ciekawostka" summary="The Denary number system"}
 System liczbowy o podstawie 10 (dziesiętny) w języku angielskim określa się słowami decimal lub denary. To drugie określenie, używane najczęściej w Wielkiej Brytanii, ma formę gramatyczną analogiczną do angielskiego binary (dwójkowy, binarny). Słowo "denary" ma ścisły związek z nazwą rzymskiej monety (denarius, po polsku: denar), która miała wartość 10 asów (wybijanych z miedzi lub brązu). 
 {panel end}
 
@@ -217,7 +217,7 @@ Interaktywne narzędzie poniżej ma pomóc w zrozumieniu zasady zapisu binarnego
 
 **Aby upewnić się, że właściwe posługujesz się narzędziem, sprawdź, czy po wpisaniu 101101 widzisz odpowiedź 45, po wpisaniu 100000 widzisz 32, a po wpisaniu 001010 jako reprezentacja dziesiętna pojawia się 10 dziesięć.**
 
-{panel type="teacher-note" summary="Using the binary number interactive"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Using the binary number interactive"}
 Uczniowie powinni odkryć, że zapis binarny liczby zapisanej w systemie dziesiętnym mogą uzyskać cyfra po cyfrze (od lewej do prawej) postepując zachłannie w następujący sposób: cyfrę binarną ustawia się na 0 tylko i wyłącznie wówczas, gdy wartość dziesiętna odpowiednich pozycji w zapisie binarnym jest większa niż wartość dziesiętna, którą chcemy w tym momencie poddać konwersji.
 Po wykonaniu kilku prób stanie się dla uczniów oczywiste, co należy robić. Z pewnością nawet młdosi uczniowie mogą istotę algorytmu odkryć samodzielnie. W konsekwencji pozwoli im to zdobyć pewność siebie i sprawność w zadaniach konwersji. 
 Jeśli pomoc nauczyciela okaże się konieczna, to warto posłużyć się konkretnym przykładem. Na przykład dla liczby 37 nauczyciel zaczyna od ustawienia wszystkich bitów na 0 za wyjątkiem liczby na pozycji odpowiadającej liczbie 32 (która jest pierwszą nie przekraczającą 37). Następnie zachęca ucznia do odganięcia wartości bitu na pozycji odpowiadającej liczbie 16: ustawienie bitu na 1 oznaczałoby, że liczba jest nie mniejsza niż 48, więc bit trzeba ustawić na 0. Podobnie jest dla bitu na pozycji o wartości 8. Kolejny bit (odpowiadający składnikowi 4) należy ustawić na 1 (dostajemy sumę 36), następny na 0, a ostatni na 1 (suma: 37). Uzyskujemy zapis binarny: 100101.
@@ -234,13 +234,13 @@ Znajdź zapis biarny liczb 4, 7, 12 i 57, używajac narzędzia interaktywnego.
 
 Jaka jest największa liczba, jaką można uzyskać, posługując się tym narzędziem? Jaka jest najmniejsza? Czy jest jakaś liczba pomiędzy nimi, której nie jesteś w stanie uzyskać? Czy są liczby, które można zapisać w systemie binarnym na dwa różne sposoby? Odpowiedzi uzasadnij.
 
-{panel type="spoiler" summary="Największe i najmniejsze liczby"}
+{panel type="spoiler" title="Spojler" summary="Największe i najmniejsze liczby"}
 - 000000, czyli 0 (dziesiętnie) to najmniejsza liczba.
 - 111111, czyli 63 (dziesiętnie) to największa liczba.
 - Wszystkie liczby całkowite z zakresu od 0 do 63 da się zapisać binarnie (każdą wyłącznie w jeden sposób). Dokładnie tak samo, jak w systemie dziesiętnym.
 {panel end}
 
-{panel type="teacher-note" summary="Zrozumienie jednoznaczności zapisu binarnego"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Zrozumienie jednoznaczności zapisu binarnego"}
 Pytanie o jednoznaczność może być ciekawym wyzwaniem dla niektórych uczniów. Chodzi o to, że każdą liczbę można zapisać binarnym wyłącznie w jeden sposób; gdyby uczniowie mieli trudność w zrozumieniu uzasadnienia, to powinni przyjąć jednoznaczność zapisu na wiarę. Jednak można im pomóc zrozumieć ideę, proponując takie ćwiczenie: Uczeń otrzymuje zadanie zapisania pewnej liczby, np. 12, w systemie binarnym z użyciem 5 bitów. Skrajny lewy bit odpowiada wartości 16 (który jest większy od 12), więc należy ustawić go na 0 (ustawienie bitu na 1 na pewno nie pozwoli rozwiązać zadania). Dalej mamy bit o wartości 8. Nie jest możliwe zapisanie liczby 12 bez ustawienia tego bitu na 1 (suma wartości pozostałych bitów to 7). To oznacza, że 12 *musi* być zapisane jako 01100.
 
 Innym sposobem na wykazanie jednoznaczaności zapisu binarnego jest wyznaczenie liczby wszystkich ciągów zero-jednykowych ustalonej długości. Dla przypadku 5 bitów mamy 2x2x2x2x2 (tj. 32) różnych ciągów odpowiadających 32 liczbom z zakresu od 0 do 31, co oznacza, że przyporządkowanie musi być jeden-do-jednego.
@@ -255,14 +255,14 @@ Czy stosujesz metodę prób i błędów? Na czym polega Twoja metoda zamiany (ko
 
 Czy potrafisz znaleźć zapis binarny liczby 23 **bez posługiwania** się narzędziem? A liczby 4, 0 i 32? Sprawdź teraz, czy dobrze myślisz, używając narzędzia. 
 
-{panel type="challenge" summary="Counting in binary"}
+{panel type="challenge" title="Wyzwanie" summary="Zliczanie binarne"}
 Pomyśl, jak w sposób systematyczny liczyć w systemie binarnym, począwszy od 0, tj. 0, 1, 2, 3 itd. aż do największej liczby możliwej do zapisania z użyciem sześciu bitów. 
 Zacznij od odliczenia od 0 do 16 i spróbuj dostrzec jakąś zasadę. Wskazówka: Wyobraź sobie, że dodajesz 1 do liczby zapisanej dziesiętnie, np. 7 + 1, 38 + 1, 19 +1, 99 + 1, 230 899 999 + 1 itd. Czy możesz ten sam pomysł zastosować dla liczb dwójkowych?
 
 Pomyśl, jak zastosować wiedzę o systemie binarnym do liczenia na palcach powyżej liczby 10. Jaką największą liczbę można „zapisać” używając dziesięciu palców? Wyobraź sobie, że będziesz używać też palców u nóg. Jaka wówczas będzie odpowiedź?
 {panel end}
 
-{panel type="spoiler" summary="Zliczanie binarne"}
+{panel type="spoiler" title="Spojler" summary="Zliczanie binarne"}
 Aby liczbę zapisaną binarnie powiększyć o 1 wystarczy w jej zapisie biarnym odnaleźć pierwszy od prawej bit ustawiony na 0, następnie ustawić go na 1, a wszytkie bity po jego prawej stronie ustawić na 0. (W połowie przypadków tym poszukiwanym bitem 0 będzie skrajny prawy bit.)
 Używając pięciu palców można policzyć do 31. W przypadku 10 palców największa liczba to 1023.
 Na YouTube można zobaczyć wiele przykładów wideo, na których ktoś liczby binarnie na palcach. Podczas prezentacji niektórzy posługują się rękawiczkami, na których odpowiednie palce są opisane liczbami: 16, 8, 4, 2, 1.
@@ -270,7 +270,7 @@ Na YouTube można zobaczyć wiele przykładów wideo, na których ktoś liczby b
 
 Co stałoby się, gdybyśmy mieli mniej niż sześć bitów? Przykład: Dla pięciu bitów, wartości na kolejnych pozycjach byłyby równe odpowiednio: 16, 8, 4, 2 i 1, więc największą liczbą byłaby 11111, czyli 31 (dziesiętnie). Liczba 14 zapisana na pięciu bitach to 01110.
 
-{panel type="Challenge" summary="Binarny zapis liczb"}
+{panel type="challenge" title="Wyzwanie" summary="Binarny zapis liczb"}
 Zapisz podane liczby z użyciem odpowiedniej liczby bitów (o ile to możliwe).
 - **101** na **7 bitach**
 - **28** na **10 bitach**
@@ -279,7 +279,7 @@ Zapisz podane liczby z użyciem odpowiedniej liczby bitów (o ile to możliwe).
 - **28 232** na **16 bitach**
 {panel end}
 
-{panel type="spoiler" summary="Odpowiedzi"}
+{panel type="spoiler" title="Spojler" summary="Odpowiedzi"}
 Odpowiedzi (dla zwiększenia czytelności cyfry pogrupowano po cztery od prawej):
 - 101: **110 0101**
 - 28: **00 0001 1100**
@@ -290,13 +290,13 @@ Odpowiedzi (dla zwiększenia czytelności cyfry pogrupowano po cztery od prawej)
 
 Ważnym pojęciem związanym z liczbami binarnymi jest zakres wartości, które można zapisać przy użyciu danej liczby bitów (cyfr). Pojedynczy bit wydaje się mało użyteczny, ale wystarczy do zapisania informacji np. o tym, co ktoś zaznaczył w formularzu internetowym dla pola wyboru tak/nie. Grupa ośmiu bitów jest już bardziej użyteczna – pozwala na zapis wartości od 0 do 255, a więc wystarczy do przechowania informacji o czyimś wieku, dniu miesiąca itd.
 
-{panel type="jargon-buster" summary="Co to jest bajt?"}
+{panel type="jargon-buster" title="Co to jest?" summary="Co to jest bajt?"}
 Grupa ośmiu bitów jest tak użyteczna, że ma swoją nazwę: **bajt** (ang. byte). Pamięć elektroniczna i przestrzeń dyskowa jest zwykle podzielona na bajty. Większe liczby są zapisywane z użyciem większej liczby bajtów. Przykład: Dwa bajty (16 bitów) pozwalają na przechowywanie liczb z zakresu od 0 do 65 535. Cztery bajty (32 bity) umożliwiają zapis liczb aż do 4 294 967 295. Możesz sprawdzić, czy te liczby są poprawne, badając mnożniki odpowiadające bitom. Każdy kolejny bit oznacza podwojenie zakresu liczb.
 {panel end}
 
 Architektura dzisiejszych komputerów wymusza zapis liczb z użyciem 16, 32 lub 64 bitów. To wielokrotności bajtów (bajt to osiem bitów).
 
-{panel type="curiosity" summary="Binarny tort, czyli jak uchronić się od pożaru"}
+{panel type="curiosity" title="Ciekawostka" summary="Binarny tort, czyli jak uchronić się od pożaru"}
 Świeczki na torcie urodzinowym to przykład zastosowania systemu jedynkowego (unarnego).  Kolejne liczby tworzy się przez powtarzanie  znaku 1 tyle razy, ile wynika to z wartości danej liczby (można więc powiedzieć, że mnożnik dla każdej pozycji jest równy 1). Przykład: 3 to 111, a 10 to 1111111111. 
 Wraz z wiekiem pojawi się problem – stulatek powinien uważać, aby nie wywołać pożaru, gdy będzie zdmuchiwać zapalone świeczki. 
 
@@ -354,7 +354,7 @@ Liczbami posługujemy się zwykle pracując z arkuszem kalkulacyjnym lub bazą d
 Trzeba zaznaczyć, że nie wszystkie informacje liczbowe, są zapisywane w komputerze jako liczby, a jako ciągi znaków, np. numer telefonu zapisany jako (03) 555-1234, a więc zawierający nawiasy i łącznik. 
 Z drugiej strony informacje, które na pierwszy rzut oka nie są liczbami (np. „30 stycznia 2014”), mogą być ku naszemu zaskoczeniu zapisywane przez oprogramowanie jako liczby (co pozwala np. w programie Excel na odejmowanie jednej daty od drugiej, w celu wyznaczenia liczby dni pomiędzy dwoma wydarzeniami). Rolą oprogramowania jest wyświetlenie liczby w odpowiedni sposób dla użytkownika, w zalezności od jej interpretacji w konkretnej sytuacji.
 
-{panel type="curiosity" summary="Więcej na temat zapisu danych"}
+{panel type="curiosity" title="Ciekawostka" summary="Więcej na temat zapisu danych"}
 W arkuszu kalkulacyjnym Excel próba wykonania odejmowania jednej daty od drugiej skończy się wyznaczeniem liczby dni dzielących te dwie daty. Pojedyncza data natomiast jest w istocie zapisywana w pamięci jako liczba dni, które minęły od 1 stycznia 1900 roku. 
 {panel end}
 
@@ -386,7 +386,7 @@ Nawet podczas pracy ze standardowym komputerem jest ważne, aby starannie okreś
 
 Narzędzia takie jak Google Maps przetwarzają astronomiczne ilości danych. Marnowanie pamięci w ich przypadkach wcale nie wchodzi w grę!
 
-{panel type="challenge" summary="Ile bitów jest niezbędnych?"}
+{panel type="challenge" title="Wyzwanie" summary="Ile bitów jest niezbędnych?"}
 Czymś bardzo użytecznym jest oszacowanie liczby bitów niezbędnych do zapamiętania pewnych wartości. Zastanów się, jaka byłaby odpowiedź dla sytuacji przedstawionych poniżej. Pamiętaj, że chcesz mieć możliwość zapamiętania największej z potencjalnych wartości, ale nie chcesz marnować pamięci komputera.
 
 1. Informacja o dniu tygodnia: a) 1 bit? b) 4 bity? c) 8 bitów? d) 32 bity?
@@ -395,7 +395,7 @@ Czymś bardzo użytecznym jest oszacowanie liczby bitów niezbędnych do zapami�
 4. Informacja o liczbie gwiazd we wszechświecie: a) 16 bitów? b) 32 bity? c) 64 bity? d) 128 bitów?
 {panel end}
 
-{panel type="spoiler" summary="Odpowiedzi"}
+{panel type="spoiler" title="Spojler" summary="Odpowiedzi"}
 1. b) Właściwie to już 3 bity pozwolą na zapis 8 różnych wartości; ale technicznie lepszym rozwiązaniem są 4 bity ze względu na to, że na 8 bitach można by łatwo zapisać informacje o dwóch dniach tygodnia.
 2. c) 32 bity to za mało.
 3. c) To było trudne pytanie, ale projektujący bazę danych musi i o takich rzeczach myśleć. W Nowej Zelandii jest łącznie ok. 94 000 km dróg i założenie, że średnia długość drogi to przynajmniej 1 km prowadzi do wniosku, że 16 bitów to za mało. Bezpieczniejszą opcją wydają się 32 bity.
@@ -415,12 +415,12 @@ W komputerze nie ma możliwości dopisania znaku - (minus) przed liczbą, ale mo
 
 Przykład: W reprezentacji 8-bitowej ze znakiem liczba **41** będzie zapisana jako **00101001**, gdzie pierwszy bit (0) to bit znaku, a kolejne bity to zapis binarny liczby **41** na 7 bitach. Podobnie liczba **-59** będzie mieć reprezentację **01111011**, gdzie pierwszy bit (1) jest bitem znaku, a kolejne bity to liczba **59** zapisana binarnie.
 
-{panel type="challenge" summary="Zapis liczb ujemnych (metoda bit-znak)"}
+{panel type="challenge" title="Ciekawostka" summary="Zapis liczb ujemnych (metoda bit-znak)"}
 Znajdź 8-bitową reprezentację binarną liczb:  1, -1, -8, 34, -37, -88 i 102.
 Jakie liczby będą reprezentowane jako 10000110, 01111111 i 10000000 w przypadku systemu 8-bitowego?
 {panel end}
 
-{panel type="spoiler" summary="Odpowiedzi"}
+{panel type="spoiler" title="Spojler" summary="Odpowiedzi"}
 W poniższych odpowiedziach dodaliśmy odstępy dla ułatwienia czytania liczb binarnych.
 -   1  to 0000 0001
 -  -1  to 1000 0001
@@ -433,7 +433,7 @@ W poniższych odpowiedziach dodaliśmy odstępy dla ułatwienia czytania liczb b
 
 Dekodowanie, czyli określenie wartości dziesiętnej na podstawie zapisu binarnego jest proste. Liczba zapisana jako **1001 0111** to na pewno liczba ujemna. Po bicie znaku (1) mamy 7 bitów **001 0111** reprezentujących **23**. Stąd wartość szukana to **-23**.
 
-{panel type="challenge" summary="Zapis dziesiętny liczb biarnych ze znakiem"}
+{panel type="challenge" title="Wyzwanie" summary="Zapis dziesiętny liczb biarnych ze znakiem"}
 Jakie liczby będą reprezentowane jako 0001 0011, 1000 0110, 10100011, 0111 1111 i 11111111 w przypadku systemu 8-bitowego?
 - 00010011
 - 10000110
@@ -442,7 +442,7 @@ Jakie liczby będą reprezentowane jako 0001 0011, 1000 0110, 10100011, 0111 111
 - 11111111
 {panel end}
 
-{panel type="spoiler" summary="Odpowiedzi"}
+{panel type="spoiler" title="Spojler" summary="Odpowiedzi"}
 - 0001 0011 to 19
 - 1000 0110 to -6
 - 1010 0011 to -35
@@ -475,7 +475,7 @@ Na przykład dla **-118** kolejne kroki będą wyglądać tak:
 
 Stąd zapis liczby **-118** w kodzie uzupełnieniowym (U2) to: **10001010**.
 
-{panel type="challenge" summary="Dodanie 1 w arytmetyce binarnej"}
+{panel type="challenge" title="Wyzwanie" summary="Dodanie 1 w arytmetyce binarnej"}
 Reguła rządząca dodaniem 1 w arytmetyce binarnej jest bardzo prosta, więc warto ją odkryć samodzielnie.
 Po pierwsze: Jeśli zapis binarny liczby kończy się 0 (np. 1101010), to jaki będzie efekt zamiany ostatniego 0 na 1?
 Rozpatrz inne przypadki: Jeśli zapis kończy się bitami 01, to o ile większa będzie liczba jeśli w tych miejscach wpiszemy 10?
@@ -484,7 +484,7 @@ Co w przypadku zapisów kończących się 011 czy 011111?
 Te proste reguły oznaczają w praktyce, że upraszcza się projektowanie sumatorów (cyfrowych układów elektronicznych, wykonujących dodawanie). 
 {panel end}
 
-{panel type="teacher-note" summary="Dodanie 1 w arytmetyce binarnej"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Dodanie 1 w arytmetyce binarnej"}
 Uczniowie powinni samodzielnie, przez wykonanie kilku przykładów, odkryć regułę dodawania 1 do liczby zapisanej binarnie. 
 
 Istnieją różne sposoby mówienia o tym procesie.
@@ -497,7 +497,7 @@ Gdy w liczbie zera nie występują (np. 1111111), można dopisać 0 na początku
 Być może warto, aby uczniowie poszukali analogicznej reguły dotyczącej zapisu dziesiętnego: jak dodać 1 do 284 394? To 38 999? 9 999 799?
 {panel end}
 
-{panel type="challenge" summary="Zapisywanie liczb w kodzie U2"}
+{panel type="challenge" title="Wyzwanie" summary="Zapisywanie liczb w kodzie U2"}
 Zapisz poniższe liczby w kodzie U2, używając 8 bitów.
 1. 19
 2. -19
@@ -506,7 +506,7 @@ Zapisz poniższe liczby w kodzie U2, używając 8 bitów.
 5. -92
 {panel end}
 
-{panel type="spoiler" summary="Odpowiedzi"}
+{panel type="spoiler" title="Spojler" summary="Odpowiedzi"}
 1. 19 ma kod **0001 0011**.
 2. Dla -19, zaczynamy od zapisania kodu dla 19, czyli 0001 0011, po zamianie bitów mamy 1110 1100, a po dodaniu 1 otrzymujemy poszukiwany kod: **1110 1101**.
 3. 107 ma kod **0110 1011**.
@@ -534,14 +534,14 @@ Na przykład dla liczby 11100010 kolejne kroki dają takie efekty:
 3. **30**
 4. **-30**
 
-{panel type="challenge" summary="Ćwiczenie"}
+{panel type="challenge" title="Wyzwanie" summary="Ćwiczenie"}
 Zapisz w postaci dziesiętnej liczby zapisane w kodzie U2:
 1. 00001100
 2. 10001100
 3. 10111111
 {panel end}
 
-{panel type="spoiler" summary="Odpowiedzi"}
+{panel type="spoiler" title="Spojler" summary="Odpowiedzi"}
 1. **12**
 2. 10001100 -> 10001011 -> 01110100 -> 116 -> **-116**
 3. 10111111 -> 10111110 -> 01000001 -> 65 -> **-65**
@@ -635,7 +635,7 @@ Opisaną wyżej metodę można zaadaptować do odejmowania: zamiast działania 5
 
 Własności kodowania U2 są bardzo użyteczne. Dzięki temu można wykonywać działania zarówno na liczbach ujemnych, jak i nieujemnych za pomocą tych samych elektronicznych układów arytmetycznych, a dodawanie i odejmowanie można potraktować jako ten sam typ operacji arytmetycznej.
 
-{panel type="curiosity" summary="O co chodzi z kodeum U2?"}
+{panel type="curiosity" title="Dla ciekawych" summary="O co chodzi z kodeum U2?"}
 
 Pomysł wykonywania dodawania na tzw. dopełnieniu liczby zamast odejmowania liczby można zastosować w obliczeniach na liczbach dziesiętnych. Dopełnieniem dziesiętnym *x* jest 10-*x*, np. dla 4 to 6, a dla 8 to 2. 
 (Słowo "dopełnić" ma ten sam rdzeń, co słowo pełnia. Liczba 10 jest w tym przypadku taką pełną, „okrągłą” liczbą.)
@@ -667,14 +667,14 @@ W jednym z poprzednich podrozdziałów stwierdziliśmy, że sześć punktów sys
 
 Spróbuj policzyć, ile różnych dużych liter, małych liter, liczb i innych znaków możesz wprowadzić do edytora tekstu, używając klawiatury komputerowej. (Nie zapomnij o znakach, które współdzielą klawisze z liczbami i o znakach interpunkcyjnych!) 
 
-{panel type="jargon-buster" summary="Znaki"}
+{panel type="jargon-buster" title="Co to jest?" summary="Znaki"}
 Wspólną nazwą dla dużych i małych liter, liczb i symboli jest *znak* (ang. character). Na przykład a, D, 1, h, 6, \*, ], jak również ~ (tylda), wszystkie są znakami.
 Należy podkreślić, że spacja (odstęp) jest również znakiem.
 {panel end}
 
 Jeśli ktoś dokładnie policzył, to wie, że znaków jest więcej niż 64, bo ponad 90. Użycie 6 bitów nie wystarczy, by zapisać wszystkie znaki. Okazuje się, że potrzeba przynajmniej 7 bitów. Dokładnie tyle zastosowano w oryginalnej wersji kodowania **ASCII**.
 
-{panel type="challenge" summary="Dlaczego 7 bitów?"}
+{panel type="challenge" title="Wyzwanie" summary="Dlaczego 7 bitów?"}
 Przy omawianiu kodu Braille'a wyjaśniliśmy, co dzieje się po zwiększeniu liczby punktów o 1 (pamiętaj, że kod Braille'a jest kodem binarnym). Możesz wyjaśnić, skąd wiadomo, że 6 bitów wystarczy do zapisu 64 znaków, a 7 bitów pozwala na zapis nawet 128 znaków?
 {panel end}
 
@@ -720,28 +720,28 @@ W tabeli przedstawiono zestawienie znaków i odpowiadajacych im wzorców 7-bitow
 Przykład: Litera *c* (mała litera) ma w tabeli przypisany wzorzec: „01100011” (0 na początku jest dopełnieniem kodu do 8 bitów). Litera *o* ma wzorzec „01101111”.
 Warto w ramach ćwiczenia zapisać jakieś słowo, używając kodu ASCII i dać komuś innemu, kto również zapoznaje się z tym tematem, do odkodowania. 
 
-{panel type="teacher-note" summary="Jak stosować tablicę?"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Jak stosować tablicę?"}
 Należy polecić uczniom wymianę krótkich wiadomości zapisanych w kodzie ASCII. Wtedy będą mieli okazję dostrzec pewne prawidłowości, wzorce (np. duże litery różnią się od odpowiadających im małych liter tylko na jednym bicie).
 {panel end}
 
 W komputerach teksty w języku angielskim są zapisywane w postaci ciągów (sekwencji) wzorców 8-bitowych, bardzo podobnie jak to było z zapisem w Braille'u. Dla przykładu słowo „computers” będzie zapisane jako: 01100011 01101111 01101101 01110000 01110101 01110100 01100101 01110010 01110011.
 Litera *c* ma kod 01100011, litera *o* ma kod 01101111 itd. Spójrz do tablicy ASCII, aby to sprawdzić! 
 
-{panel type="curiosity" summary="Co oznacza skrót ASCII?"}
+{panel type="curiosity" title="Ciekawostka" summary="Co oznacza skrót ASCII?"}
 Nazwa „ASCII” jest skrótem od „American Standard Code for Information Interchange”. Była to standaryzacja sposobu kodowania znaków w maszynie dalekopisowej (zautomatyzowanym systemie telegraficznym). Dlatego system ASCII zawiera także „znaki” dla sygnału dzwonka, dla informacji o potrzebie usunięcia poprzedniego znaku (jakby przodek polecenia „cofnij”), czy dla potwierdzenia zakończenia transmisji (END). We fragmencie tabeli ASCII, zamieszczonym powyżej, znajdziesz tylko jeden z nich (DEL). Resztę pominięto.  
 Dzisiaj system ASCII został wyparty przez kodowanie UTF-8. Należy podkreślić, że teksty angielskie zakodowane w UTF-8 mają identyczną reprezentację binarną, co teksty w ASCII, gdyż pierwszy bit każdego 8-bitowego wzorca jest wówczas równy 0. Inaczej mówiąc plik tekstowy zawierający wzorce 1xxxxxxx z całą pewnością nie jest zapisany w kodzie ASCII i zawiera informacje o znakach spoza alfabetu angielskiego.
 
 {panel end}
 
 
-{panel type="challenge" summary="Więcej o ASCII"}
+{panel type="challenge" title="Wyzwanie" summary="Więcej o ASCII"}
 Odpowiedz na następujące pytania:
 
 Jak zapisać słowo „science”, używając kodu ASCII? A słowo „Wellington” (zauważ, że słowo rozpoczyna się dużą literą „W”)? Jak zapisać „358” (czyli ciąg trzech cyfr)? Zapisz całe zdanie: „Hello, how are you?” (odszukaj w tabeli kodów ASCII wzorca dla przecinka, znaku zapytania i spacji).
 
 {panel end}
 
-{panel type="spoiler" summary="Odpowiedzi"}
+{panel type="spoiler" title="Spojler" summary="Odpowiedzi"}
 
 Oto odpowiedzi:
 
@@ -758,7 +758,7 @@ Kod ASCII jest stosowany w technice komputerowej i telekomunikacji już od roku 
 
 Dla tekstów w języku angielskim kod ASCII jest wystarczającym rozwiązaniem. Co jednak zrobić w przypadku języków takich jak chiński, w których stosuje się tysiące różnych znaków? 128 kombinacji zerojedynkowych to za mało! ASCII dzisiaj nie jest już powszechnie stosowany. Używa się rozwiązania zwanego Unicode.
 
-{panel type="curiosity" summary="Co było przed ASCII?"}
+{panel type="curiosity" title="Ciekawostka" summary="Co było przed ASCII?"}
 Warto wspomnieć, że zanim pojawił się standard ASCII w usługach telegraficznych stosowano inne standardy: kod Baudota i EBCDIC. 
 Powszechnie stosowana była odmiana kodu o nazwie o nazwie kod Baudota-Murraya. Jej autorem był Donald Murray, urodzony w Nowej Zelandii. Jednym z elementów kodu było wprowadzenie „kodów kontrolnych”, takich jak kod powrotu karerki i nowej linii. Zauważ, że przycisk „control (ctrl)” nadal jest elementem klawiatury.
 {panel end}
@@ -807,7 +807,7 @@ Poniżej znajduje się interaktywne narzędzie, które pozwala wyznaczyć kod Un
 
 {interactive name="unicode-binary" type="iframe" parameters="mode=utf32"}
 
-{panel type="project" summary="Imię w kodzie UTF-32"}
+{panel type="project" title="Projekt" summary="Imię w kodzie UTF-32"}
 1. Znajdź kody liter Twojego imienia dla schematu UTF-32.
 2. Sprawdź, ile bitów zajmuje właściwy kod litery, a ile bitów to 0 uzupełniające zapis binarny do 32 bitów.
 3. Wyjaśnij, na czym polega binarny zapis danego znaku tekstu (według numeru Unicode).
@@ -818,7 +818,7 @@ W kodzie ASCII stosuje się właściwie identyczne podejście. Każdy znak ma ko
 W praktyce schemat UTF-32 jest rzadko używany -- własnie dlatego, że wiąże się z marnotrawieniem zasobów.
 Schematy UTF-8 i UTF-16 są zmiennej długości, są powszechnie używane. Teraz się nimi zajmiemy.
 
-{panel type="challenge" summary="Ile to jest 32 bity?"}
+{panel type="challenge" title="Wyzwanie" summary="Ile to jest 32 bity?"}
 1. Jaka jest największa liczba, którą można zapisać na 32 bitach? (Odpowiedź zapisz zarówno dziesiętnie, jak i binarnie.)
 
 2. Największa liczba Unicode jest daleko mniejsza od największej liczby, którą da się zapisać na 32 bitach -- ma postać 00000000 00010000 11111111 11111111. Jaką postać dziesiętną ma ta liczba?
@@ -826,7 +826,7 @@ Schematy UTF-8 i UTF-16 są zmiennej długości, są powszechnie używane. Teraz
 3. Jaka jest najmniejsza liczba bitów, która wystarczyłaby do zapisania każdego z ok. 120 000 znaków Unicode?
 {panel end} 
 
-{panel type="spoiler" summary="Odpowiedzi"}
+{panel type="spoiler" title="Spojler" summary="Odpowiedzi"}
 1. 4 294 967 295 (ok. 4,3 miliarda). 
 
 2. 1 114 111.
@@ -919,7 +919,7 @@ Poniżej znajduje się interaktywne narzędzie, które pozwala na określenie li
 
 Można powiedzieć, że UTF-8 jest lepsze dla tekstów w języku angielskim, UTF-16 dla tekstów w językach azjatyckich. 
 
-{panel type="curiosity" summary="Emotikony i Unicode"}
+{panel type="curiosity" title="Ciekawostka" summary="Emotikony i Unicode"}
 Różne urocze małe znaki, które można używać na portalach społecznościowych itp. nazywa się emotikonami. Każdy z nich ma numer w tablicy Unicode. Najpierw emotikony pojawiły się w Japonii w wiadomościach wysyłanych z telefonów komórkowych. Dziś jest ponad 1000 różnych emotikonów. Ich listę można zobaczyć [tutaj](http://unicode.org/emoji/charts/full-emoji-list.html).
 Co ciekawe, pojedyncze znaki emoji mogą mieć różny wygląd w zależności od platformy, tj.  &#128518 (czyli uśmiechnięta twarz z otwartymi ustami i przymkniętymi oczami) zapisana jako element tweeta będzie wyglądać inaczej niż na iPhone'ie. 
 {panel end}
@@ -936,7 +936,7 @@ Niech 1 odpowiada literze *a*, 2 -- literze *b*, 3 -- *c*, a 26 -- *z*. (Możesz
 
 Zapisz słowo „water” używając opisanego wyżej schematu 5-bitowego kodowania.
 
-{panel type="spoiler" summary="Odpowiedzi"}
+{panel type="spoiler" title="Spojler" summary="Odpowiedzi"}
 ```
 w: 10111
 a: 00001
@@ -948,7 +948,7 @@ r: 10010
 
 **Teraz czas na zdekodowanie wiadomości ukrytej w utworze muzycznym!**
 
-{panel type="teacher-note" summary="Więcej informacji o nagraniu wideo"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Więcej informacji o nagraniu wideo"}
 
 W nagraniu wideo odnaleźć można ponad 20 ukrytych wiadomości, zawsze zapisanych z użyciem 5 bitów.
 Na początku mamy solo na bębnie. Pierwsze pięć dźwięków to: „tuk tuk trzask tuk tuk”.
@@ -990,13 +990,13 @@ Poniżej znajduje się interaktywne narzędzie, które pozwala na lepsze zrozumi
 7. Co się stanie, gdy wszystkie suwaki będą ustawione na tę samą wartość?
 8. Jak uzyskać kolor czarny? A biały?
 
-{panel type="spoiler" summary="Wskazówki"}
+{panel type="spoiler" title="Spojler" summary="Wskazówki"}
 Ustawienie wszystkich suwaków w skrajnych pozycjach (na jednym z końców) da kolor biały lub czarny, a ustawienie ich w równej odległości od końców da odciecie szarości (tj. przejście między czarnym a białym).
 
 Aby uzyskać kolor żółty należy zmieszać czerwony i zielony, bez niebieskiego. To może być zaskakujące.
 {panel end}
 
-{panel type="curiosity" summary="Kolory podstawowe a ludzkie oko"}
+{panel type="curiosity" title="Ciekawostka" summary="Kolory podstawowe a ludzkie oko"}
 Ludzkie oko zawiera miliony światłoczułych receptorów, zwanych czopkami. Istnieją trzy rodzaje czopków: wywołujące odpowiednio wrażenie czerwieni, wrażenie zieleni i wrażenie barwy niebieskiej. Dla przykładu: jeśli na światło reagują z podobną czułością czopki z pierwszej i trzeciej z wyżej wymienionych grup, a czopki z drugiej grupy nie reagują, to mózg postrzega tę barwę jako niebieskoczerwoną, jaśnieszą odmianę purpurowego (ang. magenta).
 
 {image filename="pixels-on-screens.jpg" alt="Na zdjęciu można zobaczyć trzy rodzaje subpikseli."}
@@ -1007,7 +1007,7 @@ Ludzkie oko zawiera miliony światłoczułych receptorów, zwanych czopkami. Ist
 
 Kolory wyświetlane na ekranach telewizorów też uzyskuje się przez zmieszanie kolorów podstawowych: czerwonego (ang. red), zielonego (ang. green) i niebieskiego (ang. blue). 
 
-{panel type="jargon-buster" summary="Pixel"}
+{panel type="jargon-buster" title="Co to jest?" summary="Piksel"}
 Słowo piksel (ang. pixel) to skrót powstały z angielskiego zwrotu picture element, czyli element obrazu. Na ekranie monitora komputerowego obraz (grafika), to siatka pikseli  o różnych kolorach. Piksel ma wielkość ułamka milimetra, a więc obraz składa się zwykle z milionów pikseli (stąd mówi się megapiksel na oznaczenie zbioru miliona pikseli)
 
 {panel end}
@@ -1020,7 +1020,7 @@ Poniżej znajduje się interaktywne narzędzie, które pozwala na powiększenie 
 
 {interactive name="pixel-viewer" type="whole-page" text="Pixel Viewer interactive"}
 
-{panel type="curiosity" summary="Inne materiały edukacyjne"}
+{panel type="curiosity" title="Dla ciekawych" summary="Inne materiały edukacyjne"}
 Inne ćwiczenie, które ukazuje związek między wartościami składowych RGB a wyświetlanym kolorem jest [tutaj](https://sites.google.com/a/bxs.org.uk/mrkershaw/ict/bitmapgraphics).
 {panel end}
 
@@ -1051,7 +1051,7 @@ Każdą z tych trzech liczb należy napisać binarnie, używając 8 bitów. Moż
 
 Zauważ, że nie zapisujemy odstępów między 8. i 9. bitem, ani między 16. i 17. bitem, by podkreślić, że w komputerze oczywiście nie ma miejsca na inny znak niż reprezentacja fizyczna 0 i 1 (np. niższe lub wyższe napięcie prądu). Dla wygody odczytu możesz jednak zapisywać odstępy (spacje), kiedy zapisujesz taką informację w edytorze tekstu, czy długopisem na kartce. Zwróć uwagę na to, że każda składowa opisana jest z użyciem ośmiu bitów, nawet jeśli te najbardziej znaczące ustawione są na 0. W celu lepszego zrozumienia tego zagadnienia warto zapisać kilka innych przykładów.
 
-{panel type="curiosity" summary="Obrazy monochromatyczne"}
+{panel type="curiosity" title="Ciekawostka" summary="Obrazy monochromatyczne"}
 Obrazy czarno-białe zwykle składają się z większej liczby kolorów niż dwa. Zwykle to 256 odcieni szarości, zapisane z użyciem 8 bitów.
 
 Zapamiętaj, że odcienie szarości można uzyskać przez ustawienie tej samej wartości liczbowej dla wszystkich składowych RGB, np. 105, 105, 105. To oznacza, że wystarczy tę liczbę zapisać raz w pojedynczym bajcie.
@@ -1062,8 +1062,8 @@ Należy podkreślić, że komputery przetwarzają informacje zapisane binarnie, 
 
 Najważniesze jest, aby rozumieć, że cyfrowy zapis informacji o kolorze wymaga pogodzenia dwóch wyzwań: właściwego postrzegania koloru przez ludzkie oko i użycia możliwie małej liczby bitów pamieci.
 
-{panel type="curiosity" summary="Szesnastkowe kody kolorów"}
-Podczas tworzenia kodu HTML strony internetowej często trzeba określać kolor tekstu, tła itd. Można wtedy podać wprost angielską nazwę koloru, np. "red", "blue", "purple" lub "gold". W ten sposób nie da się jednak opisać różnych odcieni koloru czerwonego, niebieskiego i innych. Jedynym rozwiązaniem jest wskazanie odpowiedniego kodu koloru. W praktyce nie stosuje się w tym miejscu zapisu binarnego (24 bitów), ale kody szestnastkowe, które są znacznie bardziej czytelne dla człowieka, więc pisze się np. #00FF9E. Znak # (ang. hash) to informacja dla przeglądarki internetowej, która kolejne sześć znaków zinterpretuje jako 24-bitową informację o kolorze. Takie "trójki szesnastkowe" stosuje się nie tylko w kodzie HTML, ale również np. w przypadku określania atrybutu koloru dla stylów w plikach CSS i SVG.
+{panel type="curiosity" title="Dla ciekawych" summary="Szesnastkowe kody kolorów"}
+Podczas tworzenia kodu HTML strony internetowej często trzeba określać kolor tekstu, tła itd. Można wtedy podać wprost angielską nazwę koloru, np. „red", „blue", „purple" lub „gold". W ten sposób nie da się jednak opisać różnych odcieni koloru czerwonego, niebieskiego i innych. Jedynym rozwiązaniem jest wskazanie odpowiedniego kodu koloru. W praktyce nie stosuje się w tym miejscu zapisu binarnego (24 bitów), ale kody szestnastkowe, które są znacznie bardziej czytelne dla człowieka, więc pisze się np. #00FF9E. Znak # (ang. hash) to informacja dla przeglądarki internetowej, która kolejne sześć znaków zinterpretuje jako 24-bitową informację o kolorze. Takie „trójki szesnastkowe" stosuje się nie tylko w kodzie HTML, ale również np. w przypadku określania atrybutu koloru dla stylów w plikach CSS i SVG.
 W przykładzie używanym we wcześniejszej części tekstu pojawił się następujący wzorzec bitowy: 100100010011001001111011. Ten 24-bitowy ciąg można rozdzielić na grupy półbajtów: 1001 0001 0011 0010 0111 1011. Jeśli zastapimy każdy z nich cyfrą szesnastkową, to otrzymamy 91327B. Taki kod nazywamy kodem szesnastkowym (heksadecymalnym) koloru.
 
 Oto przykład. Tworząc stronę internetową możemy w pliku HTML określić kolor tła strony, pisząc  <body bgcolor="#00FF9E">
@@ -1099,11 +1099,11 @@ Inaczej mówiąc: trzykrotne zmniejszenie liczby bitów z 24 do 8 ma taki skutek
 
 Dlaczego najmniejszą liczbę bitów przeznaczyliśmy na składową niebieską? Okazuje się, że ludzkie oko jest najmniej wrażliwe na kolor niebieski i dlatego tak można było postąpić. W komputerze łatwiej przetwarzać grupy składające się z 8 bitów niż z 9 bitów.
 
-{panel type="jargon-buster" summary="Głębia koloru"}
+{panel type="jargon-buster" title="Co to jest?" summary="Głębia koloru"}
 Z informacją o liczbie bitów zastosowanych do zapisu informacji o kolorach pikseli wiąże się ściśle określenie „głębia koloru” (lub „głębia bitowa”). Przykład: obraz o 8-bitowej głębi koloru to taki, w którym każdy z pikseli ma przypisany jeden z 256 kolorów palety barw. Trzeba podkreślić, że drastyczne zmniejszenie głębi koloru może dać taki efekt, że obraz będzie wyglądał bardzo dziwnie (utrata kolorów prowadzi do powstania fałszywych konturów). Czasami taki efekt jest stosowany w programach graficznych specjalnie. Mówi się wtedy o efekcie posteryzacji (tj. upodobnieniu obrazu do plakatów, które drukuje się z użyciem tylko kilku kolorów).
 {panel end}
 
-{panel type="curiosity" summary="Głębia koloru a kompresja"}
+{panel type="curiosity" title="Ciekawostka" summary="Głębia koloru a kompresja"}
 Jest subtelna różnica między zapisem informacji o obrazie z użyciem mniejszej liczby bitów (np. 8-bitowy kolor) a metodami kompresji. Choć redukacja liczby bitów do 8 skutkuje zmniejszeniem rozmiaru danych, to jednak takie podejście trudno nazwać skuteczną kompresją danych. 
 {panel end}
 
@@ -1121,7 +1121,7 @@ Poniżej znajduje się narzędzie, które pozwala dostrzec efekt różnego przyd
 
 {interactive name="image-bit-comparer" type="whole-page" text="Image Bit Comparer - Change Bits mode" parameters="change-bits=true"}
 
-{panel type="curiosity" summary="Czy kiedykolowiek potrzeba więcej niż 24 bity?"}
+{panel type="curiosity" title="Dla ciekawych" summary="Czy kiedykolowiek potrzeba więcej niż 24 bity?"}
 Można zapytać, czy zyskalibyśmy coś zapisując informację o kolorze z użyciem liczby bitów większej niż 24? Okazuje się, że ludzkie oko potrafi rozróżniać ok. 10 milionów kolorów, więc liczba kolorów dla głębi 24-bitowej (ponad 16 milionów) jest większa. Czasami jednak stosuje się więcej bitów, np. w przypadku, gdy chcemy na obrazie odzwierciedlić kontrast.
 
 {panel end}
@@ -1138,11 +1138,11 @@ Współcześnie rzadko używa się już systemu 8-bitowego. Jednak zdarza się, 
 
 W sytuacji, kiedy chcemy uzyskać mniejszy rozmiar pliku z grafiką, bez znacznego pogarszania jakości obrazu, stosuje stosuje się powszechnie kompresję (np. JPEG, GIF i PNG). Taki zapis wymaga jednak pewnego czasu przetwarzania obrazu przy zapisie oraz odczycie, a więc wydłuża się czas potrzebny np. na wyświetlenie obrazu. 
 
-Więcej informacji znajdziesz w rozdziale poświęconym kompresji danych!
+Więcej informacji znajdziesz w rozdziale poświęconym kompresji danych.
 
 ## Zapis binarny instrukcji w komputrze
 
-{panel type="caution" expanded="True"}
+{panel type="caution" title="Uwaga" expanded="True"}
 Lekturę tego podrozdziału warto poprzedzić zapoznaniem się opisem języków programowania niskiego poziomu w rozdziale [„Języki programowania”](chapters/programming-languages.html#kod-maszynowy-jzyki-niskiego-poziomu).
 {panel end}
 
