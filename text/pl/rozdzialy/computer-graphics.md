@@ -17,7 +17,7 @@ Grafika komputerowa znajduje zastosowanie w wielu różnych sytuacjach. Tworzeni
 
 
 
-{panel type="jargon-buster" summary="Piksele"}
+{panel type="jargon-buster" title="Co to znaczy?" summary="Piksele"}
 {glossary-definition term="Piksel" definition="To słowo to spolszczona wersja słowa pixel, który powstał jako skrót od *picture element* (dosł. element obrazu), na oznaczenie małych kwadratów tworzacych jakby siatkę (ang. grid) komputerowej realizacji obrazu."}
 Obraz cyfrowy wyświetlany na ekranie monitora lub wydrukowany na domowej drukarce jest skończonym zbiorem elementów, które łącznie tworzą jakby siatkę kwadratów bardzo małych rozmiarów, zwanych 
 {glossary-link term="piksel" reference-text="definition"}pikselami{glossary-link end}.
@@ -58,7 +58,7 @@ W tym podrozdziale będziesz przekształcać obrazy. Zaczniemy od wprowadzenia z
 
 W interaktywnym narzędziu (poniżej) widzisz siedmiokąt tworzący jakby strzałkę, umieszczony w centralnej części układu współrzędnych, zwanego *kartezjańskim*. Po prawej stronie znajduje się m.in. lista par liczb (*x*,*y*), współrzędnych wierzchołków siedmiokąta (strzałki). Wartość *x* określa położenie punktu w poziomie (względem początku układu współrzędnych), a wartość *y* określa położenie punktu w pionie. Na przykład: pierwszy punkt na liście jest opisany parą liczb (0,2) i jest to punkt położony dwie jednostki powyżej punktu (0,0). Jakiemu punktowi odpowiada para liczb (2,0)? Co się dzieje, gdy wartość współrzędnej *x* jest liczbą ujemną?
 
-{panel type="teacher-note" summary="Odpowiedzi"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Odpowiedzi"}
 (2,0) to wierzochłek strzałki najbardziej wysunięty na prawo. Ujemna wartość *x* oznacza, że punkt położony jest po lewej stronie punktu (0,0). Podobnie ujemna wartość *y* oznacza, że punkt położony jest poniżej punktu (0,0).  
 {panel end}
 
@@ -68,7 +68,7 @@ Oprócz listy współrzędnych wierzchołków, widzisz jeszcze druga listę, jak
 {button link="http://csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-points.html?info=Your%20first%20challenge%20is%20to%20add%202%20to%20all%20the%20%3Cem%3Ex%3C/em%3E%20points,%20and%203%20to%20all%20the%20%3Cem%3Ey%3C/em%3E%20points%20(you%20can%20either%20type%20the%20new%20number%20or%20put%20the%20calculation%20in%20the%20box%20e.g.%20%220.5+2%22.%0AWhat%20effect%20does%20this%20have%20on%20the%20original%20arrow?%20(Be%20careful%20to%20add%20the%20negative%20numbers%20correctly;%20for%20example,%20adding%202%20to%20-0.5%20gives%201.5.)%20What%20happens%20if%20you%20subtract%203%20from%20each%20of%20the%20original%20coordinate%20values?%0A&quiz=2%200%200%205%200%202%200%204%200%200%202%200%200%200%200%201%20&hidetarget=true" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 Pierwsze przekształcenie w ćwiczeniu przesuwa strzałkę o dwie jednostki w prawo i trzy jednostki w górę. 
 Drugie -- o trzy jednostki w dół i w lewo.
 {panel end}
@@ -81,7 +81,7 @@ W następnym ćwiczeniu będziesz zmieniać rozmiar obrazu.
 {button link="http://csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-points.html?info=In%20this%20next%20interactive,%20try%20replacing%20the%20coordinates%20in%20the%20second%20list%20with%20all%20the%20original%20values%20multiplied%20by%202.%20What%20is%20the%20effect%20of%20this%20transform?%20What%20would%20happen%20if%20you%20multiply%20each%20value%20by%2010?%20How%20about%200.5?%20What%20if%20you%20only%20multiply%20the%20%3Cem%3Ex%3C/em%3E%20values?&quiz=0.5%200%200%200%200%200.5%200%200%200%200%201%200%200%200%200%201%20&hidetarget=true" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 Pomnożenie przez 2 skutkuje dwukrotnym powiększeniem strzałki w każdym z wymiarów. Pomnożenie przez 10 większa rozmiar 10 razy i obiekt nie zmieści się w polu widzenia. Pomnożenie przez 0,5 zmniejszy strzałkę dwukrotnie. Pomnożenie tylko watości *x* skutkuje wyłącznie zmianą strzałki w poziomie.
 {panel end}
 
@@ -108,7 +108,7 @@ O tym przeczytasz poniżej!
 
 ### Przekształcenia macierzowe
 
-{panel type="teacher-note" summary="Wymagania co do wiedzy uczniów"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Wymagania co do wiedzy uczniów"}
 
 Ten podrozdział jest wprowadzeniem do zastosowania macierzy w grafice komputerowej. Nie jest konieczne, aby uczniowie znali pojęcie macierzy wcześniej. Gdyby wyjaśnienia zawarte w tekście były niewystarczające do zrozumienia tematu przez uczniów, to można im wskazać inne zasoby edukacyjne, np. nagrania wideo i zadania pochodzące z 
 [Khan academy](https://pl.khanacademy.org/math/precalculus/precalc-matrices).
@@ -155,14 +155,14 @@ lub
 \end{bmatrix}
 {math-block end}
 
-{panel type="teacher-note" summary="Wyjaśnienie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Wyjaśnienie"}
 
 Efekty powinny być odpowiednio takie: strzałka powiększona trzy razy (w każdym z wymiarów) i strzałka pomniejszona do 1/5 wielkości (w każdym wymiarze).
 {panel end}
 
 Wartości wpisane do pola opisanego jako "add translate" są dodawane do współrzędnych *x* i *y*; sprawdź, jak to działa. Następnie postaraj się znaleźć takie wartości w tym polu (i w polu macierzy), aby w efekcie nałożyć strzałkę na strzałkę czerwoną.
 
-{panel type="teacher-note" summary="Wyjaśnienie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Wyjaśnienie"}
 
 Macierz powinna mieć postać {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end}, a współrzędne x i y odpowiednio 5 i 4 (rozmiar strzałki dwa razy powiększony i przesunięcie 5 w prawo i 4 w górę).
 {panel end}
@@ -176,7 +176,7 @@ Co stanie się, gdy użyjesz takiej macierzy, jak poniżej?
 \end{bmatrix}
 {math-block end}
 
-{panel type="teacher-note" summary="Wyjaśnienie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Wyjaśnienie"}
 
 Wartość *x* jest dwa razy większa, ale wartość *y* jest powiększona cztery razy, więc w efekcie strzałka jest powiększona w pionie dwa razy bardziej niż w poziomie.
 {panel end}
@@ -225,7 +225,7 @@ W ogólnym przypadku do zapisu macierzy obrotu obiektu o kąt {math}\theta{math 
 \end{bmatrix}
 {math-block end}
 
-{panel type="teacher-note" summary="Wyjaśnienie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Wyjaśnienie"}
 
 Jeśli uczniowie nie mają wiedzy o funkcjach trygnometrycznych, można poprzestać na przedstawieniu koncepcji: kąt mierzymy w stopniach, a wartości funkcji sinus i cosinus przyjmują wartości między -1 i 1.
 
@@ -235,7 +235,7 @@ Jeśli uczniowie nie mają wiedzy o funkcjach trygnometrycznych, można poprzest
 
 Jaką postać ma macierz obrotu o 360 stopni?
 
-{panel type="teacher-note" summary="Wyjaśnienie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Wyjaśnienie"}
 Dla kąta 360 stopni otrzymamy macierz {math}\begin{bmatrix}  1 & 0 \\   0 & 1 \\   \end{bmatrix}{math end},
 ponieważ
 {math}\cos(360)=1{math end} i
@@ -257,7 +257,7 @@ Sprawdź działanie innego narzędzia:
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix.html?info=Try%20translating%20the%20original%20arrow%20so%20that%20it%20matches%20up%20with%20the%20red%20arrow.&quiz=1%200%200%205%200%201%200%204%200%200%201%200%200%200%200%201" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 Przesunięcie *x* o 5, a *y* o 4 (5 w prawo i 4 w górę). Macierz skalowania ma postać: {math}\begin{bmatrix}  1 & 0 \\   0 & 1 \\   \end{bmatrix}{math end}
 {panel end}
 
@@ -265,7 +265,7 @@ Kolejne narzędzie pozwala na składanie dwóch przekształceń: przesunięcia i
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix.html?info=Now%20try%20to%20scale%20the%20original%20arrow%20in%20the%20following,%20and%20translate%20it%20to%20match%20the%20red%20arrow.&quiz=2%200%200%204%200%202%200%203%200%200%202%200%200%200%200%201" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 Macierz ma postać: {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end} (podwojenie rozmiaru). Przesunięcie dla *x* to 4, a dla *y* to 3..
 {panel end}
 
@@ -274,7 +274,7 @@ Sprawdź!
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-matrix-reversed.html?info=The%20following%20interactive%20has%20the%20translation%20and%20scaling%20the%20other%20way%20around.%20Use%20this%20one%20to%20transform%20the%20blue%20arrow%20to%20the%20red%20arrow.%20The%20order%20in%20which%20the%20operations%20happen%20makes%20a%20difference!%20&quiz=2%200%200%205%200%202%200%204%200%200%202%200%200%200%200%201" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 Macierz ma postać: {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end} (znów podwojenie rozmiaru). Tym razem wartości opisujące przesunięcie są dwa razy mniejsze niż potrzebujemy, ponieważ po przesunięciu będzie jeszcze skalowanie. Dlatego dla *x* należy wpisać 2,5 a dla *y* -- wpisać 2.
 {panel end}
 
@@ -283,7 +283,7 @@ Jeżeli chcesz, by obiekt się powiększył, ale jego środek pozostał w miejsc
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-transmatrix.html?info=The%20tip%20is%20at%20(-8,7),%20so%20you%20should%20translate%20it%20to%20(0,0),%20scale%20by%202,%20and%20translate%20back%20to%20(-8,%207).&zoom=-15.0%20&quiz=2%200%200%20-8%200%202%200%203%200%200%202%200%200%200%200%201%20&start=1%200%200%20-8%200%201%200%205%200%200%201%200%200%200%200%201%20&allPrize=5" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 Wartości dla przesunięcia to: 8 dla *x* i -7 dla *y*. W efekcie wierzchołek strzałki leży w punkcie 0 i podwojenie rozmiaru nie zmieni położenia tego wierzchołka. Macierz ma postać: {math}\begin{bmatrix}  2 & 0 \\   0 & 2 \\   \end{bmatrix}{math end}. Wartości dla przesunięcia strzałki z powrotem to: -8, 7.
 {panel end}
 
@@ -296,7 +296,7 @@ Kolejne dwa przykłady pozwalają na składanie trzech przekształceń: obrotu, 
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-doublematrix.html?info=Try%20matching%20the%20blue%20arrow%20to%20the%20red%20one%20using%20two%20matrices%20(one%20to%20scale%20and%20one%20to%20rotate),%20and%20adding%20a%20vector.&zoom=-10.0%20&quiz=0%201%200%204%202%200%200%20-2%200%200%201%200%200%200%200%201%20&allPrize=5" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 
 Istnieją dwa rozwiązania, w zależności od wyboru pierwszego przekształcenia: skalowania lub obrotu. W pierwszym przypadku macierz skalowania ma postać: {math}\begin{bmatrix}  2 & 0 \\   0 & 1 \\   \end{bmatrix}{math end}. Macierz obrotu to: {math}\begin{bmatrix}  0 & 1 \\   -1 & 0 \\   \end{bmatrix}{math end}. Wektor przesunięcia ma współrzedne 4, -2.
 
@@ -310,7 +310,7 @@ Oto jeszcze jedno ćwiczenie, grupujące wszystkie przekształcenia:
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-arrow/CG-arrow-doublematrix.html?info=You%20will%20need%20to%20use%20all%20three%20operations%20to%20do%20this%20next%20one.&zoom=-6.0%20&quiz=0.3499999940395355%20-0.3499999940395355%200%20-1%200.3499999940395355%200.3499999940395355%200%20-2%200%200%201%200%200%200%200%201%20&allPrize=5" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 
 Rozwiązań może być wiele. Najprostsze to: {math}\begin{bmatrix}  0{,}7 & -0{,}7 \\   0{,}7 & 0{,}7 \\   \end{bmatrix}{math end} jako (przybliżona) macierz obrotu, {math}\begin{bmatrix}  0{,}5 & 0 \\   0 & 0{,}5 \\   \end{bmatrix}{math end} jako macierz skalowania i -1, -2 jako wartości przesunięcia. 
 {panel end}
@@ -472,7 +472,7 @@ Narzędzie interaktywne pozwala zobaczyć po prawej stronie macierz, będącą o
 
 {button link="http://www.csfieldguide.org.nz/releases/1.9.9/_static/widgets/CG/CG-matrix-simplifier/CG-matrix-simplifier.html?info=Multiple%20transforms" text="Kliknij, aby uruchomić interaktywne narzędzie."}
 
-{panel type="teacher-note" summary="Wyjaśnienie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Wyjaśnienie"}
 
 Efekt złożenia przekształceń skalowania razy 2 i razy 3 jest identyczny z efektem skalowania razy 6. 
 
@@ -484,7 +484,7 @@ Efekt złożenia przekształceń skalowania razy 2 i razy 3 jest identyczny z ef
 Narzędzie pozwala też dodać przekształcenie, jakim jest przesunięcie.
 Sprawdź, jak działa składanie skalowania i przesunięcia. Co będzie, jeśli dodasz obrót -- czy kolejność przekształceń ma znaczenie?
 
-{panel type="curiosity" summary="Mnożenie macierzy w 3D"}
+{panel type="curiosity" title="Ciekawostka" summary="Mnożenie macierzy w 3D"}
 Ktoś może być ciekaw, jak powstała macierz przekształcenia wypadkowego. Jest ona wynikiem mnożenia macierzy. Sposób, w jaki mnoży się macierze, jest opisany poniżej. Wydaje się skomplikowany, ale takie mnożenie jest bardzo użyteczne w grafice komputerowej, ponieważ pozwala wiele kolejno wykonywanych przekształceń opisać jedną macierzą, która jest stosowania dla każdego punktu obiektu. To redukuje w znaczący sposób liczbę obliczeń.  
 
 {comment}
@@ -518,7 +518,7 @@ a_{13}b_{31}+a_{23}b_{32}+a_{33}b_{33} \\
 {math-block end}
 {panel end}
 
-{panel type="project" summary="przekształcenia 3D"}
+{panel type="project" title="Projekt" summary="przekształcenia 3D"}
 A teraz proponujemy wykonanie projektu, pozwalającego pokazać efekty nauki. Zadanie będzie polegać na zaprentowaniu i opisie przekształceń 3D kilku obiektów. 
 Należy pamiętać o wykonaniu zrzutów ekranu po każdym kroku, bo interaktywne narzędzia, których będziesz uzywał, nie pozwalają na zapis grafiki.
 
@@ -545,7 +545,7 @@ Pokaż, jak macierze składowe można zastąpić jedną macierzą wypadkową i o
 End of 3D transform project
 {comment end}
 
-{panel type="project" summary="WebGL and OpenGL"}
+{panel type="project" title="Projekt" summary="WebGL and OpenGL"}
 Biegli w programowaniu, chcący zgłębiać temat przekształceń graficznych w praktyce, mogą wykonać projekt używając jednego z systemów programowania grafiki:
 [WebGL](https://en.wikipedia.org/wiki/WebGL) (użyty do przygotowania narzędzi wyżej udostępnionych)
 lub powszechnie stosowany system
@@ -607,7 +607,7 @@ W tym podrozdziale przyjrzymy się bardzo prostym, ale sprytnym algorytmom, któ
 
 ### Rysowanie odcinków
 
-{panel type="teacher-note" summary="Materiały dla uczniów"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Materiały dla uczniów"}
 Do wykonania ćwiczeń uczniowie będą potrzebować kartek z wydrukowaną siatką kwadratową lub zwykłych kartek ze szkolnego zeszytu w kratkę.
 {panel end}
 
@@ -629,7 +629,7 @@ Na siatce kwadratowej 19 x 19 spróbuj narysować odcinki (jako zbiory zamalowan
 
 {comment end}
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 
 Te odcinki było łatwo narysować, gdyż tworzące je piksele są równoległe do brzegów siatki lub leżą na przekątnej kwadratu (siatki).
 
@@ -659,7 +659,7 @@ Zauważ, że dla kolejnych punktów współrzędne *x*  rosną o 1, a współrz�
 Poćwicz na innych przykładach, dla różnych wartości  {math}m{math end} i {math}c{math end} (na przykład zacznij od {math}c=0{math end} i sprawdź trzy przypadki *m*: {math}m=1{math end}, {math}m=0{,}5{math end} i {math}m=0{math end}).
 Jakie są kąty nachylenia prostych?
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 Wartość {math}m=0{math end} odpowiada prostej równoległej do dolnej krawędzi, wartość {math}m=1{math end} to przypadek prostej o kącie nachylenia 45 stopni (przesunięciu o 1 piksel w poziomie odpowiada przesunięcie o jeden piksel w pionie).
 Wartość {math}m=0{,}5{math end} opisuje prostą o kącie nachylenia mniejszym niż 27 stopni.
 [Narzędzie interaktywne](http://www.mathopenref.com/coordslope.html) (ang.) może być pomocne w zrozumieniu związku wartości *m* z kątem nachylenia.)
@@ -668,7 +668,7 @@ Wartość {math}m=0{,}5{math end} opisuje prostą o kącie nachylenia mniejszym 
 Równanie {math}mx + c{math end} może być użyte do wybrania pikseli dla cyfrowej reprezentacji odcinka łączącego punkty {math}(x_1, y_1){math end} i {math}(x_2, y_2){math end}.
 Jakie wartości mają współrzędne {math}(x_1, y_1){math end} i {math}(x_2, y_2){math end} w przykładzie poniżej?
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 Końce odcinka to punkty: {math}A = (3,4){math end} i {math}B = (16,9){math end}. To znaczy, że {math}x_1 = 3, y_1 = 4, x_2=16{math end} i {math}y_2 = 9{math end}.
 {panel end}
 
@@ -681,7 +681,7 @@ b = \frac{(y_1x_2 - y_2x_1)}{(x_2-x_1)}
 
 {math-block end}
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 Oto wyniki obliczeń:
 
 {math-block}
@@ -720,7 +720,7 @@ Wartości {math}y{math end} powinny być liczbami pomiędzy  {math}y_1{math end}
 
 {image filename="grid-20x20-diagonal-question.png" alt="Siatka pikseli dla odcinka"}
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 
 Efekt końcowy jest pokazany na rysunku:
 {image filename="grid-20x20-diagonal-answer.png" alt="Siatka pikseli dla odcinka"}
@@ -733,7 +733,7 @@ Zastanów się nad tym, ile obliczeń było niezbędnych do wyznaczenia każdego
 
 Okazuje się, że rozwiązanie wykorzystujące opisane wyżej równanie nie jest zbyt szybkie i w praktyce może być nieprzydatne (np. dla animacji i w grach komputerowych). W praktyce korzysta się ze znacznie bardziej efektywnej metody.
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 Wyznaczenie każdego punktu wymaga wykonania mnożenia, dodwawania i także operacji zaokrąglania. Operacja mnożenia jest obliczeniowo dość kosztowną operacją (zwłaszcza gdy obraz składa się z tysięcy czy nawet milionów pikseli!). Co gorsza, metoda opisana wyżej wymaga wykonywania obliczeń w tzw. arytmetyce zmiennoprzecinkowej, co jest o wiele bardziej czasochłonne niż operacje wykonywane na liczbach całkowitych.
 {panel end}
 
@@ -762,7 +762,7 @@ Sprawdź działanie algorytmu Bresenhama, rysując ponownie odcinek z *A* do *B*
 
 Sprawdź efekt przy pomocy linijki. Jak wyszło w porównaniu do wcześniejszych prób?
 
-{panel type="teacher-note" summary="|Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="|Rozwiązanie"}
 Poniżej zapisano obliczenia wykonane z użyciem algorytmu Bresenhama:
 
 | Etap obliczeń | Wybór piksela |
@@ -801,7 +801,7 @@ Ile operacji arytmetycznych (mnożenia i dodawania) było wykonanych przy wyznac
 Ile byłoby ich w przypadku posługiwania się równaniem {math}y = mx+b{math end}?
 Który sposób jest szybszy? (Pamiętaj, że w większości przypadków koszt dodawania jest o wiele mniejszy niż koszt mnożenia.)
 
-{panel type="teacher-note" summary="Szybkość metody Bresenhama"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Szybkość metody Bresenhama"}
 Ta metoda dla wskazania kolejnego piksela wymaga wyłącznie porównania jednej liczby całkowitej z zerem i jednego dodawania. Jest o wiele szybsza od metody z równaniem.
 {panel end}
 
@@ -850,7 +850,7 @@ Zwróć uwagę na to, że zgodnie z algorytmem rysowanie należy przerwać, gdy 
 
 {image filename="grid-20x20-circle-question.png" alt="Siatka pikseli dla okręgu"}
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 Na rysunku poniżej zaczerniono piksele uzyskane po wykonaniu algorytmu (jest to ośma część okręgu). Ciemnym szarym kolorem zaznaczono piksele uzyskane kolejno jako efekt symetrii osiowych (odbić lustrzanych) względem prostych równoległych do osi *X* i osi *Y*. Jasnym szarym kolorem zaznaczono piksele, które są obrazem pikseli w symetrii względem przekątnej siatki. 
 Warto, aby uczniowie samodzielnie poszukali odpowiednich przekształceń. (Dla symetrii względem przekątnych osiami symetrii są proste o współczynnikach kierunkowych 1 i -1.)
 
@@ -872,7 +872,7 @@ Oto etapy obliczeń:
 
 {panel end}
 
-{panel type="jargon-buster" summary="Kwadranty i oktanty"}
+{panel type="jargon-buster" title="Co to jest?" summary="Kwadranty i oktanty"}
 *Kwadrant* to ćwiartka jakiegoś obszaru. *Oktant* to óśma część jakiegoś obszaru.
 {panel end}
 
@@ -910,7 +910,7 @@ Informatycy projektują algorytmy dla wielu obszarów grafiki komputerowej:
 System oparty na mnożeniu macierzy 3 x 3, przedstawiony w tym rozdziale to uproszczona wersja jednego z systemów, który oparty jest o [współrzedne jednorodne](https://en.wikipedia.org/wiki/Homogeneous_coordinates). Używa się w nim macierzy 4 x 4.
 Jego zaletą jest to, że wszystkie operacje można realizować wyłącznie przez mnożenie (również przesunięcie). System pozwala też na uproszczenie innych operacji graficznych. Współczesne karty graficzne sprzętowo, a więc bardzo szybko, realizują operacje na współrzędnych jednorodnych.
 
-{panel type="Curiosity" summary="Moebius i jego odkrycia"}
+{panel type="Curiosity" title="Ciekawostka" summary="Moebius i jego odkrycia"}
 System współrzędnych jednorodnych wprowadził w 1827 roku niemiecki matematyk
 [August Ferdinand Möbius](https://pl.wikipedia.org/wiki/August_Ferdinand_M%C3%B6bius), ponad 100 lat przed erą komputerów.
 Möbius jest prawodopoodbnie bardziej znany jako odkrywca pewnej matematycznej powierzchni jednostronnej, określanej jako [wstęga Möbiusa](https://pl.wikipedia.org/wiki/Wst%C4%99ga_M%C3%B6biusa)!
