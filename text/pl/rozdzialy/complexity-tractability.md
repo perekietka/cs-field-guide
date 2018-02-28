@@ -1,6 +1,6 @@
 # Złożoność obliczeniowa
 
-{panel type="teacher-note" summary="Duże liczby na horyzoncie!"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Duże liczby na horyzoncie!"}
 W tym rozdziale pojawiają się bardzo duże liczby, zwłaszcza w kontekście problemu wykładniczej eksplozji czasu. Wiele zasobów ilustruje te koncepcje. Można pobrać wideo [The Power of Exponentials, Big and Small](http://blossoms.mit.edu/videos/lessons/power_exponentials_big_and_small) z MIT, które ilustruje wykładniczy wzrost za pomocą zabawnych przykładów.
 {panel end}
 
@@ -83,7 +83,7 @@ Zgrubne pojęcie o złożoności problemu pomaga oszacować, ile czasu zajmie je
 
 {comment end}
 
-{panel type="jargon-buster" summary="Asymptotyczna złożoność"}
+{panel type="jargon-buster" title="Co to znaczy?" summary="Asymptotyczna złożoność"}
 
 Gdy będziesz czytać o złożoności, możesz natknąć się na terminologię taką jak np. notacja ,,duże O'' i ,,asymptotyczna złożoność'', wedle której algorytm, który zajmuje około {math}n^2{math end} kroków jest określany jako {math}O(n^2){math end}. Nie zajmiemy się nimi w tym rozdziale, ale poniżej jest garść informacji na wypadek, gdybyś zetknął się z tymi pojęciami gdzie indziej. 
 Notacja ,,duże O'' pozwala precyzyjnie mówić o złożoności i jest używana z ,,asymptotyczną złożonością'', która po prostu oznacza, jak algorytm działa dla dużych wartości *n*. ,,Asymptotyczna'' oznacza, że *n* staje się naprawdę duże -- kiedy tak się dzieje, mniej się martwimy drobnymi szczegółami, jeśli chodzi o czas pracy. Jeśli algorytm kończy działanie po siedmiu dniach, to zupełnie nie jest interesujące, że w rzeczywistości jest to 7 dni, 1 godzina, 3 minuty i 4,33 sekundy, i nie warto tracić czasu na dokładne badanie.
@@ -118,7 +118,7 @@ Jeśli analizowałeś algorytmy, dowiedziałeś się, że niektóre algorytmy so
 
 Tutaj rozważymy inny algorytm sortowania, nazywany *sortowaniem przez permutacje*. Przebiega on tak: ,,Wymieńmy wszystkie możliwe porządki (,,permutacje'') elementów, które mają zostać posortowane, i sprawdzajmy każdy z nich po kolei, aż znajdziemy ten, w którym elementy są posortowane''. Ten algorytm prosto opisać, ale czy jest on dobry?
 
-{panel type="teacher-note" summary="Sortowanie przez permutacje nie jest w praktyce użyteczne!"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Sortowanie przez permutacje nie jest w praktyce użyteczne!"}
 
 Zauważ, że sortowanie przez permutacje *nie* jest w ogóle rozsądnym sposobem sortowania; to tylko przykład, który pomaga nam myśleć o obliczalności. Dla uczniów powinno być oczywiste, że jest ono rażąco nieefektywne. Najważniejsze jest to, że daje właściwy wynik, więc jest to skrajny przykład algorytmu, który działa poprawnie, ale jest zbyt nieefektywny, by był przydatny.
 
@@ -165,7 +165,7 @@ Na przykład, jeśli wybrałeś czerwony, niebieski, zielony i żółty, pierwsz
 
 Nie muszą być w żadnej określonej kolejności, chociaż zalecamy podejście systematyczne, żeby o żadnym nie zapomnieć!
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 
 Dla czterech różnych słów, będzie 4x3x2x1=24 różnych uporządkowań. Na przykład, sześć z nich zaczyna się od ,,czerwony'', sześć zaczyna się od ,,niebieski'' i tak dalej.
 
@@ -175,7 +175,7 @@ Gdy lista permutacji zostanie utworzona, wyszukaj w niej permutację, która ma 
 
 Teraz dodaj kolejne słowo. Ile będzie możliwych uporządkowań pięciu słów? A co w przypadku dwóch i trzech słów -- ile jest ich uporządkowań? Jeśli dasz za wygraną przy wypisywaniu wszystkich uporządkowań pięciu słów, czy możesz wyliczyć ile ich jest? Czy znalazłeś wzór? Jak myślisz, ile może być uporządkowań dziesięciu słów? (Nie musisz ich wypisywać!)
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 
 Liczba uporządkowań (permutacji) *n* słów to *n* silnia; jest to wyjaśnione poniżej, ale w skrócie: istnieje *n* opcji dla pierwszego słowa, *n-1* dla następnego, i tak dalej. Na przykład dla 15 słów jest 15 x 14 x 13 x 12 x ... x 1 permutacji, co wynosi 1 307 674 368 000. To duża liczba!
 
@@ -194,7 +194,7 @@ Jeśli chodzi o powyższe pytania, liczba permutacji to:
 
 Jeśli nie znalazłeś wzoru liczby uporządkowań, pomyśl o użyciu silni. W przypadku 3 słów istnieje {math}3!{math end} ("3 silnia") uporządkowań. Dla 5 słów istnieje {math}5!{math end} uporządkowań. Spójrz na niszczyciela żargonu poniżej, jeśli nie wiesz, czym jest ,,silnia'', lub jeśli zapomniałeś!
 
-{panel type="jargon-buster" summary="Silnie"}
+{panel type="jargon-buster" title="Co to znaczy?" summary="Silnie"}
 
 Silnie są bardzo łatwe do obliczenia; po prostu pomnóż wszystkie liczby całkowite od danej liczby w dół do 1. Na przykład, aby obliczyć {math}5!{math end}, po prostu mnożysz: 5 x 4 x 3 x 2 x 1=120. Dla {math}8!{math end} po prostu mnożysz 8 x 7 x 6 x 5 x 4 x 3 x 2 x 1=40 320.
 
@@ -219,7 +219,7 @@ Jako ostatnie ćwiczenie dotyczące sortowania przez permutacje, oblicz, ile cza
 - Ile uporządkowań można sprawdzić w ciągu roku?
 - Ile lat zajmie sprawdzenie wszystkich uporządkowań?
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 
 Liczba uporządkowań 100 liczb to 100!, czyli 93 326 215 443 944 152 681 699 238 856 266 700 490 715 968 264 381 621 468  592 963 895 217 599 993 229 915 608 941 463 976 156 518 286 253 697 920 827 223 758 251 185 210 916 864 000 000 000 000 000 000 000 000.
 
@@ -235,7 +235,7 @@ A w ramach ciekawostki, zrób kilka obliczeń na podstawie poniższych założe�
 - Wszechświat będzie trwał kolejne 14 miliardów lat, zanim się skończy.
 - Załóżmy, że każdy atom we wszechświecie to komputer, który może sprawdzić jedno uporządkowanie co nanosekundę.
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 
 W powyższym przykładzie wszechświat zakończyłby się przed posortowaniem 100 liczb!
 
@@ -256,7 +256,7 @@ Pojęcie ,,obliczalności'' jest nieco bardziej formalnie używane w informatyce
 
 Ale *problem* sortowania elementów nie jest trudny do rozwiązania -- mimo że algorytm sortowania przez permutacje nie jest obliczalny, istnieje wiele innych wydajnych i mniej wydajnych algorytmów, które można wykorzystać do rozwiązania problemu sortowania w rozsądnej ilości czasu: sortowanie szybkie (ang. *quicksort*), sortowanie przez scalanie (ang. *mergesort*), sortowanie przez wybór, a nawet sortowanie bąbelkowe! Istnieją jednak pewne problemy, dla których JEDYNE znane algorytmy są trudne do obliczenia. Problemy tej kategorii są znane jako *problemy trudne*.
 
-{panel type="curiosity" summary="Wieże Hanoi"}
+{panel type="curiosity" title="Ciekawostka" summary="Wieże Hanoi"}
 
 Problem wież Hanoi jest łamigłówką, w której masz stos krążków o rosnącej od góry do dołu wielkości na jednym kołku i dwa puste kołki. Zadanie polega na przeniesieniu wszystkich dysków z jednego kołka na drugi, ale bez kładzenia większego krążka na mniejszym. Jest opisany na [Wikipedii](https://pl.wikipedia.org/wiki/Wie%C5%BCe_Hanoi).
 
@@ -274,7 +274,7 @@ Wieże Hanoi to jeden z problemów, o którym wiemy na pewno, że rozwiązanie z
 
 ## Obliczalność
 
-{panel type="teacher-note" summary="Praca z dużymi liczbami"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Praca z dużymi liczbami"}
 
 Następny podrozdział wymaga od uczniów użycia wbudowanego programu interaktywnego do eksperymentów z obliczeniami na ogromnych liczbach, które napotkają w nieobliczalnych problemach. Najlepiej to ćwiczenie przeprowadzić w klasie, tak by uczniowie mieli wsparcie przy obliczeniach na pojawiających się ogromnie dużych liczbach. Należy ich zachęcać by zdali sobie sprawę jak niepraktyczna byłaby ilość czasu którą zajmie program -- na przykład program, który znajduje rozwiązanie w ciągu miliona lat, nie będzie przydatny dla osoby, która go uruchomiła, a nawet gdyby pojawił się 1000 razy szybszy komputer, ukończenie go i tak zajęłoby 1000 lat. Niektóre z czasów, które pojawiają się poniżej, są tak długie, że przekraczają nasze wyobrażenie i najlepiej pokazać jak są daremne nawet przy użyciu komputera o 1000, milionach, a nawet miliardach razy większej mocy obliczeniowej.
 
@@ -294,7 +294,7 @@ Na przykład wybierz czas *n!* dla TSP i wpisz 20 dla wartości *n* (to jest spr
 Naciśnij klawisz ENTER albo TAB, aby zaktualizować obliczenia.
 Kalkulator pokaże dużą liczbę sekund, które program będzie potrzebował do wykonania; możesz zmienić jednostki na lata, aby zobaczyć, jak długo by to potrwało.
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 
 Przy początkowych ustawieniach w programie interaktywnym, TSP dla 20 miast zajmie 2 432 902 008 176 640 000,00 sekund, co stanowi 773 056 638,51 wieków (zwróć uwagę, że kalkulator musi być ustawiony na n!, aby użyć go do TSP). Nb. podajemy bardzo dokładne liczby, aby sprawdzić, czy masz dobry wynik; w praktyce szacunek jest bardzo zgrubny, a zamiast 773,056,638.51 stuleci, równie trafne jest powiedzenie ,,około 770 milionów wieków'', a nawet tylko ,,setki milionów stuleci''. Przedstawienie tego w geologicznych ramach czasowych może lepiej to przybliżyć uczniom.
 
@@ -304,7 +304,7 @@ Przy początkowych ustawieniach w programie interaktywnym, TSP dla 20 miast zajm
 
 Do tej pory obliczenia zakładały, że komputer wykona tylko 1 operację na sekundę; spróbuj przejść do miliona (1 000 000) operacji na sekundę, co jest bardziej realistyczne i sprawdź, ile czasu zajmie.
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 
 Gdy komputer jest milion razy szybszy, czas dla TSP w 20 miastach zmniejsza się z 773 056 383,51 wieków do 733,06 wieków. To wciąż zupełnie niepraktyczne!
 
@@ -313,7 +313,7 @@ Gdy komputer jest milion razy szybszy, czas dla TSP w 20 miastach zmniejsza się
 Innym sposobem na szybsze rozwiązywanie problemów jest jednoczesna praca wielu procesorów nad różnymi rozwiązaniami.
 Jeśli miałbyś kupić 1000 procesorów (na przykład 1000 komputerów lub 250 czterordzeniowych komputerów) i każdy z nich przetestowałby różne trasy, to rozwiązanie można by było znaleźć 1000 razy szybciej. Spróbuj zmienić liczbę procesorów na 1000 i zobacz, ile czasu to zajmie (może się okazać, że trzeba zmienić jednostki z powrotem -- czy będą to sekundy? godziny? dni?)
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 
 1000 procesorów skraca czas pracy do 77,31 lat. To wciąż niepraktycznie duża moc obliczeniowa, ale zaczynamy docierać do obszaru, w którym rozwiązanie problemu nie jest całkowicie niemożliwe.
 
@@ -324,7 +324,7 @@ Załóżmy, że mamy *bardzo* szybki komputer, szybszy niż którykolwiek z istn
 Spróbuj założyć, że komputer może wykonać milion milionów (1 000 000 000 000) kroków na sekundę.
 Czy to jest osiągalne? A co się stanie, jeśli dodasz choćby dwa miasta do problemu (n=22 zamiast n=20)?
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 
 Ta niesamowicie duża prędkość skróciłaby czas do 40,55 sekundy. Jednak zwiększenie problemu do zaledwie 22 miast powoduje ponowny rozrost do 13,01 dni. Najważniejsze jest to, że nawet jeśli masz szybką sieć komputerów, która może rozwiązać konkretny problem, dodanie zaledwie kilku elementów do problemu spowoduje, że ponownie znajdzie się on poza zasięgiem.
 
@@ -336,7 +336,7 @@ Teraz wpisz 10 milionów dla *n* -- chociaż algorytm sortuje listę 10 razy wi�
 Przy jakiej wartości *n* czekanie na wynik przestaje wchodzić w rachubę -- to znaczy, jak duży musiałby być problem, aby zajmował lata?
 Czy ktokolwiek, kiedykolwiek będzie sortował tak wiele elementów -- na przykład przy sortowaniu nazwisk wszystkich osób na świecie albo wszystkich par zasad w ludzkim genomie?
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 
 Wykonanie algorytmu o złożoności {math}n^2{math end} z 10 milionami elementów zajmuje 100 sekund (za każdym razem, gdy *n* mnożone jest przez 10, zajmie 100 razy dłużej).
 
@@ -346,7 +346,7 @@ Gdy n wynosi tysiąc milionów, zajmuje to prawie 12 dni i w tym miejscu możesz
 
 A co z algorytmem o złożoności {math}n^3{math end}? Jaki jest największy zestaw danych wejściowych, który można przetwarzać w rozsądnym czasie?
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 
 Algorytm o złożoności {math}n^3{math end} może przetworzyć 1 000 000 elementów w 11,57 dni. Milion jest niczym w porównaniu do populacji świata, a nawet wielu krajów, ale wiele prawdziwych problemów jest mniejszych.
 
@@ -356,7 +356,7 @@ Teraz spróbuj zrobić to samo, gdy liczba kroków wynosi {math}2^n{math end}, a
 Prawdopodobnie okaże się, że dla wejścia około 70 pozycji wykonanie algorytmu zajmie zbyt dużo czasu.
 Czy jest o wiele gorzej w przypadku 80 przedmiotów?
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 
 Algorytm o złożoności {math}2^n{math end} jest w zupełnie innej klasie niż poprzednie. Wykonanie go dla 10 elementów zajmuje ułamek sekundy (dokładnie 1,02 nanosekundy), a dla 60 elementów zajmuje 13,34 dni, ale już zaledwie 70 elementów powoduje wzrost do 37,51 lat, zaś dla 80 elementów zajmuje to 384 wieki. Niewielkie wzrosty liczby przedmiotów (np. miast, które odwiedza komiwojażer) skutkują OGROMNYM wzrostem czasu potrzebnego do ich przetworzenia.
 
@@ -364,7 +364,7 @@ Algorytm o złożoności {math}2^n{math end} jest w zupełnie innej klasie niż 
 
 Teraz zwiększ liczbę operacji na sekundę do 10 razy większej. Czy to pomaga rozwiązać większe problemy?
 
-{panel type="teacher-note" summary="Rozwiązanie"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Rozwiązanie"}
 
 Liczenie 10 razy szybciej zredukuje 384 stulecia do 38,4 stulecia -- znacznie szybciej, ale wciąż jest to niemożliwie duża ilość czasu. Płynie stąd nauka, że ​​algorytm będzie tak powolny, że nawet ogromna poprawa wydajności sprzętu nie będzie miała większego wpływu.
 
@@ -427,7 +427,7 @@ Obecne algorytmy znajdujące optymalne rozwiązanie TSP nie są dużo lepsze ni�
 Choć TSP został pierwotnie przedstawiony jako problem, z którym spotykają się handlowcy, gdy jeżdżą do kilku różnych miejsc i chcą je odwiedzić w kolejności, która daje najkrótszą trasę (mniejsze zużycie paliwa), ten sam problem dotyczy również wielu innych sytuacji.
 Firmy kurierskie i dostawcze mają różne warianty tego problemu -- często z dodatkowymi ograniczeniami, takimi jak ograniczenie czasu pracy kierowcy lub możliwość wykonywania skrętów w prawo szybciej niż w lewo.
 
-{panel type="teacher-note" summary="Więcej informacji na temat TSP"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="Więcej informacji na temat TSP"}
 
 Istnieje obszerna strona internetowa w języku angielskim o aktualnym stanie wiedzy na temat TSP: [http://www.tsp.gatech.edu/](http://www.tsp.gatech.edu/). Obejmuje ona także gry i informacje o bieżącym największym rozwiązanym problemie komiwojażera (którego rozwiązanie zazwyczaj zajmuje miesiące lub lata na bardzo wydajnych komputerach).
 
@@ -449,7 +449,7 @@ Ciekawą rzeczą, z którą trudno się pogodzić, jest to, że można napotkać
 Nawiasem mówiąc, znalezienie *najdłuższej* ścieżki między dwoma punktami (bez przechodzenia przez jakikolwiek fragment trasy dwa razy) jest również trudne, nawet pomimo tego, że znalezienie *najkrótszej* ścieżki jest łatwe!
 
 
-{panel type="project" summary="Problem pułapek na raki"}
+{panel type="project" title="Dla nauczyciela" summary="Problem pułapek na raki"}
 
 Ten projekt opiera się na takiej historii. Pewien rybak łowiący raki, umieścił w wodzie około 18 pułapek. Każdego dnia rybak odwiedza łodzią wszystkie pułapki i sprawdza, czy nie złapały się w nią raki.
 
@@ -526,7 +526,7 @@ Nie zapomnij umieścić w swoim raporcie wprowadzającego akapitu, który przeds
 
 ## Inne nieobliczalne problemy
 
-{panel type="teacher-note" summary="W trakcie budowy"}
+{panel type="teacher-note" title="Dla nauczyciela" summary="W trakcie budowy"}
 
 O wielu ciekawych problemach nieobliczalnych nie wspomnieliśmy w tym rozdziale, ale poniżej podajemy kilka alternatyw dla problemu TSP, które mogą być wykorzystane do rozważań nad obliczalnością, jeśli masz uczniów, którzy mogą pracować nad tym samodzielnie.
 
